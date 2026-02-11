@@ -1,0 +1,40 @@
+{
+  "source": "Map_2026 Gubernatorial Elections_Open Seats.svg",
+  "note": "Maps SVG path indices (from Google Drawings export) to US state abbreviations. Multi-part states have multiple indices.",
+  "mapping": {
+    "2": "ME", "6": "MS", "8": "LA", "10": "NV", "12": "MA",
+    "14": "WY", "16": "NM", "18": "KS", "20": "IA", "22": "AR",
+    "24": "GA", "26": "IN", "28": "PA", "30": "WA", "32": "CO",
+    "34": "ND", "36": "AL", "38": "NY", "40": "DE", "42": "HI",
+    "44": "HI", "46": "HI", "48": "HI", "50": "HI", "52": "HI",
+    "54": "HI", "56": "CA", "58": "ID", "60": "SD", "62": "TX",
+    "64": "FL", "66": "MO", "68": "WI", "70": "SC", "72": "OH",
+    "74": "RI", "76": "VA", "78": "VA", "80": "OR", "82": "AZ",
+    "84": "NE", "86": "MI", "88": "MI", "90": "KY", "92": "NC",
+    "94": "MD", "96": "MD", "98": "CT", "100": "NH", "102": "AK",
+    "104": "UT", "106": "MT", "108": "OK", "110": "MN", "112": "IL",
+    "114": "TN", "116": "WV", "118": "NJ", "120": "VT", "203": "HI",
+    "205": "VT", "207": "NH", "209": "MA", "211": "CT", "213": "RI",
+    "215": "NJ", "217": "DE", "219": "MD"
+  },
+  "multi_part_states": {
+    "HI": [42, 44, 46, 48, 50, 52, 54, 203],
+    "MI": [86, 88],
+    "VA": [76, 78],
+    "MD": [94, 96, 219],
+    "VT": [120, 205],
+    "NH": [100, 207],
+    "MA": [12, 209],
+    "CT": [98, 211],
+    "RI": [74, 213],
+    "NJ": [118, 215],
+    "DE": [40, 217]
+  },
+  "color_legend": {
+    "#276181": "Democratic Control, Incumbent Election",
+    "#6cb3d2": "Democratic Control, Open Election",
+    "#e50963": "Republican Control, Incumbent Election",
+    "#e86987": "Republican Control, Open Election",
+    "#e4e4e4": "No 2026 Gubernatorial Election"
+  }
+}

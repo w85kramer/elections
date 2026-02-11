@@ -104,6 +104,9 @@ CREATE TABLE elections (
     forecast_source     TEXT,
     pres_margin_this_cycle  TEXT,        -- presidential margin in this district
     previous_result_margin  TEXT,        -- prior election margin
+    result_status       TEXT CHECK (result_status IN (
+                            'Counting', 'Called', 'Certified'
+                        )),                 -- NULL=not yet held, Counting=votes coming in, Called=projected winner, Certified=official
     total_votes_cast    INTEGER,
     notes           TEXT
 );
@@ -301,6 +304,7 @@ SELECT
     e.total_votes_cast              AS total_votes,
     cy.vote_percentage              AS pct,
     cy.result,
+    e.result_status,
     e.forecast_rating,
     e.pres_margin_this_cycle        AS pres_margin,
     cy.notes
@@ -333,6 +337,7 @@ SELECT
     (COALESCE(bm.votes_yes, 0) + COALESCE(bm.votes_no, 0))  AS total_votes,
     bm.yes_percentage               AS pct,
     bm.result,
+    NULL                            AS result_status,
     bm.forecast_rating,
     NULL                            AS pres_margin,
     bm.notes
