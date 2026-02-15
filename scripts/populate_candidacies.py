@@ -31,9 +31,11 @@ CLOSED_FILING_STATES = {
     'AR': '2025-11-11',
     'TX': '2025-12-08',
     'NC': '2025-12-19',
+    'UT': '2026-01-08',
     'KY': '2026-01-09',
     'AL': '2026-01-23',
     'WV': '2026-01-31',
+    'NM': '2026-02-03',
     'OH': '2026-02-04',
     'IN': '2026-02-06',
 }
@@ -59,6 +61,9 @@ STATE_CHAMBERS = {
            ('Texas', 'State_Senate', 'State Senate')],
     'WV': [('West_Virginia', 'House_of_Delegates', 'State House'),
            ('West_Virginia', 'State_Senate', 'State Senate')],
+    'UT': [('Utah', 'House_of_Representatives', 'State House'),
+           ('Utah', 'State_Senate', 'State Senate')],
+    'NM': [('New_Mexico', 'House_of_Representatives', 'State House')],
 }
 
 PARTY_MAP = {
@@ -113,12 +118,21 @@ STATEWIDE_PAGES = {
         ('{s}_Comptroller_election,_2026', ['Controller']),
         ('{s}_Agriculture_Commissioner_election,_2026', ['Agriculture Commissioner']),
     ],
+    'NM': [
+        ('{s}_gubernatorial_election,_2026', ['Governor']),
+        ('{s}_lieutenant_gubernatorial_election,_2026', ['Lt. Governor']),
+        ('{s}_Attorney_General_election,_2026', ['Attorney General']),
+        ('{s}_Secretary_of_State_election,_2026', ['Secretary of State']),
+        ('{s}_Treasurer_election,_2026', ['Treasurer']),
+        ('{s}_Auditor_election,_2026', ['Auditor']),
+    ],
 }
 
 STATE_FULL_NAMES = {
     'AL': 'Alabama', 'AR': 'Arkansas', 'IL': 'Illinois',
     'IN': 'Indiana', 'KY': 'Kentucky', 'NC': 'North_Carolina',
-    'OH': 'Ohio', 'TX': 'Texas', 'WV': 'West_Virginia',
+    'NM': 'New_Mexico', 'OH': 'Ohio', 'TX': 'Texas',
+    'UT': 'Utah', 'WV': 'West_Virginia',
 }
 
 

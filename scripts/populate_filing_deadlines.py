@@ -41,7 +41,9 @@ def run_sql(query, exit_on_error=True, retries=5):
         return None
 
 
-# Filing deadline for each state (candidate filing deadline for state-level races)
+# Filing deadline for each state (candidate filing deadline for state-level races).
+# Most states use a single date for all offices. States with different deadlines
+# for statewide vs legislative races use a dict: {'statewide': date, 'legislative': date}.
 STATE_DEADLINES = {
     'AL': '2026-01-23',
     'AK': '2026-06-01',
@@ -63,7 +65,7 @@ STATE_DEADLINES = {
     'LA': '2026-02-13',
     'ME': '2026-03-16',
     'MD': '2026-02-24',
-    'MA': '2026-06-02',
+    'MA': {'statewide': '2026-06-02', 'legislative': '2026-05-26'},
     'MI': '2026-04-21',
     'MN': '2026-06-02',
     'MS': '2025-12-26',
@@ -73,7 +75,7 @@ STATE_DEADLINES = {
     'NV': '2026-03-13',
     'NH': '2026-06-12',
     'NJ': '2026-03-23',
-    'NM': '2026-02-03',
+    'NM': {'statewide': '2026-02-03', 'legislative': '2026-03-10'},
     'NY': '2026-04-06',
     'NC': '2025-12-19',
     'ND': '2026-04-06',
@@ -116,40 +118,53 @@ def main():
     total_updated = 0
 
     for abbr in sorted(states_to_process):
-        deadline = states_to_process[abbr]
+        entry = states_to_process[abbr]
 
-        if args.dry_run:
-            # Count how many elections would be updated
-            count_sql = f"""
-                SELECT COUNT(*) as cnt
-                FROM elections e
-                JOIN seats s ON e.seat_id = s.id
-                JOIN districts d ON s.district_id = d.id
-                JOIN states st ON d.state_id = st.id
-                WHERE e.election_year = 2026
-                  AND e.election_type IN ('General','Primary_D','Primary_R','Primary','Primary_Nonpartisan')
-                  AND st.abbreviation = '{abbr}'
-            """
-            rows = run_sql(count_sql)
-            count = rows[0]['cnt'] if rows else 0
-            print(f"  {abbr}: would set filing_deadline = {deadline} on {count} elections")
-            total_updated += count
+        # Build list of (deadline, office_level_filter) pairs
+        if isinstance(entry, dict):
+            deadline_pairs = [
+                (entry['statewide'], "d.office_level = 'Statewide'"),
+                (entry['legislative'], "d.office_level = 'Legislative'"),
+            ]
         else:
-            update_sql = f"""
-                UPDATE elections e
-                SET filing_deadline = '{deadline}'
-                FROM seats s
-                JOIN districts d ON s.district_id = d.id
-                JOIN states st ON d.state_id = st.id
-                WHERE e.seat_id = s.id
-                  AND e.election_year = 2026
-                  AND e.election_type IN ('General','Primary_D','Primary_R','Primary','Primary_Nonpartisan')
-                  AND st.abbreviation = '{abbr}'
-            """
-            result = run_sql(update_sql)
-            # Result is empty list on successful UPDATE
-            print(f"  {abbr}: set filing_deadline = {deadline}")
-            total_updated += 1
+            deadline_pairs = [(entry, None)]
+
+        for deadline, level_filter in deadline_pairs:
+            level_clause = f"AND {level_filter}" if level_filter else ""
+            level_label = f" ({level_filter.split('= ')[1].strip(chr(39))})" if level_filter else ""
+
+            if args.dry_run:
+                count_sql = f"""
+                    SELECT COUNT(*) as cnt
+                    FROM elections e
+                    JOIN seats s ON e.seat_id = s.id
+                    JOIN districts d ON s.district_id = d.id
+                    JOIN states st ON d.state_id = st.id
+                    WHERE e.election_year = 2026
+                      AND e.election_type IN ('General','Primary_D','Primary_R','Primary','Primary_Nonpartisan')
+                      AND st.abbreviation = '{abbr}'
+                      {level_clause}
+                """
+                rows = run_sql(count_sql)
+                count = rows[0]['cnt'] if rows else 0
+                print(f"  {abbr}{level_label}: would set filing_deadline = {deadline} on {count} elections")
+                total_updated += count
+            else:
+                update_sql = f"""
+                    UPDATE elections e
+                    SET filing_deadline = '{deadline}'
+                    FROM seats s
+                    JOIN districts d ON s.district_id = d.id
+                    JOIN states st ON d.state_id = st.id
+                    WHERE e.seat_id = s.id
+                      AND e.election_year = 2026
+                      AND e.election_type IN ('General','Primary_D','Primary_R','Primary','Primary_Nonpartisan')
+                      AND st.abbreviation = '{abbr}'
+                      {level_clause}
+                """
+                result = run_sql(update_sql)
+                print(f"  {abbr}{level_label}: set filing_deadline = {deadline}")
+                total_updated += 1
 
     print(f"\n{'Would update' if args.dry_run else 'Updated'} {total_updated} {'elections' if args.dry_run else 'states'}")
 

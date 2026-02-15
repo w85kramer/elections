@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swing Calculator | State Elections Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<style>
+  .slider-section {
+    background: #f8f9fa;
+    border-radius: var(--ms-radius);
+    padding: 24px 32px;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  .slider-labels {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ms-text-light);
+    margin-bottom: 8px;
+  }
+  .slider-labels .dem { color: var(--ms-dem-blue); }
+  .slider-labels .rep { color: var(--ms-rep-red); }
+  input[type="range"] {
+    width: 100%;
+    height: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 4px;
+    background: linear-gradient(to right, var(--ms-dem-blue), #ccc 50%, var(--ms-rep-red));
+    outline: none;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: var(--ms-navy);
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    cursor: pointer;
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: var(--ms-navy);
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    cursor: pointer;
+  }
+  .swing-value {
+    font-weight: 800;
+    font-size: 28px;
+    color: var(--ms-navy);
+    margin-top: 8px;
+  }
+  .summary-row {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .summary-row .dem { color: var(--ms-dem-blue); }
+  .summary-row .rep { color: var(--ms-rep-red); }
+  .summary-row .tied { color: var(--ms-divided); }
+
+  /* 99-chamber grid */
+  .chamber-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 4px;
+    margin-bottom: 32px;
+  }
+  .chamber-cell {
+    padding: 8px 6px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.1s;
+    min-height: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid transparent;
+  }
+  .chamber-cell:hover {
+    transform: scale(1.05);
+    border-color: var(--ms-navy);
+    z-index: 1;
+  }
+  .chamber-cell.selected {
+    border: 2px solid var(--ms-navy);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .cell-label {
+    font-weight: 700;
+    font-size: 11px;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    line-height: 1.2;
+  }
+  .cell-counts {
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+
+  /* Detail panel */
+  .detail-panel {
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    padding: 20px;
+    display: none;
+    margin-bottom: 32px;
+  }
+  .detail-panel.visible { display: block; }
+  .detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .flip-list {
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 13px;
+  }
+  .flip-list table { width: 100%; }
+  .flip-list th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--ms-text-light);
+    padding: 4px 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  .flip-list td { padding: 4px 8px; border-bottom: 1px solid #f0f0f0; }
+  .flip-d-to-r { color: var(--ms-rep-red); }
+  .flip-r-to-d { color: var(--ms-dem-blue); }
+  .note-box {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: var(--ms-radius);
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #856404;
+  }
+  @media (max-width: 768px) {
+    .chamber-grid { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); }
+    .slider-section { padding: 16px; }
+    .swing-value { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+  <!-- Header -->
+  <div class="site-header">
+    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
+    <a href="index.html" class="site-title">State Elections Tracker</a>
+  </div>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; Swing Calculator
+  </div>
+
+  <h1 class="heading-xl" style="margin-bottom: 8px">Swing Calculator</h1>
+  <p class="subtitle mb-16">National Legislature Forecast Tool</p>
+
+  <!-- Slider -->
+  <div class="slider-section">
+    <div class="slider-labels">
+      <span class="dem">D+15</span>
+      <span>Even</span>
+      <span class="rep">R+15</span>
+    </div>
+    <input type="range" id="swing-slider" min="-15" max="15" step="0.5" value="0">
+    <div class="swing-value" id="swing-value">Even (0)</div>
+  </div>
+
+  <!-- Summary -->
+  <div class="summary-row" id="summary-row">
+    <span class="dem">D-controlled: <span id="sum-d">—</span></span>
+    <span class="tied">Tied: <span id="sum-tied">—</span></span>
+    <span class="rep">R-controlled: <span id="sum-r">—</span></span>
+  </div>
+
+  <!-- Chamber Grid -->
+  <div class="section-title">99 Legislative Chambers</div>
+  <div class="chamber-grid" id="chamber-grid">
+    <!-- Populated by JS -->
+  </div>
+
+  <!-- Detail Panel -->
+  <div class="detail-panel" id="detail-panel">
+    <div class="detail-header">
+      <h3 class="heading-md" id="detail-title">—</h3>
+      <button onclick="document.getElementById('detail-panel').classList.remove('visible')" style="background:none;border:none;font-size:20px;cursor:pointer;color:#666">&times;</button>
+    </div>
+    <div id="detail-content"></div>
+  </div>
+
+  <!-- Note -->
+  <div class="note-box">
+    Projections use 2024 presidential margins as a baseline and apply a uniform national swing.
+    Actual results will vary based on candidate quality, incumbency, local issues, and turnout.
+    Seats not up for election in 2026 are held at their current party.
+  </div>
+
+  <!-- Footer -->
+  <div class="site-footer" style="margin-top: 32px">
+    <img src="assets/multistate-logomark.png" alt="MultiState">
+    <span class="footer-text">Source: MultiState. Data generated <span id="gen-date"></span>.</span>
+  </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script>
+(async function() {
+  const marginsData = await loadJSON('data/pres_margins.json');
+  const summaryData = await loadJSON('data/states_summary.json');
+
+  document.getElementById('gen-date').textContent = formatDate(marginsData.generated_at.split('T')[0]);
+
+  // Color gradient stops for D seat percentage
+  const COLOR_STOPS = [
+    { pct: 0,    color: [184, 0, 80] },     // 0% D = deep red
+    { pct: 0.25, color: [229, 9, 99] },     // 25% D = brand pink
+    { pct: 0.40, color: [196, 74, 110] },   // 40% D = light red
+    { pct: 0.50, color: [139, 86, 127] },   // 50/50 = purple
+    { pct: 0.60, color: [90, 138, 160] },   // 60% D = light blue
+    { pct: 0.75, color: [39, 97, 129] },    // 75% D = brand blue
+    { pct: 1.0,  color: [10, 49, 97] },     // 100% D = deep navy
+  ];
+
+  // Build lookup: state+chamber -> array of seats
+  const chamberSeats = {};
+  for (const seat of marginsData.districts) {
+    const key = `${seat.state}_${seat.chamber}`;
+    if (!chamberSeats[key]) chamberSeats[key] = [];
+    chamberSeats[key].push(seat);
+  }
+
+  // Build list of all 99 chambers (sorted by state abbreviation)
+  const chamberList = [];
+  const stateAbbrs = Object.keys(summaryData.states).sort();
+  for (const abbr of stateAbbrs) {
+    const st = summaryData.states[abbr];
+    const chNames = Object.keys(st.chambers).sort((a, b) => {
+      // Senate first, then lower chamber
+      if (a === 'Senate') return -1;
+      if (b === 'Senate') return 1;
+      return a.localeCompare(b);
+    });
+    for (const ch of chNames) {
+      const key = `${abbr}_${ch}`;
+      chamberList.push({
+        key,
+        state: abbr,
+        chamber: ch,
+        total: st.chambers[ch].total,
+        seats: chamberSeats[key] || [],
+      });
+    }
+  }
+
+  // Create grid cells
+  const grid = document.getElementById('chamber-grid');
+  const cells = {};
+  for (const ch of chamberList) {
+    const cell = document.createElement('div');
+    cell.className = 'chamber-cell';
+    cell.setAttribute('data-key', ch.key);
+
+    // Short chamber name
+    let chShort = ch.chamber;
+    if (chShort === 'House of Delegates') chShort = 'HoD';
+    else if (chShort === 'Assembly') chShort = 'Asm';
+    else if (chShort === 'Legislature') chShort = 'Leg';
+    else if (chShort === 'Senate') chShort = 'Sen';
+    else if (chShort === 'House') chShort = 'Hse';
+
+    cell.innerHTML = `<div class="cell-label">${ch.state} ${chShort}</div><div class="cell-counts" id="counts-${ch.key}"></div>`;
+    cell.addEventListener('click', () => showDetail(ch.key));
+    grid.appendChild(cell);
+    cells[ch.key] = cell;
+  }
+
+  let selectedKey = null;
+
+  function calculate(swing) {
+    const results = {};
+    let totalD = 0, totalR = 0, totalTied = 0;
+
+    for (const ch of chamberList) {
+      let dSeats = 0, rSeats = 0, otherSeats = 0;
+      const flips = [];
+
+      for (const seat of ch.seats) {
+        const margin = parseMargin(seat.pres_margin);
+        let projectedParty;
+
+        if (!seat.up_2026) {
+          // Not up: keep current party
+          projectedParty = seat.current_party || null;
+        } else {
+          // Apply swing: margin is positive=D, swing is positive=D shift
+          const adjusted = margin + swing;
+          projectedParty = adjusted > 0 ? 'D' : adjusted < 0 ? 'R' : seat.current_party;
+        }
+
+        if (projectedParty === 'D') dSeats++;
+        else if (projectedParty === 'R') rSeats++;
+        else otherSeats++;
+
+        // Track flips
+        if (seat.up_2026 && projectedParty && seat.current_party && projectedParty !== seat.current_party) {
+          flips.push({
+            district: seat.district,
+            seat_designator: seat.seat_designator,
+            seat_label: seat.seat_label,
+            from: seat.current_party,
+            to: projectedParty,
+            pres_margin: margin,
+            adjusted_margin: margin + swing,
+          });
+        }
+      }
+
+      const majority = Math.floor(ch.total / 2) + 1;
+      let control = 'tied';
+      if (dSeats >= majority) control = 'D';
+      else if (rSeats >= majority) control = 'R';
+
+      if (control === 'D') totalD++;
+      else if (control === 'R') totalR++;
+      else totalTied++;
+
+      results[ch.key] = { dSeats, rSeats, otherSeats, control, flips, total: ch.total };
+
+      // Update cell
+      const cell = cells[ch.key];
+      const dPct = ch.total > 0 ? dSeats / ch.total : 0.5;
+      cell.style.background = interpolateColor(dPct, COLOR_STOPS);
+      const countsEl = cell.querySelector('.cell-counts');
+      countsEl.textContent = `${dSeats}-${rSeats}`;
+    }
+
+    document.getElementById('sum-d').textContent = totalD;
+    document.getElementById('sum-r').textContent = totalR;
+    document.getElementById('sum-tied').textContent = totalTied;
+
+    return results;
+  }
+
+  let currentResults = {};
+
+  function update() {
+    const swing = -parseFloat(document.getElementById('swing-slider').value);
+    const valEl = document.getElementById('swing-value');
+    if (swing > 0) valEl.textContent = `D+${swing}`;
+    else if (swing < 0) valEl.textContent = `R+${Math.abs(swing)}`;
+    else valEl.textContent = 'Even (0)';
+
+    valEl.style.color = swing > 0 ? 'var(--ms-dem-blue)' : swing < 0 ? 'var(--ms-rep-red)' : 'var(--ms-navy)';
+
+    currentResults = calculate(swing);
+
+    // Refresh detail if one is selected
+    if (selectedKey) showDetail(selectedKey);
+  }
+
+  function showDetail(key) {
+    selectedKey = key;
+    const panel = document.getElementById('detail-panel');
+    const ch = chamberList.find(c => c.key === key);
+    const res = currentResults[key];
+    if (!ch || !res) return;
+
+    // Highlight selected cell
+    document.querySelectorAll('.chamber-cell.selected').forEach(c => c.classList.remove('selected'));
+    cells[key].classList.add('selected');
+
+    panel.classList.add('visible');
+    document.getElementById('detail-title').textContent = `${STATE_NAMES[ch.state]} ${ch.chamber}`;
+
+    const swing = -parseFloat(document.getElementById('swing-slider').value);
+
+    // Compute current (baseline at swing=0) for comparison
+    const baseSeats = ch.seats.reduce((acc, s) => {
+      if (s.current_party === 'D') acc.d++;
+      else if (s.current_party === 'R') acc.r++;
+      return acc;
+    }, { d: 0, r: 0 });
+
+    const dDelta = res.dSeats - baseSeats.d;
+    const deltaStr = dDelta > 0 ? `+${dDelta}` : dDelta < 0 ? `${dDelta}` : '0';
+
+    let html = `<p style="font-size:15px;margin-bottom:12px">
+      <strong>Projected:</strong>
+      <span style="color:var(--ms-dem-blue);font-weight:700">D ${res.dSeats}</span> &ndash;
+      <span style="color:var(--ms-rep-red);font-weight:700">R ${res.rSeats}</span>
+      ${res.otherSeats > 0 ? ` &ndash; Other ${res.otherSeats}` : ''}
+      (${res.flips.length} flips, net D ${deltaStr})
+    </p>`;
+
+    if (res.flips.length > 0) {
+      html += `<div class="flip-list"><table>
+        <thead><tr><th>District</th><th>Flip</th><th>Pres. Margin</th><th>Adjusted</th></tr></thead><tbody>`;
+      // Sort flips by adjusted margin (closest races first)
+      res.flips.sort((a, b) => Math.abs(a.adjusted_margin) - Math.abs(b.adjusted_margin));
+      for (const f of res.flips) {
+        const flipClass = f.to === 'D' ? 'flip-r-to-d' : 'flip-d-to-r';
+        const adjStr = f.adjusted_margin > 0 ? `D+${f.adjusted_margin.toFixed(1)}` : `R+${Math.abs(f.adjusted_margin).toFixed(1)}`;
+        const presStr = f.pres_margin > 0 ? `D+${f.pres_margin.toFixed(1)}` : `R+${Math.abs(f.pres_margin).toFixed(1)}`;
+        const distLabel = f.seat_designator ? `${f.district}${f.seat_designator}` : f.district;
+        html += `<tr class="${flipClass}">
+          <td>${distLabel}</td>
+          <td>${f.from} &rarr; ${f.to}</td>
+          <td>${presStr}</td>
+          <td>${adjStr}</td>
+        </tr>`;
+      }
+      html += '</tbody></table></div>';
+    } else {
+      html += '<p class="text-muted text-sm">No flips at this swing level</p>';
+    }
+
+    document.getElementById('detail-content').innerHTML = html;
+  }
+
+  // Initial calculation
+  update();
+
+  // Slider event
+  document.getElementById('swing-slider').addEventListener('input', update);
+
+})();
+</script>
+</body>
+</html>

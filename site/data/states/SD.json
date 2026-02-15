@@ -1,0 +1,1098 @@
+{
+  "generated_at": "2026-02-15T01:21:03.297523Z",
+  "state": {
+    "name": "South Dakota",
+    "abbr": "SD",
+    "senate_seats": 35,
+    "house_seats": 70,
+    "senate_term_years": 2,
+    "house_term_years": 2,
+    "gov_term_years": 4,
+    "gov_term_limit": "Yes (2 consecutive)",
+    "next_gov_election_year": 2026,
+    "uses_jungle_primary": false,
+    "has_runoffs": false
+  },
+  "statewide_officers": [
+    {
+      "office": "Governor",
+      "name": "Larry Rhoden",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2025,
+      "forecast": "Solid R",
+      "forecast_details": [
+        {
+          "source": "Cook Political Report",
+          "rating": "Solid R"
+        },
+        {
+          "source": "Sabato's Crystal Ball",
+          "rating": "Solid R"
+        }
+      ]
+    },
+    {
+      "office": "Lt. Governor",
+      "name": "Tony Venhuizen",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2025
+    },
+    {
+      "office": "Attorney General",
+      "name": "Marty Jackley",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2023
+    },
+    {
+      "office": "Secretary of State",
+      "name": "Monae Johnson",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2022
+    },
+    {
+      "office": "Treasurer",
+      "name": "Josh Haeder",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2019
+    },
+    {
+      "office": "Auditor",
+      "name": "Rich Sattgast",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2019
+    }
+  ],
+  "chambers": {
+    "House": {
+      "total": 70,
+      "composition": {
+        "D": 5,
+        "R": 65,
+        "Other": 0,
+        "Vacant": 0
+      },
+      "supermajority": 47,
+      "seats_up_2026": 70,
+      "members": [
+        {
+          "district": "1",
+          "district_name": "HD-1",
+          "seat_designator": "A",
+          "name": "Nick Fosness",
+          "party": "R",
+          "pres_margin": "-23.7",
+          "next_election": 2026
+        },
+        {
+          "district": "1",
+          "district_name": "HD-1",
+          "seat_designator": "B",
+          "name": "Logan Manhart",
+          "party": "R",
+          "pres_margin": "-23.7",
+          "next_election": 2026
+        },
+        {
+          "district": "2",
+          "district_name": "HD-2",
+          "seat_designator": "A",
+          "name": "David Kull",
+          "party": "R",
+          "pres_margin": "-29.2",
+          "next_election": 2026
+        },
+        {
+          "district": "2",
+          "district_name": "HD-2",
+          "seat_designator": "B",
+          "name": "John Sjaarda",
+          "party": "R",
+          "pres_margin": "-29.2",
+          "next_election": 2026
+        },
+        {
+          "district": "3",
+          "district_name": "HD-3",
+          "seat_designator": "A",
+          "name": "Al Novstrup",
+          "party": "R",
+          "pres_margin": "-27.8",
+          "next_election": 2026
+        },
+        {
+          "district": "3",
+          "district_name": "HD-3",
+          "seat_designator": "B",
+          "name": "Brandei Schaefbauer",
+          "party": "R",
+          "pres_margin": "-27.8",
+          "next_election": 2026
+        },
+        {
+          "district": "4",
+          "district_name": "HD-4",
+          "seat_designator": "A",
+          "name": "Dylan Jordan",
+          "party": "R",
+          "pres_margin": "-52.6",
+          "next_election": 2026
+        },
+        {
+          "district": "4",
+          "district_name": "HD-4",
+          "seat_designator": "B",
+          "name": "Kent Roe",
+          "party": "R",
+          "pres_margin": "-52.6",
+          "next_election": 2026
+        },
+        {
+          "district": "5",
+          "district_name": "HD-5",
+          "seat_designator": "A",
+          "name": "Josephine Garcia",
+          "party": "R",
+          "pres_margin": "-38.0",
+          "next_election": 2026
+        },
+        {
+          "district": "5",
+          "district_name": "HD-5",
+          "seat_designator": "B",
+          "name": "Matt Roby",
+          "party": "R",
+          "pres_margin": "-38.0",
+          "next_election": 2026
+        },
+        {
+          "district": "6",
+          "district_name": "HD-6",
+          "seat_designator": "A",
+          "name": "Aaron Aylward",
+          "party": "R",
+          "pres_margin": "-32.6",
+          "next_election": 2026
+        },
+        {
+          "district": "6",
+          "district_name": "HD-6",
+          "seat_designator": "B",
+          "name": "Tim Czmowski",
+          "party": "R",
+          "pres_margin": "-32.6",
+          "next_election": 2026
+        },
+        {
+          "district": "7",
+          "district_name": "HD-7",
+          "seat_designator": "A",
+          "name": "Roger DeGroot",
+          "party": "R",
+          "pres_margin": "-11.7",
+          "next_election": 2026
+        },
+        {
+          "district": "7",
+          "district_name": "HD-7",
+          "seat_designator": "B",
+          "name": "Mellissa Heermann",
+          "party": "R",
+          "pres_margin": "-11.7",
+          "next_election": 2026
+        },
+        {
+          "district": "8",
+          "district_name": "HD-8",
+          "seat_designator": "A",
+          "name": "Tim Reisch",
+          "party": "R",
+          "pres_margin": "-35.5",
+          "next_election": 2026
+        },
+        {
+          "district": "8",
+          "district_name": "HD-8",
+          "seat_designator": "B",
+          "name": "Tim Walburg",
+          "party": "R",
+          "pres_margin": "-35.5",
+          "next_election": 2026
+        },
+        {
+          "district": "9",
+          "district_name": "HD-9",
+          "seat_designator": "A",
+          "name": "Tesa Schwans",
+          "party": "R",
+          "pres_margin": "-23.9",
+          "next_election": 2026
+        },
+        {
+          "district": "9",
+          "district_name": "HD-9",
+          "seat_designator": "B",
+          "name": "Bethany Soye",
+          "party": "R",
+          "pres_margin": "-23.9",
+          "next_election": 2026
+        },
+        {
+          "district": "10",
+          "district_name": "HD-10",
+          "seat_designator": "A",
+          "name": "Bobbi Andera",
+          "party": "R",
+          "pres_margin": "+7.6",
+          "next_election": 2026
+        },
+        {
+          "district": "10",
+          "district_name": "HD-10",
+          "seat_designator": "B",
+          "name": "Erin Healy",
+          "party": "D",
+          "pres_margin": "+7.6",
+          "next_election": 2026
+        },
+        {
+          "district": "11",
+          "district_name": "HD-11",
+          "seat_designator": "A",
+          "name": "Brian Mulder",
+          "party": "R",
+          "pres_margin": "-9.6",
+          "next_election": 2026
+        },
+        {
+          "district": "11",
+          "district_name": "HD-11",
+          "seat_designator": "B",
+          "name": "Keri Weems",
+          "party": "R",
+          "pres_margin": "-9.6",
+          "next_election": 2026
+        },
+        {
+          "district": "12",
+          "district_name": "HD-12",
+          "seat_designator": "A",
+          "name": "Amber Arlint",
+          "party": "R",
+          "pres_margin": "-5.2",
+          "next_election": 2026
+        },
+        {
+          "district": "12",
+          "district_name": "HD-12",
+          "seat_designator": "B",
+          "name": "Greg Jamison",
+          "party": "R",
+          "pres_margin": "-5.2",
+          "next_election": 2026
+        },
+        {
+          "district": "13",
+          "district_name": "HD-13",
+          "seat_designator": "A",
+          "name": "John Hughes",
+          "party": "R",
+          "pres_margin": "-10.3",
+          "next_election": 2026
+        },
+        {
+          "district": "13",
+          "district_name": "HD-13",
+          "seat_designator": "B",
+          "name": "Jack Kolbeck",
+          "party": "R",
+          "pres_margin": "-10.3",
+          "next_election": 2026
+        },
+        {
+          "district": "14",
+          "district_name": "HD-14",
+          "seat_designator": "A",
+          "name": "Tony Kayser",
+          "party": "R",
+          "pres_margin": "-3.4",
+          "next_election": 2026
+        },
+        {
+          "district": "14",
+          "district_name": "HD-14",
+          "seat_designator": "B",
+          "name": "Taylor Rehfeldt",
+          "party": "R",
+          "pres_margin": "-3.4",
+          "next_election": 2026
+        },
+        {
+          "district": "15",
+          "district_name": "HD-15",
+          "seat_designator": "A",
+          "name": "Erik Muckey",
+          "party": "D",
+          "pres_margin": "+8.1",
+          "next_election": 2026
+        },
+        {
+          "district": "15",
+          "district_name": "HD-15",
+          "seat_designator": "B",
+          "name": "Kadyn Wittman",
+          "party": "D",
+          "pres_margin": "+8.1",
+          "next_election": 2026
+        },
+        {
+          "district": "16",
+          "district_name": "HD-16",
+          "seat_designator": "A",
+          "name": "Karla Lems",
+          "party": "R",
+          "pres_margin": "-45.3",
+          "next_election": 2026
+        },
+        {
+          "district": "16",
+          "district_name": "HD-16",
+          "seat_designator": "B",
+          "name": "John Shubeck",
+          "party": "R",
+          "pres_margin": "-45.3",
+          "next_election": 2026
+        },
+        {
+          "district": "17",
+          "district_name": "HD-17",
+          "seat_designator": "A",
+          "name": "Chris Kassin",
+          "party": "R",
+          "pres_margin": "-16.6",
+          "next_election": 2026
+        },
+        {
+          "district": "17",
+          "district_name": "HD-17",
+          "seat_designator": "B",
+          "name": "William Shorma",
+          "party": "R",
+          "pres_margin": "-16.6",
+          "next_election": 2026
+        },
+        {
+          "district": "18",
+          "district_name": "HD-18",
+          "seat_designator": "A",
+          "name": "Julie Auch",
+          "party": "R",
+          "pres_margin": "-25.9",
+          "next_election": 2026
+        },
+        {
+          "district": "18",
+          "district_name": "HD-18",
+          "seat_designator": "B",
+          "name": "Mike Stevens",
+          "party": "R",
+          "pres_margin": "-25.9",
+          "next_election": 2026
+        },
+        {
+          "district": "19",
+          "district_name": "HD-19",
+          "seat_designator": "A",
+          "name": "Jessica Bahmuller",
+          "party": "R",
+          "pres_margin": "-54.1",
+          "next_election": 2026
+        },
+        {
+          "district": "19",
+          "district_name": "HD-19",
+          "seat_designator": "B",
+          "name": "Drew Peterson",
+          "party": "R",
+          "pres_margin": "-54.1",
+          "next_election": 2026
+        },
+        {
+          "district": "20",
+          "district_name": "HD-20",
+          "seat_designator": "A",
+          "name": "Jeff Bathke",
+          "party": "R",
+          "pres_margin": "-40.1",
+          "next_election": 2026
+        },
+        {
+          "district": "20",
+          "district_name": "HD-20",
+          "seat_designator": "B",
+          "name": "Kaley Nolz",
+          "party": "R",
+          "pres_margin": "-40.1",
+          "next_election": 2026
+        },
+        {
+          "district": "21",
+          "district_name": "HD-21",
+          "seat_designator": "A",
+          "name": "Jim Halverson",
+          "party": "R",
+          "pres_margin": "-56.5",
+          "next_election": 2026
+        },
+        {
+          "district": "21",
+          "district_name": "HD-21",
+          "seat_designator": "B",
+          "name": "Marty Overweg",
+          "party": "R",
+          "pres_margin": "-56.5",
+          "next_election": 2026
+        },
+        {
+          "district": "22",
+          "district_name": "HD-22",
+          "seat_designator": "A",
+          "name": "Lana Greenfield",
+          "party": "R",
+          "pres_margin": "-39.9",
+          "next_election": 2026
+        },
+        {
+          "district": "22",
+          "district_name": "HD-22",
+          "seat_designator": "B",
+          "name": "Kevin Van Diepen",
+          "party": "R",
+          "pres_margin": "-39.9",
+          "next_election": 2026
+        },
+        {
+          "district": "23",
+          "district_name": "HD-23",
+          "seat_designator": "A",
+          "name": "Spencer Gosch",
+          "party": "R",
+          "pres_margin": "-58.6",
+          "next_election": 2026
+        },
+        {
+          "district": "23",
+          "district_name": "HD-23",
+          "seat_designator": "B",
+          "name": "Scott Moore",
+          "party": "R",
+          "pres_margin": "-58.6",
+          "next_election": 2026
+        },
+        {
+          "district": "24",
+          "district_name": "HD-24",
+          "seat_designator": "A",
+          "name": "Will Mortenson",
+          "party": "R",
+          "pres_margin": "-40.7",
+          "next_election": 2026
+        },
+        {
+          "district": "24",
+          "district_name": "HD-24",
+          "seat_designator": "B",
+          "name": "Mike Weisgram",
+          "party": "R",
+          "pres_margin": "-40.7",
+          "next_election": 2026
+        },
+        {
+          "district": "25",
+          "district_name": "HD-25",
+          "seat_designator": "A",
+          "name": "Jon Hansen",
+          "party": "R",
+          "pres_margin": "-39.5",
+          "next_election": 2026
+        },
+        {
+          "district": "25",
+          "district_name": "HD-25",
+          "seat_designator": "B",
+          "name": "Les Heinemann",
+          "party": "R",
+          "pres_margin": "-39.5",
+          "next_election": 2026
+        },
+        {
+          "district": "26",
+          "district_name": "HD-26",
+          "seat_designator": "A",
+          "name": "Eric Emery",
+          "party": "D",
+          "pres_margin": "-12.2",
+          "next_election": 2026
+        },
+        {
+          "district": "26",
+          "district_name": "HD-26",
+          "seat_designator": "B",
+          "name": "Rebecca Reimer",
+          "party": "R",
+          "pres_margin": "-12.2",
+          "next_election": 2026
+        },
+        {
+          "district": "27",
+          "district_name": "HD-27",
+          "seat_designator": "A",
+          "name": "Liz May",
+          "party": "R",
+          "pres_margin": "-0.2",
+          "next_election": 2026
+        },
+        {
+          "district": "27",
+          "district_name": "HD-27",
+          "seat_designator": "B",
+          "name": "Peri Pourier",
+          "party": "R",
+          "pres_margin": "-0.2",
+          "next_election": 2026
+        },
+        {
+          "district": "28",
+          "district_name": "HD-28",
+          "seat_designator": "A",
+          "name": "Jana Hunt",
+          "party": "R",
+          "pres_margin": "-42.7",
+          "next_election": 2026
+        },
+        {
+          "district": "28",
+          "district_name": "HD-28",
+          "seat_designator": "B",
+          "name": "Travis Ismay",
+          "party": "R",
+          "pres_margin": "-42.7",
+          "next_election": 2026
+        },
+        {
+          "district": "29",
+          "district_name": "HD-29",
+          "seat_designator": "A",
+          "name": "Terri Jorgenson",
+          "party": "R",
+          "pres_margin": "-51.8",
+          "next_election": 2026
+        },
+        {
+          "district": "29",
+          "district_name": "HD-29",
+          "seat_designator": "B",
+          "name": "Kathy Rice",
+          "party": "R",
+          "pres_margin": "-51.8",
+          "next_election": 2026
+        },
+        {
+          "district": "30",
+          "district_name": "HD-30",
+          "seat_designator": "A",
+          "name": "Tim Goodwin",
+          "party": "R",
+          "pres_margin": "-46.1",
+          "next_election": 2026
+        },
+        {
+          "district": "30",
+          "district_name": "HD-30",
+          "seat_designator": "B",
+          "name": "Trish Ladner",
+          "party": "R",
+          "pres_margin": "-46.1",
+          "next_election": 2026
+        },
+        {
+          "district": "31",
+          "district_name": "HD-31",
+          "seat_designator": "A",
+          "name": "Mary Fitzgerald",
+          "party": "R",
+          "pres_margin": "-31.3",
+          "next_election": 2026
+        },
+        {
+          "district": "31",
+          "district_name": "HD-31",
+          "seat_designator": "B",
+          "name": "Scott Odenbach",
+          "party": "R",
+          "pres_margin": "-31.3",
+          "next_election": 2026
+        },
+        {
+          "district": "32",
+          "district_name": "HD-32",
+          "seat_designator": "A",
+          "name": "Steve Duffy",
+          "party": "R",
+          "pres_margin": "-1.8",
+          "next_election": 2026
+        },
+        {
+          "district": "32",
+          "district_name": "HD-32",
+          "seat_designator": "B",
+          "name": "Nicole Uhre-Balk",
+          "party": "D",
+          "pres_margin": "-1.8",
+          "next_election": 2026
+        },
+        {
+          "district": "33",
+          "district_name": "HD-33",
+          "seat_designator": "A",
+          "name": "Phil Jensen",
+          "party": "R",
+          "pres_margin": "-34.7",
+          "next_election": 2026
+        },
+        {
+          "district": "33",
+          "district_name": "HD-33",
+          "seat_designator": "B",
+          "name": "Curt Massie",
+          "party": "R",
+          "pres_margin": "-34.7",
+          "next_election": 2026
+        },
+        {
+          "district": "34",
+          "district_name": "HD-34",
+          "seat_designator": "A",
+          "name": "Heather Baxter",
+          "party": "R",
+          "pres_margin": "-16.1",
+          "next_election": 2026
+        },
+        {
+          "district": "34",
+          "district_name": "HD-34",
+          "seat_designator": "B",
+          "name": "Mike Derby",
+          "party": "R",
+          "pres_margin": "-16.1",
+          "next_election": 2026
+        },
+        {
+          "district": "35",
+          "district_name": "HD-35",
+          "seat_designator": "A",
+          "name": "Tina Mulally",
+          "party": "R",
+          "pres_margin": "-33.7",
+          "next_election": 2026
+        },
+        {
+          "district": "35",
+          "district_name": "HD-35",
+          "seat_designator": "B",
+          "name": "Tony Randolph",
+          "party": "R",
+          "pres_margin": "-33.7",
+          "next_election": 2026
+        }
+      ]
+    },
+    "Senate": {
+      "total": 35,
+      "composition": {
+        "D": 3,
+        "R": 32,
+        "Other": 0,
+        "Vacant": 0
+      },
+      "supermajority": 24,
+      "seats_up_2026": 35,
+      "members": [
+        {
+          "district": "1",
+          "district_name": "SD-1",
+          "seat_designator": null,
+          "name": "Michael Rohl",
+          "party": "R",
+          "pres_margin": "-23.7",
+          "next_election": 2026
+        },
+        {
+          "district": "2",
+          "district_name": "SD-2",
+          "seat_designator": null,
+          "name": "Steve Kolbeck",
+          "party": "R",
+          "pres_margin": "-29.2",
+          "next_election": 2026
+        },
+        {
+          "district": "3",
+          "district_name": "SD-3",
+          "seat_designator": null,
+          "name": "Carl Perry",
+          "party": "R",
+          "pres_margin": "-27.8",
+          "next_election": 2026
+        },
+        {
+          "district": "4",
+          "district_name": "SD-4",
+          "seat_designator": null,
+          "name": "Stephanie Sauder",
+          "party": "R",
+          "pres_margin": "-52.6",
+          "next_election": 2026
+        },
+        {
+          "district": "5",
+          "district_name": "SD-5",
+          "seat_designator": null,
+          "name": "Glen Vilhauer",
+          "party": "R",
+          "pres_margin": "-38.0",
+          "next_election": 2026
+        },
+        {
+          "district": "6",
+          "district_name": "SD-6",
+          "seat_designator": null,
+          "name": "Ernie Otten",
+          "party": "R",
+          "pres_margin": "-32.6",
+          "next_election": 2026
+        },
+        {
+          "district": "7",
+          "district_name": "SD-7",
+          "seat_designator": null,
+          "name": "Tim Reed",
+          "party": "R",
+          "pres_margin": "-11.7",
+          "next_election": 2026
+        },
+        {
+          "district": "8",
+          "district_name": "SD-8",
+          "seat_designator": null,
+          "name": "Casey Crabtree",
+          "party": "R",
+          "pres_margin": "-35.5",
+          "next_election": 2026
+        },
+        {
+          "district": "9",
+          "district_name": "SD-9",
+          "seat_designator": null,
+          "name": "Joy Hohn",
+          "party": "R",
+          "pres_margin": "-23.9",
+          "next_election": 2026
+        },
+        {
+          "district": "10",
+          "district_name": "SD-10",
+          "seat_designator": null,
+          "name": "Liz Larson",
+          "party": "D",
+          "pres_margin": "+7.6",
+          "next_election": 2026
+        },
+        {
+          "district": "11",
+          "district_name": "SD-11",
+          "seat_designator": null,
+          "name": "Chris Karr",
+          "party": "R",
+          "pres_margin": "-9.6",
+          "next_election": 2026
+        },
+        {
+          "district": "12",
+          "district_name": "SD-12",
+          "seat_designator": null,
+          "name": "Arch Beal",
+          "party": "R",
+          "pres_margin": "-5.2",
+          "next_election": 2026
+        },
+        {
+          "district": "13",
+          "district_name": "SD-13",
+          "seat_designator": null,
+          "name": "Sue Peterson",
+          "party": "R",
+          "pres_margin": "-10.3",
+          "next_election": 2026
+        },
+        {
+          "district": "14",
+          "district_name": "SD-14",
+          "seat_designator": null,
+          "name": "Larry Zikmund",
+          "party": "R",
+          "pres_margin": "-3.4",
+          "next_election": 2026
+        },
+        {
+          "district": "15",
+          "district_name": "SD-15",
+          "seat_designator": null,
+          "name": "Jamie Smith",
+          "party": "D",
+          "pres_margin": "+8.1",
+          "next_election": 2026
+        },
+        {
+          "district": "16",
+          "district_name": "SD-16",
+          "seat_designator": null,
+          "name": "Kevin Jensen",
+          "party": "R",
+          "pres_margin": "-45.3",
+          "next_election": 2026
+        },
+        {
+          "district": "17",
+          "district_name": "SD-17",
+          "seat_designator": null,
+          "name": "Sydney Davis",
+          "party": "R",
+          "pres_margin": "-16.6",
+          "next_election": 2026
+        },
+        {
+          "district": "18",
+          "district_name": "SD-18",
+          "seat_designator": null,
+          "name": "Lauren Nelson",
+          "party": "R",
+          "pres_margin": "-25.9",
+          "next_election": 2026
+        },
+        {
+          "district": "19",
+          "district_name": "SD-19",
+          "seat_designator": null,
+          "name": "Kyle Schoenfish",
+          "party": "R",
+          "pres_margin": "-54.1",
+          "next_election": 2026
+        },
+        {
+          "district": "20",
+          "district_name": "SD-20",
+          "seat_designator": null,
+          "name": "Paul Miskimins",
+          "party": "R",
+          "pres_margin": "-40.1",
+          "next_election": 2026
+        },
+        {
+          "district": "21",
+          "district_name": "SD-21",
+          "seat_designator": null,
+          "name": "MyKala Voita",
+          "party": "R",
+          "pres_margin": "-56.5",
+          "next_election": 2026
+        },
+        {
+          "district": "22",
+          "district_name": "SD-22",
+          "seat_designator": null,
+          "name": "Brandon Wipf",
+          "party": "R",
+          "pres_margin": "-39.9",
+          "next_election": 2026
+        },
+        {
+          "district": "23",
+          "district_name": "SD-23",
+          "seat_designator": null,
+          "name": "Mark Lapka",
+          "party": "R",
+          "pres_margin": "-58.6",
+          "next_election": 2026
+        },
+        {
+          "district": "24",
+          "district_name": "SD-24",
+          "seat_designator": null,
+          "name": "Jim Mehlhaff",
+          "party": "R",
+          "pres_margin": "-40.7",
+          "next_election": 2026
+        },
+        {
+          "district": "25",
+          "district_name": "SD-25",
+          "seat_designator": null,
+          "name": "Tom Pischke",
+          "party": "R",
+          "pres_margin": "-39.5",
+          "next_election": 2026
+        },
+        {
+          "district": "26",
+          "district_name": "SD-26",
+          "seat_designator": null,
+          "name": "Tamara Grove",
+          "party": "R",
+          "pres_margin": "-12.2",
+          "next_election": 2026
+        },
+        {
+          "district": "27",
+          "district_name": "SD-27",
+          "seat_designator": null,
+          "name": "Red Dawn Foster",
+          "party": "D",
+          "pres_margin": "-0.2",
+          "next_election": 2026
+        },
+        {
+          "district": "28",
+          "district_name": "SD-28",
+          "seat_designator": null,
+          "name": "Sam Marty",
+          "party": "R",
+          "pres_margin": "-42.7",
+          "next_election": 2026
+        },
+        {
+          "district": "29",
+          "district_name": "SD-29",
+          "seat_designator": null,
+          "name": "John Carley",
+          "party": "R",
+          "pres_margin": "-51.8",
+          "next_election": 2026
+        },
+        {
+          "district": "30",
+          "district_name": "SD-30",
+          "seat_designator": null,
+          "name": "Amber Hulse",
+          "party": "R",
+          "pres_margin": "-46.1",
+          "next_election": 2026
+        },
+        {
+          "district": "31",
+          "district_name": "SD-31",
+          "seat_designator": null,
+          "name": "Randy Deibert",
+          "party": "R",
+          "pres_margin": "-31.3",
+          "next_election": 2026
+        },
+        {
+          "district": "32",
+          "district_name": "SD-32",
+          "seat_designator": null,
+          "name": "Helene Duhamel",
+          "party": "R",
+          "pres_margin": "-1.8",
+          "next_election": 2026
+        },
+        {
+          "district": "33",
+          "district_name": "SD-33",
+          "seat_designator": null,
+          "name": "Curt Voight",
+          "party": "R",
+          "pres_margin": "-34.7",
+          "next_election": 2026
+        },
+        {
+          "district": "34",
+          "district_name": "SD-34",
+          "seat_designator": null,
+          "name": "Taffy Howard",
+          "party": "R",
+          "pres_margin": "-16.1",
+          "next_election": 2026
+        },
+        {
+          "district": "35",
+          "district_name": "SD-35",
+          "seat_designator": null,
+          "name": "Greg Blanc",
+          "party": "R",
+          "pres_margin": "-33.7",
+          "next_election": 2026
+        }
+      ]
+    }
+  },
+  "elections_2026": {
+    "governor": {
+      "forecast": "Solid R",
+      "candidates": []
+    },
+    "statewide": [],
+    "legislative": []
+  },
+  "ballot_measures": [
+    {
+      "number": "Constitutional Amendment I",
+      "title": "Constitutional Amendment I",
+      "description": "Condition Medicaid expansion on federal funding remaining at least 90%. This legislatively referred constitutional amendment is on the South Dakota 2026 ballot.",
+      "type": "Legislative Constitutional Amendment",
+      "status": "On Ballot",
+      "result": "Pending",
+      "date": "2026-11-03"
+    },
+    {
+      "number": "Constitutional Amendment J",
+      "title": "Constitutional Amendment J",
+      "description": "Provide that \"[an] individual who is not a citizen of the United States is disqualified from voting in any election or upon any question submitted to the voters\". This legislatively referred constitutional amendment is on the South Dakota 2026 ballot.",
+      "type": "Legislative Constitutional Amendment",
+      "status": "On Ballot",
+      "result": "Pending",
+      "date": "2026-11-03"
+    },
+    {
+      "number": "Constitutional Amendment K",
+      "title": "Constitutional Amendment K",
+      "description": "Establish an unclaimed property trust fund. This legislatively referred constitutional amendment is on the South Dakota 2026 ballot.",
+      "type": "Legislative Constitutional Amendment",
+      "status": "On Ballot",
+      "result": "Pending",
+      "date": "2026-11-03"
+    },
+    {
+      "number": "Constitutional Amendment L",
+      "title": "Constitutional Amendment L",
+      "description": "Require a 60% majority by voters to approve constitutional amendments. This legislatively referred constitutional amendment is on the South Dakota 2026 ballot.",
+      "type": "Legislative Constitutional Amendment",
+      "status": "On Ballot",
+      "result": "Pending",
+      "date": "2026-11-03"
+    }
+  ],
+  "filing_deadline": "2026-03-31",
+  "primary_date": "2026-06-02"
+}

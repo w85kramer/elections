@@ -54,10 +54,53 @@
     .map-sidebar { width: 100%; }
     .map-title { font-size: 28px; }
   }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
+  }
+  .site-nav a.nav-home {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #043858;
+    font-weight: 800;
+    font-size: 16px;
+    margin-right: 8px;
+  }
+  .site-nav a.nav-home img { width: 32px; height: auto; }
+  .site-nav .nav-sep { color: #ccc; font-size: 14px; }
+  .site-nav a.nav-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: #276181;
+    text-decoration: none;
+    padding: 4px 0;
+  }
+  .site-nav a.nav-link:hover { text-decoration: underline; }
+  .site-nav a.nav-link.active { color: #043858; border-bottom: 2px solid #043858; }
 </style>
 </head>
 <body>
 <div class="map-page">
+  <div class="site-nav">
+    <a class="nav-home" href="index.html"><img src="assets/multistate-logomark.png" alt="">Elections Tracker</a>
+    <span class="nav-sep">|</span>
+    <a class="nav-link active" href="trifectas_partisan.html">Trifectas</a>
+    <a class="nav-link" href="governors_2026.html">2026 Governors</a>
+    <a class="nav-link" href="governors_partisan.html">Governors</a>
+    <a class="nav-link" href="ltgov_partisan.html">Lt. Governors</a>
+    <a class="nav-link" href="ag_partisan.html">Attorneys General</a>
+    <a class="nav-link" href="sos_partisan.html">Secretaries of State</a>
+    <span class="nav-sep">|</span>
+    <a class="nav-link" href="swing-calculator.html">Swing Calc</a>
+  </div>
   <h1 class="map-title">Trifectas <span class="separator">|</span> 2026 Partisan Breakdown</h1>
   <div class="map-layout">
     <div class="map-sidebar">

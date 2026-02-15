@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ballot Measures | State Elections Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<style>
+  /* Filters bar */
+  .filters-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+    align-items: center;
+  }
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .filter-group label {
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--ms-text-light);
+  }
+  .filter-group select {
+    padding: 6px 10px;
+    border: 2px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 13px;
+    background: white;
+    cursor: pointer;
+  }
+  .filter-group select:focus { border-color: var(--ms-navy); outline: none; }
+  .search-input {
+    padding: 6px 12px;
+    border: 2px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 13px;
+    min-width: 200px;
+    flex: 1;
+    max-width: 300px;
+  }
+  .search-input:focus { border-color: var(--ms-navy); outline: none; }
+  .results-count {
+    font-size: 13px;
+    color: var(--ms-text-light);
+    margin-bottom: 16px;
+  }
+
+  /* Year tabs */
+  .year-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 24px;
+  }
+  .year-tab {
+    padding: 10px 24px;
+    border: 2px solid var(--ms-border);
+    border-radius: var(--ms-radius) var(--ms-radius) 0 0;
+    background: white;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.15s;
+    color: var(--ms-text-light);
+    border-bottom: 2px solid var(--ms-border);
+  }
+  .year-tab:hover { color: var(--ms-navy); }
+  .year-tab.active {
+    background: var(--ms-navy);
+    color: white;
+    border-color: var(--ms-navy);
+  }
+  .year-tab .tab-count {
+    font-weight: 400;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: 4px;
+  }
+
+  /* Stats row */
+  .bm-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  /* Measure card */
+  .measure-card {
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    transition: box-shadow 0.15s;
+  }
+  .measure-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .measure-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+  }
+  .measure-state {
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--ms-navy);
+    text-decoration: none;
+  }
+  .measure-state:hover { text-decoration: underline; }
+  .measure-number {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--ms-text);
+  }
+  .measure-result {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .result-passed { background: #d4edda; color: #155724; }
+  .result-failed { background: #f8d7da; color: #721c24; }
+  .result-pending { background: #fff3cd; color: #856404; }
+  .result-other { background: #e2e3e5; color: #383d41; }
+  .measure-date {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ms-text-light);
+    margin-left: auto;
+    white-space: nowrap;
+  }
+  .measure-title {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--ms-text);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .measure-desc {
+    font-size: 13px;
+    color: var(--ms-text-light);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .measure-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--ms-text-light);
+  }
+  .measure-meta span { display: inline-flex; align-items: center; gap: 4px; }
+  .meta-label { font-weight: 600; }
+  .vote-bar-container {
+    margin-top: 8px;
+    margin-bottom: 4px;
+  }
+  .vote-bar {
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    background: #eee;
+  }
+  .vote-bar .yes-bar { background: #28a745; }
+  .vote-bar .no-bar { background: #dc3545; }
+  .vote-bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+  .vote-bar-labels .yes-label { color: #28a745; }
+  .vote-bar-labels .no-label { color: #dc3545; }
+
+  /* Empty state */
+  .empty-state {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--ms-text-light);
+    font-size: 15px;
+  }
+
+  @media (max-width: 768px) {
+    .bm-stats { grid-template-columns: repeat(2, 1fr); }
+    .filters-bar { flex-direction: column; align-items: stretch; }
+    .search-input { max-width: 100%; }
+    .year-tabs { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+  <!-- Header -->
+  <div class="site-header">
+    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
+    <a href="index.html" class="site-title">State Elections Tracker</a>
+  </div>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; Ballot Measures
+  </div>
+
+  <h1 class="heading-xl" style="margin-bottom: 8px">Ballot Measures</h1>
+  <p class="subtitle mb-16">Statewide ballot propositions, amendments, and referenda (2024&ndash;2026)</p>
+
+  <!-- Year Tabs -->
+  <div class="year-tabs" id="year-tabs"></div>
+
+  <!-- Stats -->
+  <div class="bm-stats" id="stats-row">
+    <div class="card stat-card"><div class="stat-number" id="stat-total">—</div><div class="stat-label">Total Measures</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-passed" style="color:#28a745">—</div><div class="stat-label">Passed</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-failed" style="color:#dc3545">—</div><div class="stat-label">Failed</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-pending" style="color:#856404">—</div><div class="stat-label">Pending</div></div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters-bar">
+    <div class="filter-group">
+      <label>State</label>
+      <select id="filter-state"><option value="">All States</option></select>
+    </div>
+    <div class="filter-group">
+      <label>Type</label>
+      <select id="filter-type"><option value="">All Types</option></select>
+    </div>
+    <div class="filter-group">
+      <label>Result</label>
+      <select id="filter-result">
+        <option value="">All Results</option>
+        <option value="Passed">Passed</option>
+        <option value="Failed">Failed</option>
+        <option value="Pending">Pending</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Sponsor</label>
+      <select id="filter-sponsor">
+        <option value="">All Sponsors</option>
+        <option value="Legislature">Legislature</option>
+        <option value="Citizen">Citizen</option>
+      </select>
+    </div>
+    <input type="text" class="search-input" id="search" placeholder="Search titles and descriptions...">
+  </div>
+
+  <div class="results-count" id="results-count"></div>
+
+  <!-- Measures list -->
+  <div id="measures-list"></div>
+
+  <!-- Footer -->
+  <div class="site-footer" style="margin-top: 32px">
+    <img src="assets/multistate-logomark.png" alt="MultiState">
+    <span class="footer-text">Source: MultiState &amp; Ballotpedia. Data generated <span id="gen-date"></span>.</span>
+  </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script>
+(async function() {
+  const data = await loadJSON('data/ballot_measures.json');
+  const measures = data.measures;
+
+  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+
+  // Populate year tabs
+  const years = [2026, 2025, 2024];
+  let activeYear = 2026;
+  const tabsEl = document.getElementById('year-tabs');
+
+  for (const yr of years) {
+    const cnt = measures.filter(m => m.year === yr).length;
+    const tab = document.createElement('button');
+    tab.className = 'year-tab' + (yr === activeYear ? ' active' : '');
+    tab.innerHTML = `${yr}<span class="tab-count">(${cnt})</span>`;
+    tab.addEventListener('click', () => {
+      activeYear = yr;
+      document.querySelectorAll('.year-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      render();
+    });
+    tabsEl.appendChild(tab);
+  }
+
+  // Populate filter dropdowns
+  const stateSet = new Set(measures.map(m => m.state));
+  const typeSet = new Set(measures.filter(m => m.type).map(m => m.type));
+
+  const stateSel = document.getElementById('filter-state');
+  for (const s of [...stateSet].sort()) {
+    const opt = document.createElement('option');
+    opt.value = s;
+    opt.textContent = `${STATE_NAMES[s] || s} (${s})`;
+    stateSel.appendChild(opt);
+  }
+
+  const typeSel = document.getElementById('filter-type');
+  for (const t of [...typeSet].sort()) {
+    const opt = document.createElement('option');
+    opt.value = t;
+    opt.textContent = t;
+    typeSel.appendChild(opt);
+  }
+
+  function getFiltered() {
+    const state = document.getElementById('filter-state').value;
+    const type = document.getElementById('filter-type').value;
+    const result = document.getElementById('filter-result').value;
+    const sponsor = document.getElementById('filter-sponsor').value;
+    const search = document.getElementById('search').value.toLowerCase().trim();
+
+    return measures.filter(m => {
+      if (m.year !== activeYear) return false;
+      if (state && m.state !== state) return false;
+      if (type && m.type !== type) return false;
+      if (result && m.result !== result) return false;
+      if (sponsor && m.sponsor !== sponsor) return false;
+      if (search) {
+        const haystack = ((m.title || '') + ' ' + (m.description || '') + ' ' + (m.number || '')).toLowerCase();
+        if (!haystack.includes(search)) return false;
+      }
+      return true;
+    });
+  }
+
+  function resultBadge(result) {
+    if (result === 'Passed') return '<span class="measure-result result-passed">Passed</span>';
+    if (result === 'Failed') return '<span class="measure-result result-failed">Failed</span>';
+    if (result === 'Pending') return '<span class="measure-result result-pending">Pending</span>';
+    return `<span class="measure-result result-other">${result || 'Unknown'}</span>`;
+  }
+
+  function render() {
+    const filtered = getFiltered();
+    const list = document.getElementById('measures-list');
+
+    // Stats for active year
+    const yearMeasures = measures.filter(m => m.year === activeYear);
+    const filteredFromYear = filtered;
+    document.getElementById('stat-total').textContent = yearMeasures.length;
+    document.getElementById('stat-passed').textContent = yearMeasures.filter(m => m.result === 'Passed').length;
+    document.getElementById('stat-failed').textContent = yearMeasures.filter(m => m.result === 'Failed').length;
+    document.getElementById('stat-pending').textContent = yearMeasures.filter(m => m.result === 'Pending').length;
+
+    // Results count
+    const countEl = document.getElementById('results-count');
+    if (filtered.length === yearMeasures.length) {
+      countEl.textContent = `Showing all ${filtered.length} measures`;
+    } else {
+      countEl.textContent = `Showing ${filtered.length} of ${yearMeasures.length} measures`;
+    }
+
+    if (filtered.length === 0) {
+      list.innerHTML = '<div class="empty-state">No measures match the current filters.</div>';
+      return;
+    }
+
+    let html = '';
+    for (const m of filtered) {
+      // Vote bar if we have results
+      let voteHtml = '';
+      if (m.votes_yes != null && m.votes_no != null) {
+        const total = m.votes_yes + m.votes_no;
+        const yesPct = total > 0 ? (m.votes_yes / total * 100) : 0;
+        const noPct = 100 - yesPct;
+        voteHtml = `
+          <div class="vote-bar-container">
+            <div class="vote-bar">
+              <div class="yes-bar" style="width:${yesPct}%"></div>
+              <div class="no-bar" style="width:${noPct}%"></div>
+            </div>
+            <div class="vote-bar-labels">
+              <span class="yes-label">Yes ${yesPct.toFixed(1)}% (${numberWithCommas(m.votes_yes)})</span>
+              <span class="no-label">No ${noPct.toFixed(1)}% (${numberWithCommas(m.votes_no)})</span>
+            </div>
+          </div>`;
+      } else if (m.yes_pct != null) {
+        const yesPct = m.yes_pct;
+        const noPct = 100 - yesPct;
+        voteHtml = `
+          <div class="vote-bar-container">
+            <div class="vote-bar">
+              <div class="yes-bar" style="width:${yesPct}%"></div>
+              <div class="no-bar" style="width:${noPct}%"></div>
+            </div>
+            <div class="vote-bar-labels">
+              <span class="yes-label">Yes ${yesPct.toFixed(1)}%</span>
+              <span class="no-label">No ${noPct.toFixed(1)}%</span>
+            </div>
+          </div>`;
+      }
+
+      // Meta info
+      const metaParts = [];
+      if (m.type) metaParts.push(`<span><span class="meta-label">Type:</span> ${m.type}</span>`);
+      if (m.sponsor) metaParts.push(`<span><span class="meta-label">Sponsor:</span> ${m.sponsor}</span>`);
+      if (m.threshold) metaParts.push(`<span><span class="meta-label">Threshold:</span> ${m.threshold}</span>`);
+      if (m.category) metaParts.push(`<span><span class="meta-label">Category:</span> ${m.category}</span>`);
+
+      const dateTag = m.date ? `<span class="measure-date">${formatDateShort(m.date)}</span>` : '';
+
+      html += `
+        <div class="measure-card">
+          <div class="measure-header">
+            <a href="state.html?st=${m.state}" class="measure-state">${m.state_name}</a>
+            ${m.number ? `<span class="measure-number">${m.number}</span>` : ''}
+            ${resultBadge(m.result)}
+            ${dateTag}
+          </div>
+          <div class="measure-title">${m.title}</div>
+          ${m.description ? `<div class="measure-desc">${m.description}</div>` : ''}
+          ${voteHtml}
+          <div class="measure-meta">${metaParts.join('')}</div>
+        </div>`;
+    }
+
+    list.innerHTML = html;
+  }
+
+  // Initial render
+  render();
+
+  // Filter events
+  document.getElementById('filter-state').addEventListener('change', render);
+  document.getElementById('filter-type').addEventListener('change', render);
+  document.getElementById('filter-result').addEventListener('change', render);
+  document.getElementById('filter-sponsor').addEventListener('change', render);
+
+  let searchTimeout;
+  document.getElementById('search').addEventListener('input', () => {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(render, 200);
+  });
+
+})();
+</script>
+</body>
+</html>

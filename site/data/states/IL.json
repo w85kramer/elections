@@ -1,0 +1,4632 @@
+{
+  "generated_at": "2026-02-15T01:21:03.297523Z",
+  "state": {
+    "name": "Illinois",
+    "abbr": "IL",
+    "senate_seats": 59,
+    "house_seats": 118,
+    "senate_term_years": 4,
+    "house_term_years": 2,
+    "gov_term_years": 4,
+    "gov_term_limit": "None",
+    "next_gov_election_year": 2026,
+    "uses_jungle_primary": false,
+    "has_runoffs": false
+  },
+  "statewide_officers": [
+    {
+      "office": "Governor",
+      "name": "JB Pritzker",
+      "party": "D",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2023,
+      "forecast": "Solid D",
+      "forecast_details": [
+        {
+          "source": "Sabato's Crystal Ball",
+          "rating": "Solid D"
+        },
+        {
+          "source": "Cook Political Report",
+          "rating": "Solid D"
+        }
+      ]
+    },
+    {
+      "office": "Lt. Governor",
+      "name": "Juliana Stratton",
+      "party": "D",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2019
+    },
+    {
+      "office": "Attorney General",
+      "name": "Kwame Raoul",
+      "party": "D",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2019
+    },
+    {
+      "office": "Secretary of State",
+      "name": "Alexi Giannoulias",
+      "party": "D",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2023
+    },
+    {
+      "office": "Treasurer",
+      "name": "Michael Frerichs",
+      "party": "D",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2015
+    },
+    {
+      "office": "Auditor",
+      "name": "Frank J. Mautino",
+      "party": "NP",
+      "method": "Appointed",
+      "next_election": null,
+      "start_year": 2016,
+      "appointed_by": "Legislature"
+    },
+    {
+      "office": "Controller",
+      "name": "Susana Mendoza",
+      "party": "D",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2019
+    }
+  ],
+  "chambers": {
+    "House": {
+      "total": 118,
+      "composition": {
+        "D": 78,
+        "R": 40,
+        "Other": 0,
+        "Vacant": 0
+      },
+      "supermajority": 79,
+      "seats_up_2026": 118,
+      "members": [
+        {
+          "district": "1",
+          "district_name": "HD-1",
+          "seat_designator": null,
+          "name": "Aar\u00f3n Ort\u00edz",
+          "party": "D",
+          "pres_margin": "+29.1",
+          "next_election": 2026
+        },
+        {
+          "district": "2",
+          "district_name": "HD-2",
+          "seat_designator": null,
+          "name": "Lisa Hernandez",
+          "party": "D",
+          "pres_margin": "+30.6",
+          "next_election": 2026
+        },
+        {
+          "district": "3",
+          "district_name": "HD-3",
+          "seat_designator": null,
+          "name": "Eva-Dina Delgado",
+          "party": "D",
+          "pres_margin": "+50.8",
+          "next_election": 2026
+        },
+        {
+          "district": "4",
+          "district_name": "HD-4",
+          "seat_designator": null,
+          "name": "Lilian Jim\u00e9nez",
+          "party": "D",
+          "pres_margin": "+62.4",
+          "next_election": 2026
+        },
+        {
+          "district": "5",
+          "district_name": "HD-5",
+          "seat_designator": null,
+          "name": "Kimberly Du Buclet",
+          "party": "D",
+          "pres_margin": "+72.8",
+          "next_election": 2026
+        },
+        {
+          "district": "6",
+          "district_name": "HD-6",
+          "seat_designator": null,
+          "name": "Sonya Harper",
+          "party": "D",
+          "pres_margin": "+61.3",
+          "next_election": 2026
+        },
+        {
+          "district": "7",
+          "district_name": "HD-7",
+          "seat_designator": null,
+          "name": "Chris Welch",
+          "party": "D",
+          "pres_margin": "+53.3",
+          "next_election": 2026
+        },
+        {
+          "district": "8",
+          "district_name": "HD-8",
+          "seat_designator": null,
+          "name": "La Shawn Ford",
+          "party": "D",
+          "pres_margin": "+53.4",
+          "next_election": 2026
+        },
+        {
+          "district": "9",
+          "district_name": "HD-9",
+          "seat_designator": null,
+          "name": "Yolonda Morris",
+          "party": "D",
+          "pres_margin": "+63.6",
+          "next_election": 2026
+        },
+        {
+          "district": "10",
+          "district_name": "HD-10",
+          "seat_designator": null,
+          "name": "Omar Williams",
+          "party": "D",
+          "pres_margin": "+68.8",
+          "next_election": 2026
+        },
+        {
+          "district": "11",
+          "district_name": "HD-11",
+          "seat_designator": null,
+          "name": "Ann Williams",
+          "party": "D",
+          "pres_margin": "+71.4",
+          "next_election": 2026
+        },
+        {
+          "district": "12",
+          "district_name": "HD-12",
+          "seat_designator": null,
+          "name": "Margaret Croke",
+          "party": "D",
+          "pres_margin": "+61.2",
+          "next_election": 2026
+        },
+        {
+          "district": "13",
+          "district_name": "HD-13",
+          "seat_designator": null,
+          "name": "Hoan Huynh",
+          "party": "D",
+          "pres_margin": "+76.2",
+          "next_election": 2026
+        },
+        {
+          "district": "14",
+          "district_name": "HD-14",
+          "seat_designator": null,
+          "name": "Kelly Cassidy",
+          "party": "D",
+          "pres_margin": "+75.2",
+          "next_election": 2026
+        },
+        {
+          "district": "15",
+          "district_name": "HD-15",
+          "seat_designator": null,
+          "name": "Michael Kelly",
+          "party": "D",
+          "pres_margin": "+15.5",
+          "next_election": 2026
+        },
+        {
+          "district": "16",
+          "district_name": "HD-16",
+          "seat_designator": null,
+          "name": "Kevin Olickal",
+          "party": "D",
+          "pres_margin": "+19.6",
+          "next_election": 2026
+        },
+        {
+          "district": "17",
+          "district_name": "HD-17",
+          "seat_designator": null,
+          "name": "Jen Gong-Gershowitz",
+          "party": "D",
+          "pres_margin": "+36.8",
+          "next_election": 2026
+        },
+        {
+          "district": "18",
+          "district_name": "HD-18",
+          "seat_designator": null,
+          "name": "Robyn Gabel",
+          "party": "D",
+          "pres_margin": "+67.5",
+          "next_election": 2026
+        },
+        {
+          "district": "19",
+          "district_name": "HD-19",
+          "seat_designator": null,
+          "name": "Lindsey LaPointe",
+          "party": "D",
+          "pres_margin": "+29.6",
+          "next_election": 2026
+        },
+        {
+          "district": "20",
+          "district_name": "HD-20",
+          "seat_designator": null,
+          "name": "Brad Stephens",
+          "party": "R",
+          "pres_margin": "-9.0",
+          "next_election": 2026
+        },
+        {
+          "district": "21",
+          "district_name": "HD-21",
+          "seat_designator": null,
+          "name": "Abdelnasser Rashid",
+          "party": "D",
+          "pres_margin": "+26.2",
+          "next_election": 2026
+        },
+        {
+          "district": "22",
+          "district_name": "HD-22",
+          "seat_designator": null,
+          "name": "Angie Guerrero-Cuellar",
+          "party": "D",
+          "pres_margin": "+9.4",
+          "next_election": 2026
+        },
+        {
+          "district": "23",
+          "district_name": "HD-23",
+          "seat_designator": null,
+          "name": "Edgar Gonz\u00e1lez",
+          "party": "D",
+          "pres_margin": "+36.5",
+          "next_election": 2026
+        },
+        {
+          "district": "24",
+          "district_name": "HD-24",
+          "seat_designator": null,
+          "name": "Theresa Mah",
+          "party": "D",
+          "pres_margin": "+38.0",
+          "next_election": 2026
+        },
+        {
+          "district": "25",
+          "district_name": "HD-25",
+          "seat_designator": null,
+          "name": "Curtis Tarver",
+          "party": "D",
+          "pres_margin": "+76.5",
+          "next_election": 2026
+        },
+        {
+          "district": "26",
+          "district_name": "HD-26",
+          "seat_designator": null,
+          "name": "Kam Buckner",
+          "party": "D",
+          "pres_margin": "+67.6",
+          "next_election": 2026
+        },
+        {
+          "district": "27",
+          "district_name": "HD-27",
+          "seat_designator": null,
+          "name": "Justin Slaughter",
+          "party": "D",
+          "pres_margin": "+38.0",
+          "next_election": 2026
+        },
+        {
+          "district": "28",
+          "district_name": "HD-28",
+          "seat_designator": null,
+          "name": "Bob Rita",
+          "party": "D",
+          "pres_margin": "+36.6",
+          "next_election": 2026
+        },
+        {
+          "district": "29",
+          "district_name": "HD-29",
+          "seat_designator": null,
+          "name": "Thaddeus Jones",
+          "party": "D",
+          "pres_margin": "+39.3",
+          "next_election": 2026
+        },
+        {
+          "district": "30",
+          "district_name": "HD-30",
+          "seat_designator": null,
+          "name": "Will Davis",
+          "party": "D",
+          "pres_margin": "+54.8",
+          "next_election": 2026
+        },
+        {
+          "district": "31",
+          "district_name": "HD-31",
+          "seat_designator": null,
+          "name": "Mike Crawford",
+          "party": "D",
+          "pres_margin": "+41.4",
+          "next_election": 2026
+        },
+        {
+          "district": "32",
+          "district_name": "HD-32",
+          "seat_designator": null,
+          "name": "Lisa Davis",
+          "party": "D",
+          "pres_margin": "+50.2",
+          "next_election": 2026
+        },
+        {
+          "district": "33",
+          "district_name": "HD-33",
+          "seat_designator": null,
+          "name": "Marcus Evans",
+          "party": "D",
+          "pres_margin": "+65.6",
+          "next_election": 2026
+        },
+        {
+          "district": "34",
+          "district_name": "HD-34",
+          "seat_designator": null,
+          "name": "Nick Smith",
+          "party": "D",
+          "pres_margin": "+54.9",
+          "next_election": 2026
+        },
+        {
+          "district": "35",
+          "district_name": "HD-35",
+          "seat_designator": null,
+          "name": "Mary Gill",
+          "party": "D",
+          "pres_margin": "+8.6",
+          "next_election": 2026
+        },
+        {
+          "district": "36",
+          "district_name": "HD-36",
+          "seat_designator": null,
+          "name": "Rick Ryan",
+          "party": "D",
+          "pres_margin": "+8.0",
+          "next_election": 2026
+        },
+        {
+          "district": "37",
+          "district_name": "HD-37",
+          "seat_designator": null,
+          "name": "Patrick Sheehan",
+          "party": "R",
+          "pres_margin": "-19.6",
+          "next_election": 2026
+        },
+        {
+          "district": "38",
+          "district_name": "HD-38",
+          "seat_designator": null,
+          "name": "Debbie Meyers-Martin",
+          "party": "D",
+          "pres_margin": "+40.2",
+          "next_election": 2026
+        },
+        {
+          "district": "39",
+          "district_name": "HD-39",
+          "seat_designator": null,
+          "name": "Will Guzzardi",
+          "party": "D",
+          "pres_margin": "+60.2",
+          "next_election": 2026
+        },
+        {
+          "district": "40",
+          "district_name": "HD-40",
+          "seat_designator": null,
+          "name": "Jaime Andrade",
+          "party": "D",
+          "pres_margin": "+63.1",
+          "next_election": 2026
+        },
+        {
+          "district": "41",
+          "district_name": "HD-41",
+          "seat_designator": null,
+          "name": "Janet Yang Rohr",
+          "party": "D",
+          "pres_margin": "+23.0",
+          "next_election": 2026
+        },
+        {
+          "district": "42",
+          "district_name": "HD-42",
+          "seat_designator": null,
+          "name": "Margaret DeLaRosa",
+          "party": "D",
+          "pres_margin": "+20.7",
+          "next_election": 2026
+        },
+        {
+          "district": "43",
+          "district_name": "HD-43",
+          "seat_designator": null,
+          "name": "Anna Moeller",
+          "party": "D",
+          "pres_margin": "+20.8",
+          "next_election": 2026
+        },
+        {
+          "district": "44",
+          "district_name": "HD-44",
+          "seat_designator": null,
+          "name": "Fred Crespo",
+          "party": "D",
+          "pres_margin": "+15.4",
+          "next_election": 2026
+        },
+        {
+          "district": "45",
+          "district_name": "HD-45",
+          "seat_designator": null,
+          "name": "Marti Deuter",
+          "party": "D",
+          "pres_margin": "+12.6",
+          "next_election": 2026
+        },
+        {
+          "district": "46",
+          "district_name": "HD-46",
+          "seat_designator": null,
+          "name": "Diane Blair-Sherlock",
+          "party": "D",
+          "pres_margin": "+9.5",
+          "next_election": 2026
+        },
+        {
+          "district": "47",
+          "district_name": "HD-47",
+          "seat_designator": null,
+          "name": "Amy Grant",
+          "party": "R",
+          "pres_margin": "+10.4",
+          "next_election": 2026
+        },
+        {
+          "district": "48",
+          "district_name": "HD-48",
+          "seat_designator": null,
+          "name": "Jennifer Sanalitro",
+          "party": "R",
+          "pres_margin": "-4.6",
+          "next_election": 2026
+        },
+        {
+          "district": "49",
+          "district_name": "HD-49",
+          "seat_designator": null,
+          "name": "Maura Hirschauer",
+          "party": "D",
+          "pres_margin": "+8.3",
+          "next_election": 2026
+        },
+        {
+          "district": "50",
+          "district_name": "HD-50",
+          "seat_designator": null,
+          "name": "Barbara Hernandez",
+          "party": "D",
+          "pres_margin": "+27.4",
+          "next_election": 2026
+        },
+        {
+          "district": "51",
+          "district_name": "HD-51",
+          "seat_designator": null,
+          "name": "Nabeela Syed",
+          "party": "D",
+          "pres_margin": "+12.5",
+          "next_election": 2026
+        },
+        {
+          "district": "52",
+          "district_name": "HD-52",
+          "seat_designator": null,
+          "name": "Marty McLaughlin",
+          "party": "R",
+          "pres_margin": "+5.0",
+          "next_election": 2026
+        },
+        {
+          "district": "53",
+          "district_name": "HD-53",
+          "seat_designator": null,
+          "name": "Nicolle Grasse",
+          "party": "D",
+          "pres_margin": "+15.0",
+          "next_election": 2026
+        },
+        {
+          "district": "54",
+          "district_name": "HD-54",
+          "seat_designator": null,
+          "name": "Mary Beth Canty",
+          "party": "D",
+          "pres_margin": "+19.9",
+          "next_election": 2026
+        },
+        {
+          "district": "55",
+          "district_name": "HD-55",
+          "seat_designator": null,
+          "name": "Justin Cochran",
+          "party": "D",
+          "pres_margin": "+6.6",
+          "next_election": 2026
+        },
+        {
+          "district": "56",
+          "district_name": "HD-56",
+          "seat_designator": null,
+          "name": "Michelle Mussman",
+          "party": "D",
+          "pres_margin": "+11.4",
+          "next_election": 2026
+        },
+        {
+          "district": "57",
+          "district_name": "HD-57",
+          "seat_designator": null,
+          "name": "Tracy Katz Muhl",
+          "party": "D",
+          "pres_margin": "+25.4",
+          "next_election": 2026
+        },
+        {
+          "district": "58",
+          "district_name": "HD-58",
+          "seat_designator": null,
+          "name": "Bob Morgan",
+          "party": "D",
+          "pres_margin": "+40.4",
+          "next_election": 2026
+        },
+        {
+          "district": "59",
+          "district_name": "HD-59",
+          "seat_designator": null,
+          "name": "Dan Didech",
+          "party": "D",
+          "pres_margin": "+29.6",
+          "next_election": 2026
+        },
+        {
+          "district": "60",
+          "district_name": "HD-60",
+          "seat_designator": null,
+          "name": "Rita Mayfield",
+          "party": "D",
+          "pres_margin": "+38.9",
+          "next_election": 2026
+        },
+        {
+          "district": "61",
+          "district_name": "HD-61",
+          "seat_designator": null,
+          "name": "Joyce Mason",
+          "party": "D",
+          "pres_margin": "+15.0",
+          "next_election": 2026
+        },
+        {
+          "district": "62",
+          "district_name": "HD-62",
+          "seat_designator": null,
+          "name": "Laura Faver Dias",
+          "party": "D",
+          "pres_margin": "+21.2",
+          "next_election": 2026
+        },
+        {
+          "district": "63",
+          "district_name": "HD-63",
+          "seat_designator": null,
+          "name": "Steve Reick",
+          "party": "R",
+          "pres_margin": "+0.8",
+          "next_election": 2026
+        },
+        {
+          "district": "64",
+          "district_name": "HD-64",
+          "seat_designator": null,
+          "name": "Tom Weber",
+          "party": "R",
+          "pres_margin": "-13.2",
+          "next_election": 2026
+        },
+        {
+          "district": "65",
+          "district_name": "HD-65",
+          "seat_designator": null,
+          "name": "Dan Ugaste",
+          "party": "R",
+          "pres_margin": "-0.9",
+          "next_election": 2026
+        },
+        {
+          "district": "66",
+          "district_name": "HD-66",
+          "seat_designator": null,
+          "name": "Suzanne Ness",
+          "party": "D",
+          "pres_margin": "+6.4",
+          "next_election": 2026
+        },
+        {
+          "district": "67",
+          "district_name": "HD-67",
+          "seat_designator": null,
+          "name": "Maurice West",
+          "party": "D",
+          "pres_margin": "+12.0",
+          "next_election": 2026
+        },
+        {
+          "district": "68",
+          "district_name": "HD-68",
+          "seat_designator": null,
+          "name": "Dave Vella",
+          "party": "D",
+          "pres_margin": "+8.8",
+          "next_election": 2026
+        },
+        {
+          "district": "69",
+          "district_name": "HD-69",
+          "seat_designator": null,
+          "name": "Joe Sosnowski",
+          "party": "R",
+          "pres_margin": "-12.9",
+          "next_election": 2026
+        },
+        {
+          "district": "70",
+          "district_name": "HD-70",
+          "seat_designator": null,
+          "name": "Jeff Keicher",
+          "party": "R",
+          "pres_margin": "-6.5",
+          "next_election": 2026
+        },
+        {
+          "district": "71",
+          "district_name": "HD-71",
+          "seat_designator": null,
+          "name": "Dan Swanson",
+          "party": "R",
+          "pres_margin": "-7.5",
+          "next_election": 2026
+        },
+        {
+          "district": "72",
+          "district_name": "HD-72",
+          "seat_designator": null,
+          "name": "Gregg Johnson",
+          "party": "D",
+          "pres_margin": "+18.1",
+          "next_election": 2026
+        },
+        {
+          "district": "73",
+          "district_name": "HD-73",
+          "seat_designator": null,
+          "name": "Ryan Spain",
+          "party": "R",
+          "pres_margin": "-24.7",
+          "next_election": 2026
+        },
+        {
+          "district": "74",
+          "district_name": "HD-74",
+          "seat_designator": null,
+          "name": "Brad Fritts",
+          "party": "R",
+          "pres_margin": "-16.9",
+          "next_election": 2026
+        },
+        {
+          "district": "75",
+          "district_name": "HD-75",
+          "seat_designator": null,
+          "name": "Jed Davis",
+          "party": "R",
+          "pres_margin": "-17.4",
+          "next_election": 2026
+        },
+        {
+          "district": "76",
+          "district_name": "HD-76",
+          "seat_designator": null,
+          "name": "Murri Briel",
+          "party": "D",
+          "pres_margin": "+6.2",
+          "next_election": 2026
+        },
+        {
+          "district": "77",
+          "district_name": "HD-77",
+          "seat_designator": null,
+          "name": "Norma Hernandez",
+          "party": "D",
+          "pres_margin": "+8.0",
+          "next_election": 2026
+        },
+        {
+          "district": "78",
+          "district_name": "HD-78",
+          "seat_designator": null,
+          "name": "Camille Lilly",
+          "party": "D",
+          "pres_margin": "+66.6",
+          "next_election": 2026
+        },
+        {
+          "district": "79",
+          "district_name": "HD-79",
+          "seat_designator": null,
+          "name": "Jackie Haas",
+          "party": "R",
+          "pres_margin": "-5.3",
+          "next_election": 2026
+        },
+        {
+          "district": "80",
+          "district_name": "HD-80",
+          "seat_designator": null,
+          "name": "Anthony DeLuca",
+          "party": "D",
+          "pres_margin": "+5.9",
+          "next_election": 2026
+        },
+        {
+          "district": "81",
+          "district_name": "HD-81",
+          "seat_designator": null,
+          "name": "Anne Stava",
+          "party": "D",
+          "pres_margin": "+21.0",
+          "next_election": 2026
+        },
+        {
+          "district": "82",
+          "district_name": "HD-82",
+          "seat_designator": null,
+          "name": "Nicole La Ha",
+          "party": "R",
+          "pres_margin": "-6.2",
+          "next_election": 2026
+        },
+        {
+          "district": "83",
+          "district_name": "HD-83",
+          "seat_designator": null,
+          "name": "Matt Hanson",
+          "party": "D",
+          "pres_margin": "+16.3",
+          "next_election": 2026
+        },
+        {
+          "district": "84",
+          "district_name": "HD-84",
+          "seat_designator": null,
+          "name": "Stephanie Kifowit",
+          "party": "D",
+          "pres_margin": "+26.8",
+          "next_election": 2026
+        },
+        {
+          "district": "85",
+          "district_name": "HD-85",
+          "seat_designator": null,
+          "name": "Dee Avelar",
+          "party": "D",
+          "pres_margin": "+17.2",
+          "next_election": 2026
+        },
+        {
+          "district": "86",
+          "district_name": "HD-86",
+          "seat_designator": null,
+          "name": "Larry Walsh",
+          "party": "D",
+          "pres_margin": "+7.8",
+          "next_election": 2026
+        },
+        {
+          "district": "87",
+          "district_name": "HD-87",
+          "seat_designator": null,
+          "name": "Bill Hauter",
+          "party": "R",
+          "pres_margin": "-37.3",
+          "next_election": 2026
+        },
+        {
+          "district": "88",
+          "district_name": "HD-88",
+          "seat_designator": null,
+          "name": "Regan Deering",
+          "party": "R",
+          "pres_margin": "-19.4",
+          "next_election": 2026
+        },
+        {
+          "district": "89",
+          "district_name": "HD-89",
+          "seat_designator": null,
+          "name": "Tony McCombie",
+          "party": "R",
+          "pres_margin": "-29.0",
+          "next_election": 2026
+        },
+        {
+          "district": "90",
+          "district_name": "HD-90",
+          "seat_designator": null,
+          "name": "John Cabello",
+          "party": "R",
+          "pres_margin": "-14.6",
+          "next_election": 2026
+        },
+        {
+          "district": "91",
+          "district_name": "HD-91",
+          "seat_designator": null,
+          "name": "Sharon Chung",
+          "party": "D",
+          "pres_margin": "+10.5",
+          "next_election": 2026
+        },
+        {
+          "district": "92",
+          "district_name": "HD-92",
+          "seat_designator": null,
+          "name": "Jehan Gordon-Booth",
+          "party": "D",
+          "pres_margin": "+25.9",
+          "next_election": 2026
+        },
+        {
+          "district": "93",
+          "district_name": "HD-93",
+          "seat_designator": null,
+          "name": "Travis Weaver",
+          "party": "R",
+          "pres_margin": "-25.5",
+          "next_election": 2026
+        },
+        {
+          "district": "94",
+          "district_name": "HD-94",
+          "seat_designator": null,
+          "name": "Norine Hammond",
+          "party": "R",
+          "pres_margin": "-35.4",
+          "next_election": 2026
+        },
+        {
+          "district": "95",
+          "district_name": "HD-95",
+          "seat_designator": null,
+          "name": "Mike Coffey",
+          "party": "R",
+          "pres_margin": "-5.3",
+          "next_election": 2026
+        },
+        {
+          "district": "96",
+          "district_name": "HD-96",
+          "seat_designator": null,
+          "name": "Sue Scherer",
+          "party": "D",
+          "pres_margin": "+16.2",
+          "next_election": 2026
+        },
+        {
+          "district": "97",
+          "district_name": "HD-97",
+          "seat_designator": null,
+          "name": "Harry Benton",
+          "party": "D",
+          "pres_margin": "+3.8",
+          "next_election": 2026
+        },
+        {
+          "district": "98",
+          "district_name": "HD-98",
+          "seat_designator": null,
+          "name": "Natalie Manley",
+          "party": "D",
+          "pres_margin": "+15.5",
+          "next_election": 2026
+        },
+        {
+          "district": "99",
+          "district_name": "HD-99",
+          "seat_designator": null,
+          "name": "Kyle Moore",
+          "party": "R",
+          "pres_margin": "-40.1",
+          "next_election": 2026
+        },
+        {
+          "district": "100",
+          "district_name": "HD-100",
+          "seat_designator": null,
+          "name": "C.D. Davidsmeyer",
+          "party": "R",
+          "pres_margin": "-49.4",
+          "next_election": 2026
+        },
+        {
+          "district": "101",
+          "district_name": "HD-101",
+          "seat_designator": null,
+          "name": "Chris Miller",
+          "party": "R",
+          "pres_margin": "-33.6",
+          "next_election": 2026
+        },
+        {
+          "district": "102",
+          "district_name": "HD-102",
+          "seat_designator": null,
+          "name": "Adam Niemerg",
+          "party": "R",
+          "pres_margin": "-54.2",
+          "next_election": 2026
+        },
+        {
+          "district": "103",
+          "district_name": "HD-103",
+          "seat_designator": null,
+          "name": "Carol Ammons",
+          "party": "D",
+          "pres_margin": "+56.5",
+          "next_election": 2026
+        },
+        {
+          "district": "104",
+          "district_name": "HD-104",
+          "seat_designator": null,
+          "name": "Brandun Schweizer",
+          "party": "R",
+          "pres_margin": "+1.6",
+          "next_election": 2026
+        },
+        {
+          "district": "105",
+          "district_name": "HD-105",
+          "seat_designator": null,
+          "name": "Dennis Tipsword",
+          "party": "R",
+          "pres_margin": "-27.1",
+          "next_election": 2026
+        },
+        {
+          "district": "106",
+          "district_name": "HD-106",
+          "seat_designator": null,
+          "name": "Jason Bunting",
+          "party": "R",
+          "pres_margin": "-43.6",
+          "next_election": 2026
+        },
+        {
+          "district": "107",
+          "district_name": "HD-107",
+          "seat_designator": null,
+          "name": "Brad Halbrook",
+          "party": "R",
+          "pres_margin": "-52.6",
+          "next_election": 2026
+        },
+        {
+          "district": "108",
+          "district_name": "HD-108",
+          "seat_designator": null,
+          "name": "Wayne Rosenthal",
+          "party": "R",
+          "pres_margin": "-37.1",
+          "next_election": 2026
+        },
+        {
+          "district": "109",
+          "district_name": "HD-109",
+          "seat_designator": null,
+          "name": "Charlie Meier",
+          "party": "R",
+          "pres_margin": "-39.5",
+          "next_election": 2026
+        },
+        {
+          "district": "110",
+          "district_name": "HD-110",
+          "seat_designator": null,
+          "name": "Blaine Wilhour",
+          "party": "R",
+          "pres_margin": "-56.6",
+          "next_election": 2026
+        },
+        {
+          "district": "111",
+          "district_name": "HD-111",
+          "seat_designator": null,
+          "name": "Amy Elik",
+          "party": "R",
+          "pres_margin": "-12.2",
+          "next_election": 2026
+        },
+        {
+          "district": "112",
+          "district_name": "HD-112",
+          "seat_designator": null,
+          "name": "Katie Stuart",
+          "party": "D",
+          "pres_margin": "+7.7",
+          "next_election": 2026
+        },
+        {
+          "district": "113",
+          "district_name": "HD-113",
+          "seat_designator": null,
+          "name": "Jay Hoffman",
+          "party": "D",
+          "pres_margin": "+19.9",
+          "next_election": 2026
+        },
+        {
+          "district": "114",
+          "district_name": "HD-114",
+          "seat_designator": null,
+          "name": "Kevin Schmidt",
+          "party": "R",
+          "pres_margin": "+1.3",
+          "next_election": 2026
+        },
+        {
+          "district": "115",
+          "district_name": "HD-115",
+          "seat_designator": null,
+          "name": "David Friess",
+          "party": "R",
+          "pres_margin": "-43.3",
+          "next_election": 2026
+        },
+        {
+          "district": "116",
+          "district_name": "HD-116",
+          "seat_designator": null,
+          "name": "Dave Severin",
+          "party": "R",
+          "pres_margin": "-55.6",
+          "next_election": 2026
+        },
+        {
+          "district": "117",
+          "district_name": "HD-117",
+          "seat_designator": null,
+          "name": "Patrick Windhorst",
+          "party": "R",
+          "pres_margin": "-53.7",
+          "next_election": 2026
+        },
+        {
+          "district": "118",
+          "district_name": "HD-118",
+          "seat_designator": null,
+          "name": "Paul Jacobs",
+          "party": "R",
+          "pres_margin": "-15.5",
+          "next_election": 2026
+        }
+      ]
+    },
+    "Senate": {
+      "total": 59,
+      "composition": {
+        "D": 40,
+        "R": 19,
+        "Other": 0,
+        "Vacant": 0
+      },
+      "supermajority": 40,
+      "seats_up_2026": 39,
+      "members": [
+        {
+          "district": "1",
+          "district_name": "SD-1",
+          "seat_designator": null,
+          "name": "Javier Cervantes",
+          "party": "D",
+          "pres_margin": "+30.0",
+          "next_election": 2028
+        },
+        {
+          "district": "2",
+          "district_name": "SD-2",
+          "seat_designator": null,
+          "name": "Omar Aquino",
+          "party": "D",
+          "pres_margin": "+56.3",
+          "next_election": 2026
+        },
+        {
+          "district": "3",
+          "district_name": "SD-3",
+          "seat_designator": null,
+          "name": "Mattie Hunter",
+          "party": "D",
+          "pres_margin": "+67.9",
+          "next_election": 2026
+        },
+        {
+          "district": "4",
+          "district_name": "SD-4",
+          "seat_designator": null,
+          "name": "Kimberly Lightford",
+          "party": "D",
+          "pres_margin": "+53.3",
+          "next_election": 2028
+        },
+        {
+          "district": "5",
+          "district_name": "SD-5",
+          "seat_designator": null,
+          "name": "Lakesia Collins",
+          "party": "D",
+          "pres_margin": "+66.3",
+          "next_election": 2026
+        },
+        {
+          "district": "6",
+          "district_name": "SD-6",
+          "seat_designator": null,
+          "name": "Sara Feigenholtz",
+          "party": "D",
+          "pres_margin": "+66.4",
+          "next_election": 2026
+        },
+        {
+          "district": "7",
+          "district_name": "SD-7",
+          "seat_designator": null,
+          "name": "Mike Simmons-Gessesse",
+          "party": "D",
+          "pres_margin": "+75.8",
+          "next_election": 2028
+        },
+        {
+          "district": "8",
+          "district_name": "SD-8",
+          "seat_designator": null,
+          "name": "Ram Villivalam",
+          "party": "D",
+          "pres_margin": "+17.4",
+          "next_election": 2026
+        },
+        {
+          "district": "9",
+          "district_name": "SD-9",
+          "seat_designator": null,
+          "name": "Laura Fine",
+          "party": "D",
+          "pres_margin": "+51.7",
+          "next_election": 2026
+        },
+        {
+          "district": "10",
+          "district_name": "SD-10",
+          "seat_designator": null,
+          "name": "Rob Martwick",
+          "party": "D",
+          "pres_margin": "+9.9",
+          "next_election": 2028
+        },
+        {
+          "district": "11",
+          "district_name": "SD-11",
+          "seat_designator": null,
+          "name": "Mike Porfirio",
+          "party": "D",
+          "pres_margin": "+18.0",
+          "next_election": 2026
+        },
+        {
+          "district": "12",
+          "district_name": "SD-12",
+          "seat_designator": null,
+          "name": "Celina Villanueva",
+          "party": "D",
+          "pres_margin": "+37.4",
+          "next_election": 2026
+        },
+        {
+          "district": "13",
+          "district_name": "SD-13",
+          "seat_designator": null,
+          "name": "Robert Peters",
+          "party": "D",
+          "pres_margin": "+71.8",
+          "next_election": 2028
+        },
+        {
+          "district": "14",
+          "district_name": "SD-14",
+          "seat_designator": null,
+          "name": "Emil Jones",
+          "party": "D",
+          "pres_margin": "+37.4",
+          "next_election": 2026
+        },
+        {
+          "district": "15",
+          "district_name": "SD-15",
+          "seat_designator": null,
+          "name": "Napoleon Harris",
+          "party": "D",
+          "pres_margin": "+46.6",
+          "next_election": 2026
+        },
+        {
+          "district": "16",
+          "district_name": "SD-16",
+          "seat_designator": null,
+          "name": "Willie Preston",
+          "party": "D",
+          "pres_margin": "+45.2",
+          "next_election": 2028
+        },
+        {
+          "district": "17",
+          "district_name": "SD-17",
+          "seat_designator": null,
+          "name": "Elgie Sims",
+          "party": "D",
+          "pres_margin": "+60.0",
+          "next_election": 2026
+        },
+        {
+          "district": "18",
+          "district_name": "SD-18",
+          "seat_designator": null,
+          "name": "Bill Cunningham",
+          "party": "D",
+          "pres_margin": "+8.4",
+          "next_election": 2026
+        },
+        {
+          "district": "19",
+          "district_name": "SD-19",
+          "seat_designator": null,
+          "name": "Mike Hastings",
+          "party": "D",
+          "pres_margin": "+8.8",
+          "next_election": 2028
+        },
+        {
+          "district": "20",
+          "district_name": "SD-20",
+          "seat_designator": null,
+          "name": "Graciela Guzm\u00e1n",
+          "party": "D",
+          "pres_margin": "+61.7",
+          "next_election": 2026
+        },
+        {
+          "district": "21",
+          "district_name": "SD-21",
+          "seat_designator": null,
+          "name": "Laura Ellman",
+          "party": "D",
+          "pres_margin": "+21.8",
+          "next_election": 2026
+        },
+        {
+          "district": "22",
+          "district_name": "SD-22",
+          "seat_designator": null,
+          "name": "Cristina Castro",
+          "party": "D",
+          "pres_margin": "+17.8",
+          "next_election": 2028
+        },
+        {
+          "district": "23",
+          "district_name": "SD-23",
+          "seat_designator": null,
+          "name": "Suzy Glowiak Hilton",
+          "party": "D",
+          "pres_margin": "+11.3",
+          "next_election": 2026
+        },
+        {
+          "district": "24",
+          "district_name": "SD-24",
+          "seat_designator": null,
+          "name": "Seth Lewis",
+          "party": "R",
+          "pres_margin": "+3.3",
+          "next_election": 2026
+        },
+        {
+          "district": "25",
+          "district_name": "SD-25",
+          "seat_designator": null,
+          "name": "Karina Villa",
+          "party": "D",
+          "pres_margin": "+16.4",
+          "next_election": 2028
+        },
+        {
+          "district": "26",
+          "district_name": "SD-26",
+          "seat_designator": null,
+          "name": "Darby Hills",
+          "party": "R",
+          "pres_margin": "+8.7",
+          "next_election": 2026
+        },
+        {
+          "district": "27",
+          "district_name": "SD-27",
+          "seat_designator": null,
+          "name": "Mark Walker",
+          "party": "D",
+          "pres_margin": "+17.5",
+          "next_election": 2026
+        },
+        {
+          "district": "28",
+          "district_name": "SD-28",
+          "seat_designator": null,
+          "name": "Laura Murphy",
+          "party": "D",
+          "pres_margin": "+8.9",
+          "next_election": 2028
+        },
+        {
+          "district": "29",
+          "district_name": "SD-29",
+          "seat_designator": null,
+          "name": "Julie Morrison",
+          "party": "D",
+          "pres_margin": "+33.3",
+          "next_election": 2026
+        },
+        {
+          "district": "30",
+          "district_name": "SD-30",
+          "seat_designator": null,
+          "name": "Adriane Johnson",
+          "party": "D",
+          "pres_margin": "+33.2",
+          "next_election": 2026
+        },
+        {
+          "district": "31",
+          "district_name": "SD-31",
+          "seat_designator": null,
+          "name": "Mary Edly-Allen",
+          "party": "D",
+          "pres_margin": "+18.1",
+          "next_election": 2028
+        },
+        {
+          "district": "32",
+          "district_name": "SD-32",
+          "seat_designator": null,
+          "name": "Craig Wilcox",
+          "party": "R",
+          "pres_margin": "-6.2",
+          "next_election": 2026
+        },
+        {
+          "district": "33",
+          "district_name": "SD-33",
+          "seat_designator": null,
+          "name": "Don DeWitte",
+          "party": "R",
+          "pres_margin": "+2.4",
+          "next_election": 2026
+        },
+        {
+          "district": "34",
+          "district_name": "SD-34",
+          "seat_designator": null,
+          "name": "Steve Stadelman",
+          "party": "D",
+          "pres_margin": "+10.3",
+          "next_election": 2028
+        },
+        {
+          "district": "35",
+          "district_name": "SD-35",
+          "seat_designator": null,
+          "name": "Dave Syverson",
+          "party": "R",
+          "pres_margin": "-9.5",
+          "next_election": 2026
+        },
+        {
+          "district": "36",
+          "district_name": "SD-36",
+          "seat_designator": null,
+          "name": "Mike Halpin",
+          "party": "D",
+          "pres_margin": "+4.8",
+          "next_election": 2026
+        },
+        {
+          "district": "37",
+          "district_name": "SD-37",
+          "seat_designator": null,
+          "name": "Li Arellano",
+          "party": "R",
+          "pres_margin": "-21.1",
+          "next_election": 2028
+        },
+        {
+          "district": "38",
+          "district_name": "SD-38",
+          "seat_designator": null,
+          "name": "Sue Rezin",
+          "party": "R",
+          "pres_margin": "-6.4",
+          "next_election": 2026
+        },
+        {
+          "district": "39",
+          "district_name": "SD-39",
+          "seat_designator": null,
+          "name": "Don Harmon",
+          "party": "D",
+          "pres_margin": "+44.3",
+          "next_election": 2026
+        },
+        {
+          "district": "40",
+          "district_name": "SD-40",
+          "seat_designator": null,
+          "name": "Patrick Joyce",
+          "party": "D",
+          "pres_margin": "+0.4",
+          "next_election": 2028
+        },
+        {
+          "district": "41",
+          "district_name": "SD-41",
+          "seat_designator": null,
+          "name": "John Curran",
+          "party": "R",
+          "pres_margin": "+7.4",
+          "next_election": 2026
+        },
+        {
+          "district": "42",
+          "district_name": "SD-42",
+          "seat_designator": null,
+          "name": "Linda Holmes",
+          "party": "D",
+          "pres_margin": "+21.0",
+          "next_election": 2026
+        },
+        {
+          "district": "43",
+          "district_name": "SD-43",
+          "seat_designator": null,
+          "name": "Rachel Ventura",
+          "party": "D",
+          "pres_margin": "+12.7",
+          "next_election": 2028
+        },
+        {
+          "district": "44",
+          "district_name": "SD-44",
+          "seat_designator": null,
+          "name": "Sally Turner",
+          "party": "R",
+          "pres_margin": "-28.2",
+          "next_election": 2026
+        },
+        {
+          "district": "45",
+          "district_name": "SD-45",
+          "seat_designator": null,
+          "name": "Andrew Chesney",
+          "party": "R",
+          "pres_margin": "-22.1",
+          "next_election": 2026
+        },
+        {
+          "district": "46",
+          "district_name": "SD-46",
+          "seat_designator": null,
+          "name": "Dave Koehler",
+          "party": "D",
+          "pres_margin": "+17.3",
+          "next_election": 2028
+        },
+        {
+          "district": "47",
+          "district_name": "SD-47",
+          "seat_designator": null,
+          "name": "Neil Anderson",
+          "party": "R",
+          "pres_margin": "-30.5",
+          "next_election": 2026
+        },
+        {
+          "district": "48",
+          "district_name": "SD-48",
+          "seat_designator": null,
+          "name": "Doris Turner",
+          "party": "D",
+          "pres_margin": "+3.5",
+          "next_election": 2026
+        },
+        {
+          "district": "49",
+          "district_name": "SD-49",
+          "seat_designator": null,
+          "name": "Meg Loughran Cappel",
+          "party": "D",
+          "pres_margin": "+9.2",
+          "next_election": 2028
+        },
+        {
+          "district": "50",
+          "district_name": "SD-50",
+          "seat_designator": null,
+          "name": "Jil Tracy",
+          "party": "R",
+          "pres_margin": "-45.2",
+          "next_election": 2026
+        },
+        {
+          "district": "51",
+          "district_name": "SD-51",
+          "seat_designator": null,
+          "name": "Chapin Rose",
+          "party": "R",
+          "pres_margin": "-44.2",
+          "next_election": 2026
+        },
+        {
+          "district": "52",
+          "district_name": "SD-52",
+          "seat_designator": null,
+          "name": "Paul Faraci",
+          "party": "D",
+          "pres_margin": "+26.8",
+          "next_election": 2028
+        },
+        {
+          "district": "53",
+          "district_name": "SD-53",
+          "seat_designator": null,
+          "name": "Chris Balkema",
+          "party": "R",
+          "pres_margin": "-35.1",
+          "next_election": 2026
+        },
+        {
+          "district": "54",
+          "district_name": "SD-54",
+          "seat_designator": null,
+          "name": "Steve McClure",
+          "party": "R",
+          "pres_margin": "-44.7",
+          "next_election": 2026
+        },
+        {
+          "district": "55",
+          "district_name": "SD-55",
+          "seat_designator": null,
+          "name": "Jason Plummer",
+          "party": "R",
+          "pres_margin": "-47.2",
+          "next_election": 2028
+        },
+        {
+          "district": "56",
+          "district_name": "SD-56",
+          "seat_designator": null,
+          "name": "Erica Harriss",
+          "party": "R",
+          "pres_margin": "-2.0",
+          "next_election": 2026
+        },
+        {
+          "district": "57",
+          "district_name": "SD-57",
+          "seat_designator": null,
+          "name": "Christopher Belt",
+          "party": "D",
+          "pres_margin": "+10.6",
+          "next_election": 2026
+        },
+        {
+          "district": "58",
+          "district_name": "SD-58",
+          "seat_designator": null,
+          "name": "Terri Bryant",
+          "party": "R",
+          "pres_margin": "-49.3",
+          "next_election": 2028
+        },
+        {
+          "district": "59",
+          "district_name": "SD-59",
+          "seat_designator": null,
+          "name": "Dale Fowler",
+          "party": "R",
+          "pres_margin": "-35.3",
+          "next_election": 2026
+        }
+      ]
+    }
+  },
+  "elections_2026": {
+    "governor": {
+      "forecast": "Solid D",
+      "candidates": [
+        {
+          "name": "JB Pritzker",
+          "party": "D",
+          "is_incumbent": true,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Darren Bailey",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "James Mendrick",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Rick Heidner",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Ted Dabrowski",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        }
+      ]
+    },
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Kwame Raoul",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Andy Williams Jr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Bob Fioretti",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Controller",
+        "candidates": [
+          {
+            "name": "Holly Kim",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Karina Villa",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Margaret Croke",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Stephanie Kifowit",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bryan Drew",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Lt. Governor",
+        "candidates": [
+          {
+            "name": "Christian Mitchell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Aaron Del Mar",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Carrie Mendoza",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Christina Neitzke-Troike",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Robert Renteria",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Alexi Giannoulias",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Diane Harris",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Walter Adamczyk",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Michael Frerichs",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Max Rice",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Max Solomon",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ],
+    "legislative": [
+      {
+        "seat_label": "IL House 1",
+        "chamber": "House",
+        "district": "1",
+        "candidates": [
+          {
+            "name": "Aar\u00f3n Ort\u00edz",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Guadalupe Rivera",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 2",
+        "chamber": "House",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Lisa Hernandez",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Laura Hruska",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 3",
+        "chamber": "House",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Eva-Dina Delgado",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 4",
+        "chamber": "House",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Kirk Ortiz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lilian Jim\u00e9nez",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 5",
+        "chamber": "House",
+        "district": "5",
+        "candidates": [
+          {
+            "name": "Kimberly Du Buclet",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 6",
+        "chamber": "House",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Sonya Harper",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 7",
+        "chamber": "House",
+        "district": "7",
+        "candidates": [
+          {
+            "name": "Chris Welch",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 8",
+        "chamber": "House",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Jill Bush",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Harrell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Latonya Mitts",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shantel Franklin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 9",
+        "chamber": "House",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Yolonda Morris",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 10",
+        "chamber": "House",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Omar Williams",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 11",
+        "chamber": "House",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Ann Williams",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 12",
+        "chamber": "House",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Karim Lakhani",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Litcy Kurisinkal",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mac LeBuhn",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Paul Kendrick",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Justin Kumar",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 13",
+        "chamber": "House",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Adam Braun",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Demi Palecek",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "James O'Brien",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ridge Knapp",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sunjay Kumar",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Terry Le",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 14",
+        "chamber": "House",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Kelly Cassidy",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 15",
+        "chamber": "House",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Michael Kelly",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 16",
+        "chamber": "House",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Kevin Olickal",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 17",
+        "chamber": "House",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Jen Gong-Gershowitz",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jim Geldermann",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 18",
+        "chamber": "House",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Robyn Gabel",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Pete Donaghue",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 19",
+        "chamber": "House",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Lindsey LaPointe",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Zimmers",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 20",
+        "chamber": "House",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Enrique Hernandez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "William Hallihan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brad Stephens",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 21",
+        "chamber": "House",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Abdelnasser Rashid",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Eric Su",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 22",
+        "chamber": "House",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "Angie Guerrero-Cuellar",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 23",
+        "chamber": "House",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "Edgar Gonz\u00e1lez",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 24",
+        "chamber": "House",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Theresa Mah",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 25",
+        "chamber": "House",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "Curtis Tarver",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Antoinette Simmons",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 26",
+        "chamber": "House",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Kam Buckner",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kenya Franklin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 27",
+        "chamber": "House",
+        "district": "27",
+        "candidates": [
+          {
+            "name": "Justin Slaughter",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 28",
+        "chamber": "House",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Bob Rita",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Paris Walker-Thomas",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 29",
+        "chamber": "House",
+        "district": "29",
+        "candidates": [
+          {
+            "name": "Thaddeus Jones",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 30",
+        "chamber": "House",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Will Davis",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 31",
+        "chamber": "House",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "Mike Crawford",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 32",
+        "chamber": "House",
+        "district": "32",
+        "candidates": [
+          {
+            "name": "Lisa Davis",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 33",
+        "chamber": "House",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Marcus Evans",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 34",
+        "chamber": "House",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Aja Kearney",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cleopatra Cowley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 35",
+        "chamber": "House",
+        "district": "35",
+        "candidates": [
+          {
+            "name": "Mary Gill",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Charles Lay",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "David Dewar",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 36",
+        "chamber": "House",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Rick Ryan",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Sheppard",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 37",
+        "chamber": "House",
+        "district": "37",
+        "candidates": [
+          {
+            "name": "Patrick Sheehan",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 38",
+        "chamber": "House",
+        "district": "38",
+        "candidates": [
+          {
+            "name": "Debbie Meyers-Martin",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 39",
+        "chamber": "House",
+        "district": "39",
+        "candidates": [
+          {
+            "name": "Will Guzzardi",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cesar Guillen",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 40",
+        "chamber": "House",
+        "district": "40",
+        "candidates": [
+          {
+            "name": "Jaime Andrade",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Miguel Alvelo-Rivera",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 41",
+        "chamber": "House",
+        "district": "41",
+        "candidates": [
+          {
+            "name": "Janet Yang Rohr",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ajay Gupta",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 42",
+        "chamber": "House",
+        "district": "42",
+        "candidates": [
+          {
+            "name": "Lynn LaPlante",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Margaret DeLaRosa",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Stephanie Trussell",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 43",
+        "chamber": "House",
+        "district": "43",
+        "candidates": [
+          {
+            "name": "Anna Moeller",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 44",
+        "chamber": "House",
+        "district": "44",
+        "candidates": [
+          {
+            "name": "Fred Crespo",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ralph Black",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 45",
+        "chamber": "House",
+        "district": "45",
+        "candidates": [
+          {
+            "name": "Marti Deuter",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gina Parrilli",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 46",
+        "chamber": "House",
+        "district": "46",
+        "candidates": [
+          {
+            "name": "Diane Blair-Sherlock",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Pedro Mendoza",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 47",
+        "chamber": "House",
+        "district": "47",
+        "candidates": [
+          {
+            "name": "Erica Bray-Parker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert Vrankovich",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 48",
+        "chamber": "House",
+        "district": "48",
+        "candidates": [
+          {
+            "name": "Amanda Zahorak",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jennifer Sanalitro",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 49",
+        "chamber": "House",
+        "district": "49",
+        "candidates": [
+          {
+            "name": "Maura Hirschauer",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Paul Augustynowicz",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 50",
+        "chamber": "House",
+        "district": "50",
+        "candidates": [
+          {
+            "name": "Barbara Hernandez",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 51",
+        "chamber": "House",
+        "district": "51",
+        "candidates": [
+          {
+            "name": "Jenny Levin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lori Smith",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 52",
+        "chamber": "House",
+        "district": "52",
+        "candidates": [
+          {
+            "name": "Erin Chan Ding",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Maria Peterson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marty McLaughlin",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 53",
+        "chamber": "House",
+        "district": "53",
+        "candidates": [
+          {
+            "name": "Nicolle Grasse",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Elizabeth Bauer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 54",
+        "chamber": "House",
+        "district": "54",
+        "candidates": [
+          {
+            "name": "Mary Beth Canty",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Wayne Keen",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 55",
+        "chamber": "House",
+        "district": "55",
+        "candidates": [
+          {
+            "name": "Justin Cochran",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph Johnson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 56",
+        "chamber": "House",
+        "district": "56",
+        "candidates": [
+          {
+            "name": "Michelle Mussman",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Edward Lapinski",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 57",
+        "chamber": "House",
+        "district": "57",
+        "candidates": [
+          {
+            "name": "Tracy Katz Muhl",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Daniel Behr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 58",
+        "chamber": "House",
+        "district": "58",
+        "candidates": [
+          {
+            "name": "Bob Morgan",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 59",
+        "chamber": "House",
+        "district": "59",
+        "candidates": [
+          {
+            "name": "Dan Didech",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 60",
+        "chamber": "House",
+        "district": "60",
+        "candidates": [
+          {
+            "name": "Rita Mayfield",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 61",
+        "chamber": "House",
+        "district": "61",
+        "candidates": [
+          {
+            "name": "Joyce Mason",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tina Durrant",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 62",
+        "chamber": "House",
+        "district": "62",
+        "candidates": [
+          {
+            "name": "Laura Faver Dias",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 63",
+        "chamber": "House",
+        "district": "63",
+        "candidates": [
+          {
+            "name": "Steve Reick",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 64",
+        "chamber": "House",
+        "district": "64",
+        "candidates": [
+          {
+            "name": "AJ Johnson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tom Weber",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 65",
+        "chamber": "House",
+        "district": "65",
+        "candidates": [
+          {
+            "name": "Ricky Rivard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dan Ugaste",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 66",
+        "chamber": "House",
+        "district": "66",
+        "candidates": [
+          {
+            "name": "Suzanne Ness",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Laurie Parman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 67",
+        "chamber": "House",
+        "district": "67",
+        "candidates": [
+          {
+            "name": "Maurice West",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 68",
+        "chamber": "House",
+        "district": "68",
+        "candidates": [
+          {
+            "name": "Dave Vella",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kathy Easton",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 69",
+        "chamber": "House",
+        "district": "69",
+        "candidates": [
+          {
+            "name": "Peter Janko",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joe Sosnowski",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 70",
+        "chamber": "House",
+        "district": "70",
+        "candidates": [
+          {
+            "name": "Veronica Garcia-Martinez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jeff Keicher",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 71",
+        "chamber": "House",
+        "district": "71",
+        "candidates": [
+          {
+            "name": "Kermit Thomas",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dan Swanson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 72",
+        "chamber": "House",
+        "district": "72",
+        "candidates": [
+          {
+            "name": "Gregg Johnson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 73",
+        "chamber": "House",
+        "district": "73",
+        "candidates": [
+          {
+            "name": "Nicole Dopler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ryan Spain",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 74",
+        "chamber": "House",
+        "district": "74",
+        "candidates": [
+          {
+            "name": "Nolan Kemp",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brad Fritts",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 75",
+        "chamber": "House",
+        "district": "75",
+        "candidates": [
+          {
+            "name": "Caroline McCree",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jed Davis",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 76",
+        "chamber": "House",
+        "district": "76",
+        "candidates": [
+          {
+            "name": "Murri Briel",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Crystal Loughran",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Liz Bishop",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 77",
+        "chamber": "House",
+        "district": "77",
+        "candidates": [
+          {
+            "name": "Norma Hernandez",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Anthony Airdo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 78",
+        "chamber": "House",
+        "district": "78",
+        "candidates": [
+          {
+            "name": "Camille Lilly",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Julian-Jahleel Jemison",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 79",
+        "chamber": "House",
+        "district": "79",
+        "candidates": [
+          {
+            "name": "Jackie Haas",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 80",
+        "chamber": "House",
+        "district": "80",
+        "candidates": [
+          {
+            "name": "Anthony DeLuca",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Adam Beaty",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 81",
+        "chamber": "House",
+        "district": "81",
+        "candidates": [
+          {
+            "name": "Anne Stava",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Laura Hois",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 82",
+        "chamber": "House",
+        "district": "82",
+        "candidates": [
+          {
+            "name": "Nicole La Ha",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 83",
+        "chamber": "House",
+        "district": "83",
+        "candidates": [
+          {
+            "name": "Matt Hanson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jesse Rodriguez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 84",
+        "chamber": "House",
+        "district": "84",
+        "candidates": [
+          {
+            "name": "Jared Ploger",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Saba Haider",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brian Scopa",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 85",
+        "chamber": "House",
+        "district": "85",
+        "candidates": [
+          {
+            "name": "Dee Avelar",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Chris Metcalfe",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 86",
+        "chamber": "House",
+        "district": "86",
+        "candidates": [
+          {
+            "name": "Lawrence Walsh, Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 87",
+        "chamber": "House",
+        "district": "87",
+        "candidates": [
+          {
+            "name": "Bill Hauter",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 88",
+        "chamber": "House",
+        "district": "88",
+        "candidates": [
+          {
+            "name": "Regan Deering",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 89",
+        "chamber": "House",
+        "district": "89",
+        "candidates": [
+          {
+            "name": "Tony McCombie",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Victoria Onorato",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 90",
+        "chamber": "House",
+        "district": "90",
+        "candidates": [
+          {
+            "name": "John Ping",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Cabello",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 91",
+        "chamber": "House",
+        "district": "91",
+        "candidates": [
+          {
+            "name": "Sharon Chung",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 92",
+        "chamber": "House",
+        "district": "92",
+        "candidates": [
+          {
+            "name": "Jehan Gordon-Booth",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 93",
+        "chamber": "House",
+        "district": "93",
+        "candidates": [
+          {
+            "name": "Travis Weaver",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 94",
+        "chamber": "House",
+        "district": "94",
+        "candidates": [
+          {
+            "name": "Bailey Templeton",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Joshua Higgins",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Norine Hammond",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 95",
+        "chamber": "House",
+        "district": "95",
+        "candidates": [
+          {
+            "name": "Mike Coffey",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 96",
+        "chamber": "House",
+        "district": "96",
+        "candidates": [
+          {
+            "name": "Sue Scherer",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 97",
+        "chamber": "House",
+        "district": "97",
+        "candidates": [
+          {
+            "name": "Harry Benton",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gabby Shanahan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 98",
+        "chamber": "House",
+        "district": "98",
+        "candidates": [
+          {
+            "name": "Natalie Manley",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nona Parker",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 99",
+        "chamber": "House",
+        "district": "99",
+        "candidates": [
+          {
+            "name": "Kyle Moore",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 100",
+        "chamber": "House",
+        "district": "100",
+        "candidates": [
+          {
+            "name": "C.D. Davidsmeyer",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 101",
+        "chamber": "House",
+        "district": "101",
+        "candidates": [
+          {
+            "name": "Douglas Fagan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Chris Miller",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 102",
+        "chamber": "House",
+        "district": "102",
+        "candidates": [
+          {
+            "name": "Adam Niemerg",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 103",
+        "chamber": "House",
+        "district": "103",
+        "candidates": [
+          {
+            "name": "Carol Ammons",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 104",
+        "chamber": "House",
+        "district": "104",
+        "candidates": [
+          {
+            "name": "Mary Catherine Roberson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brandun Schweizer",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 105",
+        "chamber": "House",
+        "district": "105",
+        "candidates": [
+          {
+            "name": "Tim Ruestman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 106",
+        "chamber": "House",
+        "district": "106",
+        "candidates": [
+          {
+            "name": "Jason Bunting",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 107",
+        "chamber": "House",
+        "district": "107",
+        "candidates": [
+          {
+            "name": "Brad Halbrook",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "John Hauge",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 108",
+        "chamber": "House",
+        "district": "108",
+        "candidates": [
+          {
+            "name": "Wayne Rosenthal",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 109",
+        "chamber": "House",
+        "district": "109",
+        "candidates": [
+          {
+            "name": "Charlie Meier",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Zachary Meyer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 110",
+        "chamber": "House",
+        "district": "110",
+        "candidates": [
+          {
+            "name": "Blaine Wilhour",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 111",
+        "chamber": "House",
+        "district": "111",
+        "candidates": [
+          {
+            "name": "Rosetta Brown",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Amy Elik",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 112",
+        "chamber": "House",
+        "district": "112",
+        "candidates": [
+          {
+            "name": "Katie Stuart",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jimmy Ford",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 113",
+        "chamber": "House",
+        "district": "113",
+        "candidates": [
+          {
+            "name": "Jay Hoffman",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 114",
+        "chamber": "House",
+        "district": "114",
+        "candidates": [
+          {
+            "name": "George McClellan Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kevin Schmidt",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 115",
+        "chamber": "House",
+        "district": "115",
+        "candidates": [
+          {
+            "name": "David Friess",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 116",
+        "chamber": "House",
+        "district": "116",
+        "candidates": [
+          {
+            "name": "Angela Evans",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Dave Severin",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 117",
+        "chamber": "House",
+        "district": "117",
+        "candidates": [
+          {
+            "name": "Patrick Windhorst",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL House 118",
+        "chamber": "House",
+        "district": "118",
+        "candidates": [
+          {
+            "name": "Homer Markel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dayton Loyd",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Harold Visser",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Scott Doody",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 2",
+        "chamber": "Senate",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Omar Aquino",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 3",
+        "chamber": "Senate",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Mattie Hunter",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 5",
+        "chamber": "Senate",
+        "district": "5",
+        "candidates": [
+          {
+            "name": "Lakesia Collins",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 6",
+        "chamber": "Senate",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Nick Uniejewski",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sara Feigenholtz",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 8",
+        "chamber": "Senate",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Ram Villivalam",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Vince Romano",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 9",
+        "chamber": "Senate",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Patrick Hanley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rachel Ruttenberg",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tom Lally",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 11",
+        "chamber": "Senate",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Mike Porfirio",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 12",
+        "chamber": "Senate",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Celina Villanueva",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 14",
+        "chamber": "Senate",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Ahmed Karrar",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Emil Jones",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kenneth Williams",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brian Skala",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 15",
+        "chamber": "Senate",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Napoleon Harris",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kenneth Henderson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 17",
+        "chamber": "Senate",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Elgie R. Sims, Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Frederick L. Walls",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 18",
+        "chamber": "Senate",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Frances Ann Hurley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Christine McGovern",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 20",
+        "chamber": "Senate",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Graciela Guzm\u00e1n",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 21",
+        "chamber": "Senate",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Laura Ellman",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Julie Berkowicz",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 23",
+        "chamber": "Senate",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "Suzy Glowiak Hilton",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Linda Polacek",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 24",
+        "chamber": "Senate",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Ben McAdams",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Seth Lewis",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 26",
+        "chamber": "Senate",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Nabeela Syed",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Darby Hills",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 27",
+        "chamber": "Senate",
+        "district": "27",
+        "candidates": [
+          {
+            "name": "Carina Santa Maria",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Mathis",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 29",
+        "chamber": "Senate",
+        "district": "29",
+        "candidates": [
+          {
+            "name": "Julie Morrison",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kate McGrath",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 30",
+        "chamber": "Senate",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Adriane Johnson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 32",
+        "chamber": "Senate",
+        "district": "32",
+        "candidates": [
+          {
+            "name": "Karen Battaglia",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Craig Wilcox",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 33",
+        "chamber": "Senate",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Michele Clark",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Danielle Penman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jessica Breugelmans",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 35",
+        "chamber": "Senate",
+        "district": "35",
+        "candidates": [
+          {
+            "name": "Sarah Mertens",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dave Syverson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 36",
+        "chamber": "Senate",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Mike Halpin",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brad Beekman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Patrick Harlan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 38",
+        "chamber": "Senate",
+        "district": "38",
+        "candidates": [
+          {
+            "name": "Ernie Marcelain",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sue Rezin",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 39",
+        "chamber": "Senate",
+        "district": "39",
+        "candidates": [
+          {
+            "name": "Don Harmon",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 41",
+        "chamber": "Senate",
+        "district": "41",
+        "candidates": [
+          {
+            "name": "John Curran",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 42",
+        "chamber": "Senate",
+        "district": "42",
+        "candidates": [
+          {
+            "name": "Linda Holmes",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Edgardo Perez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 44",
+        "chamber": "Senate",
+        "district": "44",
+        "candidates": [
+          {
+            "name": "Sally Turner",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 45",
+        "chamber": "Senate",
+        "district": "45",
+        "candidates": [
+          {
+            "name": "Joe Berning",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Andrew Chesney",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 47",
+        "chamber": "Senate",
+        "district": "47",
+        "candidates": [
+          {
+            "name": "Neil Anderson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 48",
+        "chamber": "Senate",
+        "district": "48",
+        "candidates": [
+          {
+            "name": "Doris Turner",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Frank Lesko",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 50",
+        "chamber": "Senate",
+        "district": "50",
+        "candidates": [
+          {
+            "name": "Jil Tracy",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 51",
+        "chamber": "Senate",
+        "district": "51",
+        "candidates": [
+          {
+            "name": "Chapin Rose",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 53",
+        "chamber": "Senate",
+        "district": "53",
+        "candidates": [
+          {
+            "name": "Chris Balkema",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 54",
+        "chamber": "Senate",
+        "district": "54",
+        "candidates": [
+          {
+            "name": "Steve McClure",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 56",
+        "chamber": "Senate",
+        "district": "56",
+        "candidates": [
+          {
+            "name": "Kevin Hall",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marsia Geldert-Murphey",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Erica Harriss",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 57",
+        "chamber": "Senate",
+        "district": "57",
+        "candidates": [
+          {
+            "name": "Christopher Belt",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Daniel Rhyne",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IL Senate 59",
+        "chamber": "Senate",
+        "district": "59",
+        "candidates": [
+          {
+            "name": "Tamiko Mueller",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Paul Jacobs",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Stephen Vercellino",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ]
+  },
+  "ballot_measures": [],
+  "filing_deadline": "2025-11-03",
+  "primary_date": "2026-03-17"
+}

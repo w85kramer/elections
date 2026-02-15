@@ -1,0 +1,3900 @@
+{
+  "generated_at": "2026-02-15T01:21:03.297523Z",
+  "state": {
+    "name": "West Virginia",
+    "abbr": "WV",
+    "senate_seats": 34,
+    "house_seats": 100,
+    "senate_term_years": 4,
+    "house_term_years": 2,
+    "gov_term_years": 4,
+    "gov_term_limit": "Yes (2 consecutive)",
+    "next_gov_election_year": 2028,
+    "uses_jungle_primary": false,
+    "has_runoffs": false
+  },
+  "statewide_officers": [
+    {
+      "office": "Governor",
+      "name": "Patrick Morrisey",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2028,
+      "start_year": 2025
+    },
+    {
+      "office": "Lt. Governor",
+      "name": "Randy E. Smith",
+      "party": "R",
+      "method": "Ex_Officio",
+      "next_election": null,
+      "start_year": 2025,
+      "appointed_by": "State Senate"
+    },
+    {
+      "office": "Attorney General",
+      "name": "John B. McCuskey",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2028,
+      "start_year": 2025
+    },
+    {
+      "office": "Secretary of State",
+      "name": "Kris Warner",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2028,
+      "start_year": 2025
+    },
+    {
+      "office": "Treasurer",
+      "name": "Larry Pack",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2028,
+      "start_year": 2025
+    },
+    {
+      "office": "Auditor",
+      "name": "Mark Hunt",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2028,
+      "start_year": 2025
+    },
+    {
+      "office": "Agriculture Commissioner",
+      "name": "Kent Leonhardt",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2028,
+      "start_year": 2017
+    }
+  ],
+  "chambers": {
+    "House of Delegates": {
+      "total": 100,
+      "composition": {
+        "D": 9,
+        "R": 90,
+        "Other": 0,
+        "Vacant": 1
+      },
+      "supermajority": 67,
+      "seats_up_2026": 100,
+      "members": [
+        {
+          "district": "1",
+          "district_name": "HD-1",
+          "seat_designator": null,
+          "name": "Pat McGeehan",
+          "party": "R",
+          "pres_margin": "-53.8",
+          "next_election": 2026
+        },
+        {
+          "district": "2",
+          "district_name": "HD-2",
+          "seat_designator": null,
+          "name": "Mark Zatezalo",
+          "party": "R",
+          "pres_margin": "-38.6",
+          "next_election": 2026
+        },
+        {
+          "district": "3",
+          "district_name": "HD-3",
+          "seat_designator": null,
+          "name": "Jimmy Willis",
+          "party": "R",
+          "pres_margin": "-43.6",
+          "next_election": 2026
+        },
+        {
+          "district": "4",
+          "district_name": "HD-4",
+          "seat_designator": null,
+          "name": "Bill Flanigan",
+          "party": "R",
+          "pres_margin": "-33.2",
+          "next_election": 2026
+        },
+        {
+          "district": "5",
+          "district_name": "HD-5",
+          "seat_designator": null,
+          "name": "Shawn Fluharty",
+          "party": "D",
+          "pres_margin": "-12.6",
+          "next_election": 2026
+        },
+        {
+          "district": "6",
+          "district_name": "HD-6",
+          "seat_designator": null,
+          "name": "Jeff Stephens",
+          "party": "R",
+          "pres_margin": "-41.4",
+          "next_election": 2026
+        },
+        {
+          "district": "7",
+          "district_name": "HD-7",
+          "seat_designator": null,
+          "name": "Chuck Sheedy",
+          "party": "R",
+          "pres_margin": "-58.5",
+          "next_election": 2026
+        },
+        {
+          "district": "8",
+          "district_name": "HD-8",
+          "seat_designator": null,
+          "name": "Bill Bell",
+          "party": "R",
+          "pres_margin": "-67.3",
+          "next_election": 2026
+        },
+        {
+          "district": "9",
+          "district_name": "HD-9",
+          "seat_designator": null,
+          "name": null,
+          "party": null,
+          "pres_margin": "-67.0",
+          "next_election": 2026
+        },
+        {
+          "district": "10",
+          "district_name": "HD-10",
+          "seat_designator": null,
+          "name": "Bill Anderson",
+          "party": "R",
+          "pres_margin": "-47.9",
+          "next_election": 2026
+        },
+        {
+          "district": "11",
+          "district_name": "HD-11",
+          "seat_designator": null,
+          "name": "Bob Fehrenbacher",
+          "party": "R",
+          "pres_margin": "-29.9",
+          "next_election": 2026
+        },
+        {
+          "district": "12",
+          "district_name": "HD-12",
+          "seat_designator": null,
+          "name": "Vernon Criss",
+          "party": "R",
+          "pres_margin": "-27.0",
+          "next_election": 2026
+        },
+        {
+          "district": "13",
+          "district_name": "HD-13",
+          "seat_designator": null,
+          "name": "Scot Heckert",
+          "party": "R",
+          "pres_margin": "-49.4",
+          "next_election": 2026
+        },
+        {
+          "district": "14",
+          "district_name": "HD-14",
+          "seat_designator": null,
+          "name": "Dave Foggin",
+          "party": "R",
+          "pres_margin": "-58.9",
+          "next_election": 2026
+        },
+        {
+          "district": "15",
+          "district_name": "HD-15",
+          "seat_designator": null,
+          "name": "Erica Moore",
+          "party": "R",
+          "pres_margin": "-57.2",
+          "next_election": 2026
+        },
+        {
+          "district": "16",
+          "district_name": "HD-16",
+          "seat_designator": null,
+          "name": "Joe Parsons",
+          "party": "R",
+          "pres_margin": "-61.0",
+          "next_election": 2026
+        },
+        {
+          "district": "17",
+          "district_name": "HD-17",
+          "seat_designator": null,
+          "name": "Jonathan Pinson",
+          "party": "R",
+          "pres_margin": "-53.0",
+          "next_election": 2026
+        },
+        {
+          "district": "18",
+          "district_name": "HD-18",
+          "seat_designator": null,
+          "name": "Jim Butler",
+          "party": "R",
+          "pres_margin": "-56.6",
+          "next_election": 2026
+        },
+        {
+          "district": "19",
+          "district_name": "HD-19",
+          "seat_designator": null,
+          "name": "Kathie Hess Crouse",
+          "party": "R",
+          "pres_margin": "-51.9",
+          "next_election": 2026
+        },
+        {
+          "district": "20",
+          "district_name": "HD-20",
+          "seat_designator": null,
+          "name": "Sarah Drennan",
+          "party": "R",
+          "pres_margin": "-42.4",
+          "next_election": 2026
+        },
+        {
+          "district": "21",
+          "district_name": "HD-21",
+          "seat_designator": null,
+          "name": "Jarred Cannon",
+          "party": "R",
+          "pres_margin": "-44.7",
+          "next_election": 2026
+        },
+        {
+          "district": "22",
+          "district_name": "HD-22",
+          "seat_designator": null,
+          "name": "Daniel Linville",
+          "party": "R",
+          "pres_margin": "-51.2",
+          "next_election": 2026
+        },
+        {
+          "district": "23",
+          "district_name": "HD-23",
+          "seat_designator": null,
+          "name": "Evan Worrell",
+          "party": "R",
+          "pres_margin": "-43.3",
+          "next_election": 2026
+        },
+        {
+          "district": "24",
+          "district_name": "HD-24",
+          "seat_designator": null,
+          "name": "Patrick Lucas",
+          "party": "R",
+          "pres_margin": "-12.6",
+          "next_election": 2026
+        },
+        {
+          "district": "25",
+          "district_name": "HD-25",
+          "seat_designator": null,
+          "name": "Sean Hornbuckle",
+          "party": "D",
+          "pres_margin": "+30.9",
+          "next_election": 2026
+        },
+        {
+          "district": "26",
+          "district_name": "HD-26",
+          "seat_designator": null,
+          "name": "Matthew Rohrbach",
+          "party": "R",
+          "pres_margin": "-14.7",
+          "next_election": 2026
+        },
+        {
+          "district": "27",
+          "district_name": "HD-27",
+          "seat_designator": null,
+          "name": "Michael Amos",
+          "party": "R",
+          "pres_margin": "-31.9",
+          "next_election": 2026
+        },
+        {
+          "district": "28",
+          "district_name": "HD-28",
+          "seat_designator": null,
+          "name": "Ryan Browning",
+          "party": "R",
+          "pres_margin": "-55.3",
+          "next_election": 2026
+        },
+        {
+          "district": "29",
+          "district_name": "HD-29",
+          "seat_designator": null,
+          "name": "Corby Dillon",
+          "party": "R",
+          "pres_margin": "-72.9",
+          "next_election": 2026
+        },
+        {
+          "district": "30",
+          "district_name": "HD-30",
+          "seat_designator": null,
+          "name": "Jeff Eldridge",
+          "party": "R",
+          "pres_margin": "-61.6",
+          "next_election": 2026
+        },
+        {
+          "district": "31",
+          "district_name": "HD-31",
+          "seat_designator": null,
+          "name": "Margitta Mazzocchi",
+          "party": "R",
+          "pres_margin": "-69.1",
+          "next_election": 2026
+        },
+        {
+          "district": "32",
+          "district_name": "HD-32",
+          "seat_designator": null,
+          "name": "Josh Holstein",
+          "party": "R",
+          "pres_margin": "-56.2",
+          "next_election": 2026
+        },
+        {
+          "district": "33",
+          "district_name": "HD-33",
+          "seat_designator": null,
+          "name": "Jordan Bridges",
+          "party": "R",
+          "pres_margin": "-64.4",
+          "next_election": 2026
+        },
+        {
+          "district": "34",
+          "district_name": "HD-34",
+          "seat_designator": null,
+          "name": "Mark Dean",
+          "party": "R",
+          "pres_margin": "-72.1",
+          "next_election": 2026
+        },
+        {
+          "district": "35",
+          "district_name": "HD-35",
+          "seat_designator": null,
+          "name": "Adam Vance",
+          "party": "R",
+          "pres_margin": "-72.9",
+          "next_election": 2026
+        },
+        {
+          "district": "36",
+          "district_name": "HD-36",
+          "seat_designator": null,
+          "name": "David Green",
+          "party": "R",
+          "pres_margin": "-60.1",
+          "next_election": 2026
+        },
+        {
+          "district": "37",
+          "district_name": "HD-37",
+          "seat_designator": null,
+          "name": "Marty Gearheart",
+          "party": "R",
+          "pres_margin": "-45.9",
+          "next_election": 2026
+        },
+        {
+          "district": "38",
+          "district_name": "HD-38",
+          "seat_designator": null,
+          "name": "Joe Ellington",
+          "party": "R",
+          "pres_margin": "-56.4",
+          "next_election": 2026
+        },
+        {
+          "district": "39",
+          "district_name": "HD-39",
+          "seat_designator": null,
+          "name": "Doug Smith",
+          "party": "R",
+          "pres_margin": "-65.4",
+          "next_election": 2026
+        },
+        {
+          "district": "40",
+          "district_name": "HD-40",
+          "seat_designator": null,
+          "name": "Roy Cooper",
+          "party": "R",
+          "pres_margin": "-56.6",
+          "next_election": 2026
+        },
+        {
+          "district": "41",
+          "district_name": "HD-41",
+          "seat_designator": null,
+          "name": "Jordan Maynor",
+          "party": "R",
+          "pres_margin": "-65.0",
+          "next_election": 2026
+        },
+        {
+          "district": "42",
+          "district_name": "HD-42",
+          "seat_designator": null,
+          "name": "John Jordan",
+          "party": "R",
+          "pres_margin": "-67.0",
+          "next_election": 2026
+        },
+        {
+          "district": "43",
+          "district_name": "HD-43",
+          "seat_designator": null,
+          "name": "Chris Toney",
+          "party": "R",
+          "pres_margin": "-68.6",
+          "next_election": 2026
+        },
+        {
+          "district": "44",
+          "district_name": "HD-44",
+          "seat_designator": null,
+          "name": "Bill Roop",
+          "party": "R",
+          "pres_margin": "-18.1",
+          "next_election": 2026
+        },
+        {
+          "district": "45",
+          "district_name": "HD-45",
+          "seat_designator": null,
+          "name": "Eric Brooks",
+          "party": "R",
+          "pres_margin": "-52.2",
+          "next_election": 2026
+        },
+        {
+          "district": "46",
+          "district_name": "HD-46",
+          "seat_designator": null,
+          "name": "Jeff Campbell",
+          "party": "R",
+          "pres_margin": "-39.5",
+          "next_election": 2026
+        },
+        {
+          "district": "47",
+          "district_name": "HD-47",
+          "seat_designator": null,
+          "name": "Denny Canterbury Jr.",
+          "party": "R",
+          "pres_margin": "-45.3",
+          "next_election": 2026
+        },
+        {
+          "district": "48",
+          "district_name": "HD-48",
+          "seat_designator": null,
+          "name": "Greg Watt",
+          "party": "R",
+          "pres_margin": "-61.8",
+          "next_election": 2026
+        },
+        {
+          "district": "49",
+          "district_name": "HD-49",
+          "seat_designator": null,
+          "name": "Stan Adkins",
+          "party": "R",
+          "pres_margin": "-61.7",
+          "next_election": 2026
+        },
+        {
+          "district": "50",
+          "district_name": "HD-50",
+          "seat_designator": null,
+          "name": "Elliott Pritt",
+          "party": "R",
+          "pres_margin": "-39.3",
+          "next_election": 2026
+        },
+        {
+          "district": "51",
+          "district_name": "HD-51",
+          "seat_designator": null,
+          "name": "Marshall Clay",
+          "party": "R",
+          "pres_margin": "-45.2",
+          "next_election": 2026
+        },
+        {
+          "district": "52",
+          "district_name": "HD-52",
+          "seat_designator": null,
+          "name": "Tresa Howell",
+          "party": "R",
+          "pres_margin": "-25.4",
+          "next_election": 2026
+        },
+        {
+          "district": "53",
+          "district_name": "HD-53",
+          "seat_designator": null,
+          "name": "Tristan Leavitt",
+          "party": "R",
+          "pres_margin": "-27.2",
+          "next_election": 2026
+        },
+        {
+          "district": "54",
+          "district_name": "HD-54",
+          "seat_designator": null,
+          "name": "Mike Pushkin",
+          "party": "D",
+          "pres_margin": "+39.1",
+          "next_election": 2026
+        },
+        {
+          "district": "55",
+          "district_name": "HD-55",
+          "seat_designator": null,
+          "name": "J.B. Akers",
+          "party": "R",
+          "pres_margin": "-11.7",
+          "next_election": 2026
+        },
+        {
+          "district": "56",
+          "district_name": "HD-56",
+          "seat_designator": null,
+          "name": "Kayla Young",
+          "party": "D",
+          "pres_margin": "-10.4",
+          "next_election": 2026
+        },
+        {
+          "district": "57",
+          "district_name": "HD-57",
+          "seat_designator": null,
+          "name": "Hollis Lewis",
+          "party": "D",
+          "pres_margin": "+4.8",
+          "next_election": 2026
+        },
+        {
+          "district": "58",
+          "district_name": "HD-58",
+          "seat_designator": null,
+          "name": "Walter Hall",
+          "party": "R",
+          "pres_margin": "-15.3",
+          "next_election": 2026
+        },
+        {
+          "district": "59",
+          "district_name": "HD-59",
+          "seat_designator": null,
+          "name": "Andy Shamblin",
+          "party": "R",
+          "pres_margin": "-26.1",
+          "next_election": 2026
+        },
+        {
+          "district": "60",
+          "district_name": "HD-60",
+          "seat_designator": null,
+          "name": "Dana Ferrell",
+          "party": "R",
+          "pres_margin": "-44.8",
+          "next_election": 2026
+        },
+        {
+          "district": "61",
+          "district_name": "HD-61",
+          "seat_designator": null,
+          "name": "Dean Jeffries",
+          "party": "R",
+          "pres_margin": "-52.6",
+          "next_election": 2026
+        },
+        {
+          "district": "62",
+          "district_name": "HD-62",
+          "seat_designator": null,
+          "name": "Roger Hanshaw",
+          "party": "R",
+          "pres_margin": "-63.4",
+          "next_election": 2026
+        },
+        {
+          "district": "63",
+          "district_name": "HD-63",
+          "seat_designator": null,
+          "name": "Lori Dittman",
+          "party": "R",
+          "pres_margin": "-51.7",
+          "next_election": 2026
+        },
+        {
+          "district": "64",
+          "district_name": "HD-64",
+          "seat_designator": null,
+          "name": "Adam Burkhammer",
+          "party": "R",
+          "pres_margin": "-60.0",
+          "next_election": 2026
+        },
+        {
+          "district": "65",
+          "district_name": "HD-65",
+          "seat_designator": null,
+          "name": "Robbie Martin",
+          "party": "R",
+          "pres_margin": "-53.3",
+          "next_election": 2026
+        },
+        {
+          "district": "66",
+          "district_name": "HD-66",
+          "seat_designator": null,
+          "name": "Jonathan Kyle",
+          "party": "R",
+          "pres_margin": "-51.6",
+          "next_election": 2026
+        },
+        {
+          "district": "67",
+          "district_name": "HD-67",
+          "seat_designator": null,
+          "name": "El\u00edas Coop-Gonz\u00e1lez",
+          "party": "R",
+          "pres_margin": "-45.7",
+          "next_election": 2026
+        },
+        {
+          "district": "68",
+          "district_name": "HD-68",
+          "seat_designator": null,
+          "name": "Chris Phillips",
+          "party": "R",
+          "pres_margin": "-61.8",
+          "next_election": 2026
+        },
+        {
+          "district": "69",
+          "district_name": "HD-69",
+          "seat_designator": null,
+          "name": "Keith Marple",
+          "party": "R",
+          "pres_margin": "-54.6",
+          "next_election": 2026
+        },
+        {
+          "district": "70",
+          "district_name": "HD-70",
+          "seat_designator": null,
+          "name": "Mickey Petitto",
+          "party": "R",
+          "pres_margin": "-20.7",
+          "next_election": 2026
+        },
+        {
+          "district": "71",
+          "district_name": "HD-71",
+          "seat_designator": null,
+          "name": "Laura Kimble",
+          "party": "R",
+          "pres_margin": "-32.8",
+          "next_election": 2026
+        },
+        {
+          "district": "72",
+          "district_name": "HD-72",
+          "seat_designator": null,
+          "name": "Clay Riley",
+          "party": "R",
+          "pres_margin": "-58.1",
+          "next_election": 2026
+        },
+        {
+          "district": "73",
+          "district_name": "HD-73",
+          "seat_designator": null,
+          "name": "Bryan Smith",
+          "party": "R",
+          "pres_margin": "-51.5",
+          "next_election": 2026
+        },
+        {
+          "district": "74",
+          "district_name": "HD-74",
+          "seat_designator": null,
+          "name": "Guy Ward",
+          "party": "R",
+          "pres_margin": "-41.1",
+          "next_election": 2026
+        },
+        {
+          "district": "75",
+          "district_name": "HD-75",
+          "seat_designator": null,
+          "name": "Phil Mallow",
+          "party": "R",
+          "pres_margin": "-30.2",
+          "next_election": 2026
+        },
+        {
+          "district": "76",
+          "district_name": "HD-76",
+          "seat_designator": null,
+          "name": "Rick Garcia",
+          "party": "D",
+          "pres_margin": "-18.9",
+          "next_election": 2026
+        },
+        {
+          "district": "77",
+          "district_name": "HD-77",
+          "seat_designator": null,
+          "name": "Joe Statler",
+          "party": "R",
+          "pres_margin": "-39.0",
+          "next_election": 2026
+        },
+        {
+          "district": "78",
+          "district_name": "HD-78",
+          "seat_designator": null,
+          "name": "Geno Chiarelli",
+          "party": "R",
+          "pres_margin": "-17.5",
+          "next_election": 2026
+        },
+        {
+          "district": "79",
+          "district_name": "HD-79",
+          "seat_designator": null,
+          "name": "Evan Hansen",
+          "party": "D",
+          "pres_margin": "+34.6",
+          "next_election": 2026
+        },
+        {
+          "district": "80",
+          "district_name": "HD-80",
+          "seat_designator": null,
+          "name": "John Williams",
+          "party": "D",
+          "pres_margin": "+10.5",
+          "next_election": 2026
+        },
+        {
+          "district": "81",
+          "district_name": "HD-81",
+          "seat_designator": null,
+          "name": "Anitra Hamilton",
+          "party": "D",
+          "pres_margin": "+21.9",
+          "next_election": 2026
+        },
+        {
+          "district": "82",
+          "district_name": "HD-82",
+          "seat_designator": null,
+          "name": "Dave McCormick",
+          "party": "R",
+          "pres_margin": "-5.8",
+          "next_election": 2026
+        },
+        {
+          "district": "83",
+          "district_name": "HD-83",
+          "seat_designator": null,
+          "name": "George Street",
+          "party": "R",
+          "pres_margin": "-55.3",
+          "next_election": 2026
+        },
+        {
+          "district": "84",
+          "district_name": "HD-84",
+          "seat_designator": null,
+          "name": "Buck Jennings",
+          "party": "R",
+          "pres_margin": "-58.5",
+          "next_election": 2026
+        },
+        {
+          "district": "85",
+          "district_name": "HD-85",
+          "seat_designator": null,
+          "name": "John Paul Hott",
+          "party": "R",
+          "pres_margin": "-67.1",
+          "next_election": 2026
+        },
+        {
+          "district": "86",
+          "district_name": "HD-86",
+          "seat_designator": null,
+          "name": "Bryan Ward",
+          "party": "R",
+          "pres_margin": "-57.4",
+          "next_election": 2026
+        },
+        {
+          "district": "87",
+          "district_name": "HD-87",
+          "seat_designator": null,
+          "name": "Gary Howell",
+          "party": "R",
+          "pres_margin": "-56.9",
+          "next_election": 2026
+        },
+        {
+          "district": "88",
+          "district_name": "HD-88",
+          "seat_designator": null,
+          "name": "Rick Hillenbrand",
+          "party": "R",
+          "pres_margin": "-66.0",
+          "next_election": 2026
+        },
+        {
+          "district": "89",
+          "district_name": "HD-89",
+          "seat_designator": null,
+          "name": "David Cannon",
+          "party": "R",
+          "pres_margin": "-59.2",
+          "next_election": 2026
+        },
+        {
+          "district": "90",
+          "district_name": "HD-90",
+          "seat_designator": null,
+          "name": "George Miller",
+          "party": "R",
+          "pres_margin": "-54.5",
+          "next_election": 2026
+        },
+        {
+          "district": "91",
+          "district_name": "HD-91",
+          "seat_designator": null,
+          "name": "Ian Masters",
+          "party": "R",
+          "pres_margin": "-47.9",
+          "next_election": 2026
+        },
+        {
+          "district": "92",
+          "district_name": "HD-92",
+          "seat_designator": null,
+          "name": "Mike Hite",
+          "party": "R",
+          "pres_margin": "-38.4",
+          "next_election": 2026
+        },
+        {
+          "district": "93",
+          "district_name": "HD-93",
+          "seat_designator": null,
+          "name": "Mike Hornby",
+          "party": "R",
+          "pres_margin": "-19.7",
+          "next_election": 2026
+        },
+        {
+          "district": "94",
+          "district_name": "HD-94",
+          "seat_designator": null,
+          "name": "Larry Kump",
+          "party": "R",
+          "pres_margin": "-33.9",
+          "next_election": 2026
+        },
+        {
+          "district": "95",
+          "district_name": "HD-95",
+          "seat_designator": null,
+          "name": "Chuck Horst",
+          "party": "R",
+          "pres_margin": "-35.8",
+          "next_election": 2026
+        },
+        {
+          "district": "96",
+          "district_name": "HD-96",
+          "seat_designator": null,
+          "name": "Lisa White",
+          "party": "R",
+          "pres_margin": "-37.9",
+          "next_election": 2026
+        },
+        {
+          "district": "97",
+          "district_name": "HD-97",
+          "seat_designator": null,
+          "name": "Chris Anders",
+          "party": "R",
+          "pres_margin": "-16.7",
+          "next_election": 2026
+        },
+        {
+          "district": "98",
+          "district_name": "HD-98",
+          "seat_designator": null,
+          "name": "Joe Funkhouser",
+          "party": "R",
+          "pres_margin": "-30.0",
+          "next_election": 2026
+        },
+        {
+          "district": "99",
+          "district_name": "HD-99",
+          "seat_designator": null,
+          "name": "Wayne Clark",
+          "party": "R",
+          "pres_margin": "-13.8",
+          "next_election": 2026
+        },
+        {
+          "district": "100",
+          "district_name": "HD-100",
+          "seat_designator": null,
+          "name": "Bill Ridenour",
+          "party": "R",
+          "pres_margin": "-9.8",
+          "next_election": 2026
+        }
+      ]
+    },
+    "Senate": {
+      "total": 34,
+      "composition": {
+        "D": 2,
+        "R": 32,
+        "Other": 0,
+        "Vacant": 0
+      },
+      "supermajority": 23,
+      "seats_up_2026": 17,
+      "members": [
+        {
+          "district": "1",
+          "district_name": "SD-1",
+          "seat_designator": "A",
+          "name": "Laura Chapman",
+          "party": "R",
+          "pres_margin": "-39.2",
+          "next_election": 2026
+        },
+        {
+          "district": "1",
+          "district_name": "SD-1",
+          "seat_designator": "B",
+          "name": "Ryan Weld",
+          "party": "R",
+          "pres_margin": "-39.2",
+          "next_election": 2028
+        },
+        {
+          "district": "2",
+          "district_name": "SD-2",
+          "seat_designator": "A",
+          "name": "Charles Clements",
+          "party": "R",
+          "pres_margin": "-41.6",
+          "next_election": 2026
+        },
+        {
+          "district": "2",
+          "district_name": "SD-2",
+          "seat_designator": "B",
+          "name": "Chris Rose",
+          "party": "R",
+          "pres_margin": "-41.6",
+          "next_election": 2028
+        },
+        {
+          "district": "3",
+          "district_name": "SD-3",
+          "seat_designator": "A",
+          "name": "Mike Azinger",
+          "party": "R",
+          "pres_margin": "-48.0",
+          "next_election": 2026
+        },
+        {
+          "district": "3",
+          "district_name": "SD-3",
+          "seat_designator": "B",
+          "name": "Trenton Barnhart",
+          "party": "R",
+          "pres_margin": "-48.0",
+          "next_election": 2028
+        },
+        {
+          "district": "4",
+          "district_name": "SD-4",
+          "seat_designator": "A",
+          "name": "Amy Grady",
+          "party": "R",
+          "pres_margin": "-49.8",
+          "next_election": 2026
+        },
+        {
+          "district": "4",
+          "district_name": "SD-4",
+          "seat_designator": "B",
+          "name": "Eric Tarr",
+          "party": "R",
+          "pres_margin": "-49.8",
+          "next_election": 2028
+        },
+        {
+          "district": "5",
+          "district_name": "SD-5",
+          "seat_designator": "A",
+          "name": "Scott Fuller",
+          "party": "R",
+          "pres_margin": "-24.7",
+          "next_election": 2026
+        },
+        {
+          "district": "5",
+          "district_name": "SD-5",
+          "seat_designator": "B",
+          "name": "Mike Woelfel",
+          "party": "D",
+          "pres_margin": "-24.7",
+          "next_election": 2028
+        },
+        {
+          "district": "6",
+          "district_name": "SD-6",
+          "seat_designator": "A",
+          "name": "Craig Hart",
+          "party": "R",
+          "pres_margin": "-62.3",
+          "next_election": 2026
+        },
+        {
+          "district": "6",
+          "district_name": "SD-6",
+          "seat_designator": "B",
+          "name": "Mark Maynard",
+          "party": "R",
+          "pres_margin": "-62.3",
+          "next_election": 2028
+        },
+        {
+          "district": "7",
+          "district_name": "SD-7",
+          "seat_designator": "A",
+          "name": "Zack Maynard",
+          "party": "R",
+          "pres_margin": "-56.3",
+          "next_election": 2026
+        },
+        {
+          "district": "7",
+          "district_name": "SD-7",
+          "seat_designator": "B",
+          "name": "Rupie Phillips",
+          "party": "R",
+          "pres_margin": "-56.3",
+          "next_election": 2028
+        },
+        {
+          "district": "8",
+          "district_name": "SD-8",
+          "seat_designator": "A",
+          "name": "Kevan Bartlett",
+          "party": "R",
+          "pres_margin": "-27.4",
+          "next_election": 2026
+        },
+        {
+          "district": "8",
+          "district_name": "SD-8",
+          "seat_designator": "B",
+          "name": "Glenn Jeffries",
+          "party": "R",
+          "pres_margin": "-27.4",
+          "next_election": 2028
+        },
+        {
+          "district": "9",
+          "district_name": "SD-9",
+          "seat_designator": "A",
+          "name": "Brian Helton",
+          "party": "R",
+          "pres_margin": "-55.7",
+          "next_election": 2026
+        },
+        {
+          "district": "9",
+          "district_name": "SD-9",
+          "seat_designator": "B",
+          "name": "Rollan Roberts",
+          "party": "R",
+          "pres_margin": "-55.7",
+          "next_election": 2028
+        },
+        {
+          "district": "10",
+          "district_name": "SD-10",
+          "seat_designator": "A",
+          "name": "Vince Deeds",
+          "party": "R",
+          "pres_margin": "-50.0",
+          "next_election": 2026
+        },
+        {
+          "district": "10",
+          "district_name": "SD-10",
+          "seat_designator": "B",
+          "name": "Jack Woodrum",
+          "party": "R",
+          "pres_margin": "-50.0",
+          "next_election": 2028
+        },
+        {
+          "district": "11",
+          "district_name": "SD-11",
+          "seat_designator": "A",
+          "name": "Bill Hamilton",
+          "party": "R",
+          "pres_margin": "-54.1",
+          "next_election": 2026
+        },
+        {
+          "district": "11",
+          "district_name": "SD-11",
+          "seat_designator": "B",
+          "name": "Robbie Morris",
+          "party": "R",
+          "pres_margin": "-54.1",
+          "next_election": 2028
+        },
+        {
+          "district": "12",
+          "district_name": "SD-12",
+          "seat_designator": "A",
+          "name": "Patrick Martin",
+          "party": "R",
+          "pres_margin": "-47.1",
+          "next_election": 2026
+        },
+        {
+          "district": "12",
+          "district_name": "SD-12",
+          "seat_designator": "B",
+          "name": "Ben Queen",
+          "party": "R",
+          "pres_margin": "-47.1",
+          "next_election": 2028
+        },
+        {
+          "district": "13",
+          "district_name": "SD-13",
+          "seat_designator": "A",
+          "name": "Joey Garcia",
+          "party": "D",
+          "pres_margin": "-5.6",
+          "next_election": 2026
+        },
+        {
+          "district": "13",
+          "district_name": "SD-13",
+          "seat_designator": "B",
+          "name": "Mike Oliverio",
+          "party": "R",
+          "pres_margin": "-5.6",
+          "next_election": 2028
+        },
+        {
+          "district": "14",
+          "district_name": "SD-14",
+          "seat_designator": "A",
+          "name": "Randy Smith",
+          "party": "R",
+          "pres_margin": "-59.4",
+          "next_election": 2026
+        },
+        {
+          "district": "14",
+          "district_name": "SD-14",
+          "seat_designator": "B",
+          "name": "Jay Taylor",
+          "party": "R",
+          "pres_margin": "-59.4",
+          "next_election": 2028
+        },
+        {
+          "district": "15",
+          "district_name": "SD-15",
+          "seat_designator": "A",
+          "name": "Darren Thorne",
+          "party": "R",
+          "pres_margin": "-46.0",
+          "next_election": 2026
+        },
+        {
+          "district": "15",
+          "district_name": "SD-15",
+          "seat_designator": "B",
+          "name": "Tom Willis",
+          "party": "R",
+          "pres_margin": "-46.0",
+          "next_election": 2028
+        },
+        {
+          "district": "16",
+          "district_name": "SD-16",
+          "seat_designator": "A",
+          "name": "Jason Barrett",
+          "party": "R",
+          "pres_margin": "-23.7",
+          "next_election": 2026
+        },
+        {
+          "district": "16",
+          "district_name": "SD-16",
+          "seat_designator": "B",
+          "name": "Patricia Rucker",
+          "party": "R",
+          "pres_margin": "-23.7",
+          "next_election": 2028
+        },
+        {
+          "district": "17",
+          "district_name": "SD-17",
+          "seat_designator": "A",
+          "name": "Anne Charnock",
+          "party": "R",
+          "pres_margin": "-21.3",
+          "next_election": 2026
+        },
+        {
+          "district": "17",
+          "district_name": "SD-17",
+          "seat_designator": "B",
+          "name": "Tom Takubo",
+          "party": "R",
+          "pres_margin": "-21.3",
+          "next_election": 2028
+        }
+      ]
+    }
+  },
+  "elections_2026": {
+    "governor": null,
+    "statewide": [],
+    "legislative": [
+      {
+        "seat_label": "WV HoD 1",
+        "chamber": "House of Delegates",
+        "district": "1",
+        "candidates": [
+          {
+            "name": "Quincy Wilson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Pat McGeehan",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 2",
+        "chamber": "House of Delegates",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Daniel Day",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Olivia Dowler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mark Zatezalo",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tony Viola",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 3",
+        "chamber": "House of Delegates",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Mike Robinson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jimmy Willis",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 4",
+        "chamber": "House of Delegates",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Joe Jividen",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Derek Ennis",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Dolph Santorine",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 5",
+        "chamber": "House of Delegates",
+        "district": "5",
+        "candidates": [
+          {
+            "name": "Karen Shuler Stakem",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Elgine McArdle",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Riley Watkins",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 6",
+        "chamber": "House of Delegates",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Cody Cumpston",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Don Dewitt",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jeff Stephens",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 7",
+        "chamber": "House of Delegates",
+        "district": "7",
+        "candidates": [
+          {
+            "name": "Sarah Reggi",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Chuck Sheedy",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Devon Tennant",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 8",
+        "chamber": "House of Delegates",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Bill Bell",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Steven Smith",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Timothy Bassett",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 9",
+        "chamber": "House of Delegates",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Betsy Kelly",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Dan Boley",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kerry Murphy",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Mark Kimball",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Scott McGraw",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Steve Thomas",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 10",
+        "chamber": "House of Delegates",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Christopher Jones",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bill Anderson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Justin Beanard",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 11",
+        "chamber": "House of Delegates",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Daniel Miller",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Andrew Borkowski",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jeffrey Sandy",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 12",
+        "chamber": "House of Delegates",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Dennis Rempel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Charles Hartzog",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Vernon Criss",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 13",
+        "chamber": "House of Delegates",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Marley Umensetter",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Scot Heckert",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 14",
+        "chamber": "House of Delegates",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Jim Marion",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Andy Daniel",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Angie Adams",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Dave Foggin",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 15",
+        "chamber": "House of Delegates",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Brandi Hall",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Erica Moore",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 16",
+        "chamber": "House of Delegates",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Jason Barr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joe Parsons",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 17",
+        "chamber": "House of Delegates",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Jonathan Pinson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kathryn Weiland",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Scott Cadle",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 18",
+        "chamber": "House of Delegates",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Jonathan Hersman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jim Butler",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 19",
+        "chamber": "House of Delegates",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Nolan Rose",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kathie Hess Crouse",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 20",
+        "chamber": "House of Delegates",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Tonya Shuler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sarah Drennan",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 21",
+        "chamber": "House of Delegates",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Michael Mosteller II",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "C. D. Caldwell",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Michael Kidd",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 22",
+        "chamber": "House of Delegates",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "Aaron Holley",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Daniel Linville",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 23",
+        "chamber": "House of Delegates",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "Evan Worrell",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 24",
+        "chamber": "House of Delegates",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Steve Williams",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Patrick Lucas",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 25",
+        "chamber": "House of Delegates",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "Sean Hornbuckle",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 26",
+        "chamber": "House of Delegates",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Bryan Adams",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Andrew Lowry",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Matthew Rohrbach",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 27",
+        "chamber": "House of Delegates",
+        "district": "27",
+        "candidates": [
+          {
+            "name": "Ric Griffith",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gordon Ramey II",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tyler Bowen",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "William Caudill",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 28",
+        "chamber": "House of Delegates",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Brooke Smith",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mark Caserta",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Ryan Browning",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 29",
+        "chamber": "House of Delegates",
+        "district": "29",
+        "candidates": [
+          {
+            "name": "Wendy Coleman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Corby Dillon",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 30",
+        "chamber": "House of Delegates",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Ryan Elkins",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Adkins",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jeff Eldridge",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 31",
+        "chamber": "House of Delegates",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "Derrick Pearson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "George Barker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Margitta Mazzocchi",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 32",
+        "chamber": "House of Delegates",
+        "district": "32",
+        "candidates": [
+          {
+            "name": "Jennifer Allyn Bias Bryant",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Josh Holstein",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 33",
+        "chamber": "House of Delegates",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Brittany Feury",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Chris Tipton",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jordan Bridges",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 34",
+        "chamber": "House of Delegates",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Tara Sexton",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Barry Marcum",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Braydan Goff",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "James Harless",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "John White",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 35",
+        "chamber": "House of Delegates",
+        "district": "35",
+        "candidates": [
+          {
+            "name": "Rachael Hawkins-Church",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gregory Bishop",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "John Morgan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 36",
+        "chamber": "House of Delegates",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Katelynn Jordan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Green",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "S.P. McKinney",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 37",
+        "chamber": "House of Delegates",
+        "district": "37",
+        "candidates": [
+          {
+            "name": "Treyvon Simmons",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marty Gearheart",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 38",
+        "chamber": "House of Delegates",
+        "district": "38",
+        "candidates": [
+          {
+            "name": "Randa Faulkner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joe Ellington",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 39",
+        "chamber": "House of Delegates",
+        "district": "39",
+        "candidates": [
+          {
+            "name": "Brianna Pearcy",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Neal Vestal",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Samuel Lusk",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Thurman Dickerson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 40",
+        "chamber": "House of Delegates",
+        "district": "40",
+        "candidates": [
+          {
+            "name": "Jennifer Gilkerson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jon Fain",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Roy Cooper",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Travis Waldron",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 41",
+        "chamber": "House of Delegates",
+        "district": "41",
+        "candidates": [
+          {
+            "name": "Curtis Shaver",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Adrian Carag",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jordan Maynor",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 42",
+        "chamber": "House of Delegates",
+        "district": "42",
+        "candidates": [
+          {
+            "name": "Courtney Vandall",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Jordan",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Richard Jones",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 43",
+        "chamber": "House of Delegates",
+        "district": "43",
+        "candidates": [
+          {
+            "name": "Chris Toney",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 44",
+        "chamber": "House of Delegates",
+        "district": "44",
+        "candidates": [
+          {
+            "name": "Christina Baisden",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gabriel Covington",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tristin Kinningham",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bill Roop",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Bobbie Jo Hylton",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 45",
+        "chamber": "House of Delegates",
+        "district": "45",
+        "candidates": [
+          {
+            "name": "Glen Langston",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph Golden",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Eric Brooks",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 46",
+        "chamber": "House of Delegates",
+        "district": "46",
+        "candidates": [
+          {
+            "name": "Sarah Umberger",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jeff Campbell",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Mark Robinson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 47",
+        "chamber": "House of Delegates",
+        "district": "47",
+        "candidates": [
+          {
+            "name": "Mark Phipps Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sarah Morris",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Denny Canterbury Jr.",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 48",
+        "chamber": "House of Delegates",
+        "district": "48",
+        "candidates": [
+          {
+            "name": "Jourdan Deitz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Greg Watt",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Mackenzie Holdren",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 49",
+        "chamber": "House of Delegates",
+        "district": "49",
+        "candidates": [
+          {
+            "name": "Byron Tucker Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Stan Adkins",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 50",
+        "chamber": "House of Delegates",
+        "district": "50",
+        "candidates": [
+          {
+            "name": "Matthew Anderson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Christopher Ratliff",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Elliott Pritt",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 51",
+        "chamber": "House of Delegates",
+        "district": "51",
+        "candidates": [
+          {
+            "name": "Colby Lopez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cy Persinger",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Dan Hill",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Marshall Clay",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 52",
+        "chamber": "House of Delegates",
+        "district": "52",
+        "candidates": [
+          {
+            "name": "Joyce Brown",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michelle Harper",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Seth Adkins",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tresa Howell",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 53",
+        "chamber": "House of Delegates",
+        "district": "53",
+        "candidates": [
+          {
+            "name": "Howard Mize",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Keena Mullins",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Terry Burns",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tristan Leavitt",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 54",
+        "chamber": "House of Delegates",
+        "district": "54",
+        "candidates": [
+          {
+            "name": "Mike Pushkin",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Julien Aklei",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 55",
+        "chamber": "House of Delegates",
+        "district": "55",
+        "candidates": [
+          {
+            "name": "Aaron Crank",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Anthony Dasaro",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "J.B. Akers",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 56",
+        "chamber": "House of Delegates",
+        "district": "56",
+        "candidates": [
+          {
+            "name": "Kayla Young",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 57",
+        "chamber": "House of Delegates",
+        "district": "57",
+        "candidates": [
+          {
+            "name": "Hollis Lewis",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 58",
+        "chamber": "House of Delegates",
+        "district": "58",
+        "candidates": [
+          {
+            "name": "Alaina Schwechler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marisa Jackson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Walter Hall",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 59",
+        "chamber": "House of Delegates",
+        "district": "59",
+        "candidates": [
+          {
+            "name": "Howard Claytor III",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Andy Shamblin",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 60",
+        "chamber": "House of Delegates",
+        "district": "60",
+        "candidates": [
+          {
+            "name": "Lynette Shaw",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Christina Knapp",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Dana Ferrell",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 61",
+        "chamber": "House of Delegates",
+        "district": "61",
+        "candidates": [
+          {
+            "name": "Dorothy Burcham",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shane Woodrum",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sue Crawford",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dean Jeffries",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Lewis Taylor",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 62",
+        "chamber": "House of Delegates",
+        "district": "62",
+        "candidates": [
+          {
+            "name": "Samantha Tanner-Lester",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Roger Hanshaw",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 63",
+        "chamber": "House of Delegates",
+        "district": "63",
+        "candidates": [
+          {
+            "name": "Betsy Coulter",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kevin Carpenter",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lori Dittman",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Wesley Self",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 64",
+        "chamber": "House of Delegates",
+        "district": "64",
+        "candidates": [
+          {
+            "name": "Adam Burkhammer",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 65",
+        "chamber": "House of Delegates",
+        "district": "65",
+        "candidates": [
+          {
+            "name": "Mira Tanner-Hughes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robbie Martin",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 66",
+        "chamber": "House of Delegates",
+        "district": "66",
+        "candidates": [
+          {
+            "name": "Danielle Dougherty",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jonathan Kyle",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 67",
+        "chamber": "House of Delegates",
+        "district": "67",
+        "candidates": [
+          {
+            "name": "Mandy Smith Weirich",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Les Mallow",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 68",
+        "chamber": "House of Delegates",
+        "district": "68",
+        "candidates": [
+          {
+            "name": "Chris Phillips",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "David Critchfield",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tyler Williams",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 69",
+        "chamber": "House of Delegates",
+        "district": "69",
+        "candidates": [
+          {
+            "name": "Jocelyn Blackwell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lou Assaro",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Andrew Yost",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Danny Hamrick",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Keith Marple",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 70",
+        "chamber": "House of Delegates",
+        "district": "70",
+        "candidates": [
+          {
+            "name": "Jackson Howe",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph Romano",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shannon Welsh",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mickey Petitto",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Paul Howe",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Salvatore Bombardiere",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 71",
+        "chamber": "House of Delegates",
+        "district": "71",
+        "candidates": [
+          {
+            "name": "Robert Garcia",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Laura Kimble",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tim McNeely",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 72",
+        "chamber": "House of Delegates",
+        "district": "72",
+        "candidates": [
+          {
+            "name": "Clay Riley",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Megan Krajewski",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 73",
+        "chamber": "House of Delegates",
+        "district": "73",
+        "candidates": [
+          {
+            "name": "Kathleen Ford",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Frank Sturm",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Rob Gallo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 74",
+        "chamber": "House of Delegates",
+        "district": "74",
+        "candidates": [
+          {
+            "name": "Frankie Delapas",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Guy Ward",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jonathan Woertz",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Matthew Offutt",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Scott Crouch",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 75",
+        "chamber": "House of Delegates",
+        "district": "75",
+        "candidates": [
+          {
+            "name": "Daynon Foster",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Josh Roark",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Linda Longstreth",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Phil Mallow",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 76",
+        "chamber": "House of Delegates",
+        "district": "76",
+        "candidates": [
+          {
+            "name": "Rick Garcia",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jon Dodds",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 77",
+        "chamber": "House of Delegates",
+        "district": "77",
+        "candidates": [
+          {
+            "name": "Patricia Bunner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joe Statler",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 78",
+        "chamber": "House of Delegates",
+        "district": "78",
+        "candidates": [
+          {
+            "name": "Michael Wendell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cohen Terneus",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Geno Chiarelli",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Sawyer Dennison",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 79",
+        "chamber": "House of Delegates",
+        "district": "79",
+        "candidates": [
+          {
+            "name": "Evan Hansen",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 80",
+        "chamber": "House of Delegates",
+        "district": "80",
+        "candidates": [
+          {
+            "name": "Kirsten Nelson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Olivia Miller",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 81",
+        "chamber": "House of Delegates",
+        "district": "81",
+        "candidates": [
+          {
+            "name": "Anitra Hamilton",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 82",
+        "chamber": "House of Delegates",
+        "district": "82",
+        "candidates": [
+          {
+            "name": "Eddie Wagoner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Thomas Ramsey",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dave McCormick",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 83",
+        "chamber": "House of Delegates",
+        "district": "83",
+        "candidates": [
+          {
+            "name": "George Street",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 84",
+        "chamber": "House of Delegates",
+        "district": "84",
+        "candidates": [
+          {
+            "name": "Colin Savage",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Buck Jennings",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 85",
+        "chamber": "House of Delegates",
+        "district": "85",
+        "candidates": [
+          {
+            "name": "Dean Bonney",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Deborah Stiles",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Alex Bosley",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Bruce Kolsun",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jerry Ours",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 86",
+        "chamber": "House of Delegates",
+        "district": "86",
+        "candidates": [
+          {
+            "name": "Betsy Orndoff-Sayers",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bryan Ward",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Steven Schetrom",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 87",
+        "chamber": "House of Delegates",
+        "district": "87",
+        "candidates": [
+          {
+            "name": "Rebecca Holler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Charles Staggs",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Gary Howell",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 88",
+        "chamber": "House of Delegates",
+        "district": "88",
+        "candidates": [
+          {
+            "name": "Dorothy Kengla",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rick Hillenbrand",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 89",
+        "chamber": "House of Delegates",
+        "district": "89",
+        "candidates": [
+          {
+            "name": "John Zupan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Cannon",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 90",
+        "chamber": "House of Delegates",
+        "district": "90",
+        "candidates": [
+          {
+            "name": "Ashley Braner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dan Caldwell",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "David Jones",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "George Miller",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kevin McLaughlin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 91",
+        "chamber": "House of Delegates",
+        "district": "91",
+        "candidates": [
+          {
+            "name": "David Michaels",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Chris Clagett",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 92",
+        "chamber": "House of Delegates",
+        "district": "92",
+        "candidates": [
+          {
+            "name": "Brad Noll",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mike Hite",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 93",
+        "chamber": "House of Delegates",
+        "district": "93",
+        "candidates": [
+          {
+            "name": "Mike Hornby",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 94",
+        "chamber": "House of Delegates",
+        "district": "94",
+        "candidates": [
+          {
+            "name": "Elizabeth Sanchez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Larry Kump",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 95",
+        "chamber": "House of Delegates",
+        "district": "95",
+        "candidates": [
+          {
+            "name": "Kara Waldeck",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Chuck Horst",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 96",
+        "chamber": "House of Delegates",
+        "district": "96",
+        "candidates": [
+          {
+            "name": "Lisa Cathro",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Katie Rose",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Lisa White",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 97",
+        "chamber": "House of Delegates",
+        "district": "97",
+        "candidates": [
+          {
+            "name": "Lucia Valentine",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Chris Anders",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 98",
+        "chamber": "House of Delegates",
+        "district": "98",
+        "candidates": [
+          {
+            "name": "Marta Beck",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joe Funkhouser",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 99",
+        "chamber": "House of Delegates",
+        "district": "99",
+        "candidates": [
+          {
+            "name": "Regina Dyer",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert Vincent",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert Fluharty",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Wayne Clark",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV HoD 100",
+        "chamber": "House of Delegates",
+        "district": "100",
+        "candidates": [
+          {
+            "name": "Jenny Thacker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bill Ridenour",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV Senate 1 Seat A",
+        "chamber": "Senate",
+        "district": "1",
+        "candidates": [
+          {
+            "name": "Laura Chapman",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV Senate 2 Seat A",
+        "chamber": "Senate",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Christopher Claypole",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bob Dobkin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV Senate 3 Seat A",
+        "chamber": "Senate",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Mike Azinger",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV Senate 4 Seat A",
+        "chamber": "Senate",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Kenneth Darryl Matthews Jr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV Senate 5 Seat A",
+        "chamber": "Senate",
+        "district": "5",
+        "candidates": [
+          {
+            "name": "Chris Miller",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV Senate 6 Seat A",
+        "chamber": "Senate",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Mark R. Maynard",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV Senate 8 Seat A",
+        "chamber": "Senate",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Kevan Bartlett",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV Senate 9 Seat A",
+        "chamber": "Senate",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Rollan Roberts",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV Senate 10 Seat A",
+        "chamber": "Senate",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Vince Deeds",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV Senate 11 Seat A",
+        "chamber": "Senate",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Bill Hamilton",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV Senate 12 Seat A",
+        "chamber": "Senate",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Ben Queen",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV Senate 13 Seat A",
+        "chamber": "Senate",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "John Williams",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mike Oliverio",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV Senate 14 Seat A",
+        "chamber": "Senate",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Jay Taylor",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV Senate 15 Seat A",
+        "chamber": "Senate",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Ken Reed",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV Senate 16 Seat A",
+        "chamber": "Senate",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Jason Barrett",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "WV Senate 17 Seat A",
+        "chamber": "Senate",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Tom Takubo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ]
+  },
+  "ballot_measures": [],
+  "filing_deadline": "2026-01-31",
+  "primary_date": "2026-05-12"
+}

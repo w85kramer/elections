@@ -1,0 +1,554 @@
+{
+  "generated_at": "2026-02-15T01:21:03.297523Z",
+  "state": {
+    "name": "Nebraska",
+    "abbr": "NE",
+    "senate_seats": 49,
+    "house_seats": 0,
+    "senate_term_years": 4,
+    "house_term_years": 0,
+    "gov_term_years": 4,
+    "gov_term_limit": "Yes (2 consecutive)",
+    "next_gov_election_year": 2026,
+    "uses_jungle_primary": true,
+    "has_runoffs": false
+  },
+  "statewide_officers": [
+    {
+      "office": "Governor",
+      "name": "Jim Pillen",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2023,
+      "forecast": "Solid R",
+      "forecast_details": [
+        {
+          "source": "Sabato's Crystal Ball",
+          "rating": "Solid R"
+        },
+        {
+          "source": "Cook Political Report",
+          "rating": "Solid R"
+        }
+      ]
+    },
+    {
+      "office": "Lt. Governor",
+      "name": "Joe Kelly",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2023
+    },
+    {
+      "office": "Attorney General",
+      "name": "Mike Hilgers",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2023
+    },
+    {
+      "office": "Secretary of State",
+      "name": "Bob Evnen",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2019
+    },
+    {
+      "office": "Treasurer",
+      "name": "Joey Spellerberg",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2025
+    },
+    {
+      "office": "Auditor",
+      "name": "Mike Foley",
+      "party": "R",
+      "method": "Elected",
+      "next_election": 2026,
+      "start_year": 2023
+    }
+  ],
+  "chambers": {
+    "Legislature": {
+      "total": 49,
+      "composition": {
+        "D": 15,
+        "R": 33,
+        "Other": 1,
+        "Vacant": 0
+      },
+      "supermajority": 33,
+      "seats_up_2026": 24,
+      "members": [
+        {
+          "district": "1",
+          "district_name": "LD-1",
+          "seat_designator": null,
+          "name": "Bob Hallstrom",
+          "party": "R",
+          "pres_margin": "-44.5",
+          "next_election": 2028
+        },
+        {
+          "district": "2",
+          "district_name": "LD-2",
+          "seat_designator": null,
+          "name": "Rob Clements",
+          "party": "R",
+          "pres_margin": "-25.0",
+          "next_election": 2026
+        },
+        {
+          "district": "3",
+          "district_name": "LD-3",
+          "seat_designator": null,
+          "name": "Victor Rountree",
+          "party": "D",
+          "pres_margin": "-6.7",
+          "next_election": 2028
+        },
+        {
+          "district": "4",
+          "district_name": "LD-4",
+          "seat_designator": null,
+          "name": "Brad von Gillern",
+          "party": "R",
+          "pres_margin": "-5.6",
+          "next_election": 2026
+        },
+        {
+          "district": "5",
+          "district_name": "LD-5",
+          "seat_designator": null,
+          "name": "Margo Juarez",
+          "party": "D",
+          "pres_margin": "+19.0",
+          "next_election": 2028
+        },
+        {
+          "district": "6",
+          "district_name": "LD-6",
+          "seat_designator": null,
+          "name": "Machaela Cavanaugh",
+          "party": "D",
+          "pres_margin": "+16.1",
+          "next_election": 2026
+        },
+        {
+          "district": "7",
+          "district_name": "LD-7",
+          "seat_designator": null,
+          "name": "Dunixi Guereca",
+          "party": "D",
+          "pres_margin": "+37.8",
+          "next_election": 2028
+        },
+        {
+          "district": "8",
+          "district_name": "LD-8",
+          "seat_designator": null,
+          "name": "Megan Hunt",
+          "party": "NP",
+          "pres_margin": "+36.7",
+          "next_election": 2026
+        },
+        {
+          "district": "9",
+          "district_name": "LD-9",
+          "seat_designator": null,
+          "name": "John Cavanaugh",
+          "party": "D",
+          "pres_margin": "+43.1",
+          "next_election": 2028
+        },
+        {
+          "district": "10",
+          "district_name": "LD-10",
+          "seat_designator": null,
+          "name": "Wendy DeBoer",
+          "party": "D",
+          "pres_margin": "+8.2",
+          "next_election": 2026
+        },
+        {
+          "district": "11",
+          "district_name": "LD-11",
+          "seat_designator": null,
+          "name": "Terrell McKinney",
+          "party": "D",
+          "pres_margin": "+65.7",
+          "next_election": 2028
+        },
+        {
+          "district": "12",
+          "district_name": "LD-12",
+          "seat_designator": null,
+          "name": "Merv Riepe",
+          "party": "R",
+          "pres_margin": "+2.3",
+          "next_election": 2026
+        },
+        {
+          "district": "13",
+          "district_name": "LD-13",
+          "seat_designator": null,
+          "name": "Ashlei Spivey",
+          "party": "D",
+          "pres_margin": "+29.1",
+          "next_election": 2028
+        },
+        {
+          "district": "14",
+          "district_name": "LD-14",
+          "seat_designator": null,
+          "name": "John Arch",
+          "party": "R",
+          "pres_margin": "-8.8",
+          "next_election": 2026
+        },
+        {
+          "district": "15",
+          "district_name": "LD-15",
+          "seat_designator": null,
+          "name": "Woody Wordekemper",
+          "party": "R",
+          "pres_margin": "-33.9",
+          "next_election": 2028
+        },
+        {
+          "district": "16",
+          "district_name": "LD-16",
+          "seat_designator": null,
+          "name": "Ben Hansen",
+          "party": "R",
+          "pres_margin": "-47.8",
+          "next_election": 2026
+        },
+        {
+          "district": "17",
+          "district_name": "LD-17",
+          "seat_designator": null,
+          "name": "Glen Meyer",
+          "party": "R",
+          "pres_margin": "-33.3",
+          "next_election": 2028
+        },
+        {
+          "district": "18",
+          "district_name": "LD-18",
+          "seat_designator": null,
+          "name": "Christy Armendariz",
+          "party": "R",
+          "pres_margin": "-2.5",
+          "next_election": 2026
+        },
+        {
+          "district": "19",
+          "district_name": "LD-19",
+          "seat_designator": null,
+          "name": "Robert Dover",
+          "party": "R",
+          "pres_margin": "-58.7",
+          "next_election": 2028
+        },
+        {
+          "district": "20",
+          "district_name": "LD-20",
+          "seat_designator": null,
+          "name": "John Fredrickson",
+          "party": "D",
+          "pres_margin": "+10.7",
+          "next_election": 2026
+        },
+        {
+          "district": "21",
+          "district_name": "LD-21",
+          "seat_designator": null,
+          "name": "Beau Ballard",
+          "party": "R",
+          "pres_margin": "-14.9",
+          "next_election": 2028
+        },
+        {
+          "district": "22",
+          "district_name": "LD-22",
+          "seat_designator": null,
+          "name": "Mike Moser",
+          "party": "R",
+          "pres_margin": "-59.6",
+          "next_election": 2026
+        },
+        {
+          "district": "23",
+          "district_name": "LD-23",
+          "seat_designator": null,
+          "name": "Jared Storm",
+          "party": "R",
+          "pres_margin": "-49.7",
+          "next_election": 2028
+        },
+        {
+          "district": "24",
+          "district_name": "LD-24",
+          "seat_designator": null,
+          "name": "Jana Hughes",
+          "party": "R",
+          "pres_margin": "-51.7",
+          "next_election": 2026
+        },
+        {
+          "district": "25",
+          "district_name": "LD-25",
+          "seat_designator": null,
+          "name": "Carolyn Bosn",
+          "party": "R",
+          "pres_margin": "-5.8",
+          "next_election": 2028
+        },
+        {
+          "district": "26",
+          "district_name": "LD-26",
+          "seat_designator": null,
+          "name": "George Dungan",
+          "party": "D",
+          "pres_margin": "+10.4",
+          "next_election": 2026
+        },
+        {
+          "district": "27",
+          "district_name": "LD-27",
+          "seat_designator": null,
+          "name": "Jason Prokop",
+          "party": "D",
+          "pres_margin": "+4.1",
+          "next_election": 2028
+        },
+        {
+          "district": "28",
+          "district_name": "LD-28",
+          "seat_designator": null,
+          "name": "Jane Raybould",
+          "party": "D",
+          "pres_margin": "+31.7",
+          "next_election": 2026
+        },
+        {
+          "district": "29",
+          "district_name": "LD-29",
+          "seat_designator": null,
+          "name": "Eliot Bostar",
+          "party": "D",
+          "pres_margin": "+22.4",
+          "next_election": 2028
+        },
+        {
+          "district": "30",
+          "district_name": "LD-30",
+          "seat_designator": null,
+          "name": "Myron Dorn",
+          "party": "R",
+          "pres_margin": "-21.2",
+          "next_election": 2026
+        },
+        {
+          "district": "31",
+          "district_name": "LD-31",
+          "seat_designator": null,
+          "name": "Kathleen Kauth",
+          "party": "R",
+          "pres_margin": "-6.3",
+          "next_election": 2028
+        },
+        {
+          "district": "32",
+          "district_name": "LD-32",
+          "seat_designator": null,
+          "name": "Tom Brandt",
+          "party": "R",
+          "pres_margin": "-44.8",
+          "next_election": 2026
+        },
+        {
+          "district": "33",
+          "district_name": "LD-33",
+          "seat_designator": null,
+          "name": "Dan Lonowski",
+          "party": "R",
+          "pres_margin": "-48.2",
+          "next_election": 2028
+        },
+        {
+          "district": "34",
+          "district_name": "LD-34",
+          "seat_designator": null,
+          "name": "Loren Lippincott",
+          "party": "R",
+          "pres_margin": "-53.9",
+          "next_election": 2026
+        },
+        {
+          "district": "35",
+          "district_name": "LD-35",
+          "seat_designator": null,
+          "name": "Dan Quick",
+          "party": "D",
+          "pres_margin": "-27.4",
+          "next_election": 2028
+        },
+        {
+          "district": "36",
+          "district_name": "LD-36",
+          "seat_designator": null,
+          "name": "Rick Holdcroft",
+          "party": "R",
+          "pres_margin": "-21.7",
+          "next_election": 2026
+        },
+        {
+          "district": "37",
+          "district_name": "LD-37",
+          "seat_designator": null,
+          "name": "Stan Clouse",
+          "party": "R",
+          "pres_margin": "-39.2",
+          "next_election": 2028
+        },
+        {
+          "district": "38",
+          "district_name": "LD-38",
+          "seat_designator": null,
+          "name": "Dave Murman",
+          "party": "R",
+          "pres_margin": "-66.8",
+          "next_election": 2026
+        },
+        {
+          "district": "39",
+          "district_name": "LD-39",
+          "seat_designator": null,
+          "name": "Tony Sorrentino",
+          "party": "R",
+          "pres_margin": "-24.0",
+          "next_election": 2028
+        },
+        {
+          "district": "40",
+          "district_name": "LD-40",
+          "seat_designator": null,
+          "name": "Barry DeKay",
+          "party": "R",
+          "pres_margin": "-71.3",
+          "next_election": 2026
+        },
+        {
+          "district": "41",
+          "district_name": "LD-41",
+          "seat_designator": null,
+          "name": "Fred Meyer",
+          "party": "R",
+          "pres_margin": "-64.5",
+          "next_election": 2028
+        },
+        {
+          "district": "42",
+          "district_name": "LD-42",
+          "seat_designator": null,
+          "name": "Mike Jacobson",
+          "party": "R",
+          "pres_margin": "-58.6",
+          "next_election": 2026
+        },
+        {
+          "district": "43",
+          "district_name": "LD-43",
+          "seat_designator": null,
+          "name": "Tanya Storer",
+          "party": "R",
+          "pres_margin": "-69.5",
+          "next_election": 2028
+        },
+        {
+          "district": "44",
+          "district_name": "LD-44",
+          "seat_designator": null,
+          "name": "Teresa Ibach",
+          "party": "R",
+          "pres_margin": "-62.6",
+          "next_election": 2026
+        },
+        {
+          "district": "45",
+          "district_name": "LD-45",
+          "seat_designator": null,
+          "name": "Rita Sanders",
+          "party": "R",
+          "pres_margin": "-3.8",
+          "next_election": 2028
+        },
+        {
+          "district": "46",
+          "district_name": "LD-46",
+          "seat_designator": null,
+          "name": "Danielle Conrad",
+          "party": "D",
+          "pres_margin": "+16.5",
+          "next_election": 2026
+        },
+        {
+          "district": "47",
+          "district_name": "LD-47",
+          "seat_designator": null,
+          "name": "Paul Strommen",
+          "party": "R",
+          "pres_margin": "-65.2",
+          "next_election": 2028
+        },
+        {
+          "district": "48",
+          "district_name": "LD-48",
+          "seat_designator": null,
+          "name": "Brian Hardin",
+          "party": "R",
+          "pres_margin": "-50.8",
+          "next_election": 2026
+        },
+        {
+          "district": "49",
+          "district_name": "LD-49",
+          "seat_designator": null,
+          "name": "Bob Andersen",
+          "party": "R",
+          "pres_margin": "-12.9",
+          "next_election": 2028
+        }
+      ]
+    }
+  },
+  "elections_2026": {
+    "governor": {
+      "forecast": "Solid R",
+      "candidates": []
+    },
+    "statewide": [],
+    "legislative": []
+  },
+  "ballot_measures": [
+    {
+      "number": "Change State Legislative Term Limits from Two to Three Consecutive Terms Amendment",
+      "title": "Change State Legislative Term Limits from Two to Three Consecutive Terms Amendment",
+      "description": "Change the legislative term limit from two consecutive four-year terms to three. This legislatively referred constitutional amendment is on the Nebraska 2026 ballot.",
+      "type": "Legislative Constitutional Amendment",
+      "status": "On Ballot",
+      "result": "Pending",
+      "date": "2026-11-03"
+    }
+  ],
+  "filing_deadline": "2026-03-02",
+  "primary_date": "2026-05-12"
+}

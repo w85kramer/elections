@@ -38,6 +38,7 @@ CREATE TABLE districts (
                         'Legislature', 'Council', 'Statewide'
                     )),
     district_number TEXT,               -- e.g., '1', '30', 'At-Large'
+    district_name   TEXT,               -- display name, e.g. 'HD-1', 'SD-3', '1st Barnstable'
     num_seats       INTEGER DEFAULT 1,  -- >1 for multi-member districts
     is_floterial    BOOLEAN DEFAULT FALSE, -- TRUE for NH overlay districts
     pres_2024_margin    TEXT,           -- e.g., '+12.3' or '-15.7'
@@ -108,6 +109,7 @@ CREATE TABLE elections (
                             'Counting', 'Called', 'Certified'
                         )),                 -- NULL=not yet held, Counting=votes coming in, Called=projected winner, Certified=official
     total_votes_cast    INTEGER,
+    is_open_seat        BOOLEAN,         -- TRUE if no incumbent running, NULL=unknown
     notes           TEXT
 );
 
@@ -277,7 +279,36 @@ CREATE INDEX idx_forecasts_measure_id ON forecasts(measure_id);
 CREATE INDEX idx_forecasts_date ON forecasts(date_of_forecast);
 
 -- ============================================================
--- 10. DASHBOARD VIEW (auto-generated, read-only)
+-- 10. CHAMBER CONTROL (governance status per legislative chamber)
+-- ============================================================
+CREATE TABLE chamber_control (
+    id              SERIAL PRIMARY KEY,
+    state_id        INTEGER NOT NULL REFERENCES states(id) ON DELETE CASCADE,
+    chamber         TEXT NOT NULL,  -- matches districts.chamber values
+    effective_date  DATE NOT NULL,  -- when this control arrangement started
+    control_status  TEXT NOT NULL CHECK (control_status IN (
+                        'D', 'R', 'Coalition', 'Tied',
+                        'Power_Sharing', 'Nonpartisan'
+                    )),
+    d_seats         INTEGER,
+    r_seats         INTEGER,
+    other_seats     INTEGER DEFAULT 0,
+    vacant_seats    INTEGER DEFAULT 0,
+    total_seats     INTEGER NOT NULL,
+    majority_threshold INTEGER,     -- seats needed for majority (floor(total/2) + 1)
+    presiding_officer       TEXT,   -- name of Speaker/President/etc.
+    presiding_officer_title TEXT,   -- 'Speaker', 'President', 'President Pro Tem'
+    presiding_officer_party TEXT,   -- party of presiding officer
+    coalition_desc  TEXT,           -- e.g., '14D + 5I + 2R bipartisan coalition'
+    notes           TEXT,
+    UNIQUE(state_id, chamber, effective_date)
+);
+
+CREATE INDEX idx_chamber_control_state ON chamber_control(state_id);
+CREATE INDEX idx_chamber_control_current ON chamber_control(effective_date);
+
+-- ============================================================
+-- 11. DASHBOARD VIEW (auto-generated, read-only)
 -- ============================================================
 CREATE OR REPLACE VIEW dashboard_view AS
 
@@ -359,6 +390,7 @@ ALTER TABLE candidacies ENABLE ROW LEVEL SECURITY;
 ALTER TABLE ballot_measures ENABLE ROW LEVEL SECURITY;
 ALTER TABLE forecasts ENABLE ROW LEVEL SECURITY;
 ALTER TABLE seat_terms ENABLE ROW LEVEL SECURITY;
+ALTER TABLE chamber_control ENABLE ROW LEVEL SECURITY;
 
 -- Create permissive policies for authenticated access
 -- (adjust these based on your actual auth needs)
@@ -371,3 +403,4 @@ CREATE POLICY "Allow full access" ON candidacies FOR ALL USING (true) WITH CHECK
 CREATE POLICY "Allow full access" ON ballot_measures FOR ALL USING (true) WITH CHECK (true);
 CREATE POLICY "Allow full access" ON forecasts FOR ALL USING (true) WITH CHECK (true);
 CREATE POLICY "Allow full access" ON seat_terms FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Allow full access" ON chamber_control FOR ALL USING (true) WITH CHECK (true);

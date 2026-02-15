@@ -1,0 +1,138 @@
+[
+  {
+    "name": "Ballotpedia",
+    "category": "Aggregator",
+    "url": "https://ballotpedia.org",
+    "covers": ["candidacies", "results", "specials", "member_lists", "ballot_measures", "vacancy_tracking"],
+    "check_frequency": "daily",
+    "notes": "Primary source for most election data. Pages can be large/truncated by WebFetch. Consistent table structures across states."
+  },
+  {
+    "name": "Ballotpedia 2026 Election Calendar",
+    "category": "Aggregator",
+    "url": "https://docs.google.com/spreadsheets/d/16td_nOU3bsrNyb5l_G-14cuP26M4LZrXh9Z-GTuCpP0/",
+    "covers": ["election_calendar", "data_availability_dates"],
+    "check_frequency": "weekly",
+    "notes": "Living Google Sheet updated regularly. Has 'Earliest expected data availability' column. Includes local elections (filter to statewide for our use)."
+  },
+  {
+    "name": "Ballotpedia 2026 Ballot Measures",
+    "category": "Aggregator",
+    "url": "https://ballotpedia.org/2026_ballot_measures",
+    "covers": ["ballot_measures"],
+    "check_frequency": "weekly",
+    "notes": "Check count against our DB (currently 65 for 2026). Updates when new measures are certified by states."
+  },
+  {
+    "name": "StateNavigate Data Downloads",
+    "category": "Aggregator",
+    "url": "https://projects.statenavigate.com/downloads/data.html",
+    "covers": ["election_results", "demographics", "campaign_finance", "w_nominate_scores"],
+    "check_frequency": "monthly",
+    "notes": "Structured CSV downloads. JS-rendered page — must download manually for now. Will likely add more datasets approaching election day."
+  },
+  {
+    "name": "StateNavigate Presidential Margins",
+    "category": "Aggregator",
+    "url": "https://docs.google.com/spreadsheets/d/1GiIiDrVwddCH4Pc0Jsc9u9hxbm3mVRZVgivUeeT2ssQ/",
+    "covers": ["presidential_margins_by_district"],
+    "check_frequency": "as_needed",
+    "notes": "Already imported — all 50 states, 2024 presidential margins by legislative district. Google Sheet with public access."
+  },
+  {
+    "name": "StateNavigate Legislative Forecasts",
+    "category": "Forecaster",
+    "url": "https://projects.statenavigate.com/25-26/states/{state}/forecast.html",
+    "covers": ["legislative_forecasts"],
+    "check_frequency": "when_released",
+    "notes": "Probability-based forecasts per district. CSV files downloadable from data page. WV was first state (Feb 2026). URL pattern: replace {state} with state abbreviation (wv, va, etc). JS-rendered — CSV must be downloaded manually."
+  },
+  {
+    "name": "StateNavigate (social media)",
+    "category": "Analyst",
+    "url": "https://x.com/StateNavigate",
+    "covers": ["election_night_calls", "analysis", "data_releases"],
+    "check_frequency": "election_night",
+    "notes": "Good for election night tracking and post-election analysis. Also announces new data/forecast releases."
+  },
+  {
+    "name": "Chaz Nuttycombe (StateNavigate founder)",
+    "category": "Analyst",
+    "url": "https://x.com/ChazNuttycombe",
+    "covers": ["election_night_calls", "post_election_analysis", "forecasts"],
+    "check_frequency": "election_night",
+    "notes": "StateNavigate founder. Tweets insight and calls during election night and after."
+  },
+  {
+    "name": "Taniel / Bolts Magazine",
+    "category": "Analyst",
+    "url": "https://bsky.app/profile/taniel.bsky.social",
+    "covers": ["race_calls", "specials", "state_legislature_analysis"],
+    "check_frequency": "election_night",
+    "notes": "Focused on state legislative races. Fast on special election calls. Bluesky primary platform."
+  },
+  {
+    "name": "Cook Political Report",
+    "category": "Forecaster",
+    "url": "https://www.cookpolitical.com",
+    "covers": ["governor_forecasts"],
+    "check_frequency": "when_updated",
+    "notes": "Already in DB — 36 governor race ratings. Uses Solid/Likely/Lean/Toss-up scale. May expand to legislative if they publish state-level ratings."
+  },
+  {
+    "name": "Sabato's Crystal Ball",
+    "category": "Forecaster",
+    "url": "https://centerforpolitics.org/crystalball/",
+    "covers": ["governor_forecasts"],
+    "check_frequency": "when_updated",
+    "notes": "Already in DB — 36 governor race ratings. Same scale as Cook."
+  },
+  {
+    "name": "StateNavigate Forecast Methodology",
+    "category": "Reference",
+    "url": "https://statenavigate.org/our-2025-forecast-methodology/",
+    "covers": ["methodology"],
+    "check_frequency": "reference_only",
+    "notes": "Documents how SN generates probability forecasts via simulations."
+  },
+  {
+    "name": "AP Politics",
+    "category": "Wire Service",
+    "url": "https://x.com/AP_Politics",
+    "covers": ["race_calls", "governor_elections"],
+    "check_frequency": "election_night",
+    "notes": "Gold standard for race calls. Mostly federal but covers governor races. Best source for flipping elections from Called to Certified."
+  },
+  {
+    "name": "Cook Political Report (social media)",
+    "category": "Forecaster",
+    "url": "https://x.com/CookPolitical",
+    "covers": ["forecast_updates", "governor_ratings"],
+    "check_frequency": "weekly",
+    "notes": "Follow for rating updates through the cycle. Signal to re-check and update forecasts table."
+  },
+  {
+    "name": "Sabato's Crystal Ball / UVA Center for Politics (social media)",
+    "category": "Forecaster",
+    "url": "https://x.com/Center4Politics",
+    "covers": ["forecast_updates", "governor_ratings"],
+    "check_frequency": "weekly",
+    "notes": "Follow for Crystal Ball rating updates. Signal to refresh forecasts table."
+  },
+  {
+    "name": "Dave Wasserman / Redistrict",
+    "category": "Analyst",
+    "url": "https://x.com/redistrict",
+    "covers": ["race_calls", "election_night_analysis", "redistricting"],
+    "check_frequency": "election_night",
+    "notes": "Senior elections analyst at Cook Political Report. Known for early 'I've seen enough' race calls on competitive races."
+  },
+  {
+    "name": "50 State Official Election Sites",
+    "category": "Official",
+    "url": "data/official_state_election_sites.json",
+    "covers": ["certified_results", "election_calendars", "filing_lists"],
+    "check_frequency": "post_election",
+    "notes": "See separate file for all 50 state SoS/BoE URLs. Primary source for official certified vote tallies. ~15 states have bot protection requiring browser access."
+  }
+]

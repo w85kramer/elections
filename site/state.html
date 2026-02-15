@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>State Elections Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<style>
+  .state-hero {
+    margin-bottom: 32px;
+  }
+  .state-hero .state-name {
+    font-weight: 800;
+    font-size: 38px;
+    color: var(--ms-navy);
+  }
+  .state-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin-top: 8px;
+    font-size: 15px;
+    color: var(--ms-text-light);
+  }
+  .state-meta .meta-sep { color: #ccc; }
+  .chamber-bars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 16px;
+  }
+  .chamber-col h3 {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .pres-overlay {
+    position: relative;
+    height: 80px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    margin-top: 16px;
+    overflow: hidden;
+  }
+  .pres-overlay .axis-label {
+    position: absolute;
+    bottom: 2px;
+    font-size: 10px;
+    color: #999;
+  }
+  .pres-overlay .axis-center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 1px dashed #999;
+  }
+  .pres-dot {
+    position: absolute;
+    width: 3px;
+    border-radius: 1px;
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  .pres-dot:hover { opacity: 1; }
+  .forecast-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-left: 8px;
+  }
+  .forecast-tossup { background: #fff3cd; color: #856404; }
+  .forecast-lean-d { background: #d1ecf1; color: #0c5460; }
+  .forecast-lean-r { background: #f8d7da; color: #721c24; }
+  .forecast-likely-d { background: #a8d8ea; color: #043858; }
+  .forecast-likely-r { background: #f5b7b1; color: #78281f; }
+  .forecast-solid-d { background: var(--ms-dem-blue); color: white; }
+  .forecast-solid-r { background: var(--ms-rep-red); color: white; }
+  .candidate-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+  }
+  .candidate-list li {
+    padding: 4px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .candidate-list .incumbent-marker {
+    font-size: 11px;
+    color: var(--ms-text-light);
+    font-style: italic;
+  }
+  .pres-overlay-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pres-legend {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--ms-text-light);
+  }
+  .pres-legend span { display: flex; align-items: center; gap: 4px; }
+  .pres-legend .dot-d { width: 10px; height: 10px; background: var(--ms-dem-blue); border-radius: 2px; }
+  .pres-legend .dot-r { width: 10px; height: 10px; background: var(--ms-rep-red); border-radius: 2px; }
+  .pres-legend .dot-o { width: 10px; height: 10px; background: var(--ms-other); border-radius: 2px; }
+  .state-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--ms-border);
+    font-size: 14px;
+  }
+  .state-nav a {
+    color: var(--ms-dem-blue);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .state-nav a:hover { text-decoration: underline; }
+  .error-msg {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--ms-text-light);
+  }
+  .error-msg h2 { color: var(--ms-navy); margin-bottom: 12px; }
+  /* Roster tables */
+  .roster-wrap { overflow-x: auto; }
+  .roster-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .roster-table th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--ms-text-light);
+    padding: 6px 10px;
+    border-bottom: 2px solid var(--ms-navy);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+  .roster-table th:hover { color: var(--ms-navy); }
+  .roster-table th .sort-arrow {
+    font-size: 10px;
+    margin-left: 3px;
+    opacity: 0.4;
+  }
+  .roster-table th.sort-active .sort-arrow { opacity: 1; }
+  .roster-table td {
+    padding: 5px 10px;
+    border-bottom: 1px solid #eee;
+  }
+  .roster-table tr:hover td { background: #f8f9fa; }
+  .roster-table .vacant-row td {
+    color: #999;
+    font-style: italic;
+  }
+  .roster-table .party-col { width: 40px; text-align: center; }
+  .margin-cell {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+  }
+  .margin-bar-wrap {
+    width: 60px;
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 2px;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .margin-bar-wrap .center-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #999;
+  }
+  .margin-bar-fill {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-radius: 2px;
+  }
+  .margin-text { font-size: 12px; color: var(--ms-text-light); min-width: 48px; }
+  .up-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 3px;
+    background: #d4edda;
+    color: #155724;
+  }
+  @media (max-width: 768px) {
+    .chamber-bars { grid-template-columns: 1fr; }
+    .state-hero .state-name { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+  <!-- Header -->
+  <div class="site-header">
+    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
+    <a href="index.html" class="site-title">State Elections Tracker</a>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; <a href="index.html#states">States</a> &rsaquo; <span id="state-name-crumb">Loading...</span>
+  </div>
+
+  <!-- Content populated by JS -->
+  <div id="page-content">
+
+  <!-- State Hero -->
+  <div class="state-hero">
+    <div class="state-name" id="state-title">Loading...</div>
+    <div class="state-meta" id="state-meta"></div>
+  </div>
+
+  <!-- Legislature Section -->
+  <div class="section">
+    <div class="section-title">Legislature</div>
+    <div class="chamber-bars" id="chamber-bars"></div>
+  </div>
+
+  <!-- Member Rosters -->
+  <div class="section" id="rosters-section">
+    <div class="section-title">Member Roster</div>
+    <div id="roster-tables"></div>
+  </div>
+
+  <!-- Statewide Officers -->
+  <div class="section">
+    <div class="section-title">Statewide Officers</div>
+    <table class="data-table" id="officers-table">
+      <thead>
+        <tr>
+          <th>Office</th>
+          <th>Name</th>
+          <th class="party-col">Party</th>
+          <th>In Office Since</th>
+          <th>Next Election</th>
+        </tr>
+      </thead>
+      <tbody id="officers-body"></tbody>
+    </table>
+  </div>
+
+  <!-- 2026 Races -->
+  <div class="section">
+    <div class="section-title">2026 Races</div>
+    <div id="races-section"></div>
+  </div>
+
+  <!-- Ballot Measures -->
+  <div class="section" id="measures-section" style="display:none">
+    <div class="section-title">Ballot Measures</div>
+    <div id="measures-list"></div>
+  </div>
+
+  <!-- Presidential Overlay -->
+  <div class="section">
+    <div class="section-title">Presidential Overlay</div>
+    <p class="body-text mb-8">Each mark represents a legislative district, positioned by 2024 presidential margin. Color = current holder's party.</p>
+    <div id="pres-chambers"></div>
+  </div>
+
+  <!-- Prev/Next state navigation -->
+  <div class="state-nav" id="state-nav"></div>
+
+  </div><!-- /page-content -->
+
+  <!-- Footer -->
+  <div class="site-footer">
+    <img src="assets/multistate-logomark.png" alt="MultiState">
+    <span class="footer-text">Source: MultiState. Data generated <span id="gen-date"></span>.</span>
+  </div>
+
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script src="js/common.js"></script>
+<script>
+(async function() {
+  // Get state abbreviation from URL
+  const params = new URLSearchParams(window.location.search);
+  const stateAbbr = (params.get('st') || '').toUpperCase();
+
+  if (!stateAbbr || !STATE_NAMES[stateAbbr]) {
+    document.getElementById('page-content').innerHTML = `
+      <div class="error-msg">
+        <h2>State Not Found</h2>
+        <p>Please select a state from the <a href="index.html#states">homepage</a>.</p>
+      </div>`;
+    document.getElementById('state-name-crumb').textContent = 'Unknown';
+    document.title = 'State Not Found | State Elections Tracker';
+    return;
+  }
+
+  const stateName = STATE_NAMES[stateAbbr];
+  document.title = `${stateName} | State Elections Tracker`;
+  document.getElementById('state-name-crumb').textContent = stateName;
+  document.getElementById('state-title').textContent = stateName;
+
+  let stateData;
+  try {
+    stateData = await loadJSON(`data/states/${stateAbbr}.json`);
+  } catch (e) {
+    document.getElementById('page-content').innerHTML = `
+      <div class="error-msg">
+        <h2>${stateName}</h2>
+        <p>Data file not available. Please try again later.</p>
+      </div>`;
+    return;
+  }
+
+  const st = stateData.state;
+  const tt = initTooltip(document.getElementById('tooltip'));
+
+  // Compute Election Day (first Tue after first Mon in Nov) for a given year
+  function electionDate(year) {
+    const nov1dow = new Date(year, 10, 1).getDay(); // 0=Sun
+    const firstMon = 1 + ((1 - nov1dow + 7) % 7);
+    return new Date(year, 10, firstMon + 1);
+  }
+  function electionDateStr(year) {
+    return electionDate(year).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  }
+
+  // Generated date
+  document.getElementById('gen-date').textContent = formatDate(stateData.generated_at.split('T')[0]);
+
+  // State meta
+  const gov = stateData.statewide_officers.find(o => o.office === 'Governor');
+  const govParty = gov ? gov.party : '?';
+  const govName = gov ? gov.name : 'Unknown';
+
+  // Determine trifecta
+  const chambers = stateData.chambers;
+  const chNames = Object.keys(chambers);
+  let trifecta = 'Divided';
+  const chamberParties = chNames.map(ch => {
+    const d = chambers[ch].composition.D;
+    const r = chambers[ch].composition.R;
+    const maj = Math.floor(chambers[ch].total / 2) + 1;
+    if (d >= maj) return 'D';
+    if (r >= maj) return 'R';
+    return 'split';
+  });
+  if (chamberParties.every(p => p === govParty)) {
+    trifecta = govParty === 'D' ? 'Democratic Trifecta' : 'Republican Trifecta';
+  }
+
+  const metaParts = [`<span>${trifecta}</span>`];
+  metaParts.push(`<span class="meta-sep">&middot;</span>`);
+  metaParts.push(`<span>Gov: ${govName} <span class="party-badge ${partyBadgeClass(govParty)}">${govParty}</span></span>`);
+  if (stateData.filing_deadline) {
+    metaParts.push(`<span class="meta-sep">&middot;</span>`);
+    metaParts.push(`<span>Filing deadline: ${formatDateShort(stateData.filing_deadline)}</span>`);
+  }
+  if (stateData.primary_date) {
+    metaParts.push(`<span class="meta-sep">&middot;</span>`);
+    metaParts.push(`<span>Primary: ${formatDateShort(stateData.primary_date)}</span>`);
+  }
+  document.getElementById('state-meta').innerHTML = metaParts.join('\n');
+
+  // Chamber bars
+  const barsContainer = document.getElementById('chamber-bars');
+  const chamberOrder = ['Senate', 'House', 'Assembly', 'House of Delegates', 'Legislature'];
+  const sortedChambers = chNames.sort((a, b) => chamberOrder.indexOf(a) - chamberOrder.indexOf(b));
+
+  // For unicameral (NE), use single-column layout
+  if (sortedChambers.length === 1) {
+    barsContainer.style.gridTemplateColumns = '1fr';
+  }
+
+  for (const ch of sortedChambers) {
+    const cd = chambers[ch];
+    const col = document.createElement('div');
+    col.className = 'chamber-col';
+    col.innerHTML = `<h3>${ch} (${cd.total} seats)</h3><div id="bar-${ch.replace(/\s/g,'')}"></div>`;
+    barsContainer.appendChild(col);
+    buildChamberBar(
+      col.querySelector('div[id^="bar-"]'),
+      {
+        total: cd.total,
+        d: cd.composition.D,
+        r: cd.composition.R,
+        other: cd.composition.Other || 0,
+        vacant: cd.composition.Vacant || 0,
+        seats_up_2026: cd.seats_up_2026,
+        supermajority: cd.supermajority,
+      },
+      ch
+    );
+  }
+
+  // Member roster tables
+  const rosterContainer = document.getElementById('roster-tables');
+  for (const ch of sortedChambers) {
+    const members = chambers[ch].members;
+    if (!members || members.length === 0) continue;
+
+    const det = document.createElement('details');
+    det.open = sortedChambers.length <= 2 && members.length <= 150;
+    const wrap = document.createElement('div');
+    wrap.className = 'roster-wrap';
+
+    // Build table
+    const table = document.createElement('table');
+    table.className = 'roster-table';
+
+    const cols = [
+      { key: 'district', label: '#', title: 'District' },
+      { key: 'name',     label: 'Member' },
+      { key: 'party',    label: 'Party' },
+      { key: 'margin',   label: '2024 Pres. Margin' },
+      { key: 'next_election', label: 'Next Election' },
+    ];
+
+    // Header
+    const thead = document.createElement('thead');
+    const hrow = document.createElement('tr');
+    for (const col of cols) {
+      const th = document.createElement('th');
+      th.innerHTML = `${col.title || col.label} <span class="sort-arrow">\u25B2</span>`;
+      th.dataset.col = col.key;
+      hrow.appendChild(th);
+    }
+    thead.appendChild(hrow);
+    table.appendChild(thead);
+
+    const tbody2 = document.createElement('tbody');
+    table.appendChild(tbody2);
+
+    // Prepare rows data
+    const rows = members.map(m => {
+      const distLabel = m.district_name || (m.seat_designator ? m.district + m.seat_designator : m.district);
+      const marginVal = parseMargin(m.pres_margin);
+      const distSuffix = m.seat_designator || '';
+      return { ...m, distLabel, marginVal, distSuffix };
+    });
+
+    // Natural sort comparator for districts (handles "1", "10", "Belknap-1", etc.)
+    const distCollator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
+
+    let sortCol = 'district';
+    let sortAsc = true;
+
+    function renderRows() {
+      const sorted = rows.slice().sort((a, b) => {
+        let cmp = 0;
+        switch (sortCol) {
+          case 'district':
+            cmp = distCollator.compare(a.district, b.district) || a.distSuffix.localeCompare(b.distSuffix);
+            break;
+          case 'name':
+            cmp = (a.name || 'zzz').localeCompare(b.name || 'zzz');
+            break;
+          case 'party':
+            cmp = (a.party || 'zzz').localeCompare(b.party || 'zzz');
+            break;
+          case 'margin':
+            cmp = a.marginVal - b.marginVal;
+            break;
+          case 'next_election':
+            cmp = (a.next_election || 9999) - (b.next_election || 9999);
+            break;
+        }
+        return sortAsc ? cmp : -cmp;
+      });
+
+      tbody2.innerHTML = '';
+      for (const r of sorted) {
+        const tr = document.createElement('tr');
+        if (!r.name) tr.className = 'vacant-row';
+
+        // Party color for text
+        const partyColor = r.party === 'D' ? 'var(--ms-dem-blue)' : r.party === 'R' ? 'var(--ms-rep-red)' : '';
+
+        // District
+        const dtd = tr.insertCell();
+        dtd.textContent = r.distLabel;
+        if (partyColor) dtd.style.color = partyColor;
+
+        // Member name
+        const ntd = tr.insertCell();
+        ntd.textContent = r.name || 'Vacant';
+        if (partyColor) ntd.style.color = partyColor;
+
+        // Party
+        const ptd = tr.insertCell();
+        ptd.className = 'party-col';
+        if (r.party) {
+          ptd.innerHTML = `<span class="party-badge ${partyBadgeClass(r.party)}" style="font-size:11px;padding:1px 6px">${r.party}</span>`;
+        } else {
+          ptd.textContent = '—';
+        }
+
+        // Margin mini-bar
+        const mtd = tr.insertCell();
+        if (r.pres_margin) {
+          const maxM = 40;
+          const absM = Math.min(Math.abs(r.marginVal), maxM);
+          const widthPct = (absM / maxM) * 50;
+          const isD = r.marginVal > 0;
+          const barColor = isD ? 'var(--ms-dem-blue)' : 'var(--ms-rep-red)';
+          const leftPos = isD ? (50 - widthPct) : 50;
+          const marginLabel = r.marginVal > 0 ? `D+${r.marginVal.toFixed(1)}`
+                            : r.marginVal < 0 ? `R+${Math.abs(r.marginVal).toFixed(1)}`
+                            : 'Even';
+          mtd.innerHTML = `<div class="margin-cell">
+            <div class="margin-bar-wrap">
+              <div class="center-line"></div>
+              <div class="margin-bar-fill" style="left:${leftPos}%;width:${widthPct}%;background:${barColor}"></div>
+            </div>
+            <span class="margin-text" style="color:${barColor}">${marginLabel}</span>
+          </div>`;
+        } else {
+          mtd.textContent = '—';
+        }
+
+        // Next election
+        const utd = tr.insertCell();
+        if (r.next_election) {
+          const is2026 = r.next_election === 2026;
+          const badge = document.createElement('span');
+          badge.className = 'up-badge';
+          if (!is2026) badge.style.cssText = 'background:#eee;color:#999';
+          badge.textContent = r.next_election;
+          badge.style.cursor = 'help';
+          badge.addEventListener('mouseenter', () => {
+            tt.show(`<div class="tt-title">General Election</div><div>${electionDateStr(r.next_election)}</div>`);
+          });
+          badge.addEventListener('mousemove', (e) => tt.move(e));
+          badge.addEventListener('mouseleave', () => tt.hide());
+          utd.appendChild(badge);
+        }
+
+        tbody2.appendChild(tr);
+      }
+    }
+
+    // Sort click handlers
+    for (const th of hrow.children) {
+      th.addEventListener('click', () => {
+        const col = th.dataset.col;
+        if (sortCol === col) {
+          sortAsc = !sortAsc;
+        } else {
+          sortCol = col;
+          sortAsc = true;
+        }
+        // Update arrows
+        for (const h of hrow.children) {
+          h.classList.remove('sort-active');
+          h.querySelector('.sort-arrow').textContent = '\u25B2';
+        }
+        th.classList.add('sort-active');
+        th.querySelector('.sort-arrow').textContent = sortAsc ? '\u25B2' : '\u25BC';
+        renderRows();
+      });
+    }
+
+    // Initial sort indicator
+    hrow.children[0].classList.add('sort-active');
+
+    renderRows();
+    wrap.appendChild(table);
+    const summary = document.createElement('summary');
+    summary.textContent = `${ch} (${members.length} members)`;
+    det.appendChild(summary);
+    det.appendChild(wrap);
+    rosterContainer.appendChild(det);
+  }
+
+  // Officers table
+  const tbody = document.getElementById('officers-body');
+  for (const off of stateData.statewide_officers) {
+    const tr = document.createElement('tr');
+    const offColor = off.party === 'D' ? 'var(--ms-dem-blue)' : off.party === 'R' ? 'var(--ms-rep-red)' : '';
+    const colorStyle = offColor ? ` style="color:${offColor}"` : '';
+
+    let elecBadge = '—';
+    if (off.method === 'Appointed') {
+      elecBadge = '<span class="up-badge" style="background:#f0e6ff;color:#6b21a8">Appointed</span>';
+    } else if (off.method === 'Ex_Officio') {
+      elecBadge = '<span class="up-badge" style="background:#fef3c7;color:#92400e">Ex Officio</span>';
+    } else if (off.next_election) {
+      const is2026 = off.next_election === 2026;
+      elecBadge = `<span class="up-badge" style="${is2026 ? '' : 'background:#eee;color:#999'}">${off.next_election}</span>`;
+    }
+    let forecastHtml = '';
+    if (off.office === 'Governor' && off.forecast) {
+      forecastHtml = ` <span class="forecast-tag ${forecastClass(off.forecast)}">${off.forecast}</span>`;
+    }
+    const sinceYear = off.start_year || '—';
+    tr.innerHTML = `
+      <td${colorStyle}><strong>${off.office}</strong></td>
+      <td${colorStyle}>${off.name || (off.method === 'Elected' ? '<em>Vacant</em>' : '—')}</td>
+      <td class="party-col"><span class="party-badge ${partyBadgeClass(off.party)}">${off.party || '—'}</span></td>
+      <td>${sinceYear}</td>
+      <td>${elecBadge}${forecastHtml}</td>
+    `;
+    // Tooltips on badges
+    const badge = tr.querySelector('.up-badge');
+    if (badge) {
+      badge.style.cursor = 'help';
+      if (off.appointed_by) {
+        const label = off.method === 'Ex_Officio' ? 'Elected by' : 'Appointed by';
+        badge.addEventListener('mouseenter', () => {
+          tt.show(`<div class="tt-title">${off.office}</div><div>${label}: <strong>${off.appointed_by}</strong></div>`);
+        });
+      } else if (off.next_election) {
+        badge.addEventListener('mouseenter', () => {
+          tt.show(`<div class="tt-title">General Election</div><div>${electionDateStr(off.next_election)}</div>`);
+        });
+      }
+      badge.addEventListener('mousemove', (e) => tt.move(e));
+      badge.addEventListener('mouseleave', () => tt.hide());
+    }
+    tbody.appendChild(tr);
+  }
+
+  // 2026 Races
+  const racesSection = document.getElementById('races-section');
+
+  // Governor
+  const govRace = stateData.elections_2026.governor;
+  if (govRace) {
+    const div = document.createElement('div');
+    div.className = 'card mb-16';
+    let fcTag = govRace.forecast
+      ? `<span class="forecast-tag ${forecastClass(govRace.forecast)}">${govRace.forecast}</span>`
+      : '';
+    let candidatesHtml = '';
+    if (govRace.candidates && govRace.candidates.length > 0) {
+      candidatesHtml = '<ul class="candidate-list">';
+      for (const c of govRace.candidates) {
+        const inc = c.is_incumbent ? '<span class="incumbent-marker">(incumbent)</span>' : '';
+        candidatesHtml += `<li><span class="party-badge ${partyBadgeClass(c.party)}">${c.party}</span> ${c.name} ${inc} <span class="text-muted text-sm">${c.election_type}</span></li>`;
+      }
+      candidatesHtml += '</ul>';
+    } else {
+      candidatesHtml = '<p class="text-muted text-sm mt-8">No candidates filed yet</p>';
+    }
+    div.innerHTML = `<h3 class="heading-sm">Governor ${fcTag}</h3>${candidatesHtml}`;
+    racesSection.appendChild(div);
+  }
+
+  // Statewide races
+  for (const sw of stateData.elections_2026.statewide) {
+    const div = document.createElement('div');
+    div.className = 'card mb-16';
+    let html = `<h3 class="heading-sm">${sw.office}</h3><ul class="candidate-list">`;
+    for (const c of sw.candidates) {
+      const inc = c.is_incumbent ? '<span class="incumbent-marker">(incumbent)</span>' : '';
+      html += `<li><span class="party-badge ${partyBadgeClass(c.party)}">${c.party}</span> ${c.name} ${inc}</li>`;
+    }
+    html += '</ul>';
+    div.innerHTML = html;
+    racesSection.appendChild(div);
+  }
+
+  // Legislative races
+  for (const ch of sortedChambers) {
+    const chRaces = stateData.elections_2026.legislative.filter(r => r.chamber === ch);
+    const det = document.createElement('details');
+    det.innerHTML = `<summary>${ch} (${chRaces.length} races with candidates filed)</summary>
+      <div class="details-content" id="leg-${ch.replace(/\s/g,'')}"></div>`;
+    racesSection.appendChild(det);
+
+    const content = det.querySelector('.details-content');
+    if (chRaces.length === 0) {
+      content.innerHTML = '<p class="text-muted text-sm">No candidates filed yet</p>';
+    } else {
+      let html = '<table class="data-table"><thead><tr><th>District</th><th>Candidates</th></tr></thead><tbody>';
+      for (const race of chRaces) {
+        const cands = race.candidates.map(c => {
+          const inc = c.is_incumbent ? ' <em>(i)</em>' : '';
+          return `<span class="party-badge ${partyBadgeClass(c.party)}" style="font-size:11px">${c.party}</span> ${c.name}${inc}`;
+        }).join(', ');
+        html += `<tr><td>${race.district}</td><td>${cands}</td></tr>`;
+      }
+      html += '</tbody></table>';
+      content.innerHTML = html;
+    }
+  }
+
+  // Ballot measures
+  if (stateData.ballot_measures.length > 0) {
+    document.getElementById('measures-section').style.display = '';
+    const ml = document.getElementById('measures-list');
+    for (const m of stateData.ballot_measures) {
+      const div = document.createElement('div');
+      div.className = 'card mb-16';
+      const dateStr = m.date ? formatDateShort(m.date) : '';
+      div.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px">
+          <h3 class="heading-sm" style="margin:0">${m.number || ''} — ${m.title}</h3>
+          ${dateStr ? `<span class="text-sm" style="font-weight:600;color:var(--ms-text-light);white-space:nowrap">${dateStr}</span>` : ''}
+        </div>
+        <p class="body-text mt-8">${m.description || ''}</p>
+        <p class="text-sm text-muted mt-8">${m.type} &middot; ${m.status}</p>
+      `;
+      ml.appendChild(div);
+    }
+  }
+
+  // Presidential overlay
+  const presCont = document.getElementById('pres-chambers');
+  for (const ch of sortedChambers) {
+    const members = chambers[ch].members;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'mb-16';
+
+    // Check if there's meaningful party diversity (skip if all NP/Other like NE)
+    const hasPartisanData = members.some(m => m.party === 'D' || m.party === 'R');
+
+    const header = document.createElement('div');
+    header.className = 'pres-overlay-header';
+    let legendHtml = `<span><div class="dot-d"></div> D-held</span><span><div class="dot-r"></div> R-held</span>`;
+    if (!hasPartisanData) {
+      legendHtml = `<span><div class="dot-o"></div> Nonpartisan</span>`;
+    }
+    header.innerHTML = `<h3 class="heading-sm">${ch}</h3><div class="pres-legend">${legendHtml}</div>`;
+    wrapper.appendChild(header);
+
+    const chart = document.createElement('div');
+    chart.className = 'pres-overlay';
+    chart.innerHTML = `
+      <div class="axis-center"></div>
+      <span class="axis-label" style="left:4px">D+40</span>
+      <span class="axis-label" style="right:4px">R+40</span>
+      <span class="axis-label" style="left:50%;transform:translateX(-50%)">Even</span>
+    `;
+
+    const maxMargin = 40;
+    for (const m of members) {
+      const margin = parseMargin(m.pres_margin);
+      const pct = Math.max(0, Math.min(100, 50 - (margin / maxMargin) * 50));
+      const color = m.party === 'D' ? 'var(--ms-dem-blue)' : m.party === 'R' ? 'var(--ms-rep-red)' : 'var(--ms-other)';
+      const dot = document.createElement('div');
+      dot.className = 'pres-dot';
+      dot.style.cssText = `left:${pct}%;top:15%;height:55%;background:${color}`;
+      dot.setAttribute('data-district', m.district || '');
+      dot.setAttribute('data-district-name', m.district_name || '');
+      dot.setAttribute('data-margin', m.pres_margin || '0');
+      dot.setAttribute('data-party', m.party || 'Vacant');
+      dot.setAttribute('data-name', m.name || 'Vacant');
+      dot.setAttribute('data-chamber', ch);
+
+      dot.addEventListener('mouseenter', (e) => {
+        const d = e.target;
+        const marginVal = parseFloat(d.getAttribute('data-margin'));
+        const marginStr = marginVal > 0 ? `D+${marginVal.toFixed(1)}` : marginVal < 0 ? `R+${Math.abs(marginVal).toFixed(1)}` : 'Even';
+        const distName = d.getAttribute('data-district-name') || (d.getAttribute('data-chamber') + ' District ' + d.getAttribute('data-district'));
+        tt.show(`<div class="tt-title">${distName}</div>
+          <div>Holder: ${d.getAttribute('data-name')} (${d.getAttribute('data-party')})</div>
+          <div>2024 Pres: ${marginStr}</div>`);
+      });
+      dot.addEventListener('mousemove', (e) => tt.move(e));
+      dot.addEventListener('mouseleave', () => tt.hide());
+      chart.appendChild(dot);
+    }
+
+    wrapper.appendChild(chart);
+    presCont.appendChild(wrapper);
+  }
+
+  // Prev/Next state navigation
+  const allAbbrs = Object.keys(STATE_NAMES).sort();
+  const idx = allAbbrs.indexOf(stateAbbr);
+  const nav = document.getElementById('state-nav');
+  const prevAbbr = idx > 0 ? allAbbrs[idx - 1] : null;
+  const nextAbbr = idx < allAbbrs.length - 1 ? allAbbrs[idx + 1] : null;
+  nav.innerHTML = `
+    <span>${prevAbbr ? `<a href="state.html?st=${prevAbbr}">&larr; ${STATE_NAMES[prevAbbr]}</a>` : ''}</span>
+    <a href="index.html#states">All States</a>
+    <span>${nextAbbr ? `<a href="state.html?st=${nextAbbr}">${STATE_NAMES[nextAbbr]} &rarr;</a>` : ''}</span>
+  `;
+
+  function forecastClass(rating) {
+    if (!rating) return '';
+    const r = rating.toLowerCase();
+    if (r.includes('toss')) return 'forecast-tossup';
+    if (r.includes('tilt d') || r.includes('lean d')) return 'forecast-lean-d';
+    if (r.includes('tilt r') || r.includes('lean r')) return 'forecast-lean-r';
+    if (r.includes('likely d') || r.includes('very likely d')) return 'forecast-likely-d';
+    if (r.includes('likely r') || r.includes('very likely r')) return 'forecast-likely-r';
+    if (r.includes('solid d') || r.includes('safe d')) return 'forecast-solid-d';
+    if (r.includes('solid r') || r.includes('safe r')) return 'forecast-solid-r';
+    return '';
+  }
+
+})();
+</script>
+</body>
+</html>

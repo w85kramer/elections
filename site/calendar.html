@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Election Calendar | State Elections Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<style>
+  .calendar-filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: 8px 16px;
+    border: 2px solid var(--ms-border);
+    border-radius: 20px;
+    background: white;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s;
+    color: var(--ms-text);
+  }
+  .filter-btn:hover { border-color: var(--ms-navy); }
+  .filter-btn.active { background: var(--ms-navy); color: white; border-color: var(--ms-navy); }
+  .filter-btn.active-filing { background: var(--ms-dem-blue); color: white; border-color: var(--ms-dem-blue); }
+  .filter-btn.active-primary { background: var(--ms-rep-red); color: white; border-color: var(--ms-rep-red); }
+
+  /* Timeline strip */
+  .timeline-strip {
+    position: relative;
+    background: #f8f9fa;
+    border-radius: var(--ms-radius);
+    padding: 16px 24px 24px;
+    margin-bottom: 32px;
+    overflow-x: auto;
+  }
+  .timeline-months {
+    display: flex;
+    min-width: 700px;
+    position: relative;
+    height: 80px;
+  }
+  .timeline-month {
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--ms-text-light);
+    position: relative;
+    border-left: 1px solid #ddd;
+  }
+  .timeline-month:last-child { border-right: 1px solid #ddd; }
+  .timeline-month-label { padding-top: 2px; }
+  .timeline-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    transition: transform 0.1s;
+  }
+  .timeline-dot:hover { transform: translate(-50%, 0) scale(1.8); z-index: 10; }
+  .timeline-dot.filing { background: var(--ms-dem-blue); }
+  .timeline-dot.primary { background: var(--ms-rep-red); }
+  .today-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--ms-gold);
+    z-index: 5;
+  }
+  .today-label {
+    position: absolute;
+    top: -2px;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--ms-gold);
+    white-space: nowrap;
+    transform: translateX(-50%);
+  }
+  .timeline-legend {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--ms-text-light);
+  }
+  .legend-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+
+  /* Month sections */
+  .month-section {
+    margin-bottom: 32px;
+  }
+  .month-header {
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--ms-navy);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--ms-navy);
+  }
+  .month-header .event-count {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--ms-text-light);
+  }
+  .event-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    transition: background 0.1s;
+  }
+  .event-row:hover { background: #f8f9fa; }
+  .event-row.past { opacity: 0.45; }
+  .event-date {
+    font-weight: 700;
+    color: var(--ms-navy);
+    min-width: 80px;
+    white-space: nowrap;
+  }
+  .event-type {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-width: 70px;
+    text-align: center;
+  }
+  .event-type.filing { background: rgba(39,97,129,0.12); color: var(--ms-dem-blue); }
+  .event-type.primary { background: rgba(229,9,99,0.12); color: var(--ms-rep-red); }
+  .event-states {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    flex: 1;
+  }
+  .event-state-tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    text-decoration: none;
+    transition: transform 0.1s;
+  }
+  .event-state-tag:hover { transform: scale(1.05); }
+  .event-state-tag.filing { background: rgba(39,97,129,0.08); color: var(--ms-dem-blue); }
+  .event-state-tag.primary { background: rgba(229,9,99,0.08); color: var(--ms-rep-red); }
+
+  /* Stats row */
+  .cal-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  /* State lookup */
+  .state-lookup {
+    margin-bottom: 32px;
+  }
+  .state-lookup select {
+    padding: 8px 12px;
+    border: 2px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    min-width: 200px;
+  }
+  .state-lookup-result {
+    margin-top: 12px;
+    padding: 16px;
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    display: none;
+    font-size: 14px;
+  }
+  .state-lookup-result.visible { display: block; }
+
+  @media (max-width: 768px) {
+    .cal-stats { grid-template-columns: repeat(2, 1fr); }
+    .event-row { flex-wrap: wrap; }
+    .event-states { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+  <!-- Header -->
+  <div class="site-header">
+    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
+    <a href="index.html" class="site-title">State Elections Tracker</a>
+  </div>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; Election Calendar
+  </div>
+
+  <h1 class="heading-xl" style="margin-bottom: 8px">Election Calendar</h1>
+  <p class="subtitle mb-16">2026 Filing Deadlines &amp; Primary Elections</p>
+
+  <!-- Stats -->
+  <div class="cal-stats">
+    <div class="card stat-card"><div class="stat-number" id="stat-next-days">—</div><div class="stat-label" id="stat-next-label">Next Event</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-past-filing">—</div><div class="stat-label">Filing Deadlines Passed</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-remaining-filing">—</div><div class="stat-label">Filing Deadlines Left</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-primaries">—</div><div class="stat-label">Primary Elections</div></div>
+  </div>
+
+  <!-- State Lookup -->
+  <div class="state-lookup">
+    <div class="section-title">State Lookup</div>
+    <select id="state-select">
+      <option value="">Select a state...</option>
+    </select>
+    <div class="state-lookup-result" id="state-result"></div>
+  </div>
+
+  <!-- Visual Timeline -->
+  <div class="section-title">Timeline Overview</div>
+  <div class="timeline-strip">
+    <div class="timeline-months" id="timeline"></div>
+    <div class="timeline-legend">
+      <span><span class="legend-dot" style="background:var(--ms-dem-blue)"></span> Filing Deadline</span>
+      <span><span class="legend-dot" style="background:var(--ms-rep-red)"></span> Primary Election</span>
+      <span><span class="legend-dot" style="background:var(--ms-gold)"></span> Today</span>
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="calendar-filters">
+    <button class="filter-btn active" data-filter="all">All Events</button>
+    <button class="filter-btn" data-filter="filing">Filing Deadlines</button>
+    <button class="filter-btn" data-filter="primary">Primaries</button>
+  </div>
+
+  <!-- Month-by-month -->
+  <div id="calendar-body"></div>
+
+  <div class="tooltip" id="tooltip"></div>
+
+  <!-- Footer -->
+  <div class="site-footer" style="margin-top: 32px">
+    <img src="assets/multistate-logomark.png" alt="MultiState">
+    <span class="footer-text">Source: MultiState. Data generated <span id="gen-date"></span>.</span>
+  </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script>
+(async function() {
+  const data = await loadJSON('data/states_summary.json');
+  const states = data.states;
+
+  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+
+  const today = new Date().toISOString().split('T')[0];
+  const tt = initTooltip(document.getElementById('tooltip'));
+
+  // Collect all events
+  const events = [];
+  const stateList = Object.keys(states).sort();
+
+  for (const abbr of stateList) {
+    const st = states[abbr];
+    const e26 = st.elections_2026;
+    const filingLeg = e26.filing_deadline_legislative;
+    const filingSw = e26.filing_deadline_statewide;
+    const primary = e26.primary_date;
+
+    if (filingLeg && filingSw && filingLeg !== filingSw) {
+      // Split deadlines — show both separately
+      events.push({ date: filingLeg, type: 'filing', subtype: 'legislative', state: abbr, name: st.name });
+      events.push({ date: filingSw, type: 'filing', subtype: 'statewide', state: abbr, name: st.name });
+    } else {
+      const filing = e26.filing_deadline;
+      if (filing) events.push({ date: filing, type: 'filing', subtype: null, state: abbr, name: st.name });
+    }
+    if (primary) events.push({ date: primary, type: 'primary', subtype: null, state: abbr, name: st.name });
+  }
+
+  events.sort((a, b) => a.date.localeCompare(b.date) || a.type.localeCompare(b.type));
+
+  // Stats
+  const filingEvents = events.filter(e => e.type === 'filing');
+  const primaryEvents = events.filter(e => e.type === 'primary');
+  const pastFiling = filingEvents.filter(e => e.date < today).length;
+  const remainingFiling = filingEvents.length - pastFiling;
+
+  document.getElementById('stat-past-filing').textContent = pastFiling;
+  document.getElementById('stat-remaining-filing').textContent = remainingFiling;
+  document.getElementById('stat-primaries').textContent = primaryEvents.length;
+
+  // Next event
+  const nextEvent = events.find(e => e.date >= today);
+  if (nextEvent) {
+    const daysUntil = Math.ceil((new Date(nextEvent.date + 'T00:00:00') - new Date(today + 'T00:00:00')) / 86400000);
+    const evtType = nextEvent.type === 'filing' ? 'filing deadline' : 'primary';
+    if (daysUntil === 0) {
+      document.getElementById('stat-next-days').textContent = 'Today';
+    } else {
+      document.getElementById('stat-next-days').textContent = `${daysUntil} day${daysUntil !== 1 ? 's' : ''}`;
+    }
+    document.getElementById('stat-next-label').textContent = `Until next ${evtType}`;
+  }
+
+  // State lookup dropdown
+  const sel = document.getElementById('state-select');
+  for (const abbr of stateList) {
+    const opt = document.createElement('option');
+    opt.value = abbr;
+    opt.textContent = `${states[abbr].name} (${abbr})`;
+    sel.appendChild(opt);
+  }
+  sel.addEventListener('change', function() {
+    const resultEl = document.getElementById('state-result');
+    const abbr = this.value;
+    if (!abbr) { resultEl.classList.remove('visible'); return; }
+    const st = states[abbr];
+    const e26 = st.elections_2026;
+    const filingLeg = e26.filing_deadline_legislative;
+    const filingSw = e26.filing_deadline_statewide;
+    const filing = e26.filing_deadline;
+    const primary = e26.primary_date;
+    const primaryPast = primary && primary < today;
+
+    let html = `<strong>${st.name}</strong><br>`;
+    if (filingLeg && filingSw && filingLeg !== filingSw) {
+      // Show both
+      const legPast = filingLeg < today;
+      const swPast = filingSw < today;
+      html += `<span class="event-type filing" style="margin-top:8px;display:inline-block">Filing (Statewide)</span> `;
+      html += `${formatDate(filingSw)}`;
+      if (swPast) html += ' <span style="color:var(--ms-text-light)">(passed)</span>';
+      html += '<br>';
+      html += `<span class="event-type filing" style="margin-top:4px;display:inline-block">Filing (Legislative)</span> `;
+      html += `${formatDate(filingLeg)}`;
+      if (legPast) html += ' <span style="color:var(--ms-text-light)">(passed)</span>';
+      html += '<br>';
+    } else if (filing) {
+      const filingPast = filing < today;
+      html += `<span class="event-type filing" style="margin-top:8px;display:inline-block">Filing</span> `;
+      html += `${formatDate(filing)}`;
+      if (filingPast) html += ' <span style="color:var(--ms-text-light)">(passed)</span>';
+      html += '<br>';
+    } else {
+      html += '<span style="color:var(--ms-text-light)">No 2026 filing deadline (odd-year state)</span><br>';
+    }
+    if (primary) {
+      html += `<span class="event-type primary" style="margin-top:6px;display:inline-block">Primary</span> `;
+      html += `${formatDate(primary)}`;
+      if (primaryPast) html += ' <span style="color:var(--ms-text-light)">(passed)</span>';
+    } else {
+      html += '<span style="color:var(--ms-text-light)">No 2026 primary (odd-year state)</span>';
+    }
+
+    // Link to state page
+    html += `<br><a href="state.html?st=${abbr}" style="font-size:13px;margin-top:8px;display:inline-block">View ${st.name} details &rarr;</a>`;
+
+    resultEl.innerHTML = html;
+    resultEl.classList.add('visible');
+  });
+
+  // Timeline strip
+  // Range: Nov 2025 → Sep 2026 = 11 months
+  const TIMELINE_START = new Date('2025-11-01');
+  const TIMELINE_END = new Date('2026-10-01');
+  const MONTH_NAMES = ['Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'];
+  const MONTH_KEYS = ['2025-11', '2025-12', '2026-01', '2026-02', '2026-03', '2026-04', '2026-05', '2026-06', '2026-07', '2026-08', '2026-09'];
+
+  const totalDays = (TIMELINE_END - TIMELINE_START) / 86400000;
+  const timeline = document.getElementById('timeline');
+
+  // Month columns
+  for (let i = 0; i < MONTH_KEYS.length; i++) {
+    const col = document.createElement('div');
+    col.className = 'timeline-month';
+    col.innerHTML = `<div class="timeline-month-label">${MONTH_NAMES[i]}</div>`;
+    timeline.appendChild(col);
+  }
+
+  // Place dots
+  const DOT_ROWS_FILING = {};
+  const DOT_ROWS_PRIMARY = {};
+
+  function dateToPercent(dateStr) {
+    const d = new Date(dateStr + 'T00:00:00');
+    return ((d - TIMELINE_START) / (TIMELINE_END - TIMELINE_START)) * 100;
+  }
+
+  // Stack dots to avoid overlap: group by date+type, spread vertically
+  const dotGroups = {};
+  for (const evt of events) {
+    const key = `${evt.date}_${evt.type}`;
+    if (!dotGroups[key]) dotGroups[key] = [];
+    dotGroups[key].push(evt);
+  }
+
+  for (const [key, group] of Object.entries(dotGroups)) {
+    const pct = dateToPercent(group[0].date);
+    const type = group[0].type;
+    const baseTop = type === 'filing' ? 28 : 50;
+
+    for (let i = 0; i < group.length; i++) {
+      const dot = document.createElement('div');
+      dot.className = `timeline-dot ${type}`;
+      dot.style.left = `${pct}%`;
+      dot.style.top = `${baseTop + (i % 3) * 10}px`;
+      if (group[i].date < today) dot.style.opacity = '0.35';
+
+      const evt = group[i];
+      const subtypeStr = evt.subtype ? ` (${evt.subtype})` : '';
+      const typeLabel = type === 'filing' ? 'Filing Deadline' : 'Primary Election';
+      const typeColor = type === 'filing' ? 'color:var(--ms-dem-blue)' : 'color:var(--ms-rep-red)';
+
+      dot.addEventListener('mouseenter', () => {
+        tt.show(`<div class="tt-title">${evt.name} (${evt.state})</div>
+          <div style="${typeColor};font-weight:600">${typeLabel}${subtypeStr}</div>
+          <div>${formatDate(evt.date)}</div>`);
+      });
+      dot.addEventListener('mousemove', (e) => tt.move(e));
+      dot.addEventListener('mouseleave', () => tt.hide());
+
+      timeline.appendChild(dot);
+    }
+  }
+
+  // Today marker
+  const todayPct = dateToPercent(today);
+  if (todayPct >= 0 && todayPct <= 100) {
+    const marker = document.createElement('div');
+    marker.className = 'today-marker';
+    marker.style.left = `${todayPct}%`;
+    timeline.appendChild(marker);
+
+    const label = document.createElement('div');
+    label.className = 'today-label';
+    label.style.left = `${todayPct}%`;
+    label.textContent = 'Today';
+    timeline.appendChild(label);
+  }
+
+  // Calendar body: month-by-month
+  let activeFilter = 'all';
+
+  function renderCalendar() {
+    const body = document.getElementById('calendar-body');
+    body.innerHTML = '';
+
+    // Group events by month
+    const months = {};
+    for (const evt of events) {
+      if (activeFilter !== 'all' && evt.type !== activeFilter) continue;
+      const monthKey = evt.date.substring(0, 7);
+      if (!months[monthKey]) months[monthKey] = [];
+      months[monthKey].push(evt);
+    }
+
+    // Group events within each month by date+type
+    const FULL_MONTHS = {
+      '2025-11': 'November 2025', '2025-12': 'December 2025',
+      '2026-01': 'January 2026', '2026-02': 'February 2026',
+      '2026-03': 'March 2026', '2026-04': 'April 2026',
+      '2026-05': 'May 2026', '2026-06': 'June 2026',
+      '2026-07': 'July 2026', '2026-08': 'August 2026',
+      '2026-09': 'September 2026',
+    };
+
+    const sortedMonths = Object.keys(months).sort();
+    for (const monthKey of sortedMonths) {
+      const monthEvents = months[monthKey];
+      const sec = document.createElement('div');
+      sec.className = 'month-section';
+
+      const evtCount = monthEvents.length;
+      sec.innerHTML = `<div class="month-header">${FULL_MONTHS[monthKey] || monthKey} <span class="event-count">(${evtCount} event${evtCount !== 1 ? 's' : ''})</span></div>`;
+
+      // Group by date+type+subtype for display
+      const dateTypeGroups = {};
+      for (const evt of monthEvents) {
+        const key = `${evt.date}_${evt.type}_${evt.subtype || ''}`;
+        if (!dateTypeGroups[key]) dateTypeGroups[key] = { date: evt.date, type: evt.type, subtype: evt.subtype, states: [] };
+        dateTypeGroups[key].states.push(evt);
+      }
+
+      const groupKeys = Object.keys(dateTypeGroups).sort();
+      for (const gk of groupKeys) {
+        const group = dateTypeGroups[gk];
+        const isPast = group.date < today;
+        const row = document.createElement('div');
+        row.className = `event-row${isPast ? ' past' : ''}`;
+
+        let typeLabel = group.type === 'filing' ? 'Filing' : 'Primary';
+        if (group.subtype === 'statewide') typeLabel = 'Filing (SW)';
+        else if (group.subtype === 'legislative') typeLabel = 'Filing (Leg)';
+        let statesHtml = '';
+        for (const evt of group.states) {
+          const suffix = evt.subtype ? ` (${evt.subtype})` : '';
+          statesHtml += `<a href="state.html?st=${evt.state}" class="event-state-tag ${group.type}" title="${evt.name}${suffix}">${evt.state}</a>`;
+        }
+
+        row.innerHTML = `
+          <span class="event-date">${formatDateShort(group.date)}</span>
+          <span class="event-type ${group.type}">${typeLabel}</span>
+          <div class="event-states">${statesHtml}</div>
+        `;
+        sec.appendChild(row);
+      }
+
+      body.appendChild(sec);
+    }
+
+    if (sortedMonths.length === 0) {
+      body.innerHTML = '<p class="text-muted">No events match the current filter.</p>';
+    }
+  }
+
+  renderCalendar();
+
+  // Filter buttons
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('active', 'active-filing', 'active-primary');
+      });
+      const f = this.dataset.filter;
+      activeFilter = f;
+      if (f === 'filing') this.classList.add('active-filing');
+      else if (f === 'primary') this.classList.add('active-primary');
+      else this.classList.add('active');
+      renderCalendar();
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

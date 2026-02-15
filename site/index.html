@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>State Elections Tracker | MultiState</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<style>
+  .hero {
+    text-align: center;
+    padding: 48px 0 32px;
+  }
+  .hero img { width: 60px; margin-bottom: 16px; }
+  .hero h1 {
+    font-weight: 800; font-size: 42px;
+    color: var(--ms-navy); line-height: 1.1;
+  }
+  .hero .cycle {
+    font-weight: 400; font-size: 20px;
+    color: var(--ms-text-light); margin-top: 8px;
+  }
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .explore-grid .card { padding: 24px; }
+  .explore-grid .card h3 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .explore-grid .card p { font-size: 13px; color: var(--ms-text-light); }
+  .explore-grid a.card { text-decoration: none; color: var(--ms-text); transition: transform 0.15s, box-shadow 0.15s; }
+  .explore-grid a.card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+  .deadline-list {
+    list-style: none;
+    padding: 0;
+  }
+  .deadline-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+  }
+  .deadline-list .dl-date {
+    font-weight: 700;
+    color: var(--ms-navy);
+    min-width: 100px;
+  }
+  .deadline-list .dl-text { color: var(--ms-text-light); }
+  .deadline-list .dl-past { opacity: 0.5; }
+  .map-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .map-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid var(--ms-navy);
+    border-radius: var(--ms-radius);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ms-navy);
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  .map-link:hover { background: var(--ms-navy); color: white; }
+  .map-link.active { background: var(--ms-navy); color: white; }
+  .state-list-grid {
+    columns: 5 180px;
+    column-gap: 8px;
+    margin-top: 16px;
+  }
+  .state-list-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--ms-text);
+    font-size: 14px;
+    transition: background 0.1s;
+    break-inside: avoid;
+    margin-bottom: 8px;
+  }
+  .state-list-item:hover { background: #f8f9fa; }
+  .state-list-item .party-dot {
+    width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+  }
+  @media (max-width: 768px) {
+    .stat-row { grid-template-columns: repeat(2, 1fr); }
+    .explore-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+  <!-- Hero -->
+  <div class="hero">
+    <img src="assets/multistate-logomark.png" alt="MultiState">
+    <h1>State Elections Tracker</h1>
+    <div class="cycle">2026 Election Cycle</div>
+  </div>
+
+  <!-- Key Stats -->
+  <div class="stat-row" id="stats-row">
+    <div class="card stat-card"><div class="stat-number" id="stat-seats">—</div><div class="stat-label">Seats Up</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-govs">—</div><div class="stat-label">Governor Races</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-tossup">—</div><div class="stat-label">Toss-up Govs</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-measures">—</div><div class="stat-label">Ballot Measures</div></div>
+  </div>
+
+  <!-- Explore -->
+  <div class="section">
+    <div class="section-title">Explore</div>
+    <div class="explore-grid">
+      <a class="card" href="trifectas_partisan.html">
+        <h3>Trifecta Map</h3>
+        <p>Partisan control by state</p>
+      </a>
+      <a class="card" href="swing-calculator.html">
+        <h3>Swing Calculator</h3>
+        <p>National legislature forecast tool</p>
+      </a>
+      <a class="card" href="governors_2026.html">
+        <h3>Governor Races</h3>
+        <p>2026 gubernatorial forecast map</p>
+      </a>
+      <a class="card" href="governors_partisan.html">
+        <h3>Governors Map</h3>
+        <p>Current partisan breakdown</p>
+      </a>
+      <a class="card" href="ag_partisan.html">
+        <h3>Attorneys General</h3>
+        <p>Current AG partisan map</p>
+      </a>
+      <a class="card" href="sos_partisan.html">
+        <h3>Secretaries of State</h3>
+        <p>Current SoS partisan map</p>
+      </a>
+      <a class="card" href="ballot-measures.html">
+        <h3>Ballot Measures</h3>
+        <p>2024&ndash;2026 statewide propositions</p>
+      </a>
+      <a class="card" href="calendar.html">
+        <h3>Election Calendar</h3>
+        <p>Filing deadlines &amp; primary dates</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Upcoming Deadlines -->
+  <div class="section">
+    <div class="section-title">Upcoming Deadlines & Elections</div>
+    <ul class="deadline-list" id="deadline-list">
+      <!-- Populated by JS -->
+    </ul>
+  </div>
+
+  <!-- States -->
+  <div class="section" id="states">
+    <div class="section-title">All 50 States</div>
+    <div class="state-list-grid" id="state-grid">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+
+  <!-- Maps -->
+  <div class="section">
+    <div class="section-title">Interactive Maps</div>
+    <div class="map-links" id="map-tabs">
+      <a class="map-link active" href="#" data-src="trifectas_partisan.html">Trifectas</a>
+      <a class="map-link" href="#" data-src="governors_2026.html">2026 Governors</a>
+      <a class="map-link" href="#" data-src="governors_partisan.html">Governors</a>
+      <a class="map-link" href="#" data-src="ltgov_partisan.html">Lt. Governors</a>
+      <a class="map-link" href="#" data-src="ag_partisan.html">Attorneys General</a>
+      <a class="map-link" href="#" data-src="sos_partisan.html">Secretaries of State</a>
+    </div>
+    <iframe id="map-frame" src="trifectas_partisan.html" style="width:100%;height:700px;border:1px solid var(--ms-border);border-radius:var(--ms-radius);margin-top:16px;"></iframe>
+  </div>
+
+  <!-- Footer -->
+  <div class="site-footer">
+    <img src="assets/multistate-logomark.png" alt="MultiState">
+    <span class="footer-text">Source: MultiState. Data generated <span id="gen-date"></span>.</span>
+  </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script>
+(async function() {
+  const data = await loadJSON('data/states_summary.json');
+  const states = data.states;
+
+  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+
+  // Compute stats
+  let totalSeats = 0, govRaces = 0, tossupGovs = 0, totalMeasures = 0;
+  const deadlines = [];
+
+  for (const [abbr, st] of Object.entries(states)) {
+    // Count seats up in 2026
+    for (const [ch, cd] of Object.entries(st.chambers)) {
+      totalSeats += cd.seats_up_2026;
+    }
+
+    // Governor races
+    if (st.governor && st.governor.next_election === 2026) {
+      govRaces++;
+      if (st.governor.forecast && st.governor.forecast.toLowerCase().includes('toss')) {
+        tossupGovs++;
+      }
+    }
+
+    totalMeasures += st.ballot_measures_2026;
+
+    // Deadlines
+    const filingLeg = st.elections_2026.filing_deadline_legislative;
+    const filingSw = st.elections_2026.filing_deadline_statewide;
+    const primary = st.elections_2026.primary_date;
+    if (filingLeg && filingSw && filingLeg !== filingSw) {
+      deadlines.push({ date: filingSw, text: `${st.name} statewide filing deadline`, state: abbr });
+      deadlines.push({ date: filingLeg, text: `${st.name} legislative filing deadline`, state: abbr });
+    } else if (st.elections_2026.filing_deadline) {
+      deadlines.push({ date: st.elections_2026.filing_deadline, text: `${st.name} filing deadline`, state: abbr });
+    }
+    if (primary) deadlines.push({ date: primary, text: `${st.name} primary`, state: abbr });
+  }
+
+  document.getElementById('stat-seats').textContent = numberWithCommas(totalSeats);
+  document.getElementById('stat-govs').textContent = govRaces;
+  document.getElementById('stat-tossup').textContent = tossupGovs;
+  document.getElementById('stat-measures').textContent = totalMeasures;
+
+  // Deadlines — sorted, show next 15 upcoming
+  deadlines.sort((a, b) => a.date.localeCompare(b.date));
+  const today = new Date().toISOString().split('T')[0];
+  const upcomingDeadlines = deadlines.filter(d => d.date >= today).slice(0, 15);
+  const dl = document.getElementById('deadline-list');
+  for (const d of upcomingDeadlines) {
+    const li = document.createElement('li');
+    li.innerHTML = `<span class="dl-date">${formatDateShort(d.date)}</span><span class="dl-text">${d.text}</span>`;
+    dl.appendChild(li);
+  }
+  if (upcomingDeadlines.length === 0) {
+    dl.innerHTML = '<li class="text-muted">No upcoming deadlines</li>';
+  }
+
+  // State grid
+  const grid = document.getElementById('state-grid');
+  const sortedAbbrs = Object.keys(states).sort();
+  for (const abbr of sortedAbbrs) {
+    const st = states[abbr];
+    const tri = st.trifecta;
+    const dotColor = tri === 'Democratic Trifecta' ? 'var(--ms-dem-blue)' : tri === 'Republican Trifecta' ? 'var(--ms-rep-red)' : 'var(--ms-divided)';
+
+    const el = document.createElement('a');
+    el.className = 'state-list-item';
+    el.href = `state.html?st=${abbr}`;
+    el.innerHTML = `<div class="party-dot" style="background:${dotColor}"></div>${st.name} (${abbr})`;
+    grid.appendChild(el);
+  }
+
+  // Map tabs
+  document.getElementById('map-tabs').addEventListener('click', function(e) {
+    const link = e.target.closest('.map-link');
+    if (!link) return;
+    e.preventDefault();
+    this.querySelectorAll('.map-link').forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+    document.getElementById('map-frame').src = link.dataset.src;
+  });
+
+})();
+</script>
+</body>
+</html>
