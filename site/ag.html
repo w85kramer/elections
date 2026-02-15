@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attorneys General | State Elections Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<style>
+  .subnav {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .subnav a {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 2px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--ms-text-light);
+    transition: all 0.15s;
+  }
+  .subnav a:hover { border-color: var(--ms-navy); color: var(--ms-navy); }
+  .subnav a.active { background: var(--ms-navy); border-color: var(--ms-navy); color: white; }
+  .placeholder-notice {
+    background: #fff8e1;
+    border: 2px dashed #d0ac60;
+    border-radius: var(--ms-radius);
+    padding: 24px;
+    margin: 32px 0;
+    text-align: center;
+  }
+  .placeholder-notice p {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #856404;
+    margin-bottom: 8px;
+  }
+  .placeholder-notice p:last-child { margin-bottom: 0; }
+  .map-links {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    justify-content: center;
+  }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+  <div class="site-header">
+    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
+    <a href="index.html" class="site-title">State Elections Tracker</a>
+  </div>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; <a href="ag-101.html">Attorneys General</a> &rsaquo; 2026 Elections
+  </div>
+
+  <div class="subnav">
+    <a href="ag-101.html">Overview</a>
+    <a href="ag.html" class="active">2026 Elections</a>
+    <a href="ag-analytics.html">Trends & Analytics</a>
+  </div>
+
+  <h1 class="heading-xl" style="margin-bottom: 8px">Attorneys General</h1>
+  <p class="subtitle mb-16">Partisan breakdown and 2026 races for state attorneys general</p>
+
+  <div class="placeholder-notice">
+    <p>Content coming soon.</p>
+    <p style="font-weight:400;font-size:13px;color:#666">This page will feature current AGs, 2026 races, and selection method details.</p>
+    <div class="map-links">
+      <a href="ag_partisan.html" style="display:inline-block;padding:6px 14px;border:1px solid var(--ms-border);border-radius:var(--ms-radius);font-size:13px;font-weight:600;text-decoration:none;color:var(--ms-dem-blue);transition:all 0.15s">Partisan Map &rarr;</a>
+    </div>
+  </div>
+
+  <div class="site-footer">
+    <img src="assets/multistate-logomark.png" alt="MultiState">
+    <div class="footer-text">State Elections Tracker &mdash; Data compiled by MultiState</div>
+  </div>
+
+</div>
+</body>
+</html>

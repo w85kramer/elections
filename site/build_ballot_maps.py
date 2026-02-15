@@ -236,6 +236,11 @@ def build_map_html(title, subtitle, state_categories, colors, default_category, 
     <a class="nav-link" href="legislatures_partisan.html">Legislatures</a>
     <a class="nav-link" href="governors_2026.html">2026 Governors</a>
     <a class="nav-link" href="governors_partisan.html">Governors</a>
+    <a class="nav-link" href="ltgov_partisan.html">Lt. Governors</a>
+    <a class="nav-link" href="ag_partisan.html">Attorneys General</a>
+    <a class="nav-link" href="sos_partisan.html">Secretaries of State</a>
+    <span class="nav-sep">|</span>
+    <a class="nav-link" href="swing-calculator.html">Swing Calc</a>
     <span class="nav-sep">|</span>
     <a class="nav-link{init_active}" href="ballot-measures-initiative-map.html">Initiative Auth.</a>
     <a class="nav-link{ref_active}" href="ballot-measures-referendum-map.html">Referendum Auth.</a>

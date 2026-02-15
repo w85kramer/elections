@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 Governor Elections | State Elections Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<style>
+  .subnav {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .subnav a {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 2px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--ms-text-light);
+    transition: all 0.15s;
+  }
+  .subnav a:hover { border-color: var(--ms-navy); color: var(--ms-navy); }
+  .subnav a.active { background: var(--ms-navy); border-color: var(--ms-navy); color: white; }
+
+  .gov-stats {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  /* Ratings bar */
+  .ratings-bar-section { margin-bottom: 32px; }
+  .ratings-bar-section h3 {
+    font-weight: 700; font-size: 14px; color: var(--ms-text-light);
+    margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .ratings-bar {
+    display: flex;
+    height: 32px;
+    border-radius: var(--ms-radius);
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .ratings-bar div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: white;
+    transition: flex 0.3s;
+    min-width: 28px;
+  }
+  .ratings-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    font-size: 12px;
+    font-family: 'Work Sans', sans-serif;
+  }
+  .ratings-legend span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .ratings-legend .swatch {
+    width: 12px; height: 12px; border-radius: 2px;
+  }
+
+  /* Map embed */
+  .map-embed {
+    width: 100%;
+    height: 680px;
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    margin-bottom: 32px;
+  }
+
+  /* Filters */
+  .filters-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+    align-items: center;
+  }
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .filter-group label {
+    font-weight: 600; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--ms-text-light);
+  }
+  .filter-group select {
+    padding: 6px 10px;
+    border: 2px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 13px;
+    background: white;
+    cursor: pointer;
+  }
+  .filter-group select:focus { border-color: var(--ms-navy); outline: none; }
+  .results-count {
+    font-size: 13px;
+    color: var(--ms-text-light);
+    margin-bottom: 16px;
+  }
+
+  /* Race cards */
+  .race-card {
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    transition: box-shadow 0.15s;
+  }
+  .race-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .race-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .race-state {
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--ms-navy);
+    text-decoration: none;
+  }
+  .race-state:hover { text-decoration: underline; }
+  .race-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .badge-solid-d { background: #1a4a63; color: white; }
+  .badge-very-likely-d { background: #276181; color: white; }
+  .badge-likely-d { background: #4a8fad; color: white; }
+  .badge-lean-d { background: #6cb3d2; color: white; }
+  .badge-tilt-d { background: #93c9df; color: #1a4a63; }
+  .badge-toss-up {
+    background: #fff3cd; color: #856404;
+    border: 1px solid #d0ac60;
+  }
+  .badge-tilt-r { background: #f0a0b3; color: #8a0030; }
+  .badge-lean-r { background: #e86987; color: white; }
+  .badge-likely-r { background: #e50963; color: white; }
+  .badge-very-likely-r { background: #c4084f; color: white; }
+  .badge-solid-r { background: #9e063f; color: white; }
+  .badge-open {
+    background: #d4edda; color: #155724;
+    border: 1px solid #a3d4ad;
+  }
+  .race-incumbent {
+    font-size: 14px;
+    color: var(--ms-text-light);
+  }
+  .race-incumbent .gov-name {
+    font-weight: 700;
+  }
+  .race-incumbent .gov-name.cand-d { color: var(--ms-dem-blue); }
+  .race-incumbent .gov-name.cand-r { color: var(--ms-rep-red); }
+  .race-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px 24px;
+    font-size: 13px;
+    color: var(--ms-text-light);
+    margin-top: 8px;
+  }
+  .race-details .detail-label {
+    font-weight: 600;
+    color: var(--ms-text);
+  }
+  .race-candidates {
+    margin-top: 8px;
+    font-size: 13px;
+  }
+  .cand-group {
+    margin-bottom: 4px;
+  }
+  .cand-group:last-child { margin-bottom: 0; }
+  .cand-label {
+    font-weight: 700;
+    margin-right: 4px;
+  }
+  .cand-d { color: var(--ms-dem-blue); }
+  .cand-r { color: var(--ms-rep-red); }
+  .cand-i { color: #888; }
+  .race-no-cands {
+    color: var(--ms-text-light);
+    font-style: italic;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--ms-text-light);
+  }
+
+  @media (max-width: 768px) {
+    .gov-stats { grid-template-columns: repeat(2, 1fr); }
+    .race-details { grid-template-columns: 1fr; }
+    .map-embed { height: 400px; }
+  }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+  <div class="site-header">
+    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
+    <a href="index.html" class="site-title">State Elections Tracker</a>
+  </div>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; <a href="governors-101.html">Governors</a> &rsaquo; 2026 Elections
+  </div>
+
+  <div class="subnav">
+    <a href="governors-101.html">Overview</a>
+    <a href="governors.html" class="active">2026 Elections</a>
+    <a href="governors-analytics.html">Trends & Analytics</a>
+  </div>
+
+  <h1 class="heading-xl" style="margin-bottom: 8px">2026 Governor Elections</h1>
+  <p class="subtitle mb-16">Race ratings, candidates, and key contests for all 36 gubernatorial races</p>
+
+  <!-- Stats -->
+  <div class="gov-stats" id="stats-row">
+    <div class="card stat-card"><div class="stat-number" id="stat-total">—</div><div class="stat-label">Total Races</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-open">—</div><div class="stat-label">Open Seats</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-tossup" style="color:#c59000">—</div><div class="stat-label">Toss-up</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-dem" style="color:var(--ms-dem-blue)">—</div><div class="stat-label">Dem-Held Seats Up</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-gop" style="color:var(--ms-rep-red)">—</div><div class="stat-label">GOP-Held Seats Up</div></div>
+  </div>
+
+  <!-- Ratings bar -->
+  <div class="ratings-bar-section">
+    <h3>Race Ratings</h3>
+    <div class="ratings-bar" id="ratings-bar"></div>
+    <div class="ratings-legend" id="ratings-legend"></div>
+  </div>
+
+  <!-- Map -->
+  <div class="section">
+    <iframe class="map-embed" src="governors_2026.html" title="2026 Governor Elections Map"></iframe>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters-bar">
+    <div class="filter-group">
+      <label>Rating</label>
+      <select id="filter-rating"><option value="">All Ratings</option></select>
+    </div>
+    <div class="filter-group">
+      <label>Seat</label>
+      <select id="filter-seat">
+        <option value="">All</option>
+        <option value="open">Open Seats</option>
+        <option value="incumbent">Incumbent Running</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Party</label>
+      <select id="filter-party">
+        <option value="">All</option>
+        <option value="D">Democratic-Held</option>
+        <option value="R">Republican-Held</option>
+      </select>
+    </div>
+  </div>
+  <div class="results-count" id="results-count"></div>
+
+  <!-- Race cards -->
+  <div id="races-list"></div>
+
+  <div class="site-footer" style="margin-top:32px">
+    <img src="assets/multistate-logomark.png" alt="MultiState">
+    <span class="footer-text">Source: MultiState, Cook Political Report, Sabato's Crystal Ball. Data generated <span id="gen-date"></span>.</span>
+  </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script>
+(async function() {
+  const data = await loadJSON('data/governors_2026.json');
+  const races = data.races;
+
+  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+
+  // Stats
+  const demHeld = races.filter(r => r.incumbent_party === 'D').length;
+  const gopHeld = races.filter(r => r.incumbent_party === 'R').length;
+  const tossups = races.filter(r => r.forecast === 'Toss-up').length;
+  document.getElementById('stat-total').textContent = data.total_races;
+  document.getElementById('stat-open').textContent = data.open_seats;
+  document.getElementById('stat-tossup').textContent = tossups;
+  document.getElementById('stat-dem').textContent = demHeld;
+  document.getElementById('stat-gop').textContent = gopHeld;
+
+  // Ratings bar
+  const RATING_COLORS = {
+    'Solid D': '#1a4a63', 'Very Likely D': '#276181', 'Likely D': '#4a8fad',
+    'Lean D': '#6cb3d2', 'Tilt D': '#93c9df',
+    'Toss-up': '#f5c542',
+    'Tilt R': '#f0a0b3', 'Lean R': '#e86987', 'Likely R': '#e50963',
+    'Very Likely R': '#c4084f', 'Solid R': '#9e063f'
+  };
+  const RATING_ORDER = [
+    'Solid D', 'Very Likely D', 'Likely D', 'Lean D', 'Tilt D',
+    'Toss-up',
+    'Tilt R', 'Lean R', 'Likely R', 'Very Likely R', 'Solid R'
+  ];
+
+  const ratingCounts = {};
+  for (const r of races) {
+    ratingCounts[r.forecast] = (ratingCounts[r.forecast] || 0) + 1;
+  }
+
+  const bar = document.getElementById('ratings-bar');
+  const legend = document.getElementById('ratings-legend');
+  for (const rating of RATING_ORDER) {
+    const count = ratingCounts[rating] || 0;
+    if (count === 0) continue;
+    const seg = document.createElement('div');
+    seg.style.flex = count;
+    seg.style.background = RATING_COLORS[rating];
+    seg.textContent = count;
+    seg.title = rating + ': ' + count;
+    bar.appendChild(seg);
+    legend.innerHTML += '<span><span class="swatch" style="background:' + RATING_COLORS[rating] + '"></span>' + rating + ' (' + count + ')</span>';
+  }
+
+  // Rating filter options
+  const ratingSel = document.getElementById('filter-rating');
+  for (const rating of RATING_ORDER) {
+    if (ratingCounts[rating]) {
+      const opt = document.createElement('option');
+      opt.value = rating;
+      opt.textContent = rating + ' (' + ratingCounts[rating] + ')';
+      ratingSel.appendChild(opt);
+    }
+  }
+
+  function badgeClass(forecast) {
+    if (!forecast) return '';
+    return 'badge-' + forecast.toLowerCase().replace(/\s+/g, '-').replace('.', '');
+  }
+
+  function formatMargin(margin) {
+    if (margin == null) return '—';
+    if (margin > 0) return 'D+' + Math.abs(margin).toFixed(1);
+    if (margin < 0) return 'R+' + Math.abs(margin).toFixed(1);
+    return 'EVEN';
+  }
+
+  function getFiltered() {
+    const rating = document.getElementById('filter-rating').value;
+    const seat = document.getElementById('filter-seat').value;
+    const party = document.getElementById('filter-party').value;
+    return races.filter(r => {
+      if (rating && r.forecast !== rating) return false;
+      if (seat === 'open' && !r.is_open_seat) return false;
+      if (seat === 'incumbent' && r.is_open_seat) return false;
+      if (party && r.incumbent_party !== party) return false;
+      return true;
+    });
+  }
+
+  function render() {
+    const filtered = getFiltered();
+    const list = document.getElementById('races-list');
+    const countEl = document.getElementById('results-count');
+
+    if (filtered.length === races.length) {
+      countEl.textContent = 'Showing all ' + filtered.length + ' races';
+    } else {
+      countEl.textContent = 'Showing ' + filtered.length + ' of ' + races.length + ' races';
+    }
+
+    if (filtered.length === 0) {
+      list.innerHTML = '<div class="empty-state">No races match the current filters.</div>';
+      return;
+    }
+
+    function ordinal(n) {
+      if (n === 1) return 'first';
+      if (n === 2) return 'second';
+      if (n === 3) return 'third';
+      if (n === 4) return 'fourth';
+      if (n === 5) return 'fifth';
+      if (n === 6) return 'sixth';
+      if (n === 7) return 'seventh';
+      if (n === 8) return 'eighth';
+      return n + 'th';
+    }
+
+    let html = '';
+    for (const r of filtered) {
+      const openTag = r.is_open_seat ? '<span class="race-badge badge-open">Open Seat</span>' : '';
+      const pcls = r.incumbent_party === 'D' ? 'cand-d' : r.incumbent_party === 'R' ? 'cand-r' : '';
+      const govName = '<span class="gov-name ' + pcls + '">Gov. ' + r.incumbent + ' (' + r.incumbent_party + ')</span>';
+      const today = new Date().toISOString().split('T')[0];
+      const filingPassed = r.filing_deadline && r.filing_deadline <= today;
+      let seatStatus;
+      if (r.is_open_seat) {
+        const termLimited = r.term_limit && r.term_limit.startsWith('Yes');
+        seatStatus = govName + ' is not running for reelection' + (termLimited ? ' (term limited)' : '');
+      } else {
+        const termText = r.running_for_term ? ' a ' + ordinal(r.running_for_term) + ' term' : ' reelection';
+        const verb = filingPassed ? ' running for' : ' expected to run for';
+        seatStatus = govName + verb + termText;
+      }
+
+      // Candidates
+      let candsHtml = '';
+      if (r.candidates && r.candidates.length > 0) {
+        // Group by party, majors first
+        function candList(cands, cls) {
+          const majors = cands.filter(c => c.is_major);
+          const minors = cands.filter(c => !c.is_major);
+          const all = [...majors, ...minors];
+          return all.map(c => c.is_major
+            ? '<strong class="' + cls + '">' + c.name + '</strong>'
+            : '<span class="' + cls + '">' + c.name + '</span>'
+          ).join(', ');
+        }
+        const dems = r.candidates.filter(c => c.party === 'D');
+        const reps = r.candidates.filter(c => c.party === 'R');
+        const others = r.candidates.filter(c => c.party !== 'D' && c.party !== 'R');
+        const sections = [];
+        if (dems.length > 0) {
+          sections.push('<div class="cand-group"><span class="cand-label cand-d">D Primary:</span> ' + candList(dems, 'cand-d') + '</div>');
+        }
+        if (reps.length > 0) {
+          sections.push('<div class="cand-group"><span class="cand-label cand-r">R Primary:</span> ' + candList(reps, 'cand-r') + '</div>');
+        }
+        for (const c of others) {
+          sections.push('<div class="cand-group"><span class="cand-label cand-i">' + c.party + ':</span> ' + (c.is_major ? '<strong class="cand-i">' + c.name + '</strong>' : '<span class="cand-i">' + c.name + '</span>') + '</div>');
+        }
+        candsHtml = '<div class="race-candidates">' + sections.join('') + '</div>';
+      } else {
+        // No candidates yet — show timeline context
+        const today = new Date().toISOString().split('T')[0];
+        if (r.filing_deadline && r.filing_deadline > today) {
+          candsHtml = '<div class="race-candidates race-no-cands">Filing open until ' + formatDateShort(r.filing_deadline) + '</div>';
+        } else if (r.filing_deadline && r.filing_deadline <= today) {
+          candsHtml = '<div class="race-candidates race-no-cands">Filing closed ' + formatDateShort(r.filing_deadline) + ' — candidate data coming soon</div>';
+        }
+      }
+
+      // Forecast detail
+      let forecastDetail = '';
+      if (r.forecast_cook && r.forecast_sabato) {
+        forecastDetail = '<span><span class="detail-label">Cook:</span> ' + r.forecast_cook + '</span>' +
+          '<span><span class="detail-label">Sabato:</span> ' + r.forecast_sabato + '</span>';
+      }
+
+      html += '<div class="race-card">' +
+        '<div class="race-header">' +
+          '<a href="state.html?st=' + r.state + '" class="race-state">' + r.state_name + '</a>' +
+          '<span class="race-badge ' + badgeClass(r.forecast) + '">' + (r.forecast || 'TBD') + '</span>' +
+          openTag +
+        '</div>' +
+        '<div class="race-incumbent">' + seatStatus + '</div>' +
+        '<div class="race-details">' +
+          forecastDetail +
+          '<span><span class="detail-label">Filing Deadline:</span> ' + (r.filing_deadline ? formatDateShort(r.filing_deadline) : '—') + '</span>' +
+          '<span><span class="detail-label">Primary:</span> ' + (r.primary_date ? formatDateShort(r.primary_date) : '—') + '</span>' +
+          '<span><span class="detail-label">2024 Presidential:</span> ' + formatMargin(r.pres_margin_2024) + '</span>' +
+        '</div>' +
+        candsHtml +
+      '</div>';
+    }
+    list.innerHTML = html;
+  }
+
+  render();
+  document.getElementById('filter-rating').addEventListener('change', render);
+  document.getElementById('filter-seat').addEventListener('change', render);
+  document.getElementById('filter-party').addEventListener('change', render);
+})();
+</script>
+</body>
+</html>

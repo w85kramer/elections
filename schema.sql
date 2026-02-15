@@ -94,10 +94,10 @@ CREATE TABLE elections (
     election_date   DATE,
     election_year   INTEGER NOT NULL,
     election_type   TEXT NOT NULL CHECK (election_type IN (
-                        'General', 'Primary_D', 'Primary_R',
-                        'Primary_Nonpartisan', 'Primary',
-                        'Special', 'Special_Primary',
-                        'Runoff', 'Special_Runoff', 'Recall'
+                        'General', 'General_Runoff',
+                        'Primary', 'Primary_D', 'Primary_R', 'Primary_Nonpartisan',
+                        'Special', 'Special_Primary', 'Special_Runoff',
+                        'Recall'
                     )),
     related_election_id INTEGER REFERENCES elections(id),  -- links primary→general, runoff→parent
     filing_deadline     DATE,
@@ -149,11 +149,15 @@ CREATE TABLE candidacies (
                         'Disqualified', 'Write-In'
                     )),
     is_incumbent    BOOLEAN DEFAULT FALSE,
+    is_major        BOOLEAN DEFAULT FALSE,
     is_write_in     BOOLEAN DEFAULT FALSE,
     filing_date     DATE,
     withdrawal_date DATE,
     votes_received  INTEGER,
     vote_percentage NUMERIC(5,2),
+    rcv_round_eliminated INTEGER,       -- RCV: round in which candidate was eliminated (NULL=winner or non-RCV)
+    rcv_final_votes INTEGER,            -- RCV: votes in final round (votes_received = first round)
+    rcv_final_percentage NUMERIC(5,2),  -- RCV: percentage in final round
     result          TEXT CHECK (result IN (
                         'Won', 'Lost', 'Runoff', 'Advanced',
                         'Withdrawn', 'Disqualified', 'Pending'
