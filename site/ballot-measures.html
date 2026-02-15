@@ -218,7 +218,7 @@
   </div>
 
   <h1 class="heading-xl" style="margin-bottom: 8px">Ballot Measures</h1>
-  <p class="subtitle mb-16">Statewide ballot propositions, amendments, and referenda (2024&ndash;2026)</p>
+  <p class="subtitle mb-16">Statewide ballot propositions, amendments, and referenda (2020&ndash;2026) &middot; <a href="ballot-measures-analytics.html" style="color:var(--ms-dem-blue);text-decoration:none;font-weight:600">View Analytics &amp; Trends &rarr;</a></p>
 
   <!-- Year Tabs -->
   <div class="year-tabs" id="year-tabs"></div>
@@ -283,7 +283,7 @@
   document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
 
   // Populate year tabs
-  const years = [2026, 2025, 2024];
+  const years = [...new Set(measures.map(m => m.year))].sort((a, b) => b - a);
   let activeYear = 2026;
   const tabsEl = document.getElementById('year-tabs');
 

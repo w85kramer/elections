@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ballot Measure Analytics | State Elections Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .stats-row .stat-card { padding: 20px 12px; }
+  .stats-row .stat-number { font-size: 36px; }
+
+  .chart-section { margin-bottom: 48px; }
+  .chart-container {
+    background: white;
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    padding: 24px;
+    box-shadow: var(--ms-card-shadow);
+  }
+  .chart-container h3 {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ms-navy);
+    margin-bottom: 16px;
+  }
+  .chart-wrap { position: relative; }
+
+  .back-link {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--ms-dem-blue);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 24px;
+  }
+  .back-link:hover { text-decoration: underline; }
+
+  @media (max-width: 768px) {
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+    .stats-row .stat-card:last-child { grid-column: span 2; }
+  }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+  <!-- Header -->
+  <div class="site-header">
+    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
+    <a href="index.html" class="site-title">State Elections Tracker</a>
+  </div>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; <a href="ballot-measures.html">Ballot Measures</a> &rsaquo; Analytics
+  </div>
+
+  <h1 class="heading-xl" style="margin-bottom: 8px">Ballot Measure Analytics</h1>
+  <p class="subtitle mb-16">Trends and insights across 602 ballot measures (2020&ndash;2026)</p>
+
+  <!-- Headline Stats -->
+  <div class="stats-row" id="stats-row">
+    <div class="card stat-card"><div class="stat-number" id="stat-total">—</div><div class="stat-label">Total Measures</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-pass-rate" style="color:#28a745">—</div><div class="stat-label">Overall Pass Rate</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-citizen-rate" style="color:#276181">—</div><div class="stat-label">Citizen Pass Rate</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-leg-rate" style="color:#d0ac60">—</div><div class="stat-label">Legislature Pass Rate</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-states">—</div><div class="stat-label">States</div></div>
+  </div>
+
+  <!-- Section 1: Trends by Year -->
+  <div class="chart-section">
+    <div class="section-title">Trends by Year</div>
+    <div class="two-col">
+      <div class="chart-container">
+        <h3>Pass Rate by Year</h3>
+        <div class="chart-wrap"><canvas id="chart-pass-rate"></canvas></div>
+      </div>
+      <div class="chart-container">
+        <h3>Volume by Year</h3>
+        <div class="chart-wrap"><canvas id="chart-volume"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: Sponsor Analysis -->
+  <div class="chart-section">
+    <div class="section-title">Sponsor Analysis</div>
+    <div class="chart-container">
+      <h3>Citizen vs. Legislature Pass Rates by Year</h3>
+      <div class="chart-wrap" style="max-width:800px"><canvas id="chart-sponsor"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Section 3: By Topic & Type -->
+  <div class="chart-section">
+    <div class="section-title">By Topic &amp; Type</div>
+    <div class="two-col">
+      <div class="chart-container">
+        <h3>Pass Rate by Topic (Top 12)</h3>
+        <div class="chart-wrap"><canvas id="chart-topics"></canvas></div>
+      </div>
+      <div class="chart-container">
+        <h3>Pass Rate by Measure Type</h3>
+        <div class="chart-wrap"><canvas id="chart-types"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 4: Geographic Distribution -->
+  <div class="chart-section">
+    <div class="section-title">Geographic Distribution</div>
+    <div class="chart-container">
+      <h3>Top 15 States by Volume</h3>
+      <div class="chart-wrap" style="max-width:900px"><canvas id="chart-states"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Section 5: Vote Margins -->
+  <div class="chart-section">
+    <div class="section-title">Vote Margins</div>
+    <div class="chart-container">
+      <h3>Yes-Vote Percentage Distribution by Year</h3>
+      <div class="chart-wrap" style="max-width:900px"><canvas id="chart-margins"></canvas></div>
+    </div>
+  </div>
+
+  <a href="ballot-measures.html" class="back-link">&larr; View Full Measure List</a>
+
+  <!-- Footer -->
+  <div class="site-footer" style="margin-top: 32px">
+    <img src="assets/multistate-logomark.png" alt="MultiState">
+    <span class="footer-text">Source: MultiState &amp; Ballotpedia. Data generated <span id="gen-date"></span>.</span>
+  </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script>
+(async function() {
+  const data = await loadJSON('data/ballot_measures.json');
+  const measures = data.measures;
+
+  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+
+  // ── Global Chart.js defaults ──
+  Chart.defaults.font.family = "'Work Sans', sans-serif";
+  Chart.defaults.font.size = 13;
+  Chart.defaults.color = '#666';
+  Chart.defaults.plugins.tooltip.backgroundColor = '#043858';
+  Chart.defaults.plugins.tooltip.cornerRadius = 6;
+  Chart.defaults.plugins.tooltip.padding = 10;
+  Chart.defaults.plugins.tooltip.titleFont = { weight: '700', size: 14, family: "'Work Sans', sans-serif" };
+  Chart.defaults.plugins.tooltip.bodyFont = { size: 13, family: "'Work Sans', sans-serif" };
+  Chart.defaults.plugins.legend.display = false;
+  Chart.defaults.animation.duration = 600;
+
+  // ── Colors ──
+  const GREEN = '#28a745';
+  const RED = '#dc3545';
+  const YELLOW = '#ffc107';
+  const NAVY = '#043858';
+  const GOLD = '#d0ac60';
+  const DEM_BLUE = '#276181';
+
+  // ── Computed data ──
+  const years = [2020, 2021, 2022, 2023, 2024, 2025, 2026];
+  const decided = measures.filter(m => m.result === 'Passed' || m.result === 'Failed');
+  const decidedYears = years.filter(y => y < 2026); // exclude 2026 (all pending)
+
+  // ── Headline stats ──
+  const totalCount = measures.length;
+  const passedCount = measures.filter(m => m.result === 'Passed').length;
+  const failedCount = measures.filter(m => m.result === 'Failed').length;
+  const overallRate = decided.length > 0 ? (passedCount / decided.length * 100) : 0;
+
+  const citizenDecided = decided.filter(m => m.sponsor === 'Citizen');
+  const citizenPassed = citizenDecided.filter(m => m.result === 'Passed').length;
+  const citizenRate = citizenDecided.length > 0 ? (citizenPassed / citizenDecided.length * 100) : 0;
+
+  const legDecided = decided.filter(m => m.sponsor === 'Legislature');
+  const legPassed = legDecided.filter(m => m.result === 'Passed').length;
+  const legRate = legDecided.length > 0 ? (legPassed / legDecided.length * 100) : 0;
+
+  const stateCount = new Set(measures.map(m => m.state)).size;
+
+  document.getElementById('stat-total').textContent = numberWithCommas(totalCount);
+  document.getElementById('stat-pass-rate').textContent = overallRate.toFixed(1) + '%';
+  document.getElementById('stat-citizen-rate').textContent = citizenRate.toFixed(1) + '%';
+  document.getElementById('stat-leg-rate').textContent = legRate.toFixed(1) + '%';
+  document.getElementById('stat-states').textContent = stateCount;
+
+  // ── Chart 1: Pass Rate by Year ──
+  const passRateByYear = decidedYears.map(y => {
+    const ym = measures.filter(m => m.year === y && (m.result === 'Passed' || m.result === 'Failed'));
+    const yp = ym.filter(m => m.result === 'Passed').length;
+    return ym.length > 0 ? (yp / ym.length * 100) : 0;
+  });
+
+  new Chart(document.getElementById('chart-pass-rate'), {
+    type: 'bar',
+    data: {
+      labels: decidedYears.map(String),
+      datasets: [{
+        data: passRateByYear,
+        backgroundColor: decidedYears.map((_, i) => passRateByYear[i] >= 50 ? GREEN : RED),
+        borderRadius: 4,
+        maxBarThickness: 60
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 100,
+          ticks: { callback: v => v + '%' },
+          grid: { color: '#eee' }
+        },
+        x: { grid: { display: false } }
+      },
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const y = decidedYears[ctx.dataIndex];
+              const ym = measures.filter(m => m.year === y && (m.result === 'Passed' || m.result === 'Failed'));
+              const yp = ym.filter(m => m.result === 'Passed').length;
+              return `${ctx.raw.toFixed(1)}% (${yp} of ${ym.length})`;
+            }
+          }
+        }
+      }
+    },
+    plugins: [{
+      id: 'averageLine',
+      afterDraw(chart) {
+        const yScale = chart.scales.y;
+        const yPixel = yScale.getPixelForValue(overallRate);
+        const ctx = chart.ctx;
+        ctx.save();
+        ctx.setLineDash([6, 4]);
+        ctx.strokeStyle = NAVY;
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(chart.chartArea.left, yPixel);
+        ctx.lineTo(chart.chartArea.right, yPixel);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.fillStyle = NAVY;
+        ctx.font = "600 11px 'Work Sans', sans-serif";
+        ctx.textAlign = 'right';
+        ctx.fillText(`Avg: ${overallRate.toFixed(1)}%`, chart.chartArea.right, yPixel - 5);
+        ctx.restore();
+      }
+    }]
+  });
+
+  // ── Chart 2: Volume by Year (stacked P/F/Pending) ──
+  const volPassed = years.map(y => measures.filter(m => m.year === y && m.result === 'Passed').length);
+  const volFailed = years.map(y => measures.filter(m => m.year === y && m.result === 'Failed').length);
+  const volPending = years.map(y => measures.filter(m => m.year === y && m.result === 'Pending').length);
+
+  new Chart(document.getElementById('chart-volume'), {
+    type: 'bar',
+    data: {
+      labels: years.map(String),
+      datasets: [
+        { label: 'Passed', data: volPassed, backgroundColor: GREEN, borderRadius: 2 },
+        { label: 'Failed', data: volFailed, backgroundColor: RED, borderRadius: 2 },
+        { label: 'Pending', data: volPending, backgroundColor: YELLOW, borderRadius: 2 }
+      ]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        x: { stacked: true, grid: { display: false } },
+        y: { stacked: true, beginAtZero: true, grid: { color: '#eee' } }
+      },
+      plugins: {
+        legend: { display: true, position: 'top', labels: { boxWidth: 12, padding: 16, font: { size: 12 } } },
+        tooltip: {
+          callbacks: {
+            afterBody: ctx => {
+              const y = years[ctx[0].dataIndex];
+              const total = measures.filter(m => m.year === y).length;
+              return `Total: ${total}`;
+            }
+          }
+        }
+      }
+    }
+  });
+
+  // ── Chart 3: Citizen vs Legislature Pass Rates by Year ──
+  const citizenRates = decidedYears.map(y => {
+    const cm = measures.filter(m => m.year === y && m.sponsor === 'Citizen' && (m.result === 'Passed' || m.result === 'Failed'));
+    const cp = cm.filter(m => m.result === 'Passed').length;
+    return cm.length > 0 ? { rate: cp / cm.length * 100, n: cm.length, p: cp } : null;
+  });
+  const legRates = decidedYears.map(y => {
+    const lm = measures.filter(m => m.year === y && m.sponsor === 'Legislature' && (m.result === 'Passed' || m.result === 'Failed'));
+    const lp = lm.filter(m => m.result === 'Passed').length;
+    return lm.length > 0 ? { rate: lp / lm.length * 100, n: lm.length, p: lp } : null;
+  });
+
+  new Chart(document.getElementById('chart-sponsor'), {
+    type: 'bar',
+    data: {
+      labels: decidedYears.map(String),
+      datasets: [
+        {
+          label: 'Citizen-Initiated',
+          data: citizenRates.map(r => r ? r.rate : null),
+          backgroundColor: DEM_BLUE,
+          borderRadius: 4,
+          maxBarThickness: 40
+        },
+        {
+          label: 'Legislature-Referred',
+          data: legRates.map(r => r ? r.rate : null),
+          backgroundColor: GOLD,
+          borderRadius: 4,
+          maxBarThickness: 40
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: { beginAtZero: true, max: 100, ticks: { callback: v => v + '%' }, grid: { color: '#eee' } },
+        x: { grid: { display: false } }
+      },
+      plugins: {
+        legend: { display: true, position: 'top', labels: { boxWidth: 12, padding: 16, font: { size: 12 } } },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const idx = ctx.dataIndex;
+              const info = ctx.datasetIndex === 0 ? citizenRates[idx] : legRates[idx];
+              if (!info) return 'No data';
+              return `${ctx.dataset.label}: ${info.rate.toFixed(1)}% (${info.p} of ${info.n})`;
+            }
+          }
+        }
+      }
+    },
+    plugins: [{
+      id: 'fiftyLine',
+      afterDraw(chart) {
+        const yScale = chart.scales.y;
+        const yPixel = yScale.getPixelForValue(50);
+        const ctx = chart.ctx;
+        ctx.save();
+        ctx.setLineDash([6, 4]);
+        ctx.strokeStyle = '#999';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(chart.chartArea.left, yPixel);
+        ctx.lineTo(chart.chartArea.right, yPixel);
+        ctx.stroke();
+        ctx.restore();
+      }
+    }]
+  });
+
+  // ── Chart 4: Top Topics by Pass Rate ──
+  // Split semicolon-delimited categories
+  const topicMap = {};
+  for (const m of decided) {
+    if (!m.category) continue;
+    const cats = m.category.split(';').map(c => c.trim()).filter(Boolean);
+    for (const cat of cats) {
+      if (!topicMap[cat]) topicMap[cat] = { passed: 0, total: 0 };
+      topicMap[cat].total++;
+      if (m.result === 'Passed') topicMap[cat].passed++;
+    }
+  }
+  // Top 12 by total decided count, min 3
+  const topTopics = Object.entries(topicMap)
+    .filter(([, v]) => v.total >= 3)
+    .sort((a, b) => b[1].total - a[1].total)
+    .slice(0, 12)
+    .sort((a, b) => (b[1].passed / b[1].total) - (a[1].passed / a[1].total));
+
+  const topicLabels = topTopics.map(([k]) => k.length > 30 ? k.slice(0, 28) + '...' : k);
+  const topicRates = topTopics.map(([, v]) => (v.passed / v.total * 100));
+  const topicCounts = topTopics.map(([, v]) => v.total);
+
+  new Chart(document.getElementById('chart-topics'), {
+    type: 'bar',
+    data: {
+      labels: topicLabels,
+      datasets: [{
+        data: topicRates,
+        backgroundColor: topicRates.map(r => r >= 50 ? GREEN : RED),
+        borderRadius: 4,
+        maxBarThickness: 28
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      scales: {
+        x: { beginAtZero: true, max: 100, ticks: { callback: v => v + '%' }, grid: { color: '#eee' } },
+        y: { grid: { display: false }, ticks: { font: { size: 12 } } }
+      },
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const i = ctx.dataIndex;
+              const t = topTopics[i];
+              return `${ctx.raw.toFixed(1)}% (${t[1].passed} of ${t[1].total})`;
+            }
+          }
+        }
+      }
+    },
+    plugins: [{
+      id: 'fiftyLineH',
+      afterDraw(chart) {
+        const xScale = chart.scales.x;
+        const xPixel = xScale.getPixelForValue(50);
+        const ctx = chart.ctx;
+        ctx.save();
+        ctx.setLineDash([6, 4]);
+        ctx.strokeStyle = '#999';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(xPixel, chart.chartArea.top);
+        ctx.lineTo(xPixel, chart.chartArea.bottom);
+        ctx.stroke();
+        ctx.restore();
+      }
+    }]
+  });
+
+  // ── Chart 5: Measure Type Pass Rates ──
+  const typeMap = {};
+  for (const m of decided) {
+    if (!m.type) continue;
+    if (!typeMap[m.type]) typeMap[m.type] = { passed: 0, total: 0 };
+    typeMap[m.type].total++;
+    if (m.result === 'Passed') typeMap[m.type].passed++;
+  }
+  const sortedTypes = Object.entries(typeMap)
+    .filter(([, v]) => v.total >= 2)
+    .sort((a, b) => (b[1].passed / b[1].total) - (a[1].passed / a[1].total));
+
+  const typeLabels = sortedTypes.map(([k]) => k.length > 35 ? k.slice(0, 33) + '...' : k);
+  const typeRates = sortedTypes.map(([, v]) => (v.passed / v.total * 100));
+
+  new Chart(document.getElementById('chart-types'), {
+    type: 'bar',
+    data: {
+      labels: typeLabels,
+      datasets: [{
+        data: typeRates,
+        backgroundColor: typeRates.map(r => r >= 50 ? GREEN : RED),
+        borderRadius: 4,
+        maxBarThickness: 28
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      scales: {
+        x: { beginAtZero: true, max: 100, ticks: { callback: v => v + '%' }, grid: { color: '#eee' } },
+        y: { grid: { display: false }, ticks: { font: { size: 11 } } }
+      },
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const t = sortedTypes[ctx.dataIndex];
+              return `${ctx.raw.toFixed(1)}% (${t[1].passed} of ${t[1].total})`;
+            }
+          }
+        }
+      }
+    },
+    plugins: [{
+      id: 'fiftyLineH2',
+      afterDraw(chart) {
+        const xScale = chart.scales.x;
+        const xPixel = xScale.getPixelForValue(50);
+        const ctx = chart.ctx;
+        ctx.save();
+        ctx.setLineDash([6, 4]);
+        ctx.strokeStyle = '#999';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(xPixel, chart.chartArea.top);
+        ctx.lineTo(xPixel, chart.chartArea.bottom);
+        ctx.stroke();
+        ctx.restore();
+      }
+    }]
+  });
+
+  // ── Chart 6: Top 15 States (stacked Passed/Failed/Pending) ──
+  const stateMap = {};
+  for (const m of measures) {
+    if (!stateMap[m.state]) stateMap[m.state] = { name: m.state_name, passed: 0, failed: 0, pending: 0 };
+    if (m.result === 'Passed') stateMap[m.state].passed++;
+    else if (m.result === 'Failed') stateMap[m.state].failed++;
+    else stateMap[m.state].pending++;
+  }
+  const topStates = Object.entries(stateMap)
+    .map(([abbr, v]) => ({ abbr, ...v, total: v.passed + v.failed + v.pending }))
+    .sort((a, b) => b.total - a.total)
+    .slice(0, 15);
+
+  new Chart(document.getElementById('chart-states'), {
+    type: 'bar',
+    data: {
+      labels: topStates.map(s => s.name),
+      datasets: [
+        { label: 'Passed', data: topStates.map(s => s.passed), backgroundColor: GREEN },
+        { label: 'Failed', data: topStates.map(s => s.failed), backgroundColor: RED },
+        { label: 'Pending', data: topStates.map(s => s.pending), backgroundColor: YELLOW }
+      ]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      scales: {
+        x: { stacked: true, beginAtZero: true, grid: { color: '#eee' } },
+        y: { stacked: true, grid: { display: false }, ticks: { font: { size: 12 } } }
+      },
+      plugins: {
+        legend: { display: true, position: 'top', labels: { boxWidth: 12, padding: 16, font: { size: 12 } } },
+        tooltip: {
+          callbacks: {
+            afterBody: ctx => {
+              const s = topStates[ctx[0].dataIndex];
+              return `Total: ${s.total}`;
+            }
+          }
+        }
+      }
+    }
+  });
+
+  // ── Chart 7: Margin Distribution (scatter) ──
+  // Show yes_pct by year for decided measures
+  const scatterData = [];
+  for (const m of decided) {
+    let yesPct = null;
+    if (m.yes_pct != null) {
+      yesPct = m.yes_pct;
+    } else if (m.votes_yes != null && m.votes_no != null) {
+      const total = m.votes_yes + m.votes_no;
+      if (total > 0) yesPct = m.votes_yes / total * 100;
+    }
+    if (yesPct == null) continue;
+    // Add small jitter to y-axis so dots don't overlap exactly
+    const jitter = (Math.random() - 0.5) * 0.6;
+    scatterData.push({
+      x: yesPct,
+      y: m.year + jitter,
+      state: m.state_name,
+      title: (m.number || m.title || '').substring(0, 50),
+      result: m.result,
+      yesPct: yesPct,
+      year: m.year
+    });
+  }
+
+  new Chart(document.getElementById('chart-margins'), {
+    type: 'scatter',
+    data: {
+      datasets: [{
+        data: scatterData.map(d => ({ x: d.x, y: d.y })),
+        backgroundColor: scatterData.map(d => d.result === 'Passed' ? 'rgba(40,167,69,0.45)' : 'rgba(220,53,69,0.45)'),
+        borderColor: scatterData.map(d => d.result === 'Passed' ? GREEN : RED),
+        borderWidth: 1,
+        pointRadius: 4,
+        pointHoverRadius: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        x: {
+          min: 0, max: 100,
+          ticks: { callback: v => v + '%' },
+          grid: { color: '#eee' },
+          title: { display: true, text: 'Yes Vote %', font: { size: 13, weight: '600' }, color: NAVY }
+        },
+        y: {
+          min: 2019.2, max: 2025.8,
+          ticks: { stepSize: 1, callback: v => Number.isInteger(v) ? v : '' },
+          grid: { color: '#f0f0f0' },
+          title: { display: true, text: 'Year', font: { size: 13, weight: '600' }, color: NAVY }
+        }
+      },
+      plugins: {
+        tooltip: {
+          callbacks: {
+            title: () => '',
+            label: ctx => {
+              const d = scatterData[ctx.dataIndex];
+              return [
+                `${d.state}: ${d.title} (${d.year})`,
+                `Yes: ${d.yesPct.toFixed(1)}% — ${d.result}`
+              ];
+            }
+          }
+        }
+      }
+    },
+    plugins: [{
+      id: 'thresholdLine',
+      afterDraw(chart) {
+        const xScale = chart.scales.x;
+        const xPixel = xScale.getPixelForValue(50);
+        const ctx = chart.ctx;
+        ctx.save();
+        ctx.setLineDash([6, 4]);
+        ctx.strokeStyle = NAVY;
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(xPixel, chart.chartArea.top);
+        ctx.lineTo(xPixel, chart.chartArea.bottom);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.fillStyle = NAVY;
+        ctx.font = "600 11px 'Work Sans', sans-serif";
+        ctx.textAlign = 'left';
+        ctx.fillText('50% threshold', xPixel + 4, chart.chartArea.top + 14);
+        ctx.restore();
+      }
+    }]
+  });
+
+})();
+</script>
+</body>
+</html>
