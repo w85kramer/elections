@@ -22,6 +22,12 @@ TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
 PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
 BATCH_SIZE = 50
 
+# Manual result overrides for measures with missing BP result icons
+RESULT_OVERRIDES = {
+    'https://ballotpedia.org/California_Proposition_15,_Tax_on_Commercial_and_Industrial_Properties_for_Education_and_Local_Government_Funding_Initiative_(2020)': 'Failed',
+    'https://ballotpedia.org/Colorado_Proposition_113,_National_Popular_Vote_Interstate_Compact_Referendum_(2020)': 'Passed',
+}
+
 
 def run_sql(query, exit_on_error=True):
     resp = httpx.post(
@@ -73,7 +79,7 @@ def main():
     parser = argparse.ArgumentParser(description='Populate ballot_measures table')
     parser.add_argument('--dry-run', action='store_true',
                         help='Show what would be inserted without modifying DB')
-    parser.add_argument('--year', type=int, choices=[2024, 2025, 2026],
+    parser.add_argument('--year', type=int, choices=list(range(2020, 2027)),
                         help='Only process a single year')
     args = parser.parse_args()
 
@@ -144,11 +150,16 @@ def main():
 
             election_date = parse_date(m['election_date'])
 
+            # Manual overrides for measures with missing BP result icons
+            bp_result = m['result']
+            if bp_result is None:
+                bp_result = RESULT_OVERRIDES.get(m.get('measure_url'))
+
             # Determine status and result
-            if m['result'] == 'Passed':
+            if bp_result == 'Passed':
                 status = 'Passed'
                 result = 'Passed'
-            elif m['result'] == 'Failed':
+            elif bp_result == 'Failed':
                 status = 'Failed'
                 result = 'Failed'
             else:

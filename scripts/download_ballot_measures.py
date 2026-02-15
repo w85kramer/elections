@@ -1,12 +1,12 @@
 """
-Download and parse Ballotpedia ballot measure index pages for 2024, 2025, 2026.
+Download and parse Ballotpedia ballot measure index pages for 2020-2026.
 
 Extracts structured data (state, date, type, title, subject, description, result,
 votes, measure page URLs) from "By state" sections. Saves parsed data to JSON
 and downloads individual measure pages for AI description generation.
 
 Usage:
-    python3 scripts/download_ballot_measures.py                # all 3 years
+    python3 scripts/download_ballot_measures.py                # all years (2020-2026)
     python3 scripts/download_ballot_measures.py --year 2024    # one year
     python3 scripts/download_ballot_measures.py --skip-pages   # skip individual page downloads
 """
@@ -38,18 +38,25 @@ US_STATES = {
 TYPE_MAP = {
     'LRCA': ('Legislative Constitutional Amendment', 'Legislature'),
     'CICA': ('Initiated Constitutional Amendment', 'Citizen'),
+    'CICA/SS': ('Initiated Constitutional Amendment', 'Citizen'),
     'LRSS': ('Legislative Referendum', 'Legislature'),
     'CISS': ('Initiated State Statute', 'Citizen'),
     'BI': ('Bond Measure', 'Legislature'),
     'LRAQ': ('Advisory Question', 'Legislature'),
+    'AQ': ('Advisory Question', 'Legislature'),
     'VR': ('Veto Referendum', 'Citizen'),
     'CCQ': ('Advisory Question', 'Other'),
     'ABR': ('Legislative Referendum', 'Legislature'),
     'IndISS': ('Initiated State Statute', 'Citizen'),
+    'IndICA': ('Initiated Constitutional Amendment', 'Citizen'),
 }
 
 # Default general election dates by year
 DEFAULT_DATES = {
+    2020: 'November 3, 2020',
+    2021: 'November 2, 2021',
+    2022: 'November 8, 2022',
+    2023: 'November 7, 2023',
     2024: 'November 5, 2024',
     2025: 'November 4, 2025',
     2026: 'November 3, 2026',
@@ -92,9 +99,9 @@ def parse_index_page(html_text, year):
         print(f'  ERROR: No "By state" section found for {year}')
         return []
 
-    # Find ALL h3 tags after "By state" — used as section boundaries
-    # We match both the mw-headline id format and raw <h3> tags
-    all_h3_positions = [m.start() for m in re.finditer(r'<h3>', html_text[by_state:])]
+    # Find ALL h2/h3 tags after "By state" — used as section boundaries
+    # Include h2 to catch non-state sections (e.g., "D.C. ballot measures")
+    all_h3_positions = [m.start() for m in re.finditer(r'<h[23]>', html_text[by_state:])]
     all_h3_positions = [by_state + p for p in all_h3_positions]
 
     # Find h3 state headers with extractable IDs
@@ -125,8 +132,9 @@ def parse_index_page(html_text, year):
         section = html_text[section_start:section_end]
 
         # Find all bptable tables within this state's section
+        # Some years use "bptable blue", others just "bptable"
         table_pattern = re.compile(
-            r'<table[^>]*class="[^"]*bptable blue[^"]*"[^>]*>(.*?)</table>',
+            r'<table[^>]*class="[^"]*bptable[^"]*"[^>]*>(.*?)</table>',
             re.DOTALL,
         )
         table_matches = list(table_pattern.finditer(section))
@@ -222,11 +230,11 @@ def _parse_row(tds, columns, state_name, election_date, year):
     # Some tables omit Subject (most 2024 tables)
 
     has_subject = 'Subject' in columns
-    has_result = 'Result' in columns
+    has_result = 'Result' in columns or 'Ruling' in columns
 
     # Determine column indices
     type_idx = columns.get('Type', 0)
-    title_idx = columns.get('Title', 1)
+    title_idx = columns.get('Title', columns.get('Title/number', 1))
 
     if has_subject:
         subject_idx = columns.get('Subject')
@@ -237,7 +245,7 @@ def _parse_row(tds, columns, state_name, election_date, year):
 
     # Parse type code
     type_html = tds[type_idx] if type_idx < len(tds) else ''
-    type_match = re.search(r'>([A-Z][A-Za-z]{1,8})</a>', type_html)
+    type_match = re.search(r'>([A-Z][A-Za-z/]{1,8})</a>', type_html)
     type_code = type_match.group(1) if type_match else None
 
     type_info = TYPE_MAP.get(type_code, (None, None))
@@ -289,7 +297,7 @@ def _parse_row(tds, columns, state_name, election_date, year):
     no_pct = None
 
     if has_result:
-        result_idx = columns.get('Result')
+        result_idx = columns.get('Result') or columns.get('Ruling')
         yes_idx = columns.get('Yes Votes')
         no_idx = columns.get('No Votes')
 
@@ -393,13 +401,13 @@ def download_individual_pages(measures, skip_existing=True):
 
 def main():
     parser = argparse.ArgumentParser(description='Download and parse Ballotpedia ballot measures')
-    parser.add_argument('--year', type=int, choices=[2024, 2025, 2026],
+    parser.add_argument('--year', type=int, choices=list(range(2020, 2027)),
                         help='Process a single year')
     parser.add_argument('--skip-pages', action='store_true',
                         help='Skip downloading individual measure pages')
     args = parser.parse_args()
 
-    years = [args.year] if args.year else [2024, 2025, 2026]
+    years = [args.year] if args.year else list(range(2020, 2027))
 
     all_measures = []
 
@@ -436,7 +444,7 @@ def main():
                 by_state.setdefault(m['state'], []).append(m)
             print(f'  States: {", ".join(f"{s}({len(ms)})" for s, ms in sorted(by_state.items()))}')
 
-            if year in (2024, 2025):
+            if year <= 2025:
                 passed = sum(1 for m in measures if m['result'] == 'Passed')
                 failed = sum(1 for m in measures if m['result'] == 'Failed')
                 no_result = sum(1 for m in measures if m['result'] is None)
