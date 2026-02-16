@@ -304,6 +304,7 @@ CREATE TABLE chamber_control (
     presiding_officer_title TEXT,   -- 'Speaker', 'President', 'President Pro Tem'
     presiding_officer_party TEXT,   -- party of presiding officer
     coalition_desc  TEXT,           -- e.g., '14D + 5I + 2R bipartisan coalition'
+    forecast_rating TEXT,           -- pre-election forecast (e.g., 'Solid R', 'Toss-Up')
     notes           TEXT,
     UNIQUE(state_id, chamber, effective_date)
 );
@@ -312,7 +313,44 @@ CREATE INDEX idx_chamber_control_state ON chamber_control(state_id);
 CREATE INDEX idx_chamber_control_current ON chamber_control(effective_date);
 
 -- ============================================================
--- 11. DASHBOARD VIEW (auto-generated, read-only)
+-- 11. SUPERMAJORITY THRESHOLDS (per-chamber constitutional thresholds)
+-- ============================================================
+CREATE TABLE supermajority_thresholds (
+    id              SERIAL PRIMARY KEY,
+    state_id        INTEGER NOT NULL REFERENCES states(id),
+    chamber         TEXT NOT NULL,
+    veto_override   TEXT,       -- e.g., '2/3 Elected (66.67%)', 'Majority Elected (50%)'
+    budget_passage  TEXT,
+    taxes           TEXT,       -- threshold to impose or increase taxes
+    const_amend     TEXT,       -- threshold to pass constitutional amendments
+    quorum          TEXT,
+    other_circumstances TEXT,
+    const_authority TEXT,       -- constitutional citation
+    notes           TEXT,
+    UNIQUE(state_id, chamber)
+);
+
+CREATE INDEX idx_supermajority_state ON supermajority_thresholds(state_id);
+
+-- ============================================================
+-- 12. TRIFECTAS (historical trifecta/split government tracking)
+-- ============================================================
+CREATE TABLE trifectas (
+    id              SERIAL PRIMARY KEY,
+    state_id        INTEGER NOT NULL REFERENCES states(id),
+    year            INTEGER NOT NULL,
+    governor_party  TEXT CHECK (governor_party IN ('Republican', 'Democrat', 'Independent')),
+    legislature_status TEXT CHECK (legislature_status IN ('Republican', 'Democrat', 'Split')),
+    trifecta_status TEXT NOT NULL CHECK (trifecta_status IN ('Republican', 'Democrat', 'Split')),
+    notes           TEXT,
+    UNIQUE(state_id, year)
+);
+
+CREATE INDEX idx_trifectas_state_year ON trifectas(state_id, year);
+CREATE INDEX idx_trifectas_year ON trifectas(year);
+
+-- ============================================================
+-- 12. DASHBOARD VIEW (auto-generated, read-only)
 -- ============================================================
 CREATE OR REPLACE VIEW dashboard_view AS
 
