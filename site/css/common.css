@@ -7,13 +7,13 @@
   --ms-navy: #043858;
   --ms-gold: #d0ac60;
   --ms-pink: #e50963;
-  --ms-dem-blue: #276181;
-  --ms-dem-light: #6cb3d2;
+  --ms-dem-blue: #6cb3d2;
   --ms-rep-red: #e50963;
-  --ms-rep-light: #e86987;
+  --ms-purple: #8b567f;
   --ms-divided: #8b567f;
-  --ms-other: #888;
-  --ms-vacant: #ccc;
+  --ms-tossup: #978f84;
+  --ms-other: #978f84;
+  --ms-vacant: #d9d9d9;
   --ms-bg: #ffffff;
   --ms-text: #043858;
   --ms-text-light: #666;
@@ -214,8 +214,8 @@ body {
 }
 .tooltip.visible { opacity: 1; }
 .tooltip .tt-title { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
-.tt-party-d { color: #6cd3d2; }
-.tt-party-r { color: #e86987; }
+.tt-party-d { color: #6cb3d2; }
+.tt-party-r { color: #EA9999; }
 
 /* Accordion (details/summary) */
 details {
@@ -267,7 +267,7 @@ details .details-content {
   margin-bottom: 8px;
 }
 .breadcrumb a {
-  color: var(--ms-dem-blue);
+  color: var(--ms-navy);
   text-decoration: none;
 }
 .breadcrumb a:hover { text-decoration: underline; }
@@ -297,11 +297,13 @@ details .details-content {
   background: #f0f0f0;
   color: var(--ms-text-light);
 }
-.tag-tossup { background: #fff3cd; color: #856404; }
-.tag-lean-d { background: #d1ecf1; color: #0c5460; }
-.tag-lean-r { background: #f8d7da; color: #721c24; }
-.tag-solid-d { background: var(--ms-dem-blue); color: white; }
-.tag-solid-r { background: var(--ms-rep-red); color: white; }
+.tag-tossup { background: #d0ac60; color: white; }
+.tag-lean-d { background: #6CB3D2; color: white; }
+.tag-lean-r { background: #EA9999; color: white; }
+.tag-likely-d { background: #498AA9; color: white; }
+.tag-likely-r { background: #E86987; color: white; }
+.tag-solid-d { background: #043858; color: white; }
+.tag-solid-r { background: #e50963; color: white; }
 
 /* Utility */
 .flex { display: flex; }

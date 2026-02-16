@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Legislatures Analytics | State Elections Tracker</title>
+<title>Legislature Trends & Analytics | State Elections Tracker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/common.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <style>
   .subnav {
     display: flex;
@@ -28,27 +29,62 @@
   }
   .subnav a:hover { border-color: var(--ms-navy); color: var(--ms-navy); }
   .subnav a.active { background: var(--ms-navy); border-color: var(--ms-navy); color: white; }
-  .placeholder-notice {
-    background: #fff8e1;
-    border: 2px dashed #d0ac60;
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .chart-section { margin-bottom: 48px; }
+  .chart-container {
+    background: white;
+    border: 1px solid var(--ms-border);
     border-radius: var(--ms-radius);
     padding: 24px;
-    margin: 32px 0;
-    text-align: center;
+    box-shadow: var(--ms-card-shadow);
   }
-  .placeholder-notice p {
+  .chart-container h3 {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ms-navy);
+    margin-bottom: 4px;
+  }
+  .chart-container .chart-desc {
+    font-size: 13px;
+    color: var(--ms-text-light);
+    margin-bottom: 16px;
+  }
+  .chart-wrap { position: relative; }
+
+  /* Tables */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
     font-family: 'Work Sans', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    color: #856404;
-    margin-bottom: 8px;
+    font-size: 13px;
   }
-  .placeholder-notice p:last-child { margin-bottom: 0; }
-  .map-links {
-    display: flex;
-    gap: 8px;
-    margin-top: 16px;
-    justify-content: center;
+  .data-table th {
+    background: var(--ms-navy);
+    color: white;
+    padding: 8px 12px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .data-table td {
+    padding: 6px 12px;
+    border-bottom: 1px solid #eee;
+  }
+  .data-table tr:hover td { background: #f8f9fa; }
+  .flip-d { color: var(--ms-dem-blue); font-weight: 700; }
+  .flip-r { color: var(--ms-rep-red); font-weight: 700; }
+
+  @media (max-width: 768px) {
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -70,22 +106,314 @@
     <a href="legislatures-analytics.html" class="active">Trends & Analytics</a>
   </div>
 
-  <h1 class="heading-xl" style="margin-bottom: 8px">Legislatures Analytics</h1>
-  <p class="subtitle mb-16">Trends, historical data, and analysis of state legislative control</p>
+  <h1 class="heading-xl" style="margin-bottom: 8px">Legislature Trends & Analytics</h1>
+  <p class="subtitle mb-16">Historical chamber control, seat trends, and supermajority analysis</p>
 
-  <div class="placeholder-notice">
-    <p>Content coming soon.</p>
-    <p style="font-weight:400;font-size:13px;color:#666">This page will feature historical legislative control trends, seat flip analysis, and redistricting impacts.</p>
-    <div class="map-links">
-      <a href="legislatures_partisan.html" style="display:inline-block;padding:6px 14px;border:1px solid var(--ms-border);border-radius:var(--ms-radius);font-size:13px;font-weight:600;text-decoration:none;color:var(--ms-dem-blue);transition:all 0.15s">Partisan Map &rarr;</a>
+  <!-- Stats -->
+  <div class="stats-row" id="stats-row">
+    <div class="card stat-card"><div class="stat-number" id="stat-d-chambers" style="color:var(--ms-dem-blue)">—</div><div class="stat-label">D Chambers (2025)</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-r-chambers" style="color:var(--ms-rep-red)">—</div><div class="stat-label">R Chambers (2025)</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-net-shift">—</div><div class="stat-label">Net Shift (2021&rarr;2025)</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-split">—</div><div class="stat-label">Split Legislatures</div></div>
+  </div>
+
+  <!-- Chamber Control Over Time -->
+  <div class="chart-section">
+    <div class="chart-container">
+      <h3>Chamber Control Over Time</h3>
+      <p class="chart-desc">Number of chambers controlled by each party at each snapshot date.</p>
+      <div class="chart-wrap">
+        <canvas id="chamberChart" height="300"></canvas>
+      </div>
     </div>
   </div>
 
-  <div class="site-footer">
+  <!-- Total Seats Over Time -->
+  <div class="chart-section">
+    <div class="chart-container">
+      <h3>Total Seats by Party</h3>
+      <p class="chart-desc">Aggregate number of D and R seats across all 99 chambers at each snapshot.</p>
+      <div class="chart-wrap">
+        <canvas id="seatsChart" height="300"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chamber Flips -->
+  <div class="chart-section">
+    <div class="chart-container">
+      <h3>Chamber Flips by Cycle</h3>
+      <p class="chart-desc">Chambers that changed party control between snapshots.</p>
+      <div class="chart-wrap">
+        <canvas id="flipsChart" height="260"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Supermajority Table -->
+  <div class="chart-section">
+    <div class="chart-container">
+      <h3>Veto-Override Supermajorities</h3>
+      <p class="chart-desc">Chambers where one party holds enough seats to override the governor's veto.</p>
+      <table class="data-table" id="super-table">
+        <thead><tr><th>State</th><th>Chamber</th><th>Control</th><th>Seats</th><th>Threshold</th><th>Margin</th></tr></thead>
+        <tbody id="super-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Closest Margins Table -->
+  <div class="chart-section">
+    <div class="chart-container">
+      <h3>Closest Margins of Control</h3>
+      <p class="chart-desc">The 15 chambers with the smallest margin above the majority threshold.</p>
+      <table class="data-table" id="margin-table">
+        <thead><tr><th>State</th><th>Chamber</th><th>Control</th><th>D</th><th>R</th><th>Majority</th><th>Margin</th></tr></thead>
+        <tbody id="margin-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="site-footer" style="margin-top:32px">
     <img src="assets/multistate-logomark.png" alt="MultiState">
-    <div class="footer-text">State Elections Tracker &mdash; Data compiled by MultiState</div>
+    <span class="footer-text">Source: MultiState. Data generated <span id="gen-date"></span>.</span>
   </div>
 
 </div>
+
+<script src="js/common.js"></script>
+<script>
+(async function() {
+  const data = await loadJSON('data/legislatures_data.json');
+  const { summary, chambers, history } = data;
+  const { snapshots, chamber_flips } = history;
+
+  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+
+  // Stats
+  document.getElementById('stat-d-chambers').textContent = summary.d_chambers;
+  document.getElementById('stat-r-chambers').textContent = summary.r_chambers;
+  document.getElementById('stat-split').textContent = summary.split_legislatures;
+
+  // Net shift
+  if (snapshots.length >= 2) {
+    const first = snapshots[0];
+    const last = snapshots[snapshots.length - 1];
+    const dShift = last.d_chambers - first.d_chambers;
+    const rShift = last.r_chambers - first.r_chambers;
+    let shiftText;
+    if (rShift > 0) shiftText = 'R+' + rShift;
+    else if (dShift > 0) shiftText = 'D+' + dShift;
+    else shiftText = 'Even';
+    document.getElementById('stat-net-shift').textContent = shiftText;
+  }
+
+  // ── Chamber Control Chart ──
+  const labels = snapshots.map(s => s.date.substring(0, 4));
+
+  new Chart(document.getElementById('chamberChart'), {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: 'Democratic',
+          data: snapshots.map(s => s.d_chambers),
+          backgroundColor: '#6cb3d2',
+          borderRadius: 4,
+        },
+        {
+          label: 'Republican',
+          data: snapshots.map(s => s.r_chambers),
+          backgroundColor: '#e50963',
+          borderRadius: 4,
+        },
+        {
+          label: 'Other',
+          data: snapshots.map(s => s.other_chambers),
+          backgroundColor: '#8b567f',
+          borderRadius: 4,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: { font: { family: "'Work Sans', sans-serif", weight: '600', size: 12 }, usePointStyle: true, pointStyle: 'rect' }
+        },
+        tooltip: {
+          backgroundColor: '#043858',
+          titleFont: { family: "'Work Sans', sans-serif", weight: '700' },
+          bodyFont: { family: "'Work Sans', sans-serif" },
+          callbacks: {
+            label: function(item) { return item.dataset.label + ': ' + item.raw + ' chambers'; }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true, max: 99,
+          ticks: { font: { family: "'Work Sans', sans-serif", size: 11 } },
+          grid: { color: '#f0f0f0' }
+        },
+        x: {
+          ticks: { font: { family: "'Work Sans', sans-serif", size: 11 } },
+          grid: { display: false }
+        }
+      }
+    }
+  });
+
+  // ── Seats Chart ──
+  new Chart(document.getElementById('seatsChart'), {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: 'Democratic Seats',
+          data: snapshots.map(s => s.d_total_seats),
+          backgroundColor: '#6cb3d2',
+          borderRadius: 4,
+        },
+        {
+          label: 'Republican Seats',
+          data: snapshots.map(s => s.r_total_seats),
+          backgroundColor: '#e50963',
+          borderRadius: 4,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: { font: { family: "'Work Sans', sans-serif", weight: '600', size: 12 }, usePointStyle: true, pointStyle: 'rect' }
+        },
+        tooltip: {
+          backgroundColor: '#043858',
+          titleFont: { family: "'Work Sans', sans-serif", weight: '700' },
+          bodyFont: { family: "'Work Sans', sans-serif" },
+          callbacks: {
+            label: function(item) { return item.dataset.label + ': ' + numberWithCommas(item.raw); }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: { font: { family: "'Work Sans', sans-serif", size: 11 } },
+          grid: { color: '#f0f0f0' }
+        },
+        x: {
+          ticks: { font: { family: "'Work Sans', sans-serif", size: 11 } },
+          grid: { display: false }
+        }
+      }
+    }
+  });
+
+  // ── Flips Chart ──
+  // Group flips by cycle
+  const flipCycles = {};
+  for (const f of chamber_flips) {
+    if (!flipCycles[f.cycle]) flipCycles[f.cycle] = { dToR: 0, rToD: 0 };
+    if (f.from === 'D' && f.to === 'R') flipCycles[f.cycle].dToR++;
+    if (f.from === 'R' && f.to === 'D') flipCycles[f.cycle].rToD++;
+  }
+  const flipLabels = Object.keys(flipCycles).sort();
+
+  new Chart(document.getElementById('flipsChart'), {
+    type: 'bar',
+    data: {
+      labels: flipLabels,
+      datasets: [
+        {
+          label: 'D \u2192 R',
+          data: flipLabels.map(c => flipCycles[c].dToR),
+          backgroundColor: '#e50963',
+          borderRadius: 4,
+        },
+        {
+          label: 'R \u2192 D',
+          data: flipLabels.map(c => flipCycles[c].rToD),
+          backgroundColor: '#6cb3d2',
+          borderRadius: 4,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: { font: { family: "'Work Sans', sans-serif", weight: '600', size: 12 }, usePointStyle: true, pointStyle: 'rect' }
+        },
+        tooltip: {
+          backgroundColor: '#043858',
+          titleFont: { family: "'Work Sans', sans-serif", weight: '700' },
+          bodyFont: { family: "'Work Sans', sans-serif" },
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: { font: { family: "'Work Sans', sans-serif", size: 11 }, stepSize: 1 },
+          grid: { color: '#f0f0f0' }
+        },
+        x: {
+          ticks: { font: { family: "'Work Sans', sans-serif", size: 11 } },
+          grid: { display: false }
+        }
+      }
+    }
+  });
+
+  // ── Supermajority Table ──
+  const superChambers = chambers.filter(c => c.has_supermajority).sort((a, b) => a.state.localeCompare(b.state));
+  const superTbody = document.getElementById('super-tbody');
+  for (const c of superChambers) {
+    const label = getChamberLabel(c.state, c.chamber);
+    const party = c.control_status === 'R' ? 'Republican' : 'Democratic';
+    const seats = c.control_status === 'R' ? c.r_seats : c.d_seats;
+    const margin = seats - c.veto_threshold;
+    const pcls = c.control_status === 'D' ? 'flip-d' : 'flip-r';
+    const tr = document.createElement('tr');
+    tr.innerHTML =
+      '<td>' + c.state_name + '</td>' +
+      '<td>' + label + '</td>' +
+      '<td class="' + pcls + '">' + party + '</td>' +
+      '<td>' + seats + ' / ' + c.total_seats + '</td>' +
+      '<td>' + c.veto_threshold + ' (' + (c.supermajority ? c.supermajority.veto_override || '—' : '—') + ')</td>' +
+      '<td>+' + margin + '</td>';
+    superTbody.appendChild(tr);
+  }
+
+  // ── Closest Margins Table ──
+  const sortedByMargin = chambers
+    .filter(c => c.control_status === 'D' || c.control_status === 'R')
+    .sort((a, b) => Math.abs(a.margin) - Math.abs(b.margin))
+    .slice(0, 15);
+  const marginTbody = document.getElementById('margin-tbody');
+  for (const c of sortedByMargin) {
+    const label = getChamberLabel(c.state, c.chamber);
+    const pcls = c.control_status === 'D' ? 'flip-d' : 'flip-r';
+    const tr = document.createElement('tr');
+    tr.innerHTML =
+      '<td>' + c.state_name + '</td>' +
+      '<td>' + label + '</td>' +
+      '<td class="' + pcls + '">' + (c.control_status === 'D' ? 'Democratic' : 'Republican') + '</td>' +
+      '<td>' + c.d_seats + '</td>' +
+      '<td>' + c.r_seats + '</td>' +
+      '<td>' + c.majority_threshold + '</td>' +
+      '<td>' + (c.margin >= 0 ? '+' : '') + c.margin + '</td>';
+    marginTbody.appendChild(tr);
+  }
+
+})();
+</script>
 </body>
 </html>

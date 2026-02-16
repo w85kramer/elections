@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>State Legislatures | State Elections Tracker</title>
+<title>2026 State Legislature Elections | State Elections Tracker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/common.css">
@@ -28,27 +28,185 @@
   }
   .subnav a:hover { border-color: var(--ms-navy); color: var(--ms-navy); }
   .subnav a.active { background: var(--ms-navy); border-color: var(--ms-navy); color: white; }
-  .placeholder-notice {
-    background: #fff8e1;
-    border: 2px dashed #d0ac60;
-    border-radius: var(--ms-radius);
-    padding: 24px;
-    margin: 32px 0;
-    text-align: center;
+
+  .leg-stats {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
   }
-  .placeholder-notice p {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    color: #856404;
+
+  /* Ratings bar */
+  .ratings-bar-section { margin-bottom: 32px; }
+  .ratings-bar-section h3 {
+    font-weight: 700; font-size: 14px; color: var(--ms-text-light);
+    margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .ratings-bar {
+    display: flex;
+    height: 32px;
+    border-radius: var(--ms-radius);
+    overflow: hidden;
     margin-bottom: 8px;
   }
-  .placeholder-notice p:last-child { margin-bottom: 0; }
-  .map-links {
+  .ratings-bar div {
     display: flex;
-    gap: 8px;
-    margin-top: 16px;
+    align-items: center;
     justify-content: center;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: white;
+    transition: flex 0.3s;
+    min-width: 28px;
+  }
+  .ratings-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    font-size: 12px;
+    font-family: 'Work Sans', sans-serif;
+  }
+  .ratings-legend span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .ratings-legend .swatch {
+    width: 12px; height: 12px; border-radius: 2px;
+  }
+
+  /* Map embed */
+  .map-embed {
+    width: 100%;
+    height: 680px;
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    margin-bottom: 32px;
+  }
+
+  /* Filters */
+  .filters-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+    align-items: center;
+  }
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .filter-group label {
+    font-weight: 600; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--ms-text-light);
+  }
+  .filter-group select, .filter-group input {
+    padding: 6px 10px;
+    border: 2px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 13px;
+    background: white;
+    cursor: pointer;
+  }
+  .filter-group select:focus, .filter-group input:focus { border-color: var(--ms-navy); outline: none; }
+  .results-count {
+    font-size: 13px;
+    color: var(--ms-text-light);
+    margin-bottom: 16px;
+  }
+
+  /* Chamber cards */
+  .chamber-card {
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    transition: box-shadow 0.15s;
+  }
+  .chamber-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .chamber-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .chamber-name {
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--ms-navy);
+    text-decoration: none;
+  }
+  .chamber-name:hover { text-decoration: underline; }
+  .chamber-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .badge-d { background: #6cb3d2; color: white; }
+  .badge-r { background: #e50963; color: white; }
+  .badge-coalition { background: #8b567f; color: white; }
+  .badge-tied { background: #fff3cd; color: #856404; border: 1px solid #d0ac60; }
+  .badge-solid-d { background: #1a4a63; color: white; }
+  .badge-likely-d { background: #4a8fad; color: white; }
+  .badge-lean-d { background: #6cb3d2; color: white; }
+  .badge-toss-up { background: #fff3cd; color: #856404; border: 1px solid #d0ac60; }
+  .badge-lean-r { background: #e86987; color: white; }
+  .badge-likely-r { background: #e50963; color: white; }
+  .badge-solid-r { background: #9e063f; color: white; }
+  .badge-supermajority { background: #d4edda; color: #155724; border: 1px solid #a3d4ad; }
+  .comp-bar {
+    display: flex;
+    height: 24px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .comp-bar div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    min-width: 20px;
+  }
+  .chamber-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 6px 24px;
+    font-size: 13px;
+    color: var(--ms-text-light);
+    margin-top: 8px;
+  }
+  .chamber-details .detail-label {
+    font-weight: 600;
+    color: var(--ms-text);
+  }
+  .chamber-note {
+    font-size: 12px;
+    color: #666;
+    margin-top: 6px;
+    font-style: italic;
+  }
+  .empty-state {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--ms-text-light);
+  }
+
+  @media (max-width: 768px) {
+    .leg-stats { grid-template-columns: repeat(2, 1fr); }
+    .chamber-details { grid-template-columns: 1fr; }
+    .map-embed { height: 400px; }
   }
 </style>
 </head>
@@ -70,22 +228,263 @@
     <a href="legislatures-analytics.html">Trends & Analytics</a>
   </div>
 
-  <h1 class="heading-xl" style="margin-bottom: 8px">State Legislatures</h1>
+  <h1 class="heading-xl" style="margin-bottom: 8px">2026 State Legislature Elections</h1>
   <p class="subtitle mb-16">Chamber control, seat counts, and the 2026 legislative landscape</p>
 
-  <div class="placeholder-notice">
-    <p>Content coming soon.</p>
-    <p style="font-weight:400;font-size:13px;color:#666">This page will feature state legislative seat counts, chamber control status, and 2026 races.</p>
-    <div class="map-links">
-      <a href="legislatures_partisan.html" style="display:inline-block;padding:6px 14px;border:1px solid var(--ms-border);border-radius:var(--ms-radius);font-size:13px;font-weight:600;text-decoration:none;color:var(--ms-dem-blue);transition:all 0.15s">Partisan Map &rarr;</a>
-    </div>
+  <!-- Stats -->
+  <div class="leg-stats" id="stats-row">
+    <div class="card stat-card"><div class="stat-number" id="stat-chambers">—</div><div class="stat-label">Chambers with Elections</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-seats">—</div><div class="stat-label">Seats Up</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-dem" style="color:var(--ms-dem-blue)">—</div><div class="stat-label">D-Controlled Chambers</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-gop" style="color:var(--ms-rep-red)">—</div><div class="stat-label">R-Controlled Chambers</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-close" style="color:#c59000">—</div><div class="stat-label">Margin &le; 5 Seats</div></div>
   </div>
 
-  <div class="site-footer">
+  <!-- Ratings bar -->
+  <div class="ratings-bar-section">
+    <h3>Chamber Forecast Ratings</h3>
+    <div class="ratings-bar" id="ratings-bar"></div>
+    <div class="ratings-legend" id="ratings-legend"></div>
+  </div>
+
+  <!-- Map -->
+  <div class="section">
+    <iframe class="map-embed" src="legislatures_partisan.html" title="Legislative Partisan Map"></iframe>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters-bar">
+    <div class="filter-group">
+      <label>Search</label>
+      <input type="text" id="filter-search" placeholder="State name..." style="width:140px">
+    </div>
+    <div class="filter-group">
+      <label>Chamber</label>
+      <select id="filter-chamber">
+        <option value="">All</option>
+        <option value="Senate">Senate</option>
+        <option value="Lower">House/Assembly</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Control</label>
+      <select id="filter-control">
+        <option value="">All</option>
+        <option value="D">Democratic</option>
+        <option value="R">Republican</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Rating</label>
+      <select id="filter-rating"><option value="">All Ratings</option></select>
+    </div>
+  </div>
+  <div class="results-count" id="results-count"></div>
+
+  <!-- Chamber cards -->
+  <div id="chambers-list"></div>
+
+  <div class="site-footer" style="margin-top:32px">
     <img src="assets/multistate-logomark.png" alt="MultiState">
-    <div class="footer-text">State Elections Tracker &mdash; Data compiled by MultiState</div>
+    <span class="footer-text">Source: MultiState, StateNavigate. Data generated <span id="gen-date"></span>.</span>
   </div>
 
 </div>
+
+<script src="js/common.js"></script>
+<script>
+(async function() {
+  const data = await loadJSON('data/legislatures_data.json');
+  const chambers = data.chambers;
+  const summary = data.summary;
+
+  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+
+  // Stats
+  document.getElementById('stat-chambers').textContent = summary.chambers_with_elections_2026;
+  document.getElementById('stat-seats').textContent = numberWithCommas(summary.seats_up_2026);
+  document.getElementById('stat-dem').textContent = summary.d_chambers;
+  document.getElementById('stat-gop').textContent = summary.r_chambers;
+  const closeMargins = chambers.filter(c => Math.abs(c.margin) <= 5 && c.control_status !== 'Nonpartisan').length;
+  document.getElementById('stat-close').textContent = closeMargins;
+
+  // Ratings bar
+  const RATING_COLORS = {
+    'Solid D': '#1a4a63', 'Likely D': '#4a8fad', 'Lean D': '#6cb3d2',
+    'Toss-Up': '#f5c542',
+    'Lean R': '#e86987', 'Likely R': '#e50963', 'Solid R': '#9e063f'
+  };
+  const RATING_ORDER = ['Solid D', 'Likely D', 'Lean D', 'Toss-Up', 'Lean R', 'Likely R', 'Solid R'];
+
+  const ratingCounts = {};
+  for (const c of chambers) {
+    if (c.forecast_rating) {
+      ratingCounts[c.forecast_rating] = (ratingCounts[c.forecast_rating] || 0) + 1;
+    }
+  }
+
+  const bar = document.getElementById('ratings-bar');
+  const legend = document.getElementById('ratings-legend');
+  for (const rating of RATING_ORDER) {
+    const count = ratingCounts[rating] || 0;
+    if (count === 0) continue;
+    const seg = document.createElement('div');
+    seg.style.flex = count;
+    seg.style.background = RATING_COLORS[rating];
+    seg.textContent = count;
+    seg.title = rating + ': ' + count;
+    bar.appendChild(seg);
+    legend.innerHTML += '<span><span class="swatch" style="background:' + RATING_COLORS[rating] + '"></span>' + rating + ' (' + count + ')</span>';
+  }
+
+  // Rating filter options
+  const ratingSel = document.getElementById('filter-rating');
+  for (const rating of RATING_ORDER) {
+    if (ratingCounts[rating]) {
+      const opt = document.createElement('option');
+      opt.value = rating;
+      opt.textContent = rating + ' (' + ratingCounts[rating] + ')';
+      ratingSel.appendChild(opt);
+    }
+  }
+
+  function controlBadge(ctrl) {
+    if (ctrl === 'D') return '<span class="chamber-badge badge-d">DEM</span>';
+    if (ctrl === 'R') return '<span class="chamber-badge badge-r">GOP</span>';
+    if (ctrl === 'Coalition') return '<span class="chamber-badge badge-coalition">Coalition</span>';
+    if (ctrl === 'Tied') return '<span class="chamber-badge badge-tied">Tied</span>';
+    return '<span class="chamber-badge badge-coalition">' + ctrl + '</span>';
+  }
+
+  function forecastBadge(forecast) {
+    if (!forecast) return '';
+    const cls = 'badge-' + forecast.toLowerCase().replace(/\s+/g, '-');
+    return '<span class="chamber-badge ' + cls + '">' + forecast + '</span>';
+  }
+
+  function isLowerChamber(c) {
+    return c.chamber !== 'Senate';
+  }
+
+  // Competitiveness sort order
+  const ratingSort = {
+    'Toss-Up': 0, 'Lean D': 1, 'Lean R': 1,
+    'Likely D': 2, 'Likely R': 2,
+    'Solid D': 3, 'Solid R': 3
+  };
+
+  function getFiltered() {
+    const search = document.getElementById('filter-search').value.toLowerCase();
+    const chamber = document.getElementById('filter-chamber').value;
+    const control = document.getElementById('filter-control').value;
+    const rating = document.getElementById('filter-rating').value;
+
+    return chambers.filter(c => {
+      if (search && !c.state_name.toLowerCase().includes(search) && !c.state.toLowerCase().includes(search)) return false;
+      if (chamber === 'Senate' && c.chamber !== 'Senate') return false;
+      if (chamber === 'Lower' && c.chamber === 'Senate') return false;
+      if (control === 'D' && c.control_status !== 'D') return false;
+      if (control === 'R' && c.control_status !== 'R') return false;
+      if (control === 'Other' && c.control_status !== 'Coalition' && c.control_status !== 'Tied' && c.control_status !== 'Nonpartisan' && c.control_status !== 'Power_Sharing') return false;
+      if (rating && c.forecast_rating !== rating) return false;
+      return true;
+    });
+  }
+
+  function render() {
+    const filtered = getFiltered();
+    const list = document.getElementById('chambers-list');
+    const countEl = document.getElementById('results-count');
+
+    // Sort: competitive first, then alphabetical
+    filtered.sort((a, b) => {
+      const aR = ratingSort[a.forecast_rating] ?? 99;
+      const bR = ratingSort[b.forecast_rating] ?? 99;
+      if (aR !== bR) return aR - bR;
+      if (a.state !== b.state) return a.state.localeCompare(b.state);
+      return a.chamber.localeCompare(b.chamber);
+    });
+
+    if (filtered.length === chambers.length) {
+      countEl.textContent = 'Showing all ' + filtered.length + ' chambers';
+    } else {
+      countEl.textContent = 'Showing ' + filtered.length + ' of ' + chambers.length + ' chambers';
+    }
+
+    if (filtered.length === 0) {
+      list.innerHTML = '<div class="empty-state">No chambers match the current filters.</div>';
+      return;
+    }
+
+    let html = '';
+    for (const c of filtered) {
+      const chamberLabel = getChamberLabel(c.state, c.chamber);
+      const title = c.state_name + ' ' + chamberLabel;
+
+      // Composition bar
+      const total = c.total_seats;
+      let compBar = '<div class="comp-bar">';
+      if (c.d_seats > 0) {
+        const pct = (c.d_seats / total * 100).toFixed(1);
+        compBar += '<div style="flex:' + c.d_seats + ';background:#6cb3d2">' + (pct > 8 ? c.d_seats : '') + '</div>';
+      }
+      if (c.other_seats > 0) {
+        compBar += '<div style="flex:' + c.other_seats + ';background:#888">' + (c.other_seats > 2 ? c.other_seats : '') + '</div>';
+      }
+      if (c.vacant_seats > 0) {
+        compBar += '<div style="flex:' + c.vacant_seats + ';background:#ccc">' + (c.vacant_seats > 2 ? c.vacant_seats : '') + '</div>';
+      }
+      if (c.r_seats > 0) {
+        const pct = (c.r_seats / total * 100).toFixed(1);
+        compBar += '<div style="flex:' + c.r_seats + ';background:#e50963">' + (pct > 8 ? c.r_seats : '') + '</div>';
+      }
+      compBar += '</div>';
+
+      // Details
+      let details = '';
+      details += '<span><span class="detail-label">Total Seats:</span> ' + total + '</span>';
+      details += '<span><span class="detail-label">Majority:</span> ' + c.majority_threshold + '</span>';
+      details += '<span><span class="detail-label">Margin:</span> ' + (c.margin >= 0 ? '+' : '') + c.margin + '</span>';
+      if (c.has_elections_2026) {
+        details += '<span><span class="detail-label">Seats Up:</span> ' + c.seats_up_2026 + '</span>';
+        details += '<span><span class="detail-label">Filing Deadline:</span> ' + (c.filing_deadline ? formatDateShort(c.filing_deadline) : '—') + '</span>';
+        details += '<span><span class="detail-label">Primary:</span> ' + (c.primary_date ? formatDateShort(c.primary_date) : '—') + '</span>';
+      } else {
+        details += '<span><span class="detail-label">2026:</span> No seats up</span>';
+      }
+
+      // Supermajority note
+      let noteHtml = '';
+      if (c.has_supermajority) {
+        const party = c.control_status === 'R' ? 'Republicans' : 'Democrats';
+        noteHtml = '<div class="chamber-note">' + party + ' hold a veto-override supermajority' + (c.supermajority && c.supermajority.veto_override ? ' (' + c.supermajority.veto_override + ')' : '') + '</div>';
+      }
+      if (c.coalition_desc) {
+        noteHtml += '<div class="chamber-note">' + c.coalition_desc + '</div>';
+      }
+
+      html += '<div class="chamber-card">' +
+        '<div class="chamber-header">' +
+          '<a href="state.html?st=' + c.state + '" class="chamber-name">' + title + '</a>' +
+          controlBadge(c.control_status) +
+          forecastBadge(c.forecast_rating) +
+          (c.has_supermajority ? '<span class="chamber-badge badge-supermajority">Supermajority</span>' : '') +
+        '</div>' +
+        compBar +
+        '<div class="chamber-details">' + details + '</div>' +
+        noteHtml +
+      '</div>';
+    }
+    list.innerHTML = html;
+  }
+
+  render();
+  document.getElementById('filter-search').addEventListener('input', render);
+  document.getElementById('filter-chamber').addEventListener('change', render);
+  document.getElementById('filter-control').addEventListener('change', render);
+  document.getElementById('filter-rating').addEventListener('change', render);
+})();
+</script>
 </body>
 </html>

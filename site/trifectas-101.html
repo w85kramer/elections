@@ -143,28 +143,80 @@
   .inline-tt-state { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
   .inline-tt-type { font-weight: 400; opacity: 0.9; }
 
-  .placeholder-notice {
-    background: #fff8e1;
-    border: 2px dashed #d0ac60;
-    border-radius: var(--ms-radius);
-    padding: 24px;
-    margin: 32px 0;
-    text-align: center;
+  .tri-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 36px;
   }
-  .placeholder-notice p {
-    font-family: 'Work Sans', sans-serif !important;
-    font-weight: 600 !important;
+  .callout {
+    background: #f0f5f8;
+    border-left: 4px solid var(--ms-navy);
+    padding: 20px 24px;
+    border-radius: 0 var(--ms-radius) var(--ms-radius) 0;
+    margin: 28px 0;
+  }
+  .callout p {
+    margin-bottom: 8px;
     font-size: 14px !important;
-    color: #856404 !important;
-    margin-bottom: 8px !important;
   }
-  .placeholder-notice p:last-child { margin-bottom: 0 !important; }
+  .callout p:last-child { margin-bottom: 0; }
+  .article-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+  }
+  .article-body th {
+    background: var(--ms-navy);
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .article-body td {
+    padding: 8px 14px;
+    border-bottom: 1px solid #eee;
+  }
+  .article-body tr:hover td { background: #f8f9fa; }
+  .whats-next {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .whats-next a {
+    flex: 1;
+    display: block;
+    padding: 20px 24px;
+    border: 2px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .whats-next a:hover { border-color: var(--ms-navy); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .whats-next .next-label {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ms-navy);
+    margin-bottom: 4px;
+  }
+  .whats-next .next-desc {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--ms-text-light);
+  }
 
   @media (max-width: 768px) {
     .article-body h2 { font-size: 22px; margin-top: 36px; }
     .lead { font-size: 15px !important; }
     .inline-map-section { width: 100%; }
     .inline-legend-label { font-size: 12px; }
+    .tri-stats { grid-template-columns: repeat(2, 1fr); }
+    .whats-next { flex-direction: column; }
   }
 </style>
 </head>
@@ -182,20 +234,48 @@
 
   <div class="subnav">
     <a href="trifectas-101.html" class="active">Overview</a>
-    <a href="trifectas.html">2026 Elections</a>
+    <a href="trifectas.html">Current Status</a>
     <a href="trifectas-analytics.html">Trends & Analytics</a>
   </div>
 
   <h1 class="heading-xl" style="margin-bottom: 8px">Trifectas 101</h1>
   <p class="subtitle mb-16">A Guide to Unified Party Control in the American States</p>
 
+  <!-- Stats -->
+  <div class="tri-stats" id="tri-stats">
+    <div class="card stat-card"><div class="stat-number" id="stat-dem" style="color:var(--ms-dem-blue)">—</div><div class="stat-label">Dem Trifectas</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-rep" style="color:var(--ms-rep-red)">—</div><div class="stat-label">GOP Trifectas</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-split" style="color:var(--ms-purple)">—</div><div class="stat-label">Divided States</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-competitive" style="color:#c59000">—</div><div class="stat-label">Competitive in 2026</div></div>
+  </div>
+
   <div class="article-body">
 
-    <!-- Inline Legislatures Map -->
+    <p class="lead">A trifecta exists when one political party controls the governor's office and both chambers of the state legislature. When that happens, that party has a relatively easy path to enact its preferred public policies &mdash; and the consequences are often dramatic and immediate.</p>
+
+    <h2>What Is a Trifecta?</h2>
+
+    <p>The term "trifecta" in state government describes unified one-party control: the governor, the state senate, and the state house (or assembly) are all held by the same party. When a state doesn't have a trifecta, it's said to have "divided government" &mdash; meaning at least one branch is controlled by the opposing party.</p>
+
+    <p>Today, <span id="inline-d-tri">16</span> states have Democratic trifectas, <span id="inline-r-tri">23</span> have Republican trifectas, and only <span id="inline-split">11</span> have divided government. That's near the modern record for one-party control &mdash; and a dramatic change from just a few decades ago, when split government was the norm and trifectas were the exception.</p>
+
+    <h2>Trifectas Have Consequences</h2>
+
+    <p>When a party gains a new trifecta after years of divided government, expect a rush of policy changes. Political scientists call it "bottleneck bursting" &mdash; years of bottled-up legislative priorities suddenly have a clear path to the governor's desk.</p>
+
+    <p>Michigan and Minnesota offer the most vivid recent examples. After Democrats gained trifectas in both states following the 2022 elections, the policy floodgates opened. In just months, Michigan repealed its right-to-work law, enacted gun control measures, and passed abortion protections. Minnesota passed paid family leave, recreational marijuana legalization, and a suite of progressive tax reforms. These were priorities that had been blocked for years by divided government.</p>
+
+    <p>Republicans demonstrated the same dynamic after the 2010 wave, when new GOP trifectas across the Midwest and South enacted right-to-work laws, voter ID requirements, tax cuts, and regulatory rollbacks at a pace that would have been impossible under divided government.</p>
+
+    <div class="callout">
+      <p><strong>The pattern is consistent:</strong> New trifectas produce more legislation, faster, than any other governing arrangement. The first year of a new trifecta typically produces more significant policy changes than the previous four years of divided government combined.</p>
+    </div>
+
+    <!-- Inline Map -->
     <div class="inline-map-section" style="margin:28px 0">
       <div class="inline-map-tabs" style="display:flex;gap:8px;margin-bottom:16px">
-        <button class="inline-tab active" data-view="partisan" onclick="switchLegMap('partisan')">Legislative Control</button>
-        <button class="inline-tab" data-view="trifecta" onclick="switchLegMap('trifecta')">Trifectas</button>
+        <button class="inline-tab" data-view="partisan" onclick="switchLegMap('partisan')">Legislative Control</button>
+        <button class="inline-tab active" data-view="trifecta" onclick="switchLegMap('trifecta')">Trifectas</button>
       </div>
       <div class="inline-map-wrapper">
         <div class="inline-map-legend" id="leg-legend"></div>
@@ -235,13 +315,13 @@
 <g class="state-group" data-state="CT">
       <g class="state-fill" fill="#d9d9d9"><path d="m2035.3391 433.6652l-7.9364014 2.8841248l-8.37854 2.6628113l-5.0706787 0.66638184l-4.6297607 3.1066895l-1.5413818 -0.6684265l-3.7503662 2.8873596l-2.2045898 3.106659l-5.732666 4.2165527l-5.510742 3.9944153l-2.2045898 -4.2157593l2.2045898 -1.9975891l-0.22106934 -11.983643l-3.968628 -20.193756l43.874146 -9.987213l2.8657227 7.989624l1.9851074 7.3232117z" /></g>
       <g class="state-stroke" fill="none" stroke="#ffffff" stroke-width="1.0"><path d="m2035.3391 433.6652l-7.9364014 2.8841248l-8.37854 2.6628113l-5.0706787 0.66638184l-4.6297607 3.1066895l-1.5413818 -0.6684265l-3.7503662 2.8873596l-2.2045898 3.106659l-5.732666 4.2165527l-5.510742 3.9944153l-2.2045898 -4.2157593l2.2045898 -1.9975891l-0.22106934 -11.983643l-3.968628 -20.193756l43.874146 -9.987213l2.8657227 7.989624l1.9851074 7.3232117z" /></g>
-      <path d="m2050.3374 454.9885q-0.453125 1.65625 -1.46875 2.71875q-1.015625 1.0625 -2.40625 1.5625q-1.390625 0.484375 -3.0625 0.484375q-2.40625 0 -4.15625 -0.96875q-1.75 -0.96875 -2.6875 -2.796875q-0.9375 -1.828125 -0.9375 -4.390625q0 -2.5625 0.9375 -4.390625q0.9375 -1.828125 2.6875 -2.796875q1.75 -0.96875 4.125 -0.96875q1.65625 0 3.046875 0.46875q1.390625 0.46875 2.34375 1.4375q0.96875 0.953125 1.375 2.453125l-3.625 1.46875q-0.328125 -1.484375 -1.09375 -2.03125q-0.75 -0.5625 -1.90625 -0.5625q-1.125 0 -1.953125 0.5625q-0.828125 0.546875 -1.28125 1.640625q-0.4375 1.09375 -0.4375 2.71875q0 1.609375 0.40625 2.71875q0.421875 1.09375 1.25 1.65625q0.828125 0.546875 2.046875 0.546875q1.15625 0 1.953125 -0.625q0.8125 -0.640625 1.09375 -1.96875l3.75 1.0625zm15.625244 -11.3125l0 3.203125l-5.171875 0l0 12.640625l-4.125 0l0 -12.640625l-5.1875 0l0 -3.203125l14.484375 0z" fill="#276181" />
+      <path d="m2050.3374 454.9885q-0.453125 1.65625 -1.46875 2.71875q-1.015625 1.0625 -2.40625 1.5625q-1.390625 0.484375 -3.0625 0.484375q-2.40625 0 -4.15625 -0.96875q-1.75 -0.96875 -2.6875 -2.796875q-0.9375 -1.828125 -0.9375 -4.390625q0 -2.5625 0.9375 -4.390625q0.9375 -1.828125 2.6875 -2.796875q1.75 -0.96875 4.125 -0.96875q1.65625 0 3.046875 0.46875q1.390625 0.46875 2.34375 1.4375q0.96875 0.953125 1.375 2.453125l-3.625 1.46875q-0.328125 -1.484375 -1.09375 -2.03125q-0.75 -0.5625 -1.90625 -0.5625q-1.125 0 -1.953125 0.5625q-0.828125 0.546875 -1.28125 1.640625q-0.4375 1.09375 -0.4375 2.71875q0 1.609375 0.40625 2.71875q0.421875 1.09375 1.25 1.65625q0.828125 0.546875 2.046875 0.546875q1.15625 0 1.953125 -0.625q0.8125 -0.640625 1.09375 -1.96875l3.75 1.0625zm15.625244 -11.3125l0 3.203125l-5.171875 0l0 12.640625l-4.125 0l0 -12.640625l-5.1875 0l0 -3.203125l14.484375 0z" fill="#6cb3d2" />
 
     </g>
 <g class="state-group" data-state="DE">
       <g class="state-fill" fill="#d9d9d9"><path d="m1944.7363 514.7584l5.9522705 -5.996063l4.630371 0.22250366l-3.3077393 7.5498047l-0.44091797 4.441101l2.8668213 4.885254l4.850342 2.6645508l1.9837646 4.6624146l3.3076172 6.8843384l4.6292725 3.9970093l3.3077393 0l0.66101074 5.3289795l1.9847412 5.55072l-9.26001 1.5549316l-9.039795 0.88830566l-4.850586 -19.763184l-3.9683838 -14.211304z" /></g>
       <g class="state-stroke" fill="none" stroke="#ffffff" stroke-width="1.0"><path d="m1944.7363 514.7584l5.9522705 -5.996063l4.630371 0.22250366l-3.3077393 7.5498047l-0.44091797 4.441101l2.8668213 4.885254l4.850342 2.6645508l1.9837646 4.6624146l3.3076172 6.8843384l4.6292725 3.9970093l3.3077393 0l0.66101074 5.3289795l1.9847412 5.55072l-9.26001 1.5549316l-9.039795 0.88830566l-4.850586 -19.763184l-3.9683838 -14.211304z" /></g>
-      <path d="m1989.1874 532.4873q3.71875 0 5.703125 2.0625q1.984375 2.0625 1.984375 5.859375q0 3.796875 -1.984375 5.859375q-1.984375 2.0625 -5.703125 2.0625l-6.71875 0l0 -15.84375l6.71875 0zm-0.40625 12.71875q2.015625 0 2.9375 -1.203125q0.921875 -1.21875 0.921875 -3.59375q0 -2.375 -0.921875 -3.578125q-0.921875 -1.21875 -2.9375 -1.21875l-2.1875 0l0 9.59375l2.1875 0zm10.919434 3.125l0 -15.84375l12.34375 0l0 3.203125l-8.21875 0l0 3.203125l6.53125 0l0 3.0l-6.53125 0l0 3.25l8.53125 0l0 3.1875l-12.65625 0z" fill="#276181" />
+      <path d="m1989.1874 532.4873q3.71875 0 5.703125 2.0625q1.984375 2.0625 1.984375 5.859375q0 3.796875 -1.984375 5.859375q-1.984375 2.0625 -5.703125 2.0625l-6.71875 0l0 -15.84375l6.71875 0zm-0.40625 12.71875q2.015625 0 2.9375 -1.203125q0.921875 -1.21875 0.921875 -3.59375q0 -2.375 -0.921875 -3.578125q-0.921875 -1.21875 -2.9375 -1.21875l-2.1875 0l0 9.59375l2.1875 0zm10.919434 3.125l0 -15.84375l12.34375 0l0 3.203125l-8.21875 0l0 3.203125l6.53125 0l0 3.0l-6.53125 0l0 3.25l8.53125 0l0 3.1875l-12.65625 0z" fill="#6cb3d2" />
 
     </g>
 <g class="state-group" data-state="FL">
@@ -269,7 +349,7 @@
       <path d="m934.93115 926.21747l6.111389 -1.3431396l-4.1123047 -3.666748l-2.4691162 -4.154175l-2.7021484 -4.522339l-2.5860596 -4.0323486l-8.226196 3.7885132l-2.350525 2.0771484l1.2918091 3.7885132l2.8205566 5.0098877l2.5861816 1.9552002l4.230957 -0.97753906l3.5252075 2.4440308z" />
       <path d="m850.78284 903.36993l2.9385376 -2.9331055l1.057251 -3.3000488l-4.347412 0.97772217l-2.5857544 3.6657715l-0.47003174 2.9330444l1.9973145 0.61206055z" />
       <path d="m867.3553 898.1151l5.8756714 3.1760864l4.8182373 0.8557129l2.1160278 -4.2768555l1.2930908 -5.9868774l-2.2332153 -3.2993164l-7.8745728 -0.24371338l-4.935364 2.6875l-1.9989014 3.5443115l0.82299805 3.1762085z" /></g>
-      <path d="m969.55927 982.25653l0 15.84375l-4.140625 0l0 -15.84375l4.140625 0zm-10.1875 0l0 15.84375l-4.125 0l0 -15.84375l4.125 0zm8.265625 6.265625l0 3.1875l-10.375 0l0 -3.1875l10.375 0zm9.542297 -6.265625l0 15.84375l-4.125 0l0 -15.84375l4.125 0z" fill="#276181" />
+      <path d="m969.55927 982.25653l0 15.84375l-4.140625 0l0 -15.84375l4.140625 0zm-10.1875 0l0 15.84375l-4.125 0l0 -15.84375l4.125 0zm8.265625 6.265625l0 3.1875l-10.375 0l0 -3.1875l10.375 0zm9.542297 -6.265625l0 15.84375l-4.125 0l0 -15.84375l4.125 0z" fill="#6cb3d2" />
 
     </g>
 <g class="state-group" data-state="IA">
@@ -310,7 +390,7 @@
 <g class="state-group" data-state="MA">
       <g class="state-fill" fill="#d9d9d9"><path d="m2052.4717 422.83493l5.4677734 -3.5029907l-0.99658203 -1.2454834l-0.49316406 -1.5084229l5.222412 -4.004944l0.99487305 5.255554l3.4760742 -2.496521l4.479004 -4.2597656l7.460449 -2.7539062l4.225586 0l-2.4873047 -5.5056763l-2.9836426 1.0013428l-4.721924 4.5043335l-6.465332 -0.7490845l-3.9777832 -5.505249l-4.7246094 -7.760193l-3.4814453 -1.7529907l-3.7302246 1.5032959l-3.2313232 -4.756592l4.972046 -10.0095825l-4.7235107 -7.760193l-3.9779053 1.2510376l-2.4848633 3.5055542l-2.735962 1.2506104l-0.49865723 3.5059814l-50.968018 10.75824l0 26.281616l54.450317 -12.513794l6.4628906 9.510193z" /></g>
       <g class="state-stroke" fill="none" stroke="#ffffff" stroke-width="1.0"><path d="m2052.4717 422.83493l5.4677734 -3.5029907l-0.99658203 -1.2454834l-0.49316406 -1.5084229l5.222412 -4.004944l0.99487305 5.255554l3.4760742 -2.496521l4.479004 -4.2597656l7.460449 -2.7539062l4.225586 0l-2.4873047 -5.5056763l-2.9836426 1.0013428l-4.721924 4.5043335l-6.465332 -0.7490845l-3.9777832 -5.505249l-4.7246094 -7.760193l-3.4814453 -1.7529907l-3.7302246 1.5032959l-3.2313232 -4.756592l4.972046 -10.0095825l-4.7235107 -7.760193l-3.9779053 1.2510376l-2.4848633 3.5055542l-2.735962 1.2506104l-0.49865723 3.5059814l-50.968018 10.75824l0 26.281616l54.450317 -12.513794l6.4628906 9.510193z" /></g>
-      <path d="m2106.829 400.69943l0 15.84375l-3.65625 0l0 -7.265625l0.125 -4.875l-0.046875 0l-3.921875 12.140625l-3.328125 0l-3.90625 -12.140625l-0.0625 0l0.125 4.875l0 7.265625l-3.671875 0l0 -15.84375l5.875 0l2.5 8.0625l0.890625 3.359375l0.046875 0l0.90625 -3.328125l2.484375 -8.09375l5.640625 0zm17.902344 15.84375l-4.25 0l-1.109375 -3.578125l-5.421875 0l-1.125 3.578125l-4.15625 0l5.5625 -15.84375l4.953125 0l5.546875 15.84375zm-10.015625 -6.390625l3.890625 0l-1.9375 -6.40625l-1.953125 6.40625z" fill="#276181" />
+      <path d="m2106.829 400.69943l0 15.84375l-3.65625 0l0 -7.265625l0.125 -4.875l-0.046875 0l-3.921875 12.140625l-3.328125 0l-3.90625 -12.140625l-0.0625 0l0.125 4.875l0 7.265625l-3.671875 0l0 -15.84375l5.875 0l2.5 8.0625l0.890625 3.359375l0.046875 0l0.90625 -3.328125l2.484375 -8.09375l5.640625 0zm17.902344 15.84375l-4.25 0l-1.109375 -3.578125l-5.421875 0l-1.125 3.578125l-4.15625 0l5.5625 -15.84375l4.953125 0l5.546875 15.84375zm-10.015625 -6.390625l3.890625 0l-1.9375 -6.40625l-1.953125 6.40625z" fill="#6cb3d2" />
 
     </g>
 <g class="state-group" data-state="MD">
@@ -318,7 +398,7 @@
       <path d="m1914.5933 549.536l4.4069824 5.102539l2.644165 -3.7713623l-1.3220215 -4.437439l-4.4069824 0.66503906z" /></g>
       <g class="state-stroke" fill="none" stroke="#ffffff" stroke-width="1.0"><path d="m1846.9464 534.2167l12.779541 -3.3292236l9.254639 -1.109436l10.576172 -3.9960327l8.812622 0l22.03418 -4.2175293l18.287598 -4.661255l15.864746 -2.4414062l5.9489746 18.645447l3.526123 14.206848l2.6431885 9.988281l18.068237 -2.4414062l0 5.5495605l-1.1021729 5.993225l-1.5421143 4.6602783l-6.6102295 1.776123l-3.9659424 2.6640015l-3.746582 0.22259521l-1.7625732 -4.6627197l-2.2033691 -4.4386597l-4.8466797 1.3319702l-5.068115 -0.44415283l-1.7625732 -2.8850708l-2.4238281 -3.5523682l0.22045898 -4.217041l2.644287 -2.4414062l-1.3216553 -2.88562l-3.526123 0.66522217l-0.43981934 -3.9944458l3.7445068 -1.5546265l-1.3216553 -8.212524l-4.1875 -1.7756958l1.7646484 -5.328003l3.7445068 -3.994995l-0.43566895 -1.7746582l-1.7678223 0.44262695l-3.5250244 3.9960327l-3.085205 0.6642456l0.22155762 5.1063843l-1.5389404 2.666565l3.3013916 3.1046143l-1.7624512 8.212097l0.21936035 5.772156l1.7635498 6.437439l3.9659424 2.8850708l2.2023926 6.2148438l-2.4228516 3.3307495l-7.490967 -2.2198486l-8.594238 -0.22155762l-7.0511475 -1.9972534l-1.3216553 -4.662781l2.2033691 -5.5480347l2.864746 -5.1069336l2.6433105 -4.2160645l-1.1011963 -3.9960327l-4.6262207 0.44415283l-1.1021729 2.6640015l-5.0671387 -2.6640015l-5.7296143 -1.5545654l-1.9829102 -3.5523682l-5.5080566 -3.5507812l-5.288574 -5.7717285l-4.845581 -3.7723389l-4.407959 0l-4.628296 3.1066284l-2.2034912 3.329712l-8.813599 0l-3.5250244 5.770691l-4.6262207 -0.22155762l-6.3897705 9.768188l-2.6444092 0.22003174z" />
       <path d="m1914.5933 549.536l4.4069824 5.102539l2.644165 -3.7713623l-1.3220215 -4.437439l-4.4069824 0.66503906z" /></g>
-      <path d="m1997.5353 569.57916l0 15.84375l-3.65625 0l0 -7.265625l0.125 -4.875l-0.046875 0l-3.921875 12.140625l-3.328125 0l-3.90625 -12.140625l-0.0625 0l0.125 4.875l0 7.265625l-3.671875 0l0 -15.84375l5.875 0l2.5 8.0625l0.890625 3.359375l0.046875 0l0.90625 -3.328125l2.484375 -8.09375l5.640625 0zm10.214844 0q3.71875 0 5.703125 2.0625q1.984375 2.0625 1.984375 5.859375q0 3.796875 -1.984375 5.859375q-1.984375 2.0625 -5.703125 2.0625l-6.71875 0l0 -15.84375l6.71875 0zm-0.40625 12.71875q2.015625 0 2.9375 -1.203125q0.921875 -1.21875 0.921875 -3.59375q0 -2.375 -0.921875 -3.578125q-0.921875 -1.21875 -2.9375 -1.21875l-2.1875 0l0 9.59375l2.1875 0z" fill="#276181" />
+      <path d="m1997.5353 569.57916l0 15.84375l-3.65625 0l0 -7.265625l0.125 -4.875l-0.046875 0l-3.921875 12.140625l-3.328125 0l-3.90625 -12.140625l-0.0625 0l0.125 4.875l0 7.265625l-3.671875 0l0 -15.84375l5.875 0l2.5 8.0625l0.890625 3.359375l0.046875 0l0.90625 -3.328125l2.484375 -8.09375l5.640625 0zm10.214844 0q3.71875 0 5.703125 2.0625q1.984375 2.0625 1.984375 5.859375q0 3.796875 -1.984375 5.859375q-1.984375 2.0625 -5.703125 2.0625l-6.71875 0l0 -15.84375l6.71875 0zm-0.40625 12.71875q2.015625 0 2.9375 -1.203125q0.921875 -1.21875 0.921875 -3.59375q0 -2.375 -0.921875 -3.578125q-0.921875 -1.21875 -2.9375 -1.21875l-2.1875 0l0 9.59375l2.1875 0z" fill="#6cb3d2" />
 
     </g>
 <g class="state-group" data-state="ME">
@@ -377,7 +457,7 @@
 <g class="state-group" data-state="NJ">
       <g class="state-fill" fill="#d9d9d9"><path d="m1970.1775 523.4227l-1.1038818 5.330261l-0.22009277 4.218445l4.1920166 -2.2207031l1.7651367 -5.329529l0.22131348 -4.885803l6.8395996 -11.103455l3.3104248 -7.994629l0.66137695 -6.2176514l-0.8826904 -5.3294983l-0.21984863 -12.657501l-1.5454102 -3.5532532l-4.854126 0.22149658l-2.42688 -1.3318481l0.8828125 -2.2206726l0 -3.5532532l3.7503662 -6.218384l0.44152832 -8.438324l-9.708862 -2.6651306l-5.2956543 -0.44369507l-8.826172 -3.7747192l-3.5306396 2.8865967l-0.22009277 5.5517273l-4.192871 6.662079l1.9865723 3.3310242l0.4411621 3.5525208l-2.6478271 1.5555115l0 4.885071l2.4267578 2.4421692l3.5302734 -0.22146606l1.3239746 4.885803l9.047485 6.2176514l0 3.3302917l-4.8546143 2.2207031l-1.7651367 4.219879l-3.751709 4.6628723l-3.7503662 2.2207031l-1.9865723 4.4413757l-1.7651367 3.3317566l2.6478271 3.7747192l4.854248 4.885803l7.9437256 3.5525513z" /></g>
       <g class="state-stroke" fill="none" stroke="#ffffff" stroke-width="1.0"><path d="m1970.1775 523.4227l-1.1038818 5.330261l-0.22009277 4.218445l4.1920166 -2.2207031l1.7651367 -5.329529l0.22131348 -4.885803l6.8395996 -11.103455l3.3104248 -7.994629l0.66137695 -6.2176514l-0.8826904 -5.3294983l-0.21984863 -12.657501l-1.5454102 -3.5532532l-4.854126 0.22149658l-2.42688 -1.3318481l0.8828125 -2.2206726l0 -3.5532532l3.7503662 -6.218384l0.44152832 -8.438324l-9.708862 -2.6651306l-5.2956543 -0.44369507l-8.826172 -3.7747192l-3.5306396 2.8865967l-0.22009277 5.5517273l-4.192871 6.662079l1.9865723 3.3310242l0.4411621 3.5525208l-2.6478271 1.5555115l0 4.885071l2.4267578 2.4421692l3.5302734 -0.22146606l1.3239746 4.885803l9.047485 6.2176514l0 3.3302917l-4.8546143 2.2207031l-1.7651367 4.219879l-3.751709 4.6628723l-3.7503662 2.2207031l-1.9865723 4.4413757l-1.7651367 3.3317566l2.6478271 3.7747192l4.854248 4.885803l7.9437256 3.5525513z" /></g>
-      <path d="m2007.801 480.53122l0 15.84375l-4.578125 0l-4.921875 -8.5625l-1.203125 -2.359375l-0.03125 0l0.109375 2.9375l0 7.984375l-3.65625 0l0 -15.84375l4.59375 0l4.90625 8.578125l1.203125 2.34375l0.03125 0l-0.09375 -2.921875l0 -8.0l3.640625 0zm15.127686 0l0 9.75q0 3.0 -1.734375 4.671875q-1.734375 1.65625 -4.890625 1.65625q-2.328125 0 -3.75 -0.828125q-1.421875 -0.828125 -1.953125 -2.296875q-0.515625 -1.484375 -0.203125 -3.375l4.03125 -0.71875q-0.296875 2.1875 0.1875 3.09375q0.5 0.890625 1.828125 0.890625q1.296875 0 1.8125 -0.859375q0.53125 -0.875 0.53125 -2.671875l0 -9.3125l4.140625 0z" fill="#276181" />
+      <path d="m2007.801 480.53122l0 15.84375l-4.578125 0l-4.921875 -8.5625l-1.203125 -2.359375l-0.03125 0l0.109375 2.9375l0 7.984375l-3.65625 0l0 -15.84375l4.59375 0l4.90625 8.578125l1.203125 2.34375l0.03125 0l-0.09375 -2.921875l0 -8.0l3.640625 0zm15.127686 0l0 9.75q0 3.0 -1.734375 4.671875q-1.734375 1.65625 -4.890625 1.65625q-2.328125 0 -3.75 -0.828125q-1.421875 -0.828125 -1.953125 -2.296875q-0.515625 -1.484375 -0.203125 -3.375l4.03125 -0.71875q-0.296875 2.1875 0.1875 3.09375q0.5 0.890625 1.828125 0.890625q1.296875 0 1.8125 -0.859375q0.53125 -0.875 0.53125 -2.671875l0 -9.3125l4.140625 0z" fill="#6cb3d2" />
 
     </g>
 <g class="state-group" data-state="NM">
@@ -418,7 +498,7 @@
 <g class="state-group" data-state="RI">
       <g class="state-fill" fill="#d9d9d9"><path d="m2030.0364 408.41196l10.568359 -2.4404297l11.888428 17.314056l-2.8608398 1.3314514l-1.7593994 1.3256531l-1.1014404 -0.8876953l-1.5408936 0.22128296l-0.2208252 1.9978638l-1.1015625 1.5622253l-3.9647217 2.4415894l-4.8431396 2.4415894l0 -9.989044l-2.2006836 -8.213654z" /></g>
       <g class="state-stroke" fill="none" stroke="#ffffff" stroke-width="1.0"><path d="m2030.0364 408.41196l10.568359 -2.4404297l11.888428 17.314056l-2.8608398 1.3314514l-1.7593994 1.3256531l-1.1014404 -0.8876953l-1.5408936 0.22128296l-0.2208252 1.9978638l-1.1015625 1.5622253l-3.9647217 2.4415894l-4.8431396 2.4415894l0 -9.989044l-2.2006836 -8.213654z" /></g>
-      <path d="m2081.269 425.02286q2.828125 0 4.390625 1.34375q1.578125 1.328125 1.578125 3.53125q0 2.421875 -1.5625 3.703125q-1.546875 1.265625 -4.375 1.265625l-0.390625 0.21875l-3.140625 0l0 5.78125l-4.0625 0l0 -15.84375l7.5625 0zm-0.578125 7.125q1.203125 0 1.796875 -0.46875q0.609375 -0.484375 0.609375 -1.546875q0 -1.03125 -0.609375 -1.5q-0.59375 -0.484375 -1.796875 -0.484375l-2.921875 0l0 4.0l2.921875 0zm2.421875 0.875l5.0625 7.84375l-4.5625 0l-4.046875 -6.9375l3.546875 -0.90625zm11.254639 -8.0l0 15.84375l-4.125 0l0 -15.84375l4.125 0z" fill="#276181" />
+      <path d="m2081.269 425.02286q2.828125 0 4.390625 1.34375q1.578125 1.328125 1.578125 3.53125q0 2.421875 -1.5625 3.703125q-1.546875 1.265625 -4.375 1.265625l-0.390625 0.21875l-3.140625 0l0 5.78125l-4.0625 0l0 -15.84375l7.5625 0zm-0.578125 7.125q1.203125 0 1.796875 -0.46875q0.609375 -0.484375 0.609375 -1.546875q0 -1.03125 -0.609375 -1.5q-0.59375 -0.484375 -1.796875 -0.484375l-2.921875 0l0 4.0l2.921875 0zm2.421875 0.875l5.0625 7.84375l-4.5625 0l-4.046875 -6.9375l3.546875 -0.90625zm11.254639 -8.0l0 15.84375l-4.125 0l0 -15.84375l4.125 0z" fill="#6cb3d2" />
 
     </g>
 <g class="state-group" data-state="SC">
@@ -456,7 +536,7 @@
 <g class="state-group" data-state="VT">
       <g class="state-fill" fill="#d9d9d9"><path d="m2005.7083 387.6108l-2.2357178 -1.7546997l1.2418213 -13.278656l-1.9876709 -2.0051575l0 -13.781067l1.9876709 -8.268066l0 -13.028961l-1.2418213 -4.7609253l9.192993 -8.517761l0 -7.7678833l-2.486206 -3.2566833l-0.24768066 -9.020172l-44.226685 11.274292l0 6.7660522l1.7374268 4.508972l0.25012207 4.008789l2.9820557 2.0043945l0 4.5112l0.9935303 6.5133667l-1.2440186 3.7590942l2.7338867 6.76532l1.7398682 3.2566833l0.7458496 4.008789l-1.2440186 3.509369l2.238037 1.5020142l3.7252197 0.24969482l5.4677734 21.300018l0 5.5107727z" /></g>
       <g class="state-stroke" fill="none" stroke="#ffffff" stroke-width="1.0"><path d="m2005.7083 387.6108l-2.2357178 -1.7546997l1.2418213 -13.278656l-1.9876709 -2.0051575l0 -13.781067l1.9876709 -8.268066l0 -13.028961l-1.2418213 -4.7609253l9.192993 -8.517761l0 -7.7678833l-2.486206 -3.2566833l-0.24768066 -9.020172l-44.226685 11.274292l0 6.7660522l1.7374268 4.508972l0.25012207 4.008789l2.9820557 2.0043945l0 4.5112l0.9935303 6.5133667l-1.2440186 3.7590942l2.7338867 6.76532l1.7398682 3.2566833l0.7458496 4.008789l-1.2440186 3.509369l2.238037 1.5020142l3.7252197 0.24969482l5.4677734 21.300018l0 5.5107727z" /></g>
-      <path d="m1989.4009 280.01633l-5.625 15.84375l-4.84375 0l-5.640625 -15.84375l4.34375 0l2.90625 9.578125l0.859375 3.125l0.84375 -3.078125l2.953125 -9.625l4.203125 0zm15.220093 0l0 3.203125l-5.171875 0l0 12.640625l-4.125 0l0 -12.640625l-5.1875 0l0 -3.203125l14.484375 0z" fill="#276181" />
+      <path d="m1989.4009 280.01633l-5.625 15.84375l-4.84375 0l-5.640625 -15.84375l4.34375 0l2.90625 9.578125l0.859375 3.125l0.84375 -3.078125l2.953125 -9.625l4.203125 0zm15.220093 0l0 3.203125l-5.171875 0l0 12.640625l-4.125 0l0 -12.640625l-5.1875 0l0 -3.203125l14.484375 0z" fill="#6cb3d2" />
 
     </g>
 <g class="state-group" data-state="WA">
@@ -533,7 +613,7 @@
     <script>
     (function() {
       const PARTISAN = {
-        colors: { dem: '#276181', gop: '#e50963', split: '#8b567f' },
+        colors: { dem: '#6cb3d2', gop: '#e50963', split: '#8b567f' },
         defaultCategory: 'gop',
         legend: [['dem', 'Democratic Control'], ['gop', 'Republican Control'], ['split', 'Split Control']],
         source: 'Source: MultiState.',
@@ -546,7 +626,7 @@
         defaultCategory: 'gop_trifecta',
         legend: [['dem_trifecta', 'Democratic Trifecta'], ['gop_trifecta', 'Republican Trifecta'], ['divided', 'Divided Government']],
         source: 'Source: MultiState.',
-        states: { AZ:'divided',CA:'dem_trifecta',CO:'dem_trifecta',CT:'dem_trifecta',DE:'dem_trifecta',HI:'dem_trifecta',IL:'dem_trifecta',KS:'divided',KY:'divided',MA:'dem_trifecta',MD:'dem_trifecta',ME:'divided',MI:'divided',MN:'divided',NC:'divided',NJ:'dem_trifecta',NM:'dem_trifecta',NV:'divided',NY:'dem_trifecta',OR:'dem_trifecta',PA:'divided',RI:'dem_trifecta',VA:'dem_trifecta',VT:'divided',WA:'dem_trifecta',WI:'divided' },
+        states: { AK:'divided',AZ:'divided',CA:'dem_trifecta',CO:'dem_trifecta',CT:'dem_trifecta',DE:'dem_trifecta',HI:'dem_trifecta',IL:'dem_trifecta',KS:'divided',KY:'divided',MA:'dem_trifecta',MD:'dem_trifecta',ME:'dem_trifecta',MI:'divided',MN:'divided',NC:'divided',NJ:'dem_trifecta',NM:'dem_trifecta',NV:'divided',NY:'dem_trifecta',OR:'dem_trifecta',PA:'divided',RI:'dem_trifecta',VA:'dem_trifecta',VT:'divided',WA:'dem_trifecta',WI:'divided' },
         tooltips: { dem_trifecta: 'Democratic trifecta (governor + both chambers)', gop_trifecta: 'Republican trifecta (governor + both chambers)', divided: 'Divided government (split party control)' }
       };
 
@@ -582,13 +662,51 @@
         g.addEventListener('mousemove', e => { tooltip.style.left = (e.clientX+14)+'px'; tooltip.style.top = (e.clientY+14)+'px'; });
         g.addEventListener('mouseleave', () => tooltip.classList.remove('visible'));
       });
-      switchLegMap('partisan');
+      switchLegMap('trifecta');
     })();
     </script>
 
-    <div class="placeholder-notice">
-      <p>Detailed guide content coming soon.</p>
-      <p style="font-weight:400 !important;font-size:13px !important;color:#666 !important">This guide will cover what trifectas are, why they matter for policy, historical trends, and the states to watch in 2026.</p>
+    <h2>The Rise of One-Party Control</h2>
+
+    <p>For most of the 20th century, split government was the norm. In 1992, only 19 states had trifectas &mdash; 16 Democratic and 3 Republican. The remaining 31 had some form of divided government. The idea that different parties would check each other's excesses was baked into the system.</p>
+
+    <p>That world is gone. The number of trifectas has risen steadily for three decades, driven by the same forces of political polarization and geographic sorting that have reshaped Congress. After the 2024 elections, the count reached 40 &mdash; a modern record. Only 10 states had genuinely divided government, and even that number is misleading, because in several of those states, the legislature holds a veto-proof supermajority that effectively neutralizes the opposing governor.</p>
+
+    <p>The purple middle of American state politics &mdash; states where both parties share real governing power &mdash; has shrunk to a handful. When you factor in supermajorities, the number of truly divided states may be as low as six.</p>
+
+    <h2>When Supermajorities Complicate the Picture</h2>
+
+    <p>Even in states with divided government on paper, the reality can be different. In Vermont, Kansas, Kentucky, and North Carolina, the legislature's supermajority can override the governor's veto, making the governor's party affiliation almost irrelevant to policy outcomes.</p>
+
+    <p>Party switching has also reshaped the map. When a North Carolina Democrat switched to the Republican Party in 2023, it gave the GOP a veto-proof supermajority in the state House. Louisiana saw a similar dynamic when term-limited Democratic Governor John Bel Edwards was succeeded by Republican Jeff Landry, completing a Republican trifecta that was further strengthened by legislators switching parties.</p>
+
+    <p>Republicans currently hold veto-proof supermajorities in both chambers of 21 states. Democrats hold them in 9. In the states where a supermajority faces an opposing-party governor, the trifecta label understates the dominant party's actual governing power.</p>
+
+    <h2>The 2026 Landscape</h2>
+
+    <p>The 2026 cycle will be the most consequential for trifectas since 2022. Trifectas are directly contested in at least five states:</p>
+
+    <ul>
+      <li><strong>Arizona:</strong> Both legislative chambers are toss-ups, and the governor's race is competitive. Either party could emerge with a trifecta &mdash; or the state could remain divided.</li>
+      <li><strong>Michigan:</strong> The Senate is Democratic, the House is Republican after flipping in 2024. A trifecta is in the cards for whichever party has a good night.</li>
+      <li><strong>Minnesota:</strong> The House is tied after 2024, the Senate is Democratic, and the governor's race is rated Likely D. Democrats could regain the trifecta they lost.</li>
+      <li><strong>Wisconsin:</strong> Both chambers are Republican but newly competitive after unconstitutional maps were struck down. Democrats haven't held majorities since 2010.</li>
+      <li><strong>Pennsylvania:</strong> The legislature is split (Democratic House, Republican Senate). Democrats need three Senate pickups for a trifecta &mdash; their first since 1993.</li>
+    </ul>
+
+    <p>Virginia gained a Democratic trifecta in 2025 after Democrats won the governor's race and held their legislative majorities. The 2026 cycle could see that trifecta map redrawn again &mdash; and with redistricting coming after the 2030 Census, the stakes for long-term partisan advantage couldn't be higher.</p>
+
+    <h2>What's Next</h2>
+
+    <div class="whats-next">
+      <a href="trifectas.html">
+        <div class="next-label">Current Trifectas &rarr;</div>
+        <div class="next-desc">See every state's trifecta status, governor and chamber control, and which trifectas are competitive in 2026.</div>
+      </a>
+      <a href="trifectas-analytics.html">
+        <div class="next-label">Trends & Analytics &rarr;</div>
+        <div class="next-desc">Historical trifecta trends from 1992 to today, flips, longest streaks, and the rise of one-party control.</div>
+      </a>
     </div>
 
   </div>
@@ -599,5 +717,19 @@
   </div>
 
 </div>
+<script src="js/common.js"></script>
+<script>
+(async function() {
+  const data = await loadJSON('data/trifectas_data.json');
+  const s = data.summary;
+  document.getElementById('stat-dem').textContent = s.d_trifectas;
+  document.getElementById('stat-rep').textContent = s.r_trifectas;
+  document.getElementById('stat-split').textContent = s.split;
+  document.getElementById('stat-competitive').textContent = s.competitive;
+  document.getElementById('inline-d-tri').textContent = s.d_trifectas;
+  document.getElementById('inline-r-tri').textContent = s.r_trifectas;
+  document.getElementById('inline-split').textContent = s.split;
+})();
+</script>
 </body>
 </html>

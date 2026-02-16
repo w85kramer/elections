@@ -55,6 +55,7 @@
     min-width: 100px;
   }
   .deadline-list .dl-text { color: var(--ms-text-light); }
+  .deadline-list .dl-primary .dl-text { color: var(--ms-rep-red); font-weight: 600; }
   .deadline-list .dl-past { opacity: 0.5; }
   .map-links {
     display: flex;
@@ -237,12 +238,12 @@
     const filingSw = st.elections_2026.filing_deadline_statewide;
     const primary = st.elections_2026.primary_date;
     if (filingLeg && filingSw && filingLeg !== filingSw) {
-      deadlines.push({ date: filingSw, text: `${st.name} statewide filing deadline`, state: abbr });
-      deadlines.push({ date: filingLeg, text: `${st.name} legislative filing deadline`, state: abbr });
+      deadlines.push({ date: filingSw, text: `${st.name} statewide filing deadline`, state: abbr, type: 'filing' });
+      deadlines.push({ date: filingLeg, text: `${st.name} legislative filing deadline`, state: abbr, type: 'filing' });
     } else if (st.elections_2026.filing_deadline) {
-      deadlines.push({ date: st.elections_2026.filing_deadline, text: `${st.name} filing deadline`, state: abbr });
+      deadlines.push({ date: st.elections_2026.filing_deadline, text: `${st.name} filing deadline`, state: abbr, type: 'filing' });
     }
-    if (primary) deadlines.push({ date: primary, text: `${st.name} primary`, state: abbr });
+    if (primary) deadlines.push({ date: primary, text: `${st.name} primary`, state: abbr, type: 'primary' });
   }
 
   document.getElementById('stat-seats').textContent = numberWithCommas(totalSeats);
@@ -257,6 +258,7 @@
   const dl = document.getElementById('deadline-list');
   for (const d of upcomingDeadlines) {
     const li = document.createElement('li');
+    if (d.type === 'primary') li.className = 'dl-primary';
     li.innerHTML = `<span class="dl-date">${formatDateShort(d.date)}</span><span class="dl-text">${d.text}</span>`;
     dl.appendChild(li);
   }

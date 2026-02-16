@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trifectas Analytics | State Elections Tracker</title>
+<title>Trifecta Trends & Analytics | State Elections Tracker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/common.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <style>
   .subnav {
     display: flex;
@@ -28,27 +29,118 @@
   }
   .subnav a:hover { border-color: var(--ms-navy); color: var(--ms-navy); }
   .subnav a.active { background: var(--ms-navy); border-color: var(--ms-navy); color: white; }
-  .placeholder-notice {
-    background: #fff8e1;
-    border: 2px dashed #d0ac60;
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .chart-section { margin-bottom: 48px; }
+  .chart-container {
+    background: white;
+    border: 1px solid var(--ms-border);
     border-radius: var(--ms-radius);
     padding: 24px;
-    margin: 32px 0;
-    text-align: center;
+    box-shadow: var(--ms-card-shadow);
   }
-  .placeholder-notice p {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    color: #856404;
-    margin-bottom: 8px;
+  .chart-container h3 {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ms-navy);
+    margin-bottom: 4px;
   }
-  .placeholder-notice p:last-child { margin-bottom: 0; }
-  .map-links {
+  .chart-container .chart-desc {
+    font-size: 13px;
+    color: var(--ms-text-light);
+    margin-bottom: 16px;
+  }
+  .chart-wrap { position: relative; }
+
+  /* Streaks grid */
+  .streaks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .streak-panel {
+    background: white;
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    padding: 20px 24px;
+    box-shadow: var(--ms-card-shadow);
+  }
+  .streak-panel h3 {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  .streak-panel .streak-desc {
+    font-size: 13px;
+    color: var(--ms-text-light);
+    margin-bottom: 16px;
+  }
+  .streak-item {
     display: flex;
-    gap: 8px;
-    margin-top: 16px;
-    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .streak-item:last-child { border-bottom: none; }
+  .streak-rank {
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--ms-text-light);
+    min-width: 24px;
+  }
+  .streak-state {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--ms-navy);
+  }
+  .streak-years {
+    font-size: 13px;
+    color: var(--ms-text-light);
+    margin-left: auto;
+  }
+  .streak-bar {
+    height: 6px;
+    border-radius: 3px;
+    margin-top: 4px;
+  }
+
+  /* Tables */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 13px;
+  }
+  .data-table th {
+    background: var(--ms-navy);
+    color: white;
+    padding: 8px 12px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .data-table td {
+    padding: 6px 12px;
+    border-bottom: 1px solid #eee;
+  }
+  .data-table tr:hover td { background: #f8f9fa; }
+  .flip-d { color: var(--ms-dem-blue); font-weight: 700; }
+  .flip-r { color: var(--ms-rep-red); font-weight: 700; }
+  .flip-s { color: var(--ms-purple); font-weight: 700; }
+
+  @media (max-width: 768px) {
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+    .streaks-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -66,26 +158,325 @@
 
   <div class="subnav">
     <a href="trifectas-101.html">Overview</a>
-    <a href="trifectas.html">2026 Elections</a>
+    <a href="trifectas.html">Current Status</a>
     <a href="trifectas-analytics.html" class="active">Trends & Analytics</a>
   </div>
 
-  <h1 class="heading-xl" style="margin-bottom: 8px">Trifectas Analytics</h1>
-  <p class="subtitle mb-16">Trends, historical data, and analysis of trifecta control</p>
+  <h1 class="heading-xl" style="margin-bottom: 8px">Trifecta Trends & Analytics</h1>
+  <p class="subtitle mb-16">Historical trifecta control, flips, and longest streaks since 1992</p>
 
-  <div class="placeholder-notice">
-    <p>Content coming soon.</p>
-    <p style="font-weight:400;font-size:13px;color:#666">This page will feature historical trifecta trends, policy output analysis, and 2026 projections.</p>
-    <div class="map-links">
-      <a href="trifectas_partisan.html" style="display:inline-block;padding:6px 14px;border:1px solid var(--ms-border);border-radius:var(--ms-radius);font-size:13px;font-weight:600;text-decoration:none;color:var(--ms-dem-blue);transition:all 0.15s">Trifecta Map &rarr;</a>
+  <!-- Stats -->
+  <div class="stats-row" id="stats-row">
+    <div class="card stat-card"><div class="stat-number" id="stat-d-now" style="color:var(--ms-dem-blue)">—</div><div class="stat-label">Dem Trifectas (2026)</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-r-now" style="color:var(--ms-rep-red)">—</div><div class="stat-label">GOP Trifectas (2026)</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-peak-d" style="color:var(--ms-dem-blue)">—</div><div class="stat-label">Peak Dem (Year)</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-peak-r" style="color:var(--ms-rep-red)">—</div><div class="stat-label">Peak GOP (Year)</div></div>
+  </div>
+
+  <!-- Trifecta Count Over Time -->
+  <div class="chart-section">
+    <div class="chart-container">
+      <h3>Trifecta Count Over Time</h3>
+      <p class="chart-desc">Number of states under unified party control vs. divided government, 1992&ndash;2026.</p>
+      <div class="chart-wrap">
+        <canvas id="trifectaChart" height="320"></canvas>
+      </div>
     </div>
   </div>
 
-  <div class="site-footer">
+  <!-- Flips Per Cycle -->
+  <div class="chart-section">
+    <div class="chart-container">
+      <h3>Trifecta Flips by Year</h3>
+      <p class="chart-desc">States that changed trifecta status each year. Includes transitions to and from divided government.</p>
+      <div class="chart-wrap">
+        <canvas id="flipsChart" height="280"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Longest Streaks -->
+  <div class="streaks-grid" id="streaks-grid">
+    <div class="streak-panel">
+      <h3 style="color:var(--ms-rep-red)">Longest GOP Trifecta Streaks</h3>
+      <p class="streak-desc">States with the longest continuous Republican trifectas through 2026.</p>
+      <div id="r-streaks"></div>
+    </div>
+    <div class="streak-panel">
+      <h3 style="color:var(--ms-dem-blue)">Longest Dem Trifecta Streaks</h3>
+      <p class="streak-desc">States with the longest continuous Democratic trifectas through 2026.</p>
+      <div id="d-streaks"></div>
+    </div>
+  </div>
+
+  <!-- Recent Flips Table -->
+  <div class="chart-section">
+    <div class="chart-container">
+      <h3>Recent Trifecta Changes</h3>
+      <p class="chart-desc">The most recent states to change trifecta status.</p>
+      <table class="data-table" id="flips-table">
+        <thead><tr><th>Year</th><th>State</th><th>From</th><th>To</th></tr></thead>
+        <tbody id="flips-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="site-footer" style="margin-top:32px">
     <img src="assets/multistate-logomark.png" alt="MultiState">
-    <div class="footer-text">State Elections Tracker &mdash; Data compiled by MultiState</div>
+    <span class="footer-text">Source: MultiState. Data generated <span id="gen-date"></span>.</span>
   </div>
 
 </div>
+
+<script src="js/common.js"></script>
+<script>
+(async function() {
+  const data = await loadJSON('data/trifectas_data.json');
+  const { summary, states, timeline, flips } = data;
+
+  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+
+  // Stats
+  document.getElementById('stat-d-now').textContent = summary.d_trifectas;
+  document.getElementById('stat-r-now').textContent = summary.r_trifectas;
+
+  // Filter timeline to years with full 50-state data (1992+)
+  const fullTimeline = timeline.filter(t => (t.d + t.r + t.split) >= 50);
+
+  // Peak D and R
+  let peakD = { d: 0, year: 0 };
+  let peakR = { r: 0, year: 0 };
+  for (const t of fullTimeline) {
+    if (t.d > peakD.d) peakD = t;
+    if (t.r > peakR.r) peakR = t;
+  }
+  document.getElementById('stat-peak-d').textContent = peakD.d + ' (' + peakD.year + ')';
+  document.getElementById('stat-peak-r').textContent = peakR.r + ' (' + peakR.year + ')';
+
+  // ── Trifecta Count Over Time Chart ──
+  const labels = fullTimeline.map(t => String(t.year));
+  const maxTrifecta = Math.max(...fullTimeline.map(t => Math.max(t.d, t.r, t.split))) + 1;
+
+  new Chart(document.getElementById('trifectaChart'), {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: 'Democratic',
+          data: fullTimeline.map(t => t.d),
+          borderColor: '#6cb3d2',
+          backgroundColor: 'rgba(108, 179, 210, 0.1)',
+          borderWidth: 2.5,
+          pointRadius: 3,
+          pointHoverRadius: 5,
+          fill: false,
+          tension: 0.1,
+        },
+        {
+          label: 'Republican',
+          data: fullTimeline.map(t => t.r),
+          borderColor: '#e50963',
+          backgroundColor: 'rgba(229, 9, 99, 0.1)',
+          borderWidth: 2.5,
+          pointRadius: 3,
+          pointHoverRadius: 5,
+          fill: false,
+          tension: 0.1,
+        },
+        {
+          label: 'Divided',
+          data: fullTimeline.map(t => t.split),
+          borderColor: '#8b567f',
+          backgroundColor: 'rgba(139, 86, 127, 0.1)',
+          borderWidth: 2,
+          pointRadius: 2,
+          pointHoverRadius: 4,
+          borderDash: [5, 3],
+          fill: false,
+          tension: 0.1,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: { font: { family: "'Work Sans', sans-serif", weight: '600', size: 12 }, usePointStyle: true }
+        },
+        tooltip: {
+          backgroundColor: '#043858',
+          titleFont: { family: "'Work Sans', sans-serif", weight: '700' },
+          bodyFont: { family: "'Work Sans', sans-serif" },
+          callbacks: {
+            label: function(item) { return item.dataset.label + ': ' + item.raw + ' states'; }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true, max: maxTrifecta,
+          ticks: { font: { family: "'Work Sans', sans-serif", size: 11 }, stepSize: 5 },
+          grid: { color: '#f0f0f0' }
+        },
+        x: {
+          ticks: {
+            font: { family: "'Work Sans', sans-serif", size: 11 },
+            maxRotation: 45,
+            callback: function(value, index) {
+              // Show every other year label to avoid crowding
+              return index % 2 === 0 ? this.getLabelForValue(value) : '';
+            }
+          },
+          grid: { display: false }
+        }
+      }
+    }
+  });
+
+  // ── Flips Per Year Chart ──
+  // Count flips by year, only for years with full data
+  const flipsByYear = {};
+  for (const f of flips) {
+    if (f.year < 1992) continue;
+    if (!flipsByYear[f.year]) flipsByYear[f.year] = { toD: 0, toR: 0, toSplit: 0 };
+    if (f.to === 'Democrat') flipsByYear[f.year].toD++;
+    else if (f.to === 'Republican') flipsByYear[f.year].toR++;
+    else flipsByYear[f.year].toSplit++;
+  }
+  const flipYears = Object.keys(flipsByYear).sort();
+  const maxFlips = Math.max(...flipYears.map(y => Math.max(flipsByYear[y].toD, flipsByYear[y].toR, flipsByYear[y].toSplit))) + 1;
+
+  new Chart(document.getElementById('flipsChart'), {
+    type: 'bar',
+    data: {
+      labels: flipYears,
+      datasets: [
+        {
+          label: 'Flipped to Dem',
+          data: flipYears.map(y => flipsByYear[y].toD),
+          backgroundColor: '#6cb3d2',
+          borderRadius: 4,
+        },
+        {
+          label: 'Flipped to GOP',
+          data: flipYears.map(y => flipsByYear[y].toR),
+          backgroundColor: '#e50963',
+          borderRadius: 4,
+        },
+        {
+          label: 'Became Divided',
+          data: flipYears.map(y => flipsByYear[y].toSplit),
+          backgroundColor: '#8b567f',
+          borderRadius: 4,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: { font: { family: "'Work Sans', sans-serif", weight: '600', size: 12 }, usePointStyle: true, pointStyle: 'rect' }
+        },
+        tooltip: {
+          backgroundColor: '#043858',
+          titleFont: { family: "'Work Sans', sans-serif", weight: '700' },
+          bodyFont: { family: "'Work Sans', sans-serif" },
+          callbacks: {
+            label: function(item) { return item.dataset.label + ': ' + item.raw + ' states'; }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true, max: maxFlips,
+          ticks: { font: { family: "'Work Sans', sans-serif", size: 11 }, stepSize: 2 },
+          grid: { color: '#f0f0f0' }
+        },
+        x: {
+          ticks: {
+            font: { family: "'Work Sans', sans-serif", size: 11 },
+            maxRotation: 45,
+          },
+          grid: { display: false }
+        }
+      }
+    }
+  });
+
+  // ── Longest Streaks ──
+  const currentYear = summary.current_year;
+
+  // R streaks
+  const rStreaks = states
+    .filter(s => s.trifecta_status === 'Republican' && s.streak_since)
+    .map(s => ({ name: s.state_name, since: s.streak_since, years: currentYear - s.streak_since }))
+    .sort((a, b) => b.years - a.years)
+    .slice(0, 8);
+
+  const maxRYears = rStreaks.length > 0 ? rStreaks[0].years : 1;
+  let rHtml = '';
+  for (let i = 0; i < rStreaks.length; i++) {
+    const s = rStreaks[i];
+    const pct = Math.round((s.years / maxRYears) * 100);
+    rHtml += '<div class="streak-item">' +
+      '<span class="streak-rank">' + (i + 1) + '</span>' +
+      '<div style="flex:1">' +
+        '<span class="streak-state">' + s.name + '</span>' +
+        '<div class="streak-bar" style="width:' + pct + '%;background:var(--ms-rep-red)"></div>' +
+      '</div>' +
+      '<span class="streak-years">' + s.years + ' yrs (since ' + s.since + ')</span>' +
+    '</div>';
+  }
+  document.getElementById('r-streaks').innerHTML = rHtml;
+
+  // D streaks
+  const dStreaks = states
+    .filter(s => s.trifecta_status === 'Democrat' && s.streak_since)
+    .map(s => ({ name: s.state_name, since: s.streak_since, years: currentYear - s.streak_since }))
+    .sort((a, b) => b.years - a.years)
+    .slice(0, 8);
+
+  const maxDYears = dStreaks.length > 0 ? dStreaks[0].years : 1;
+  let dHtml = '';
+  for (let i = 0; i < dStreaks.length; i++) {
+    const s = dStreaks[i];
+    const pct = Math.round((s.years / maxDYears) * 100);
+    dHtml += '<div class="streak-item">' +
+      '<span class="streak-rank">' + (i + 1) + '</span>' +
+      '<div style="flex:1">' +
+        '<span class="streak-state">' + s.name + '</span>' +
+        '<div class="streak-bar" style="width:' + pct + '%;background:var(--ms-dem-blue)"></div>' +
+      '</div>' +
+      '<span class="streak-years">' + s.years + ' yrs (since ' + s.since + ')</span>' +
+    '</div>';
+  }
+  document.getElementById('d-streaks').innerHTML = dHtml;
+
+  // ── Recent Flips Table ──
+  const recentFlips = flips.slice(-15).reverse();
+  const flipsTbody = document.getElementById('flips-tbody');
+
+  function statusSpan(status) {
+    if (status === 'Democrat') return '<span class="flip-d">Dem Trifecta</span>';
+    if (status === 'Republican') return '<span class="flip-r">GOP Trifecta</span>';
+    return '<span class="flip-s">Divided</span>';
+  }
+
+  for (const f of recentFlips) {
+    const tr = document.createElement('tr');
+    tr.innerHTML =
+      '<td>' + f.year + '</td>' +
+      '<td><a href="state.html?st=' + f.state + '" style="color:var(--ms-navy);font-weight:600;text-decoration:none">' + f.state_name + '</a></td>' +
+      '<td>' + statusSpan(f.from) + '</td>' +
+      '<td>' + statusSpan(f.to) + '</td>';
+    flipsTbody.appendChild(tr);
+  }
+
+})();
+</script>
 </body>
 </html>

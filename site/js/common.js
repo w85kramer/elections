@@ -46,7 +46,7 @@ function formatDateShort(dateStr) {
 }
 
 function partyColor(party) {
-  if (party === 'D') return '#276181';
+  if (party === 'D') return '#6cb3d2';
   if (party === 'R') return '#e50963';
   if (party === 'I') return '#888';
   return '#ccc';
@@ -146,10 +146,10 @@ function buildChamberBar(container, data, label) {
   // Leading party goes first (left side); minority on right
   const rLeads = data.r > data.d;
   const leadCount = rLeads ? data.r : data.d;
-  const leadColor = rLeads ? '#e50963' : '#276181';
+  const leadColor = rLeads ? '#e50963' : '#6cb3d2';
   const leadLabel = rLeads ? `R: ${data.r}` : `D: ${data.d}`;
   const trailCount = rLeads ? data.d : data.r;
-  const trailColor = rLeads ? '#276181' : '#e50963';
+  const trailColor = rLeads ? '#6cb3d2' : '#e50963';
   const trailLabel = rLeads ? `D: ${data.d}` : `R: ${data.r}`;
 
   const segments = [

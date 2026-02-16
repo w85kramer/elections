@@ -1,0 +1,2600 @@
+{
+  "generated_at": "2026-02-16T17:02:30.021826",
+  "summary": {
+    "current_year": 2026,
+    "d_trifectas": 16,
+    "r_trifectas": 23,
+    "split": 11,
+    "competitive": 11
+  },
+  "states": [
+    {
+      "state": "AK",
+      "state_name": "Alaska",
+      "trifecta_status": "Split",
+      "governor_party": "R",
+      "governor_name": "Mike Dunleavy",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Very Likely R",
+      "senate_control": "Coalition",
+      "house_control": "Coalition",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Likely Coalition",
+      "house_forecast": "Likely Coalition",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2015
+    },
+    {
+      "state": "AL",
+      "state_name": "Alabama",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Kay Ivey",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid R",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid R",
+      "house_forecast": "Solid R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2011
+    },
+    {
+      "state": "AR",
+      "state_name": "Arkansas",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Sarah Huckabee Sanders",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid R",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid R",
+      "house_forecast": "Solid R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2015
+    },
+    {
+      "state": "AZ",
+      "state_name": "Arizona",
+      "trifecta_status": "Split",
+      "governor_party": "D",
+      "governor_name": "Katie Hobbs",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Toss-up",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Toss-Up",
+      "house_forecast": "Toss-Up",
+      "competitive": true,
+      "competitive_type": "pickup_both",
+      "competitive_scenario": "D needs senate + house; R needs governor",
+      "streak_since": 2023
+    },
+    {
+      "state": "CA",
+      "state_name": "California",
+      "trifecta_status": "Democrat",
+      "governor_party": "D",
+      "governor_name": "Gavin Newsom",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid D",
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid D",
+      "house_forecast": "Solid D",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2011
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "trifecta_status": "Democrat",
+      "governor_party": "D",
+      "governor_name": "Jared Polis",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid D",
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid D",
+      "house_forecast": "Solid D",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2019
+    },
+    {
+      "state": "CT",
+      "state_name": "Connecticut",
+      "trifecta_status": "Democrat",
+      "governor_party": "D",
+      "governor_name": "Ned Lamont",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid D",
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid D",
+      "house_forecast": "Solid D",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2011
+    },
+    {
+      "state": "DE",
+      "state_name": "Delaware",
+      "trifecta_status": "Democrat",
+      "governor_party": "D",
+      "governor_name": "Matt Meyer",
+      "legislature_status": null,
+      "governor_up_2026": false,
+      "gov_forecast": null,
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Likely D",
+      "house_forecast": "Likely D",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2009
+    },
+    {
+      "state": "FL",
+      "state_name": "Florida",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Ron DeSantis",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid R",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Likely R",
+      "house_forecast": "Likely R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 1999
+    },
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Brian Kemp",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Tilt R",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Likely R",
+      "house_forecast": "Likely R",
+      "competitive": true,
+      "competitive_type": "at_risk_r",
+      "competitive_scenario": "R trifecta at risk: competitive governor",
+      "streak_since": 2005
+    },
+    {
+      "state": "HI",
+      "state_name": "Hawaii",
+      "trifecta_status": "Democrat",
+      "governor_party": "D",
+      "governor_name": "Josh Green",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid D",
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid D",
+      "house_forecast": "Solid D",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2011
+    },
+    {
+      "state": "IA",
+      "state_name": "Iowa",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Kim Reynolds",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Lean R",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Likely R",
+      "house_forecast": "Likely R",
+      "competitive": true,
+      "competitive_type": "at_risk_r",
+      "competitive_scenario": "R trifecta at risk: competitive governor",
+      "streak_since": 2017
+    },
+    {
+      "state": "ID",
+      "state_name": "Idaho",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Brad Little",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid R",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid R",
+      "house_forecast": "Solid R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 1995
+    },
+    {
+      "state": "IL",
+      "state_name": "Illinois",
+      "trifecta_status": "Democrat",
+      "governor_party": "D",
+      "governor_name": "JB Pritzker",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid D",
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid D",
+      "house_forecast": "Solid D",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2019
+    },
+    {
+      "state": "IN",
+      "state_name": "Indiana",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Mike Braun",
+      "legislature_status": null,
+      "governor_up_2026": false,
+      "gov_forecast": null,
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid R",
+      "house_forecast": "Likely R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2011
+    },
+    {
+      "state": "KS",
+      "state_name": "Kansas",
+      "trifecta_status": "Split",
+      "governor_party": "D",
+      "governor_name": "Laura Kelly",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Lean R",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": false,
+      "house_up_2026": true,
+      "senate_forecast": null,
+      "house_forecast": "Likely R",
+      "competitive": true,
+      "competitive_type": "pickup_r",
+      "competitive_scenario": "R pickup: needs governor",
+      "streak_since": 2019
+    },
+    {
+      "state": "KY",
+      "state_name": "Kentucky",
+      "trifecta_status": "Split",
+      "governor_party": "D",
+      "governor_name": "Andy Beshear",
+      "legislature_status": null,
+      "governor_up_2026": false,
+      "gov_forecast": null,
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid R",
+      "house_forecast": "Solid R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2020
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Jeff Landry",
+      "legislature_status": null,
+      "governor_up_2026": false,
+      "gov_forecast": null,
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": false,
+      "house_up_2026": false,
+      "senate_forecast": null,
+      "house_forecast": null,
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2024
+    },
+    {
+      "state": "MA",
+      "state_name": "Massachusetts",
+      "trifecta_status": "Democrat",
+      "governor_party": "D",
+      "governor_name": "Maura Healey",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid D",
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid D",
+      "house_forecast": "Solid D",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2023
+    },
+    {
+      "state": "MD",
+      "state_name": "Maryland",
+      "trifecta_status": "Democrat",
+      "governor_party": "D",
+      "governor_name": "Wes Moore",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid D",
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid D",
+      "house_forecast": "Solid D",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2023
+    },
+    {
+      "state": "ME",
+      "state_name": "Maine",
+      "trifecta_status": "Democrat",
+      "governor_party": "D",
+      "governor_name": "Janet Mills",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Likely D",
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Likely D",
+      "house_forecast": "Lean D",
+      "competitive": true,
+      "competitive_type": "at_risk_d",
+      "competitive_scenario": "D trifecta at risk: competitive house",
+      "streak_since": 2019
+    },
+    {
+      "state": "MI",
+      "state_name": "Michigan",
+      "trifecta_status": "Split",
+      "governor_party": "D",
+      "governor_name": "Gretchen Whitmer",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Toss-up",
+      "senate_control": "D",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Toss-Up",
+      "house_forecast": "Toss-Up",
+      "competitive": true,
+      "competitive_type": "pickup_both",
+      "competitive_scenario": "D needs governor + house; R needs governor + senate",
+      "streak_since": 2025
+    },
+    {
+      "state": "MN",
+      "state_name": "Minnesota",
+      "trifecta_status": "Split",
+      "governor_party": "D",
+      "governor_name": "Tim Walz",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Likely D",
+      "senate_control": "D",
+      "house_control": "Power_Sharing",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Toss-Up",
+      "house_forecast": "Toss-Up",
+      "competitive": true,
+      "competitive_type": "pickup_d",
+      "competitive_scenario": "D pickup: needs governor + house",
+      "streak_since": 2025
+    },
+    {
+      "state": "MO",
+      "state_name": "Missouri",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Mike Kehoe",
+      "legislature_status": null,
+      "governor_up_2026": false,
+      "gov_forecast": null,
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Likely R",
+      "house_forecast": "Likely R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2017
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Tate Reeves",
+      "legislature_status": null,
+      "governor_up_2026": false,
+      "gov_forecast": null,
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": false,
+      "house_up_2026": false,
+      "senate_forecast": null,
+      "house_forecast": null,
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2012
+    },
+    {
+      "state": "MT",
+      "state_name": "Montana",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Greg Gianforte",
+      "legislature_status": null,
+      "governor_up_2026": false,
+      "gov_forecast": null,
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid R",
+      "house_forecast": "Solid R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2021
+    },
+    {
+      "state": "NC",
+      "state_name": "North Carolina",
+      "trifecta_status": "Split",
+      "governor_party": "D",
+      "governor_name": "Josh Stein",
+      "legislature_status": null,
+      "governor_up_2026": false,
+      "gov_forecast": null,
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Likely R",
+      "house_forecast": "Likely R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2017
+    },
+    {
+      "state": "ND",
+      "state_name": "North Dakota",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Kelly Armstrong",
+      "legislature_status": null,
+      "governor_up_2026": false,
+      "gov_forecast": null,
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid R",
+      "house_forecast": "Solid R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 1995
+    },
+    {
+      "state": "NE",
+      "state_name": "Nebraska",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Jim Pillen",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid R",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": false,
+      "senate_forecast": null,
+      "house_forecast": null,
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2000
+    },
+    {
+      "state": "NH",
+      "state_name": "New Hampshire",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Kelly Ayotte",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Likely R",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Lean R",
+      "house_forecast": "Toss-Up",
+      "competitive": true,
+      "competitive_type": "at_risk_r",
+      "competitive_scenario": "R trifecta at risk: competitive senate & house",
+      "streak_since": 2021
+    },
+    {
+      "state": "NJ",
+      "state_name": "New Jersey",
+      "trifecta_status": "Democrat",
+      "governor_party": "D",
+      "governor_name": "Mikie Sherrill",
+      "legislature_status": null,
+      "governor_up_2026": false,
+      "gov_forecast": null,
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": false,
+      "house_up_2026": false,
+      "senate_forecast": null,
+      "house_forecast": null,
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2018
+    },
+    {
+      "state": "NM",
+      "state_name": "New Mexico",
+      "trifecta_status": "Democrat",
+      "governor_party": "D",
+      "governor_name": "Michelle Lujan Grisham",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Likely D",
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": false,
+      "house_up_2026": true,
+      "senate_forecast": null,
+      "house_forecast": "Solid D",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2019
+    },
+    {
+      "state": "NV",
+      "state_name": "Nevada",
+      "trifecta_status": "Split",
+      "governor_party": "R",
+      "governor_name": "Joe Lombardo",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Tilt R",
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Likely D",
+      "house_forecast": "Solid D",
+      "competitive": true,
+      "competitive_type": "pickup_d",
+      "competitive_scenario": "D pickup: needs governor",
+      "streak_since": 2023
+    },
+    {
+      "state": "NY",
+      "state_name": "New York",
+      "trifecta_status": "Democrat",
+      "governor_party": "D",
+      "governor_name": "Kathy Hochul",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Very Likely D",
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid D",
+      "house_forecast": "Solid D",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2019
+    },
+    {
+      "state": "OH",
+      "state_name": "Ohio",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Mike DeWine",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Likely R",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Likely R",
+      "house_forecast": "Likely R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2011
+    },
+    {
+      "state": "OK",
+      "state_name": "Oklahoma",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Kevin Stitt",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid R",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid R",
+      "house_forecast": "Solid R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2011
+    },
+    {
+      "state": "OR",
+      "state_name": "Oregon",
+      "trifecta_status": "Democrat",
+      "governor_party": "D",
+      "governor_name": "Tina Kotek",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Very Likely D",
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid D",
+      "house_forecast": "Solid D",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2013
+    },
+    {
+      "state": "PA",
+      "state_name": "Pennsylvania",
+      "trifecta_status": "Split",
+      "governor_party": "D",
+      "governor_name": "Josh Shapiro",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Likely D",
+      "senate_control": "R",
+      "house_control": "D",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Lean R",
+      "house_forecast": "Lean D",
+      "competitive": true,
+      "competitive_type": "pickup_d",
+      "competitive_scenario": "D pickup: needs governor + senate",
+      "streak_since": 2015
+    },
+    {
+      "state": "RI",
+      "state_name": "Rhode Island",
+      "trifecta_status": "Democrat",
+      "governor_party": "D",
+      "governor_name": "Dan McKee",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Very Likely D",
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid D",
+      "house_forecast": "Solid D",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2014
+    },
+    {
+      "state": "SC",
+      "state_name": "South Carolina",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Henry McMaster",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid R",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": false,
+      "house_up_2026": true,
+      "senate_forecast": null,
+      "house_forecast": "Solid R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2003
+    },
+    {
+      "state": "SD",
+      "state_name": "South Dakota",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Larry Rhoden",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid R",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid R",
+      "house_forecast": "Solid R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 1995
+    },
+    {
+      "state": "TN",
+      "state_name": "Tennessee",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Bill Lee",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid R",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid R",
+      "house_forecast": "Solid R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2011
+    },
+    {
+      "state": "TX",
+      "state_name": "Texas",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Greg Abbott",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid R",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid R",
+      "house_forecast": "Solid R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2003
+    },
+    {
+      "state": "UT",
+      "state_name": "Utah",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Spencer Cox",
+      "legislature_status": null,
+      "governor_up_2026": false,
+      "gov_forecast": null,
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid R",
+      "house_forecast": "Solid R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 1992
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "trifecta_status": "Democrat",
+      "governor_party": "D",
+      "governor_name": "Abigail Spanberger",
+      "legislature_status": null,
+      "governor_up_2026": false,
+      "gov_forecast": null,
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": false,
+      "house_up_2026": false,
+      "senate_forecast": null,
+      "house_forecast": null,
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2026
+    },
+    {
+      "state": "VT",
+      "state_name": "Vermont",
+      "trifecta_status": "Split",
+      "governor_party": "R",
+      "governor_name": "Phil Scott",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Very Likely R",
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid D",
+      "house_forecast": "Solid D",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2017
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "trifecta_status": "Democrat",
+      "governor_party": "D",
+      "governor_name": "Bob Ferguson",
+      "legislature_status": null,
+      "governor_up_2026": false,
+      "gov_forecast": null,
+      "senate_control": "D",
+      "house_control": "D",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid D",
+      "house_forecast": "Solid D",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2018
+    },
+    {
+      "state": "WI",
+      "state_name": "Wisconsin",
+      "trifecta_status": "Split",
+      "governor_party": "D",
+      "governor_name": "Tony Evers",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Toss-up",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Toss-Up",
+      "house_forecast": "Toss-Up",
+      "competitive": true,
+      "competitive_type": "pickup_both",
+      "competitive_scenario": "D needs senate + house; R needs governor",
+      "streak_since": 2019
+    },
+    {
+      "state": "WV",
+      "state_name": "West Virginia",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Patrick Morrisey",
+      "legislature_status": null,
+      "governor_up_2026": false,
+      "gov_forecast": null,
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid R",
+      "house_forecast": "Solid R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2018
+    },
+    {
+      "state": "WY",
+      "state_name": "Wyoming",
+      "trifecta_status": "Republican",
+      "governor_party": "R",
+      "governor_name": "Mark Gordon",
+      "legislature_status": null,
+      "governor_up_2026": true,
+      "gov_forecast": "Solid R",
+      "senate_control": "R",
+      "house_control": "R",
+      "senate_up_2026": true,
+      "house_up_2026": true,
+      "senate_forecast": "Solid R",
+      "house_forecast": "Solid R",
+      "competitive": false,
+      "competitive_type": null,
+      "competitive_scenario": null,
+      "streak_since": 2011
+    }
+  ],
+  "timeline": [
+    {
+      "year": 1971,
+      "d": 0,
+      "r": 0,
+      "split": 1
+    },
+    {
+      "year": 1973,
+      "d": 0,
+      "r": 0,
+      "split": 1
+    },
+    {
+      "year": 1974,
+      "d": 0,
+      "r": 0,
+      "split": 1
+    },
+    {
+      "year": 1975,
+      "d": 1,
+      "r": 0,
+      "split": 0
+    },
+    {
+      "year": 1977,
+      "d": 1,
+      "r": 0,
+      "split": 0
+    },
+    {
+      "year": 1992,
+      "d": 15,
+      "r": 3,
+      "split": 32
+    },
+    {
+      "year": 1993,
+      "d": 19,
+      "r": 3,
+      "split": 28
+    },
+    {
+      "year": 1994,
+      "d": 17,
+      "r": 4,
+      "split": 29
+    },
+    {
+      "year": 1995,
+      "d": 8,
+      "r": 15,
+      "split": 27
+    },
+    {
+      "year": 1996,
+      "d": 7,
+      "r": 14,
+      "split": 29
+    },
+    {
+      "year": 1997,
+      "d": 6,
+      "r": 12,
+      "split": 32
+    },
+    {
+      "year": 1998,
+      "d": 6,
+      "r": 13,
+      "split": 31
+    },
+    {
+      "year": 1999,
+      "d": 9,
+      "r": 14,
+      "split": 27
+    },
+    {
+      "year": 2000,
+      "d": 9,
+      "r": 16,
+      "split": 25
+    },
+    {
+      "year": 2001,
+      "d": 8,
+      "r": 14,
+      "split": 28
+    },
+    {
+      "year": 2002,
+      "d": 10,
+      "r": 12,
+      "split": 28
+    },
+    {
+      "year": 2003,
+      "d": 10,
+      "r": 13,
+      "split": 27
+    },
+    {
+      "year": 2004,
+      "d": 9,
+      "r": 13,
+      "split": 28
+    },
+    {
+      "year": 2005,
+      "d": 8,
+      "r": 13,
+      "split": 29
+    },
+    {
+      "year": 2006,
+      "d": 8,
+      "r": 13,
+      "split": 29
+    },
+    {
+      "year": 2007,
+      "d": 15,
+      "r": 10,
+      "split": 25
+    },
+    {
+      "year": 2008,
+      "d": 14,
+      "r": 10,
+      "split": 26
+    },
+    {
+      "year": 2009,
+      "d": 17,
+      "r": 10,
+      "split": 23
+    },
+    {
+      "year": 2010,
+      "d": 16,
+      "r": 10,
+      "split": 24
+    },
+    {
+      "year": 2011,
+      "d": 11,
+      "r": 22,
+      "split": 17
+    },
+    {
+      "year": 2012,
+      "d": 11,
+      "r": 24,
+      "split": 15
+    },
+    {
+      "year": 2013,
+      "d": 12,
+      "r": 25,
+      "split": 13
+    },
+    {
+      "year": 2014,
+      "d": 13,
+      "r": 24,
+      "split": 13
+    },
+    {
+      "year": 2015,
+      "d": 7,
+      "r": 24,
+      "split": 19
+    },
+    {
+      "year": 2016,
+      "d": 7,
+      "r": 23,
+      "split": 20
+    },
+    {
+      "year": 2017,
+      "d": 6,
+      "r": 25,
+      "split": 19
+    },
+    {
+      "year": 2018,
+      "d": 8,
+      "r": 26,
+      "split": 16
+    },
+    {
+      "year": 2019,
+      "d": 14,
+      "r": 22,
+      "split": 14
+    },
+    {
+      "year": 2020,
+      "d": 15,
+      "r": 21,
+      "split": 14
+    },
+    {
+      "year": 2021,
+      "d": 15,
+      "r": 23,
+      "split": 12
+    },
+    {
+      "year": 2022,
+      "d": 14,
+      "r": 23,
+      "split": 13
+    },
+    {
+      "year": 2023,
+      "d": 17,
+      "r": 22,
+      "split": 11
+    },
+    {
+      "year": 2024,
+      "d": 17,
+      "r": 23,
+      "split": 10
+    },
+    {
+      "year": 2025,
+      "d": 15,
+      "r": 23,
+      "split": 12
+    },
+    {
+      "year": 2026,
+      "d": 16,
+      "r": 23,
+      "split": 11
+    }
+  ],
+  "flips": [
+    {
+      "state": "OR",
+      "state_name": "Oregon",
+      "year": 1975,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "OR",
+      "state_name": "Oregon",
+      "year": 1992,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "AL",
+      "state_name": "Alabama",
+      "year": 1993,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "AZ",
+      "state_name": "Arizona",
+      "year": 1993,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "MO",
+      "state_name": "Missouri",
+      "year": 1993,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "NC",
+      "state_name": "North Carolina",
+      "year": 1993,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "NV",
+      "state_name": "Nevada",
+      "year": 1993,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "PA",
+      "state_name": "Pennsylvania",
+      "year": 1993,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "SD",
+      "state_name": "South Dakota",
+      "year": 1993,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "year": 1993,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "NJ",
+      "state_name": "New Jersey",
+      "year": 1994,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "PA",
+      "state_name": "Pennsylvania",
+      "year": 1994,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "year": 1994,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "AL",
+      "state_name": "Alabama",
+      "year": 1995,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "FL",
+      "state_name": "Florida",
+      "year": 1995,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "ID",
+      "state_name": "Idaho",
+      "year": 1995,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "IL",
+      "state_name": "Illinois",
+      "year": 1995,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "KS",
+      "state_name": "Kansas",
+      "year": 1995,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "MI",
+      "state_name": "Michigan",
+      "year": 1995,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "MT",
+      "state_name": "Montana",
+      "year": 1995,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "NC",
+      "state_name": "North Carolina",
+      "year": 1995,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "ND",
+      "state_name": "North Dakota",
+      "year": 1995,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "NM",
+      "state_name": "New Mexico",
+      "year": 1995,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "OH",
+      "state_name": "Ohio",
+      "year": 1995,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "OK",
+      "state_name": "Oklahoma",
+      "year": 1995,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "PA",
+      "state_name": "Pennsylvania",
+      "year": 1995,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "RI",
+      "state_name": "Rhode Island",
+      "year": 1995,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "SD",
+      "state_name": "South Dakota",
+      "year": 1995,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "TN",
+      "state_name": "Tennessee",
+      "year": 1995,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "TX",
+      "state_name": "Texas",
+      "year": 1995,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "year": 1995,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "WI",
+      "state_name": "Wisconsin",
+      "year": 1995,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "WY",
+      "state_name": "Wyoming",
+      "year": 1995,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "year": 1996,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "WI",
+      "state_name": "Wisconsin",
+      "year": 1996,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "AR",
+      "state_name": "Arkansas",
+      "year": 1997,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "IA",
+      "state_name": "Iowa",
+      "year": 1997,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "IL",
+      "state_name": "Illinois",
+      "year": 1997,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "MI",
+      "state_name": "Michigan",
+      "year": 1997,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "NH",
+      "state_name": "New Hampshire",
+      "year": 1997,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "VT",
+      "state_name": "Vermont",
+      "year": 1997,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "WV",
+      "state_name": "West Virginia",
+      "year": 1997,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "WI",
+      "state_name": "Wisconsin",
+      "year": 1998,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "AL",
+      "state_name": "Alabama",
+      "year": 1999,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "CA",
+      "state_name": "California",
+      "year": 1999,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "year": 1999,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "FL",
+      "state_name": "Florida",
+      "year": 1999,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "IA",
+      "state_name": "Iowa",
+      "year": 1999,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "MI",
+      "state_name": "Michigan",
+      "year": 1999,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "NC",
+      "state_name": "North Carolina",
+      "year": 1999,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "WI",
+      "state_name": "Wisconsin",
+      "year": 1999,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "KY",
+      "state_name": "Kentucky",
+      "year": 2000,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "year": 2000,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "NE",
+      "state_name": "Nebraska",
+      "year": 2000,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "year": 2000,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "AZ",
+      "state_name": "Arizona",
+      "year": 2001,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "year": 2001,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "MO",
+      "state_name": "Missouri",
+      "year": 2001,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "VT",
+      "state_name": "Vermont",
+      "year": 2001,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "WV",
+      "state_name": "West Virginia",
+      "year": 2001,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "NJ",
+      "state_name": "New Jersey",
+      "year": 2002,
+      "from": "Republican",
+      "to": "Democrat"
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "year": 2002,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "year": 2002,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "AK",
+      "state_name": "Alaska",
+      "year": 2003,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "AL",
+      "state_name": "Alabama",
+      "year": 2003,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "year": 2003,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "year": 2003,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "HI",
+      "state_name": "Hawaii",
+      "year": 2003,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "IL",
+      "state_name": "Illinois",
+      "year": 2003,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "KS",
+      "state_name": "Kansas",
+      "year": 2003,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "MD",
+      "state_name": "Maryland",
+      "year": 2003,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "ME",
+      "state_name": "Maine",
+      "year": 2003,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "MI",
+      "state_name": "Michigan",
+      "year": 2003,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "NH",
+      "state_name": "New Hampshire",
+      "year": 2003,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "NM",
+      "state_name": "New Mexico",
+      "year": 2003,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "OK",
+      "state_name": "Oklahoma",
+      "year": 2003,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "PA",
+      "state_name": "Pennsylvania",
+      "year": 2003,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "SC",
+      "state_name": "South Carolina",
+      "year": 2003,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "TN",
+      "state_name": "Tennessee",
+      "year": 2003,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "TX",
+      "state_name": "Texas",
+      "year": 2003,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "year": 2003,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "WY",
+      "state_name": "Wyoming",
+      "year": 2003,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "CA",
+      "state_name": "California",
+      "year": 2004,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "year": 2004,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "year": 2004,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "year": 2005,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "year": 2005,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "IN",
+      "state_name": "Indiana",
+      "year": 2005,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "MO",
+      "state_name": "Missouri",
+      "year": 2005,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "MT",
+      "state_name": "Montana",
+      "year": 2005,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "NH",
+      "state_name": "New Hampshire",
+      "year": 2005,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "OK",
+      "state_name": "Oklahoma",
+      "year": 2005,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "TN",
+      "state_name": "Tennessee",
+      "year": 2005,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "year": 2005,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "AK",
+      "state_name": "Alaska",
+      "year": 2007,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "AR",
+      "state_name": "Arkansas",
+      "year": 2007,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "year": 2007,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "IA",
+      "state_name": "Iowa",
+      "year": 2007,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "IN",
+      "state_name": "Indiana",
+      "year": 2007,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "MA",
+      "state_name": "Massachusetts",
+      "year": 2007,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "MD",
+      "state_name": "Maryland",
+      "year": 2007,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "NH",
+      "state_name": "New Hampshire",
+      "year": 2007,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "OH",
+      "state_name": "Ohio",
+      "year": 2007,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "OR",
+      "state_name": "Oregon",
+      "year": 2007,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "year": 2008,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "AZ",
+      "state_name": "Arizona",
+      "year": 2009,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "DE",
+      "state_name": "Delaware",
+      "year": 2009,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "MO",
+      "state_name": "Missouri",
+      "year": 2009,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "NY",
+      "state_name": "New York",
+      "year": 2009,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "WI",
+      "state_name": "Wisconsin",
+      "year": 2009,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "NJ",
+      "state_name": "New Jersey",
+      "year": 2010,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "AL",
+      "state_name": "Alabama",
+      "year": 2011,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "CA",
+      "state_name": "California",
+      "year": 2011,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "year": 2011,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "CT",
+      "state_name": "Connecticut",
+      "year": 2011,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "HI",
+      "state_name": "Hawaii",
+      "year": 2011,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "IA",
+      "state_name": "Iowa",
+      "year": 2011,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "IN",
+      "state_name": "Indiana",
+      "year": 2011,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "KS",
+      "state_name": "Kansas",
+      "year": 2011,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "year": 2011,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "ME",
+      "state_name": "Maine",
+      "year": 2011,
+      "from": "Democrat",
+      "to": "Republican"
+    },
+    {
+      "state": "MI",
+      "state_name": "Michigan",
+      "year": 2011,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "NC",
+      "state_name": "North Carolina",
+      "year": 2011,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "NH",
+      "state_name": "New Hampshire",
+      "year": 2011,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "NM",
+      "state_name": "New Mexico",
+      "year": 2011,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "NY",
+      "state_name": "New York",
+      "year": 2011,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "OH",
+      "state_name": "Ohio",
+      "year": 2011,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "OK",
+      "state_name": "Oklahoma",
+      "year": 2011,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "OR",
+      "state_name": "Oregon",
+      "year": 2011,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "PA",
+      "state_name": "Pennsylvania",
+      "year": 2011,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "TN",
+      "state_name": "Tennessee",
+      "year": 2011,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "VT",
+      "state_name": "Vermont",
+      "year": 2011,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "WI",
+      "state_name": "Wisconsin",
+      "year": 2011,
+      "from": "Democrat",
+      "to": "Republican"
+    },
+    {
+      "state": "WY",
+      "state_name": "Wyoming",
+      "year": 2011,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "year": 2012,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "year": 2012,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "AK",
+      "state_name": "Alaska",
+      "year": 2013,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "AR",
+      "state_name": "Arkansas",
+      "year": 2013,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "year": 2013,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "ME",
+      "state_name": "Maine",
+      "year": 2013,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "MN",
+      "state_name": "Minnesota",
+      "year": 2013,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "NC",
+      "state_name": "North Carolina",
+      "year": 2013,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "OR",
+      "state_name": "Oregon",
+      "year": 2013,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "year": 2013,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "RI",
+      "state_name": "Rhode Island",
+      "year": 2014,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "year": 2014,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "AK",
+      "state_name": "Alaska",
+      "year": 2015,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "AR",
+      "state_name": "Arkansas",
+      "year": 2015,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "year": 2015,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "IL",
+      "state_name": "Illinois",
+      "year": 2015,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "MA",
+      "state_name": "Massachusetts",
+      "year": 2015,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "MD",
+      "state_name": "Maryland",
+      "year": 2015,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "MN",
+      "state_name": "Minnesota",
+      "year": 2015,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "NV",
+      "state_name": "Nevada",
+      "year": 2015,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "PA",
+      "state_name": "Pennsylvania",
+      "year": 2015,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "WV",
+      "state_name": "West Virginia",
+      "year": 2015,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "year": 2016,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "IA",
+      "state_name": "Iowa",
+      "year": 2017,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "KY",
+      "state_name": "Kentucky",
+      "year": 2017,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "MO",
+      "state_name": "Missouri",
+      "year": 2017,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "NC",
+      "state_name": "North Carolina",
+      "year": 2017,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "NH",
+      "state_name": "New Hampshire",
+      "year": 2017,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "NV",
+      "state_name": "Nevada",
+      "year": 2017,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "VT",
+      "state_name": "Vermont",
+      "year": 2017,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "NJ",
+      "state_name": "New Jersey",
+      "year": 2018,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "year": 2018,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "WV",
+      "state_name": "West Virginia",
+      "year": 2018,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "year": 2019,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "IL",
+      "state_name": "Illinois",
+      "year": 2019,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "KS",
+      "state_name": "Kansas",
+      "year": 2019,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "ME",
+      "state_name": "Maine",
+      "year": 2019,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "MI",
+      "state_name": "Michigan",
+      "year": 2019,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "NH",
+      "state_name": "New Hampshire",
+      "year": 2019,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "NM",
+      "state_name": "New Mexico",
+      "year": 2019,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "NV",
+      "state_name": "Nevada",
+      "year": 2019,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "NY",
+      "state_name": "New York",
+      "year": 2019,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "WI",
+      "state_name": "Wisconsin",
+      "year": 2019,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "KY",
+      "state_name": "Kentucky",
+      "year": 2020,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "year": 2020,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "MT",
+      "state_name": "Montana",
+      "year": 2021,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "NH",
+      "state_name": "New Hampshire",
+      "year": 2021,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "year": 2022,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "AZ",
+      "state_name": "Arizona",
+      "year": 2023,
+      "from": "Republican",
+      "to": "Split"
+    },
+    {
+      "state": "MA",
+      "state_name": "Massachusetts",
+      "year": 2023,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "MD",
+      "state_name": "Maryland",
+      "year": 2023,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "MI",
+      "state_name": "Michigan",
+      "year": 2023,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "MN",
+      "state_name": "Minnesota",
+      "year": 2023,
+      "from": "Split",
+      "to": "Democrat"
+    },
+    {
+      "state": "NV",
+      "state_name": "Nevada",
+      "year": 2023,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "year": 2024,
+      "from": "Split",
+      "to": "Republican"
+    },
+    {
+      "state": "MI",
+      "state_name": "Michigan",
+      "year": 2025,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "MN",
+      "state_name": "Minnesota",
+      "year": 2025,
+      "from": "Democrat",
+      "to": "Split"
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "year": 2026,
+      "from": "Split",
+      "to": "Democrat"
+    }
+  ]
+}

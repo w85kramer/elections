@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trifectas | State Elections Tracker</title>
+<title>State Trifectas — 2026 Outlook | State Elections Tracker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/common.css">
@@ -28,27 +28,130 @@
   }
   .subnav a:hover { border-color: var(--ms-navy); color: var(--ms-navy); }
   .subnav a.active { background: var(--ms-navy); border-color: var(--ms-navy); color: white; }
-  .placeholder-notice {
-    background: #fff8e1;
-    border: 2px dashed #d0ac60;
-    border-radius: var(--ms-radius);
-    padding: 24px;
-    margin: 32px 0;
-    text-align: center;
+
+  .tri-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
   }
-  .placeholder-notice p {
+
+  /* Map embed */
+  .map-embed {
+    width: 100%;
+    height: 680px;
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    margin-bottom: 32px;
+  }
+
+  /* Filters */
+  .filters-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+    align-items: center;
+  }
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .filter-group label {
+    font-weight: 600; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--ms-text-light);
+  }
+  .filter-group select, .filter-group input {
+    padding: 6px 10px;
+    border: 2px solid var(--ms-border);
+    border-radius: var(--ms-radius);
     font-family: 'Work Sans', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    color: #856404;
+    font-size: 13px;
+    background: white;
+    cursor: pointer;
+  }
+  .filter-group select:focus, .filter-group input:focus { border-color: var(--ms-navy); outline: none; }
+  .results-count {
+    font-size: 13px;
+    color: var(--ms-text-light);
+    margin-bottom: 16px;
+  }
+
+  /* State cards */
+  .state-card {
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    transition: box-shadow 0.15s;
+  }
+  .state-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .state-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .state-name {
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--ms-navy);
+    text-decoration: none;
+  }
+  .state-name:hover { text-decoration: underline; }
+  .tri-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .badge-dem-tri { background: #6cb3d2; color: white; }
+  .badge-gop-tri { background: #e50963; color: white; }
+  .badge-split-tri { background: #8b567f; color: white; }
+  .badge-competitive { background: #fff3cd; color: #856404; border: 1px solid #d0ac60; }
+  .state-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    font-size: 13px;
     margin-bottom: 8px;
   }
-  .placeholder-notice p:last-child { margin-bottom: 0; }
-  .map-links {
+  .state-row .row-item {
     display: flex;
-    gap: 8px;
-    margin-top: 16px;
-    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+  .row-label { font-weight: 600; color: var(--ms-text); }
+  .row-value { color: var(--ms-text-light); }
+  .row-d { color: var(--ms-dem-blue); font-weight: 700; }
+  .row-r { color: var(--ms-rep-red); font-weight: 700; }
+  .state-2026 {
+    font-size: 12px;
+    color: #666;
+    margin-top: 6px;
+    font-style: italic;
+  }
+  .streak-tag {
+    font-size: 11px;
+    color: var(--ms-text-light);
+    margin-left: auto;
+  }
+  .empty-state {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--ms-text-light);
+  }
+
+  @media (max-width: 768px) {
+    .tri-stats { grid-template-columns: repeat(2, 1fr); }
+    .state-row { grid-template-columns: 1fr; }
+    .map-embed { height: 400px; }
   }
 </style>
 </head>
@@ -61,31 +164,187 @@
   </div>
 
   <div class="breadcrumb">
-    <a href="index.html">Home</a> &rsaquo; <a href="trifectas-101.html">Trifectas</a> &rsaquo; 2026 Elections
+    <a href="index.html">Home</a> &rsaquo; <a href="trifectas-101.html">Trifectas</a> &rsaquo; Current Status
   </div>
 
   <div class="subnav">
     <a href="trifectas-101.html">Overview</a>
-    <a href="trifectas.html" class="active">2026 Elections</a>
+    <a href="trifectas.html" class="active">Current Status</a>
     <a href="trifectas-analytics.html">Trends & Analytics</a>
   </div>
 
-  <h1 class="heading-xl" style="margin-bottom: 8px">Trifectas</h1>
+  <h1 class="heading-xl" style="margin-bottom: 8px">State Trifectas</h1>
   <p class="subtitle mb-16">Unified party control of state government across all 50 states</p>
 
-  <div class="placeholder-notice">
-    <p>Content coming soon.</p>
-    <p style="font-weight:400;font-size:13px;color:#666">This page will feature current trifecta status, states at risk of flipping, and policy implications.</p>
-    <div class="map-links">
-      <a href="trifectas_partisan.html" style="display:inline-block;padding:6px 14px;border:1px solid var(--ms-border);border-radius:var(--ms-radius);font-size:13px;font-weight:600;text-decoration:none;color:var(--ms-dem-blue);transition:all 0.15s">Trifecta Map &rarr;</a>
-    </div>
+  <!-- Stats -->
+  <div class="tri-stats" id="stats-row">
+    <div class="card stat-card"><div class="stat-number" id="stat-dem" style="color:var(--ms-dem-blue)">—</div><div class="stat-label">Dem Trifectas</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-rep" style="color:var(--ms-rep-red)">—</div><div class="stat-label">GOP Trifectas</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-split" style="color:var(--ms-purple)">—</div><div class="stat-label">Divided</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-competitive" style="color:#c59000">—</div><div class="stat-label">Competitive</div></div>
   </div>
 
-  <div class="site-footer">
+  <!-- Map -->
+  <div class="section">
+    <iframe class="map-embed" src="trifectas_partisan.html" title="Trifectas Map"></iframe>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters-bar">
+    <div class="filter-group">
+      <label>Search</label>
+      <input type="text" id="filter-search" placeholder="State name..." style="width:140px">
+    </div>
+    <div class="filter-group">
+      <label>Status</label>
+      <select id="filter-status">
+        <option value="">All</option>
+        <option value="Democrat">Dem Trifecta</option>
+        <option value="Republican">GOP Trifecta</option>
+        <option value="Split">Divided</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>2026</label>
+      <select id="filter-competitive">
+        <option value="">All</option>
+        <option value="yes">Competitive Only</option>
+      </select>
+    </div>
+  </div>
+  <div class="results-count" id="results-count"></div>
+
+  <!-- State cards -->
+  <div id="states-list"></div>
+
+  <div class="site-footer" style="margin-top:32px">
     <img src="assets/multistate-logomark.png" alt="MultiState">
-    <div class="footer-text">State Elections Tracker &mdash; Data compiled by MultiState</div>
+    <span class="footer-text">Source: MultiState. Data generated <span id="gen-date"></span>.</span>
   </div>
 
 </div>
+
+<script src="js/common.js"></script>
+<script>
+(async function() {
+  const data = await loadJSON('data/trifectas_data.json');
+  const states = data.states;
+  const summary = data.summary;
+
+  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+
+  // Stats
+  document.getElementById('stat-dem').textContent = summary.d_trifectas;
+  document.getElementById('stat-rep').textContent = summary.r_trifectas;
+  document.getElementById('stat-split').textContent = summary.split;
+  document.getElementById('stat-competitive').textContent = summary.competitive;
+
+  function triBadge(status) {
+    if (status === 'Democrat') return '<span class="tri-badge badge-dem-tri">Dem Trifecta</span>';
+    if (status === 'Republican') return '<span class="tri-badge badge-gop-tri">GOP Trifecta</span>';
+    return '<span class="tri-badge badge-split-tri">Divided</span>';
+  }
+
+  function competitiveBadge(s) {
+    if (!s.competitive) return '';
+    let label = '';
+    if (s.competitive_type === 'at_risk_d') label = 'D At Risk';
+    else if (s.competitive_type === 'at_risk_r') label = 'R At Risk';
+    else if (s.competitive_type === 'pickup_d') label = 'D Pickup Opp.';
+    else if (s.competitive_type === 'pickup_r') label = 'R Pickup Opp.';
+    else if (s.competitive_type === 'pickup_both') label = 'Competitive';
+    else label = 'Competitive';
+    return '<span class="tri-badge badge-competitive">' + label + '</span>';
+  }
+
+  function partySpan(ctrl) {
+    if (ctrl === 'D' || ctrl === 'Democrat') return '<span class="row-d">Dem</span>';
+    if (ctrl === 'R' || ctrl === 'Republican') return '<span class="row-r">GOP</span>';
+    if (ctrl === 'Coalition') return '<span style="color:#8b567f;font-weight:700">Coalition</span>';
+    if (ctrl === 'Tied') return '<span style="color:#c59000;font-weight:700">Tied</span>';
+    return '<span>' + (ctrl || '—') + '</span>';
+  }
+
+  function getFiltered() {
+    const search = document.getElementById('filter-search').value.toLowerCase();
+    const status = document.getElementById('filter-status').value;
+    const competitive = document.getElementById('filter-competitive').value;
+
+    return states.filter(s => {
+      if (search && !s.state_name.toLowerCase().includes(search) && !s.state.toLowerCase().includes(search)) return false;
+      if (status && s.trifecta_status !== status) return false;
+      if (competitive === 'yes' && !s.competitive) return false;
+      return true;
+    });
+  }
+
+  function render() {
+    const filtered = getFiltered();
+    const list = document.getElementById('states-list');
+    const countEl = document.getElementById('results-count');
+
+    // Sort: competitive first, then alphabetical
+    filtered.sort((a, b) => {
+      if (a.competitive !== b.competitive) return a.competitive ? -1 : 1;
+      return a.state.localeCompare(b.state);
+    });
+
+    if (filtered.length === states.length) {
+      countEl.textContent = 'Showing all ' + filtered.length + ' states';
+    } else {
+      countEl.textContent = 'Showing ' + filtered.length + ' of ' + states.length + ' states';
+    }
+
+    if (filtered.length === 0) {
+      list.innerHTML = '<div class="empty-state">No states match the current filters.</div>';
+      return;
+    }
+
+    let html = '';
+    for (const s of filtered) {
+      const compBadge = competitiveBadge(s);
+      const streakText = s.streak_since ? 'Since ' + s.streak_since : '';
+
+      // Governor display
+      const govPartyClass = (s.governor_party === 'Democrat' || s.governor_party === 'D') ? 'row-d' : (s.governor_party === 'Republican' || s.governor_party === 'R') ? 'row-r' : '';
+      const govPartyShort = (s.governor_party === 'Democrat' || s.governor_party === 'D') ? 'D' : (s.governor_party === 'Republican' || s.governor_party === 'R') ? 'R' : s.governor_party || '—';
+
+      // 2026 outlook
+      let outlook = [];
+      if (s.governor_up_2026) {
+        outlook.push('Governor race' + (s.gov_forecast ? ' (' + s.gov_forecast + ')' : ''));
+      }
+      if (s.senate_up_2026) outlook.push('Senate elections');
+      if (s.house_up_2026) outlook.push('House elections');
+      const outlookText = outlook.length > 0 ? '2026: ' + outlook.join(' | ') : 'No major races in 2026';
+
+      // Competitive scenario
+      const scenarioText = s.competitive_scenario ? '<div class="state-2026" style="font-style:normal;color:#856404">' + s.competitive_scenario + '</div>' : '';
+
+      html += '<div class="state-card">' +
+        '<div class="state-header">' +
+          '<a href="state.html?st=' + s.state + '" class="state-name">' + s.state_name + '</a>' +
+          triBadge(s.trifecta_status) +
+          compBadge +
+          (streakText ? '<span class="streak-tag">' + streakText + '</span>' : '') +
+        '</div>' +
+        '<div class="state-row">' +
+          '<div class="row-item"><span class="row-label">Governor:</span> <span class="' + govPartyClass + '">' + (s.governor_name || '—') + ' (' + govPartyShort + ')</span></div>' +
+          '<div class="row-item"><span class="row-label">Senate:</span> ' + partySpan(s.senate_control) + '</div>' +
+          '<div class="row-item"><span class="row-label">House:</span> ' + partySpan(s.house_control) + '</div>' +
+        '</div>' +
+        '<div class="state-2026">' + outlookText + '</div>' +
+        scenarioText +
+      '</div>';
+    }
+    list.innerHTML = html;
+  }
+
+  render();
+  document.getElementById('filter-search').addEventListener('input', render);
+  document.getElementById('filter-status').addEventListener('change', render);
+  document.getElementById('filter-competitive').addEventListener('change', render);
+})();
+</script>
 </body>
 </html>
