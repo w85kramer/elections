@@ -20,8 +20,6 @@ import time
 
 import httpx
 
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
 SUPABASE_URL = f'https://api.supabase.com/v1/projects/{PROJECT_REF}/database/query'
 
 SOURCE = 'StateNavigate'
@@ -46,7 +44,6 @@ def win_pct_to_rating(win_pct, leading_party):
         return 'Toss-up'
     return f'{label} {leading_party}'
 
-
 # Map SN id prefixes to our chamber names
 # sldl = state legislative district lower, sldu = upper
 CHAMBER_MAP = {
@@ -62,14 +59,12 @@ CHAMBER_MAP = {
 }
 # Default: sldl→'House', sldu→'Senate'
 
-
 def get_chamber(id_prefix, state_abbr):
     """Get our DB chamber name from SN id prefix and state."""
     if id_prefix == 'sldl':
         return CHAMBER_MAP['sldl'].get(state_abbr, 'House')
     else:
         return CHAMBER_MAP['sldu'].get(state_abbr, 'Senate')
-
 
 def parse_sn_id(sn_id):
     """Parse SN id like 'sldl:5' or 'sldu:3A' → (prefix, district_num, seat_designator)."""
@@ -81,7 +76,6 @@ def parse_sn_id(sn_id):
         seat_designator = rest[-1]
         district_num = rest[:-1]
     return prefix, district_num, seat_designator
-
 
 def run_sql(query, label='', retries=5):
     for attempt in range(retries):
@@ -101,13 +95,11 @@ def run_sql(query, label='', retries=5):
         print(f'SQL ERROR on {label}: {resp.status_code} - {resp.text[:500]}')
         return None
 
-
 def esc(s):
     """Escape single quotes for SQL."""
     if s is None:
         return 'NULL'
     return str(s).replace("'", "''")
-
 
 def main():
     parser = argparse.ArgumentParser(description='Import StateNavigate legislative forecasts')
@@ -317,6 +309,9 @@ def main():
 
     # Rating distribution
     from collections import Counter
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
     ratings = Counter()
     for row in all_forecast_rows:
         key = (row['_chamber'], row['_district_num'], row['_seat_designator'])
@@ -410,7 +405,6 @@ def main():
         print("Election forecast_rating distribution:")
         for r in rated:
             print(f"  {r['forecast_rating']}: {r['cnt']}")
-
 
 if __name__ == '__main__':
     main()

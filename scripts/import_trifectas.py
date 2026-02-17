@@ -18,31 +18,17 @@ import os
 import time
 import requests
 import openpyxl
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 XLSX_PATH = os.path.expanduser("~/Downloads/Trifectas - Political Breakdown Timeline.xlsx")
-
-# Load Supabase credentials
-ENV_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
-def load_env():
-    env = {}
-    with open(ENV_PATH) as f:
-        for line in f:
-            line = line.strip()
-            if line and not line.startswith('#') and '=' in line:
-                k, v = line.split('=', 1)
-                env[k.strip()] = v.strip()
-    return env
-
-env = load_env()
-SUPABASE_TOKEN = env.get('SUPABASE_MANAGEMENT_TOKEN', '')
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
-API_URL = f'https://api.supabase.com/v1/projects/{PROJECT_REF}/database/query'
 
 
 def run_sql(query, attempt=1, max_attempts=5):
     """Execute SQL via Management API with retry logic."""
     headers = {
-        'Authorization': f'Bearer {SUPABASE_TOKEN}',
+        'Authorization': f'Bearer {TOKEN}',
         'Content-Type': 'application/json'
     }
     resp = requests.post(API_URL, headers=headers, json={'query': query})

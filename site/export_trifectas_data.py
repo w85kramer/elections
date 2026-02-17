@@ -9,26 +9,16 @@ import time
 from datetime import datetime
 
 import requests
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 SITE_DIR = '/home/billkramer/elections/site'
-API_URL = 'https://api.supabase.com/v1/projects/pikcvwulzfxgwfcfssxc/database/query'
-
-# Load token from .env
-env_path = os.path.join(os.path.dirname(SITE_DIR), '.env')
-TOKEN = None
-if os.path.exists(env_path):
-    with open(env_path) as f:
-        for line in f:
-            if line.startswith('SUPABASE_MANAGEMENT_TOKEN='):
-                TOKEN = line.strip().split('=', 1)[1].strip('"\'')
-if not TOKEN:
-    TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
 
 HEADERS = {
     'Authorization': f'Bearer {TOKEN}',
     'Content-Type': 'application/json'
 }
-
 
 def query_db(sql, retries=5):
     """Execute SQL via Supabase Management API with retry."""
@@ -43,7 +33,6 @@ def query_db(sql, retries=5):
             continue
         resp.raise_for_status()
     raise Exception(f'Failed after {retries} retries')
-
 
 def export_trifectas():
     """Export all trifecta data to a single JSON."""
@@ -470,7 +459,6 @@ def export_trifectas():
     with open(outpath, 'w') as f:
         json.dump(data, f, indent=2)
     print(f'  Written: {outpath} ({len(states)} states, {len(timeline)} timeline years, {len(flips)} flips)')
-
 
 if __name__ == '__main__':
     export_trifectas()

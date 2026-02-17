@@ -23,11 +23,11 @@ import math
 from datetime import datetime
 
 import httpx
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
 SITE_DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'site', 'data')
-
 
 def run_sql(query, exit_on_error=True, retries=5):
     for attempt in range(retries):
@@ -48,7 +48,6 @@ def run_sql(query, exit_on_error=True, retries=5):
         if exit_on_error:
             sys.exit(1)
         return None
-
 
 LOWER_CHAMBER_NAMES = {
     'CA': 'Assembly', 'NV': 'Assembly', 'NY': 'Assembly', 'WI': 'Assembly', 'NJ': 'Assembly',
@@ -126,10 +125,8 @@ SUPERMAJORITY_OVERRIDES = {
     # state_chamber: threshold  (if different from ceil(2/3 * total))
 }
 
-
 def get_lower_chamber(state_abbr):
     return LOWER_CHAMBER_NAMES.get(state_abbr, 'House')
-
 
 def compute_trifecta(gov_party, chambers):
     """Determine trifecta status from governor party and chamber compositions."""
@@ -154,7 +151,6 @@ def compute_trifecta(gov_party, chambers):
         elif gov_party == 'R':
             return 'Republican Trifecta'
     return 'Divided'
-
 
 def export_states_summary(dry_run=False):
     """Export states_summary.json with 50-state overview."""
@@ -351,7 +347,6 @@ def export_states_summary(dry_run=False):
         json.dump(result, f, indent=2)
     print(f'  Written {out_path} ({len(states)} states)')
 
-
 def export_pres_margins(dry_run=False):
     """Export pres_margins.json with all legislative seat margins for swing calculator."""
     print('Exporting pres_margins.json...')
@@ -403,7 +398,6 @@ def export_pres_margins(dry_run=False):
     with open(out_path, 'w') as f:
         json.dump(result, f)  # No indent — this file is ~500KB
     print(f'  Written {out_path} ({len(districts)} seats)')
-
 
 def export_state_detail(state_abbr, dry_run=False):
     """Export detailed JSON for a single state."""
@@ -715,7 +709,6 @@ def export_state_detail(state_abbr, dry_run=False):
     with open(out_path, 'w') as f:
         json.dump(result, f, indent=2)
     print(f'  Written {out_path}')
-
 
 def export_all_state_details(dry_run=False):
     """Export detail JSON for all 50 states using bulk queries (7 total, not 350)."""
@@ -1035,7 +1028,6 @@ def export_all_state_details(dry_run=False):
 
     print(f'  Written 50 state files to {out_dir}/')
 
-
 def export_ballot_measures(dry_run=False):
     """Export ballot_measures.json with all measures across 2024-2026."""
     print('Exporting ballot_measures.json...')
@@ -1113,7 +1105,6 @@ def export_ballot_measures(dry_run=False):
         json.dump(result, f, indent=2)
     print(f'  Written {out_path} ({len(measures)} measures)')
 
-
 def main():
     parser = argparse.ArgumentParser(description='Export site data from Supabase to JSON')
     parser.add_argument('--dry-run', action='store_true', help='Print what would be done')
@@ -1147,7 +1138,6 @@ def main():
         export_ballot_measures(dry_run=args.dry_run)
 
     print('\nDone.')
-
 
 if __name__ == '__main__':
     main()

@@ -21,10 +21,6 @@ import httpx
 import html as htmlmod
 from collections import defaultdict
 
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
-
-
 def run_sql(query, exit_on_error=True):
     resp = httpx.post(
         f'https://api.supabase.com/v1/projects/{PROJECT_REF}/database/query',
@@ -39,12 +35,10 @@ def run_sql(query, exit_on_error=True):
         return None
     return resp.json()
 
-
 def esc(s):
     if s is None:
         return ''
     return str(s).replace("'", "''")
-
 
 PARTY_MAP = {
     'Republican': 'R',
@@ -52,7 +46,6 @@ PARTY_MAP = {
     'Independent': 'I',
     'Libertarian': 'L',
 }
-
 
 def main():
     import argparse
@@ -246,6 +239,9 @@ def main():
     if len(seat_ids) != len(set(seat_ids)):
         print("  ERROR: Duplicate seat assignments!")
         from collections import Counter
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
         dupes = {k: v for k, v in Counter(seat_ids).items() if v > 1}
         print(f"  Duplicates: {dupes}")
         sys.exit(1)
@@ -402,7 +398,6 @@ def main():
         print(f"    {r['seat_label']}: {r['full_name']} ({r['party']})")
 
     print("\nDone!")
-
 
 if __name__ == '__main__':
     main()

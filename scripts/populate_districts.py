@@ -9,10 +9,9 @@ districts for 47 states. Deferred to Phase 2 (need verified Ballotpedia data):
 """
 import httpx
 import sys
-
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
-
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 def run_sql(query):
     resp = httpx.post(
@@ -25,7 +24,6 @@ def run_sql(query):
         print(f'ERROR: {resp.status_code} - {resp.text[:500]}')
         sys.exit(1)
     return resp.json()
-
 
 # ── Check for existing districts ──────────────────────────────────────
 existing = run_sql("SELECT COUNT(*) as cnt FROM districts")
@@ -84,7 +82,6 @@ VT_SENATE_DISTRICTS = [
 
 # Vermont House: 104 districts (58 single + 46 two-member = 150)
 VT_HOUSE_DISTRICTS = []  # Phase 2 — needs complete district list
-
 
 # ── Build district records ────────────────────────────────────────────
 # Each record: (state_id, office_level, chamber, district_number, num_seats)

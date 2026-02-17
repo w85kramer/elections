@@ -24,13 +24,13 @@ import argparse
 import html as htmlmod
 
 import httpx
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 CACHE_DIR = '/tmp/bp_districts'
 INPUT_PATH = '/tmp/seat_gaps_report.json'
 OUTPUT_PATH = '/tmp/seat_gap_details.json'
-
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
 
 # ══════════════════════════════════════════════════════════════════════
 # BP URL BUILDING
@@ -66,7 +66,6 @@ CHAMBER_URL_OVERRIDES = {
     ('NE', 'Legislature'): 'Legislature',
 }
 
-
 def build_bp_district_url(state, chamber, district):
     """Build the BP URL for an individual district page."""
     state_name = STATE_NAMES[state]
@@ -87,7 +86,6 @@ def build_bp_district_url(state, chamber, district):
     district_part = district
 
     return f'https://ballotpedia.org/{state_name}_{chamber_part}_District_{district_part}'
-
 
 # ══════════════════════════════════════════════════════════════════════
 # PAGE FETCHING
@@ -129,14 +127,12 @@ def fetch_district_page(state, chamber, district, use_cache=True):
     time.sleep(1.5)
     return html
 
-
 def strip_html(text):
     """Remove HTML tags and decode entities."""
     text = re.sub(r'<[^>]+>', '', text)
     text = htmlmod.unescape(text)
     text = re.sub(r'\s+', ' ', text).strip()
     return text
-
 
 # ══════════════════════════════════════════════════════════════════════
 # PAGE PARSING
@@ -218,7 +214,6 @@ def parse_district_page(html, state, chamber, district):
 
     return result
 
-
 # ══════════════════════════════════════════════════════════════════════
 # DB QUERIES
 # ══════════════════════════════════════════════════════════════════════
@@ -236,7 +231,6 @@ def run_query(sql):
         return run_query(sql)
     resp.raise_for_status()
     return resp.json()
-
 
 # ══════════════════════════════════════════════════════════════════════
 # RESEARCH LOGIC
@@ -272,7 +266,6 @@ STALE_DATA = {
     ('NH', 'House', 'Coos-5'): 'stale_openstates',
 }
 
-
 def classify_replacement(gap_item):
     """Classify a name mismatch as nickname, name_change, stale, or real_replacement."""
     key = (gap_item['state'], gap_item['chamber'], gap_item['district'])
@@ -285,7 +278,6 @@ def classify_replacement(gap_item):
         return STALE_DATA[key]
 
     return 'real_replacement'
-
 
 def research_gap(gap_type, item, use_cache=True):
     """
@@ -360,7 +352,6 @@ def research_gap(gap_type, item, use_cache=True):
                     detail['notes'] = parsed['notes']
 
     return detail
-
 
 # ══════════════════════════════════════════════════════════════════════
 # MAIN
@@ -458,7 +449,6 @@ def main():
         print(f'  {action}: {count}')
     print(f'  Total: {len(details)}')
     print(f'\nOutput: {OUTPUT_PATH}')
-
 
 if __name__ == '__main__':
     main()

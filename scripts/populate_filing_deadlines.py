@@ -15,10 +15,9 @@ import time
 import argparse
 
 import httpx
-
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
-
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 def run_sql(query, exit_on_error=True, retries=5):
     for attempt in range(retries):
@@ -39,7 +38,6 @@ def run_sql(query, exit_on_error=True, retries=5):
         if exit_on_error:
             sys.exit(1)
         return None
-
 
 # Filing deadline for each state (candidate filing deadline for state-level races).
 # Most states use a single date for all offices. States with different deadlines
@@ -96,7 +94,6 @@ STATE_DEADLINES = {
     'WI': '2026-06-01',
     'WY': '2026-05-29',
 }
-
 
 def main():
     parser = argparse.ArgumentParser(description='Populate filing deadlines on 2026 elections')
@@ -214,7 +211,6 @@ def main():
             WHERE election_year = 2026 AND election_type LIKE 'Special%' AND filing_deadline IS NOT NULL
         """)
         print(f"\nSpecial elections with filing_deadline (should be 0): {rows[0]['cnt']}")
-
 
 if __name__ == '__main__':
     main()

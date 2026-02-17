@@ -16,9 +16,11 @@ Usage:
 
 import argparse
 import requests
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 SUPABASE_URL = "https://api.supabase.com/v1/projects/pikcvwulzfxgwfcfssxc/database/query"
-TOKEN = "sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7"
 HEADERS = {
     "Authorization": f"Bearer {TOKEN}",
     "Content-Type": "application/json",
@@ -71,7 +73,6 @@ CRYSTAL_BALL = {
 DATE_COOK = "2026-02-09"
 DATE_CB = "2026-02-09"
 
-
 def run_query(sql):
     resp = requests.post(SUPABASE_URL, headers=HEADERS, json={"query": sql})
     resp.raise_for_status()
@@ -80,14 +81,12 @@ def run_query(sql):
         raise RuntimeError(data["message"])
     return data
 
-
 def parse_rating(rating_str):
     """Parse 'Solid R' → ('Solid', 'R'), 'Toss-up' → ('Toss-up', None)"""
     if rating_str == "Toss-up":
         return "Toss-up", None
     parts = rating_str.rsplit(" ", 1)
     return parts[0], parts[1]
-
 
 def consensus_rating(cook_str, cb_str):
     """Average two ratings to produce a consensus."""
@@ -127,7 +126,6 @@ def consensus_rating(cook_str, cb_str):
     if consensus_label == "Toss-up":
         return "Toss-up"
     return f"{consensus_label} {party}"
-
 
 def main():
     parser = argparse.ArgumentParser()
@@ -270,7 +268,6 @@ def main():
     print("Elections with forecast_rating set:")
     for r in rated:
         print(f"  {r['forecast_rating']}: {r['cnt']}")
-
 
 if __name__ == "__main__":
     main()

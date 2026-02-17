@@ -23,7 +23,6 @@ Sources:
 import json, os, time, requests
 
 SUPABASE_URL = "https://api.supabase.com/v1/projects/pikcvwulzfxgwfcfssxc/database/query"
-TOKEN = "sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7"
 
 # ============================================================
 # Authoritative state classifications
@@ -80,7 +79,6 @@ ALL_STATES = [
     'SD','TN','TX','UT','VT','VA','WA','WV','WI','WY'
 ]
 
-
 def run_sql(query, retries=5):
     """Execute SQL via Supabase Management API with retry."""
     for attempt in range(retries):
@@ -107,9 +105,11 @@ def run_sql(query, retries=5):
     print("  Max retries exceeded")
     return None
 
-
 def main():
     import argparse
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
     parser = argparse.ArgumentParser()
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args()
@@ -253,7 +253,6 @@ def main():
     with open(json_path, 'w') as f:
         json.dump(export, f, indent=2)
     print(f"  Written: {json_path}")
-
 
 if __name__ == '__main__':
     main()

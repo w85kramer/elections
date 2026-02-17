@@ -14,9 +14,11 @@ Usage:
 import argparse
 import requests
 import time
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 SUPABASE_URL = "https://api.supabase.com/v1/projects/pikcvwulzfxgwfcfssxc/database/query"
-TOKEN = "sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7"
 HEADERS = {
     "Authorization": f"Bearer {TOKEN}",
     "Content-Type": "application/json",
@@ -56,7 +58,6 @@ SPECIAL_CASES = {
     ),
 }
 
-
 def run_query(sql, retries=5):
     for attempt in range(1, retries + 1):
         resp = requests.post(SUPABASE_URL, headers=HEADERS, json={"query": sql})
@@ -71,7 +72,6 @@ def run_query(sql, retries=5):
             raise RuntimeError(data["message"])
         return data
     raise RuntimeError("Max retries exceeded")
-
 
 def main():
     parser = argparse.ArgumentParser()
@@ -212,7 +212,6 @@ def main():
 
     total = run_query("SELECT COUNT(*) as cnt FROM chamber_control;")
     print(f"\nTotal rows: {total[0]['cnt']}")
-
 
 if __name__ == "__main__":
     main()

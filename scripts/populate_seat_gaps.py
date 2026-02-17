@@ -22,11 +22,11 @@ from datetime import datetime
 from collections import Counter
 
 import httpx
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
 INPUT_PATH = '/tmp/seat_gap_details.json'
-
 
 def run_sql(query, exit_on_error=True, max_retries=5):
     for attempt in range(max_retries):
@@ -52,19 +52,16 @@ def run_sql(query, exit_on_error=True, max_retries=5):
         sys.exit(1)
     return None
 
-
 def esc(s):
     if s is None:
         return ''
     return str(s).replace("'", "''")
-
 
 def strip_accents(s):
     return ''.join(
         c for c in unicodedata.normalize('NFD', s)
         if unicodedata.category(c) != 'Mn'
     )
-
 
 # Valid CHECK constraint values
 VALID_START_REASONS = {'appointed', 'elected', 'succeeded'}
@@ -86,7 +83,6 @@ END_REASON_MAP = {
     'died': 'died',
 }
 
-
 def normalize_reason(reason, valid_set, default, reason_map):
     """Map a reason string to a valid DB value."""
     if not reason:
@@ -96,7 +92,6 @@ def normalize_reason(reason, valid_set, default, reason_map):
         return mapped
     print(f'  WARNING: Unknown reason {reason!r}, using {default!r}')
     return default
-
 
 def parse_date(s):
     """Parse date string like 'January 14, 2026' or '2013' to 'YYYY-MM-DD'."""
@@ -118,7 +113,6 @@ def parse_date(s):
     print(f'  WARNING: Could not parse date: {s!r}')
     return None
 
-
 def split_name(full_name):
     """Split full name into (first, last) for candidates table."""
     parts = full_name.strip().split()
@@ -131,7 +125,6 @@ def split_name(full_name):
     first = clean_parts[0]
     last = clean_parts[-1]
     return first, last
-
 
 def find_or_create_candidate(name, party, dry_run):
     """Find existing candidate by name or create new one. Returns candidate_id."""
@@ -167,7 +160,6 @@ def find_or_create_candidate(name, party, dry_run):
     time.sleep(1)
     return cand_id, True
 
-
 def check_seat_term_open(seat_term_id):
     """Check if a seat_term is still open (end_date IS NULL)."""
     result = run_sql(
@@ -176,7 +168,6 @@ def check_seat_term_open(seat_term_id):
     if not result:
         return False
     return result[0]['end_date'] is None
-
 
 def check_existing_open_term(seat_id):
     """Check if seat already has an open seat_term."""
@@ -188,7 +179,6 @@ def check_existing_open_term(seat_id):
     if result:
         return result[0]
     return None
-
 
 # ══════════════════════════════════════════════════════════════════════
 # ACTION HANDLERS
@@ -242,7 +232,6 @@ def process_create_seat_term(item, dry_run):
     print(f'    Updated seats cache')
     return 'created'
 
-
 def process_close_seat_term(item, dry_run):
     """Close existing seat_term with end_date/end_reason, clear seats cache."""
     seat_id = item['seat_id']
@@ -294,7 +283,6 @@ def process_close_seat_term(item, dry_run):
     )
     print(f'    Cleared seats cache')
     return 'closed'
-
 
 def process_replace_holder(item, dry_run):
     """Close old term, create new candidate/term, update seats cache."""
@@ -394,7 +382,6 @@ def process_replace_holder(item, dry_run):
     print(f'    Updated seats cache')
     return 'replaced'
 
-
 def process_update_name(item, dry_run):
     """Update candidate name + seats cache for same person (nickname/married name)."""
     seat_id = item['seat_id']
@@ -439,7 +426,6 @@ def process_update_name(item, dry_run):
     )
     print(f'    Updated seats cache')
     return 'updated'
-
 
 def process_update_holder(item, dry_run):
     """Close old term, create new term for stale OpenStates data fix."""
@@ -524,7 +510,6 @@ def process_update_holder(item, dry_run):
     print(f'    Updated seats cache')
     return 'updated'
 
-
 # ══════════════════════════════════════════════════════════════════════
 # FAMILY CLASSIFICATION OVERRIDE
 # ══════════════════════════════════════════════════════════════════════
@@ -539,7 +524,6 @@ FAMILY_OVERRIDES = {
 SKIP_ITEMS = {
     ('OK', 'House', '35'),  # Travis won Feb 10, 2026 special; BP member page not updated yet
 }
-
 
 # ══════════════════════════════════════════════════════════════════════
 # MAIN
@@ -628,7 +612,6 @@ def main():
 
     if args.dry_run:
         print(f'\n  *** DRY RUN — no changes made ***')
-
 
 if __name__ == '__main__':
     main()

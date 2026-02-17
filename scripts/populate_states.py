@@ -5,9 +5,9 @@ Data sourced from Ballotpedia and NCSL.
 import httpx
 import json
 import sys
-
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 def run_sql(query):
     resp = httpx.post(

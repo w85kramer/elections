@@ -24,10 +24,9 @@ import time
 import argparse
 
 import httpx
-
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
-
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 def run_sql(query, exit_on_error=True, retries=5):
     for attempt in range(retries):
@@ -49,12 +48,10 @@ def run_sql(query, exit_on_error=True, retries=5):
             sys.exit(1)
         return None
 
-
 def esc(s):
     if s is None:
         return ''
     return str(s).replace("'", "''")
-
 
 # ══════════════════════════════════════════════════════════════════
 # MA CANONICAL DISTRICT LISTS (from populate_seat_terms_ma.py)
@@ -125,7 +122,6 @@ MA_SENATE_DISTRICTS_BP = [
     "Worcester and Hampden", "Worcester and Hampshire", "Worcester and Middlesex",
 ]
 
-
 def build_number_to_name_maps():
     """
     Sort district names alphabetically and build district_number → display_name.
@@ -141,7 +137,6 @@ def build_number_to_name_maps():
     senate_map = {str(i + 1): name for i, name in enumerate(senate_sorted)}
 
     return house_map, senate_map
-
 
 def main():
     parser = argparse.ArgumentParser(description='Populate district_name for all districts')
@@ -351,7 +346,6 @@ def main():
         print(f"    {st} {ch} #{dn} → {name}")
 
     print("\nDone!")
-
 
 if __name__ == '__main__':
     main()

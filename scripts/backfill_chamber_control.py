@@ -20,25 +20,13 @@ import os
 import time
 import requests
 import openpyxl
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 DRY_RUN = '--dry-run' in sys.argv
 
 FILE_2022 = os.path.expanduser("~/Downloads/Comparison 2022 vs 2020 Elections Data.xlsx")
-
-ENV_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
-def load_env():
-    env = {}
-    with open(ENV_PATH) as f:
-        for line in f:
-            line = line.strip()
-            if line and not line.startswith('#') and '=' in line:
-                k, v = line.split('=', 1)
-                env[k.strip()] = v.strip()
-    return env
-
-env = load_env()
-TOKEN = env['SUPABASE_MANAGEMENT_TOKEN']
-API_URL = f'https://api.supabase.com/v1/projects/pikcvwulzfxgwfcfssxc/database/query'
 
 
 def run_sql(query, attempt=1):

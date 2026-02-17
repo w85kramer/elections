@@ -4,10 +4,9 @@ Run AFTER populate_districts.py (Phase 1).
 """
 import httpx
 import sys
-
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
-
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 def run_sql(query):
     resp = httpx.post(
@@ -21,11 +20,9 @@ def run_sql(query):
         sys.exit(1)
     return resp.json()
 
-
 def get_state_id(abbr):
     result = run_sql(f"SELECT id FROM states WHERE abbreviation = '{abbr}'")
     return result[0]['id']
-
 
 def insert_districts(state_id, chamber, districts_data):
     """Insert a list of (district_label, num_seats) tuples."""
@@ -40,7 +37,6 @@ def insert_districts(state_id, chamber, districts_data):
         "VALUES " + ",\n".join(values) + "\nRETURNING id;"
     )
     return run_sql(sql)
-
 
 # ══════════════════════════════════════════════════════════════════════
 # MARYLAND House of Delegates — 71 delegate districts, 141 seats
@@ -233,7 +229,6 @@ VT_HOUSE_DISTRICTS = [
     ('Windsor-Orange-2', 2), ('Windsor-Windham', 1),
 ]
 
-
 # ══════════════════════════════════════════════════════════════════════
 # VALIDATE & INSERT
 # ══════════════════════════════════════════════════════════════════════
@@ -265,7 +260,6 @@ def validate_and_insert(abbr, chamber, data, expected_districts, expected_seats)
     result = insert_districts(state_id, chamber, data)
     print(f"  Inserted {len(result)} districts")
     return True
-
 
 # ── Maryland House of Delegates ───────────────────────────────────────
 validate_and_insert('MD', 'House of Delegates', MD_DELEGATE_DISTRICTS, 71, 141)

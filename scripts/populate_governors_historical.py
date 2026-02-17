@@ -23,11 +23,8 @@ from datetime import date
 
 import httpx
 
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
 BATCH_SIZE = 400
 INPUT_PATH = '/tmp/governor_history.json'
-
 
 def run_sql(query, exit_on_error=True, max_retries=5):
     for attempt in range(max_retries):
@@ -53,19 +50,16 @@ def run_sql(query, exit_on_error=True, max_retries=5):
         sys.exit(1)
     return None
 
-
 def esc(s):
     if s is None:
         return ''
     return str(s).replace("'", "''")
-
 
 def strip_accents(s):
     return ''.join(
         c for c in unicodedata.normalize('NFD', s)
         if unicodedata.category(c) != 'Mn'
     )
-
 
 def name_similarity(name1, name2):
     if name1 is None or name2 is None:
@@ -105,13 +99,15 @@ def name_similarity(name1, name2):
         return 0.75
     return 0.3
 
-
 def election_date_for_year(year, state=None):
     """Compute the general election date for a given year.
     Standard: first Tuesday after the first Monday in November.
     Special cases for odd-year states and recall elections."""
     # Standard November election
     from datetime import date, timedelta
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
     # November 1 of the election year
     nov1 = date(year, 11, 1)
@@ -125,7 +121,6 @@ def election_date_for_year(year, state=None):
     election_day = first_monday + timedelta(days=1)
 
     return election_day.isoformat()
-
 
 # ══════════════════════════════════════════════════════════════════
 # MAIN
@@ -575,7 +570,6 @@ def main():
     print(f'  Elections: {len(election_db_ids)}')
     print(f'  Candidacies: {len(candidacy_inserts)}')
     print(f'  Seat terms: {len(seat_term_inserts)}')
-
 
 if __name__ == '__main__':
     main()

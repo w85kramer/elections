@@ -11,15 +11,12 @@ import json
 import time
 import requests
 
-API_URL = 'https://api.supabase.com/v1/projects/pikcvwulzfxgwfcfssxc/database/query'
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
 HEADERS = {
     'Authorization': f'Bearer {TOKEN}',
     'Content-Type': 'application/json'
 }
 
 DRY_RUN = False  # Set True to preview without changes
-
 
 def query_db(sql, retries=5):
     for attempt in range(1, retries + 1):
@@ -34,7 +31,6 @@ def query_db(sql, retries=5):
         print(f'  Error {resp.status_code}: {resp.text[:200]}')
         resp.raise_for_status()
     raise Exception(f'Failed after {retries} retries')
-
 
 # Correct start dates and reasons for current governors
 # Format: state -> (correct_start_date, start_reason)
@@ -70,7 +66,6 @@ CORRECTIONS = {
     'WI': ('2019-01-07', 'elected'),        # Evers 1st term
     'WY': ('2019-01-07', 'elected'),        # Gordon 1st term
 }
-
 
 def fix_current_governor_starts():
     """Update start_date on current governor seat_terms."""
@@ -115,7 +110,6 @@ def fix_current_governor_starts():
 
     print()
 
-
 def fix_ma_historical_gap():
     """Add Jane Swift as MA acting governor 2001-2003."""
     print('Checking MA historical gap (Jane Swift)...')
@@ -158,7 +152,6 @@ def fix_ma_historical_gap():
         """)
     print()
 
-
 def verify():
     """Verify the fixes by checking yearly balance for 2018-2022."""
     print('Verifying yearly balance after fixes...')
@@ -187,9 +180,11 @@ def verify():
         flag = ' ✓' if total >= 49 else f' ✗ MISSING {50 - total}'
         print(f'  {year}: D={d}, R={r}, Other={other} (total={total}){flag}')
 
-
 if __name__ == '__main__':
     import sys
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
     if '--dry-run' in sys.argv:
         DRY_RUN = True
         print('=== DRY RUN (no changes) ===\n')

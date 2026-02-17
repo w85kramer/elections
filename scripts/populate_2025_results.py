@@ -20,12 +20,12 @@ import unicodedata
 from collections import Counter, defaultdict
 
 import httpx
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
 BATCH_SIZE = 400
 INPUT_PATH = '/tmp/2025_election_results.json'
-
 
 def run_sql(query, exit_on_error=True):
     resp = httpx.post(
@@ -41,19 +41,16 @@ def run_sql(query, exit_on_error=True):
         return None
     return resp.json()
 
-
 def esc(s):
     if s is None:
         return ''
     return str(s).replace("'", "''")
-
 
 def strip_accents(s):
     return ''.join(
         c for c in unicodedata.normalize('NFD', s)
         if unicodedata.category(c) != 'Mn'
     )
-
 
 def name_similarity(name1, name2):
     if name1 is None or name2 is None:
@@ -92,7 +89,6 @@ def name_similarity(name1, name2):
     if first1[0] == first2[0]:
         return 0.7
     return 0.3
-
 
 # ══════════════════════════════════════════════════════════════════════
 # STEP 1: Load DB Maps
@@ -169,7 +165,6 @@ def load_seat_map(state_abbrev):
         incumbent_map[inc['seat_id']] = (inc['candidate_id'], inc['full_name'], inc['party'])
 
     return legislative_seats, statewide_seats, incumbent_map, district_map
-
 
 # ══════════════════════════════════════════════════════════════════════
 # STEP 2: Create Elections
@@ -278,7 +273,6 @@ def create_elections(races, legislative_seats, statewide_seats, district_map, dr
         election_map[key] = all_ids[i]
 
     return election_map
-
 
 # ══════════════════════════════════════════════════════════════════════
 # STEP 3: Match and Create Candidates + Candidacies
@@ -536,7 +530,6 @@ def process_candidacies(races, election_map, legislative_seats, statewide_seats,
     print(f'  Inserted {total_inserted} candidacies')
     return len(new), total_inserted
 
-
 # ══════════════════════════════════════════════════════════════════════
 # VERIFICATION
 # ══════════════════════════════════════════════════════════════════════
@@ -618,7 +611,6 @@ def verify():
     else:
         print('\nNo duplicate candidacies.')
 
-
 # ══════════════════════════════════════════════════════════════════════
 # MAIN
 # ══════════════════════════════════════════════════════════════════════
@@ -698,7 +690,6 @@ def main():
         verify()
 
     print('\nDone!')
-
 
 if __name__ == '__main__':
     main()

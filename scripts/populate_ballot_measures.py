@@ -17,9 +17,10 @@ import argparse
 from datetime import datetime
 
 import httpx
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
 BATCH_SIZE = 50
 
 # Manual result overrides for measures with missing BP result icons
@@ -27,7 +28,6 @@ RESULT_OVERRIDES = {
     'https://ballotpedia.org/California_Proposition_15,_Tax_on_Commercial_and_Industrial_Properties_for_Education_and_Local_Government_Funding_Initiative_(2020)': 'Failed',
     'https://ballotpedia.org/Colorado_Proposition_113,_National_Popular_Vote_Interstate_Compact_Referendum_(2020)': 'Passed',
 }
-
 
 def run_sql(query, exit_on_error=True):
     resp = httpx.post(
@@ -43,12 +43,10 @@ def run_sql(query, exit_on_error=True):
         return None
     return resp.json()
 
-
 def esc(s):
     if s is None:
         return None
     return str(s).replace("'", "''")
-
 
 def parse_date(date_str):
     """Convert 'November 5, 2024' to '2024-11-05'."""
@@ -63,7 +61,6 @@ def parse_date(date_str):
             print(f'  WARNING: Could not parse date: {date_str}')
             return None
 
-
 def sql_val(v):
     """Convert a Python value to SQL literal."""
     if v is None:
@@ -73,7 +70,6 @@ def sql_val(v):
     if isinstance(v, (int, float)):
         return str(v)
     return f"'{esc(v)}'"
-
 
 def main():
     parser = argparse.ArgumentParser(description='Populate ballot_measures table')
@@ -284,7 +280,6 @@ def main():
     if total_skipped:
         print(f"  Total skipped (existing): {total_skipped}")
     print("\nDone!")
-
 
 if __name__ == '__main__':
     main()

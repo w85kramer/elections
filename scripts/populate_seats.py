@@ -9,10 +9,9 @@ Total expected: 7,385 seats across 6,806 districts in 50 states.
 """
 import httpx
 import sys
-
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
-
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 def run_sql(query):
     resp = httpx.post(
@@ -25,7 +24,6 @@ def run_sql(query):
         print(f'ERROR: {resp.status_code} - {resp.text[:500]}')
         sys.exit(1)
     return resp.json()
-
 
 # ── Chamber → office_type mapping ────────────────────────────────────
 OFFICE_TYPE = {
@@ -106,7 +104,6 @@ def parse_district_int(district_number):
     except (ValueError, TypeError):
         return None
 
-
 def get_senate_election_info(abbr, district_number):
     """
     Returns (election_class, next_regular_election_year) for a senate seat.
@@ -173,7 +170,6 @@ def get_senate_election_info(abbr, district_number):
     print(f"  WARNING: No senate election config for {abbr}, defaulting to 2026")
     return (None, 2026)
 
-
 def get_house_election_info(abbr, district_number):
     """
     Returns (election_class, next_regular_election_year) for a house/assembly seat.
@@ -198,7 +194,6 @@ def get_house_election_info(abbr, district_number):
 
     # Standard 2-year house: all seats up 2026
     return (None, 2026)
-
 
 # ══════════════════════════════════════════════════════════════════════
 # MAIN SCRIPT

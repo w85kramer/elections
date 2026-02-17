@@ -18,12 +18,11 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 import httpx
 from data.appointed_officeholders import OFFICEHOLDERS
-
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 DRY_RUN = '--dry-run' in sys.argv
-
 
 def run_sql(query, retries=5):
     for attempt in range(1, retries + 1):
@@ -45,13 +44,11 @@ def run_sql(query, retries=5):
     print('ERROR: Max retries exceeded (429)')
     sys.exit(1)
 
-
 def esc(s):
     """Escape single quotes for SQL."""
     if s is None:
         return None
     return s.replace("'", "''")
-
 
 if DRY_RUN:
     print("=== DRY RUN MODE ===\n")

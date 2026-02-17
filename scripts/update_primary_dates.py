@@ -10,10 +10,9 @@ Jul 21 per law signed Feb 7, 2026.
 """
 import httpx
 import sys
-
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
-
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 def run_sql(query):
     resp = httpx.post(
@@ -26,7 +25,6 @@ def run_sql(query):
         print(f'ERROR: {resp.status_code} - {resp.text[:500]}')
         sys.exit(1)
     return resp.json()
-
 
 # Primary dates grouped by date (states sharing the same primary date)
 DATE_TO_STATES = {

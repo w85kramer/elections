@@ -12,16 +12,15 @@ import sys
 import time
 
 import openpyxl
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 # ── Configuration ──────────────────────────────────────────────────────────
 XLSX_PATH = "/home/billkramer/Downloads/Trifectas - Political Breakdown Timeline.xlsx"
-SUPABASE_REF = "pikcvwulzfxgwfcfssxc"
-SUPABASE_TOKEN = "sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7"
-API_URL = f"https://api.supabase.com/v1/projects/{SUPABASE_REF}/database/query"
 
 PARTY_MAP = {"D": "Democrat", "R": "Republican", "I": "Independent",
              "NP": "Independent", "L": "Independent"}
-
 
 # ── 1. Read the spreadsheet ───────────────────────────────────────────────
 def read_spreadsheet():
@@ -48,7 +47,6 @@ def read_spreadsheet():
                 data[(state, year)] = str(party).strip()
     return data
 
-
 # ── 2. Query the database ────────────────────────────────────────────────
 def query_supabase(sql, max_retries=5):
     """Execute SQL via Supabase Management API (curl) with retries."""
@@ -57,7 +55,7 @@ def query_supabase(sql, max_retries=5):
             [
                 "curl", "-s", "-w", "\n%{http_code}", "-X", "POST",
                 API_URL,
-                "-H", f"Authorization: Bearer {SUPABASE_TOKEN}",
+                "-H", f"Authorization: Bearer {TOKEN}",
                 "-H", "Content-Type: application/json",
                 "-d", json.dumps({"query": sql}),
             ],
@@ -81,7 +79,6 @@ def query_supabase(sql, max_retries=5):
         else:
             print(f"HTTP {status}: {body[:500]}", file=sys.stderr)
             sys.exit(1)
-
 
 def read_database():
     """Return dict: {(state_name, year): party}"""
@@ -148,7 +145,6 @@ def read_database():
 
     return data, rows
 
-
 # ── 3. Compare ────────────────────────────────────────────────────────────
 def compare(sheet_data, db_data):
     all_keys = set(sheet_data.keys()) | set(db_data.keys())
@@ -175,7 +171,6 @@ def compare(sheet_data, db_data):
             db_only.append((state, year, db_data[key]))
 
     return disagreements, sheet_only, db_only
-
 
 # ── 4. Report ─────────────────────────────────────────────────────────────
 def report(disagreements, sheet_only, db_only, db_rows):
@@ -268,7 +263,6 @@ def report(disagreements, sheet_only, db_only, db_rows):
     print(f"  Sheet only:  {len(sheet_only)} (DB gaps)")
     print(f"  DB only:     {len(db_only)} (outside sheet range)")
 
-
 def compress_years(years):
     """Turn [1970,1971,1972,1975,1976] into '1970-1972, 1975-1976'."""
     if not years:
@@ -285,7 +279,6 @@ def compress_years(years):
             start = end = y
     ranges.append(f"{start}-{end}" if start != end else str(start))
     return ", ".join(ranges)
-
 
 # ── Main ──────────────────────────────────────────────────────────────────
 if __name__ == "__main__":

@@ -17,11 +17,11 @@ Primary dates are left NULL (vary by state, populated later).
 """
 import httpx
 import sys
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
 BATCH_SIZE = 300
-
 
 def run_sql(query):
     resp = httpx.post(
@@ -34,7 +34,6 @@ def run_sql(query):
         print(f'ERROR: {resp.status_code} - {resp.text[:500]}')
         sys.exit(1)
     return resp.json()
-
 
 # ══════════════════════════════════════════════════════════════════════
 # STEP 0: Idempotency guard

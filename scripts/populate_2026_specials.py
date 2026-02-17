@@ -30,11 +30,8 @@ from collections import Counter, defaultdict
 
 import httpx
 
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
 BATCH_SIZE = 400
 INPUT_PATH = '/tmp/2026_special_results.json'
-
 
 def run_sql(query, exit_on_error=True, max_retries=5):
     for attempt in range(max_retries):
@@ -60,19 +57,16 @@ def run_sql(query, exit_on_error=True, max_retries=5):
         sys.exit(1)
     return None
 
-
 def esc(s):
     if s is None:
         return ''
     return str(s).replace("'", "''")
-
 
 def strip_accents(s):
     return ''.join(
         c for c in unicodedata.normalize('NFD', s)
         if unicodedata.category(c) != 'Mn'
     )
-
 
 def name_similarity(name1, name2):
     if name1 is None or name2 is None:
@@ -111,7 +105,6 @@ def name_similarity(name1, name2):
     if first1[0] == first2[0]:
         return 0.7
     return 0.3
-
 
 # ══════════════════════════════════════════════════════════════════════
 # STATE-SPECIFIC DISTRICT/SEAT MAPPING
@@ -185,7 +178,6 @@ MA_SENATE_DISTRICTS_BP = [
 ]
 MA_SENATE_MAP = {name: str(i + 1) for i, name in enumerate(sorted(MA_SENATE_DISTRICTS_BP))}
 
-
 def resolve_db_district(race):
     """
     Map a special election race to its DB district_number and chamber.
@@ -254,7 +246,6 @@ def resolve_db_district(race):
         office_type = 'State House'
 
     return district, db_chamber, seat_designator, office_type
-
 
 # ══════════════════════════════════════════════════════════════════════
 # STEP 1: Load DB Maps
@@ -356,7 +347,6 @@ def load_db_maps(states_needed):
 
     return seat_map, current_terms, all_candidates, district_map, existing_generals
 
-
 # ══════════════════════════════════════════════════════════════════════
 # STEP 2: Process Each Race
 # ══════════════════════════════════════════════════════════════════════
@@ -414,7 +404,6 @@ def find_seat(race, seat_map, current_terms=None):
 
     print(f'    WARNING: No seat found for {state} {office_type} {db_district} (designator={seat_designator})')
     return None, None
-
 
 def process_all_races(races, seat_map, current_terms, all_candidates, district_map,
                       existing_generals, dry_run=False):
@@ -572,6 +561,9 @@ def process_all_races(races, seat_map, current_terms, all_candidates, district_m
         seat_id = seat_info['seat_id']
         gen_date = race.get('general_date', '')
         from datetime import datetime, timedelta
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
         if gen_date:
             end_dt = datetime.strptime(gen_date, '%Y-%m-%d') - timedelta(days=1)
             end_date = end_dt.strftime('%Y-%m-%d')
@@ -1087,7 +1079,6 @@ def process_all_races(races, seat_map, current_terms, all_candidates, district_m
 
     return stats
 
-
 # ══════════════════════════════════════════════════════════════════════
 # VERIFICATION
 # ══════════════════════════════════════════════════════════════════════
@@ -1184,7 +1175,6 @@ def verify():
     print(f'  Candidacies: {c["total_candidacies"]}')
     print(f'  Seat_terms: {c["total_seat_terms"]}')
 
-
 # ══════════════════════════════════════════════════════════════════════
 # MAIN
 # ══════════════════════════════════════════════════════════════════════
@@ -1249,7 +1239,6 @@ def main():
         verify()
 
     print('\nDone!')
-
 
 if __name__ == '__main__':
     main()

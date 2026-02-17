@@ -21,8 +21,6 @@ from collections import Counter, defaultdict
 
 import httpx
 
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
 BATCH_SIZE = 400
 
 # Filing deadlines for states with closed filing (as of 2026-02-08)
@@ -135,7 +133,6 @@ STATE_FULL_NAMES = {
     'UT': 'Utah', 'WV': 'West_Virginia',
 }
 
-
 def run_sql(query, exit_on_error=True):
     resp = httpx.post(
         f'https://api.supabase.com/v1/projects/{PROJECT_REF}/database/query',
@@ -150,12 +147,10 @@ def run_sql(query, exit_on_error=True):
         return None
     return resp.json()
 
-
 def esc(s):
     if s is None:
         return ''
     return str(s).replace("'", "''")
-
 
 # ══════════════════════════════════════════════════════════════════════
 # STEP 1: Download Ballotpedia HTML
@@ -179,7 +174,6 @@ def download_bp_page(state_name, chamber_type):
     except Exception as e:
         print(f'    WARNING: Download failed for {url}: {e}')
         return None
-
 
 # ══════════════════════════════════════════════════════════════════════
 # STEP 2: Parse HTML → Extract Candidates
@@ -255,7 +249,6 @@ def parse_primary_candidates(html_text):
                 candidates.append((dist_num, name, party, is_incumbent))
 
     return candidates
-
 
 # ══════════════════════════════════════════════════════════════════════
 # STEP 2b: Parse Statewide Votebox HTML → Extract Candidates
@@ -339,7 +332,6 @@ def parse_statewide_primary_candidates(html_text):
 
     return candidates
 
-
 # ══════════════════════════════════════════════════════════════════════
 # STEP 3: Build DB Lookup Maps
 # ══════════════════════════════════════════════════════════════════════
@@ -415,7 +407,6 @@ def build_lookup_maps(state_abbrev):
 
     return seat_map, multi_seat_map, election_map, incumbent_map
 
-
 # ══════════════════════════════════════════════════════════════════════
 # STEP 4: Match Candidates to Elections
 # ══════════════════════════════════════════════════════════════════════
@@ -423,11 +414,13 @@ def build_lookup_maps(state_abbrev):
 def strip_accents(s):
     """Remove diacritics/accents from a string (ñ→n, é→e, etc.)."""
     import unicodedata
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
     return ''.join(
         c for c in unicodedata.normalize('NFD', s)
         if unicodedata.category(c) != 'Mn'
     )
-
 
 def name_similarity(name1, name2):
     """Name matching that handles suffixes, accents, and nicknames."""
@@ -482,7 +475,6 @@ def name_similarity(name1, name2):
     # Different first names but same last name — could be a nickname
     # (Mando/Armando, Jo/Jolanda, Cas/Cassandra, Lulu/Maria)
     return 0.3
-
 
 def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
                      election_map, incumbent_map):
@@ -644,7 +636,6 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
 
     return matched, unmatched
 
-
 # ══════════════════════════════════════════════════════════════════════
 # STEP 5-6: Insert Candidates and Candidacies
 # ══════════════════════════════════════════════════════════════════════
@@ -735,7 +726,6 @@ def insert_candidacies(matched, dry_run=False):
         sys.exit(1)
 
     return len(new), total_inserted
-
 
 # ══════════════════════════════════════════════════════════════════════
 # MAIN: Process a single state
@@ -845,7 +835,6 @@ def process_state(state_abbrev, dry_run=False):
 
     return True
 
-
 # ══════════════════════════════════════════════════════════════════════
 # VERIFICATION
 # ══════════════════════════════════════════════════════════════════════
@@ -927,7 +916,6 @@ def verify_state(state_abbrev):
     for r in result5:
         inc = " (i)" if r['is_incumbent'] else ""
         print(f"      {r['seat_label']}: {r['full_name']}{inc} [{r['party']}] → {r['election_type']}")
-
 
 # ══════════════════════════════════════════════════════════════════════
 # STATEWIDE: Process statewide races for a single state
@@ -1125,7 +1113,6 @@ def process_state_statewide(state_abbrev, dry_run=False):
 
     return state_total_matched > 0
 
-
 def _parse_joint_statewide(html_text, office_types):
     """
     Parse a joint statewide page (e.g., Governor + Lt. Governor).
@@ -1222,7 +1209,6 @@ def _parse_joint_statewide(html_text, office_types):
 
     return result
 
-
 def verify_state_statewide(state_abbrev):
     """Run verification queries for statewide candidacies."""
     print(f"\n  STATEWIDE VERIFICATION for {state_abbrev}:")
@@ -1283,7 +1269,6 @@ def verify_state_statewide(state_abbrev):
     for r in spots:
         inc = " (i)" if r['is_incumbent'] else ""
         print(f"      {r['office_type']}: {r['full_name']}{inc} [{r['party']}] → {r['election_type']}")
-
 
 # ══════════════════════════════════════════════════════════════════════
 # CLI ENTRY POINT
@@ -1356,7 +1341,6 @@ def main():
             print(f"  {r['office_level']}: {r['cnt']}")
 
     print("\nDone!")
-
 
 if __name__ == '__main__':
     main()

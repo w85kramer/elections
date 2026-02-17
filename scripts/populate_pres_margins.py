@@ -17,11 +17,11 @@ import argparse
 from collections import Counter, defaultdict
 
 import httpx
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
 BATCH_SIZE = 400
-
 
 def run_sql(query, exit_on_error=True, retries=5):
     for attempt in range(retries):
@@ -43,12 +43,10 @@ def run_sql(query, exit_on_error=True, retries=5):
             sys.exit(1)
         return None
 
-
 def esc(s):
     if s is None:
         return ''
     return str(s).replace("'", "''")
-
 
 def main():
     parser = argparse.ArgumentParser(description='Populate presidential margins on elections')
@@ -313,7 +311,6 @@ def main():
     """)
     for r in result:
         print(f"    {r['abbreviation']} {r['chamber']} {r['district_number']}: {r['pres_2024_margin']} ({r['pres_2024_winner']})")
-
 
 if __name__ == '__main__':
     main()

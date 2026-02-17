@@ -19,13 +19,13 @@ import time
 import argparse
 
 import httpx
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
 OPENSTATES_URL = 'https://data.openstates.org/people/current/{state}.csv'
 
 BATCH_SIZE = 500
-
 
 def run_sql(query, exit_on_error=True):
     resp = httpx.post(
@@ -41,13 +41,11 @@ def run_sql(query, exit_on_error=True):
         return None
     return resp.json()
 
-
 def esc(s):
     """Escape single quotes for SQL."""
     if s is None:
         return ''
     return str(s).replace("'", "''")
-
 
 # ══════════════════════════════════════════════════════════════════
 # STATE ABBREVIATIONS
@@ -80,7 +78,6 @@ def get_office_type(state, os_chamber):
         return 'State Legislature'  # NE only
     return None
 
-
 def get_db_chamber(state, os_chamber):
     """Convert OpenStates chamber to our DB chamber value (for districts)."""
     if os_chamber == 'upper':
@@ -92,7 +89,6 @@ def get_db_chamber(state, os_chamber):
     elif os_chamber == 'legislature':
         return 'Legislature'
     return None
-
 
 # ══════════════════════════════════════════════════════════════════
 # PARTY MAPPING
@@ -123,7 +119,6 @@ D_CAUCUS_PARTIES = {'P', 'WFP', 'G'}
 # Independents that caucus with a party (can add specifics as needed)
 # Forward party members may caucus either way — default to their own code
 
-
 def map_party(os_party):
     """Map OpenStates party to our code. Returns (party, caucus)."""
     code = PARTY_MAP.get(os_party)
@@ -138,7 +133,6 @@ def map_party(os_party):
     if code in D_CAUCUS_PARTIES:
         return code, 'D'
     return code, code
-
 
 # ══════════════════════════════════════════════════════════════════
 # AK SENATE LETTER-TO-NUMBER MAPPING
@@ -162,7 +156,6 @@ VT_SENATE_MAP = {
 # Needs a complete mapping table built separately.
 # ══════════════════════════════════════════════════════════════════
 SKIP_STATES = {'MA'}
-
 
 # ══════════════════════════════════════════════════════════════════
 # DISTRICT TRANSLATION
@@ -231,7 +224,6 @@ def translate_district(state, os_chamber, os_district):
 
     # General: return as-is
     return district, None
-
 
 # ══════════════════════════════════════════════════════════════════
 # MAIN SCRIPT
@@ -780,7 +772,6 @@ def main():
     print(f"   candidacies: {o['candidacies']}")
 
     print("\nDone!")
-
 
 if __name__ == '__main__':
     main()

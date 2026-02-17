@@ -29,9 +29,6 @@ from collections import Counter, defaultdict
 
 import httpx
 
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
-
 INPUT_PATH = '/tmp/legislature_members.json'
 OUTPUT_PATH = '/tmp/seat_gaps_report.json'
 
@@ -53,7 +50,6 @@ def run_query(sql):
         return run_query(sql)
     resp.raise_for_status()
     return resp.json()
-
 
 def load_db_seats(state_filter=None):
     """
@@ -101,7 +97,6 @@ def load_db_seats(state_filter=None):
     """
     return run_query(sql)
 
-
 def load_existing_specials(state_filter=None):
     """Load existing special elections to cross-reference."""
     where = ""
@@ -128,7 +123,6 @@ def load_existing_specials(state_filter=None):
     """
     return run_query(sql)
 
-
 # ══════════════════════════════════════════════════════════════════════
 # NAME MATCHING
 # ══════════════════════════════════════════════════════════════════════
@@ -149,6 +143,9 @@ def normalize_name(name):
     name = re.sub(r"'[^']*'", '', name)
     # Normalize accented characters
     import unicodedata
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
     name = unicodedata.normalize('NFD', name)
     name = ''.join(c for c in name if unicodedata.category(c) != 'Mn')
     # Normalize curly quotes/apostrophes to straight
@@ -159,7 +156,6 @@ def normalize_name(name):
     # Collapse whitespace
     name = re.sub(r'\s+', ' ', name).strip()
     return name.lower()
-
 
 NICKNAMES = {
     'william': ['bill', 'will', 'billy', 'willy'],
@@ -257,7 +253,6 @@ for formal, nicks in NICKNAMES.items():
     for n in nicks:
         _NICKNAME_GROUPS[n] = group
 
-
 def nicknames_match(name1, name2):
     """Check if two first names are nickname equivalents."""
     if name1 == name2:
@@ -269,7 +264,6 @@ def nicknames_match(name1, name2):
     if g2 and name1 in g2:
         return True
     return False
-
 
 def names_match(bp_name, db_name):
     """Check if two names refer to the same person."""
@@ -342,7 +336,6 @@ def names_match(bp_name, db_name):
 
     return False
 
-
 # ══════════════════════════════════════════════════════════════════════
 # DISTRICT MATCHING
 # ══════════════════════════════════════════════════════════════════════
@@ -356,7 +349,6 @@ CHAMBER_MAP = {
     'Legislature': 'Legislature',
 }
 
-
 def normalize_district(state, chamber, district):
     """Normalize a district number for matching."""
     d = district.strip()
@@ -364,7 +356,6 @@ def normalize_district(state, chamber, district):
     if d.isdigit():
         d = str(int(d))
     return d
-
 
 def find_matching_db_seats(bp_member, db_seats_by_key):
     """
@@ -483,7 +474,6 @@ def find_matching_db_seats(bp_member, db_seats_by_key):
 
     return []
 
-
 # Pre-built MA district name→number maps
 _MA_MAPS = None
 
@@ -502,7 +492,6 @@ def _bp_to_os_name(name, chamber):
     # Remove Oxford comma
     result = result.replace(", and ", " and ")
     return result
-
 
 def get_ma_district_maps(bp_members):
     """Build MA district name → DB number mapping from BP data.
@@ -551,7 +540,6 @@ def get_ma_district_maps(bp_members):
     _MA_MAPS = (house_map, senate_map)
     return _MA_MAPS
 
-
 # ══════════════════════════════════════════════════════════════════════
 # DATE ANALYSIS
 # ══════════════════════════════════════════════════════════════════════
@@ -576,7 +564,6 @@ def parse_assumed_date(date_str):
         return (int(m.group(1)), 1, 1)
 
     return None
-
 
 def is_midterm_date(assumed_date_tuple, chamber):
     """
@@ -607,7 +594,6 @@ def is_midterm_date(assumed_date_tuple, chamber):
         return True
 
     return False
-
 
 # ══════════════════════════════════════════════════════════════════════
 # MAIN AUDIT
@@ -951,7 +937,6 @@ def run_audit(state_filter=None, summary_only=False):
 
     return results
 
-
 def main():
     parser = argparse.ArgumentParser(description='Audit seat gaps: BP vs DB')
     parser.add_argument('--state', help='Filter to single state (e.g., TX)')
@@ -960,7 +945,6 @@ def main():
 
     run_audit(state_filter=args.state.upper() if args.state else None,
               summary_only=args.summary)
-
 
 if __name__ == '__main__':
     main()

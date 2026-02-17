@@ -16,10 +16,9 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 import httpx
 from data.statewide_officeholders import OFFICEHOLDERS
-
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
-
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 def run_sql(query):
     resp = httpx.post(
@@ -33,11 +32,9 @@ def run_sql(query):
         sys.exit(1)
     return resp.json()
 
-
 def esc(s):
     """Escape single quotes for SQL."""
     return s.replace("'", "''")
-
 
 # ══════════════════════════════════════════════════════════════════
 # STEP 1: Precondition checks
@@ -68,7 +65,6 @@ if elected_sw[0]['cnt'] != 280:
     sys.exit(1)
 
 print(f"  Officeholders to insert: {len(OFFICEHOLDERS)}")
-
 
 # ══════════════════════════════════════════════════════════════════
 # STEP 2: Look up seat IDs — build (state, office_type) → seat_id map
@@ -104,7 +100,6 @@ if missing:
     sys.exit(1)
 print("  All officeholders matched to seats!")
 
-
 # ══════════════════════════════════════════════════════════════════
 # STEP 3: Insert candidates (batch)
 # ══════════════════════════════════════════════════════════════════
@@ -135,7 +130,6 @@ if len(cand_result) != len(OFFICEHOLDERS):
 # So we need to map by index position, not by name
 cand_ids = [row['id'] for row in cand_result]
 print(f"  Candidate IDs range: {min(cand_ids)} to {max(cand_ids)}")
-
 
 # ══════════════════════════════════════════════════════════════════
 # STEP 4: Insert seat_terms (batch)
@@ -169,7 +163,6 @@ if len(st_result) != len(OFFICEHOLDERS):
     print(f"  ERROR: Expected {len(OFFICEHOLDERS)}, got {len(st_result)}")
     sys.exit(1)
 
-
 # ══════════════════════════════════════════════════════════════════
 # STEP 5: Update seats cache columns
 # ══════════════════════════════════════════════════════════════════
@@ -197,7 +190,6 @@ updated = run_sql("""
       AND current_holder IS NOT NULL
 """)
 print(f"  Seats with current_holder populated: {updated[0]['cnt']}")
-
 
 # ══════════════════════════════════════════════════════════════════
 # STEP 6: Verification

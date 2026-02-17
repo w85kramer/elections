@@ -16,10 +16,6 @@ Data sources: Ballotpedia statewide office pages, verified Feb 2026.
 import httpx
 import sys
 
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
-
-
 def run_sql(query):
     resp = httpx.post(
         f'https://api.supabase.com/v1/projects/{PROJECT_REF}/database/query',
@@ -31,7 +27,6 @@ def run_sql(query):
         print(f'ERROR: {resp.status_code} - {resp.text[:500]}')
         sys.exit(1)
     return resp.json()
-
 
 ALL_STATES = sorted([
     'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA',
@@ -205,7 +200,6 @@ LABOR_ELECTED = {'GA', 'NC', 'OK', 'OR'}  # 4
 LABOR_APPOINTED = {}
 for st in sorted(ALL_STATES_SET - LABOR_ELECTED):
     LABOR_APPOINTED[st] = 'Appointed by Governor'
-
 
 # ══════════════════════════════════════════════════════════════════════
 # MASTER OFFICE CONFIGURATION
@@ -591,6 +585,9 @@ grid = run_sql("""
     ORDER BY office_type, selection_method
 """)
 from collections import defaultdict
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 office_grid = defaultdict(dict)
 for row in grid:
     office_grid[row['office_type']][row['selection_method']] = row['cnt']

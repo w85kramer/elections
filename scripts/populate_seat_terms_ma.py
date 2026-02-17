@@ -19,10 +19,7 @@ import csv
 import io
 import httpx
 
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
 OPENSTATES_URL = 'https://data.openstates.org/people/current/ma.csv'
-
 
 def run_sql(query, exit_on_error=True):
     resp = httpx.post(
@@ -38,12 +35,10 @@ def run_sql(query, exit_on_error=True):
         return None
     return resp.json()
 
-
 def esc(s):
     if s is None:
         return ''
     return str(s).replace("'", "''")
-
 
 # ══════════════════════════════════════════════════════════════════
 # CANONICAL DISTRICT LISTS (from Ballotpedia, all 160 House + 40 Senate)
@@ -116,7 +111,6 @@ MA_SENATE_DISTRICTS_BP = [
     "Worcester and Hampden", "Worcester and Hampshire", "Worcester and Middlesex",
 ]
 
-
 def bp_to_os_name(name, chamber):
     """Convert Ballotpedia district name to OpenStates format."""
     result = name
@@ -133,7 +127,6 @@ def bp_to_os_name(name, chamber):
     # Both chambers: remove Oxford comma
     result = result.replace(", and ", " and ")
     return result
-
 
 def build_name_to_number_maps():
     """
@@ -152,7 +145,6 @@ def build_name_to_number_maps():
 
     return house_map, senate_map
 
-
 # ══════════════════════════════════════════════════════════════════
 # PARTY MAPPING
 # ══════════════════════════════════════════════════════════════════
@@ -163,11 +155,9 @@ PARTY_MAP = {
     'Unenrolled': 'I',  # MA term for independent
 }
 
-
 def map_party(os_party):
     code = PARTY_MAP.get(os_party, os_party[:3] if os_party else 'U')
     return code, code
-
 
 # ══════════════════════════════════════════════════════════════════
 # MAIN
@@ -319,6 +309,9 @@ def main():
     if len(seat_ids_used) != len(set(seat_ids_used)):
         print("  ERROR: Duplicate seat assignments!")
         from collections import Counter
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
         dupes = {k: v for k, v in Counter(seat_ids_used).items() if v > 1}
         for sid, cnt in dupes.items():
             legs = [m for m in matched if m['seat_id'] == sid]
@@ -518,7 +511,6 @@ def main():
     print(f"    legislative seats filled: {o['leg_filled']}/{o['leg_total']} ({o['leg_filled']/o['leg_total']*100:.1f}%)")
 
     print("\nDone!")
-
 
 if __name__ == '__main__':
     main()

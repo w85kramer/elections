@@ -22,9 +22,10 @@ import unicodedata
 from collections import defaultdict
 
 import httpx
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
-TOKEN = 'sbp_134edd259126b21a7fc11c7a13c0c8c6834d7fa7'
-PROJECT_REF = 'pikcvwulzfxgwfcfssxc'
 BATCH_SIZE = 400
 
 OFFICE_TYPES = {
@@ -33,7 +34,6 @@ OFFICE_TYPES = {
     'sos': 'Secretary of State',
     'treasurer': 'Treasurer',
 }
-
 
 def run_sql(query, exit_on_error=True, max_retries=5):
     for attempt in range(max_retries):
@@ -59,19 +59,16 @@ def run_sql(query, exit_on_error=True, max_retries=5):
         sys.exit(1)
     return None
 
-
 def esc(s):
     if s is None:
         return ''
     return str(s).replace("'", "''")
-
 
 def strip_accents(s):
     return ''.join(
         c for c in unicodedata.normalize('NFD', s)
         if unicodedata.category(c) != 'Mn'
     )
-
 
 def name_similarity(name1, name2):
     if name1 is None or name2 is None:
@@ -111,7 +108,6 @@ def name_similarity(name1, name2):
         return 0.75
     return 0.3
 
-
 def fix_end_dates(records):
     """Infer missing end dates from successor start dates within each state."""
     by_state = defaultdict(list)
@@ -134,7 +130,6 @@ def fix_end_dates(records):
                     curr['end_date'] = f"{curr['end_year']}-01-01"
 
     return records
-
 
 def main():
     parser = argparse.ArgumentParser(description='Populate historical statewide officeholder data')
@@ -457,7 +452,6 @@ def main():
         print(f'    {r["abbreviation"]}: {r["cnt"]}')
 
     print(f'\n=== Done ===')
-
 
 if __name__ == '__main__':
     main()
