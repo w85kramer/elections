@@ -113,7 +113,7 @@
   <div class="stats-row" id="stats-row">
     <div class="card stat-card"><div class="stat-number" id="stat-d-chambers" style="color:var(--ms-dem-blue)">—</div><div class="stat-label">D Chambers (2025)</div></div>
     <div class="card stat-card"><div class="stat-number" id="stat-r-chambers" style="color:var(--ms-rep-red)">—</div><div class="stat-label">R Chambers (2025)</div></div>
-    <div class="card stat-card"><div class="stat-number" id="stat-net-shift">—</div><div class="stat-label">Net Shift (2021&rarr;2025)</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-net-shift">—</div><div class="stat-label" id="stat-net-label">Net Shift</div></div>
     <div class="card stat-card"><div class="stat-number" id="stat-split">—</div><div class="stat-label">Split Legislatures</div></div>
   </div>
 
@@ -121,7 +121,7 @@
   <div class="chart-section">
     <div class="chart-container">
       <h3>Chamber Control Over Time</h3>
-      <p class="chart-desc">Number of chambers controlled by each party at each snapshot date.</p>
+      <p class="chart-desc">Number of chambers controlled by each party. Pre-2021 data excludes split-legislature states (where individual chamber control requires research).</p>
       <div class="chart-wrap">
         <canvas id="chamberChart" height="300"></canvas>
       </div>
@@ -132,7 +132,7 @@
   <div class="chart-section">
     <div class="chart-container">
       <h3>Total Seats by Party</h3>
-      <p class="chart-desc">Aggregate number of D and R seats across all 99 chambers at each snapshot.</p>
+      <p class="chart-desc">Aggregate number of D and R seats across all 99 chambers (seat-count data available from 2021).</p>
       <div class="chart-wrap">
         <canvas id="seatsChart" height="300"></canvas>
       </div>
@@ -195,7 +195,7 @@
   document.getElementById('stat-r-chambers').textContent = summary.r_chambers;
   document.getElementById('stat-split').textContent = summary.split_legislatures;
 
-  // Net shift
+  // Net shift — use first and last snapshot
   if (snapshots.length >= 2) {
     const first = snapshots[0];
     const last = snapshots[snapshots.length - 1];
@@ -206,33 +206,40 @@
     else if (dShift > 0) shiftText = 'D+' + dShift;
     else shiftText = 'Even';
     document.getElementById('stat-net-shift').textContent = shiftText;
+    const firstYear = first.date.substring(0, 4);
+    const lastYear = last.date.substring(0, 4);
+    document.getElementById('stat-net-label').innerHTML = 'Net Shift (' + firstYear + '&rarr;' + lastYear + ')';
   }
 
   // ── Chamber Control Chart ──
   const labels = snapshots.map(s => s.date.substring(0, 4));
 
   new Chart(document.getElementById('chamberChart'), {
-    type: 'bar',
+    type: 'line',
     data: {
       labels: labels,
       datasets: [
         {
           label: 'Democratic',
           data: snapshots.map(s => s.d_chambers),
-          backgroundColor: '#6cb3d2',
-          borderRadius: 4,
+          borderColor: '#6cb3d2',
+          backgroundColor: 'rgba(108, 179, 210, 0.1)',
+          borderWidth: 3,
+          pointRadius: 3,
+          pointHoverRadius: 6,
+          fill: true,
+          tension: 0.2,
         },
         {
           label: 'Republican',
           data: snapshots.map(s => s.r_chambers),
-          backgroundColor: '#e50963',
-          borderRadius: 4,
-        },
-        {
-          label: 'Other',
-          data: snapshots.map(s => s.other_chambers),
-          backgroundColor: '#8b567f',
-          borderRadius: 4,
+          borderColor: '#e50963',
+          backgroundColor: 'rgba(229, 9, 99, 0.1)',
+          borderWidth: 3,
+          pointRadius: 3,
+          pointHoverRadius: 6,
+          fill: true,
+          tension: 0.2,
         }
       ]
     },
@@ -241,7 +248,7 @@
       plugins: {
         legend: {
           position: 'top',
-          labels: { font: { family: "'Work Sans', sans-serif", weight: '600', size: 12 }, usePointStyle: true, pointStyle: 'rect' }
+          labels: { font: { family: "'Work Sans', sans-serif", weight: '600', size: 12 }, usePointStyle: true, pointStyle: 'circle' }
         },
         tooltip: {
           backgroundColor: '#043858',
@@ -259,28 +266,36 @@
           grid: { color: '#f0f0f0' }
         },
         x: {
-          ticks: { font: { family: "'Work Sans', sans-serif", size: 11 } },
+          ticks: {
+            font: { family: "'Work Sans', sans-serif", size: 11 },
+            maxRotation: 45,
+            autoSkip: true,
+            maxTicksLimit: 16
+          },
           grid: { display: false }
         }
       }
     }
   });
 
-  // ── Seats Chart ──
+  // ── Seats Chart (only snapshots with seat data) ──
+  const seatSnapshots = snapshots.filter(s => s.d_total_seats > 0 || s.r_total_seats > 0);
+  const seatLabels = seatSnapshots.map(s => s.date.substring(0, 4));
+
   new Chart(document.getElementById('seatsChart'), {
     type: 'bar',
     data: {
-      labels: labels,
+      labels: seatLabels,
       datasets: [
         {
           label: 'Democratic Seats',
-          data: snapshots.map(s => s.d_total_seats),
+          data: seatSnapshots.map(s => s.d_total_seats),
           backgroundColor: '#6cb3d2',
           borderRadius: 4,
         },
         {
           label: 'Republican Seats',
-          data: snapshots.map(s => s.r_total_seats),
+          data: seatSnapshots.map(s => s.r_total_seats),
           backgroundColor: '#e50963',
           borderRadius: 4,
         }

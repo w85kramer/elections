@@ -687,7 +687,7 @@ def build_map_html(config):
     <div class="map-legend">
 {legend_html}    </div>
     <div class="map-main">
-      <svg class="us-map" viewBox="0 0 2207.76 1115.45" xmlns="http://www.w3.org/2000/svg">
+      <svg class="us-map" viewBox="480 0 1760 1115.45" xmlns="http://www.w3.org/2000/svg">
         <g id="states">
           {states_svg}
         </g>
