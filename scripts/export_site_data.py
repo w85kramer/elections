@@ -255,8 +255,29 @@ def export_states_summary(dry_run=False):
         GROUP BY st.abbreviation
     """
 
+    # Query 6: Special elections (upcoming and recent)
+    q_specials = """
+        SELECT
+            st.abbreviation as state,
+            st.state_name,
+            e.election_date,
+            e.election_type,
+            e.result_status,
+            s.seat_label,
+            d.chamber,
+            d.district_number
+        FROM elections e
+        JOIN seats s ON e.seat_id = s.id
+        JOIN districts d ON s.district_id = d.id
+        JOIN states st ON d.state_id = st.id
+        WHERE e.election_type LIKE 'Special%'
+          AND e.election_date IS NOT NULL
+          AND e.election_date >= '2025-11-01'
+        ORDER BY e.election_date, st.abbreviation, s.seat_label
+    """
+
     if dry_run:
-        print('  Would run 5 queries and write states_summary.json')
+        print('  Would run 6 queries and write states_summary.json')
         return
 
     chambers_data = run_sql(q_chambers)
@@ -264,6 +285,7 @@ def export_states_summary(dry_run=False):
     elections_data = run_sql(q_elections)
     forecasts_data = run_sql(q_forecasts)
     measures_data = run_sql(q_measures)
+    specials_data = run_sql(q_specials)
 
     # Index forecasts and measures
     forecasts_by_state = {r['abbreviation']: r['forecast_rating'] for r in forecasts_data}
@@ -336,9 +358,24 @@ def export_states_summary(dry_run=False):
             'primary_date': str(elec['primary_date']) if elec.get('primary_date') else None,
         }
 
+    # Build special elections list
+    special_elections = []
+    for r in specials_data:
+        special_elections.append({
+            'state': r['state'],
+            'state_name': r['state_name'],
+            'date': str(r['election_date']) if r.get('election_date') else None,
+            'type': r['election_type'],
+            'seat_label': r['seat_label'],
+            'chamber': r['chamber'],
+            'district': r['district_number'],
+            'result_status': r['result_status'],
+        })
+
     result = {
         'generated_at': datetime.utcnow().isoformat() + 'Z',
         'states': states,
+        'special_elections': special_elections,
     }
 
     out_path = os.path.join(SITE_DATA_DIR, 'states_summary.json')

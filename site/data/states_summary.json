@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-14T22:20:39.300858Z",
+  "generated_at": "2026-02-19T14:05:11.960999Z",
   "states": {
     "AK": {
       "name": "Alaska",
@@ -13,22 +13,22 @@
       "chambers": {
         "House": {
           "total": 40,
-          "d": 14,
-          "r": 21,
-          "other": 5,
+          "d": 0,
+          "r": 19,
+          "other": 21,
           "vacant": 0,
           "seats_up_2026": 40
         },
         "Senate": {
           "total": 20,
-          "d": 9,
-          "r": 11,
-          "other": 0,
+          "d": 0,
+          "r": 6,
+          "other": 14,
           "vacant": 0,
           "seats_up_2026": 10
         }
       },
-      "trifecta": "Republican Trifecta",
+      "trifecta": "Divided",
       "statewide_officers": [
         {
           "office": "Governor",
@@ -609,9 +609,9 @@
         },
         "Senate": {
           "total": 40,
-          "d": 11,
+          "d": 12,
           "r": 27,
-          "other": 1,
+          "other": 0,
           "vacant": 1,
           "seats_up_2026": 20
         }
@@ -679,9 +679,9 @@
         "Senate": {
           "total": 56,
           "d": 23,
-          "r": 31,
+          "r": 32,
           "other": 0,
-          "vacant": 2,
+          "vacant": 1,
           "seats_up_2026": 56
         }
       },
@@ -1357,9 +1357,9 @@
       "chambers": {
         "House": {
           "total": 160,
-          "d": 132,
+          "d": 133,
           "r": 25,
-          "other": 1,
+          "other": 0,
           "vacant": 2,
           "seats_up_2026": 160
         },
@@ -1495,22 +1495,22 @@
       "chambers": {
         "House": {
           "total": 151,
-          "d": 74,
+          "d": 77,
           "r": 72,
-          "other": 3,
+          "other": 0,
           "vacant": 2,
           "seats_up_2026": 151
         },
         "Senate": {
           "total": 35,
           "d": 20,
-          "r": 14,
-          "other": 1,
+          "r": 15,
+          "other": 0,
           "vacant": 0,
           "seats_up_2026": 35
         }
       },
-      "trifecta": "Divided",
+      "trifecta": "Democratic Trifecta",
       "statewide_officers": [
         {
           "office": "Governor",
@@ -1747,9 +1747,9 @@
       "chambers": {
         "House": {
           "total": 122,
-          "d": 42,
-          "r": 78,
-          "other": 2,
+          "d": 43,
+          "r": 79,
+          "other": 0,
           "vacant": 0,
           "seats_up_2026": 0
         },
@@ -2175,8 +2175,8 @@
         "House": {
           "total": 400,
           "d": 175,
-          "r": 216,
-          "other": 1,
+          "r": 217,
+          "other": 0,
           "vacant": 8,
           "seats_up_2026": 400
         },
@@ -2790,8 +2790,8 @@
         "House": {
           "total": 75,
           "d": 64,
-          "r": 10,
-          "other": 1,
+          "r": 11,
+          "other": 0,
           "vacant": 0,
           "seats_up_2026": 75
         },
@@ -3260,9 +3260,9 @@
       "chambers": {
         "House": {
           "total": 150,
-          "d": 90,
-          "r": 56,
-          "other": 3,
+          "d": 92,
+          "r": 57,
+          "other": 0,
           "vacant": 1,
           "seats_up_2026": 150
         },
@@ -3623,5 +3623,1367 @@
       },
       "ballot_measures_2026": 1
     }
-  }
+  },
+  "special_elections": [
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "GA House 106",
+      "chamber": "House",
+      "district": "106",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MN",
+      "state_name": "Minnesota",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "MN Senate 29",
+      "chamber": "Senate",
+      "district": "29",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MN",
+      "state_name": "Minnesota",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "MN Senate 47",
+      "chamber": "Senate",
+      "district": "47",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "MS House 26",
+      "chamber": "House",
+      "district": "26",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "MS House 36",
+      "chamber": "House",
+      "district": "36",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "MS House 39",
+      "chamber": "House",
+      "district": "39",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "MS Senate 1",
+      "chamber": "Senate",
+      "district": "1",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "MS Senate 11",
+      "chamber": "Senate",
+      "district": "11",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "MS Senate 19",
+      "chamber": "Senate",
+      "district": "19",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "MS Senate 2",
+      "chamber": "Senate",
+      "district": "2",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "MS Senate 24",
+      "chamber": "Senate",
+      "district": "24",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "MS Senate 26",
+      "chamber": "Senate",
+      "district": "26",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "MS Senate 34",
+      "chamber": "Senate",
+      "district": "34",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "MS Senate 41",
+      "chamber": "Senate",
+      "district": "41",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "MS Senate 44",
+      "chamber": "Senate",
+      "district": "44",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "MS Senate 45",
+      "chamber": "Senate",
+      "district": "45",
+      "result_status": "Certified"
+    },
+    {
+      "state": "NH",
+      "state_name": "New Hampshire",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "NH House Coos-5 Seat A",
+      "chamber": "House",
+      "district": "Coos-5",
+      "result_status": "Certified"
+    },
+    {
+      "state": "NJ",
+      "state_name": "New Jersey",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "NJ Senate 35",
+      "chamber": "Senate",
+      "district": "35",
+      "result_status": "Certified"
+    },
+    {
+      "state": "NY",
+      "state_name": "New York",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "NY Assembly 115",
+      "chamber": "Assembly",
+      "district": "115",
+      "result_status": "Certified"
+    },
+    {
+      "state": "SC",
+      "state_name": "South Carolina",
+      "date": "2025-11-04",
+      "type": "Special_Primary",
+      "seat_label": "SC House 21",
+      "chamber": "House",
+      "district": "21",
+      "result_status": "Certified"
+    },
+    {
+      "state": "SC",
+      "state_name": "South Carolina",
+      "date": "2025-11-04",
+      "type": "Special_Primary",
+      "seat_label": "SC House 88",
+      "chamber": "House",
+      "district": "88",
+      "result_status": "Certified"
+    },
+    {
+      "state": "SC",
+      "state_name": "South Carolina",
+      "date": "2025-11-04",
+      "type": "Special_Primary",
+      "seat_label": "SC House 98",
+      "chamber": "House",
+      "district": "98",
+      "result_status": "Certified"
+    },
+    {
+      "state": "SC",
+      "state_name": "South Carolina",
+      "date": "2025-11-04",
+      "type": "Special_Primary",
+      "seat_label": "SC House 98",
+      "chamber": "House",
+      "district": "98",
+      "result_status": "Certified"
+    },
+    {
+      "state": "SC",
+      "state_name": "South Carolina",
+      "date": "2025-11-04",
+      "type": "Special_Primary",
+      "seat_label": "SC House 98",
+      "chamber": "House",
+      "district": "98",
+      "result_status": "Certified"
+    },
+    {
+      "state": "TX",
+      "state_name": "Texas",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "TX Senate 9",
+      "chamber": "Senate",
+      "district": "9",
+      "result_status": "Certified"
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "WA House 33 Seat A",
+      "chamber": "House",
+      "district": "33",
+      "result_status": "Certified"
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "WA House 34 Seat A",
+      "chamber": "House",
+      "district": "34",
+      "result_status": "Certified"
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "WA House 41 Seat A",
+      "chamber": "House",
+      "district": "41",
+      "result_status": "Certified"
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "WA House 48 Seat A",
+      "chamber": "House",
+      "district": "48",
+      "result_status": "Certified"
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "WA Senate 26",
+      "chamber": "Senate",
+      "district": "26",
+      "result_status": "Certified"
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "WA Senate 33",
+      "chamber": "Senate",
+      "district": "33",
+      "result_status": "Certified"
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "WA Senate 34",
+      "chamber": "Senate",
+      "district": "34",
+      "result_status": "Certified"
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "WA Senate 48",
+      "chamber": "Senate",
+      "district": "48",
+      "result_status": "Certified"
+    },
+    {
+      "state": "WA",
+      "state_name": "Washington",
+      "date": "2025-11-04",
+      "type": "Special",
+      "seat_label": "WA Senate 5",
+      "chamber": "Senate",
+      "district": "5",
+      "result_status": "Certified"
+    },
+    {
+      "state": "AL",
+      "state_name": "Alabama",
+      "date": "2025-11-18",
+      "type": "Special_Primary",
+      "seat_label": "AL House 38",
+      "chamber": "House",
+      "district": "38",
+      "result_status": "Certified"
+    },
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "date": "2025-11-18",
+      "type": "Special",
+      "seat_label": "GA Senate 35",
+      "chamber": "Senate",
+      "district": "35",
+      "result_status": "Certified"
+    },
+    {
+      "state": "SC",
+      "state_name": "South Carolina",
+      "date": "2025-11-18",
+      "type": "Special_Primary",
+      "seat_label": "SC House 98",
+      "chamber": "House",
+      "district": "98",
+      "result_status": "Certified"
+    },
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "date": "2025-12-02",
+      "type": "Special_Runoff",
+      "seat_label": "GA House 106",
+      "chamber": "House",
+      "district": "106",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "date": "2025-12-02",
+      "type": "Special_Runoff",
+      "seat_label": "MS Senate 24",
+      "chamber": "Senate",
+      "district": "24",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MS",
+      "state_name": "Mississippi",
+      "date": "2025-12-02",
+      "type": "Special_Runoff",
+      "seat_label": "MS Senate 26",
+      "chamber": "Senate",
+      "district": "26",
+      "result_status": "Certified"
+    },
+    {
+      "state": "FL",
+      "state_name": "Florida",
+      "date": "2025-12-09",
+      "type": "Special",
+      "seat_label": "FL House 90",
+      "chamber": "House",
+      "district": "90",
+      "result_status": "Certified"
+    },
+    {
+      "state": "FL",
+      "state_name": "Florida",
+      "date": "2025-12-09",
+      "type": "Special",
+      "seat_label": "FL Senate 11",
+      "chamber": "Senate",
+      "district": "11",
+      "result_status": "Certified"
+    },
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "date": "2025-12-09",
+      "type": "Special",
+      "seat_label": "GA House 121",
+      "chamber": "House",
+      "district": "121",
+      "result_status": "Certified"
+    },
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "date": "2025-12-09",
+      "type": "Special",
+      "seat_label": "GA House 23",
+      "chamber": "House",
+      "district": "23",
+      "result_status": "Certified"
+    },
+    {
+      "state": "IA",
+      "state_name": "Iowa",
+      "date": "2025-12-09",
+      "type": "Special",
+      "seat_label": "IA House 7",
+      "chamber": "House",
+      "district": "7",
+      "result_status": "Certified"
+    },
+    {
+      "state": "OK",
+      "state_name": "Oklahoma",
+      "date": "2025-12-09",
+      "type": "Special_Primary",
+      "seat_label": "OK House 35",
+      "chamber": "House",
+      "district": "35",
+      "result_status": "Certified"
+    },
+    {
+      "state": "OK",
+      "state_name": "Oklahoma",
+      "date": "2025-12-09",
+      "type": "Special_Primary",
+      "seat_label": "OK House 35",
+      "chamber": "House",
+      "district": "35",
+      "result_status": "Certified"
+    },
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "date": "2025-12-16",
+      "type": "Special_Runoff",
+      "seat_label": "GA Senate 35",
+      "chamber": "Senate",
+      "district": "35",
+      "result_status": "Certified"
+    },
+    {
+      "state": "KY",
+      "state_name": "Kentucky",
+      "date": "2025-12-16",
+      "type": "Special",
+      "seat_label": "KY Senate 37",
+      "chamber": "Senate",
+      "district": "37",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MN",
+      "state_name": "Minnesota",
+      "date": "2025-12-16",
+      "type": "Special_Primary",
+      "seat_label": "MN House 127",
+      "chamber": "House",
+      "district": "127",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MN",
+      "state_name": "Minnesota",
+      "date": "2025-12-16",
+      "type": "Special_Primary",
+      "seat_label": "MN House 127",
+      "chamber": "House",
+      "district": "127",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MN",
+      "state_name": "Minnesota",
+      "date": "2025-12-16",
+      "type": "Special_Primary",
+      "seat_label": "MN House 127",
+      "chamber": "House",
+      "district": "127",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MN",
+      "state_name": "Minnesota",
+      "date": "2025-12-16",
+      "type": "Special_Primary",
+      "seat_label": "MN House 93",
+      "chamber": "House",
+      "district": "93",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MN",
+      "state_name": "Minnesota",
+      "date": "2025-12-16",
+      "type": "Special_Primary",
+      "seat_label": "MN House 93",
+      "chamber": "House",
+      "district": "93",
+      "result_status": "Certified"
+    },
+    {
+      "state": "SC",
+      "state_name": "South Carolina",
+      "date": "2025-12-23",
+      "type": "Special",
+      "seat_label": "SC House 21",
+      "chamber": "House",
+      "district": "21",
+      "result_status": "Certified"
+    },
+    {
+      "state": "SC",
+      "state_name": "South Carolina",
+      "date": "2025-12-23",
+      "type": "Special",
+      "seat_label": "SC House 88",
+      "chamber": "House",
+      "district": "88",
+      "result_status": "Certified"
+    },
+    {
+      "state": "SC",
+      "state_name": "South Carolina",
+      "date": "2025-12-23",
+      "type": "Special",
+      "seat_label": "SC Senate 12",
+      "chamber": "Senate",
+      "district": "12",
+      "result_status": "Certified"
+    },
+    {
+      "state": "IA",
+      "state_name": "Iowa",
+      "date": "2025-12-30",
+      "type": "Special",
+      "seat_label": "IA Senate 16",
+      "chamber": "Senate",
+      "district": "16",
+      "result_status": "Certified"
+    },
+    {
+      "state": "AR",
+      "state_name": "Arkansas",
+      "date": "2026-01-06",
+      "type": "Special_Primary",
+      "seat_label": "AR House 70",
+      "chamber": "House",
+      "district": "70",
+      "result_status": "Certified"
+    },
+    {
+      "state": "AR",
+      "state_name": "Arkansas",
+      "date": "2026-01-06",
+      "type": "Special_Primary",
+      "seat_label": "AR Senate 26",
+      "chamber": "Senate",
+      "district": "26",
+      "result_status": "Certified"
+    },
+    {
+      "state": "CT",
+      "state_name": "Connecticut",
+      "date": "2026-01-06",
+      "type": "Special",
+      "seat_label": "CT House 25",
+      "chamber": "House",
+      "district": "25",
+      "result_status": "Certified"
+    },
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "date": "2026-01-06",
+      "type": "Special_Runoff",
+      "seat_label": "GA House 23",
+      "chamber": "House",
+      "district": "23",
+      "result_status": "Certified"
+    },
+    {
+      "state": "SC",
+      "state_name": "South Carolina",
+      "date": "2026-01-06",
+      "type": "Special",
+      "seat_label": "SC House 98",
+      "chamber": "House",
+      "district": "98",
+      "result_status": "Certified"
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "date": "2026-01-06",
+      "type": "Special",
+      "seat_label": "VA HoD 77",
+      "chamber": "House of Delegates",
+      "district": "77",
+      "result_status": "Certified"
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "date": "2026-01-06",
+      "type": "Special",
+      "seat_label": "VA Senate 15",
+      "chamber": "Senate",
+      "district": "15",
+      "result_status": "Certified"
+    },
+    {
+      "state": "AL",
+      "state_name": "Alabama",
+      "date": "2026-01-13",
+      "type": "Special",
+      "seat_label": "AL House 63",
+      "chamber": "House",
+      "district": "63",
+      "result_status": "Certified"
+    },
+    {
+      "state": "CT",
+      "state_name": "Connecticut",
+      "date": "2026-01-13",
+      "type": "Special",
+      "seat_label": "CT House 139",
+      "chamber": "House",
+      "district": "139",
+      "result_status": "Certified"
+    },
+    {
+      "state": "FL",
+      "state_name": "Florida",
+      "date": "2026-01-13",
+      "type": "Special_Primary",
+      "seat_label": "FL House 87",
+      "chamber": "House",
+      "district": "87",
+      "result_status": "Certified"
+    },
+    {
+      "state": "FL",
+      "state_name": "Florida",
+      "date": "2026-01-13",
+      "type": "Special_Primary",
+      "seat_label": "FL House 87",
+      "chamber": "House",
+      "district": "87",
+      "result_status": "Certified"
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "date": "2026-01-13",
+      "type": "Special",
+      "seat_label": "VA HoD 11",
+      "chamber": "House of Delegates",
+      "district": "11",
+      "result_status": "Certified"
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "date": "2026-01-13",
+      "type": "Special",
+      "seat_label": "VA HoD 23",
+      "chamber": "House of Delegates",
+      "district": "23",
+      "result_status": "Certified"
+    },
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "date": "2026-01-20",
+      "type": "Special",
+      "seat_label": "GA Senate 18",
+      "chamber": "Senate",
+      "district": "18",
+      "result_status": "Certified"
+    },
+    {
+      "state": "NH",
+      "state_name": "New Hampshire",
+      "date": "2026-01-20",
+      "type": "Special_Primary",
+      "seat_label": "NH House Carroll-7",
+      "chamber": "House",
+      "district": "Carroll-7",
+      "result_status": "Certified"
+    },
+    {
+      "state": "NH",
+      "state_name": "New Hampshire",
+      "date": "2026-01-20",
+      "type": "Special_Primary",
+      "seat_label": "NH House Carroll-7",
+      "chamber": "House",
+      "district": "Carroll-7",
+      "result_status": "Certified"
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "date": "2026-01-20",
+      "type": "Special",
+      "seat_label": "VA HoD 17",
+      "chamber": "House of Delegates",
+      "district": "17",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MN",
+      "state_name": "Minnesota",
+      "date": "2026-01-27",
+      "type": "Special",
+      "seat_label": "MN House 127",
+      "chamber": "House",
+      "district": "127",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MN",
+      "state_name": "Minnesota",
+      "date": "2026-01-27",
+      "type": "Special",
+      "seat_label": "MN House 93",
+      "chamber": "House",
+      "district": "93",
+      "result_status": "Certified"
+    },
+    {
+      "state": "TX",
+      "state_name": "Texas",
+      "date": "2026-01-31",
+      "type": "Special_Runoff",
+      "seat_label": "TX Senate 9",
+      "chamber": "Senate",
+      "district": "9",
+      "result_status": "Certified"
+    },
+    {
+      "state": "AL",
+      "state_name": "Alabama",
+      "date": "2026-02-03",
+      "type": "Special",
+      "seat_label": "AL House 38",
+      "chamber": "House",
+      "district": "38",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MA",
+      "state_name": "Massachusetts",
+      "date": "2026-02-03",
+      "type": "Special_Primary",
+      "seat_label": "MA Senate 4",
+      "chamber": "Senate",
+      "district": "4",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MI",
+      "state_name": "Michigan",
+      "date": "2026-02-03",
+      "type": "Special_Primary",
+      "seat_label": "MI Senate 35",
+      "chamber": "Senate",
+      "district": "35",
+      "result_status": "Certified"
+    },
+    {
+      "state": "MI",
+      "state_name": "Michigan",
+      "date": "2026-02-03",
+      "type": "Special_Primary",
+      "seat_label": "MI Senate 35",
+      "chamber": "Senate",
+      "district": "35",
+      "result_status": "Certified"
+    },
+    {
+      "state": "NY",
+      "state_name": "New York",
+      "date": "2026-02-03",
+      "type": "Special",
+      "seat_label": "NY Assembly 36",
+      "chamber": "Assembly",
+      "district": "36",
+      "result_status": "Certified"
+    },
+    {
+      "state": "NY",
+      "state_name": "New York",
+      "date": "2026-02-03",
+      "type": "Special",
+      "seat_label": "NY Assembly 74",
+      "chamber": "Assembly",
+      "district": "74",
+      "result_status": "Certified"
+    },
+    {
+      "state": "NY",
+      "state_name": "New York",
+      "date": "2026-02-03",
+      "type": "Special",
+      "seat_label": "NY Senate 47",
+      "chamber": "Senate",
+      "district": "47",
+      "result_status": "Certified"
+    },
+    {
+      "state": "NY",
+      "state_name": "New York",
+      "date": "2026-02-03",
+      "type": "Special",
+      "seat_label": "NY Senate 61",
+      "chamber": "Senate",
+      "district": "61",
+      "result_status": "Certified"
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "date": "2026-02-07",
+      "type": "Special",
+      "seat_label": "LA House 100",
+      "chamber": "House",
+      "district": "100",
+      "result_status": "Certified"
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "date": "2026-02-07",
+      "type": "Special",
+      "seat_label": "LA Senate 3",
+      "chamber": "Senate",
+      "district": "3",
+      "result_status": "Certified"
+    },
+    {
+      "state": "OK",
+      "state_name": "Oklahoma",
+      "date": "2026-02-10",
+      "type": "Special",
+      "seat_label": "OK House 35",
+      "chamber": "House",
+      "district": "35",
+      "result_status": "Called"
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "date": "2026-02-10",
+      "type": "Special",
+      "seat_label": "VA HoD 5",
+      "chamber": "House of Delegates",
+      "district": "5",
+      "result_status": "Called"
+    },
+    {
+      "state": "VA",
+      "state_name": "Virginia",
+      "date": "2026-02-10",
+      "type": "Special",
+      "seat_label": "VA Senate 39",
+      "chamber": "Senate",
+      "district": "39",
+      "result_status": "Called"
+    },
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "date": "2026-02-17",
+      "type": "Special_Runoff",
+      "seat_label": "GA Senate 18",
+      "chamber": "Senate",
+      "district": "18",
+      "result_status": "Called"
+    },
+    {
+      "state": "ME",
+      "state_name": "Maine",
+      "date": "2026-02-24",
+      "type": "Special",
+      "seat_label": "ME House 94",
+      "chamber": "House",
+      "district": "94",
+      "result_status": null
+    },
+    {
+      "state": "PA",
+      "state_name": "Pennsylvania",
+      "date": "2026-02-24",
+      "type": "Special",
+      "seat_label": "PA House 22",
+      "chamber": "House",
+      "district": "22",
+      "result_status": null
+    },
+    {
+      "state": "PA",
+      "state_name": "Pennsylvania",
+      "date": "2026-02-24",
+      "type": "Special",
+      "seat_label": "PA House 42",
+      "chamber": "House",
+      "district": "42",
+      "result_status": null
+    },
+    {
+      "state": "AR",
+      "state_name": "Arkansas",
+      "date": "2026-03-03",
+      "type": "Special",
+      "seat_label": "AR House 70",
+      "chamber": "House",
+      "district": "70",
+      "result_status": null
+    },
+    {
+      "state": "AR",
+      "state_name": "Arkansas",
+      "date": "2026-03-03",
+      "type": "Special",
+      "seat_label": "AR Senate 26",
+      "chamber": "Senate",
+      "district": "26",
+      "result_status": null
+    },
+    {
+      "state": "MA",
+      "state_name": "Massachusetts",
+      "date": "2026-03-03",
+      "type": "Special_Primary",
+      "seat_label": "MA House 121",
+      "chamber": "House",
+      "district": "121",
+      "result_status": null
+    },
+    {
+      "state": "MA",
+      "state_name": "Massachusetts",
+      "date": "2026-03-03",
+      "type": "Special_Primary",
+      "seat_label": "MA House 121",
+      "chamber": "House",
+      "district": "121",
+      "result_status": null
+    },
+    {
+      "state": "MA",
+      "state_name": "Massachusetts",
+      "date": "2026-03-03",
+      "type": "Special",
+      "seat_label": "MA Senate 4",
+      "chamber": "Senate",
+      "district": "4",
+      "result_status": null
+    },
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "date": "2026-03-10",
+      "type": "Special",
+      "seat_label": "GA House 130",
+      "chamber": "House",
+      "district": "130",
+      "result_status": null
+    },
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "date": "2026-03-10",
+      "type": "Special",
+      "seat_label": "GA House 94",
+      "chamber": "House",
+      "district": "94",
+      "result_status": null
+    },
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "date": "2026-03-10",
+      "type": "Special",
+      "seat_label": "GA Senate 53",
+      "chamber": "Senate",
+      "district": "53",
+      "result_status": null
+    },
+    {
+      "state": "NH",
+      "state_name": "New Hampshire",
+      "date": "2026-03-10",
+      "type": "Special",
+      "seat_label": "NH House Carroll-7",
+      "chamber": "House",
+      "district": "Carroll-7",
+      "result_status": null
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "date": "2026-03-14",
+      "type": "Special_Runoff",
+      "seat_label": "LA House 100",
+      "chamber": "House",
+      "district": "100",
+      "result_status": null
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "date": "2026-03-14",
+      "type": "Special",
+      "seat_label": "LA House 37",
+      "chamber": "House",
+      "district": "37",
+      "result_status": "Certified"
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "date": "2026-03-14",
+      "type": "Special",
+      "seat_label": "LA House 60",
+      "chamber": "House",
+      "district": "60",
+      "result_status": "Certified"
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "date": "2026-03-14",
+      "type": "Special",
+      "seat_label": "LA House 69",
+      "chamber": "House",
+      "district": "69",
+      "result_status": null
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "date": "2026-03-14",
+      "type": "Special",
+      "seat_label": "LA House 97",
+      "chamber": "House",
+      "district": "97",
+      "result_status": "Certified"
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "date": "2026-03-14",
+      "type": "Special_Runoff",
+      "seat_label": "LA Senate 3",
+      "chamber": "Senate",
+      "district": "3",
+      "result_status": null
+    },
+    {
+      "state": "PA",
+      "state_name": "Pennsylvania",
+      "date": "2026-03-17",
+      "type": "Special",
+      "seat_label": "PA House 193",
+      "chamber": "House",
+      "district": "193",
+      "result_status": null
+    },
+    {
+      "state": "PA",
+      "state_name": "Pennsylvania",
+      "date": "2026-03-17",
+      "type": "Special",
+      "seat_label": "PA House 79",
+      "chamber": "House",
+      "district": "79",
+      "result_status": null
+    },
+    {
+      "state": "FL",
+      "state_name": "Florida",
+      "date": "2026-03-24",
+      "type": "Special",
+      "seat_label": "FL House 51",
+      "chamber": "House",
+      "district": "51",
+      "result_status": null
+    },
+    {
+      "state": "FL",
+      "state_name": "Florida",
+      "date": "2026-03-24",
+      "type": "Special",
+      "seat_label": "FL House 52",
+      "chamber": "House",
+      "district": "52",
+      "result_status": "Certified"
+    },
+    {
+      "state": "FL",
+      "state_name": "Florida",
+      "date": "2026-03-24",
+      "type": "Special",
+      "seat_label": "FL House 87",
+      "chamber": "House",
+      "district": "87",
+      "result_status": null
+    },
+    {
+      "state": "FL",
+      "state_name": "Florida",
+      "date": "2026-03-24",
+      "type": "Special",
+      "seat_label": "FL Senate 14",
+      "chamber": "Senate",
+      "district": "14",
+      "result_status": null
+    },
+    {
+      "state": "TX",
+      "state_name": "Texas",
+      "date": "2026-05-02",
+      "type": "Special",
+      "seat_label": "TX Senate 4",
+      "chamber": "Senate",
+      "district": "4",
+      "result_status": null
+    },
+    {
+      "state": "MI",
+      "state_name": "Michigan",
+      "date": "2026-05-05",
+      "type": "Special",
+      "seat_label": "MI Senate 35",
+      "chamber": "Senate",
+      "district": "35",
+      "result_status": null
+    },
+    {
+      "state": "NE",
+      "state_name": "Nebraska",
+      "date": "2026-05-12",
+      "type": "Special_Primary",
+      "seat_label": "NE Legislature 41",
+      "chamber": "Legislature",
+      "district": "41",
+      "result_status": null
+    },
+    {
+      "state": "WV",
+      "state_name": "West Virginia",
+      "date": "2026-05-12",
+      "type": "Special_Primary",
+      "seat_label": "WV Senate 3 Seat B",
+      "chamber": "Senate",
+      "district": "3",
+      "result_status": null
+    },
+    {
+      "state": "PA",
+      "state_name": "Pennsylvania",
+      "date": "2026-05-19",
+      "type": "Special",
+      "seat_label": "PA House 196",
+      "chamber": "House",
+      "district": "196",
+      "result_status": null
+    },
+    {
+      "state": "NM",
+      "state_name": "New Mexico",
+      "date": "2026-06-02",
+      "type": "Special_Primary",
+      "seat_label": "NM Senate 33",
+      "chamber": "Senate",
+      "district": "33",
+      "result_status": null
+    },
+    {
+      "state": "ME",
+      "state_name": "Maine",
+      "date": "2026-06-09",
+      "type": "Special",
+      "seat_label": "ME House 29",
+      "chamber": "House",
+      "district": "29",
+      "result_status": null
+    },
+    {
+      "state": "ND",
+      "state_name": "North Dakota",
+      "date": "2026-06-09",
+      "type": "Special_Primary",
+      "seat_label": "ND House 26 Seat A",
+      "chamber": "House",
+      "district": "26",
+      "result_status": null
+    },
+    {
+      "state": "ND",
+      "state_name": "North Dakota",
+      "date": "2026-06-09",
+      "type": "Special_Primary",
+      "seat_label": "ND House 42 Seat A",
+      "chamber": "House",
+      "district": "42",
+      "result_status": null
+    },
+    {
+      "state": "OK",
+      "state_name": "Oklahoma",
+      "date": "2026-06-16",
+      "type": "Special_Primary",
+      "seat_label": "OK Senate 17",
+      "chamber": "Senate",
+      "district": "17",
+      "result_status": null
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "date": "2026-06-30",
+      "type": "Special_Primary",
+      "seat_label": "CO Senate 17",
+      "chamber": "Senate",
+      "district": "17",
+      "result_status": null
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "date": "2026-06-30",
+      "type": "Special_Primary",
+      "seat_label": "CO Senate 17",
+      "chamber": "Senate",
+      "district": "17",
+      "result_status": null
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "date": "2026-06-30",
+      "type": "Special_Primary",
+      "seat_label": "CO Senate 29",
+      "chamber": "Senate",
+      "district": "29",
+      "result_status": null
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "date": "2026-06-30",
+      "type": "Special_Primary",
+      "seat_label": "CO Senate 31",
+      "chamber": "Senate",
+      "district": "31",
+      "result_status": null
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "date": "2026-11-03",
+      "type": "Special",
+      "seat_label": "CO Senate 31",
+      "chamber": "Senate",
+      "district": "31",
+      "result_status": null
+    },
+    {
+      "state": "ND",
+      "state_name": "North Dakota",
+      "date": "2026-11-03",
+      "type": "Special",
+      "seat_label": "ND House 26 Seat A",
+      "chamber": "House",
+      "district": "26",
+      "result_status": null
+    },
+    {
+      "state": "ND",
+      "state_name": "North Dakota",
+      "date": "2026-11-03",
+      "type": "Special",
+      "seat_label": "ND House 42 Seat A",
+      "chamber": "House",
+      "district": "42",
+      "result_status": null
+    },
+    {
+      "state": "NE",
+      "state_name": "Nebraska",
+      "date": "2026-11-03",
+      "type": "Special",
+      "seat_label": "NE Legislature 41",
+      "chamber": "Legislature",
+      "district": "41",
+      "result_status": null
+    },
+    {
+      "state": "NM",
+      "state_name": "New Mexico",
+      "date": "2026-11-03",
+      "type": "Special",
+      "seat_label": "NM Senate 33",
+      "chamber": "Senate",
+      "district": "33",
+      "result_status": null
+    },
+    {
+      "state": "OK",
+      "state_name": "Oklahoma",
+      "date": "2026-11-03",
+      "type": "Special",
+      "seat_label": "OK Senate 17",
+      "chamber": "Senate",
+      "district": "17",
+      "result_status": null
+    }
+  ]
 }

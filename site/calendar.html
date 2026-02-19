@@ -30,6 +30,7 @@
   .filter-btn.active { background: var(--ms-navy); color: white; border-color: var(--ms-navy); }
   .filter-btn.active-filing { background: var(--ms-dem-blue); color: white; border-color: var(--ms-dem-blue); }
   .filter-btn.active-primary { background: var(--ms-rep-red); color: white; border-color: var(--ms-rep-red); }
+  .filter-btn.active-special { background: var(--ms-gold); color: var(--ms-navy); border-color: var(--ms-gold); }
 
   /* Timeline strip */
   .timeline-strip {
@@ -69,12 +70,13 @@
   .timeline-dot:hover { transform: translate(-50%, 0) scale(1.8); z-index: 10; }
   .timeline-dot.filing { background: var(--ms-dem-blue); }
   .timeline-dot.primary { background: var(--ms-rep-red); }
+  .timeline-dot.special { background: var(--ms-gold); }
   .today-marker {
     position: absolute;
     top: 0;
     bottom: 0;
     width: 2px;
-    background: var(--ms-gold);
+    background: #333;
     z-index: 5;
   }
   .today-label {
@@ -82,7 +84,7 @@
     top: -2px;
     font-size: 10px;
     font-weight: 700;
-    color: var(--ms-gold);
+    color: #333;
     white-space: nowrap;
     transform: translateX(-50%);
   }
@@ -150,6 +152,7 @@
   }
   .event-type.filing { background: rgba(39,97,129,0.12); color: var(--ms-dem-blue); }
   .event-type.primary { background: rgba(229,9,99,0.12); color: var(--ms-rep-red); }
+  .event-type.special { background: rgba(201,163,0,0.15); color: #8a7000; }
   .event-states {
     display: flex;
     flex-wrap: wrap;
@@ -168,11 +171,12 @@
   .event-state-tag:hover { transform: scale(1.05); }
   .event-state-tag.filing { background: rgba(39,97,129,0.08); color: var(--ms-dem-blue); }
   .event-state-tag.primary { background: rgba(229,9,99,0.08); color: var(--ms-rep-red); }
+  .event-state-tag.special { background: rgba(201,163,0,0.1); color: #8a7000; }
 
   /* Stats row */
   .cal-stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 16px;
     margin-bottom: 32px;
   }
@@ -220,7 +224,7 @@
   </div>
 
   <h1 class="heading-xl" style="margin-bottom: 8px">Election Calendar</h1>
-  <p class="subtitle mb-16">2026 Filing Deadlines &amp; Primary Elections</p>
+  <p class="subtitle mb-16">2026 Filing Deadlines, Primary Elections &amp; Special Elections</p>
 
   <!-- Stats -->
   <div class="cal-stats">
@@ -228,6 +232,7 @@
     <div class="card stat-card"><div class="stat-number" id="stat-past-filing">—</div><div class="stat-label">Filing Deadlines Passed</div></div>
     <div class="card stat-card"><div class="stat-number" id="stat-remaining-filing">—</div><div class="stat-label">Filing Deadlines Left</div></div>
     <div class="card stat-card"><div class="stat-number" id="stat-primaries">—</div><div class="stat-label">Primary Elections</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-specials">—</div><div class="stat-label">Special Elections</div></div>
   </div>
 
   <!-- State Lookup -->
@@ -246,7 +251,8 @@
     <div class="timeline-legend">
       <span><span class="legend-dot" style="background:var(--ms-dem-blue)"></span> Filing Deadline</span>
       <span><span class="legend-dot" style="background:var(--ms-rep-red)"></span> Primary Election</span>
-      <span><span class="legend-dot" style="background:var(--ms-gold)"></span> Today</span>
+      <span><span class="legend-dot" style="background:var(--ms-gold)"></span> Special Election</span>
+      <span><span class="legend-dot" style="background:#333"></span> Today</span>
     </div>
   </div>
 
@@ -255,6 +261,7 @@
     <button class="filter-btn active" data-filter="all">All Events</button>
     <button class="filter-btn" data-filter="filing">Filing Deadlines</button>
     <button class="filter-btn" data-filter="primary">Primaries</button>
+    <button class="filter-btn" data-filter="special">Special Elections</button>
   </div>
 
   <!-- Month-by-month -->
@@ -303,23 +310,42 @@
     if (primary) events.push({ date: primary, type: 'primary', subtype: null, state: abbr, name: st.name });
   }
 
+  // Add special elections
+  if (data.special_elections) {
+    for (const sp of data.special_elections) {
+      if (sp.date) {
+        const typeLabel = sp.type.replace(/_/g, ' ');
+        events.push({
+          date: sp.date,
+          type: 'special',
+          subtype: sp.result_status === 'Called' || sp.result_status === 'Certified' ? 'completed' : null,
+          state: sp.state,
+          name: sp.state_name,
+          detail: `${sp.seat_label} ${typeLabel}`,
+        });
+      }
+    }
+  }
+
   events.sort((a, b) => a.date.localeCompare(b.date) || a.type.localeCompare(b.type));
 
   // Stats
   const filingEvents = events.filter(e => e.type === 'filing');
   const primaryEvents = events.filter(e => e.type === 'primary');
+  const specialEvents = events.filter(e => e.type === 'special');
   const pastFiling = filingEvents.filter(e => e.date < today).length;
   const remainingFiling = filingEvents.length - pastFiling;
 
   document.getElementById('stat-past-filing').textContent = pastFiling;
   document.getElementById('stat-remaining-filing').textContent = remainingFiling;
   document.getElementById('stat-primaries').textContent = primaryEvents.length;
+  document.getElementById('stat-specials').textContent = specialEvents.length;
 
   // Next event
   const nextEvent = events.find(e => e.date >= today);
   if (nextEvent) {
     const daysUntil = Math.ceil((new Date(nextEvent.date + 'T00:00:00') - new Date(today + 'T00:00:00')) / 86400000);
-    const evtType = nextEvent.type === 'filing' ? 'filing deadline' : 'primary';
+    const evtType = nextEvent.type === 'filing' ? 'filing deadline' : nextEvent.type === 'special' ? 'special election' : 'primary';
     if (daysUntil === 0) {
       document.getElementById('stat-next-days').textContent = 'Today';
     } else {
@@ -378,6 +404,20 @@
       html += '<span style="color:var(--ms-text-light)">No 2026 primary (odd-year state)</span>';
     }
 
+    // Special elections for this state
+    const stateSpecials = events.filter(e => e.type === 'special' && e.state === abbr);
+    if (stateSpecials.length > 0) {
+      html += '<br><strong style="font-size:13px;margin-top:6px;display:inline-block">Special Elections:</strong><br>';
+      for (const sp of stateSpecials) {
+        const isPast = sp.date < today;
+        html += `<span class="event-type special" style="margin-top:4px;display:inline-block">Special</span> `;
+        html += `${formatDate(sp.date)} — ${sp.detail}`;
+        if (sp.subtype === 'completed') html += ' <span style="color:var(--ms-text-light)">(called)</span>';
+        if (isPast && sp.subtype !== 'completed') html += ' <span style="color:var(--ms-text-light)">(passed)</span>';
+        html += '<br>';
+      }
+    }
+
     // Link to state page
     html += `<br><a href="state.html?st=${abbr}" style="font-size:13px;margin-top:8px;display:inline-block">View ${st.name} details &rarr;</a>`;
 
@@ -423,7 +463,7 @@
   for (const [key, group] of Object.entries(dotGroups)) {
     const pct = dateToPercent(group[0].date);
     const type = group[0].type;
-    const baseTop = type === 'filing' ? 28 : 50;
+    const baseTop = type === 'filing' ? 28 : type === 'special' ? 38 : 50;
 
     for (let i = 0; i < group.length; i++) {
       const dot = document.createElement('div');
@@ -433,13 +473,15 @@
       if (group[i].date < today) dot.style.opacity = '0.35';
 
       const evt = group[i];
-      const subtypeStr = evt.subtype ? ` (${evt.subtype})` : '';
-      const typeLabel = type === 'filing' ? 'Filing Deadline' : 'Primary Election';
-      const typeColor = type === 'filing' ? 'color:var(--ms-dem-blue)' : 'color:var(--ms-rep-red)';
+      const subtypeStr = evt.subtype && evt.subtype !== 'completed' ? ` (${evt.subtype})` : '';
+      const typeLabel = type === 'filing' ? 'Filing Deadline' : type === 'special' ? 'Special Election' : 'Primary Election';
+      const typeColor = type === 'filing' ? 'color:var(--ms-dem-blue)' : type === 'special' ? 'color:var(--ms-gold)' : 'color:var(--ms-rep-red)';
+      const detailStr = evt.detail ? `<div style="font-size:12px;color:#666">${evt.detail}</div>` : '';
 
       dot.addEventListener('mouseenter', () => {
         tt.show(`<div class="tt-title">${evt.name} (${evt.state})</div>
           <div style="${typeColor};font-weight:600">${typeLabel}${subtypeStr}</div>
+          ${detailStr}
           <div>${formatDate(evt.date)}</div>`);
       });
       dot.addEventListener('mousemove', (e) => tt.move(e));
@@ -514,13 +556,13 @@
         const row = document.createElement('div');
         row.className = `event-row${isPast ? ' past' : ''}`;
 
-        let typeLabel = group.type === 'filing' ? 'Filing' : 'Primary';
+        let typeLabel = group.type === 'filing' ? 'Filing' : group.type === 'special' ? 'Special' : 'Primary';
         if (group.subtype === 'statewide') typeLabel = 'Filing (SW)';
         else if (group.subtype === 'legislative') typeLabel = 'Filing (Leg)';
         let statesHtml = '';
         for (const evt of group.states) {
-          const suffix = evt.subtype ? ` (${evt.subtype})` : '';
-          statesHtml += `<a href="state.html?st=${evt.state}" class="event-state-tag ${group.type}" title="${evt.name}${suffix}">${evt.state}</a>`;
+          const suffix = evt.detail ? ` — ${evt.detail}` : (evt.subtype && evt.subtype !== 'completed' ? ` (${evt.subtype})` : '');
+          statesHtml += `<a href="state.html?st=${evt.state}" class="event-state-tag ${group.type}" title="${evt.name}${suffix}">${evt.state}${evt.detail ? ': ' + evt.detail : ''}</a>`;
         }
 
         row.innerHTML = `
@@ -545,12 +587,13 @@
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', function() {
       document.querySelectorAll('.filter-btn').forEach(b => {
-        b.classList.remove('active', 'active-filing', 'active-primary');
+        b.classList.remove('active', 'active-filing', 'active-primary', 'active-special');
       });
       const f = this.dataset.filter;
       activeFilter = f;
       if (f === 'filing') this.classList.add('active-filing');
       else if (f === 'primary') this.classList.add('active-primary');
+      else if (f === 'special') this.classList.add('active-special');
       else this.classList.add('active');
       renderCalendar();
     });

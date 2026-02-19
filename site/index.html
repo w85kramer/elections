@@ -56,6 +56,7 @@
   }
   .deadline-list .dl-text { color: var(--ms-text-light); }
   .deadline-list .dl-primary .dl-text { color: var(--ms-rep-red); font-weight: 600; }
+  .deadline-list .dl-special .dl-text { color: var(--ms-gold); font-weight: 600; }
   .deadline-list .dl-past { opacity: 0.5; }
   .map-links {
     display: flex;
@@ -250,6 +251,16 @@
   document.getElementById('stat-tossup').textContent = tossupGovs;
   document.getElementById('stat-measures').textContent = totalMeasures;
 
+  // Add special elections
+  if (data.special_elections) {
+    for (const sp of data.special_elections) {
+      if (sp.date && sp.result_status !== 'Certified' && sp.result_status !== 'Called') {
+        const typeLabel = sp.type.replace(/_/g, ' ');
+        deadlines.push({ date: sp.date, text: `${sp.state_name} ${sp.seat_label} ${typeLabel}`, state: sp.state, type: 'special' });
+      }
+    }
+  }
+
   // Deadlines — sorted, show next 15 upcoming
   deadlines.sort((a, b) => a.date.localeCompare(b.date));
   const today = new Date().toISOString().split('T')[0];
@@ -258,6 +269,7 @@
   for (const d of upcomingDeadlines) {
     const li = document.createElement('li');
     if (d.type === 'primary') li.className = 'dl-primary';
+    else if (d.type === 'special') li.className = 'dl-special';
     li.innerHTML = `<span class="dl-date">${formatDateShort(d.date)}</span><span class="dl-text">${d.text}</span>`;
     dl.appendChild(li);
   }
