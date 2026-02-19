@@ -737,9 +737,9 @@
     const minYear = years[0];
     const maxYear = years[years.length - 1];
 
-    const W = Math.max(500, years.length * 70 + 120);
+    const W = Math.max(500, years.length * 70 + 160);
     const H = 200;
-    const PAD_L = 55, PAD_R = 80, PAD_T = 20, PAD_B = 30;
+    const PAD_L = 70, PAD_R = 80, PAD_T = 20, PAD_B = 30;
     const chartW = W - PAD_L - PAD_R;
     const chartH = H - PAD_T - PAD_B;
     const maxMargin = 60;
@@ -761,14 +761,17 @@
     for (const m of [20, 40]) {
       const yD = yPos(m);
       const yR = yPos(-m);
-      svg += `<line x1="${PAD_L}" y1="${yD}" x2="${W - PAD_R}" y2="${yD}" stroke="#eee" stroke-width="0.5"/>`;
-      svg += `<line x1="${PAD_L}" y1="${yR}" x2="${W - PAD_R}" y2="${yR}" stroke="#eee" stroke-width="0.5"/>`;
+      const sw = m === 40 ? '0.8' : '0.5';
+      svg += `<line x1="${PAD_L}" y1="${yD}" x2="${W - PAD_R}" y2="${yD}" stroke="#ddd" stroke-width="${sw}"/>`;
+      svg += `<line x1="${PAD_L}" y1="${yR}" x2="${W - PAD_R}" y2="${yR}" stroke="#ddd" stroke-width="${sw}"/>`;
     }
 
     // Y-axis labels
-    svg += `<text x="${PAD_L - 6}" y="${yPos(0) + 4}" text-anchor="end" font-size="10" fill="#999" font-family="Work Sans,sans-serif">Even</text>`;
-    svg += `<text x="${PAD_L - 6}" y="${yPos(20) + 4}" text-anchor="end" font-size="10" fill="var(--ms-dem-blue)" font-family="Work Sans,sans-serif">D+20</text>`;
-    svg += `<text x="${PAD_L - 6}" y="${yPos(-20) + 4}" text-anchor="end" font-size="10" fill="var(--ms-rep-red)" font-family="Work Sans,sans-serif">R+20</text>`;
+    svg += `<text x="${PAD_L - 8}" y="${yPos(0) + 4}" text-anchor="end" font-size="10" fill="#999" font-family="Work Sans,sans-serif">Even</text>`;
+    svg += `<text x="${PAD_L - 8}" y="${yPos(20) + 4}" text-anchor="end" font-size="10" fill="var(--ms-dem-blue)" font-family="Work Sans,sans-serif">D+20</text>`;
+    svg += `<text x="${PAD_L - 8}" y="${yPos(40) + 4}" text-anchor="end" font-size="10" fill="var(--ms-dem-blue)" font-family="Work Sans,sans-serif">D+40</text>`;
+    svg += `<text x="${PAD_L - 8}" y="${yPos(-20) + 4}" text-anchor="end" font-size="10" fill="var(--ms-rep-red)" font-family="Work Sans,sans-serif">R+20</text>`;
+    svg += `<text x="${PAD_L - 8}" y="${yPos(-40) + 4}" text-anchor="end" font-size="10" fill="var(--ms-rep-red)" font-family="Work Sans,sans-serif">R+40</text>`;
 
     // Presidential margin dashed line
     if (presMargin) {
