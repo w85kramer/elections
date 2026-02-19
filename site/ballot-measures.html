@@ -893,7 +893,10 @@
     g.addEventListener('mouseleave', () => bmTooltip.classList.remove('visible'));
     g.addEventListener('click', () => {
       const st = g.getAttribute('data-state');
-      window.location.href = 'state.html?st=' + st;
+      const sel = document.getElementById('filter-state');
+      sel.value = st;
+      render();
+      sel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
   });
 
