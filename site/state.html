@@ -499,10 +499,18 @@
         // Party color for text
         const partyColor = r.party === 'D' ? 'var(--ms-dem-blue)' : r.party === 'R' ? 'var(--ms-rep-red)' : '';
 
-        // District
+        // District — link to district detail page
         const dtd = tr.insertCell();
-        dtd.textContent = r.distLabel;
-        if (partyColor) dtd.style.color = partyColor;
+        const distLink = document.createElement('a');
+        distLink.href = `district.html?st=${stateAbbr}&chamber=${encodeURIComponent(ch)}&d=${encodeURIComponent(r.district)}`;
+        distLink.textContent = r.distLabel;
+        distLink.style.textDecoration = 'none';
+        distLink.style.fontWeight = '600';
+        if (partyColor) distLink.style.color = partyColor;
+        else distLink.style.color = 'var(--ms-navy)';
+        distLink.addEventListener('mouseenter', () => distLink.style.textDecoration = 'underline');
+        distLink.addEventListener('mouseleave', () => distLink.style.textDecoration = 'none');
+        dtd.appendChild(distLink);
 
         // Member name
         const ntd = tr.insertCell();
