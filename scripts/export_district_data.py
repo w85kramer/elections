@@ -374,7 +374,10 @@ def export_all_districts(dry_run=False, single_state=None):
                     if e['type'] == 'General' and e['candidates']:
                         winner = next((c for c in e['candidates'] if c['result'] == 'Won'), None)
                         if winner and winner['pct'] is not None:
-                            margin = (winner['pct'] - 50.0) * 2  # approximate 2-party margin
+                            # Use two-party margin, capped for uncontested races
+                            raw_margin = (winner['pct'] - 50.0) * 2
+                            # Cap at ±40 to avoid absurd values from uncontested races
+                            margin = max(-40.0, min(40.0, raw_margin))
                             party_sign = 1 if winner['party'] == 'D' else -1 if winner['party'] == 'R' else 0
                             if party_sign != 0:
                                 general_margins.append({

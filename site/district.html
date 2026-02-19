@@ -343,11 +343,30 @@
     <a href="state.html?st=${stateAbbr}">${getChamberLabel(stateAbbr, chamber)}</a> &rsaquo;
     <span>${displayName}</span>`;
 
-  // Helper: party color style string
+  // Helper: party color style string — use caucus for coloring when available
   function partyColorStyle(p) {
     if (p === 'D') return 'color:var(--ms-dem-blue)';
     if (p === 'R') return 'color:var(--ms-rep-red)';
     return 'color:var(--ms-other)';
+  }
+
+  // Build caucus annotation text
+  function caucusAnnotation(party, caucus) {
+    if (!caucus || caucus === party) return '';
+    if (stateAbbr === 'NE') {
+      if (caucus === 'R') return ' <span class="holder-since">(caucuses with Republicans)</span>';
+      if (caucus === 'D') return ' <span class="holder-since">(caucuses with Democrats)</span>';
+      if (caucus === 'NP') return ' <span class="holder-since">(nonpartisan caucus)</span>';
+    }
+    if (caucus === 'C') return ' <span class="holder-since">(caucuses with majority coalition)</span>';
+    return '';
+  }
+
+  // For NE and AK, color names by caucus rather than party
+  function displayColor(party, caucus) {
+    if (stateAbbr === 'NE' && caucus && caucus !== party) return partyColorStyle(caucus);
+    if (caucus === 'C') return 'color:var(--ms-other)';
+    return partyColorStyle(caucus || party);
   }
 
   function forecastClass(rating) {
@@ -394,22 +413,26 @@
     heroHtml += `<div class="holders-list">`;
     for (const s of district.seats) {
       const label = s.seat_designator ? `Seat ${s.seat_designator}` : s.seat_label;
-      const party = s.current_holder_caucus || s.current_holder_party;
+      const dispParty = s.current_holder_party === 'NP' ? 'NP' : (s.current_holder_party || '—');
+      const colorParty = s.current_holder_caucus || s.current_holder_party;
       const sinceStr = s.since_year ? ` &middot; Since ${s.since_year}` : '';
+      const annotation = caucusAnnotation(s.current_holder_party, s.current_holder_caucus);
       heroHtml += `<div class="holder-row">
-        <span class="party-badge ${partyBadgeClass(party)}">${party || '—'}</span>
-        <span class="holder-name">${s.current_holder || 'Vacant'}</span>
+        <span class="party-badge ${partyBadgeClass(dispParty)}">${dispParty}</span>
+        <span class="holder-name" style="${displayColor(s.current_holder_party, s.current_holder_caucus)}">${s.current_holder || 'Vacant'}</span>${annotation}
         <span class="holder-since">${label}${sinceStr}</span>
       </div>`;
     }
     heroHtml += `</div>`;
   } else {
     const s = primarySeat;
-    const party = s.current_holder_caucus || s.current_holder_party;
+    const dispParty = s.current_holder_party === 'NP' ? 'NP' : (s.current_holder_party || '—');
+    const colorParty = s.current_holder_caucus || s.current_holder_party;
     const sinceStr = s.since_year ? `Since ${s.since_year}` : '';
+    const annotation = caucusAnnotation(s.current_holder_party, s.current_holder_caucus);
     heroHtml += `<div class="holder-row">
-      <span class="party-badge ${partyBadgeClass(party)}">${party || '—'}</span>
-      <span class="holder-name">${s.current_holder || 'Vacant'}</span>
+      <span class="party-badge ${partyBadgeClass(dispParty)}">${dispParty}</span>
+      <span class="holder-name" style="${displayColor(s.current_holder_party, s.current_holder_caucus)}">${s.current_holder || 'Vacant'}</span>${annotation}
       <span class="holder-since">${sinceStr}</span>
     </div>`;
   }
@@ -431,7 +454,7 @@
       <span style="${partyColorStyle(district.pres_2024_winner)};font-weight:600">${marginLabel(presMargin)}</span>
     </div>`;
   if (shiftStr) {
-    heroHtml += `<div class="qs-item"><span class="qs-label">Trend:</span> ${shiftStr}</div>`;
+    heroHtml += `<div class="qs-item"><span class="qs-label">Partisan Shift:</span> ${shiftStr}</div>`;
   }
   if (district.num_seats > 1) {
     heroHtml += `<div class="qs-item"><span class="qs-label">Seats:</span> ${district.num_seats} (multi-member)</div>`;
@@ -449,7 +472,9 @@
       if (e.type === 'General' && e.candidates && e.candidates.length > 0) {
         const winner = e.candidates.find(c => c.result === 'Won');
         if (winner && winner.pct != null) {
-          const winMargin = (winner.pct - 50) * 2;
+          const rawMargin = (winner.pct - 50) * 2;
+          // Cap at ±40 to avoid absurd bars from uncontested races
+          const winMargin = Math.max(-40, Math.min(40, rawMargin));
           const sign = winner.party === 'D' ? 1 : winner.party === 'R' ? -1 : 0;
           allGenerals.push({
             year: e.year,
@@ -521,7 +546,8 @@
         for (const c of allCands) {
           const inc = c.is_incumbent ? '<span class="incumbent-marker">(incumbent)</span>' : '';
           const typeLabel = c.election_type !== 'General' ? `<span class="text-muted text-sm">${c.election_type.replace('_', ' ')}</span>` : '';
-          candsHtml += `<li><span class="party-badge ${partyBadgeClass(c.party)}" style="font-size:11px;padding:1px 6px">${c.party || '?'}</span> ${c.name} ${inc} ${typeLabel}</li>`;
+          const candParty = inferParty(c.party, c.election_type, stateAbbr);
+          candsHtml += `<li><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:11px;padding:1px 6px">${candParty || '?'}</span> ${c.name} ${inc} ${typeLabel}</li>`;
         }
         candsHtml += '</ul>';
       } else {
@@ -551,14 +577,17 @@
       <th>Year</th><th>Type</th><th>Winner</th><th>Margin</th><th>Votes</th><th></th>
     </tr></thead><tbody>`;
 
-    let lastCycle = null;
+    let lastCycleKey = null;
     let rowIdx = 0;
 
     for (const e of elections) {
-      const cycle = e.year;
-      if (cycle !== lastCycle) {
-        html += `<tr class="cycle-header"><td colspan="6">${cycle} Cycle</td></tr>`;
-        lastCycle = cycle;
+      // Group by year + cycle type (General vs Special)
+      const isSpecial = e.type.toLowerCase().includes('special');
+      const cycleType = isSpecial ? 'Special' : 'General';
+      const cycleKey = `${e.year}-${cycleType}`;
+      if (cycleKey !== lastCycleKey) {
+        html += `<tr class="cycle-header"><td colspan="6">${e.year} ${cycleType}</td></tr>`;
+        lastCycleKey = cycleKey;
       }
 
       const winner = e.candidates.find(c => c.result === 'Won' || c.result === 'Advanced');
@@ -568,9 +597,9 @@
       let winnerParty = '';
 
       if (winner) {
-        winnerParty = winner.party || '';
+        winnerParty = inferParty(winner.party, e.type, stateAbbr) || '';
         winnerName = `<span style="${partyColorStyle(winnerParty)}">${winner.name}</span>
-          <span class="party-badge ${partyBadgeClass(winnerParty)}" style="font-size:10px;padding:1px 5px;margin-left:4px">${winnerParty}</span>`;
+          <span class="party-badge ${partyBadgeClass(winnerParty)}" style="font-size:10px;padding:1px 5px;margin-left:4px">${winnerParty || '?'}</span>`;
 
         if (winner.pct != null) {
           const marginPct = Math.max(0, (winner.pct - 50) * 2);
@@ -603,11 +632,12 @@
           const pctStr = c.pct != null ? `${c.pct.toFixed(1)}%` : '';
           const votesStr = c.votes != null ? numberWithCommas(c.votes) : '';
           const resultBadge = c.result === 'Won' ? '<strong style="color:#155724">Won</strong>' : (c.result || '');
-          const inc = c.is_incumbent ? ' (i)' : '';
+          const inc = c.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
           const wi = c.is_write_in ? ' <em>W/I</em>' : '';
+          const candParty = inferParty(c.party, e.type, stateAbbr);
           html += `<tr class="candidate-detail" data-expand="${expandId}">
             <td></td>
-            <td colspan="2"><span class="party-badge ${partyBadgeClass(c.party)}" style="font-size:10px;padding:1px 5px">${c.party || '?'}</span> ${c.name}${inc}${wi}</td>
+            <td colspan="2"><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> ${c.name}${inc}${wi}</td>
             <td>${pctStr}</td>
             <td>${votesStr}</td>
             <td>${resultBadge}</td>
@@ -707,9 +737,9 @@
     const minYear = years[0];
     const maxYear = years[years.length - 1];
 
-    const W = Math.max(500, years.length * 70);
+    const W = Math.max(500, years.length * 70 + 120);
     const H = 200;
-    const PAD_L = 45, PAD_R = 20, PAD_T = 20, PAD_B = 30;
+    const PAD_L = 55, PAD_R = 80, PAD_T = 20, PAD_B = 30;
     const chartW = W - PAD_L - PAD_R;
     const chartH = H - PAD_T - PAD_B;
     const maxMargin = 60;
@@ -809,29 +839,40 @@
       maxZoom: 18,
     }).addTo(map);
 
-    // Find this district in GeoJSON
+    // Build the match key for this district in Census GeoJSON
+    // Census uses SLDUST/SLDLST fields:
+    //   Numeric districts: zero-padded "009"
+    //   AK Senate: letters like "00A" through "00T"
+    //   Named districts (VT, MA, NH): abbreviation codes
+    const distLetter = district.district_name ? district.district_name.replace(/^[A-Z]+-/, '') : '';
+
+    function isDistrictMatch(feature) {
+      const props = feature.properties || {};
+      const geoDist = props.SLDUST || props.SLDLST || '';
+      const geoName = props.NAMELSAD || '';
+      const geoNameLower = geoName.toLowerCase();
+      const distLower = distNum.toLowerCase();
+
+      // AK Senate: match letter from district_name (SD-A → "00A")
+      if (stateAbbr === 'AK' && chamber === 'Senate' && distLetter.length === 1) {
+        return geoDist === '00' + distLetter || geoName.endsWith(' ' + distLetter);
+      }
+
+      return geoDist === distNum
+        || geoDist === distNum.padStart(3, '0')
+        || geoDist === distNum.padStart(2, '0')
+        || geoName.endsWith(' ' + distNum)
+        || geoName.endsWith(' ' + distNum.replace(/^0+/, ''))
+        || geoNameLower.startsWith(distLower + ' ')
+        || geoNameLower.startsWith(distLower + '-');
+    }
+
     let targetFeature = null;
     const targetColor = marginColor(district.pres_2024_margin);
 
     const allLayer = L.geoJSON(geoData, {
       style: function(feature) {
-        // Match district — Census uses SLDUST/SLDLST fields
-        // Numeric districts: zero-padded (e.g., "009" for district 9)
-        // Named districts (VT, MA): abbreviation codes or full names
-        const props = feature.properties || {};
-        const geoDist = props.SLDUST || props.SLDLST || '';
-        const geoName = props.NAMELSAD || '';
-        const geoNameLower = geoName.toLowerCase();
-        const distLower = distNum.toLowerCase();
-        const isTarget = geoDist === distNum
-          || geoDist === distNum.padStart(3, '0')
-          || geoDist === distNum.padStart(2, '0')
-          || geoName.endsWith(' ' + distNum)
-          || geoName.endsWith(' ' + distNum.replace(/^0+/, ''))
-          || geoNameLower.startsWith(distLower + ' ')
-          || geoNameLower.startsWith(distLower + '-');
-
-        if (isTarget) {
+        if (isDistrictMatch(feature)) {
           targetFeature = feature;
           return {
             color: targetColor,
@@ -859,7 +900,12 @@
       const targetLayer = L.geoJSON(targetFeature);
       map.fitBounds(targetLayer.getBounds(), { padding: [40, 40] });
     } else {
-      map.fitBounds(allLayer.getBounds(), { padding: [20, 20] });
+      // For AK, the full state crosses the antimeridian — use manual bounds
+      if (stateAbbr === 'AK') {
+        map.fitBounds([[51, -175], [72, -130]]);
+      } else {
+        map.fitBounds(allLayer.getBounds(), { padding: [20, 20] });
+      }
     }
   }
 

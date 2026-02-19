@@ -48,7 +48,7 @@ function formatDateShort(dateStr) {
 function partyColor(party) {
   if (party === 'D') return '#6cb3d2';
   if (party === 'R') return '#e50963';
-  if (party === 'I') return '#888';
+  if (party === 'I' || party === 'NP') return '#888';
   return '#ccc';
 }
 
@@ -56,6 +56,7 @@ function partyLabel(party) {
   if (party === 'D') return 'Democrat';
   if (party === 'R') return 'Republican';
   if (party === 'I') return 'Independent';
+  if (party === 'NP') return 'Nonpartisan';
   return party || 'Vacant';
 }
 
@@ -63,6 +64,18 @@ function partyBadgeClass(party) {
   if (party === 'D') return 'party-d';
   if (party === 'R') return 'party-r';
   return 'party-i';
+}
+
+/** Infer candidate party from election type when party is null/unknown */
+function inferParty(candidateParty, electionType, stateAbbr) {
+  if (candidateParty) return candidateParty;
+  // NE is officially nonpartisan
+  if (stateAbbr === 'NE') return 'NP';
+  // Infer from primary type
+  if (electionType && electionType.includes('_D')) return 'D';
+  if (electionType && electionType.includes('_R')) return 'R';
+  if (electionType && electionType.includes('_L')) return 'L';
+  return null;
 }
 
 async function loadJSON(url) {
