@@ -347,6 +347,8 @@
   function partyColorStyle(p) {
     if (p === 'D') return 'color:var(--ms-dem-blue)';
     if (p === 'R') return 'color:var(--ms-rep-red)';
+    if (p === 'I') return 'color:var(--ms-purple)';
+    if (p === 'NP') return 'color:var(--ms-gold)';
     return 'color:var(--ms-other)';
   }
 
@@ -362,7 +364,7 @@
       return '';
     }
     // AK-style bipartisan coalition
-    if (rawCaucus === 'C') return ' <span class="incumbent-marker">(majority coalition)</span>';
+    if (rawCaucus === 'C') return ' <span class="incumbent-marker" style="color:var(--ms-purple)">(majority coalition)</span>';
     if (!caucus || caucus === party) return '';
     return '';
   }

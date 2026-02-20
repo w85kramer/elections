@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-02-15T15:57:51.735276",
-  "total_terms": 628,
+  "generated_at": "2026-02-17T08:37:51.755212",
+  "total_terms": 632,
   "terms": [
     {
       "state": "AK",
@@ -2158,8 +2158,18 @@
       "name": "Buddy Roemer",
       "party": "D",
       "start_date": "1988-03-14",
-      "end_date": "1992-01-13",
+      "end_date": "1991-03-11",
       "start_reason": "elected",
+      "end_reason": "party_switch"
+    },
+    {
+      "state": "LA",
+      "state_name": "Louisiana",
+      "name": "Buddy Roemer",
+      "party": "R",
+      "start_date": "1991-03-11",
+      "end_date": "1992-01-13",
+      "start_reason": "party_switch",
       "end_reason": "lost_election"
     },
     {
@@ -2321,6 +2331,16 @@
       "end_date": "2001-04-10",
       "start_reason": "elected",
       "end_reason": "resigned"
+    },
+    {
+      "state": "MA",
+      "state_name": "Massachusetts",
+      "name": "Jane Swift",
+      "party": "R",
+      "start_date": "2001-04-10",
+      "end_date": "2003-01-02",
+      "start_reason": "succeeded",
+      "end_reason": "term_expired"
     },
     {
       "state": "MA",
@@ -4878,8 +4898,18 @@
       "name": "Lincoln Chafee",
       "party": "I",
       "start_date": "2011-01-04",
-      "end_date": "2015-01-06",
+      "end_date": "2013-05-30",
       "start_reason": "elected",
+      "end_reason": "party_switch"
+    },
+    {
+      "state": "RI",
+      "state_name": "Rhode Island",
+      "name": "Lincoln Chafee",
+      "party": "D",
+      "start_date": "2013-05-30",
+      "end_date": "2015-01-06",
+      "start_reason": "party_switch",
       "end_reason": "term_expired"
     },
     {
@@ -6158,8 +6188,18 @@
       "name": "Jim Justice",
       "party": "D",
       "start_date": "2017-01-16",
-      "end_date": "2025-01-13",
+      "end_date": "2017-08-04",
       "start_reason": "elected",
+      "end_reason": "party_switch"
+    },
+    {
+      "state": "WV",
+      "state_name": "West Virginia",
+      "name": "Jim Justice",
+      "party": "R",
+      "start_date": "2017-08-04",
+      "end_date": "2025-01-13",
+      "start_reason": "party_switch",
       "end_reason": "term_expired"
     },
     {
@@ -6539,7 +6579,7 @@
     {
       "year": 2002,
       "d": 21,
-      "r": 26,
+      "r": 27,
       "other": 2
     },
     {
@@ -6610,9 +6650,9 @@
     },
     {
       "year": 2014,
-      "d": 20,
+      "d": 21,
       "r": 29,
-      "other": 1
+      "other": 0
     },
     {
       "year": 2015,
@@ -6634,44 +6674,44 @@
     },
     {
       "year": 2018,
-      "d": 16,
-      "r": 33,
+      "d": 15,
+      "r": 34,
       "other": 1
     },
     {
       "year": 2019,
-      "d": 24,
-      "r": 26,
-      "other": 0
-    },
-    {
-      "year": 2020,
-      "d": 25,
-      "r": 25,
-      "other": 0
-    },
-    {
-      "year": 2021,
-      "d": 24,
-      "r": 26,
-      "other": 0
-    },
-    {
-      "year": 2022,
-      "d": 24,
+      "d": 23,
       "r": 27,
       "other": 0
     },
     {
-      "year": 2023,
+      "year": 2020,
       "d": 24,
       "r": 26,
       "other": 0
     },
     {
+      "year": 2021,
+      "d": 23,
+      "r": 27,
+      "other": 0
+    },
+    {
+      "year": 2022,
+      "d": 23,
+      "r": 28,
+      "other": 0
+    },
+    {
+      "year": 2023,
+      "d": 23,
+      "r": 27,
+      "other": 0
+    },
+    {
       "year": 2024,
-      "d": 24,
-      "r": 26,
+      "d": 23,
+      "r": 27,
       "other": 0
     },
     {
@@ -7349,6 +7389,20 @@
     {
       "state": "LA",
       "year": 1984,
+      "from_party": "R",
+      "to_party": "D",
+      "new_governor": "Edwin Edwards"
+    },
+    {
+      "state": "LA",
+      "year": 1991,
+      "from_party": "D",
+      "to_party": "R",
+      "new_governor": "Buddy Roemer"
+    },
+    {
+      "state": "LA",
+      "year": 1992,
       "from_party": "R",
       "to_party": "D",
       "new_governor": "Edwin Edwards"
@@ -8363,10 +8417,10 @@
     },
     {
       "state": "RI",
-      "year": 2015,
+      "year": 2013,
       "from_party": "I",
       "to_party": "D",
-      "new_governor": "Gina Raimondo"
+      "new_governor": "Lincoln Chafee"
     },
     {
       "state": "SC",
@@ -8783,10 +8837,10 @@
     },
     {
       "state": "WV",
-      "year": 2025,
+      "year": 2017,
       "from_party": "D",
       "to_party": "R",
-      "new_governor": "Patrick Morrisey"
+      "new_governor": "Jim Justice"
     },
     {
       "state": "WY",

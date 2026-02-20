@@ -401,9 +401,37 @@
     col.className = 'chamber-col';
     col.innerHTML = `<h3>${ch} (${cd.total} seats)</h3><div id="bar-${ch.replace(/\s/g,'')}"></div>`;
     barsContainer.appendChild(col);
-    buildChamberBar(
-      col.querySelector('div[id^="bar-"]'),
-      {
+
+    const barEl = col.querySelector('div[id^="bar-"]');
+
+    // Check if this chamber has coalition data (e.g. Alaska)
+    const hasCoalition = cd.members && cd.members.some(m => m.caucus === 'C');
+
+    if (hasCoalition) {
+      // Compute coalition breakdown from member data
+      const majParties = {};
+      const minParties = {};
+      let vacant = 0;
+      for (const m of cd.members) {
+        if (!m.name) { vacant++; continue; }
+        const p = m.party || 'Other';
+        if (m.caucus === 'C') {
+          majParties[p] = (majParties[p] || 0) + 1;
+        } else {
+          minParties[p] = (minParties[p] || 0) + 1;
+        }
+      }
+      const toSegments = (obj) => Object.entries(obj).map(([party, count]) => ({ party, count }));
+      buildCoalitionBar(barEl, {
+        total: cd.total,
+        majority: { total: Object.values(majParties).reduce((a, b) => a + b, 0), segments: toSegments(majParties) },
+        minority: { total: Object.values(minParties).reduce((a, b) => a + b, 0), segments: toSegments(minParties) },
+        vacant: vacant,
+        seats_up_2026: cd.seats_up_2026,
+        supermajority: cd.supermajority,
+      }, ch);
+    } else {
+      buildChamberBar(barEl, {
         total: cd.total,
         d: cd.composition.D,
         r: cd.composition.R,
@@ -411,9 +439,8 @@
         vacant: cd.composition.Vacant || 0,
         seats_up_2026: cd.seats_up_2026,
         supermajority: cd.supermajority,
-      },
-      ch
-    );
+      }, ch);
+    }
   }
 
   // Member roster tables
@@ -497,7 +524,7 @@
         if (!r.name) tr.className = 'vacant-row';
 
         // Party color for text — use caucus color for NE (r.party is already COALESCE(caucus, party))
-        const partyColor = r.party === 'D' ? 'var(--ms-dem-blue)' : r.party === 'R' ? 'var(--ms-rep-red)' : '';
+        const partyColor = r.party === 'D' ? 'var(--ms-dem-blue)' : r.party === 'R' ? 'var(--ms-rep-red)' : r.party === 'I' ? 'var(--ms-purple)' : r.party === 'NP' ? 'var(--ms-gold)' : '';
 
         // District — link to district detail page
         const dtd = tr.insertCell();
@@ -519,7 +546,7 @@
           if (r.party === 'R') caucusNote = ' <span class="text-muted text-sm">(caucuses with Republicans)</span>';
           else if (r.party === 'D') caucusNote = ' <span class="text-muted text-sm">(caucuses with Democrats)</span>';
         } else if (r.caucus === 'C' && r.name) {
-          caucusNote = ' <span class="text-muted text-sm">(majority coalition)</span>';
+          caucusNote = ' <span class="text-sm" style="color:var(--ms-purple);font-style:italic">(majority coalition)</span>';
         }
         if (caucusNote) {
           ntd.innerHTML = `<span style="color:${partyColor || 'var(--ms-other)'}">${r.name}</span>${caucusNote}`;
