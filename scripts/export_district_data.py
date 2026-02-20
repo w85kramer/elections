@@ -25,6 +25,13 @@ from db_config import TOKEN, PROJECT_REF, API_URL
 
 SITE_DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'site', 'data')
 
+# Minimum election year to include in site export (per-state overrides).
+# Elections before this year are excluded from the JSON but kept in the DB.
+# Used to exclude unverified historical data from the live site.
+MIN_EXPORT_YEAR = {
+    'NE': 2014,  # 2010/2012 loser caucus data unverified (no Wikipedia source)
+}
+
 def run_sql(query, retries=5):
     for attempt in range(retries):
         resp = httpx.post(
@@ -256,8 +263,11 @@ def export_all_districts(dry_run=False, single_state=None):
             since_year = int(str(term['start_date'])[:4])
 
         # Build election history for this seat
+        min_year = MIN_EXPORT_YEAR.get(r['state'], 0)
         seat_elections = []
         for e in elections_by_seat.get(seat_id, []):
+            if e['election_year'] < min_year:
+                continue
             cands = candidacies_by_election.get(e['election_id'], [])
             # Build candidate list
             candidate_list = []
