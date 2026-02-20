@@ -143,6 +143,7 @@ CREATE TABLE candidacies (
     election_id     INTEGER NOT NULL REFERENCES elections(id) ON DELETE CASCADE,
     candidate_id    INTEGER NOT NULL REFERENCES candidates(id) ON DELETE CASCADE,
     party           TEXT,
+    caucus          TEXT,               -- effective partisan alignment (may differ from party, e.g. NE)
     candidate_status TEXT CHECK (candidate_status IN (
                         'Announced', 'Filed', 'Active',
                         'Withdrawn_Pre_Ballot', 'Withdrawn_Post_Ballot',

@@ -111,6 +111,7 @@ def export_all_districts(dry_run=False, single_state=None):
             cy.election_id,
             c.full_name as name,
             cy.party,
+            cy.caucus,
             cy.votes_received as votes,
             cy.vote_percentage as pct,
             cy.result,
@@ -137,6 +138,7 @@ def export_all_districts(dry_run=False, single_state=None):
             stm.seat_id,
             c.full_name as holder_name,
             stm.party as holder_party,
+            stm.caucus as holder_caucus,
             stm.start_date,
             stm.end_date,
             stm.start_reason
@@ -260,7 +262,7 @@ def export_all_districts(dry_run=False, single_state=None):
             # Build candidate list
             candidate_list = []
             for c in cands:
-                candidate_list.append({
+                cand_obj = {
                     'name': c['name'],
                     'party': c['party'],
                     'votes': c['votes'],
@@ -268,7 +270,10 @@ def export_all_districts(dry_run=False, single_state=None):
                     'result': c['result'],
                     'is_incumbent': c['is_incumbent'],
                     'is_write_in': c['is_write_in'],
-                })
+                }
+                if c.get('caucus'):
+                    cand_obj['caucus'] = c['caucus']
+                candidate_list.append(cand_obj)
 
             seat_elections.append({
                 'year': e['election_year'],
@@ -378,7 +383,8 @@ def export_all_districts(dry_run=False, single_state=None):
                             raw_margin = (winner['pct'] - 50.0) * 2
                             # Cap at ±40 to avoid absurd values from uncontested races
                             margin = max(-40.0, min(40.0, raw_margin))
-                            party_sign = 1 if winner['party'] == 'D' else -1 if winner['party'] == 'R' else 0
+                            effective_party = winner.get('caucus') or winner['party']
+                            party_sign = 1 if effective_party == 'D' else -1 if effective_party == 'R' else 0
                             if party_sign != 0:
                                 general_margins.append({
                                     'year': e['year'],

@@ -369,6 +369,23 @@
     return partyColorStyle(caucus || party);
   }
 
+  // Effective party for stats/coloring: uses caucus for NE candidates
+  function effectiveParty(c) {
+    if (stateAbbr === 'NE' && c.caucus) return c.caucus;
+    return c.party;
+  }
+
+  // Caucus annotation for candidates (not just holders)
+  function candidateCaucusNote(c) {
+    if (stateAbbr !== 'NE') return '';
+    if (!c.caucus) return '';
+    if (c.caucus === 'R') return ' <span class="holder-since">(caucuses with Republicans)</span>';
+    if (c.caucus === 'D') return ' <span class="holder-since">(caucuses with Democrats)</span>';
+    if (c.caucus === 'I') return ' <span class="holder-since">(Independent)</span>';
+    if (c.caucus === 'L') return ' <span class="holder-since">(Libertarian)</span>';
+    return '';
+  }
+
   function forecastClass(rating) {
     if (!rating) return '';
     const r = rating.toLowerCase();
@@ -475,11 +492,12 @@
           const rawMargin = (winner.pct - 50) * 2;
           // Cap at ±40 to avoid absurd bars from uncontested races
           const winMargin = Math.max(-40, Math.min(40, rawMargin));
-          const sign = winner.party === 'D' ? 1 : winner.party === 'R' ? -1 : 0;
+          const ep = effectiveParty(winner);
+          const sign = ep === 'D' ? 1 : ep === 'R' ? -1 : 0;
           allGenerals.push({
             year: e.year,
             margin: winMargin * sign,
-            party: winner.party,
+            party: ep,
             winner: winner.name,
             seat: s.seat_designator || '',
           });
@@ -547,7 +565,10 @@
           const inc = c.is_incumbent ? '<span class="incumbent-marker">(incumbent)</span>' : '';
           const typeLabel = c.election_type !== 'General' ? `<span class="text-muted text-sm">${c.election_type.replace('_', ' ')}</span>` : '';
           const candParty = inferParty(c.party, c.election_type, stateAbbr);
-          candsHtml += `<li><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:11px;padding:1px 6px">${candParty || '?'}</span> ${c.name} ${inc} ${typeLabel}</li>`;
+          const ep = effectiveParty(c);
+          const nameStyle = ep !== candParty ? ` style="${partyColorStyle(ep)}"` : '';
+          const caucusNote = candidateCaucusNote(c);
+          candsHtml += `<li><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:11px;padding:1px 6px">${candParty || '?'}</span> <span${nameStyle}>${c.name}</span>${caucusNote} ${inc} ${typeLabel}</li>`;
         }
         candsHtml += '</ul>';
       } else {
@@ -597,14 +618,17 @@
       let winnerParty = '';
 
       if (winner) {
-        winnerParty = inferParty(winner.party, e.type, stateAbbr) || '';
-        winnerName = `<span style="${partyColorStyle(winnerParty)}">${winner.name}</span>
-          <span class="party-badge ${partyBadgeClass(winnerParty)}" style="font-size:10px;padding:1px 5px;margin-left:4px">${winnerParty || '?'}</span>`;
+        const badgeParty = inferParty(winner.party, e.type, stateAbbr) || '';
+        const ep = effectiveParty(winner);
+        winnerParty = ep || badgeParty;
+        const winCaucusNote = candidateCaucusNote(winner);
+        winnerName = `<span style="${partyColorStyle(ep || badgeParty)}">${winner.name}</span>
+          <span class="party-badge ${partyBadgeClass(badgeParty)}" style="font-size:10px;padding:1px 5px;margin-left:4px">${badgeParty || '?'}</span>${winCaucusNote}`;
 
         if (winner.pct != null) {
           const marginPct = Math.max(0, (winner.pct - 50) * 2);
           const barW = Math.min(marginPct, 60) / 60 * 80;
-          const barColor = winnerParty === 'D' ? 'var(--ms-dem-blue)' : winnerParty === 'R' ? 'var(--ms-rep-red)' : 'var(--ms-other)';
+          const barColor = (ep || badgeParty) === 'D' ? 'var(--ms-dem-blue)' : (ep || badgeParty) === 'R' ? 'var(--ms-rep-red)' : 'var(--ms-other)';
           const label = winner.pct >= 50 ? `${marginPct.toFixed(1)}%` : `${winner.pct.toFixed(1)}%`;
           marginHtml = `<span class="margin-bar-inline" style="width:${barW}px;background:${barColor}"></span><span style="font-size:12px;color:${barColor}">${label}</span>`;
         }
@@ -635,9 +659,11 @@
           const inc = c.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
           const wi = c.is_write_in ? ' <em>W/I</em>' : '';
           const candParty = inferParty(c.party, e.type, stateAbbr);
+          const candEp = effectiveParty(c);
+          const candCaucusNote = candidateCaucusNote(c);
           html += `<tr class="candidate-detail" data-expand="${expandId}">
             <td></td>
-            <td colspan="2"><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> ${c.name}${inc}${wi}</td>
+            <td colspan="2"><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
             <td>${pctStr}</td>
             <td>${votesStr}</td>
             <td>${resultBadge}</td>
