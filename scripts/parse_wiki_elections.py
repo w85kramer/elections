@@ -85,9 +85,8 @@ FILE_MAP = {
         ('ND', 'House', 2024),
     '2024 Arizona House of Representatives election - Wikipedia.html':
         ('AZ', 'House', 2024),
-    # NH has special district naming — skip for now
-    # '2024 New Hampshire House of Representatives election - Wikipedia.html':
-    #     ('NH', 'House', 2024),
+    '2024 New Hampshire House of Representatives election - Wikipedia.html':
+        ('NH', 'House', 2024),
 
     # Tier 2: Uncontested races
     '2024 Oklahoma House of Representatives election - Wikipedia.html':
@@ -108,7 +107,7 @@ FILE_MAP = {
 
 TIER_FILES = {
     1: [f for f, (s, c, y) in FILE_MAP.items()
-        if s in ('ID', 'WA', 'VT', 'WV', 'SD', 'ND', 'AZ')],
+        if s in ('ID', 'WA', 'VT', 'WV', 'SD', 'ND', 'AZ', 'NH')],
     2: [f for f, (s, c, y) in FILE_MAP.items()
         if s in ('OK', 'HI')],
     3: [f for f, (s, c, y) in FILE_MAP.items()
@@ -125,6 +124,7 @@ CHAMBER_TO_OFFICE = {
     ('SD', 'House'): 'State House',
     ('ND', 'House'): 'State House',
     ('AZ', 'House'): 'State House',
+    ('NH', 'House'): 'State House',
     ('OK', 'House'): 'State House',
     ('OK', 'Senate'): 'State Senate',
     ('HI', 'House'): 'State House',
@@ -141,6 +141,7 @@ CHAMBER_DB_MAP = {
     ('SD', 'House'): 'House',
     ('ND', 'House'): 'House',
     ('AZ', 'House'): 'House',
+    ('NH', 'House'): 'House',
     ('OK', 'House'): 'House',
     ('OK', 'Senate'): 'Senate',
     ('HI', 'House'): 'House',
@@ -273,7 +274,7 @@ def detect_format(soup, state_abbr):
     if district_heading_count >= 3 and (len(plainrow_tables) >= 3 or len(vcard_tables) >= 3):
         return 'A'
 
-    # Format A variant: VT-style county-name districts under "Detailed results" section
+    # Format A variant: county-name districts under "Detailed results" section
     # Detected by many plainrowheaders/vcard tables + a "Detailed results" heading
     if (len(plainrow_tables) >= 10 or len(vcard_tables) >= 10):
         for div in soup.find_all('div', class_='mw-heading'):
@@ -281,7 +282,7 @@ def detect_format(soup, state_abbr):
             if h and 'detailed results' in clean_text(h).lower():
                 return 'A'
         # VT Senate: county names are h2 headings with general/primary h3 subsections
-        if state_abbr == 'VT':
+        if state_abbr in ('VT',):
             return 'A'
 
     # Format C: summary table with inline candidate lists (Oklahoma-style)
@@ -415,9 +416,9 @@ def _find_district_sections(soup, state_abbr):
             if m:
                 heading_divs.append((h, m.group(1)))
 
-    # VT-style county-based districts: use table captions or heading text
-    if not heading_divs and state_abbr in ('VT',):
-        heading_divs = _find_vt_district_sections(soup, state_abbr)
+    # County-based districts (VT, NH): use table captions or heading text
+    if not heading_divs and state_abbr in ('VT', 'NH'):
+        heading_divs = _find_county_district_sections(soup, state_abbr)
 
     debug(f'Found {len(heading_divs)} district headings')
 
@@ -451,15 +452,16 @@ def _find_district_sections(soup, state_abbr):
     return districts
 
 
-def _find_vt_district_sections(soup, state_abbr):
-    """Find VT-style district sections using table captions as district identifiers.
+def _find_county_district_sections(soup, state_abbr):
+    """Find county-based district sections for VT and NH.
 
     VT House: h3 headings like "Addison-1", "Bennington-2" under "Detailed results"
     VT Senate: h2 headings like "Addison", "Bennington" with h3 sub-sections
+    NH House: h3 "Belknap County" → h4 "1st District", etc. under "Detailed results"
     """
     heading_divs = []
 
-    # Strategy 1: VT House — look for "Detailed results" section, each h3 is a district
+    # Find "Detailed results" section
     detailed_section = None
     for div in soup.find_all('div', class_='mw-heading'):
         h = div.find('h2')
@@ -467,15 +469,17 @@ def _find_vt_district_sections(soup, state_abbr):
             detailed_section = div
             break
 
+    if detailed_section and state_abbr == 'NH':
+        return _find_nh_district_sections(soup, detailed_section)
+
     if detailed_section:
-        # Each h3 sibling after "Detailed results" is a district heading
+        # VT House: each h3 sibling after "Detailed results" is a district heading
         sibling = detailed_section.find_next_sibling()
         while sibling:
             if sibling.name == 'div' and 'mw-heading' in (sibling.get('class') or []):
                 h = sibling.find('h3')
                 if h:
                     dist_name = clean_text(h).strip()
-                    # Remove [edit] suffix
                     dist_name = re.sub(r'\s*\[edit\]\s*$', '', dist_name)
                     if dist_name and len(dist_name) > 1:
                         heading_divs.append((sibling, dist_name))
@@ -486,8 +490,7 @@ def _find_vt_district_sections(soup, state_abbr):
             sibling = sibling.find_next_sibling()
         return heading_divs
 
-    # Strategy 2: VT Senate — h2 headings that match county names
-    # Look for "Results" section, then county h2 headings
+    # VT Senate: h2 headings that match county names after "Results"
     results_section = None
     for div in soup.find_all('div', class_='mw-heading'):
         h = div.find('h2')
@@ -496,13 +499,10 @@ def _find_vt_district_sections(soup, state_abbr):
             break
 
     if results_section:
-        # Collect h2 headings that come after "Results" and could be county names
-        # VT county names: Addison, Bennington, Caledonia, Chittenden, etc.
         vt_counties = {
             'addison', 'bennington', 'caledonia', 'chittenden', 'essex',
             'franklin', 'grand isle', 'lamoille', 'orange', 'orleans',
             'rutland', 'washington', 'windham', 'windsor',
-            # Combined districts
             'chittenden-central', 'chittenden-north', 'chittenden-southeast',
             'essex-orleans',
         }
@@ -518,6 +518,64 @@ def _find_vt_district_sections(soup, state_abbr):
                     elif dist_name.lower() in ('see also', 'references', 'notes', 'external links'):
                         break
             sibling = sibling.find_next_sibling()
+
+    return heading_divs
+
+
+def _find_nh_district_sections(soup, detailed_section):
+    """Find NH district sections: h3 county → h4 numbered district.
+
+    NH uses: h3 "Belknap County" → h4 "1st District", "2nd District" etc.
+    DB district_number is "Belknap-1", "Belknap-2", etc.
+    """
+    heading_divs = []
+    current_county = None
+
+    # Ordinal to number map
+    ordinal_map = {
+        '1st': '1', '2nd': '2', '3rd': '3', '4th': '4', '5th': '5',
+        '6th': '6', '7th': '7', '8th': '8', '9th': '9', '10th': '10',
+        '11th': '11', '12th': '12', '13th': '13', '14th': '14', '15th': '15',
+        '16th': '16', '17th': '17', '18th': '18', '19th': '19', '20th': '20',
+        '21st': '21', '22nd': '22', '23rd': '23', '24th': '24', '25th': '25',
+    }
+
+    sibling = detailed_section.find_next_sibling()
+    while sibling:
+        if sibling.name == 'div' and 'mw-heading' in (sibling.get('class') or []):
+            h2 = sibling.find('h2')
+            if h2:
+                # Stop at non-county h2 sections
+                break
+
+            h3 = sibling.find('h3')
+            if h3:
+                h3_text = clean_text(h3).strip()
+                h3_text = re.sub(r'\s*\[edit\]\s*$', '', h3_text)
+                if 'county' in h3_text.lower():
+                    # Extract county name: "Belknap County" → "Belknap"
+                    current_county = re.sub(r'\s+County\s*$', '', h3_text, flags=re.IGNORECASE).strip()
+                    # Fix typos (Wikipedia has "Rockinghams" instead of "Rockingham")
+                    if current_county.endswith('s') and current_county[:-1].lower() in (
+                        'rockingham', 'strafford', 'sullivan'
+                    ):
+                        current_county = current_county  # Keep as-is, will match DB
+                    debug(f'NH county: {current_county}')
+
+            h4 = sibling.find('h4')
+            if h4 and current_county:
+                h4_text = clean_text(h4).strip()
+                h4_text = re.sub(r'\s*\[edit\]\s*$', '', h4_text)
+                # "1st District" → "1"
+                m = re.match(r'(\d+(?:st|nd|rd|th))\s+District', h4_text)
+                if m:
+                    ordinal = m.group(1)
+                    num = ordinal_map.get(ordinal, ordinal.rstrip('stndrdth'))
+                    dist_name = f'{current_county}-{num}'
+                    heading_divs.append((sibling, dist_name))
+                    debug(f'NH district: {dist_name}')
+
+        sibling = sibling.find_next_sibling()
 
     return heading_divs
 
