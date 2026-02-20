@@ -354,11 +354,11 @@
   function caucusAnnotation(party, caucus) {
     if (!caucus || caucus === party) return '';
     if (stateAbbr === 'NE') {
-      if (caucus === 'R') return ' <span class="holder-since">(caucuses with Republicans)</span>';
-      if (caucus === 'D') return ' <span class="holder-since">(caucuses with Democrats)</span>';
-      if (caucus === 'NP') return ' <span class="holder-since">(nonpartisan caucus)</span>';
+      if (caucus === 'R') return ' <span class="incumbent-marker">(caucuses with Republicans)</span>';
+      if (caucus === 'D') return ' <span class="incumbent-marker">(caucuses with Democrats)</span>';
+      if (caucus === 'NP') return ' <span class="incumbent-marker">(nonpartisan caucus)</span>';
     }
-    if (caucus === 'C') return ' <span class="holder-since">(caucuses with majority coalition)</span>';
+    if (caucus === 'C') return ' <span class="incumbent-marker">(caucuses with majority coalition)</span>';
     return '';
   }
 
@@ -379,10 +379,10 @@
   function candidateCaucusNote(c) {
     if (stateAbbr !== 'NE') return '';
     if (!c.caucus) return '';
-    if (c.caucus === 'R') return ' <span class="holder-since">(caucuses with Republicans)</span>';
-    if (c.caucus === 'D') return ' <span class="holder-since">(caucuses with Democrats)</span>';
-    if (c.caucus === 'I') return ' <span class="holder-since">(Independent)</span>';
-    if (c.caucus === 'L') return ' <span class="holder-since">(Libertarian)</span>';
+    if (c.caucus === 'R') return ' <span class="incumbent-marker">(caucuses with Republicans)</span>';
+    if (c.caucus === 'D') return ' <span class="incumbent-marker">(caucuses with Democrats)</span>';
+    if (c.caucus === 'I') return ' <span class="incumbent-marker">(Independent)</span>';
+    if (c.caucus === 'L') return ' <span class="incumbent-marker">(Libertarian)</span>';
     return '';
   }
 
