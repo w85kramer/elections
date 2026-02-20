@@ -352,19 +352,22 @@
 
   // Build caucus annotation text
   function caucusAnnotation(party, caucus) {
-    if (!caucus || caucus === party) return '';
+    // NE is officially nonpartisan — always show caucus affiliation
     if (stateAbbr === 'NE') {
       if (caucus === 'R') return ' <span class="incumbent-marker">(caucuses with Republicans)</span>';
       if (caucus === 'D') return ' <span class="incumbent-marker">(caucuses with Democrats)</span>';
-      if (caucus === 'NP') return ' <span class="incumbent-marker">(nonpartisan caucus)</span>';
+      if (caucus === 'I') return ' <span class="incumbent-marker">(Independent)</span>';
+      if (caucus === 'L') return ' <span class="incumbent-marker">(Libertarian)</span>';
+      return '';
     }
+    if (!caucus || caucus === party) return '';
     if (caucus === 'C') return ' <span class="incumbent-marker">(caucuses with majority coalition)</span>';
     return '';
   }
 
   // For NE and AK, color names by caucus rather than party
   function displayColor(party, caucus) {
-    if (stateAbbr === 'NE' && caucus && caucus !== party) return partyColorStyle(caucus);
+    if (stateAbbr === 'NE') return partyColorStyle(caucus || 'NP');
     if (caucus === 'C') return 'color:var(--ms-other)';
     return partyColorStyle(caucus || party);
   }
@@ -430,7 +433,7 @@
     heroHtml += `<div class="holders-list">`;
     for (const s of district.seats) {
       const label = s.seat_designator ? `Seat ${s.seat_designator}` : s.seat_label;
-      const dispParty = s.current_holder_party === 'NP' ? 'NP' : (s.current_holder_party || '—');
+      const dispParty = stateAbbr === 'NE' ? 'NP' : (s.current_holder_party || '—');
       const colorParty = s.current_holder_caucus || s.current_holder_party;
       const sinceStr = s.since_year ? ` &middot; Since ${s.since_year}` : '';
       const annotation = caucusAnnotation(s.current_holder_party, s.current_holder_caucus);
@@ -443,7 +446,7 @@
     heroHtml += `</div>`;
   } else {
     const s = primarySeat;
-    const dispParty = s.current_holder_party === 'NP' ? 'NP' : (s.current_holder_party || '—');
+    const dispParty = stateAbbr === 'NE' ? 'NP' : (s.current_holder_party || '—');
     const colorParty = s.current_holder_caucus || s.current_holder_party;
     const sinceStr = s.since_year ? `Since ${s.since_year}` : '';
     const annotation = caucusAnnotation(s.current_holder_party, s.current_holder_caucus);

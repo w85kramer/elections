@@ -496,7 +496,7 @@
         const tr = document.createElement('tr');
         if (!r.name) tr.className = 'vacant-row';
 
-        // Party color for text
+        // Party color for text — use caucus color for NE (r.party is already COALESCE(caucus, party))
         const partyColor = r.party === 'D' ? 'var(--ms-dem-blue)' : r.party === 'R' ? 'var(--ms-rep-red)' : '';
 
         // District — link to district detail page
@@ -512,15 +512,24 @@
         distLink.addEventListener('mouseleave', () => distLink.style.textDecoration = 'none');
         dtd.appendChild(distLink);
 
-        // Member name
+        // Member name + caucus annotation for NE
         const ntd = tr.insertCell();
-        ntd.textContent = r.name || 'Vacant';
-        if (partyColor) ntd.style.color = partyColor;
+        if (stateAbbr === 'NE' && r.name) {
+          let caucusNote = '';
+          if (r.party === 'R') caucusNote = ' <span class="text-muted text-sm">(caucuses with Republicans)</span>';
+          else if (r.party === 'D') caucusNote = ' <span class="text-muted text-sm">(caucuses with Democrats)</span>';
+          ntd.innerHTML = `<span style="color:${partyColor || 'var(--ms-other)'}">${r.name}</span>${caucusNote}`;
+        } else {
+          ntd.textContent = r.name || 'Vacant';
+          if (partyColor) ntd.style.color = partyColor;
+        }
 
-        // Party
+        // Party badge — NE is officially nonpartisan
         const ptd = tr.insertCell();
         ptd.className = 'party-col';
-        if (r.party) {
+        if (stateAbbr === 'NE' && r.name) {
+          ptd.innerHTML = `<span class="party-badge party-np" style="font-size:11px;padding:1px 6px">NP</span>`;
+        } else if (r.party) {
           ptd.innerHTML = `<span class="party-badge ${partyBadgeClass(r.party)}" style="font-size:11px;padding:1px 6px">${r.party}</span>`;
         } else {
           ptd.textContent = '—';
