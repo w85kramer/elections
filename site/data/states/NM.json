@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-15T01:21:03.297523Z",
+  "generated_at": "2026-02-20T19:58:03.846178Z",
   "state": {
     "name": "New Mexico",
     "abbr": "NM",
@@ -20,7 +20,7 @@
       "party": "D",
       "method": "Elected",
       "next_election": 2026,
-      "start_year": 2023,
+      "start_year": 2019,
       "forecast": "Likely D",
       "forecast_details": [
         {
@@ -1122,9 +1122,102 @@
   "elections_2026": {
     "governor": {
       "forecast": "Likely D",
-      "candidates": []
+      "candidates": [
+        {
+          "name": "Debra Haaland",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Ken Miyagishima",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Sam Bregman",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Doug Turner",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Duke Rodriguez",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Gregg Hull",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "James Ellison",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Steve D. Lanier",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        }
+      ]
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Lt. Governor",
+        "candidates": [
+          {
+            "name": "Harold Pope Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Maggie Toulouse Oliver",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Aubrey Dunn",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "David M. Gallegos",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Manuel Lardizabal",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "NM House 6",

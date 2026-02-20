@@ -74,7 +74,10 @@ def export_all_districts(dry_run=False, single_state=None):
             s.seat_designator,
             s.current_holder,
             s.current_holder_party,
-            COALESCE(s.current_holder_caucus, s.current_holder_party) as current_holder_caucus,
+            s.current_holder_caucus as raw_caucus,
+            CASE WHEN s.current_holder_caucus = 'C' THEN s.current_holder_party
+                 ELSE COALESCE(s.current_holder_caucus, s.current_holder_party)
+            END as current_holder_caucus,
             s.term_length_years,
             s.next_regular_election_year,
             s.election_class
@@ -300,7 +303,7 @@ def export_all_districts(dry_run=False, single_state=None):
         # Forecast info for this seat
         forecast = forecasts_by_seat.get(seat_id)
 
-        districts_by_state[state][did]['seats'].append({
+        seat_obj = {
             'seat_id': seat_id,
             'seat_label': r['seat_label'],
             'seat_designator': r['seat_designator'],
@@ -313,7 +316,11 @@ def export_all_districts(dry_run=False, single_state=None):
             'since_year': since_year,
             'elections': seat_elections,
             'forecast': forecast,
-        })
+        }
+        # Include raw caucus for coalition annotation (AK)
+        if r.get('raw_caucus') == 'C':
+            seat_obj['raw_caucus'] = 'C'
+        districts_by_state[state][did]['seats'].append(seat_obj)
 
     # --- Compute similar districts across all states ---
     # Collect all districts with their pres margins for cross-state similarity

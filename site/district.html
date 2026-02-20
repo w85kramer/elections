@@ -351,7 +351,8 @@
   }
 
   // Build caucus annotation text
-  function caucusAnnotation(party, caucus) {
+  // rawCaucus is the DB caucus value before effective-party mapping (e.g. 'C' for AK coalition)
+  function caucusAnnotation(party, caucus, rawCaucus) {
     // NE is officially nonpartisan — always show caucus affiliation
     if (stateAbbr === 'NE') {
       if (caucus === 'R') return ' <span class="incumbent-marker">(caucuses with Republicans)</span>';
@@ -360,15 +361,15 @@
       if (caucus === 'L') return ' <span class="incumbent-marker">(Libertarian)</span>';
       return '';
     }
+    // AK-style bipartisan coalition
+    if (rawCaucus === 'C') return ' <span class="incumbent-marker">(majority coalition)</span>';
     if (!caucus || caucus === party) return '';
-    if (caucus === 'C') return ' <span class="incumbent-marker">(caucuses with majority coalition)</span>';
     return '';
   }
 
-  // For NE and AK, color names by caucus rather than party
+  // Color names by effective partisan alignment
   function displayColor(party, caucus) {
     if (stateAbbr === 'NE') return partyColorStyle(caucus || 'NP');
-    if (caucus === 'C') return 'color:var(--ms-other)';
     return partyColorStyle(caucus || party);
   }
 
@@ -436,7 +437,7 @@
       const dispParty = stateAbbr === 'NE' ? 'NP' : (s.current_holder_party || '—');
       const colorParty = s.current_holder_caucus || s.current_holder_party;
       const sinceStr = s.since_year ? ` &middot; Since ${s.since_year}` : '';
-      const annotation = caucusAnnotation(s.current_holder_party, s.current_holder_caucus);
+      const annotation = caucusAnnotation(s.current_holder_party, s.current_holder_caucus, s.raw_caucus);
       heroHtml += `<div class="holder-row">
         <span class="party-badge ${partyBadgeClass(dispParty)}">${dispParty}</span>
         <span class="holder-name" style="${displayColor(s.current_holder_party, s.current_holder_caucus)}">${s.current_holder || 'Vacant'}</span>${annotation}

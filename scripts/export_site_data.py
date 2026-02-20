@@ -29,6 +29,13 @@ from db_config import TOKEN, PROJECT_REF, API_URL
 
 SITE_DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'site', 'data')
 
+# Effective partisan alignment for counting/coloring: uses caucus for most states,
+# but falls back to party for coalition members (AK) where caucus='C'
+# denotes coalition membership rather than partisan alignment.
+# Pre-formatted for table alias 's' (used in all seat queries).
+EP = ("CASE WHEN s.current_holder_caucus = 'C' THEN s.current_holder_party "
+      "ELSE COALESCE(s.current_holder_caucus, s.current_holder_party) END")
+
 def run_sql(query, exit_on_error=True, retries=5):
     for attempt in range(retries):
         resp = httpx.post(
@@ -157,7 +164,7 @@ def export_states_summary(dry_run=False):
     print('Exporting states_summary.json...')
 
     # Query 1: Chamber composition per state (from seats table, active seat_terms)
-    q_chambers = """
+    q_chambers = f"""
         SELECT
             st.abbreviation,
             st.state_name,
@@ -166,9 +173,9 @@ def export_states_summary(dry_run=False):
             st.next_gov_election_year,
             d.chamber,
             COUNT(*) as total_seats,
-            COUNT(*) FILTER (WHERE COALESCE(s.current_holder_caucus, s.current_holder_party) = 'D') as d_seats,
-            COUNT(*) FILTER (WHERE COALESCE(s.current_holder_caucus, s.current_holder_party) = 'R') as r_seats,
-            COUNT(*) FILTER (WHERE COALESCE(s.current_holder_caucus, s.current_holder_party) NOT IN ('D','R')
+            COUNT(*) FILTER (WHERE ({EP}) = 'D') as d_seats,
+            COUNT(*) FILTER (WHERE ({EP}) = 'R') as r_seats,
+            COUNT(*) FILTER (WHERE ({EP}) NOT IN ('D','R')
                              AND s.current_holder IS NOT NULL) as other_seats,
             COUNT(*) FILTER (WHERE s.current_holder IS NULL) as vacant_seats,
             COUNT(*) FILTER (WHERE s.next_regular_election_year = 2026) as seats_up_2026
@@ -182,12 +189,12 @@ def export_states_summary(dry_run=False):
     """
 
     # Query 2: Statewide officers per state
-    q_officers = """
+    q_officers = f"""
         SELECT
             st.abbreviation,
             s.office_type,
             s.current_holder as name,
-            COALESCE(s.current_holder_caucus, s.current_holder_party) as party,
+            {EP} as party,
             s.selection_method,
             s.next_regular_election_year
         FROM seats s
@@ -388,14 +395,14 @@ def export_pres_margins(dry_run=False):
     """Export pres_margins.json with all legislative seat margins for swing calculator."""
     print('Exporting pres_margins.json...')
 
-    q = """
+    q = f"""
         SELECT
             st.abbreviation as state,
             d.chamber,
             d.district_number as district,
             s.seat_designator,
             d.pres_2024_margin as pres_margin,
-            COALESCE(s.current_holder_caucus, s.current_holder_party) as current_party,
+            {EP} as current_party,
             s.next_regular_election_year,
             s.seat_label
         FROM seats s
@@ -454,7 +461,8 @@ def export_state_detail(state_abbr, dry_run=False):
         SELECT
             st.abbreviation as state_abbr,
             s.office_type, s.current_holder as name,
-            COALESCE(s.current_holder_caucus, s.current_holder_party) as party,
+            {EP} as party,
+            s.current_holder_caucus as caucus,
             s.selection_method, s.next_regular_election_year,
             stm.start_date
         FROM seats s
@@ -485,7 +493,8 @@ def export_state_detail(state_abbr, dry_run=False):
             d.district_name,
             s.seat_designator,
             s.current_holder as name,
-            COALESCE(s.current_holder_caucus, s.current_holder_party) as party,
+            {EP} as party,
+            s.current_holder_caucus as caucus,
             d.pres_2024_margin as pres_margin,
             s.next_regular_election_year,
             s.seat_label
@@ -612,7 +621,7 @@ def export_state_detail(state_abbr, dry_run=False):
         if r['next_regular_election_year'] == 2026:
             chambers[ch]['seats_up_2026'] += 1
 
-        chambers[ch]['members'].append({
+        member = {
             'district': r['district'],
             'district_name': r['district_name'],
             'seat_designator': r['seat_designator'],
@@ -620,7 +629,10 @@ def export_state_detail(state_abbr, dry_run=False):
             'party': party,
             'pres_margin': r['pres_margin'],
             'next_election': r['next_regular_election_year'],
-        })
+        }
+        if r.get('caucus') and r['caucus'] != party:
+            member['caucus'] = r['caucus']
+        chambers[ch]['members'].append(member)
 
     # Set supermajority thresholds
     for ch_name, ch_data in chambers.items():
@@ -761,11 +773,12 @@ def export_all_state_details(dry_run=False):
     """
 
     # --- Bulk Query 2: All statewide officers (elected + appointed + ex officio, excluding N/A) ---
-    q_officers = """
+    q_officers = f"""
         SELECT
             st.abbreviation,
             s.office_type, s.current_holder as name,
-            COALESCE(s.current_holder_caucus, s.current_holder_party) as party,
+            {EP} as party,
+            s.current_holder_caucus as caucus,
             s.selection_method, s.next_regular_election_year,
             stm.start_date
         FROM seats s
@@ -789,7 +802,7 @@ def export_all_state_details(dry_run=False):
     """
 
     # --- Bulk Query 3: All legislative members ---
-    q_members = """
+    q_members = f"""
         SELECT
             st.abbreviation,
             d.chamber,
@@ -797,7 +810,8 @@ def export_all_state_details(dry_run=False):
             d.district_name,
             s.seat_designator,
             s.current_holder as name,
-            COALESCE(s.current_holder_caucus, s.current_holder_party) as party,
+            {EP} as party,
+            s.current_holder_caucus as caucus,
             d.pres_2024_margin as pres_margin,
             s.next_regular_election_year,
             s.seat_label
@@ -977,7 +991,7 @@ def export_all_state_details(dry_run=False):
                 chambers[ch]['composition']['Other'] += 1
             if r['next_regular_election_year'] == 2026:
                 chambers[ch]['seats_up_2026'] += 1
-            chambers[ch]['members'].append({
+            member = {
                 'district': r['district'],
                 'district_name': r['district_name'],
                 'seat_designator': r['seat_designator'],
@@ -985,7 +999,11 @@ def export_all_state_details(dry_run=False):
                 'party': party,
                 'pres_margin': r['pres_margin'],
                 'next_election': r['next_regular_election_year'],
-            })
+            }
+            # Include raw caucus when it provides additional info (coalition, cross-party)
+            if r.get('caucus') and r['caucus'] != party:
+                member['caucus'] = r['caucus']
+            chambers[ch]['members'].append(member)
 
         for ch_name, ch_data in chambers.items():
             total = ch_data['total']

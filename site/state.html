@@ -512,19 +512,23 @@
         distLink.addEventListener('mouseleave', () => distLink.style.textDecoration = 'none');
         dtd.appendChild(distLink);
 
-        // Member name + caucus annotation for NE
+        // Member name + caucus annotation for special cases (NE nonpartisan, AK coalition)
         const ntd = tr.insertCell();
+        let caucusNote = '';
         if (stateAbbr === 'NE' && r.name) {
-          let caucusNote = '';
           if (r.party === 'R') caucusNote = ' <span class="text-muted text-sm">(caucuses with Republicans)</span>';
           else if (r.party === 'D') caucusNote = ' <span class="text-muted text-sm">(caucuses with Democrats)</span>';
+        } else if (r.caucus === 'C' && r.name) {
+          caucusNote = ' <span class="text-muted text-sm">(majority coalition)</span>';
+        }
+        if (caucusNote) {
           ntd.innerHTML = `<span style="color:${partyColor || 'var(--ms-other)'}">${r.name}</span>${caucusNote}`;
         } else {
           ntd.textContent = r.name || 'Vacant';
           if (partyColor) ntd.style.color = partyColor;
         }
 
-        // Party badge — NE is officially nonpartisan
+        // Party badge — NE is officially nonpartisan; everyone else shows actual party
         const ptd = tr.insertCell();
         ptd.className = 'party-col';
         if (stateAbbr === 'NE' && r.name) {
