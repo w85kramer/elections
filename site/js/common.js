@@ -231,14 +231,23 @@ function buildCoalitionBar(container, data, label) {
 
   let svg = `<svg width="100%" viewBox="0 0 ${W} ${TOTAL_H}" xmlns="http://www.w3.org/2000/svg" style="max-width:${W}px">`;
 
-  // Build segments: majority parties (largest first), then minority parties, then vacant
-  const sortSegs = (segs) => segs.slice().sort((a, b) => b.count - a.count);
+  // Build segments: majority parties then minority parties then vacant.
+  // Within majority, put parties that also appear in minority LAST so they sit
+  // adjacent to the same party in minority — the purple bracket splits them visually.
+  const minPartySet = new Set(data.minority.segments.filter(s => s.count > 0).map(s => s.party));
+  const majSorted = data.majority.segments.slice().sort((a, b) => {
+    const aShared = minPartySet.has(a.party) ? 1 : 0;
+    const bShared = minPartySet.has(b.party) ? 1 : 0;
+    if (aShared !== bShared) return aShared - bShared;
+    return b.count - a.count;
+  });
+  const minSorted = data.minority.segments.slice().sort((a, b) => b.count - a.count);
   const allSegments = [];
 
-  for (const s of sortSegs(data.majority.segments)) {
+  for (const s of majSorted) {
     if (s.count > 0) allSegments.push({ ...s, coalition: 'majority' });
   }
-  for (const s of sortSegs(data.minority.segments)) {
+  for (const s of minSorted) {
     if (s.count > 0) allSegments.push({ ...s, coalition: 'minority' });
   }
   if (data.vacant > 0) {
