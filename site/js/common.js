@@ -63,6 +63,7 @@ function partyLabel(party) {
 function partyBadgeClass(party) {
   if (party === 'D') return 'party-d';
   if (party === 'R') return 'party-r';
+  if (party === 'NP') return 'party-np';
   return 'party-i';
 }
 
