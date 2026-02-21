@@ -85,6 +85,7 @@ def export_all_districts(dry_run=False, single_state=None):
         JOIN districts d ON s.district_id = d.id
         JOIN states st ON d.state_id = st.id
         WHERE s.office_level = 'Legislative'
+          AND COALESCE(d.redistricting_cycle, '2022') = '2022'
           {state_filter}
         ORDER BY st.abbreviation, d.chamber,
             CASE WHEN d.district_number SIMILAR TO '[0-9]+' THEN d.district_number::int ELSE 99999 END,
@@ -110,6 +111,7 @@ def export_all_districts(dry_run=False, single_state=None):
         JOIN districts d ON s.district_id = d.id
         JOIN states st ON d.state_id = st.id
         WHERE s.office_level = 'Legislative'
+          AND COALESCE(d.redistricting_cycle, '2022') = '2022'
           {state_filter}
         ORDER BY st.abbreviation, e.seat_id, e.election_year DESC, e.election_type
     """
@@ -135,6 +137,7 @@ def export_all_districts(dry_run=False, single_state=None):
         JOIN states st ON d.state_id = st.id
         JOIN candidates c ON cy.candidate_id = c.id
         WHERE s.office_level = 'Legislative'
+          AND COALESCE(d.redistricting_cycle, '2022') = '2022'
           {state_filter}
         ORDER BY st.abbreviation, cy.election_id,
             CASE cy.result WHEN 'Won' THEN 0 WHEN 'Advanced' THEN 1 ELSE 2 END,
@@ -158,6 +161,7 @@ def export_all_districts(dry_run=False, single_state=None):
         JOIN states st ON d.state_id = st.id
         JOIN candidates c ON stm.candidate_id = c.id
         WHERE s.office_level = 'Legislative'
+          AND COALESCE(d.redistricting_cycle, '2022') = '2022'
           AND stm.end_date IS NULL
           {state_filter}
         ORDER BY st.abbreviation, stm.seat_id

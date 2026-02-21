@@ -44,7 +44,9 @@ CREATE TABLE districts (
     pres_2024_margin    TEXT,           -- e.g., '+12.3' or '-15.7'
     pres_2024_winner    VARCHAR(1),     -- 'R' or 'D'
     partisan_lean       TEXT,           -- e.g., 'R+8', 'D+11'
-    redistricting_cycle TEXT,
+    redistricting_cycle TEXT,           -- first election year using this map:
+                                       --   '2022' = current (2020 Census), '2012' = previous (2010 Census)
+                                       --   'permanent' = statewide districts (no redistricting)
     notes           TEXT
 );
 

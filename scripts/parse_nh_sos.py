@@ -334,8 +334,12 @@ def _extract_totals(row, district, is_second_block):
 
 def load_nh_db_context(year):
     """Load NH House districts, seats, elections, and current holders from DB."""
-    # Districts + seats
-    seats_data = run_sql("""
+    # Select redistricting cycle based on election year
+    cycle = '2022' if year >= 2022 else '2012'
+    print(f'  Using redistricting_cycle={cycle} for year {year}')
+
+    # Districts + seats (filtered by redistricting cycle)
+    seats_data = run_sql(f"""
         SELECT se.id as seat_id, se.seat_designator, se.seat_label,
                d.id as district_id, d.district_number, d.num_seats, d.is_floterial
         FROM seats se
@@ -344,6 +348,7 @@ def load_nh_db_context(year):
         WHERE st.abbreviation = 'NH'
           AND se.office_type = 'State House'
           AND d.chamber = 'House'
+          AND d.redistricting_cycle = '{cycle}'
         ORDER BY d.district_number, se.seat_designator
     """)
     if not seats_data:
