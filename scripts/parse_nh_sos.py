@@ -1,17 +1,17 @@
 """
-Parse NH Secretary of State Excel files for 2024 House general election results.
+Parse NH Secretary of State Excel files for House general election results.
 
 The SoS publishes one Excel file per county with all House district results.
 Each district section has candidate names + party, town-by-town votes, and totals.
 Multi-member districts use top-N bloc voting (no separate seat races).
 
-District numbering in the SoS files does NOT match the DB (Ballotpedia) numbering.
-Matching is done by county name + num_seats + current holder names.
+District numbering maps directly: SoS County-N → DB County-N (verified).
+Seat counts may differ between SoS and DB for some districts due to redistricting.
 
 Usage:
-    python3 scripts/parse_nh_sos.py --dry-run
-    python3 scripts/parse_nh_sos.py
-    python3 scripts/parse_nh_sos.py --county belknap --dry-run --debug
+    python3 scripts/parse_nh_sos.py --year 2024 --dry-run
+    python3 scripts/parse_nh_sos.py --year 2022
+    python3 scripts/parse_nh_sos.py --year 2024 --county belknap --dry-run --debug
 """
 import os
 import re
@@ -105,10 +105,10 @@ def run_sql(query, exit_on_error=False):
 # EXCEL PARSING
 # ═══════════════════════════════════════════════════════════════
 
-def find_county_file(county):
-    """Find the SoS Excel file for a county."""
+def find_county_file(county, year):
+    """Find the SoS Excel file for a county and year."""
     import glob
-    pattern = os.path.join(TMP_DIR, f'2024-ge-house-{county}*')
+    pattern = os.path.join(TMP_DIR, f'{year}-ge-house-{county}*')
     matches = glob.glob(pattern)
     if matches:
         return matches[0]
@@ -332,7 +332,7 @@ def _extract_totals(row, district, is_second_block):
 # DB MATCHING — Match SoS districts to DB districts by holders
 # ═══════════════════════════════════════════════════════════════
 
-def load_nh_db_context():
+def load_nh_db_context(year):
     """Load NH House districts, seats, elections, and current holders from DB."""
     # Districts + seats
     seats_data = run_sql("""
@@ -350,15 +350,15 @@ def load_nh_db_context():
         print('  ERROR: No NH House seats found')
         return None
 
-    # Existing 2024 elections
-    elections_data = run_sql("""
+    # Existing elections for this year
+    elections_data = run_sql(f"""
         SELECT e.id as election_id, e.seat_id
         FROM elections e
         JOIN seats se ON e.seat_id = se.id
         JOIN districts d ON se.district_id = d.id
         JOIN states st ON d.state_id = st.id
         WHERE st.abbreviation = 'NH' AND d.chamber = 'House'
-          AND e.election_year = 2024 AND e.election_type = 'General'
+          AND e.election_year = {year} AND e.election_type = 'General'
     """)
 
     existing_election_seats = set()
@@ -475,7 +475,18 @@ def match_district(sos_district, county, db_context):
 # POPULATION
 # ═══════════════════════════════════════════════════════════════
 
-def populate_nh(all_districts, db_context, dry_run=False):
+def election_date_for_year(year):
+    """Return the NH general election date for a given year (first Tues after first Mon in Nov)."""
+    import datetime
+    nov1 = datetime.date(year, 11, 1)
+    # First Monday: if Nov 1 is Mon, that's it; else advance to next Mon
+    days_to_mon = (7 - nov1.weekday()) % 7  # 0=Mon
+    first_mon = nov1 + datetime.timedelta(days=days_to_mon)
+    # First Tuesday after first Monday
+    return first_mon + datetime.timedelta(days=1)
+
+
+def populate_nh(all_districts, db_context, year, dry_run=False):
     """Insert elections + candidacies for matched NH districts."""
     seats_by_district = defaultdict(list)
     for s in db_context['seats']:
@@ -560,10 +571,11 @@ def populate_nh(all_districts, db_context, dry_run=False):
                         'incumbent': False,
                     })
 
+            edate = election_date_for_year(year)
             elections_to_insert.append({
                 'seat_id': seat_id,
-                'election_date': '2024-11-05',
-                'year': 2024,
+                'election_date': edate.isoformat(),
+                'year': year,
                 'election_type': 'General',
                 'candidates': seat_candidates,
                 'dist_num': db_dist_num,
@@ -777,8 +789,10 @@ def _name_similarity(name1, name2):
 def main():
     global DEBUG
     parser = argparse.ArgumentParser(
-        description='Parse NH SoS Excel files for 2024 House general election results'
+        description='Parse NH SoS Excel files for House general election results'
     )
+    parser.add_argument('--year', type=int, required=True,
+                        help='Election year (e.g., 2022, 2024)')
     parser.add_argument('--county', type=str,
                         help='Process a single county (e.g., belknap)')
     parser.add_argument('--dry-run', action='store_true',
@@ -791,11 +805,12 @@ def main():
     if args.dry_run:
         print('DRY RUN MODE — no database changes will be made.\n')
 
+    year = args.year
     counties = [args.county.lower()] if args.county else NH_COUNTIES
 
     # Load DB context once
-    print('Loading NH database context...')
-    db_context = load_nh_db_context()
+    print(f'Loading NH database context for {year}...')
+    db_context = load_nh_db_context(year)
     if not db_context:
         sys.exit(1)
     print(f'  {len(db_context["seats"])} seats, '
@@ -805,7 +820,7 @@ def main():
     all_matched = []
 
     for county in counties:
-        filepath = find_county_file(county)
+        filepath = find_county_file(county, year)
         if not filepath:
             print(f'  WARNING: No file found for {county}')
             continue
@@ -835,7 +850,7 @@ def main():
         sys.exit(0)
 
     print(f'\nTotal: {len(all_matched)} districts across {len(counties)} counties')
-    populate_nh(all_matched, db_context, dry_run=args.dry_run)
+    populate_nh(all_matched, db_context, year=year, dry_run=args.dry_run)
     print('\nDone!')
 
 
