@@ -608,17 +608,20 @@
     let rowIdx = 0;
 
     for (const e of elections) {
-      // Group by year + cycle type (General vs Special)
-      const isSpecial = e.type.toLowerCase().includes('special');
-      const cycleType = isSpecial ? 'Special' : 'General';
-      const cycleKey = `${e.year}-${cycleType}`;
+      // Group by year
+      const cycleKey = `${e.year}`;
       if (cycleKey !== lastCycleKey) {
-        html += `<tr class="cycle-header"><td colspan="6">${e.year} ${cycleType}</td></tr>`;
+        html += `<tr class="cycle-header"><td colspan="6">${e.year} Elections</td></tr>`;
         lastCycleKey = cycleKey;
       }
 
       const winner = e.candidates.find(c => c.result === 'Won' || c.result === 'Advanced');
-      const typeLabel = e.type.replace(/_/g, ' ');
+      let typeLabel = e.type.replace(/_/g, ' ');
+      if (e.date) {
+        const d = new Date(e.date + 'T00:00:00');
+        const shortDate = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        typeLabel += ` <span class="text-muted" style="font-size:11px">· ${shortDate}</span>`;
+      }
       let winnerName = '—';
       let marginHtml = '—';
       let winnerParty = '';
@@ -640,12 +643,19 @@
         }
       }
 
+      // For upcoming elections with candidates but no winner, show "N candidates filed"
+      const hasResults = winner || e.result_status;
+      if (!hasResults && e.candidates.length > 0) {
+        const n = e.candidates.length;
+        winnerName = `<span class="text-muted">${n} candidate${n !== 1 ? 's' : ''} filed</span>`;
+      }
+
       const votes = e.total_votes ? numberWithCommas(e.total_votes) : '—';
       const isWinner = winner ? ' winner-row' : '';
       const expandId = `exp-${containerId}-${rowIdx}`;
 
-      const hasCands = e.candidates.length > 1;
-      const expandBtn = hasCands ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${e.candidates.length - 1} more</button>` : '';
+      const hasCands = e.candidates.length > (winner ? 1 : 0);
+      const expandBtn = hasCands ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${e.candidates.length - (winner ? 1 : 0)} more</button>` : '';
 
       html += `<tr class="${isWinner}">
         <td>${e.year}</td>
