@@ -27,7 +27,7 @@ from db_config import TOKEN, PROJECT_REF, API_URL
 
 BATCH_SIZE = 400
 
-# Filing deadlines for states with closed filing (as of 2026-02-20)
+# Filing deadlines for states with closed filing (as of 2026-02-26)
 CLOSED_FILING_STATES = {
     'IL': '2025-11-03',
     'AR': '2025-11-11',
@@ -42,6 +42,22 @@ CLOSED_FILING_STATES = {
     'IN': '2026-02-06',
     'MD': '2026-02-24',
     'ID': '2026-02-27',
+    # March deadlines
+    'NE': '2026-03-02',
+    'OR': '2026-03-10',  # non-incumbents (incumbents 03-03)
+    'MT': '2026-03-04',
+    'GA': '2026-03-06',
+    'CA': '2026-03-06',
+    'TN': '2026-03-10',
+    'PA': '2026-03-10',
+    'NV': '2026-03-13',
+    'IA': '2026-03-13',
+    'ME': '2026-03-16',
+    'CO': '2026-03-18',
+    'AZ': '2026-03-23',
+    'SC': '2026-03-30',
+    'SD': '2026-03-31',
+    'MO': '2026-03-31',
 }
 
 # Ballotpedia URL patterns for each state's chambers
@@ -72,6 +88,35 @@ STATE_CHAMBERS = {
            ('Maryland', 'State_Senate', 'State Senate')],
     'ID': [('Idaho', 'House_of_Representatives', 'State House'),
            ('Idaho', 'State_Senate', 'State Senate')],
+    # March deadline states
+    'NE': [('Nebraska', 'State_Senate', 'State Senate')],  # unicameral
+    'OR': [('Oregon', 'House_of_Representatives', 'State House'),
+           ('Oregon', 'State_Senate', 'State Senate')],
+    'MT': [('Montana', 'House_of_Representatives', 'State House'),
+           ('Montana', 'State_Senate', 'State Senate')],
+    'GA': [('Georgia', 'House_of_Representatives', 'State House'),
+           ('Georgia', 'State_Senate', 'State Senate')],
+    'CA': [('California', 'State_Assembly', 'State House'),
+           ('California', 'State_Senate', 'State Senate')],
+    'TN': [('Tennessee', 'House_of_Representatives', 'State House'),
+           ('Tennessee', 'State_Senate', 'State Senate')],
+    'PA': [('Pennsylvania', 'House_of_Representatives', 'State House'),
+           ('Pennsylvania', 'State_Senate', 'State Senate')],
+    'NV': [('Nevada', 'State_Assembly', 'State House'),
+           ('Nevada', 'State_Senate', 'State Senate')],
+    'IA': [('Iowa', 'House_of_Representatives', 'State House'),
+           ('Iowa', 'State_Senate', 'State Senate')],
+    'ME': [('Maine', 'House_of_Representatives', 'State House'),
+           ('Maine', 'State_Senate', 'State Senate')],
+    'CO': [('Colorado', 'House_of_Representatives', 'State House'),
+           ('Colorado', 'State_Senate', 'State Senate')],
+    'AZ': [('Arizona', 'House_of_Representatives', 'State House'),
+           ('Arizona', 'State_Senate', 'State Senate')],
+    'SC': [('South_Carolina', 'House_of_Representatives', 'State House')],  # Senate not up in 2026
+    'SD': [('South_Dakota', 'House_of_Representatives', 'State House'),
+           ('South_Dakota', 'State_Senate', 'State Senate')],
+    'MO': [('Missouri', 'House_of_Representatives', 'State House'),
+           ('Missouri', 'State_Senate', 'State Senate')],
 }
 
 PARTY_MAP = {
@@ -151,10 +196,14 @@ STATEWIDE_PAGES = {
 }
 
 STATE_FULL_NAMES = {
-    'AL': 'Alabama', 'AR': 'Arkansas', 'ID': 'Idaho',
-    'IL': 'Illinois', 'IN': 'Indiana', 'KY': 'Kentucky',
-    'MD': 'Maryland', 'NC': 'North_Carolina', 'NM': 'New_Mexico',
-    'OH': 'Ohio', 'TX': 'Texas', 'UT': 'Utah', 'WV': 'West_Virginia',
+    'AL': 'Alabama', 'AR': 'Arkansas', 'AZ': 'Arizona',
+    'CA': 'California', 'CO': 'Colorado', 'GA': 'Georgia',
+    'IA': 'Iowa', 'ID': 'Idaho', 'IL': 'Illinois', 'IN': 'Indiana',
+    'KY': 'Kentucky', 'MD': 'Maryland', 'ME': 'Maine', 'MO': 'Missouri',
+    'MT': 'Montana', 'NC': 'North_Carolina', 'NE': 'Nebraska',
+    'NM': 'New_Mexico', 'NV': 'Nevada', 'OH': 'Ohio', 'OR': 'Oregon',
+    'PA': 'Pennsylvania', 'SC': 'South_Carolina', 'SD': 'South_Dakota',
+    'TN': 'Tennessee', 'TX': 'Texas', 'UT': 'Utah', 'WV': 'West_Virginia',
 }
 
 def run_sql(query, exit_on_error=True):
