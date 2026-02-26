@@ -477,3 +477,35 @@ CREATE POLICY "Allow full access" ON forecasts FOR ALL USING (true) WITH CHECK (
 CREATE POLICY "Allow full access" ON seat_terms FOR ALL USING (true) WITH CHECK (true);
 CREATE POLICY "Allow full access" ON chamber_control FOR ALL USING (true) WITH CHECK (true);
 CREATE POLICY "Allow full access" ON party_switches FOR ALL USING (true) WITH CHECK (true);
+
+-- ============================================================
+-- TRIGGERS
+-- ============================================================
+
+-- When a seat_term is inserted or updated with end_date IS NULL,
+-- sync the seat's current_holder_party/caucus and clear is_open_seat
+-- on future General elections for that seat.
+CREATE OR REPLACE FUNCTION sync_seat_on_term_change()
+RETURNS TRIGGER AS $$
+BEGIN
+  IF NEW.end_date IS NULL THEN
+    UPDATE seats
+    SET current_holder_party = NEW.party,
+        current_holder_caucus = NEW.caucus
+    WHERE id = NEW.seat_id;
+
+    UPDATE elections
+    SET is_open_seat = false
+    WHERE seat_id = NEW.seat_id
+      AND election_type = 'General'
+      AND election_date > CURRENT_DATE
+      AND is_open_seat = true;
+  END IF;
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trg_sync_seat_on_term_change
+  AFTER INSERT OR UPDATE ON seat_terms
+  FOR EACH ROW
+  EXECUTE FUNCTION sync_seat_on_term_change();
