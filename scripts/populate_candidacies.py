@@ -286,8 +286,8 @@ def parse_primary_candidates(html_text):
     # Pattern: <tr> <td><a href="...District_N">District N</a></td> <td>Dem</td> <td>Rep</td> <td>Other</td> </tr>
     # Also handles ID-style "District 1A" — captures optional seat letter suffix
     row_pattern = re.compile(
-        r'<tr>\s*<td>\s*<a\s+href="[^"]*?District[_\s]+(\d+)\s*"[^>]*>'
-        r'District\s+\d+([A-Z])?\s*</a></td>'
+        r'<tr>\s*<td>\s*<a\s+href="[^"]*?District[_\s]+(\d+)[A-Z]?\s*"[^>]*>'
+        r'District\s+\d+([A-Z])?\s*</a>[^<]*</td>'
         r'(.*?)</tr>',
         re.DOTALL
     )
@@ -585,13 +585,17 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
             incumbent_info = incumbent_map.get(seat_id)
 
             for name, party, bp_incumbent, _seat_suffix in candidates_in_district:
-                if party == 'Other':
-                    unmatched.append((dist_num, name, party, 'third_party_skipped'))
-                    continue
-
                 # Find election
-                election_type = f'Primary_{party}'
-                election_id = elections.get(election_type)
+                if party == 'Other':
+                    # Third-party candidates run in the General election
+                    election_type = 'General'
+                    election_id = elections.get('General')
+                else:
+                    election_type = f'Primary_{party}'
+                    election_id = elections.get(election_type)
+                    if not election_id:
+                        # Fallback for jungle/top-two primary states (CA, WA, etc.)
+                        election_id = elections.get('Primary')
                 if not election_id:
                     unmatched.append((dist_num, name, party, f'no_{election_type}_election'))
                     continue
@@ -653,6 +657,8 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
                             continue
                         election_id = election_map.get(sid, {}).get(election_type)
                         if not election_id:
+                            election_id = election_map.get(sid, {}).get('Primary')
+                        if not election_id:
                             unmatched.append((dist_num, name, p, f'no_{election_type}_election'))
                             continue
 
@@ -677,10 +683,12 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
                         })
                 else:
                     # No seat suffixes — use heuristic assignment
-                    # Count how many seats have an election for this party
-                    seats_with_election = [(sid, election_map.get(sid, {}).get(election_type))
-                                           for sid in seat_ids
-                                           if election_map.get(sid, {}).get(election_type)]
+                    # Count how many seats have an election for this party (or jungle primary)
+                    seats_with_election = []
+                    for sid in seat_ids:
+                        eid = election_map.get(sid, {}).get(election_type) or election_map.get(sid, {}).get('Primary')
+                        if eid:
+                            seats_with_election.append((sid, eid))
                     one_seat_up = len(seats_with_election) == 1
 
                     # Incumbents get matched to their specific seat first
@@ -695,7 +703,7 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
                                     continue
                                 inc_info = incumbent_map.get(sid)
                                 if inc_info and name_similarity(name, inc_info[1]) >= 0.3:
-                                    election_id = election_map.get(sid, {}).get(election_type)
+                                    election_id = election_map.get(sid, {}).get(election_type) or election_map.get(sid, {}).get('Primary')
                                     if election_id:
                                         matched.append({
                                             'election_id': election_id,
@@ -718,7 +726,7 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
                         for sid in seat_ids:
                             if not one_seat_up and sid in assigned_seats:
                                 continue
-                            election_id = election_map.get(sid, {}).get(election_type)
+                            election_id = election_map.get(sid, {}).get(election_type) or election_map.get(sid, {}).get('Primary')
                             if election_id:
                                 inc_info = incumbent_map.get(sid)
                                 cand_id = None
@@ -743,10 +751,41 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
                         if not assigned:
                             unmatched.append((dist_num, name, p, 'no_available_seat'))
 
-            # Handle other parties
+            # Handle other parties — assign to General election on first available seat
             other_cands = [(n, p, i, ss) for n, p, i, ss in candidates_in_district if p == 'Other']
-            for name, p, bp_inc, _ss in other_cands:
-                unmatched.append((dist_num, name, p, 'third_party_skipped'))
+            for name, p, bp_inc, seat_suffix in other_cands:
+                assigned = False
+                if has_seat_suffixes and seat_suffix:
+                    sid = desig_to_sid.get(seat_suffix)
+                    if sid:
+                        election_id = election_map.get(sid, {}).get('General')
+                        if election_id:
+                            matched.append({
+                                'election_id': election_id,
+                                'candidate_id': None,
+                                'candidate_name': name,
+                                'party': p,
+                                'is_incumbent': False,
+                                'seat_id': sid,
+                            })
+                            assigned = True
+                if not assigned:
+                    # Try first seat with a General election
+                    for sid in seat_ids:
+                        election_id = election_map.get(sid, {}).get('General')
+                        if election_id:
+                            matched.append({
+                                'election_id': election_id,
+                                'candidate_id': None,
+                                'candidate_name': name,
+                                'party': p,
+                                'is_incumbent': False,
+                                'seat_id': sid,
+                            })
+                            assigned = True
+                            break
+                if not assigned:
+                    unmatched.append((dist_num, name, p, 'no_general_election'))
 
         else:
             # No seats found for this district
@@ -1077,10 +1116,10 @@ def verify_state(state_abbrev):
 # STATEWIDE: Process statewide races for a single state
 # ══════════════════════════════════════════════════════════════════════
 
-def process_state_statewide(state_abbrev, dry_run=False):
+def process_state_statewide(state_abbrev, dry_run=False, force=False):
     """Process statewide races for a single state."""
     print(f"\n{'=' * 60}")
-    print(f"STATEWIDE: {state_abbrev}")
+    print(f"STATEWIDE: {state_abbrev}" + (" (FORCE)" if force else ""))
     print(f"{'=' * 60}")
 
     if state_abbrev not in STATEWIDE_PAGES:
@@ -1097,9 +1136,13 @@ def process_state_statewide(state_abbrev, dry_run=False):
         WHERE s.abbreviation = '{state_abbrev}' AND d.office_level = 'Statewide'
     """)
     if existing[0]['cnt'] > 0:
-        print(f"  WARNING: {state_abbrev} already has {existing[0]['cnt']} statewide candidacies!")
-        print(f"  Skipping to prevent duplicates.")
-        return False
+        if force:
+            print(f"  NOTE: {state_abbrev} already has {existing[0]['cnt']} statewide candidacies.")
+            print(f"  --force: will skip elections that already have candidacies.")
+        else:
+            print(f"  WARNING: {state_abbrev} already has {existing[0]['cnt']} statewide candidacies!")
+            print(f"  Skipping to prevent duplicates.")
+            return False
 
     # Build statewide lookup maps
     print(f"\n  Loading statewide DB maps...")
@@ -1252,7 +1295,7 @@ def process_state_statewide(state_abbrev, dry_run=False):
             state_total_unmatched += unmatched_count
 
             if matched:
-                new_cands, cand_count = insert_candidacies(matched, dry_run=dry_run)
+                new_cands, cand_count = insert_candidacies(matched, dry_run=dry_run, force=force)
                 state_new_candidates += new_cands
                 state_candidacies += cand_count
 
@@ -1464,7 +1507,7 @@ def main():
     if args.statewide:
         # Process statewide races
         for st in states:
-            success = process_state_statewide(st, dry_run=args.dry_run)
+            success = process_state_statewide(st, dry_run=args.dry_run, force=args.force)
             if success and not args.dry_run:
                 verify_state_statewide(st)
             if len(states) > 1:

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T18:44:35.157476Z",
+  "generated_at": "2026-02-26T19:44:36.718406Z",
   "state": {
     "name": "Idaho",
     "abbr": "ID",
@@ -1067,9 +1067,153 @@
   "elections_2026": {
     "governor": {
       "forecast": "Solid R",
-      "candidates": []
+      "candidates": [
+        {
+          "name": "Chanelle Torrez",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Stephen Heidt",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Terri Pickens",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Brad Little",
+          "party": "R",
+          "is_incumbent": true,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Jill Kirkham",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Jordan Chirat",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Justin Plante",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Lisa Marie",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Mark Fitzpatrick",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Scott Hert",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        }
+      ]
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Raul Labrador",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Controller",
+        "candidates": [
+          {
+            "name": "Brandon Woolf",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Lt. Governor",
+        "candidates": [
+          {
+            "name": "Scott Bedke",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Phil McGrane",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Superintendent of Public Instruction",
+        "candidates": [
+          {
+            "name": "Debbie Critchfield",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Kevin Jones",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Julie Ellsworth",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "ID House 1 Seat A",

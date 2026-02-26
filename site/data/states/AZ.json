@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T19:42:58.593010Z",
   "state": {
     "name": "Arizona",
     "abbr": "AZ",
@@ -927,9 +927,388 @@
       "candidates": []
     },
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "AZ House 1 Seat A",
+        "chamber": "House",
+        "district": "1",
+        "candidates": [
+          {
+            "name": "Selina Bliss",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 3 Seat A",
+        "chamber": "House",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "George Khalaf",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 4 Seat A",
+        "chamber": "House",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Pamela Carter",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 5 Seat A",
+        "chamber": "House",
+        "district": "5",
+        "candidates": [
+          {
+            "name": "Lela Alston",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 9 Seat A",
+        "chamber": "House",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Lorena Austin",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Seth Blattman",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 19 Seat A",
+        "chamber": "House",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Aiden Swallow",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 21 Seat B",
+        "chamber": "House",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Stephanie Stahl Hamilton",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 29 Seat B",
+        "chamber": "House",
+        "district": "29",
+        "candidates": [
+          {
+            "name": "James Taylor",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 30 Seat A",
+        "chamber": "House",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "David Rose",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 1",
+        "chamber": "Senate",
+        "district": "1",
+        "candidates": [
+          {
+            "name": "Christine Dargon",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mark Finchem",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 5",
+        "chamber": "Senate",
+        "district": "5",
+        "candidates": [
+          {
+            "name": "Christine Marsh",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 7",
+        "chamber": "Senate",
+        "district": "7",
+        "candidates": [
+          {
+            "name": "Wendy Rogers",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 17",
+        "chamber": "Senate",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Hunter Holt",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 21",
+        "chamber": "Senate",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Rosanna Gabald\u00f3n",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 27",
+        "chamber": "Senate",
+        "district": "27",
+        "candidates": [
+          {
+            "name": "Kyle Clayton",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      }
+    ]
   },
-  "uncontested_primaries": [],
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "5",
+      "seat_label": "AZ House 5 Seat A",
+      "pres_margin": "+36.4",
+      "holder_party": "D",
+      "candidate": "Lela Alston",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "9",
+      "seat_label": "AZ House 9 Seat B",
+      "pres_margin": "+3.0",
+      "holder_party": "D",
+      "candidate": "Seth Blattman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "9",
+      "seat_label": "AZ House 9 Seat A",
+      "pres_margin": "+3.0",
+      "holder_party": "D",
+      "candidate": "Lorena Austin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "19",
+      "seat_label": "AZ House 19 Seat A",
+      "pres_margin": "-23.0",
+      "holder_party": "R",
+      "candidate": "Aiden Swallow",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "21",
+      "seat_label": "AZ House 21 Seat B",
+      "pres_margin": "+18.5",
+      "holder_party": "D",
+      "candidate": "Stephanie Stahl Hamilton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "1",
+      "seat_label": "AZ Senate 1",
+      "pres_margin": "-33.2",
+      "holder_party": "R",
+      "candidate": "Christine Dargon",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "5",
+      "seat_label": "AZ Senate 5",
+      "pres_margin": "+36.4",
+      "holder_party": "D",
+      "candidate": "Christine Marsh",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "17",
+      "seat_label": "AZ Senate 17",
+      "pres_margin": "-3.9",
+      "holder_party": "R",
+      "candidate": "Hunter Holt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "21",
+      "seat_label": "AZ Senate 21",
+      "pres_margin": "+18.5",
+      "holder_party": "D",
+      "candidate": "Rosanna Gabald\u00f3n",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "27",
+      "seat_label": "AZ Senate 27",
+      "pres_margin": "-11.3",
+      "holder_party": "R",
+      "candidate": "Kyle Clayton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "1",
+      "seat_label": "AZ House 1 Seat A",
+      "pres_margin": "-33.2",
+      "holder_party": "R",
+      "candidate": "Selina Bliss",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "3",
+      "seat_label": "AZ House 3 Seat A",
+      "pres_margin": "-24.5",
+      "holder_party": "R",
+      "candidate": "George Khalaf",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "4",
+      "seat_label": "AZ House 4 Seat A",
+      "pres_margin": "-3.5",
+      "holder_party": "R",
+      "candidate": "Pamela Carter",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "29",
+      "seat_label": "AZ House 29 Seat B",
+      "pres_margin": "-18.4",
+      "holder_party": "R",
+      "candidate": "James Taylor",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "30",
+      "seat_label": "AZ House 30 Seat A",
+      "pres_margin": "-55.4",
+      "holder_party": "R",
+      "candidate": "David Rose",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "1",
+      "seat_label": "AZ Senate 1",
+      "pres_margin": "-33.2",
+      "holder_party": "R",
+      "candidate": "Mark Finchem",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "7",
+      "seat_label": "AZ Senate 7",
+      "pres_margin": "-29.2",
+      "holder_party": "R",
+      "candidate": "Wendy Rogers",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [
     {
       "number": "Designate Drug Cartels as Terrorist Organizations and Require State DHS to Address Threats Measure",

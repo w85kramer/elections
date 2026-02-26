@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T19:43:08.164279Z",
   "state": {
     "name": "South Dakota",
     "abbr": "SD",
@@ -1053,9 +1053,575 @@
       "candidates": []
     },
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "SD House 3 Seat A",
+        "chamber": "House",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Spencer Sommers",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD House 4 Seat A",
+        "chamber": "House",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Fred Deutsch",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Gary Hudiburgh",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD House 7 Seat B",
+        "chamber": "House",
+        "district": "7",
+        "candidates": [
+          {
+            "name": "Mellissa Heermann",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD House 8 Seat A",
+        "chamber": "House",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Danny Brown",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD House 15 Seat A",
+        "chamber": "House",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "June CopperStad",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD House 16 Seat B",
+        "chamber": "House",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "John Shubeck",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD House 17 Seat A",
+        "chamber": "House",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Chris Kassin",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD House 20 Seat A",
+        "chamber": "House",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Terry Sabers",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD House 21 Seat A",
+        "chamber": "House",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Jim Halverson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD House 22 Seat A",
+        "chamber": "House",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "Lana Greenfield",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD House 24 Seat A",
+        "chamber": "House",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Laurie Gill",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD House 26 Seat B",
+        "chamber": "House",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Angi Hanzlik",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD House 31 Seat A",
+        "chamber": "House",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "Mary Fitzgerald",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD House 32 Seat B",
+        "chamber": "House",
+        "district": "32",
+        "candidates": [
+          {
+            "name": "Nicole Uhre-Balk",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD House 33 Seat A",
+        "chamber": "House",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Jeff Marlette",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD House 34 Seat A",
+        "chamber": "House",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Victor Dominquez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD House 35 Seat A",
+        "chamber": "House",
+        "district": "35",
+        "candidates": [
+          {
+            "name": "Emmett Reistroffer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD Senate 3",
+        "chamber": "Senate",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Katherine Washnok",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD Senate 8",
+        "chamber": "Senate",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Todd Wilkinson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD Senate 9",
+        "chamber": "Senate",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Joy Hohn",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD Senate 18",
+        "chamber": "Senate",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Jean Hunhoff",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD Senate 21",
+        "chamber": "Senate",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Erin Tobin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD Senate 24",
+        "chamber": "Senate",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Brian Murphy",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Mark Nelson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "SD Senate 26",
+        "chamber": "Senate",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Rebecca Reimer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ]
   },
-  "uncontested_primaries": [],
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "15",
+      "seat_label": "SD House 15 Seat A",
+      "pres_margin": "+8.1",
+      "holder_party": "D",
+      "candidate": "June CopperStad",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "32",
+      "seat_label": "SD House 32 Seat B",
+      "pres_margin": "-1.8",
+      "holder_party": "D",
+      "candidate": "Nicole Uhre-Balk",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "34",
+      "seat_label": "SD House 34 Seat A",
+      "pres_margin": "-16.1",
+      "holder_party": "R",
+      "candidate": "Victor Dominquez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "3",
+      "seat_label": "SD House 3 Seat A",
+      "pres_margin": "-27.8",
+      "holder_party": "R",
+      "candidate": "Spencer Sommers",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "4",
+      "seat_label": "SD House 4 Seat B",
+      "pres_margin": "-52.6",
+      "holder_party": "R",
+      "candidate": "Gary Hudiburgh",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "4",
+      "seat_label": "SD House 4 Seat A",
+      "pres_margin": "-52.6",
+      "holder_party": "R",
+      "candidate": "Fred Deutsch",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "7",
+      "seat_label": "SD House 7 Seat B",
+      "pres_margin": "-11.7",
+      "holder_party": "R",
+      "candidate": "Mellissa Heermann",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "8",
+      "seat_label": "SD House 8 Seat A",
+      "pres_margin": "-35.5",
+      "holder_party": "R",
+      "candidate": "Danny Brown",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "16",
+      "seat_label": "SD House 16 Seat B",
+      "pres_margin": "-45.3",
+      "holder_party": "R",
+      "candidate": "John Shubeck",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "17",
+      "seat_label": "SD House 17 Seat A",
+      "pres_margin": "-16.6",
+      "holder_party": "R",
+      "candidate": "Chris Kassin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "20",
+      "seat_label": "SD House 20 Seat A",
+      "pres_margin": "-40.1",
+      "holder_party": "R",
+      "candidate": "Terry Sabers",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "21",
+      "seat_label": "SD House 21 Seat A",
+      "pres_margin": "-56.5",
+      "holder_party": "R",
+      "candidate": "Jim Halverson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "22",
+      "seat_label": "SD House 22 Seat A",
+      "pres_margin": "-39.9",
+      "holder_party": "R",
+      "candidate": "Lana Greenfield",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "24",
+      "seat_label": "SD House 24 Seat A",
+      "pres_margin": "-40.7",
+      "holder_party": "R",
+      "candidate": "Laurie Gill",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "26",
+      "seat_label": "SD House 26 Seat B",
+      "pres_margin": "-12.2",
+      "holder_party": "R",
+      "candidate": "Angi Hanzlik",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "31",
+      "seat_label": "SD House 31 Seat A",
+      "pres_margin": "-31.3",
+      "holder_party": "R",
+      "candidate": "Mary Fitzgerald",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "33",
+      "seat_label": "SD House 33 Seat A",
+      "pres_margin": "-34.7",
+      "holder_party": "R",
+      "candidate": "Jeff Marlette",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "35",
+      "seat_label": "SD House 35 Seat A",
+      "pres_margin": "-33.7",
+      "holder_party": "R",
+      "candidate": "Emmett Reistroffer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "3",
+      "seat_label": "SD Senate 3",
+      "pres_margin": "-27.8",
+      "holder_party": "R",
+      "candidate": "Katherine Washnok",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "8",
+      "seat_label": "SD Senate 8",
+      "pres_margin": "-35.5",
+      "holder_party": "R",
+      "candidate": "Todd Wilkinson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "9",
+      "seat_label": "SD Senate 9",
+      "pres_margin": "-23.9",
+      "holder_party": "R",
+      "candidate": "Joy Hohn",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "18",
+      "seat_label": "SD Senate 18",
+      "pres_margin": "-25.9",
+      "holder_party": "R",
+      "candidate": "Jean Hunhoff",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "21",
+      "seat_label": "SD Senate 21",
+      "pres_margin": "-56.5",
+      "holder_party": "R",
+      "candidate": "Erin Tobin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "26",
+      "seat_label": "SD Senate 26",
+      "pres_margin": "-12.2",
+      "holder_party": "R",
+      "candidate": "Rebecca Reimer",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [
     {
       "number": "Constitutional Amendment I",

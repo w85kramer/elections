@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T19:43:31.865863Z",
   "state": {
     "name": "Alabama",
     "abbr": "AL",
@@ -24,11 +24,11 @@
       "forecast": "Solid R",
       "forecast_details": [
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Solid R"
         },
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Solid R"
         }
       ]
@@ -2308,6 +2308,12 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Kristin Nelson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
           },
           {
             "name": "Kristin Nelson",
@@ -5629,22 +5635,31 @@
   ],
   "ballot_measures": [
     {
-      "number": "Allow Judges to Deny Bail for Certain Weapon Discharges and Attempted or Planned Murder Amendment",
-      "title": "Allow Judges to Deny Bail for Certain Weapon Discharges and Attempted or Planned Murder Amendment",
-      "description": "Add discharging a firearm in an occupied dwelling or other occupied space and any solicitation, attempt, or conspiracy to commit murder to the list of crimes for which a judge may deny bail. This legislatively referred constitutional amendment is on the Alabama 2026 ballot.",
+      "number": "Amendment 1",
+      "title": "Amendment 1",
+      "description": "Add discharging a firearm in an occupied dwelling or other occupied space and any solicitation, attempt, or conspiracy to commit murder to the list of crimes for which a judge may deny bail",
       "type": "Legislative Constitutional Amendment",
       "status": "On Ballot",
       "result": "Pending",
       "date": "2026-05-19"
     },
     {
-      "number": "Prohibit Diminishing District Attorney Compensation During Term of Office Amendment",
-      "title": "Prohibit Diminishing District Attorney Compensation During Term of Office Amendment",
-      "description": "Prohibit any reduction in a district attorney's compensation during their term in office. This legislatively referred constitutional amendment is on the Alabama 2026 ballot.",
+      "number": "Amendment 2",
+      "title": "Amendment 2",
+      "description": "Prohibit any reduction in a district attorney's compensation during their term in office",
       "type": "Legislative Constitutional Amendment",
       "status": "On Ballot",
       "result": "Pending",
       "date": "2026-05-19"
+    },
+    {
+      "number": "Increase Age Limit for Walker County Judge of Probate from 70 to 75 Amendment",
+      "title": "Increase Age Limit for Walker County Judge of Probate from 70 to 75 Amendment",
+      "description": "Increase the age limit for the judge of probate in Walker County from 70 to 75",
+      "type": "Legislative Constitutional Amendment",
+      "status": "On Ballot",
+      "result": "Pending",
+      "date": "2026-11-03"
     }
   ],
   "filing_deadline": "2026-01-23",

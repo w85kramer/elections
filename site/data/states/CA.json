@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T19:43:03.704793Z",
   "state": {
     "name": "California",
     "abbr": "CA",
@@ -24,11 +24,11 @@
       "forecast": "Solid D",
       "forecast_details": [
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Solid D"
         },
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Solid D"
         }
       ]
@@ -1213,7 +1213,350 @@
       "candidates": []
     },
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "CA Assembly 7",
+        "chamber": "Assembly",
+        "district": "7",
+        "candidates": [
+          {
+            "name": "Chris Hoang",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Assembly 9",
+        "chamber": "Assembly",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Matthew Adams",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Assembly 12",
+        "chamber": "Assembly",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Eli Beckman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary"
+          },
+          {
+            "name": "Jackie Elward",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Assembly 27",
+        "chamber": "Assembly",
+        "district": "27",
+        "candidates": [
+          {
+            "name": "Mike Murphy",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Assembly 70",
+        "chamber": "Assembly",
+        "district": "70",
+        "candidates": [
+          {
+            "name": "Tanya Cook",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Assembly 75",
+        "chamber": "Assembly",
+        "district": "75",
+        "candidates": [
+          {
+            "name": "Gerald Boursiquot",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 4",
+        "chamber": "Senate",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Marie Alvarado-Gil",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 6",
+        "chamber": "Senate",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Roger Niello",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 8",
+        "chamber": "Senate",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Angelique Ashby",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 10",
+        "chamber": "Senate",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Aisha Wahab",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary"
+          },
+          {
+            "name": "Scott Sakakihara",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 12",
+        "chamber": "Senate",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Michael Maher",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 14",
+        "chamber": "Senate",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Esmeralda Soria",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 16",
+        "chamber": "Senate",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Melissa Hurtado",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 18",
+        "chamber": "Senate",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Steve Padilla",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 20",
+        "chamber": "Senate",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Caroline Menjivar",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 22",
+        "chamber": "Senate",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "Susan Rubio",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 24",
+        "chamber": "Senate",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Nico Ruderman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary"
+          },
+          {
+            "name": "Sion Roy",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 26",
+        "chamber": "Senate",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Mar\u00eda Elena Durazo",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 28",
+        "chamber": "Senate",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Lola Smallwood-Cuevas",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 30",
+        "chamber": "Senate",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Bob Archuleta",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 32",
+        "chamber": "Senate",
+        "district": "32",
+        "candidates": [
+          {
+            "name": "Tiffanie Tate",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary"
+          },
+          {
+            "name": "Kelly Seyarto",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 36",
+        "chamber": "Senate",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Richard Foster",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary"
+          },
+          {
+            "name": "Tony Strickland",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 38",
+        "chamber": "Senate",
+        "district": "38",
+        "candidates": [
+          {
+            "name": "Catherine Blakespear",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary"
+          }
+        ]
+      },
+      {
+        "seat_label": "CA Senate 40",
+        "chamber": "Senate",
+        "district": "40",
+        "candidates": [
+          {
+            "name": "Sabrina Bazzo",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary"
+          }
+        ]
+      }
+    ]
   },
   "uncontested_primaries": [],
   "ballot_measures": [
