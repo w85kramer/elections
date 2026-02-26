@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T18:39:14.846683Z",
   "state": {
     "name": "Ohio",
     "abbr": "OH",
@@ -1474,15 +1474,405 @@
     ],
     "legislative": [
       {
+        "seat_label": "OH House 1",
+        "chamber": "House",
+        "district": "1",
+        "candidates": [
+          {
+            "name": "Christopher Robbins",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dontavius Jarrells",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joel A. Greff",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 2",
+        "chamber": "House",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Charity Martin King",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Elizabeth Richards",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael D. Cole",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 3",
+        "chamber": "House",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Ismail Mohamed",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 4",
+        "chamber": "House",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Beryl Piccolantonio",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 5",
+        "chamber": "House",
+        "district": "5",
+        "candidates": [
+          {
+            "name": "Meredith Lawson\u2010Rowe",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 6",
+        "chamber": "House",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Christine Cockley",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Matthew Jackson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 7",
+        "chamber": "House",
+        "district": "7",
+        "candidates": [
+          {
+            "name": "Michaela Burriss",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ukeme Awakessien Jeter",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Zach Rossfeld",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "William Mercier",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 8",
+        "chamber": "House",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Anita Somani",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 9",
+        "chamber": "House",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Munira Abdullahi",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bruce Euans",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 10",
+        "chamber": "House",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Mark Sigrist",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Denise D'Angelo Steele",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 11",
+        "chamber": "House",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Crystal Lett",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shawn Kaeser",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 12",
+        "chamber": "House",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Liam N. Strausbaugh",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brian Stewart",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Patty Hamilton",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 13",
+        "chamber": "House",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Tristan Rader",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Billy Fronimo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 14",
+        "chamber": "House",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Sean Brennan",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Morgan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 15",
+        "chamber": "House",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Chris Glassburn",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Daniel Conway",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 16",
+        "chamber": "House",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Scott DiMauro",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sophia Tjotjos",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 17",
+        "chamber": "House",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Megan Coy",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mike Dovilla",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "OH House 18",
         "chamber": "House",
         "district": "18",
         "candidates": [
           {
+            "name": "Davida Russell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gabe Crenshaw",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Peter Hoffman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Samuel Grube",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Maureen Lynn",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 19",
+        "chamber": "House",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Azaadjeet Singh",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cheryl Perez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dionna Gore",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nicole Sigurdson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Eric Geyer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1492,10 +1882,130 @@
         "district": "20",
         "candidates": [
           {
+            "name": "Charlotte Perkins",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Eugene Miller",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Lauren Welch",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Mike Seals",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Donna Walker-Brown",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 21",
+        "chamber": "House",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Eric Synenberg",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tina Barhams",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 22",
+        "chamber": "House",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "Darnell Brewer",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 23",
+        "chamber": "House",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "Dan Troy",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Julie A. Belich",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 24",
+        "chamber": "House",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Dani Isaacsohn",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 25",
+        "chamber": "House",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "Cecil Thomas",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 26",
+        "chamber": "House",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Ashley Bryant Bailey",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tom Brinkman Jr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1505,7 +2015,152 @@
         "district": "27",
         "candidates": [
           {
+            "name": "Rachel Baker",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Elizabeth Maier",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 28",
+        "chamber": "House",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Karen Brownlee",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jill Cole",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 29",
+        "chamber": "House",
+        "district": "29",
+        "candidates": [
+          {
+            "name": "Jonathan Bradner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cindy Abrams",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 30",
+        "chamber": "House",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Caleb Price",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mike Odioso",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 31",
+        "chamber": "House",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "J. Noah Spinner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mike Kahoe",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Stephanie Stock",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 32",
+        "chamber": "House",
+        "district": "32",
+        "candidates": [
+          {
+            "name": "Djordjije Popovic",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jack Daniels",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 33",
+        "chamber": "House",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Veronica Sims",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Napoleon Rodgers Jr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 34",
+        "chamber": "House",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Derrick Hall",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Craig Shubert",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -1518,7 +2173,107 @@
         "district": "35",
         "candidates": [
           {
+            "name": "Molly Schneider",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Samantha Salamon",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Ryan Britt",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Vik Sandhu",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 36",
+        "chamber": "House",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Rose Lounsbury",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Andrea White",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 37",
+        "chamber": "House",
+        "district": "37",
+        "candidates": [
+          {
+            "name": "Phil Crippen",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tom Herner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tom Young",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 38",
+        "chamber": "House",
+        "district": "38",
+        "candidates": [
+          {
+            "name": "Desire\u00e8 Tims",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 39",
+        "chamber": "House",
+        "district": "39",
+        "candidates": [
+          {
+            "name": "Daquan Neal",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mike Stevens",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mark Campbell",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -1531,6 +2286,12 @@
         "district": "40",
         "candidates": [
           {
+            "name": "Timothy Hornbacker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Jeffrey Todd Smith",
             "party": "R",
             "is_incumbent": false,
@@ -1541,6 +2302,263 @@
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
+          },
+          {
+            "name": "Rodney Creech",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 41",
+        "chamber": "House",
+        "district": "41",
+        "candidates": [
+          {
+            "name": "Erika White",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ian Chamberlin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 42",
+        "chamber": "House",
+        "district": "42",
+        "candidates": [
+          {
+            "name": "Elgin Rogers",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 43",
+        "chamber": "House",
+        "district": "43",
+        "candidates": [
+          {
+            "name": "Michele Grim",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Karmol",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kristi Kille",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 44",
+        "chamber": "House",
+        "district": "44",
+        "candidates": [
+          {
+            "name": "David J. Fournier",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Edward L. Schimmel",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "John Rozic",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Patrick Richardson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 45",
+        "chamber": "House",
+        "district": "45",
+        "candidates": [
+          {
+            "name": "Jayson Ameer Rasheed",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jennifer Gross",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 46",
+        "chamber": "House",
+        "district": "46",
+        "candidates": [
+          {
+            "name": "Benjamin McCall",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Thomas Hall",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 47",
+        "chamber": "House",
+        "district": "47",
+        "candidates": [
+          {
+            "name": "Jordan Haire",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Diane Mullins",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 48",
+        "chamber": "House",
+        "district": "48",
+        "candidates": [
+          {
+            "name": "Nick Morris",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Christina Hagan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Ed Lohnes",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Greg Wolfe",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Sue Grabowski",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 49",
+        "chamber": "House",
+        "district": "49",
+        "candidates": [
+          {
+            "name": "Brit Steiner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Krista Allison",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jim Thomas",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 50",
+        "chamber": "House",
+        "district": "50",
+        "candidates": [
+          {
+            "name": "Brian Sommers",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Matt Kishman",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 51",
+        "chamber": "House",
+        "district": "51",
+        "candidates": [
+          {
+            "name": "Amanda Fontana",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Angie Hall Pekarek",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jodi Salvo",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1550,9 +2568,285 @@
         "district": "52",
         "candidates": [
           {
+            "name": "Graig Bansek",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mike Baker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Nathan Manning",
             "party": "R",
             "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 53",
+        "chamber": "House",
+        "district": "53",
+        "candidates": [
+          {
+            "name": "Dan Nutt",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Matt Lundy",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bradley Lacko",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 54",
+        "chamber": "House",
+        "district": "54",
+        "candidates": [
+          {
+            "name": "Brenda Buchanan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kellie Deeter",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 55",
+        "chamber": "House",
+        "district": "55",
+        "candidates": [
+          {
+            "name": "Paul Kurtz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michelle Teska",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 56",
+        "chamber": "House",
+        "district": "56",
+        "candidates": [
+          {
+            "name": "Laalitya Acharya",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Adam Mathews",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 57",
+        "chamber": "House",
+        "district": "57",
+        "candidates": [
+          {
+            "name": "Rick Walker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jesse Styles",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 58",
+        "chamber": "House",
+        "district": "58",
+        "candidates": [
+          {
+            "name": "Basia Adamczak",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Boccieri",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jordan Pegues",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Heather Fronk",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 59",
+        "chamber": "House",
+        "district": "59",
+        "candidates": [
+          {
+            "name": "Wayne Penny Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tex Fischer",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 60",
+        "chamber": "House",
+        "district": "60",
+        "candidates": [
+          {
+            "name": "Eli Wenzel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shelby Kimball",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brian Lorenz",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Peggy Guzzo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 61",
+        "chamber": "House",
+        "district": "61",
+        "candidates": [
+          {
+            "name": "Vince McGrail",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Andrew Brenner",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Shawn Stevens",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 62",
+        "chamber": "House",
+        "district": "62",
+        "candidates": [
+          {
+            "name": "Ian Schwartz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dillon Blevins",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jean Schmidt",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 63",
+        "chamber": "House",
+        "district": "63",
+        "candidates": [
+          {
+            "name": "Debbie Davidson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Adam Bird",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 64",
+        "chamber": "House",
+        "district": "64",
+        "candidates": [
+          {
+            "name": "Nick Santucci",
+            "party": "R",
+            "is_incumbent": true,
             "election_type": "Primary_R"
           }
         ]
@@ -1563,9 +2857,40 @@
         "district": "65",
         "candidates": [
           {
+            "name": "Lorna Westlake",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "David Thomas",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 66",
+        "chamber": "House",
+        "district": "66",
+        "candidates": [
+          {
+            "name": "Chris Nardo",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Aidan Haggard",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Sean Hutson",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -1576,7 +2901,284 @@
         "district": "67",
         "candidates": [
           {
+            "name": "Heather Sample",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Melanie Miller",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 68",
+        "chamber": "House",
+        "district": "68",
+        "candidates": [
+          {
+            "name": "Mason Blankenship",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Thad Claggett",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 69",
+        "chamber": "House",
+        "district": "69",
+        "candidates": [
+          {
+            "name": "Amy Rigsby",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kevin Miller",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 70",
+        "chamber": "House",
+        "district": "70",
+        "candidates": [
+          {
+            "name": "Kim McCarthy",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brian Lampton",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Terry Free",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 71",
+        "chamber": "House",
+        "district": "71",
+        "candidates": [
+          {
+            "name": "Krista Magaw",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Levi Dean",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 72",
+        "chamber": "House",
+        "district": "72",
+        "candidates": [
+          {
+            "name": "Jeff Clapper",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nathaniel Adams",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Heidi Workman",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 73",
+        "chamber": "House",
+        "district": "73",
+        "candidates": [
+          {
+            "name": "Andrew Foltz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Whittney Wood",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jeff LaRe",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 74",
+        "chamber": "House",
+        "district": "74",
+        "candidates": [
+          {
+            "name": "Darrell Jackson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bernie Willis",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 75",
+        "chamber": "House",
+        "district": "75",
+        "candidates": [
+          {
+            "name": "Jake Kielmeyer",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Haraz Ghanbari",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 76",
+        "chamber": "House",
+        "district": "76",
+        "candidates": [
+          {
+            "name": "Colton Stidam",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marilyn John",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 77",
+        "chamber": "House",
+        "district": "77",
+        "candidates": [
+          {
+            "name": "Brooke Dillon",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Meredith Craig",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 78",
+        "chamber": "House",
+        "district": "78",
+        "candidates": [
+          {
+            "name": "Jeffrey R. Givan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Matt Huffman",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 79",
+        "chamber": "House",
+        "district": "79",
+        "candidates": [
+          {
+            "name": "Bob Guy",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Monica Blasdel",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 80",
+        "chamber": "House",
+        "district": "80",
+        "candidates": [
+          {
+            "name": "Katie Koehler Wagner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Melissa VanDyke",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Johnathan Newman",
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
@@ -1589,7 +3191,113 @@
         "district": "81",
         "candidates": [
           {
+            "name": "David Swanson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Brandon Moskwa",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Patti Rockey",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 82",
+        "chamber": "House",
+        "district": "82",
+        "candidates": [
+          {
+            "name": "David Plant",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Roy Klopfenstein",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 83",
+        "chamber": "House",
+        "district": "83",
+        "candidates": [
+          {
+            "name": "John Clayton Newlin II",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Pamela Grogean",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Victoria Maddox",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tim Barhorst",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 86",
+        "chamber": "House",
+        "district": "86",
+        "candidates": [
+          {
+            "name": "Kent Halloran",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Benjamin Weber",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Stephen Wolfe",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Wezlynn Davis",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 87",
+        "chamber": "House",
+        "district": "87",
+        "candidates": [
+          {
+            "name": "Jeffrey McClain",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -1612,6 +3320,239 @@
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
+          },
+          {
+            "name": "Gary Click",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 89",
+        "chamber": "House",
+        "district": "89",
+        "candidates": [
+          {
+            "name": "Easton Retzke",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "D.J. Swearingen",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 90",
+        "chamber": "House",
+        "district": "90",
+        "candidates": [
+          {
+            "name": "Collin Docterman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Justin Pizzulli",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 91",
+        "chamber": "House",
+        "district": "91",
+        "candidates": [
+          {
+            "name": "Amy Wright",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bob Peterson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 92",
+        "chamber": "House",
+        "district": "92",
+        "candidates": [
+          {
+            "name": "Sarah Senff",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mark Johnson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 93",
+        "chamber": "House",
+        "district": "93",
+        "candidates": [
+          {
+            "name": "Jessica Harper",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jason Stephens",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Larry Kidd",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 94",
+        "chamber": "House",
+        "district": "94",
+        "candidates": [
+          {
+            "name": "Wenda Sheard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kevin Ritter",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 95",
+        "chamber": "House",
+        "district": "95",
+        "candidates": [
+          {
+            "name": "James Joyce",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Paul Cameron",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ty Moore",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 96",
+        "chamber": "House",
+        "district": "96",
+        "candidates": [
+          {
+            "name": "Charrie L. Foglio",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Frank Hoagland",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Ron Ferguson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 97",
+        "chamber": "House",
+        "district": "97",
+        "candidates": [
+          {
+            "name": "Adam Holmes",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 98",
+        "chamber": "House",
+        "district": "98",
+        "candidates": [
+          {
+            "name": "Scott Grund",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mark Hiner",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 99",
+        "chamber": "House",
+        "district": "99",
+        "candidates": [
+          {
+            "name": "Louis Murphy",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael Price",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sarah Fowler Arthur",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1630,6 +3571,31 @@
             "name": "James Hoops",
             "party": "R",
             "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH Senate 3",
+        "chamber": "Senate",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Natasha Wheatley-Caffrey",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Stacie Baker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michele Reynolds",
+            "party": "R",
+            "is_incumbent": true,
             "election_type": "Primary_R"
           }
         ]
@@ -1659,6 +3625,18 @@
         "district": "7",
         "candidates": [
           {
+            "name": "Cara Jacob",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kim Lukens",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Scott Lipps",
             "party": "R",
             "is_incumbent": false,
@@ -1666,6 +3644,38 @@
           },
           {
             "name": "Zac Haines",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH Senate 9",
+        "chamber": "Senate",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Catherine Ingram",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH Senate 11",
+        "chamber": "Senate",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Paula Hicks-Hudson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "James Nowak",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -1692,14 +3702,215 @@
         ]
       },
       {
+        "seat_label": "OH Senate 15",
+        "chamber": "Senate",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Latyna Humphrey",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph Healy",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH Senate 17",
+        "chamber": "Senate",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Brian Deer",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shane Wilkin",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH Senate 19",
+        "chamber": "Senate",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Janet Wagner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Beth Lear",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Ryan Rivers",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH Senate 21",
+        "chamber": "Senate",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Delores Gray Ford",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kent Smith",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mikhail Alterman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH Senate 23",
+        "chamber": "Senate",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "Bride Rose Sweeney",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert Dintaman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH Senate 25",
+        "chamber": "Senate",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "Bill DeMora",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jesse Baker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Raisheda Angus",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Don Roberts",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "OH Senate 27",
         "chamber": "Senate",
         "district": "27",
         "candidates": [
           {
+            "name": "Mike Roberto",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Steve Demetriou",
             "party": "R",
             "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH Senate 29",
+        "chamber": "Senate",
+        "district": "29",
+        "candidates": [
+          {
+            "name": "Thomas West",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jane Timken",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH Senate 31",
+        "chamber": "Senate",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "Laura Sirot",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Al Landis",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH Senate 33",
+        "chamber": "Senate",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Michael Kripchak",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Al Cutrona",
+            "party": "R",
+            "is_incumbent": true,
             "election_type": "Primary_R"
           }
         ]
@@ -1710,21 +3921,641 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "18",
-      "seat_label": "OH House 18",
-      "pres_margin": "+77.3",
+      "district": "3",
+      "seat_label": "OH House 3",
+      "pres_margin": "+59.2",
       "holder_party": "D",
-      "candidate": "Samuel Grube",
+      "candidate": "Ismail Mohamed",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "20",
-      "seat_label": "OH House 20",
-      "pres_margin": "+73.2",
+      "district": "4",
+      "seat_label": "OH House 4",
+      "pres_margin": "+18.3",
       "holder_party": "D",
-      "candidate": "Lauren Welch",
+      "candidate": "Beryl Piccolantonio",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "5",
+      "seat_label": "OH House 5",
+      "pres_margin": "+16.5",
+      "holder_party": "D",
+      "candidate": "Meredith Lawson\u2010Rowe",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "6",
+      "seat_label": "OH House 6",
+      "pres_margin": "+11.5",
+      "holder_party": "D",
+      "candidate": "Christine Cockley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "8",
+      "seat_label": "OH House 8",
+      "pres_margin": "+32.3",
+      "holder_party": "D",
+      "candidate": "Anita Somani",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "9",
+      "seat_label": "OH House 9",
+      "pres_margin": "+35.2",
+      "holder_party": "D",
+      "candidate": "Munira Abdullahi",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "10",
+      "seat_label": "OH House 10",
+      "pres_margin": "-1.7",
+      "holder_party": "D",
+      "candidate": "Mark Sigrist",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "11",
+      "seat_label": "OH House 11",
+      "pres_margin": "+14.7",
+      "holder_party": "D",
+      "candidate": "Crystal Lett",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "12",
+      "seat_label": "OH House 12",
+      "pres_margin": "-44.5",
+      "holder_party": "R",
+      "candidate": "Liam N. Strausbaugh",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "13",
+      "seat_label": "OH House 13",
+      "pres_margin": "+48.8",
+      "holder_party": "D",
+      "candidate": "Tristan Rader",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "14",
+      "seat_label": "OH House 14",
+      "pres_margin": "-1.5",
+      "holder_party": "D",
+      "candidate": "Sean Brennan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "15",
+      "seat_label": "OH House 15",
+      "pres_margin": "+3.0",
+      "holder_party": "D",
+      "candidate": "Chris Glassburn",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "16",
+      "seat_label": "OH House 16",
+      "pres_margin": "+18.7",
+      "holder_party": "D",
+      "candidate": "Scott DiMauro",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "17",
+      "seat_label": "OH House 17",
+      "pres_margin": "-6.4",
+      "holder_party": "R",
+      "candidate": "Megan Coy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "21",
+      "seat_label": "OH House 21",
+      "pres_margin": "+53.6",
+      "holder_party": "D",
+      "candidate": "Eric Synenberg",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "22",
+      "seat_label": "OH House 22",
+      "pres_margin": "+69.3",
+      "holder_party": "D",
+      "candidate": "Darnell Brewer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "23",
+      "seat_label": "OH House 23",
+      "pres_margin": "-0.7",
+      "holder_party": "D",
+      "candidate": "Dan Troy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "24",
+      "seat_label": "OH House 24",
+      "pres_margin": "+44.6",
+      "holder_party": "D",
+      "candidate": "Dani Isaacsohn",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "25",
+      "seat_label": "OH House 25",
+      "pres_margin": "+65.7",
+      "holder_party": "D",
+      "candidate": "Cecil Thomas",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "26",
+      "seat_label": "OH House 26",
+      "pres_margin": "+41.2",
+      "holder_party": "D",
+      "candidate": "Ashley Bryant Bailey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "27",
+      "seat_label": "OH House 27",
+      "pres_margin": "+12.3",
+      "holder_party": "D",
+      "candidate": "Rachel Baker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "28",
+      "seat_label": "OH House 28",
+      "pres_margin": "+14.2",
+      "holder_party": "D",
+      "candidate": "Karen Brownlee",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "29",
+      "seat_label": "OH House 29",
+      "pres_margin": "-10.8",
+      "holder_party": "R",
+      "candidate": "Jonathan Bradner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "30",
+      "seat_label": "OH House 30",
+      "pres_margin": "-34.0",
+      "holder_party": "R",
+      "candidate": "Caleb Price",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "31",
+      "seat_label": "OH House 31",
+      "pres_margin": "-1.0",
+      "holder_party": "R",
+      "candidate": "J. Noah Spinner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "32",
+      "seat_label": "OH House 32",
+      "pres_margin": "-14.5",
+      "holder_party": "R",
+      "candidate": "Djordjije Popovic",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "33",
+      "seat_label": "OH House 33",
+      "pres_margin": "+42.2",
+      "holder_party": "D",
+      "candidate": "Veronica Sims",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "34",
+      "seat_label": "OH House 34",
+      "pres_margin": "+7.6",
+      "holder_party": "D",
+      "candidate": "Derrick Hall",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "36",
+      "seat_label": "OH House 36",
+      "pres_margin": "+0.9",
+      "holder_party": "R",
+      "candidate": "Rose Lounsbury",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "38",
+      "seat_label": "OH House 38",
+      "pres_margin": "+49.3",
+      "holder_party": "D",
+      "candidate": "Desire\u00e8 Tims",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "40",
+      "seat_label": "OH House 40",
+      "pres_margin": "-51.3",
+      "holder_party": "R",
+      "candidate": "Timothy Hornbacker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "41",
+      "seat_label": "OH House 41",
+      "pres_margin": "+18.0",
+      "holder_party": "D",
+      "candidate": "Erika White",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "42",
+      "seat_label": "OH House 42",
+      "pres_margin": "+27.7",
+      "holder_party": "D",
+      "candidate": "Elgin Rogers",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "43",
+      "seat_label": "OH House 43",
+      "pres_margin": "+19.0",
+      "holder_party": "D",
+      "candidate": "Michele Grim",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "44",
+      "seat_label": "OH House 44",
+      "pres_margin": "-10.1",
+      "holder_party": "R",
+      "candidate": "David J. Fournier",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "45",
+      "seat_label": "OH House 45",
+      "pres_margin": "-19.3",
+      "holder_party": "R",
+      "candidate": "Jayson Ameer Rasheed",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "46",
+      "seat_label": "OH House 46",
+      "pres_margin": "-29.5",
+      "holder_party": "R",
+      "candidate": "Benjamin McCall",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "47",
+      "seat_label": "OH House 47",
+      "pres_margin": "-24.3",
+      "holder_party": "R",
+      "candidate": "Jordan Haire",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "48",
+      "seat_label": "OH House 48",
+      "pres_margin": "-25.8",
+      "holder_party": "R",
+      "candidate": "Nick Morris",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "50",
+      "seat_label": "OH House 50",
+      "pres_margin": "-28.5",
+      "holder_party": "R",
+      "candidate": "Brian Sommers",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "54",
+      "seat_label": "OH House 54",
+      "pres_margin": "-29.5",
+      "holder_party": "R",
+      "candidate": "Brenda Buchanan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "55",
+      "seat_label": "OH House 55",
+      "pres_margin": "-43.2",
+      "holder_party": "R",
+      "candidate": "Paul Kurtz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "56",
+      "seat_label": "OH House 56",
+      "pres_margin": "-18.3",
+      "holder_party": "R",
+      "candidate": "Laalitya Acharya",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "57",
+      "seat_label": "OH House 57",
+      "pres_margin": "-20.9",
+      "holder_party": "R",
+      "candidate": "Rick Walker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "59",
+      "seat_label": "OH House 59",
+      "pres_margin": "-24.2",
+      "holder_party": "R",
+      "candidate": "Wayne Penny Jr.",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "61",
+      "seat_label": "OH House 61",
+      "pres_margin": "-19.5",
+      "holder_party": "R",
+      "candidate": "Vince McGrail",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "62",
+      "seat_label": "OH House 62",
+      "pres_margin": "-28.8",
+      "holder_party": "R",
+      "candidate": "Ian Schwartz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "63",
+      "seat_label": "OH House 63",
+      "pres_margin": "-50.5",
+      "holder_party": "R",
+      "candidate": "Debbie Davidson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "65",
+      "seat_label": "OH House 65",
+      "pres_margin": "-28.5",
+      "holder_party": "R",
+      "candidate": "Lorna Westlake",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "66",
+      "seat_label": "OH House 66",
+      "pres_margin": "-23.7",
+      "holder_party": "R",
+      "candidate": "Chris Nardo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "67",
+      "seat_label": "OH House 67",
+      "pres_margin": "-36.5",
+      "holder_party": "R",
+      "candidate": "Heather Sample",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "68",
+      "seat_label": "OH House 68",
+      "pres_margin": "-19.8",
+      "holder_party": "R",
+      "candidate": "Mason Blankenship",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "69",
+      "seat_label": "OH House 69",
+      "pres_margin": "-50.7",
+      "holder_party": "R",
+      "candidate": "Amy Rigsby",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "70",
+      "seat_label": "OH House 70",
+      "pres_margin": "-17.0",
+      "holder_party": "R",
+      "candidate": "Kim McCarthy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "71",
+      "seat_label": "OH House 71",
+      "pres_margin": "-40.0",
+      "holder_party": "R",
+      "candidate": "Krista Magaw",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "74",
+      "seat_label": "OH House 74",
+      "pres_margin": "-26.6",
+      "holder_party": "R",
+      "candidate": "Darrell Jackson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "75",
+      "seat_label": "OH House 75",
+      "pres_margin": "-10.6",
+      "holder_party": "R",
+      "candidate": "Jake Kielmeyer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "76",
+      "seat_label": "OH House 76",
+      "pres_margin": "-42.3",
+      "holder_party": "R",
+      "candidate": "Colton Stidam",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "77",
+      "seat_label": "OH House 77",
+      "pres_margin": "-39.3",
+      "holder_party": "R",
+      "candidate": "Brooke Dillon",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "78",
+      "seat_label": "OH House 78",
+      "pres_margin": "-47.2",
+      "holder_party": "R",
+      "candidate": "Jeffrey R. Givan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "79",
+      "seat_label": "OH House 79",
+      "pres_margin": "-49.4",
+      "holder_party": "R",
+      "candidate": "Bob Guy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "81",
+      "seat_label": "OH House 81",
+      "pres_margin": "-46.0",
+      "holder_party": "R",
+      "candidate": "David Swanson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "82",
+      "seat_label": "OH House 82",
+      "pres_margin": "-55.8",
+      "holder_party": "R",
+      "candidate": "David Plant",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "86",
+      "seat_label": "OH House 86",
+      "pres_margin": "-31.4",
+      "holder_party": "R",
+      "candidate": "Kent Halloran",
       "is_open_seat": null
     },
     {
@@ -1739,12 +4570,372 @@
     },
     {
       "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "89",
+      "seat_label": "OH House 89",
+      "pres_margin": "-18.7",
+      "holder_party": "R",
+      "candidate": "Easton Retzke",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "90",
+      "seat_label": "OH House 90",
+      "pres_margin": "-54.0",
+      "holder_party": "R",
+      "candidate": "Collin Docterman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "91",
+      "seat_label": "OH House 91",
+      "pres_margin": "-57.9",
+      "holder_party": "R",
+      "candidate": "Amy Wright",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "92",
+      "seat_label": "OH House 92",
+      "pres_margin": "-42.3",
+      "holder_party": "R",
+      "candidate": "Sarah Senff",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "93",
+      "seat_label": "OH House 93",
+      "pres_margin": "-54.7",
+      "holder_party": "R",
+      "candidate": "Jessica Harper",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "94",
+      "seat_label": "OH House 94",
+      "pres_margin": "-39.1",
+      "holder_party": "R",
+      "candidate": "Wenda Sheard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "96",
+      "seat_label": "OH House 96",
+      "pres_margin": "-45.7",
+      "holder_party": "R",
+      "candidate": "Charrie L. Foglio",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "98",
+      "seat_label": "OH House 98",
+      "pres_margin": "-51.1",
+      "holder_party": "R",
+      "candidate": "Scott Grund",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "7",
+      "seat_label": "OH Senate 7",
+      "pres_margin": "-16.9",
+      "holder_party": "R",
+      "candidate": "Cara Jacob",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "9",
+      "seat_label": "OH Senate 9",
+      "pres_margin": "+49.1",
+      "holder_party": "D",
+      "candidate": "Catherine Ingram",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "11",
+      "seat_label": "OH Senate 11",
+      "pres_margin": "+21.0",
+      "holder_party": "D",
+      "candidate": "Paula Hicks-Hudson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
       "chamber": "Senate",
       "district": "13",
       "seat_label": "OH Senate 13",
       "pres_margin": "-10.8",
       "holder_party": "R",
       "candidate": "Joseph A. Miller III",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "15",
+      "seat_label": "OH Senate 15",
+      "pres_margin": "+56.8",
+      "holder_party": "D",
+      "candidate": "Latyna Humphrey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "17",
+      "seat_label": "OH Senate 17",
+      "pres_margin": "-51.7",
+      "holder_party": "R",
+      "candidate": "Brian Deer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "19",
+      "seat_label": "OH Senate 19",
+      "pres_margin": "-20.7",
+      "holder_party": "R",
+      "candidate": "Janet Wagner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "23",
+      "seat_label": "OH Senate 23",
+      "pres_margin": "+41.2",
+      "holder_party": "D",
+      "candidate": "Bride Rose Sweeney",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "27",
+      "seat_label": "OH Senate 27",
+      "pres_margin": "-5.8",
+      "holder_party": "R",
+      "candidate": "Mike Roberto",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "29",
+      "seat_label": "OH Senate 29",
+      "pres_margin": "-20.1",
+      "holder_party": "R",
+      "candidate": "Thomas West",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "31",
+      "seat_label": "OH Senate 31",
+      "pres_margin": "-43.0",
+      "holder_party": "R",
+      "candidate": "Laura Sirot",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "33",
+      "seat_label": "OH Senate 33",
+      "pres_margin": "-23.9",
+      "holder_party": "R",
+      "candidate": "Michael Kripchak",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "1",
+      "seat_label": "OH House 1",
+      "pres_margin": "+61.4",
+      "holder_party": "D",
+      "candidate": "Joel A. Greff",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "6",
+      "seat_label": "OH House 6",
+      "pres_margin": "+11.5",
+      "holder_party": "D",
+      "candidate": "Matthew Jackson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "7",
+      "seat_label": "OH House 7",
+      "pres_margin": "+42.1",
+      "holder_party": "D",
+      "candidate": "William Mercier",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "9",
+      "seat_label": "OH House 9",
+      "pres_margin": "+35.2",
+      "holder_party": "D",
+      "candidate": "Bruce Euans",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "10",
+      "seat_label": "OH House 10",
+      "pres_margin": "-1.7",
+      "holder_party": "D",
+      "candidate": "Denise D'Angelo Steele",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "11",
+      "seat_label": "OH House 11",
+      "pres_margin": "+14.7",
+      "holder_party": "D",
+      "candidate": "Shawn Kaeser",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "13",
+      "seat_label": "OH House 13",
+      "pres_margin": "+48.8",
+      "holder_party": "D",
+      "candidate": "Billy Fronimo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "14",
+      "seat_label": "OH House 14",
+      "pres_margin": "-1.5",
+      "holder_party": "D",
+      "candidate": "David Morgan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "15",
+      "seat_label": "OH House 15",
+      "pres_margin": "+3.0",
+      "holder_party": "D",
+      "candidate": "Daniel Conway",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "16",
+      "seat_label": "OH House 16",
+      "pres_margin": "+18.7",
+      "holder_party": "D",
+      "candidate": "Sophia Tjotjos",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "17",
+      "seat_label": "OH House 17",
+      "pres_margin": "-6.4",
+      "holder_party": "R",
+      "candidate": "Mike Dovilla",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "18",
+      "seat_label": "OH House 18",
+      "pres_margin": "+77.3",
+      "holder_party": "D",
+      "candidate": "Maureen Lynn",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "19",
+      "seat_label": "OH House 19",
+      "pres_margin": "+12.1",
+      "holder_party": "D",
+      "candidate": "Eric Geyer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "20",
+      "seat_label": "OH House 20",
+      "pres_margin": "+73.2",
+      "holder_party": "D",
+      "candidate": "Donna Walker-Brown",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "21",
+      "seat_label": "OH House 21",
+      "pres_margin": "+53.6",
+      "holder_party": "D",
+      "candidate": "Tina Barhams",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "23",
+      "seat_label": "OH House 23",
+      "pres_margin": "-0.7",
+      "holder_party": "D",
+      "candidate": "Julie A. Belich",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "26",
+      "seat_label": "OH House 26",
+      "pres_margin": "+41.2",
+      "holder_party": "D",
+      "candidate": "Tom Brinkman Jr.",
       "is_open_seat": null
     },
     {
@@ -1760,11 +4951,161 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "35",
-      "seat_label": "OH House 35",
-      "pres_margin": "-1.4",
+      "district": "28",
+      "seat_label": "OH House 28",
+      "pres_margin": "+14.2",
+      "holder_party": "D",
+      "candidate": "Jill Cole",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "29",
+      "seat_label": "OH House 29",
+      "pres_margin": "-10.8",
       "holder_party": "R",
-      "candidate": "Ryan Britt",
+      "candidate": "Cindy Abrams",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "30",
+      "seat_label": "OH House 30",
+      "pres_margin": "-34.0",
+      "holder_party": "R",
+      "candidate": "Mike Odioso",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "32",
+      "seat_label": "OH House 32",
+      "pres_margin": "-14.5",
+      "holder_party": "R",
+      "candidate": "Jack Daniels",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "33",
+      "seat_label": "OH House 33",
+      "pres_margin": "+42.2",
+      "holder_party": "D",
+      "candidate": "Napoleon Rodgers Jr.",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "34",
+      "seat_label": "OH House 34",
+      "pres_margin": "+7.6",
+      "holder_party": "D",
+      "candidate": "Craig Shubert",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "36",
+      "seat_label": "OH House 36",
+      "pres_margin": "+0.9",
+      "holder_party": "R",
+      "candidate": "Andrea White",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "37",
+      "seat_label": "OH House 37",
+      "pres_margin": "-8.5",
+      "holder_party": "R",
+      "candidate": "Tom Young",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "39",
+      "seat_label": "OH House 39",
+      "pres_margin": "-5.7",
+      "holder_party": "R",
+      "candidate": "Mark Campbell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "41",
+      "seat_label": "OH House 41",
+      "pres_margin": "+18.0",
+      "holder_party": "D",
+      "candidate": "Ian Chamberlin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "45",
+      "seat_label": "OH House 45",
+      "pres_margin": "-19.3",
+      "holder_party": "R",
+      "candidate": "Jennifer Gross",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "46",
+      "seat_label": "OH House 46",
+      "pres_margin": "-29.5",
+      "holder_party": "R",
+      "candidate": "Thomas Hall",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "47",
+      "seat_label": "OH House 47",
+      "pres_margin": "-24.3",
+      "holder_party": "R",
+      "candidate": "Diane Mullins",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "49",
+      "seat_label": "OH House 49",
+      "pres_margin": "-2.6",
+      "holder_party": "R",
+      "candidate": "Jim Thomas",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "50",
+      "seat_label": "OH House 50",
+      "pres_margin": "-28.5",
+      "holder_party": "R",
+      "candidate": "Matt Kishman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "51",
+      "seat_label": "OH House 51",
+      "pres_margin": "-44.9",
+      "holder_party": "R",
+      "candidate": "Jodi Salvo",
       "is_open_seat": null
     },
     {
@@ -1775,6 +5116,96 @@
       "pres_margin": "-4.1",
       "holder_party": "R",
       "candidate": "Nathan Manning",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "53",
+      "seat_label": "OH House 53",
+      "pres_margin": "+2.7",
+      "holder_party": "D",
+      "candidate": "Bradley Lacko",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "54",
+      "seat_label": "OH House 54",
+      "pres_margin": "-29.5",
+      "holder_party": "R",
+      "candidate": "Kellie Deeter",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "55",
+      "seat_label": "OH House 55",
+      "pres_margin": "-43.2",
+      "holder_party": "R",
+      "candidate": "Michelle Teska",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "56",
+      "seat_label": "OH House 56",
+      "pres_margin": "-18.3",
+      "holder_party": "R",
+      "candidate": "Adam Mathews",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "57",
+      "seat_label": "OH House 57",
+      "pres_margin": "-20.9",
+      "holder_party": "R",
+      "candidate": "Jesse Styles",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "58",
+      "seat_label": "OH House 58",
+      "pres_margin": "+4.7",
+      "holder_party": "D",
+      "candidate": "Heather Fronk",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "59",
+      "seat_label": "OH House 59",
+      "pres_margin": "-24.2",
+      "holder_party": "R",
+      "candidate": "Tex Fischer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "63",
+      "seat_label": "OH House 63",
+      "pres_margin": "-50.5",
+      "holder_party": "R",
+      "candidate": "Adam Bird",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "64",
+      "seat_label": "OH House 64",
+      "pres_margin": "-12.9",
+      "holder_party": "R",
+      "candidate": "Nick Santucci",
       "is_open_seat": null
     },
     {
@@ -1800,21 +5231,261 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "81",
-      "seat_label": "OH House 81",
-      "pres_margin": "-46.0",
+      "district": "68",
+      "seat_label": "OH House 68",
+      "pres_margin": "-19.8",
       "holder_party": "R",
-      "candidate": "Brandon Moskwa",
+      "candidate": "Thad Claggett",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "88",
-      "seat_label": "OH House 88",
-      "pres_margin": "-33.9",
+      "district": "69",
+      "seat_label": "OH House 69",
+      "pres_margin": "-50.7",
       "holder_party": "R",
-      "candidate": "Eric Watson",
+      "candidate": "Kevin Miller",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "71",
+      "seat_label": "OH House 71",
+      "pres_margin": "-40.0",
+      "holder_party": "R",
+      "candidate": "Levi Dean",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "72",
+      "seat_label": "OH House 72",
+      "pres_margin": "-16.7",
+      "holder_party": "R",
+      "candidate": "Heidi Workman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "73",
+      "seat_label": "OH House 73",
+      "pres_margin": "-16.6",
+      "holder_party": "R",
+      "candidate": "Jeff LaRe",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "74",
+      "seat_label": "OH House 74",
+      "pres_margin": "-26.6",
+      "holder_party": "R",
+      "candidate": "Bernie Willis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "75",
+      "seat_label": "OH House 75",
+      "pres_margin": "-10.6",
+      "holder_party": "R",
+      "candidate": "Haraz Ghanbari",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "76",
+      "seat_label": "OH House 76",
+      "pres_margin": "-42.3",
+      "holder_party": "R",
+      "candidate": "Marilyn John",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "77",
+      "seat_label": "OH House 77",
+      "pres_margin": "-39.3",
+      "holder_party": "R",
+      "candidate": "Meredith Craig",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "78",
+      "seat_label": "OH House 78",
+      "pres_margin": "-47.2",
+      "holder_party": "R",
+      "candidate": "Matt Huffman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "79",
+      "seat_label": "OH House 79",
+      "pres_margin": "-49.4",
+      "holder_party": "R",
+      "candidate": "Monica Blasdel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "80",
+      "seat_label": "OH House 80",
+      "pres_margin": "-48.2",
+      "holder_party": "R",
+      "candidate": "Johnathan Newman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "82",
+      "seat_label": "OH House 82",
+      "pres_margin": "-55.8",
+      "holder_party": "R",
+      "candidate": "Roy Klopfenstein",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "83",
+      "seat_label": "OH House 83",
+      "pres_margin": "-45.2",
+      "holder_party": "R",
+      "candidate": "Tim Barhorst",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "87",
+      "seat_label": "OH House 87",
+      "pres_margin": "-54.0",
+      "holder_party": "R",
+      "candidate": "Jeffrey McClain",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "89",
+      "seat_label": "OH House 89",
+      "pres_margin": "-18.7",
+      "holder_party": "R",
+      "candidate": "D.J. Swearingen",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "90",
+      "seat_label": "OH House 90",
+      "pres_margin": "-54.0",
+      "holder_party": "R",
+      "candidate": "Justin Pizzulli",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "91",
+      "seat_label": "OH House 91",
+      "pres_margin": "-57.9",
+      "holder_party": "R",
+      "candidate": "Bob Peterson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "92",
+      "seat_label": "OH House 92",
+      "pres_margin": "-42.3",
+      "holder_party": "R",
+      "candidate": "Mark Johnson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "94",
+      "seat_label": "OH House 94",
+      "pres_margin": "-39.1",
+      "holder_party": "R",
+      "candidate": "Kevin Ritter",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "95",
+      "seat_label": "OH House 95",
+      "pres_margin": "-33.8",
+      "holder_party": "R",
+      "candidate": "Ty Moore",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "97",
+      "seat_label": "OH House 97",
+      "pres_margin": "-44.8",
+      "holder_party": "R",
+      "candidate": "Adam Holmes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "98",
+      "seat_label": "OH House 98",
+      "pres_margin": "-51.1",
+      "holder_party": "R",
+      "candidate": "Mark Hiner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "99",
+      "seat_label": "OH House 99",
+      "pres_margin": "-26.3",
+      "holder_party": "R",
+      "candidate": "Sarah Fowler Arthur",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "3",
+      "seat_label": "OH Senate 3",
+      "pres_margin": "-10.7",
+      "holder_party": "R",
+      "candidate": "Michele Reynolds",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "11",
+      "seat_label": "OH Senate 11",
+      "pres_margin": "+21.0",
+      "holder_party": "D",
+      "candidate": "James Nowak",
       "is_open_seat": null
     },
     {
@@ -1830,11 +5501,91 @@
     {
       "election_type": "Primary_R",
       "chamber": "Senate",
+      "district": "15",
+      "seat_label": "OH Senate 15",
+      "pres_margin": "+56.8",
+      "holder_party": "D",
+      "candidate": "Joseph Healy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "17",
+      "seat_label": "OH Senate 17",
+      "pres_margin": "-51.7",
+      "holder_party": "R",
+      "candidate": "Shane Wilkin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "21",
+      "seat_label": "OH Senate 21",
+      "pres_margin": "+66.6",
+      "holder_party": "D",
+      "candidate": "Mikhail Alterman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "23",
+      "seat_label": "OH Senate 23",
+      "pres_margin": "+41.2",
+      "holder_party": "D",
+      "candidate": "Robert Dintaman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "25",
+      "seat_label": "OH Senate 25",
+      "pres_margin": "+31.3",
+      "holder_party": "D",
+      "candidate": "Don Roberts",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
       "district": "27",
       "seat_label": "OH Senate 27",
       "pres_margin": "-5.8",
       "holder_party": "R",
       "candidate": "Steve Demetriou",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "29",
+      "seat_label": "OH Senate 29",
+      "pres_margin": "-20.1",
+      "holder_party": "R",
+      "candidate": "Jane Timken",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "31",
+      "seat_label": "OH Senate 31",
+      "pres_margin": "-43.0",
+      "holder_party": "R",
+      "candidate": "Al Landis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "33",
+      "seat_label": "OH Senate 33",
+      "pres_margin": "-23.9",
+      "holder_party": "R",
+      "candidate": "Al Cutrona",
       "is_open_seat": null
     }
   ],

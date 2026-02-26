@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T18:39:25.230042Z",
   "state": {
     "name": "Idaho",
     "abbr": "ID",
@@ -1070,9 +1070,974 @@
       "candidates": []
     },
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "ID Senate 1",
+        "chamber": "Senate",
+        "district": "1",
+        "candidates": [
+          {
+            "name": "Jim Woodward",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Scott Herndon",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 2",
+        "chamber": "Senate",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Phil Hart",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 3",
+        "chamber": "Senate",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Brian Seguin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Doug Okuniewicz",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 4",
+        "chamber": "Senate",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Ben Toews",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 5",
+        "chamber": "Senate",
+        "district": "5",
+        "candidates": [
+          {
+            "name": "Carl Bjerke",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 6",
+        "chamber": "Senate",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Richard Gayler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robin Weldy",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dan Foreman",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Robert Blair",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 7",
+        "chamber": "Senate",
+        "district": "7",
+        "candidates": [
+          {
+            "name": "Cindy Carlson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Michael Collins",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 8",
+        "chamber": "Senate",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Geoff Schroeder",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Terry F. Gestrin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 9",
+        "chamber": "Senate",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Rachel Buck",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brandon Shippy",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Michael Erwin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 10",
+        "chamber": "Senate",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Letishia Silva",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tammy Nichols",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 11",
+        "chamber": "Senate",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Camille Blaylock",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Chris Trakel",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 12",
+        "chamber": "Senate",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Ben Adams",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 13",
+        "chamber": "Senate",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Brian Lenney",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jeff C. Agenbroad",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 14",
+        "chamber": "Senate",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Scott Grow",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 15",
+        "chamber": "Senate",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Nancy Gregory",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Codi Galloway",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 16",
+        "chamber": "Senate",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Ali Rabe",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Leland Lay",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 17",
+        "chamber": "Senate",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Carrie Semmelroth",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 18",
+        "chamber": "Senate",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Janie Ward-Engelking",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dan Bridges",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 19",
+        "chamber": "Senate",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Melissa Wintrow",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 20",
+        "chamber": "Senate",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Andy Arriaga",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jacob Ball",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Josh Keyser",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Russell Spencer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 21",
+        "chamber": "Senate",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Treg Bernt",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 22",
+        "chamber": "Senate",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "Lori Den Hartog",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 23",
+        "chamber": "Senate",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "Paul Morgan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Todd Lakey",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 24",
+        "chamber": "Senate",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Brent David Reinke",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Glenneda Zuiderveld",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 25",
+        "chamber": "Senate",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "W. Lane Startin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Casey Hunter Swensen",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Josh Kohl",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 26",
+        "chamber": "Senate",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Ron Taylor",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Christine Marie Ivie",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 27",
+        "chamber": "Senate",
+        "district": "27",
+        "candidates": [
+          {
+            "name": "Kelly Anthon",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 28",
+        "chamber": "Senate",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "David Worley",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jim Guthrie",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 29",
+        "chamber": "Senate",
+        "district": "29",
+        "candidates": [
+          {
+            "name": "James Ruchti",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Crowder",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tom Katsilometes",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 30",
+        "chamber": "Senate",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Julie VanOrden",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 31",
+        "chamber": "Senate",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "Van Burtenshaw",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 32",
+        "chamber": "Senate",
+        "district": "32",
+        "candidates": [
+          {
+            "name": "Kevin Cook",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 33",
+        "chamber": "Senate",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Dave Lent",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 34",
+        "chamber": "Senate",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Ethan Golden Sanford",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Doug Ricks",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ID Senate 35",
+        "chamber": "Senate",
+        "district": "35",
+        "candidates": [
+          {
+            "name": "Doug Toomer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Mark Harris",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ]
   },
-  "uncontested_primaries": [],
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "3",
+      "seat_label": "ID Senate 3",
+      "pres_margin": "-59.3",
+      "holder_party": "R",
+      "candidate": "Brian Seguin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "9",
+      "seat_label": "ID Senate 9",
+      "pres_margin": "-62.9",
+      "holder_party": "R",
+      "candidate": "Rachel Buck",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "10",
+      "seat_label": "ID Senate 10",
+      "pres_margin": "-59.3",
+      "holder_party": "R",
+      "candidate": "Letishia Silva",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "15",
+      "seat_label": "ID Senate 15",
+      "pres_margin": "-5.1",
+      "holder_party": "R",
+      "candidate": "Nancy Gregory",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "16",
+      "seat_label": "ID Senate 16",
+      "pres_margin": "+19.0",
+      "holder_party": "D",
+      "candidate": "Ali Rabe",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "17",
+      "seat_label": "ID Senate 17",
+      "pres_margin": "+13.0",
+      "holder_party": "D",
+      "candidate": "Carrie Semmelroth",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "18",
+      "seat_label": "ID Senate 18",
+      "pres_margin": "+22.8",
+      "holder_party": "D",
+      "candidate": "Janie Ward-Engelking",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "19",
+      "seat_label": "ID Senate 19",
+      "pres_margin": "+30.1",
+      "holder_party": "D",
+      "candidate": "Melissa Wintrow",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "20",
+      "seat_label": "ID Senate 20",
+      "pres_margin": "-32.5",
+      "holder_party": "R",
+      "candidate": "Andy Arriaga",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "23",
+      "seat_label": "ID Senate 23",
+      "pres_margin": "-57.9",
+      "holder_party": "R",
+      "candidate": "Paul Morgan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "25",
+      "seat_label": "ID Senate 25",
+      "pres_margin": "-38.3",
+      "holder_party": "R",
+      "candidate": "W. Lane Startin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "26",
+      "seat_label": "ID Senate 26",
+      "pres_margin": "-5.2",
+      "holder_party": "D",
+      "candidate": "Ron Taylor",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "29",
+      "seat_label": "ID Senate 29",
+      "pres_margin": "-12.4",
+      "holder_party": "D",
+      "candidate": "James Ruchti",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "34",
+      "seat_label": "ID Senate 34",
+      "pres_margin": "-64.3",
+      "holder_party": "R",
+      "candidate": "Ethan Golden Sanford",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "2",
+      "seat_label": "ID Senate 2",
+      "pres_margin": "-62.6",
+      "holder_party": "R",
+      "candidate": "Phil Hart",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "3",
+      "seat_label": "ID Senate 3",
+      "pres_margin": "-59.3",
+      "holder_party": "R",
+      "candidate": "Doug Okuniewicz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "4",
+      "seat_label": "ID Senate 4",
+      "pres_margin": "-31.1",
+      "holder_party": "R",
+      "candidate": "Ben Toews",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "5",
+      "seat_label": "ID Senate 5",
+      "pres_margin": "-56.4",
+      "holder_party": "R",
+      "candidate": "Carl Bjerke",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "10",
+      "seat_label": "ID Senate 10",
+      "pres_margin": "-59.3",
+      "holder_party": "R",
+      "candidate": "Tammy Nichols",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "12",
+      "seat_label": "ID Senate 12",
+      "pres_margin": "-40.1",
+      "holder_party": "R",
+      "candidate": "Ben Adams",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "14",
+      "seat_label": "ID Senate 14",
+      "pres_margin": "-49.0",
+      "holder_party": "R",
+      "candidate": "Scott Grow",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "15",
+      "seat_label": "ID Senate 15",
+      "pres_margin": "-5.1",
+      "holder_party": "R",
+      "candidate": "Codi Galloway",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "16",
+      "seat_label": "ID Senate 16",
+      "pres_margin": "+19.0",
+      "holder_party": "D",
+      "candidate": "Leland Lay",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "18",
+      "seat_label": "ID Senate 18",
+      "pres_margin": "+22.8",
+      "holder_party": "D",
+      "candidate": "Dan Bridges",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "21",
+      "seat_label": "ID Senate 21",
+      "pres_margin": "-29.9",
+      "holder_party": "R",
+      "candidate": "Treg Bernt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "22",
+      "seat_label": "ID Senate 22",
+      "pres_margin": "-28.1",
+      "holder_party": "R",
+      "candidate": "Lori Den Hartog",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "23",
+      "seat_label": "ID Senate 23",
+      "pres_margin": "-57.9",
+      "holder_party": "R",
+      "candidate": "Todd Lakey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "26",
+      "seat_label": "ID Senate 26",
+      "pres_margin": "-5.2",
+      "holder_party": "D",
+      "candidate": "Christine Marie Ivie",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "27",
+      "seat_label": "ID Senate 27",
+      "pres_margin": "-67.6",
+      "holder_party": "R",
+      "candidate": "Kelly Anthon",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "30",
+      "seat_label": "ID Senate 30",
+      "pres_margin": "-60.5",
+      "holder_party": "R",
+      "candidate": "Julie VanOrden",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "31",
+      "seat_label": "ID Senate 31",
+      "pres_margin": "-69.0",
+      "holder_party": "R",
+      "candidate": "Van Burtenshaw",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "32",
+      "seat_label": "ID Senate 32",
+      "pres_margin": "-49.5",
+      "holder_party": "R",
+      "candidate": "Kevin Cook",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "33",
+      "seat_label": "ID Senate 33",
+      "pres_margin": "-28.7",
+      "holder_party": "R",
+      "candidate": "Dave Lent",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "34",
+      "seat_label": "ID Senate 34",
+      "pres_margin": "-64.3",
+      "holder_party": "R",
+      "candidate": "Doug Ricks",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [
     {
       "number": "HJR 4",

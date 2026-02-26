@@ -584,6 +584,12 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
             for party_cands, party in [(d_cands, 'D'), (r_cands, 'R')]:
                 election_type = f'Primary_{party}'
 
+                # Count how many seats have an election for this party
+                seats_with_election = [(sid, election_map.get(sid, {}).get(election_type))
+                                       for sid in seat_ids
+                                       if election_map.get(sid, {}).get(election_type)]
+                one_seat_up = len(seats_with_election) == 1
+
                 # For each candidate, try to assign to a seat's primary
                 # Incumbents get matched to their specific seat first
                 assigned_seats = set()
@@ -594,7 +600,7 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
                     if bp_incumbent:
                         # Try to find which seat this incumbent holds
                         for sid in seat_ids:
-                            if sid in assigned_seats:
+                            if not one_seat_up and sid in assigned_seats:
                                 continue
                             inc_info = incumbent_map.get(sid)
                             if inc_info and name_similarity(name, inc_info[1]) >= 0.3:
@@ -608,7 +614,8 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
                                         'is_incumbent': True,
                                         'seat_id': sid,
                                     })
-                                    assigned_seats.add(sid)
+                                    if not one_seat_up:
+                                        assigned_seats.add(sid)
                                     assigned = True
                                     break
                     if not assigned:
@@ -618,7 +625,7 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
                 for name, p, bp_incumbent in pending:
                     assigned = False
                     for sid in seat_ids:
-                        if sid in assigned_seats:
+                        if not one_seat_up and sid in assigned_seats:
                             continue
                         election_id = election_map.get(sid, {}).get(election_type)
                         if election_id:
@@ -638,7 +645,8 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
                                 'is_incumbent': is_inc,
                                 'seat_id': sid,
                             })
-                            assigned_seats.add(sid)
+                            if not one_seat_up:
+                                assigned_seats.add(sid)
                             assigned = True
                             break
 
@@ -667,21 +675,37 @@ def insert_candidacies(matched, dry_run=False, force=False):
 
     Returns (new_candidates_count, candidacies_count)
     """
-    # When --force, filter out elections that already have candidacies
+    # When --force, filter out candidates who already have a candidacy in their election
     if force:
         election_ids = list(set(m['election_id'] for m in matched))
         ids_str = ','.join(str(eid) for eid in election_ids)
         existing = run_sql(f"""
-            SELECT DISTINCT election_id FROM candidacies
-            WHERE election_id IN ({ids_str})
+            SELECT cy.election_id, cy.candidate_id, c.full_name
+            FROM candidacies cy
+            JOIN candidates c ON cy.candidate_id = c.id
+            WHERE cy.election_id IN ({ids_str})
         """)
-        already_populated = set(r['election_id'] for r in existing) if existing else set()
-        if already_populated:
+        existing_pairs = set()
+        existing_names = defaultdict(set)  # election_id -> set of lowercase names
+        if existing:
+            existing_pairs = set((r['election_id'], r['candidate_id']) for r in existing)
+            for r in existing:
+                existing_names[r['election_id']].add(r['full_name'].lower().strip())
+        if existing_pairs:
             before = len(matched)
-            matched = [m for m in matched if m['election_id'] not in already_populated]
-            print(f"    --force: skipping {before - len(matched)} candidacies on {len(already_populated)} already-populated elections")
+            filtered = []
+            for m in matched:
+                if m['candidate_id'] is not None and (m['election_id'], m['candidate_id']) in existing_pairs:
+                    continue  # exact candidate already in this election
+                if m['candidate_id'] is None and m['candidate_name'].lower().strip() in existing_names.get(m['election_id'], set()):
+                    continue  # name already in this election
+                filtered.append(m)
+            matched = filtered
+            skipped = before - len(matched)
+            if skipped:
+                print(f"    --force: skipping {skipped} already-existing candidacies")
         if not matched:
-            print(f"    No new candidacies to insert (all elections already populated)")
+            print(f"    No new candidacies to insert (all already populated)")
             return 0, 0
 
     # Separate incumbents (reuse candidate_id) from new candidates (need INSERT)
