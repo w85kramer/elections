@@ -374,7 +374,7 @@
 
   const metaParts = [`<span>${trifecta}</span>`];
   metaParts.push(`<span class="meta-sep">&middot;</span>`);
-  metaParts.push(`<span>Gov: ${govName} <span class="party-badge ${partyBadgeClass(govParty)}">${govParty}</span></span>`);
+  metaParts.push(`<span>Gov: <a href="governor.html?st=${stateAbbr}" style="color:inherit;text-decoration:underline">${govName}</a> <span class="party-badge ${partyBadgeClass(govParty)}">${govParty}</span></span>`);
   if (stateData.filing_deadline) {
     metaParts.push(`<span class="meta-sep">&middot;</span>`);
     metaParts.push(`<span>Filing deadline: ${formatDateShort(stateData.filing_deadline)}</span>`);
@@ -713,7 +713,7 @@
     } else {
       candidatesHtml = '<p class="text-muted text-sm mt-8">No candidates filed yet</p>';
     }
-    div.innerHTML = `<h3 class="heading-sm">Governor ${fcTag}</h3>${candidatesHtml}`;
+    div.innerHTML = `<h3 class="heading-sm"><a href="governor.html?st=${stateAbbr}" style="color:inherit;text-decoration:none">Governor</a> ${fcTag}</h3>${candidatesHtml}`;
     racesSection.appendChild(div);
   }
 
