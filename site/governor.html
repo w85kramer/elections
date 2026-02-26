@@ -634,21 +634,34 @@
 
     // Parse dates to timestamps for positioning
     const now = new Date();
+    // Project current governor's end date to full term expiration
+    // (next_regular_election + ~2 months for inauguration)
+    const termYears = data.gov_term_years || 4;
+    const nextElecYear = data.next_regular_election;
     const parsed = terms.map(t => {
       const start = t.start ? new Date(t.start + 'T00:00:00') : null;
-      const end = t.end ? new Date(t.end + 'T00:00:00') : now;
+      let end;
+      if (t.end) {
+        end = new Date(t.end + 'T00:00:00');
+      } else if (nextElecYear && start) {
+        // Project to January of the year after next election (typical inauguration)
+        end = new Date(nextElecYear + 1, 0, 15);
+      } else if (start) {
+        // Fallback: project from start + term length
+        end = new Date(start.getFullYear() + termYears, start.getMonth(), start.getDate());
+      } else {
+        end = now;
+      }
       return { ...t, startDate: start, endDate: end };
     }).filter(t => t.startDate);
 
     if (parsed.length === 0) return;
 
     const earliest = parsed[0].startDate;
-    // Extend timeline 2 years past today so the current governor's segment
-    // isn't a sliver (e.g. a governor 40 days into a 4-year term)
-    const latest = new Date(now.getFullYear() + 2, now.getMonth(), now.getDate());
+    // Latest date is the projected end of the current governor's full term
+    const latest = parsed[parsed.length - 1].endDate;
     const totalDays = (latest - earliest) / (1000 * 60 * 60 * 24);
 
-    const MIN_SEGMENT_W = 30; // minimum pixel width for any governor segment
     const W = Math.max(700, parsed.length * 80 + 120);
     const H = 120;
     const PAD_L = 20, PAD_R = 20, PAD_T = 30, PAD_B = 28;
@@ -691,7 +704,7 @@
     parsed.forEach((t, i) => {
       const x1 = xPos(t.startDate);
       const x2 = xPos(t.endDate);
-      const w = Math.max(x2 - x1, MIN_SEGMENT_W);
+      const w = Math.max(x2 - x1, 2);
       const color = svgPartyColor(t.party);
       const isSuccession = t.start_reason && t.start_reason !== 'elected';
 
