@@ -372,9 +372,12 @@
     trifecta = govParty === 'D' ? 'Democratic Trifecta' : 'Republican Trifecta';
   }
 
-  const metaParts = [`<span>${trifecta}</span>`];
+  const trifectaColor = trifecta.startsWith('Democratic') ? 'var(--ms-dem-blue)'
+    : trifecta.startsWith('Republican') ? 'var(--ms-rep-red)' : 'var(--ms-purple)';
+  const metaParts = [`<span style="color:${trifectaColor};font-weight:600">${trifecta}</span>`];
   metaParts.push(`<span class="meta-sep">&middot;</span>`);
-  metaParts.push(`<span>Gov: <a href="governor.html?st=${stateAbbr}" style="color:inherit;text-decoration:underline">${govName}</a> <span class="party-badge ${partyBadgeClass(govParty)}">${govParty}</span></span>`);
+  const govColor = govParty === 'D' ? 'var(--ms-dem-blue)' : govParty === 'R' ? 'var(--ms-rep-red)' : 'var(--ms-purple)';
+  metaParts.push(`<span>Governor <a href="governor.html?st=${stateAbbr}" style="color:${govColor};font-weight:600;text-decoration:underline">${govName}</a> <span class="party-badge ${partyBadgeClass(govParty)}">${govParty}</span></span>`);
   if (stateData.filing_deadline) {
     metaParts.push(`<span class="meta-sep">&middot;</span>`);
     metaParts.push(`<span>Filing deadline: ${formatDateShort(stateData.filing_deadline)}</span>`);
