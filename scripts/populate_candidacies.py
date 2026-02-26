@@ -235,9 +235,10 @@ def parse_primary_candidates(html_text):
 
     # Parse district rows.
     # Pattern: <tr> <td><a href="...District_N">District N</a></td> <td>Dem</td> <td>Rep</td> <td>Other</td> </tr>
+    # Also handles ID-style "District 1A" — captures optional seat letter suffix
     row_pattern = re.compile(
         r'<tr>\s*<td>\s*<a\s+href="[^"]*?District[_\s]+(\d+)\s*"[^>]*>'
-        r'District\s+\d+\s*</a></td>'
+        r'District\s+\d+([A-Z])?\s*</a></td>'
         r'(.*?)</tr>',
         re.DOTALL
     )
@@ -254,7 +255,7 @@ def parse_primary_candidates(html_text):
     candidates = []
     rows = row_pattern.findall(primary_html)
 
-    for dist_str, rest in rows:
+    for dist_str, seat_suffix, rest in rows:
         dist_num = int(dist_str)
         tds = td_pattern.findall(rest)
 
@@ -270,7 +271,7 @@ def parse_primary_candidates(html_text):
             for name_raw, suffix in cands:
                 name = htmlmod.unescape(name_raw.strip())
                 is_incumbent = '(i)' in suffix
-                candidates.append((dist_num, name, party, is_incumbent))
+                candidates.append((dist_num, name, party, is_incumbent, seat_suffix or None))
 
     return candidates
 
@@ -514,8 +515,13 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
 
     # Group by district for multi-seat handling
     by_district = defaultdict(list)
-    for dist_num, name, party, is_incumbent in parsed_candidates:
-        by_district[dist_num].append((name, party, is_incumbent))
+    for entry in parsed_candidates:
+        if len(entry) == 5:
+            dist_num, name, party, is_incumbent, seat_suffix = entry
+        else:
+            dist_num, name, party, is_incumbent = entry
+            seat_suffix = None
+        by_district[dist_num].append((name, party, is_incumbent, seat_suffix))
 
     for dist_num in sorted(by_district.keys()):
         dist_str = str(dist_num)
@@ -529,7 +535,7 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
             elections = election_map.get(seat_id, {})
             incumbent_info = incumbent_map.get(seat_id)
 
-            for name, party, bp_incumbent in candidates_in_district:
+            for name, party, bp_incumbent, _seat_suffix in candidates_in_district:
                 if party == 'Other':
                     unmatched.append((dist_num, name, party, 'third_party_skipped'))
                     continue
@@ -573,94 +579,129 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
             # Multi-seat district — each seat has its own elections
             seat_ids = multi_seat_map[key]
 
-            # For multi-member seats, candidates run for individual seats.
-            # Ballotpedia lists all candidates for the district together.
-            # We assign based on: incumbents first (by seat match), then challengers.
+            # Build seat designator → seat_id map for direct routing
+            # seat_ids are ordered by designator (A=0, B=1, etc.)
+            desig_to_sid = {}
+            for idx, sid in enumerate(seat_ids):
+                desig_to_sid[chr(ord('A') + idx)] = sid
+
+            # Check if parser provided seat suffixes (e.g., ID House "District 1A")
+            has_seat_suffixes = any(ss for _, _, _, ss in candidates_in_district)
 
             # Group candidates by party
-            d_cands = [(n, p, i) for n, p, i in candidates_in_district if p == 'D']
-            r_cands = [(n, p, i) for n, p, i in candidates_in_district if p == 'R']
+            d_cands = [(n, p, i, ss) for n, p, i, ss in candidates_in_district if p == 'D']
+            r_cands = [(n, p, i, ss) for n, p, i, ss in candidates_in_district if p == 'R']
 
             for party_cands, party in [(d_cands, 'D'), (r_cands, 'R')]:
                 election_type = f'Primary_{party}'
 
-                # Count how many seats have an election for this party
-                seats_with_election = [(sid, election_map.get(sid, {}).get(election_type))
-                                       for sid in seat_ids
-                                       if election_map.get(sid, {}).get(election_type)]
-                one_seat_up = len(seats_with_election) == 1
+                if has_seat_suffixes:
+                    # Direct routing: seat suffix tells us exactly which seat
+                    for name, p, bp_incumbent, seat_suffix in party_cands:
+                        sid = desig_to_sid.get(seat_suffix)
+                        if not sid:
+                            unmatched.append((dist_num, name, p, f'unknown_seat_{seat_suffix}'))
+                            continue
+                        election_id = election_map.get(sid, {}).get(election_type)
+                        if not election_id:
+                            unmatched.append((dist_num, name, p, f'no_{election_type}_election'))
+                            continue
 
-                # For each candidate, try to assign to a seat's primary
-                # Incumbents get matched to their specific seat first
-                assigned_seats = set()
-                pending = []
+                        # Check incumbent match
+                        inc_info = incumbent_map.get(sid)
+                        cand_id = None
+                        is_inc = False
+                        if bp_incumbent and inc_info and name_similarity(name, inc_info[1]) >= 0.3:
+                            cand_id = inc_info[0]
+                            is_inc = True
+                        elif inc_info and name_similarity(name, inc_info[1]) >= 0.7:
+                            cand_id = inc_info[0]
+                            is_inc = True
 
-                for name, p, bp_incumbent in party_cands:
-                    assigned = False
-                    if bp_incumbent:
-                        # Try to find which seat this incumbent holds
+                        matched.append({
+                            'election_id': election_id,
+                            'candidate_id': cand_id,
+                            'candidate_name': name,
+                            'party': party,
+                            'is_incumbent': is_inc,
+                            'seat_id': sid,
+                        })
+                else:
+                    # No seat suffixes — use heuristic assignment
+                    # Count how many seats have an election for this party
+                    seats_with_election = [(sid, election_map.get(sid, {}).get(election_type))
+                                           for sid in seat_ids
+                                           if election_map.get(sid, {}).get(election_type)]
+                    one_seat_up = len(seats_with_election) == 1
+
+                    # Incumbents get matched to their specific seat first
+                    assigned_seats = set()
+                    pending = []
+
+                    for name, p, bp_incumbent, _ss in party_cands:
+                        assigned = False
+                        if bp_incumbent:
+                            for sid in seat_ids:
+                                if not one_seat_up and sid in assigned_seats:
+                                    continue
+                                inc_info = incumbent_map.get(sid)
+                                if inc_info and name_similarity(name, inc_info[1]) >= 0.3:
+                                    election_id = election_map.get(sid, {}).get(election_type)
+                                    if election_id:
+                                        matched.append({
+                                            'election_id': election_id,
+                                            'candidate_id': inc_info[0],
+                                            'candidate_name': name,
+                                            'party': party,
+                                            'is_incumbent': True,
+                                            'seat_id': sid,
+                                        })
+                                        if not one_seat_up:
+                                            assigned_seats.add(sid)
+                                        assigned = True
+                                        break
+                        if not assigned:
+                            pending.append((name, p, bp_incumbent))
+
+                    # Assign remaining candidates to available seats
+                    for name, p, bp_incumbent in pending:
+                        assigned = False
                         for sid in seat_ids:
                             if not one_seat_up and sid in assigned_seats:
                                 continue
-                            inc_info = incumbent_map.get(sid)
-                            if inc_info and name_similarity(name, inc_info[1]) >= 0.3:
-                                election_id = election_map.get(sid, {}).get(election_type)
-                                if election_id:
-                                    matched.append({
-                                        'election_id': election_id,
-                                        'candidate_id': inc_info[0],
-                                        'candidate_name': name,
-                                        'party': party,
-                                        'is_incumbent': True,
-                                        'seat_id': sid,
-                                    })
-                                    if not one_seat_up:
-                                        assigned_seats.add(sid)
-                                    assigned = True
-                                    break
-                    if not assigned:
-                        pending.append((name, p, bp_incumbent))
+                            election_id = election_map.get(sid, {}).get(election_type)
+                            if election_id:
+                                inc_info = incumbent_map.get(sid)
+                                cand_id = None
+                                is_inc = False
+                                if inc_info and name_similarity(name, inc_info[1]) >= 0.7:
+                                    cand_id = inc_info[0]
+                                    is_inc = True
 
-                # Assign remaining candidates to available seats
-                for name, p, bp_incumbent in pending:
-                    assigned = False
-                    for sid in seat_ids:
-                        if not one_seat_up and sid in assigned_seats:
-                            continue
-                        election_id = election_map.get(sid, {}).get(election_type)
-                        if election_id:
-                            # Check if non-incumbent might actually be the incumbent
-                            inc_info = incumbent_map.get(sid)
-                            cand_id = None
-                            is_inc = False
-                            if inc_info and name_similarity(name, inc_info[1]) >= 0.7:
-                                cand_id = inc_info[0]
-                                is_inc = True
+                                matched.append({
+                                    'election_id': election_id,
+                                    'candidate_id': cand_id,
+                                    'candidate_name': name,
+                                    'party': p,
+                                    'is_incumbent': is_inc,
+                                    'seat_id': sid,
+                                })
+                                if not one_seat_up:
+                                    assigned_seats.add(sid)
+                                assigned = True
+                                break
 
-                            matched.append({
-                                'election_id': election_id,
-                                'candidate_id': cand_id,
-                                'candidate_name': name,
-                                'party': p,
-                                'is_incumbent': is_inc,
-                                'seat_id': sid,
-                            })
-                            if not one_seat_up:
-                                assigned_seats.add(sid)
-                            assigned = True
-                            break
-
-                    if not assigned:
-                        unmatched.append((dist_num, name, p, 'no_available_seat'))
+                        if not assigned:
+                            unmatched.append((dist_num, name, p, 'no_available_seat'))
 
             # Handle other parties
-            other_cands = [(n, p, i) for n, p, i in candidates_in_district if p == 'Other']
-            for name, p, bp_inc in other_cands:
+            other_cands = [(n, p, i, ss) for n, p, i, ss in candidates_in_district if p == 'Other']
+            for name, p, bp_inc, _ss in other_cands:
                 unmatched.append((dist_num, name, p, 'third_party_skipped'))
 
         else:
             # No seats found for this district
-            for name, party, bp_inc in candidates_in_district:
+            for name, party, bp_inc, _ss in candidates_in_district:
                 unmatched.append((dist_num, name, party, 'no_seat_in_db'))
 
     return matched, unmatched
