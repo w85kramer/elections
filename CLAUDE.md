@@ -42,6 +42,17 @@ The project focuses on state-level races (not local/municipal). The 2026 cycle i
 - Proposed changes are reviewed and approved before being pushed to the database
 - Low volume in winter (special elections only), high volume spring/summer (primaries), peak in November (general election)
 
+### Live Data vs. Static Exports
+- **District pages** fetch uncertified 2026 election data live from Supabase PostgREST (`site/js/supabase.js`), so election results appear on district pages without re-exporting
+- **State pages** and the **dashboard** rely entirely on static JSON exports — they must be re-exported to reflect changes
+- **After adding special election results**: Always re-export the affected state(s) immediately. Special election winners typically assume office within days, so the state page will show stale vacancy data until re-exported. Run:
+  ```
+  python3 scripts/export_site_data.py --state XX
+  python3 scripts/export_district_data.py --state XX
+  ```
+  Then commit and push the updated JSON files.
+- **General elections** are less urgent — winners aren't sworn in until the following January, so there's time to do a full re-export after certifying results
+
 ## Data Sources
 
 - **Primary trusted source**: [Ballotpedia](https://ballotpedia.org) for election data, candidate info, office details

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-20T21:05:01.432154Z",
+  "generated_at": "2026-02-26T00:43:34.007902Z",
   "state": {
     "name": "Maryland",
     "abbr": "MD",
@@ -1808,11 +1808,4317 @@
   "elections_2026": {
     "governor": {
       "forecast": "Solid D",
-      "candidates": []
+      "candidates": [
+        {
+          "name": "Eric S. Felber",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Ralph Jaffe",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Wes Moore",
+          "party": "D",
+          "is_incumbent": true,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Carl A. Brunner, Jr.",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Dan Cox",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Demetrius Douglas",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Ed Hale",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Joel John",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Kurt Wedekind",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "L. D. Burkindine",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Michael Oakes",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Nina Taylor",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        }
+      ]
     },
-    "statewide": [],
-    "legislative": []
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Anthony Brown",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "office": "Controller",
+        "candidates": [
+          {
+            "name": "Brooke Lierman",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sindicat Dunn",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Lt. Governor",
+        "candidates": [
+          {
+            "name": "Aruna Miller",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Ray",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lee Hawkins",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brenda Thiam",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jeremy M. Shifflett",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kevin L. Rhodes Sr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Mark Duncan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Rachel Hannah \"Mohawk\" Swift",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Rob Krop",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Ronald W. Abend",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Stephen Wright",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tyrone Keys Jr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ],
+    "legislative": [
+      {
+        "seat_label": "MD HoD 3 Seat A",
+        "chamber": "House of Delegates",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Karen Simpson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ken Kerr",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kris Fair",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Anthony Nieves",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 4 Seat A",
+        "chamber": "House of Delegates",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Alleria Stanley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Andrew Duck",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jerry Donald",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Phil Gilligan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "April Miller",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jason E. Keckler",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jesse Pippy",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 5 Seat A",
+        "chamber": "House of Delegates",
+        "district": "5",
+        "candidates": [
+          {
+            "name": "Alison Rudolph",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Chris Welch",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Don Bergman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "April Rose",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Chris Tomlinson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Sallie Taylor",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Steve Whisler",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 6 Seat A",
+        "chamber": "House of Delegates",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Amy Huffman Oliver",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Megan Ann Mioduszewski",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ron Robinson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sandra Skordalos",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bev Berger",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Bob Long",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Heidi Henry",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Ric Metzgar",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Robin Grammer",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 8 Seat A",
+        "chamber": "House of Delegates",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Harry Bhandari",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kim Ross",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kumasi J. Barnett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marsha Briley-Savage",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nick Allen",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bonnie Campbell",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Glen Geelhaar",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jerry Stevenson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Steven J. Riemer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Zulieka Baysmore",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 10 Seat A",
+        "chamber": "House of Delegates",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Adrienne Jones",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jay Jalisi",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jennifer White Holland",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael Tyrone Brown, Sr. (write-in)",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nick Phillips",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ron Harvey",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Traci George",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 13 Seat A",
+        "chamber": "House of Delegates",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Amy Brooks",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Derrick Jackson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gabriel Moreno",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Pam Guzzone",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mark Fisher",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 14 Seat A",
+        "chamber": "House of Delegates",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Alicia Contreras-Donello",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Anne Kaiser",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bernice Mireku-North",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Matt Post",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 15 Seat A",
+        "chamber": "House of Delegates",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Asher E. Beckwitt",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Fraser-Hidalgo",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lily Qi",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Linda Foley",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Peter Chan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 16 Seat A",
+        "chamber": "House of Delegates",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Marc Korman",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sarah Wolek",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tazeen Ahmad",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Teresa Woorman",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ann Guthrie Hingston",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 17 Seat A",
+        "chamber": "House of Delegates",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Christopher Reed",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joe Vogel",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Julie Palakovich Carr",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ryan Spiegel",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 18 Seat A",
+        "chamber": "House of Delegates",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Aaron Kaufman",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Emily Shetty",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jared Solomon",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kate Stein",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 19 Seat A",
+        "chamber": "House of Delegates",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Anastasia Stone",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Charlotte Crutchfield",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Christa Tichy",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gabriel Sorrel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Steven Johnson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sunil Dasgupta",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Vaughn Stewart",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 20 Seat A",
+        "chamber": "House of Delegates",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "David Moon",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jheanelle Wilkins",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lorig Charkoudian",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 21 Seat A",
+        "chamber": "House of Delegates",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Ben Barnes",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseline Pe\u00f1a-Melnyk",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mary Lehman",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 22 Seat A",
+        "chamber": "House of Delegates",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "Ashanti Mart\u00ednez",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cliff Hayes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Molly McKee-Seabrook",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tracy Gant",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 23 Seat A",
+        "chamber": "House of Delegates",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "Dan Rutherford",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Keenon James",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kris Natesan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kym Taylor",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Le Shaun Quander-Mosley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marsha Michael",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marvin Holmes, Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rebecca M. Stallworth",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tambei Chiawah",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kim Robinson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Marsha Michael",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 24 Seat A",
+        "chamber": "House of Delegates",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Andrea Harrison",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brad Henry",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Charles Carpenter",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Derrick Coley",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jack Jordan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "LaTasha Ward",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Steve Stanford",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 25 Seat A",
+        "chamber": "House of Delegates",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "Aaron Thompson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Angela Angel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Anthony Tilghman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Denise Roberts",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Junie Joseph",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Karen Toles",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kent Roberson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 26 Seat A",
+        "chamber": "House of Delegates",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Dani E. Moore-King",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jamila Woods",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kris Valderrama",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robbie Martin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Veronica Turner",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ike Puzon",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "JoAnn Fisher",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 28 Seat A",
+        "chamber": "House of Delegates",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Abena Affum-McAllister",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Debra Davis",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Edith Patterson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Evans Smith",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joel John",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Terrell McKinney",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "James Emerson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "William G. Clark",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 31 Seat A",
+        "chamber": "House of Delegates",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "Harvey Schmidt",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Josh Cole",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rick Ryan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brian Chisholm",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "LaToya Marie Caldwell-Nkongolo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Mike Jacobs",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 32 Seat A",
+        "chamber": "House of Delegates",
+        "district": "32",
+        "candidates": [
+          {
+            "name": "John Bartlett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mike Rogers",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Steve Dixon",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Steve Thomas",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Colin McEvers",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Marcus Damon Snipes, JR",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 36 Seat A",
+        "chamber": "House of Delegates",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Crystal Woodward",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michelle Ravert",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nevin Crouse",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jay Jacobs",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jeff Ghrist",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Steve Arentz",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 39 Seat A",
+        "chamber": "House of Delegates",
+        "district": "39",
+        "candidates": [
+          {
+            "name": "Gabriel Acevero",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "George Lluberes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Greg Wims",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lesley Lopez",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 40 Seat A",
+        "chamber": "House of Delegates",
+        "district": "40",
+        "candidates": [
+          {
+            "name": "Adam Anderson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Crystal Parker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Darcey Edwards",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Frank M. Conaway, Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kevin Legacy",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marlon Amprey",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Melissa Wells",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tom Welch",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 41 Seat A",
+        "chamber": "House of Delegates",
+        "district": "41",
+        "candidates": [
+          {
+            "name": "Adrian Muldrow",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Chezia Cager",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Matt Menter",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Reuven Amos",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rick Ryan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sandy Rosenberg",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sean Stinnett",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shana Anderson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 45 Seat A",
+        "chamber": "House of Delegates",
+        "district": "45",
+        "candidates": [
+          {
+            "name": "Caylin Young",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Chanel Branch",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "George Johnson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jackie Addison",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Stephanie Smith",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 46 Seat A",
+        "chamber": "House of Delegates",
+        "district": "46",
+        "candidates": [
+          {
+            "name": "Luke Clippinger",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mark Edelson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robbyn Lewis",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jeremy L. Amason",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 11A",
+        "chamber": "House of Delegates",
+        "district": "11A",
+        "candidates": [
+          {
+            "name": "Cheryl Pasteur",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sarah Huckabee Sanders",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 11B Seat A",
+        "chamber": "House of Delegates",
+        "district": "11B",
+        "candidates": [
+          {
+            "name": "Dana Stein",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jon Cardin",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Gordon",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 12A Seat A",
+        "chamber": "House of Delegates",
+        "district": "12A",
+        "candidates": [
+          {
+            "name": "Jake Heard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jessica Feldmark",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Terri Hill",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Frank Glover",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 12B",
+        "chamber": "House of Delegates",
+        "district": "12B",
+        "candidates": [
+          {
+            "name": "Gary Simmons",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joel John",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Blair L. Brannock",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 1A",
+        "chamber": "House of Delegates",
+        "district": "1A",
+        "candidates": [
+          {
+            "name": "Jeff Jobe",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Andy Adams",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Danielle Duggan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Edward E. Clemons, Jr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Lowe Finney",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tim Thomas",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 1B",
+        "chamber": "House of Delegates",
+        "district": "1B",
+        "candidates": [
+          {
+            "name": "Jason Buckel",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 1C",
+        "chamber": "House of Delegates",
+        "district": "1C",
+        "candidates": [
+          {
+            "name": "Terry Baker",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 27A",
+        "chamber": "House of Delegates",
+        "district": "27A",
+        "candidates": [
+          {
+            "name": "Clifton Crosby, Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Darrell C. Odom, Sr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shawn Maldon",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Yonelle Moore Lee",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jimmy Crawford",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 27B",
+        "chamber": "House of Delegates",
+        "district": "27B",
+        "candidates": [
+          {
+            "name": "Jeffrie E. Long, Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rachel Jones",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Daniel Thomas Jr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 27C",
+        "chamber": "House of Delegates",
+        "district": "27C",
+        "candidates": [
+          {
+            "name": "Jackie Davidson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert Garcia",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mark Fisher",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 29A",
+        "chamber": "House of Delegates",
+        "district": "29A",
+        "candidates": [
+          {
+            "name": "Julie Lynn",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Matt Morgan",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 29B",
+        "chamber": "House of Delegates",
+        "district": "29B",
+        "candidates": [
+          {
+            "name": "Adrianne M. Mathis",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kristen McDonald Rivet",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brad Hall",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 29C",
+        "chamber": "House of Delegates",
+        "district": "29C",
+        "candidates": [
+          {
+            "name": "Eric F. Immler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "J. W. Abney",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mike Fechtmann",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Watts Shaara",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jesse James",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Todd Morgan",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 2A Seat A",
+        "chamber": "House of Delegates",
+        "district": "2A",
+        "candidates": [
+          {
+            "name": "Aamina Hutchison",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brian Thompson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Leonard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Palmer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "William Valentine",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "William Wivell",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 2B",
+        "chamber": "House of Delegates",
+        "district": "2B",
+        "candidates": [
+          {
+            "name": "Matthew Schindler",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ocewana E. Baker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Scott Flaherty",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 30A Seat A",
+        "chamber": "House of Delegates",
+        "district": "30A",
+        "candidates": [
+          {
+            "name": "Brandi Bradley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dana Jones",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dylan Behler",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 30B",
+        "chamber": "House of Delegates",
+        "district": "30B",
+        "candidates": [
+          {
+            "name": "Bradbury Blake",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Matt Johnston",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Seth Howard",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 33A",
+        "chamber": "House of Delegates",
+        "district": "33A",
+        "candidates": [
+          {
+            "name": "Andrew Pruski",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Connor P. Roche",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 33B",
+        "chamber": "House of Delegates",
+        "district": "33B",
+        "candidates": [
+          {
+            "name": "Chelsey Cook",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sharyn Stuart",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 33C",
+        "chamber": "House of Delegates",
+        "district": "33C",
+        "candidates": [
+          {
+            "name": "Heather Bagnall Tudball",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 34A Seat A",
+        "chamber": "House of Delegates",
+        "district": "34A",
+        "candidates": [
+          {
+            "name": "Andre V. Johnson, Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Steve Johnson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 34B",
+        "chamber": "House of Delegates",
+        "district": "34B",
+        "candidates": [
+          {
+            "name": "Amy Lyon",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jeff Taylor",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Sheariah Yousefi",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Susan McComas",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 35A Seat A",
+        "chamber": "House of Delegates",
+        "district": "35A",
+        "candidates": [
+          {
+            "name": "Greg Gregory",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marsha Michael",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michelle Christman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Mike Griffith",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Teresa Reilly",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 35B",
+        "chamber": "House of Delegates",
+        "district": "35B",
+        "candidates": [
+          {
+            "name": "Blessing T. Oluwadare",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dan Howell",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Emily Berge",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kevin Hornberger",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 37A",
+        "chamber": "House of Delegates",
+        "district": "37A",
+        "candidates": [
+          {
+            "name": "Sheree Sample-Hughes",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 37B Seat A",
+        "chamber": "House of Delegates",
+        "district": "37B",
+        "candidates": [
+          {
+            "name": "Martha Garcia",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Monae Johnson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Chris Adams",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tom Hutchinson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 38A",
+        "chamber": "House of Delegates",
+        "district": "38A",
+        "candidates": [
+          {
+            "name": "Steven Johnson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "C. L. Marshall, 3rd",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Timothy H. Howlett",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 38B",
+        "chamber": "House of Delegates",
+        "district": "38B",
+        "candidates": [
+          {
+            "name": "Josh Hastings",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Barry Beauchamp",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 38C",
+        "chamber": "House of Delegates",
+        "district": "38C",
+        "candidates": [
+          {
+            "name": "Wayne Hartman",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 42A",
+        "chamber": "House of Delegates",
+        "district": "42A",
+        "candidates": [
+          {
+            "name": "Jyoti Mohan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Analicia Alexander",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Charles Edward Murphy, 3rd",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Dan Katz",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 42B",
+        "chamber": "House of Delegates",
+        "district": "42B",
+        "candidates": [
+          {
+            "name": "Michele Guyton",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joe McDonald",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Lawrence Novak",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 42C",
+        "chamber": "House of Delegates",
+        "district": "42C",
+        "candidates": [
+          {
+            "name": "Corynne Courpas",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Steve Patten",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 43A Seat A",
+        "chamber": "House of Delegates",
+        "district": "43A",
+        "candidates": [
+          {
+            "name": "Elizabeth Embry",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Regina Boyce",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 43B",
+        "chamber": "House of Delegates",
+        "district": "43B",
+        "candidates": [
+          {
+            "name": "Cathi Forbes",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 44A",
+        "chamber": "House of Delegates",
+        "district": "44A",
+        "candidates": [
+          {
+            "name": "Eric Ebersole",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Candace Linton",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 44B Seat A",
+        "chamber": "House of Delegates",
+        "district": "44B",
+        "candidates": [
+          {
+            "name": "Aletheia McCaskill",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bishop Barry Chapman (write-in)",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sheila Ruth",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sherry Scipio",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Martin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 47A Seat A",
+        "chamber": "House of Delegates",
+        "district": "47A",
+        "candidates": [
+          {
+            "name": "Diana Fennell",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rocio Treminio-Lopez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Fred Price, Jr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 47B",
+        "chamber": "House of Delegates",
+        "district": "47B",
+        "candidates": [
+          {
+            "name": "Deni Taveras",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 7A Seat A",
+        "chamber": "House of Delegates",
+        "district": "7A",
+        "candidates": [
+          {
+            "name": "Clayton Cleveland",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lydia Brown",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Satish Chapagain",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Terry Baker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kathy Szeliga",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Ryan Nawrocki",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 7B",
+        "chamber": "House of Delegates",
+        "district": "7B",
+        "candidates": [
+          {
+            "name": "Chris Hart",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lauren Arikan",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 9A Seat A",
+        "chamber": "House of Delegates",
+        "district": "9A",
+        "candidates": [
+          {
+            "name": "Chao Wu",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Natalie Ziegler",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Fitzgerald",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Selden Spencer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD HoD 9B",
+        "chamber": "House of Delegates",
+        "district": "9B",
+        "candidates": [
+          {
+            "name": "Abdun Matin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Courtney Watson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 1",
+        "chamber": "Senate",
+        "district": "1",
+        "candidates": [
+          {
+            "name": "Ashley Emerick",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mike McKay",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 2",
+        "chamber": "Senate",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Eric Martin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Paul Corderman",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 3",
+        "chamber": "Senate",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Karen Young",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Angela McIntosh",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Susan Shelley",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 4",
+        "chamber": "Senate",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Lara Westdorp",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "William Folden",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 5",
+        "chamber": "Senate",
+        "district": "5",
+        "candidates": [
+          {
+            "name": "Justin Ready",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 6",
+        "chamber": "Senate",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Justin Holliday",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Daniel Eisenhart",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Johnny Salling",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 7",
+        "chamber": "Senate",
+        "district": "7",
+        "candidates": [
+          {
+            "name": "Bill Geibler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "J.B. Jennings",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 8",
+        "chamber": "Senate",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Carl Jackson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Yahu Blackwell",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 9",
+        "chamber": "Senate",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Katie Hester",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bill Hightower",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 10",
+        "chamber": "Senate",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Ben Brooks",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 11",
+        "chamber": "Senate",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Shelly Hettleman",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 12",
+        "chamber": "Senate",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Clarence Lam",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 13",
+        "chamber": "Senate",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Guy Guzzone",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 14",
+        "chamber": "Senate",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Craig Zucker",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 15",
+        "chamber": "Senate",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Brian Feldman",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 16",
+        "chamber": "Senate",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Letitia James",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sara Love",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 17",
+        "chamber": "Senate",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Cheryl Kagan",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Peter Cook",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 18",
+        "chamber": "Senate",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Jeff Waldstreicher",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 19",
+        "chamber": "Senate",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Ben Kramer",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 20",
+        "chamber": "Senate",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Will Smith",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 21",
+        "chamber": "Senate",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Jim Rosapepe",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lee Havis",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 22",
+        "chamber": "Senate",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "Alonzo Washington",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jim Wass",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 23",
+        "chamber": "Senate",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "Raaheela Ahmed",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ron Watson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jesse James",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 24",
+        "chamber": "Senate",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Kevin Ford, Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tiffany Alston",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 25",
+        "chamber": "Senate",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "Nick Charles",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 26",
+        "chamber": "Senate",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Antonio Driver",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "C. Anthony Muse",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 27",
+        "chamber": "Senate",
+        "district": "27",
+        "candidates": [
+          {
+            "name": "Jason Fowler Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kevin Harris",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Allan Larsen",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 28",
+        "chamber": "Senate",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Aaron Corbin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "C.T. Wilson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 29",
+        "chamber": "Senate",
+        "district": "29",
+        "candidates": [
+          {
+            "name": "Chuck Borges",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jack Bailey",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 30",
+        "chamber": "Senate",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Shaneka Henson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jessica Haire",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 31",
+        "chamber": "Senate",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "Brent Mulrooney",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nic Kipke",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 32",
+        "chamber": "Senate",
+        "district": "32",
+        "candidates": [
+          {
+            "name": "Mark Chang",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Stephen A. Tillett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Justin Gallucci",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 33",
+        "chamber": "Senate",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Dawn Gile",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Alyson Leahy",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 34",
+        "chamber": "Senate",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Blane H. Miller, III",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mary-Dulany James",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Raj Goel",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 35",
+        "chamber": "Senate",
+        "district": "35",
+        "candidates": [
+          {
+            "name": "Jason Gallion",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 36",
+        "chamber": "Senate",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Joel John",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Natasha Johnson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Steve Hershey",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 37",
+        "chamber": "Senate",
+        "district": "37",
+        "candidates": [
+          {
+            "name": "Edie Barrett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Katie G. Clendaniel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Johnny Mautz",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 38",
+        "chamber": "Senate",
+        "district": "38",
+        "candidates": [
+          {
+            "name": "Mary Beth Carozza",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 39",
+        "chamber": "Senate",
+        "district": "39",
+        "candidates": [
+          {
+            "name": "Amar Mukunda",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dora Drake",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nancy King",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 40",
+        "chamber": "Senate",
+        "district": "40",
+        "candidates": [
+          {
+            "name": "Antonio Hayes",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Steven Messmer",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 41",
+        "chamber": "Senate",
+        "district": "41",
+        "candidates": [
+          {
+            "name": "Ayo Kimathi",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dalya Attar",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Malcolm Ruff",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 42",
+        "chamber": "Senate",
+        "district": "42",
+        "candidates": [
+          {
+            "name": "Eric Heyssel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Paul Konka",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Pete Henderson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Stephanie Popescu",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Andy Wood",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kevin Ford",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Matt Fox",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 43",
+        "chamber": "Senate",
+        "district": "43",
+        "candidates": [
+          {
+            "name": "Mary Washington",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 44",
+        "chamber": "Senate",
+        "district": "44",
+        "candidates": [
+          {
+            "name": "Charles E. Sydnor, III",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 45",
+        "chamber": "Senate",
+        "district": "45",
+        "candidates": [
+          {
+            "name": "Cory McCray",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 46",
+        "chamber": "Senate",
+        "district": "46",
+        "candidates": [
+          {
+            "name": "Bill Ferguson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bobby LaPin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Emmanuel Digman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "MD Senate 47",
+        "chamber": "Senate",
+        "district": "47",
+        "candidates": [
+          {
+            "name": "Malcolm Augustine",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      }
+    ]
   },
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "1A",
+      "seat_label": "MD HoD 1A",
+      "pres_margin": "-50.3",
+      "holder_party": "R",
+      "candidate": "Jeff Jobe",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "29A",
+      "seat_label": "MD HoD 29A",
+      "pres_margin": "-35.6",
+      "holder_party": "R",
+      "candidate": "Julie Lynn",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "33B",
+      "seat_label": "MD HoD 33B",
+      "pres_margin": "+8.1",
+      "holder_party": "R",
+      "candidate": "Chelsey Cook",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "33C",
+      "seat_label": "MD HoD 33C",
+      "pres_margin": "+15.0",
+      "holder_party": "D",
+      "candidate": "Heather Bagnall Tudball",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "34B",
+      "seat_label": "MD HoD 34B",
+      "pres_margin": "-9.6",
+      "holder_party": "R",
+      "candidate": "Amy Lyon",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "35B",
+      "seat_label": "MD HoD 35B",
+      "pres_margin": "-38.6",
+      "holder_party": "R",
+      "candidate": "Blessing T. Oluwadare",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "37A",
+      "seat_label": "MD HoD 37A",
+      "pres_margin": "+22.5",
+      "holder_party": "D",
+      "candidate": "Sheree Sample-Hughes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "38A",
+      "seat_label": "MD HoD 38A",
+      "pres_margin": "-15.9",
+      "holder_party": "R",
+      "candidate": "Steven Johnson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "38B",
+      "seat_label": "MD HoD 38B",
+      "pres_margin": "+7.1",
+      "holder_party": "R",
+      "candidate": "Josh Hastings",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "42A",
+      "seat_label": "MD HoD 42A",
+      "pres_margin": "-10.0",
+      "holder_party": "R",
+      "candidate": "Jyoti Mohan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "42B",
+      "seat_label": "MD HoD 42B",
+      "pres_margin": "+25.6",
+      "holder_party": "D",
+      "candidate": "Michele Guyton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "42C",
+      "seat_label": "MD HoD 42C",
+      "pres_margin": "-33.9",
+      "holder_party": "R",
+      "candidate": "Corynne Courpas",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "43B",
+      "seat_label": "MD HoD 43B",
+      "pres_margin": "+56.1",
+      "holder_party": "D",
+      "candidate": "Cathi Forbes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "44A",
+      "seat_label": "MD HoD 44A",
+      "pres_margin": "+21.0",
+      "holder_party": "D",
+      "candidate": "Eric Ebersole",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "47B",
+      "seat_label": "MD HoD 47B",
+      "pres_margin": "+62.0",
+      "holder_party": "D",
+      "candidate": "Deni Taveras",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "7B",
+      "seat_label": "MD HoD 7B",
+      "pres_margin": "-27.9",
+      "holder_party": "R",
+      "candidate": "Chris Hart",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "1",
+      "seat_label": "MD Senate 1",
+      "pres_margin": "-44.6",
+      "holder_party": "R",
+      "candidate": "Ashley Emerick",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "2",
+      "seat_label": "MD Senate 2",
+      "pres_margin": "-17.9",
+      "holder_party": "R",
+      "candidate": "Eric Martin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "3",
+      "seat_label": "MD Senate 3",
+      "pres_margin": "+32.7",
+      "holder_party": "D",
+      "candidate": "Karen Young",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "4",
+      "seat_label": "MD Senate 4",
+      "pres_margin": "-6.1",
+      "holder_party": "R",
+      "candidate": "Lara Westdorp",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "6",
+      "seat_label": "MD Senate 6",
+      "pres_margin": "-17.9",
+      "holder_party": "R",
+      "candidate": "Justin Holliday",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "7",
+      "seat_label": "MD Senate 7",
+      "pres_margin": "-15.9",
+      "holder_party": "R",
+      "candidate": "Bill Geibler",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "8",
+      "seat_label": "MD Senate 8",
+      "pres_margin": "+25.9",
+      "holder_party": "D",
+      "candidate": "Carl Jackson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "9",
+      "seat_label": "MD Senate 9",
+      "pres_margin": "+25.7",
+      "holder_party": "D",
+      "candidate": "Katie Hester",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "10",
+      "seat_label": "MD Senate 10",
+      "pres_margin": "+55.1",
+      "holder_party": "D",
+      "candidate": "Ben Brooks",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "11",
+      "seat_label": "MD Senate 11",
+      "pres_margin": "+36.3",
+      "holder_party": "D",
+      "candidate": "Shelly Hettleman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "12",
+      "seat_label": "MD Senate 12",
+      "pres_margin": "+39.5",
+      "holder_party": "D",
+      "candidate": "Clarence Lam",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "13",
+      "seat_label": "MD Senate 13",
+      "pres_margin": "+49.4",
+      "holder_party": "D",
+      "candidate": "Guy Guzzone",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "14",
+      "seat_label": "MD Senate 14",
+      "pres_margin": "+42.6",
+      "holder_party": "D",
+      "candidate": "Craig Zucker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "15",
+      "seat_label": "MD Senate 15",
+      "pres_margin": "+43.9",
+      "holder_party": "D",
+      "candidate": "Brian Feldman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "18",
+      "seat_label": "MD Senate 18",
+      "pres_margin": "+61.4",
+      "holder_party": "D",
+      "candidate": "Jeff Waldstreicher",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "19",
+      "seat_label": "MD Senate 19",
+      "pres_margin": "+47.7",
+      "holder_party": "D",
+      "candidate": "Ben Kramer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "20",
+      "seat_label": "MD Senate 20",
+      "pres_margin": "+70.4",
+      "holder_party": "D",
+      "candidate": "Will Smith",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "21",
+      "seat_label": "MD Senate 21",
+      "pres_margin": "+54.3",
+      "holder_party": "D",
+      "candidate": "Jim Rosapepe",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "22",
+      "seat_label": "MD Senate 22",
+      "pres_margin": "+69.7",
+      "holder_party": "D",
+      "candidate": "Alonzo Washington",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "25",
+      "seat_label": "MD Senate 25",
+      "pres_margin": "+84.8",
+      "holder_party": "D",
+      "candidate": "Nick Charles",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "29",
+      "seat_label": "MD Senate 29",
+      "pres_margin": "-15.0",
+      "holder_party": "R",
+      "candidate": "Chuck Borges",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "30",
+      "seat_label": "MD Senate 30",
+      "pres_margin": "+17.5",
+      "holder_party": "D",
+      "candidate": "Shaneka Henson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "31",
+      "seat_label": "MD Senate 31",
+      "pres_margin": "-10.8",
+      "holder_party": "R",
+      "candidate": "Brent Mulrooney",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "33",
+      "seat_label": "MD Senate 33",
+      "pres_margin": "+18.3",
+      "holder_party": "D",
+      "candidate": "Dawn Gile",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "43",
+      "seat_label": "MD Senate 43",
+      "pres_margin": "+74.7",
+      "holder_party": "D",
+      "candidate": "Mary Washington",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "44",
+      "seat_label": "MD Senate 44",
+      "pres_margin": "+45.2",
+      "holder_party": "D",
+      "candidate": "Charles E. Sydnor, III",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "45",
+      "seat_label": "MD Senate 45",
+      "pres_margin": "+76.4",
+      "holder_party": "D",
+      "candidate": "Cory McCray",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "47",
+      "seat_label": "MD Senate 47",
+      "pres_margin": "+70.1",
+      "holder_party": "D",
+      "candidate": "Malcolm Augustine",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "3",
+      "seat_label": "MD HoD 3 Seat A",
+      "pres_margin": "+32.7",
+      "holder_party": "D",
+      "candidate": "Anthony Nieves",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "13",
+      "seat_label": "MD HoD 13 Seat A",
+      "pres_margin": "+49.4",
+      "holder_party": "D",
+      "candidate": "Mark Fisher",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "15",
+      "seat_label": "MD HoD 15 Seat A",
+      "pres_margin": "+43.9",
+      "holder_party": "D",
+      "candidate": "Peter Chan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "16",
+      "seat_label": "MD HoD 16 Seat A",
+      "pres_margin": "+62.8",
+      "holder_party": "D",
+      "candidate": "Ann Guthrie Hingston",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "46",
+      "seat_label": "MD HoD 46 Seat A",
+      "pres_margin": "+61.8",
+      "holder_party": "D",
+      "candidate": "Jeremy L. Amason",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "11B",
+      "seat_label": "MD HoD 11B Seat A",
+      "pres_margin": "+26.9",
+      "holder_party": "D",
+      "candidate": "John Gordon",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "12A",
+      "seat_label": "MD HoD 12A Seat A",
+      "pres_margin": "+49.6",
+      "holder_party": "D",
+      "candidate": "Frank Glover",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "12B",
+      "seat_label": "MD HoD 12B",
+      "pres_margin": "+12.1",
+      "holder_party": "D",
+      "candidate": "Blair L. Brannock",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "1B",
+      "seat_label": "MD HoD 1B",
+      "pres_margin": "-35.4",
+      "holder_party": "R",
+      "candidate": "Jason Buckel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "1C",
+      "seat_label": "MD HoD 1C",
+      "pres_margin": "-47.7",
+      "holder_party": "R",
+      "candidate": "Terry Baker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "27A",
+      "seat_label": "MD HoD 27A",
+      "pres_margin": "+59.9",
+      "holder_party": "D",
+      "candidate": "Jimmy Crawford",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "27B",
+      "seat_label": "MD HoD 27B",
+      "pres_margin": "+26.5",
+      "holder_party": "D",
+      "candidate": "Daniel Thomas Jr.",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "27C",
+      "seat_label": "MD HoD 27C",
+      "pres_margin": "-15.0",
+      "holder_party": "R",
+      "candidate": "Mark Fisher",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "29A",
+      "seat_label": "MD HoD 29A",
+      "pres_margin": "-35.6",
+      "holder_party": "R",
+      "candidate": "Matt Morgan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "29B",
+      "seat_label": "MD HoD 29B",
+      "pres_margin": "+11.4",
+      "holder_party": "D",
+      "candidate": "Brad Hall",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "2B",
+      "seat_label": "MD HoD 2B",
+      "pres_margin": "+9.0",
+      "holder_party": "D",
+      "candidate": "Scott Flaherty",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "30B",
+      "seat_label": "MD HoD 30B",
+      "pres_margin": "-7.9",
+      "holder_party": "R",
+      "candidate": "Seth Howard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "33B",
+      "seat_label": "MD HoD 33B",
+      "pres_margin": "+8.1",
+      "holder_party": "R",
+      "candidate": "Sharyn Stuart",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "38B",
+      "seat_label": "MD HoD 38B",
+      "pres_margin": "+7.1",
+      "holder_party": "R",
+      "candidate": "Barry Beauchamp",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "38C",
+      "seat_label": "MD HoD 38C",
+      "pres_margin": "-31.4",
+      "holder_party": "R",
+      "candidate": "Wayne Hartman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "42C",
+      "seat_label": "MD HoD 42C",
+      "pres_margin": "-33.9",
+      "holder_party": "R",
+      "candidate": "Steve Patten",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "44A",
+      "seat_label": "MD HoD 44A",
+      "pres_margin": "+21.0",
+      "holder_party": "D",
+      "candidate": "Candace Linton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "44B",
+      "seat_label": "MD HoD 44B Seat A",
+      "pres_margin": "+54.6",
+      "holder_party": "D",
+      "candidate": "David Martin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "47A",
+      "seat_label": "MD HoD 47A Seat A",
+      "pres_margin": "+72.4",
+      "holder_party": "D",
+      "candidate": "Fred Price, Jr.",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "7B",
+      "seat_label": "MD HoD 7B",
+      "pres_margin": "-27.9",
+      "holder_party": "R",
+      "candidate": "Lauren Arikan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "1",
+      "seat_label": "MD Senate 1",
+      "pres_margin": "-44.6",
+      "holder_party": "R",
+      "candidate": "Mike McKay",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "2",
+      "seat_label": "MD Senate 2",
+      "pres_margin": "-17.9",
+      "holder_party": "R",
+      "candidate": "Paul Corderman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "4",
+      "seat_label": "MD Senate 4",
+      "pres_margin": "-6.1",
+      "holder_party": "R",
+      "candidate": "William Folden",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "5",
+      "seat_label": "MD Senate 5",
+      "pres_margin": "-21.2",
+      "holder_party": "R",
+      "candidate": "Justin Ready",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "7",
+      "seat_label": "MD Senate 7",
+      "pres_margin": "-15.9",
+      "holder_party": "R",
+      "candidate": "J.B. Jennings",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "8",
+      "seat_label": "MD Senate 8",
+      "pres_margin": "+25.9",
+      "holder_party": "D",
+      "candidate": "Yahu Blackwell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "9",
+      "seat_label": "MD Senate 9",
+      "pres_margin": "+25.7",
+      "holder_party": "D",
+      "candidate": "Bill Hightower",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "21",
+      "seat_label": "MD Senate 21",
+      "pres_margin": "+54.3",
+      "holder_party": "D",
+      "candidate": "Lee Havis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "22",
+      "seat_label": "MD Senate 22",
+      "pres_margin": "+69.7",
+      "holder_party": "D",
+      "candidate": "Jim Wass",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "23",
+      "seat_label": "MD Senate 23",
+      "pres_margin": "+71.0",
+      "holder_party": "D",
+      "candidate": "Jesse James",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "27",
+      "seat_label": "MD Senate 27",
+      "pres_margin": "+22.4",
+      "holder_party": "D",
+      "candidate": "Allan Larsen",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "29",
+      "seat_label": "MD Senate 29",
+      "pres_margin": "-15.0",
+      "holder_party": "R",
+      "candidate": "Jack Bailey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "30",
+      "seat_label": "MD Senate 30",
+      "pres_margin": "+17.5",
+      "holder_party": "D",
+      "candidate": "Jessica Haire",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "31",
+      "seat_label": "MD Senate 31",
+      "pres_margin": "-10.8",
+      "holder_party": "R",
+      "candidate": "Nic Kipke",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "32",
+      "seat_label": "MD Senate 32",
+      "pres_margin": "+30.1",
+      "holder_party": "D",
+      "candidate": "Justin Gallucci",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "33",
+      "seat_label": "MD Senate 33",
+      "pres_margin": "+18.3",
+      "holder_party": "D",
+      "candidate": "Alyson Leahy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "34",
+      "seat_label": "MD Senate 34",
+      "pres_margin": "+6.4",
+      "holder_party": "D",
+      "candidate": "Raj Goel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "35",
+      "seat_label": "MD Senate 35",
+      "pres_margin": "-35.5",
+      "holder_party": "R",
+      "candidate": "Jason Gallion",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "36",
+      "seat_label": "MD Senate 36",
+      "pres_margin": "-22.8",
+      "holder_party": "R",
+      "candidate": "Steve Hershey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "37",
+      "seat_label": "MD Senate 37",
+      "pres_margin": "-8.8",
+      "holder_party": "R",
+      "candidate": "Johnny Mautz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "38",
+      "seat_label": "MD Senate 38",
+      "pres_margin": "-16.0",
+      "holder_party": "R",
+      "candidate": "Mary Beth Carozza",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "46",
+      "seat_label": "MD Senate 46",
+      "pres_margin": "+61.8",
+      "holder_party": "D",
+      "candidate": "Emmanuel Digman",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [
     {
       "number": "Commission on Judicial Disabilities Vacancies Amendment",
