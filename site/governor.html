@@ -657,12 +657,42 @@
 
     if (parsed.length === 0) return;
 
-    const earliest = parsed[0].startDate;
+    // Split succession terms: if a governor who succeeded also won a General election
+    // during their term, split into succession segment (dotted) + elected segment (solid)
+    const splitParsed = [];
+    for (const t of parsed) {
+      const isSuccession = t.start_reason && t.start_reason !== 'elected';
+      if (!isSuccession) { splitParsed.push(t); continue; }
+
+      // Find General elections won by this governor during their term
+      const lastName = t.name.split(' ').pop().toLowerCase();
+      const wonElection = data.elections.find(e =>
+        e.type === 'General' && e.year >= t.startDate.getFullYear()
+        && (t.endDate ? e.year <= t.endDate.getFullYear() : true)
+        && e.candidates.some(c => c.result === 'Won' && c.name.toLowerCase().includes(lastName))
+      );
+
+      if (wonElection) {
+        // Split at inauguration (January of year after election)
+        const inaugDate = new Date(wonElection.year + 1, 0, 15);
+        if (inaugDate > t.startDate && inaugDate < t.endDate) {
+          // Succession portion (dotted)
+          splitParsed.push({ ...t, endDate: inaugDate, _splitSuccession: true });
+          // Elected portion (solid)
+          splitParsed.push({ ...t, startDate: inaugDate, start_reason: 'elected',
+            election_year: wonElection.year, _splitElected: true });
+          continue;
+        }
+      }
+      splitParsed.push(t);
+    }
+
+    const earliest = splitParsed[0].startDate;
     // Latest date is the projected end of the current governor's full term
-    const latest = parsed[parsed.length - 1].endDate;
+    const latest = splitParsed[splitParsed.length - 1].endDate;
     const totalDays = (latest - earliest) / (1000 * 60 * 60 * 24);
 
-    const W = Math.max(700, parsed.length * 80 + 120);
+    const W = Math.max(700, splitParsed.length * 80 + 120);
     const H = 120;
     const PAD_L = 20, PAD_R = 20, PAD_T = 30, PAD_B = 28;
     const BAR_Y = PAD_T;
@@ -701,7 +731,7 @@
     svg += `<text x="${nowX}" y="${BAR_Y + BAR_H + 20}" text-anchor="middle" font-size="10" fill="#043858" font-family="Work Sans,sans-serif" font-weight="600">Today</text>`;
 
     // Draw governor segments
-    parsed.forEach((t, i) => {
+    splitParsed.forEach((t, i) => {
       const x1 = xPos(t.startDate);
       const x2 = xPos(t.endDate);
       const w = Math.max(x2 - x1, 2);
@@ -746,20 +776,24 @@
     const segments = container.querySelectorAll('.gov-segment');
     segments.forEach(seg => {
       const idx = parseInt(seg.dataset.idx);
-      const t = parsed[idx];
+      const t = splitParsed[idx];
 
       seg.addEventListener('mouseenter', (e) => {
         seg.setAttribute('opacity', '0.8');
-        const startStr = t.start ? formatDate(t.start) : '?';
-        const endStr = t.end ? formatDate(t.end) : 'Present';
+        // Use segment dates (may differ from original for split succession terms)
+        const segStart = t.startDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+        const segEnd = t.end === null && !t._splitSuccession
+          ? 'Present'
+          : t.endDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
         const reasonStr = t.start_reason ? reasonLabel(t.start_reason) : '';
         const marginStr = t.margin != null ? `Margin: ${Math.abs(t.margin).toFixed(1)}% (${t.election_year})` : '';
-        const endReasonStr = t.end_reason ? `Left office: ${reasonLabel(t.end_reason)}` : '';
+        const endReasonStr = t.end_reason && !t._splitSuccession ? `Left office: ${reasonLabel(t.end_reason)}` : '';
 
         let ttHtml = `<div class="tt-name" style="${partyColorStyle(t.party)}">${t.name}
           <span class="tt-party">${partyLabel(t.party)}</span></div>
-          <div class="tt-dates">${startStr} &mdash; ${endStr}</div>`;
+          <div class="tt-dates">${segStart} &mdash; ${segEnd}</div>`;
         if (reasonStr) ttHtml += `<div class="tt-reason">${reasonStr}</div>`;
+        if (t._splitElected) ttHtml += `<div class="tt-reason">Won election in ${t.election_year}</div>`;
         if (endReasonStr) ttHtml += `<div class="tt-reason">${endReasonStr}</div>`;
         if (marginStr) ttHtml += `<div class="tt-margin">${marginStr}</div>`;
 
