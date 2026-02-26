@@ -283,8 +283,34 @@ def export_states_summary(dry_run=False):
         ORDER BY e.election_date, st.abbreviation, s.seat_label
     """
 
+    # Query 7: Uncontested primary counts per state
+    q_uncontested = """
+        WITH primary_counts AS (
+            SELECT e.id, st.abbreviation as state, e.election_type, d.chamber,
+                COUNT(cy.id) FILTER (
+                    WHERE cy.candidate_status NOT IN ('Withdrawn_Pre_Ballot','Withdrawn_Post_Ballot','Disqualified')
+                      AND cy.is_write_in = FALSE
+                ) as active_count
+            FROM elections e
+            JOIN seats s ON e.seat_id = s.id
+            JOIN districts d ON s.district_id = d.id
+            JOIN states st ON d.state_id = st.id
+            LEFT JOIN candidacies cy ON cy.election_id = e.id
+            WHERE e.election_year = 2026
+              AND e.election_type IN ('Primary_D','Primary_R')
+              AND s.office_level = 'Legislative'
+            GROUP BY e.id, st.abbreviation, e.election_type, d.chamber
+            HAVING COUNT(cy.id) > 0
+        )
+        SELECT state, election_type, chamber,
+            COUNT(*) as total, COUNT(*) FILTER (WHERE active_count <= 1) as uncontested
+        FROM primary_counts
+        GROUP BY state, election_type, chamber
+        ORDER BY state, election_type, chamber
+    """
+
     if dry_run:
-        print('  Would run 6 queries and write states_summary.json')
+        print('  Would run 7 queries and write states_summary.json')
         return
 
     chambers_data = run_sql(q_chambers)
@@ -293,11 +319,26 @@ def export_states_summary(dry_run=False):
     forecasts_data = run_sql(q_forecasts)
     measures_data = run_sql(q_measures)
     specials_data = run_sql(q_specials)
+    uncontested_data = run_sql(q_uncontested)
 
     # Index forecasts and measures
     forecasts_by_state = {r['abbreviation']: r['forecast_rating'] for r in forecasts_data}
     measures_by_state = {r['abbreviation']: r['cnt'] for r in measures_data}
     elections_by_state = {r['abbreviation']: r for r in elections_data}
+
+    # Index uncontested data: {state: {Primary_D: {chamber: {total, uncontested}}, ...}}
+    uncontested_by_state = {}
+    for r in (uncontested_data or []):
+        st = r['state']
+        if st not in uncontested_by_state:
+            uncontested_by_state[st] = {}
+        etype = r['election_type']
+        if etype not in uncontested_by_state[st]:
+            uncontested_by_state[st][etype] = {}
+        uncontested_by_state[st][etype][r['chamber']] = {
+            'total': r['total'],
+            'uncontested': r['uncontested'],
+        }
 
     # Index officers by state
     officers_by_state = {}
@@ -364,6 +405,23 @@ def export_states_summary(dry_run=False):
             'filing_deadline_statewide': filing_sw,
             'primary_date': str(elec['primary_date']) if elec.get('primary_date') else None,
         }
+
+        # Uncontested primary data
+        unc_state = uncontested_by_state.get(abbr)
+        if unc_state:
+            st['elections_2026']['uncontested'] = {
+                'data_available': True,
+                'primaries_d': unc_state.get('Primary_D', {}),
+                'primaries_r': unc_state.get('Primary_R', {}),
+                'general': None,
+            }
+        else:
+            st['elections_2026']['uncontested'] = {
+                'data_available': False,
+                'primaries_d': {},
+                'primaries_r': {},
+                'general': None,
+            }
 
     # Build special elections list
     special_elections = []
@@ -554,8 +612,49 @@ def export_state_detail(state_abbr, dry_run=False):
           AND e.election_year = 2026
     """
 
+    # Query 7: Uncontested primary detail
+    q_uncontested = f"""
+        WITH primary_counts AS (
+            SELECT
+                e.id,
+                e.election_type,
+                d.chamber,
+                d.district_number,
+                s.seat_label,
+                d.pres_2024_margin,
+                {EP} as holder_party,
+                e.is_open_seat,
+                COUNT(cy.id) FILTER (
+                    WHERE cy.candidate_status NOT IN ('Withdrawn_Pre_Ballot','Withdrawn_Post_Ballot','Disqualified')
+                      AND cy.is_write_in = FALSE
+                ) as active_count,
+                STRING_AGG(
+                    CASE WHEN cy.candidate_status NOT IN ('Withdrawn_Pre_Ballot','Withdrawn_Post_Ballot','Disqualified')
+                              AND cy.is_write_in = FALSE THEN c.full_name END, ', '
+                ) as candidate_names
+            FROM elections e
+            JOIN seats s ON e.seat_id = s.id
+            JOIN districts d ON s.district_id = d.id
+            JOIN states st ON d.state_id = st.id
+            LEFT JOIN candidacies cy ON cy.election_id = e.id
+            LEFT JOIN candidates c ON cy.candidate_id = c.id
+            WHERE e.election_year = 2026
+              AND e.election_type IN ('Primary_D','Primary_R')
+              AND s.office_level = 'Legislative'
+              AND st.abbreviation = '{state_abbr}'
+            GROUP BY e.id, e.election_type, d.chamber, d.district_number,
+                     s.seat_label, d.pres_2024_margin, s.current_holder_caucus,
+                     s.current_holder_party, e.is_open_seat
+            HAVING COUNT(cy.id) > 0
+        )
+        SELECT * FROM primary_counts WHERE active_count <= 1
+        ORDER BY election_type, chamber,
+            CASE WHEN district_number SIMILAR TO '[0-9]+' THEN district_number::int ELSE 99999 END,
+            district_number
+    """
+
     if dry_run:
-        print(f'  Would run 6 queries and write states/{state_abbr}.json')
+        print(f'  Would run 7 queries and write states/{state_abbr}.json')
         return
 
     state_info = run_sql(q_state)
@@ -569,6 +668,7 @@ def export_state_detail(state_abbr, dry_run=False):
     candidacies_data = run_sql(q_candidacies)
     measures_data = run_sql(q_measures)
     forecast_data = run_sql(q_forecast)
+    uncontested_data = run_sql(q_uncontested) or []
 
     # Build officers list
     statewide_officers = []
@@ -730,6 +830,20 @@ def export_state_detail(state_abbr, dry_run=False):
     """)
     dates = elec_dates[0] if elec_dates else {}
 
+    # Uncontested primaries
+    uncontested_primaries = []
+    for r in uncontested_data:
+        uncontested_primaries.append({
+            'election_type': r['election_type'],
+            'chamber': r['chamber'],
+            'district': r['district_number'],
+            'seat_label': r['seat_label'],
+            'pres_margin': r['pres_2024_margin'],
+            'holder_party': r['holder_party'],
+            'candidate': r['candidate_names'] if r['active_count'] == 1 else None,
+            'is_open_seat': r['is_open_seat'],
+        })
+
     result = {
         'generated_at': datetime.utcnow().isoformat() + 'Z',
         'state': {
@@ -748,6 +862,7 @@ def export_state_detail(state_abbr, dry_run=False):
         'statewide_officers': statewide_officers,
         'chambers': chambers,
         'elections_2026': elections_2026,
+        'uncontested_primaries': uncontested_primaries,
         'ballot_measures': ballot_measures,
         'filing_deadline': str(dates.get('filing_deadline')) if dates.get('filing_deadline') else None,
         'primary_date': str(dates.get('primary_date')) if dates.get('primary_date') else None,
@@ -888,25 +1003,68 @@ def export_all_state_details(dry_run=False):
         ORDER BY st.abbreviation
     """
 
+    # --- Bulk Query 8: Uncontested primary detail ---
+    q_uncontested = f"""
+        WITH primary_counts AS (
+            SELECT
+                e.id,
+                st.abbreviation as state,
+                e.election_type,
+                d.chamber,
+                d.district_number,
+                s.seat_label,
+                d.pres_2024_margin,
+                {EP} as holder_party,
+                e.is_open_seat,
+                COUNT(cy.id) FILTER (
+                    WHERE cy.candidate_status NOT IN ('Withdrawn_Pre_Ballot','Withdrawn_Post_Ballot','Disqualified')
+                      AND cy.is_write_in = FALSE
+                ) as active_count,
+                STRING_AGG(
+                    CASE WHEN cy.candidate_status NOT IN ('Withdrawn_Pre_Ballot','Withdrawn_Post_Ballot','Disqualified')
+                              AND cy.is_write_in = FALSE THEN c.full_name END, ', '
+                ) as candidate_names
+            FROM elections e
+            JOIN seats s ON e.seat_id = s.id
+            JOIN districts d ON s.district_id = d.id
+            JOIN states st ON d.state_id = st.id
+            LEFT JOIN candidacies cy ON cy.election_id = e.id
+            LEFT JOIN candidates c ON cy.candidate_id = c.id
+            WHERE e.election_year = 2026
+              AND e.election_type IN ('Primary_D','Primary_R')
+              AND s.office_level = 'Legislative'
+            GROUP BY e.id, st.abbreviation, e.election_type, d.chamber, d.district_number,
+                     s.seat_label, d.pres_2024_margin, s.current_holder_caucus,
+                     s.current_holder_party, e.is_open_seat
+            HAVING COUNT(cy.id) > 0
+        )
+        SELECT * FROM primary_counts WHERE active_count <= 1
+        ORDER BY state, election_type, chamber,
+            CASE WHEN district_number SIMILAR TO '[0-9]+' THEN district_number::int ELSE 99999 END,
+            district_number
+    """
+
     if dry_run:
-        print('  Would run 7 bulk queries and write 50 state JSON files')
+        print('  Would run 8 bulk queries and write 50 state JSON files')
         return
 
-    print('  Running 7 bulk queries...')
+    print('  Running 8 bulk queries...')
     all_states = run_sql(q_states)
-    print('    1/7 states')
+    print('    1/8 states')
     all_officers = run_sql(q_officers)
-    print('    2/7 officers')
+    print('    2/8 officers')
     all_members = run_sql(q_members)
-    print('    3/7 members')
+    print('    3/8 members')
     all_candidacies = run_sql(q_candidacies)
-    print('    4/7 candidacies')
+    print('    4/8 candidacies')
     all_measures = run_sql(q_measures)
-    print('    5/7 measures')
+    print('    5/8 measures')
     all_forecasts = run_sql(q_forecasts)
-    print('    6/7 forecasts')
+    print('    6/8 forecasts')
     all_dates = run_sql(q_dates)
-    print('    7/7 dates')
+    print('    7/8 dates')
+    all_uncontested = run_sql(q_uncontested)
+    print('    8/8 uncontested')
 
     # --- Index everything by state abbreviation ---
     states_info = {r['abbreviation']: r for r in all_states}
@@ -932,6 +1090,10 @@ def export_all_state_details(dry_run=False):
         forecasts_by_state.setdefault(r['abbreviation'], []).append(r)
 
     dates_by_state = {r['abbreviation']: r for r in all_dates}
+
+    uncontested_by_state = {}
+    for r in (all_uncontested or []):
+        uncontested_by_state.setdefault(r['state'], []).append(r)
 
     # --- Build and write each state ---
     generated_at = datetime.utcnow().isoformat() + 'Z'
@@ -1059,6 +1221,22 @@ def export_all_state_details(dry_run=False):
         # Dates
         dates = dates_by_state.get(abbr, {})
 
+        # Uncontested primaries
+        unc_list = uncontested_by_state.get(abbr, [])
+        uncontested_primaries = []
+        for r in unc_list:
+            entry = {
+                'election_type': r['election_type'],
+                'chamber': r['chamber'],
+                'district': r['district_number'],
+                'seat_label': r['seat_label'],
+                'pres_margin': r['pres_2024_margin'],
+                'holder_party': r['holder_party'],
+                'candidate': r['candidate_names'] if r['active_count'] == 1 else None,
+                'is_open_seat': r['is_open_seat'],
+            }
+            uncontested_primaries.append(entry)
+
         result = {
             'generated_at': generated_at,
             'state': {
@@ -1072,6 +1250,7 @@ def export_all_state_details(dry_run=False):
             'statewide_officers': statewide_officers,
             'chambers': chambers,
             'elections_2026': elections_2026,
+            'uncontested_primaries': uncontested_primaries,
             'ballot_measures': ballot_measures,
             'filing_deadline': str(dates.get('filing_deadline')) if dates.get('filing_deadline') else None,
             'primary_date': str(dates.get('primary_date')) if dates.get('primary_date') else None,
