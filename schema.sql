@@ -263,6 +263,32 @@ CREATE INDEX idx_seat_terms_current ON seat_terms(seat_id) WHERE end_date IS NUL
 CREATE INDEX idx_seat_terms_dates ON seat_terms(start_date, end_date);
 
 -- ============================================================
+-- 8b. PARTY SWITCHES (event log for officials who changed party)
+-- ============================================================
+CREATE TABLE party_switches (
+    id              SERIAL PRIMARY KEY,
+    candidate_id    INTEGER NOT NULL REFERENCES candidates(id) ON DELETE CASCADE,
+    seat_id         INTEGER REFERENCES seats(id) ON DELETE SET NULL,
+    state_id        INTEGER NOT NULL REFERENCES states(id) ON DELETE CASCADE,
+    chamber         TEXT,
+    old_party       TEXT NOT NULL,
+    new_party       TEXT NOT NULL,
+    old_caucus      TEXT,
+    new_caucus      TEXT,
+    switch_date     DATE,               -- exact date if known (nullable for older records)
+    switch_year     INTEGER NOT NULL,    -- always populated
+    source_url      TEXT,
+    bp_profile_url  TEXT,
+    is_current      BOOLEAN DEFAULT FALSE,
+    notes           TEXT,
+    UNIQUE(candidate_id, switch_year, old_party, new_party)
+);
+
+CREATE INDEX idx_party_switches_candidate ON party_switches(candidate_id);
+CREATE INDEX idx_party_switches_state ON party_switches(state_id);
+CREATE INDEX idx_party_switches_year ON party_switches(switch_year);
+
+-- ============================================================
 -- 9. FORECASTS (time-series ratings)
 -- ============================================================
 CREATE TABLE forecasts (
@@ -436,6 +462,7 @@ ALTER TABLE ballot_measures ENABLE ROW LEVEL SECURITY;
 ALTER TABLE forecasts ENABLE ROW LEVEL SECURITY;
 ALTER TABLE seat_terms ENABLE ROW LEVEL SECURITY;
 ALTER TABLE chamber_control ENABLE ROW LEVEL SECURITY;
+ALTER TABLE party_switches ENABLE ROW LEVEL SECURITY;
 
 -- Create permissive policies for authenticated access
 -- (adjust these based on your actual auth needs)
@@ -449,3 +476,4 @@ CREATE POLICY "Allow full access" ON ballot_measures FOR ALL USING (true) WITH C
 CREATE POLICY "Allow full access" ON forecasts FOR ALL USING (true) WITH CHECK (true);
 CREATE POLICY "Allow full access" ON seat_terms FOR ALL USING (true) WITH CHECK (true);
 CREATE POLICY "Allow full access" ON chamber_control FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Allow full access" ON party_switches FOR ALL USING (true) WITH CHECK (true);

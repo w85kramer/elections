@@ -196,24 +196,50 @@ def export_all_districts(dry_run=False, single_state=None):
         ORDER BY st.abbreviation, e.seat_id
     """
 
+    # Query 7: Party switches for legislative seats
+    q_switches = f"""
+        SELECT
+            st.abbreviation as state,
+            ps.seat_id,
+            c.full_name as name,
+            ps.old_party,
+            ps.new_party,
+            ps.old_caucus,
+            ps.new_caucus,
+            ps.switch_year,
+            ps.switch_date,
+            ps.bp_profile_url
+        FROM party_switches ps
+        JOIN seats s ON ps.seat_id = s.id
+        JOIN districts d ON s.district_id = d.id
+        JOIN states st ON d.state_id = st.id
+        JOIN candidates c ON ps.candidate_id = c.id
+        WHERE s.office_level = 'Legislative'
+          AND COALESCE(d.redistricting_cycle, '2022') = '2022'
+          {state_filter}
+        ORDER BY st.abbreviation, ps.seat_id, ps.switch_year
+    """
+
     if dry_run:
-        print('  Would run 6 queries and write district JSON files')
+        print('  Would run 7 queries and write district JSON files')
         print(f'\n  Sample query (districts):\n{q_districts[:300]}...')
         return
 
-    print('  Running 6 bulk queries...')
+    print('  Running 7 bulk queries...')
     districts_data = run_sql(q_districts)
-    print(f'    1/6 districts+seats: {len(districts_data)} rows')
+    print(f'    1/7 districts+seats: {len(districts_data)} rows')
     elections_data = run_sql(q_elections)
-    print(f'    2/6 elections: {len(elections_data)} rows')
+    print(f'    2/7 elections: {len(elections_data)} rows')
     candidacies_data = run_sql(q_candidacies)
-    print(f'    3/6 candidacies: {len(candidacies_data)} rows')
+    print(f'    3/7 candidacies: {len(candidacies_data)} rows')
     terms_data = run_sql(q_terms)
-    print(f'    4/6 seat_terms: {len(terms_data)} rows')
+    print(f'    4/7 seat_terms: {len(terms_data)} rows')
     states_data = run_sql(q_states)
-    print(f'    5/6 states: {len(states_data)} rows')
+    print(f'    5/7 states: {len(states_data)} rows')
     forecasts_data = run_sql(q_forecasts)
-    print(f'    6/6 forecasts: {len(forecasts_data)} rows')
+    print(f'    6/7 forecasts: {len(forecasts_data)} rows')
+    switches_data = run_sql(q_switches)
+    print(f'    7/7 party_switches: {len(switches_data)} rows')
 
     # --- Index data ---
 
@@ -242,6 +268,11 @@ def export_all_districts(dry_run=False, single_state=None):
             'source': r['source'],
             'rating': r['rating'],
         })
+
+    # Party switches indexed by seat_id
+    switches_by_seat = {}
+    for r in switches_data:
+        switches_by_seat.setdefault(r['seat_id'], []).append(r)
 
     # --- Group districts by state, then by district_id ---
     # Multiple seats can share the same district (multi-member)
@@ -307,6 +338,21 @@ def export_all_districts(dry_run=False, single_state=None):
         # Forecast info for this seat
         forecast = forecasts_by_seat.get(seat_id)
 
+        # Party switches for this seat
+        seat_switches = [
+            {
+                'name': sw['name'],
+                'year': sw['switch_year'],
+                'date': str(sw['switch_date']) if sw.get('switch_date') else None,
+                'old_party': sw['old_party'],
+                'new_party': sw['new_party'],
+                'old_caucus': sw.get('old_caucus'),
+                'new_caucus': sw.get('new_caucus'),
+                'bp_url': sw.get('bp_profile_url'),
+            }
+            for sw in switches_by_seat.get(seat_id, [])
+        ]
+
         seat_obj = {
             'seat_id': seat_id,
             'seat_label': r['seat_label'],
@@ -319,6 +365,7 @@ def export_all_districts(dry_run=False, single_state=None):
             'election_class': r['election_class'],
             'since_year': since_year,
             'elections': seat_elections,
+            'party_switches': seat_switches,
             'forecast': forecast,
         }
         # Include raw caucus for coalition annotation (AK)

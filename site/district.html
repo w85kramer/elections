@@ -171,6 +171,16 @@
     color: var(--ms-text-light);
   }
 
+  /* Party switch event rows */
+  .event-row.party-switch-row td {
+    background: #fff8e1;
+    border-left: 3px solid #f5a623;
+    font-style: italic;
+  }
+  .event-row.party-switch-row td:first-child {
+    border-left: 3px solid #f5a623;
+  }
+
   /* Similar districts */
   .similar-grid {
     display: grid;
@@ -624,7 +634,18 @@
   // ==========================
   function buildHistoryTable(seat, containerId) {
     const elections = seat.elections.slice().sort((a, b) => b.year - a.year || a.type.localeCompare(b.type));
-    if (elections.length === 0) return '<p class="text-muted">No election history available.</p>';
+    if (elections.length === 0 && (!seat.party_switches || seat.party_switches.length === 0)) return '<p class="text-muted">No office history available.</p>';
+
+    // Combine elections and party switches into unified timeline
+    const events = [];
+    for (const e of elections) {
+      events.push({ type: 'election', year: e.year, sort: 0, data: e });
+    }
+    for (const ps of (seat.party_switches || [])) {
+      events.push({ type: 'party_switch', year: ps.year, sort: 1, data: ps });
+    }
+    // Sort: descending year, party switches after elections in same year
+    events.sort((a, b) => b.year - a.year || a.sort - b.sort);
 
     let html = `<table class="history-table"><thead><tr>
       <th>Year</th><th>Type</th><th>Winner</th><th>Margin</th><th>Votes</th><th></th>
@@ -633,11 +654,35 @@
     let lastCycleKey = null;
     let rowIdx = 0;
 
-    for (const e of elections) {
+    for (const ev of events) {
+      // Handle party switch events
+      if (ev.type === 'party_switch') {
+        const ps = ev.data;
+        const cycleKey = `${ps.year}`;
+        if (cycleKey !== lastCycleKey) {
+          html += `<tr class="cycle-header"><td colspan="6">${ps.year}</td></tr>`;
+          lastCycleKey = cycleKey;
+        }
+        const dateStr = ps.date
+          ? new Date(ps.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+          : '';
+        const dateLabel = dateStr ? ` <span class="text-muted" style="font-size:11px">&middot; ${dateStr}</span>` : '';
+        const oldBadge = `<span class="party-badge ${partyBadgeClass(ps.old_party)}" style="font-size:10px;padding:1px 5px">${ps.old_party}</span>`;
+        const newBadge = `<span class="party-badge ${partyBadgeClass(ps.new_party)}" style="font-size:10px;padding:1px 5px">${ps.new_party}</span>`;
+        html += `<tr class="event-row party-switch-row">
+          <td>${ps.year}</td>
+          <td>Party Switch${dateLabel}</td>
+          <td><span style="${partyColorStyle(ps.new_party)}">${ps.name}</span> switched ${oldBadge} &rarr; ${newBadge}</td>
+          <td colspan="3"></td>
+        </tr>`;
+        continue;
+      }
+
+      const e = ev.data;
       // Group by year
       const cycleKey = `${e.year}`;
       if (cycleKey !== lastCycleKey) {
-        html += `<tr class="cycle-header"><td colspan="6">${e.year} Elections</td></tr>`;
+        html += `<tr class="cycle-header"><td colspan="6">${e.year}</td></tr>`;
         lastCycleKey = cycleKey;
       }
 
@@ -720,7 +765,7 @@
     return html;
   }
 
-  let historyHtml = `<div class="section"><div class="section-title">Election History</div>`;
+  let historyHtml = `<div class="section"><div class="section-title">Office History</div>`;
 
   if (isMultiSeat) {
     // Seat tabs
