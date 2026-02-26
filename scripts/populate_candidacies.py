@@ -11,6 +11,7 @@ Usage:
     python3 scripts/populate_candidacies.py --state TX
     python3 scripts/populate_candidacies.py --state TX --dry-run
     python3 scripts/populate_candidacies.py --all-closed
+    python3 scripts/populate_candidacies.py --state NC --force   # re-run on partially-populated state
 """
 import sys
 import re
@@ -20,10 +21,13 @@ import html as htmlmod
 from collections import Counter, defaultdict
 
 import httpx
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 BATCH_SIZE = 400
 
-# Filing deadlines for states with closed filing (as of 2026-02-08)
+# Filing deadlines for states with closed filing (as of 2026-02-20)
 CLOSED_FILING_STATES = {
     'IL': '2025-11-03',
     'AR': '2025-11-11',
@@ -36,6 +40,8 @@ CLOSED_FILING_STATES = {
     'NM': '2026-02-03',
     'OH': '2026-02-04',
     'IN': '2026-02-06',
+    'MD': '2026-02-24',
+    'ID': '2026-02-27',
 }
 
 # Ballotpedia URL patterns for each state's chambers
@@ -62,6 +68,10 @@ STATE_CHAMBERS = {
     'UT': [('Utah', 'House_of_Representatives', 'State House'),
            ('Utah', 'State_Senate', 'State Senate')],
     'NM': [('New_Mexico', 'House_of_Representatives', 'State House')],
+    'MD': [('Maryland', 'House_of_Delegates', 'State House'),
+           ('Maryland', 'State_Senate', 'State Senate')],
+    'ID': [('Idaho', 'House_of_Representatives', 'State House'),
+           ('Idaho', 'State_Senate', 'State Senate')],
 }
 
 PARTY_MAP = {
@@ -124,13 +134,27 @@ STATEWIDE_PAGES = {
         ('{s}_Treasurer_election,_2026', ['Treasurer']),
         ('{s}_Auditor_election,_2026', ['Auditor']),
     ],
+    'MD': [
+        ('{s}_gubernatorial_and_lieutenant_gubernatorial_election,_2026', ['Governor', 'Lt. Governor']),
+        ('{s}_Attorney_General_election,_2026', ['Attorney General']),
+        ('{s}_Comptroller_election,_2026', ['Controller']),
+    ],
+    'ID': [
+        ('{s}_gubernatorial_election,_2026', ['Governor']),
+        ('{s}_lieutenant_gubernatorial_election,_2026', ['Lt. Governor']),
+        ('{s}_Attorney_General_election,_2026', ['Attorney General']),
+        ('{s}_Secretary_of_State_election,_2026', ['Secretary of State']),
+        ('{s}_Treasurer_election,_2026', ['Treasurer']),
+        ('{s}_Controller_election,_2026', ['Controller']),
+        ('{s}_Superintendent_of_Public_Instruction_election,_2026', ['Superintendent of Public Instruction']),
+    ],
 }
 
 STATE_FULL_NAMES = {
-    'AL': 'Alabama', 'AR': 'Arkansas', 'IL': 'Illinois',
-    'IN': 'Indiana', 'KY': 'Kentucky', 'NC': 'North_Carolina',
-    'NM': 'New_Mexico', 'OH': 'Ohio', 'TX': 'Texas',
-    'UT': 'Utah', 'WV': 'West_Virginia',
+    'AL': 'Alabama', 'AR': 'Arkansas', 'ID': 'Idaho',
+    'IL': 'Illinois', 'IN': 'Indiana', 'KY': 'Kentucky',
+    'MD': 'Maryland', 'NC': 'North_Carolina', 'NM': 'New_Mexico',
+    'OH': 'Ohio', 'TX': 'Texas', 'UT': 'Utah', 'WV': 'West_Virginia',
 }
 
 def run_sql(query, exit_on_error=True):
@@ -414,9 +438,6 @@ def build_lookup_maps(state_abbrev):
 def strip_accents(s):
     """Remove diacritics/accents from a string (ñ→n, é→e, etc.)."""
     import unicodedata
-import sys as _sys, os as _os
-_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
-from db_config import TOKEN, PROJECT_REF, API_URL
     return ''.join(
         c for c in unicodedata.normalize('NFD', s)
         if unicodedata.category(c) != 'Mn'
@@ -640,12 +661,29 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
 # STEP 5-6: Insert Candidates and Candidacies
 # ══════════════════════════════════════════════════════════════════════
 
-def insert_candidacies(matched, dry_run=False):
+def insert_candidacies(matched, dry_run=False, force=False):
     """
     Insert new candidates (challengers) and candidacy records.
 
     Returns (new_candidates_count, candidacies_count)
     """
+    # When --force, filter out elections that already have candidacies
+    if force:
+        election_ids = list(set(m['election_id'] for m in matched))
+        ids_str = ','.join(str(eid) for eid in election_ids)
+        existing = run_sql(f"""
+            SELECT DISTINCT election_id FROM candidacies
+            WHERE election_id IN ({ids_str})
+        """)
+        already_populated = set(r['election_id'] for r in existing) if existing else set()
+        if already_populated:
+            before = len(matched)
+            matched = [m for m in matched if m['election_id'] not in already_populated]
+            print(f"    --force: skipping {before - len(matched)} candidacies on {len(already_populated)} already-populated elections")
+        if not matched:
+            print(f"    No new candidacies to insert (all elections already populated)")
+            return 0, 0
+
     # Separate incumbents (reuse candidate_id) from new candidates (need INSERT)
     reuse = [m for m in matched if m['candidate_id'] is not None]
     new = [m for m in matched if m['candidate_id'] is None]
@@ -731,10 +769,10 @@ def insert_candidacies(matched, dry_run=False):
 # MAIN: Process a single state
 # ══════════════════════════════════════════════════════════════════════
 
-def process_state(state_abbrev, dry_run=False):
+def process_state(state_abbrev, dry_run=False, force=False):
     """Process all chambers for a single state."""
     print(f"\n{'=' * 60}")
-    print(f"PROCESSING: {state_abbrev}")
+    print(f"PROCESSING: {state_abbrev}" + (" (FORCE)" if force else ""))
     print(f"{'=' * 60}")
 
     if state_abbrev not in STATE_CHAMBERS:
@@ -751,9 +789,13 @@ def process_state(state_abbrev, dry_run=False):
         WHERE s.abbreviation = '{state_abbrev}' AND d.office_level = 'Legislative'
     """)
     if existing[0]['cnt'] > 0:
-        print(f"  WARNING: {state_abbrev} already has {existing[0]['cnt']} legislative candidacies!")
-        print(f"  Skipping to prevent duplicates.")
-        return False
+        if force:
+            print(f"  NOTE: {state_abbrev} already has {existing[0]['cnt']} legislative candidacies.")
+            print(f"  --force: will skip elections that already have candidacies.")
+        else:
+            print(f"  WARNING: {state_abbrev} already has {existing[0]['cnt']} legislative candidacies!")
+            print(f"  Skipping to prevent duplicates. Use --force to fill gaps.")
+            return False
 
     # Build lookup maps
     print(f"\n  Loading DB maps...")
@@ -821,7 +863,7 @@ def process_state(state_abbrev, dry_run=False):
         # Insert
         if matched:
             print(f"  Inserting candidacies...")
-            new_cands, cand_count = insert_candidacies(matched, dry_run=dry_run)
+            new_cands, cand_count = insert_candidacies(matched, dry_run=dry_run, force=force)
             state_new_candidates += new_cands
             state_candidacies += cand_count
 
@@ -1283,6 +1325,8 @@ def main():
                         help='Process statewide races (instead of legislative)')
     parser.add_argument('--dry-run', action='store_true',
                         help='Parse and match only, no database inserts')
+    parser.add_argument('--force', action='store_true',
+                        help='Re-run on states with existing candidacies (skips already-populated elections)')
     args = parser.parse_args()
 
     if not args.state and not args.all_closed:
@@ -1290,6 +1334,8 @@ def main():
 
     if args.dry_run:
         print("DRY RUN MODE — no database changes will be made.\n")
+    if args.force:
+        print("FORCE MODE — will skip already-populated elections.\n")
 
     # Determine which states to process
     if args.all_closed:
@@ -1312,7 +1358,7 @@ def main():
     else:
         # Process legislative races
         for st in states:
-            success = process_state(st, dry_run=args.dry_run)
+            success = process_state(st, dry_run=args.dry_run, force=args.force)
             if success and not args.dry_run:
                 verify_state(st)
             if len(states) > 1:
