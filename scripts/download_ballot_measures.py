@@ -113,7 +113,7 @@ def parse_index_page(html_text, year):
     measures = []
 
     for i, h3_match in enumerate(h3_matches):
-        state_id = h3_match.group(1)
+        state_id = h3_match.group(1).replace(' ', '_')
 
         # Skip non-state entries
         if state_id not in US_STATES:
