@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T22:14:01.286261Z",
   "state": {
     "name": "Florida",
     "abbr": "FL",
@@ -1558,9 +1558,3361 @@
       "candidates": []
     },
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "FL House 1",
+        "chamber": "House",
+        "district": "1",
+        "candidates": [
+          {
+            "name": "Michelle Salzman",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 2",
+        "chamber": "House",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Johnny Thompson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jason Coffey",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jon Fay",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kevin Brown",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Preston Judd",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Trei McMullen",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 3",
+        "chamber": "House",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Nathan Boyles",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 6",
+        "chamber": "House",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "David Richardson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Stephanie Lyn Leonard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Griff Griffitts",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 7",
+        "chamber": "House",
+        "district": "7",
+        "candidates": [
+          {
+            "name": "Reggie Gaffney",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jason Shoaf",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 8",
+        "chamber": "House",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Gallop Franklin",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 11",
+        "chamber": "House",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Antonette Harmon",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Cory Allan Jett",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Sam Garrison",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 12",
+        "chamber": "House",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Terrance Freeman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 13",
+        "chamber": "House",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Audrey Gibson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shemiah Rutledge",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 14",
+        "chamber": "House",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Kim Daniels",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Therese Wakefield-Gamble",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 15",
+        "chamber": "House",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Dean Black",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 17",
+        "chamber": "House",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Bryson Kade Morgan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jessica Baker",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 18",
+        "chamber": "House",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Kim Kendall",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 19",
+        "chamber": "House",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Suzanna Pavelle",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sam Greco",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 20",
+        "chamber": "House",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Judson Sapp",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 21",
+        "chamber": "House",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Malik Juwan Moore",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Xavier Monroe",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 22",
+        "chamber": "House",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "Amy Trask",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Chad Johnson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 23",
+        "chamber": "House",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "J.J. Grow",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tod Cloud",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 25",
+        "chamber": "House",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "Banks Helfrich",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ebo Entsuah",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Taylor Yarkosky",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 26",
+        "chamber": "House",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Robyn Elaine Lawrence",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 29",
+        "chamber": "House",
+        "district": "29",
+        "candidates": [
+          {
+            "name": "Jason Michael Leslie",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 30",
+        "chamber": "House",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Chase Tramont",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Heather Louise Bendl",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Ruth Ann Amato",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 31",
+        "chamber": "House",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "Marcus Herman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Marina Vitale",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Matthew Davidson Woodside",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Mindy Gibson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Robyn Hattaway",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 32",
+        "chamber": "House",
+        "district": "32",
+        "candidates": [
+          {
+            "name": "Juan Hinojosa",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brian Hodgers",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Matt Susin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 33",
+        "chamber": "House",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Daniel McDow",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Monique Miller",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 34",
+        "chamber": "House",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Paul Sohi",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Robbie Brackett",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 35",
+        "chamber": "House",
+        "district": "35",
+        "candidates": [
+          {
+            "name": "Eric Gray",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Erika Booth",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 36",
+        "chamber": "House",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Rachel Plakon",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 37",
+        "chamber": "House",
+        "district": "37",
+        "candidates": [
+          {
+            "name": "Jane Aman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Susan Plasencia",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 38",
+        "chamber": "House",
+        "district": "38",
+        "candidates": [
+          {
+            "name": "Michelle DeJesus",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Austyn Cydney Spell",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Marcus Hyatt",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 39",
+        "chamber": "House",
+        "district": "39",
+        "candidates": [
+          {
+            "name": "Doug Bankson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 41",
+        "chamber": "House",
+        "district": "41",
+        "candidates": [
+          {
+            "name": "Jane't Buford Johnson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael Lincoln-Mccreignt",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 42",
+        "chamber": "House",
+        "district": "42",
+        "candidates": [
+          {
+            "name": "Felipe Sousa Lazaballet",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bonnie Jackson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 43",
+        "chamber": "House",
+        "district": "43",
+        "candidates": [
+          {
+            "name": "Samuel Vilchez Santiago",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert Allen Prater",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 44",
+        "chamber": "House",
+        "district": "44",
+        "candidates": [
+          {
+            "name": "Rita Harris",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 45",
+        "chamber": "House",
+        "district": "45",
+        "candidates": [
+          {
+            "name": "Leonard Spencer",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Erin Huntley",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Raleigh Steinhauer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 46",
+        "chamber": "House",
+        "district": "46",
+        "candidates": [
+          {
+            "name": "Kenneth Quinones",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "R. LeWayne Johnson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 47",
+        "chamber": "House",
+        "district": "47",
+        "candidates": [
+          {
+            "name": "Anthony Nieves",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jorge H. Figueroa-Ortiz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 48",
+        "chamber": "House",
+        "district": "48",
+        "candidates": [
+          {
+            "name": "Luis Davila",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jon Albert",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 49",
+        "chamber": "House",
+        "district": "49",
+        "candidates": [
+          {
+            "name": "Jennifer Kincart Jonsson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 50",
+        "chamber": "House",
+        "district": "50",
+        "candidates": [
+          {
+            "name": "Carlos Gamez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jennifer Canady",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 51",
+        "chamber": "House",
+        "district": "51",
+        "candidates": [
+          {
+            "name": "Octavio Hernandez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 53",
+        "chamber": "House",
+        "district": "53",
+        "candidates": [
+          {
+            "name": "Jeff Holcomb",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 54",
+        "chamber": "House",
+        "district": "54",
+        "candidates": [
+          {
+            "name": "Randy Maggard",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 55",
+        "chamber": "House",
+        "district": "55",
+        "candidates": [
+          {
+            "name": "Brenton Basinger",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Walter Price",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 56",
+        "chamber": "House",
+        "district": "56",
+        "candidates": [
+          {
+            "name": "Brad Yeager",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jessica Naioti",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 57",
+        "chamber": "House",
+        "district": "57",
+        "candidates": [
+          {
+            "name": "Adam Anderson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 58",
+        "chamber": "House",
+        "district": "58",
+        "candidates": [
+          {
+            "name": "Bryan Beckman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 59",
+        "chamber": "House",
+        "district": "59",
+        "candidates": [
+          {
+            "name": "Berny Jacques",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 60",
+        "chamber": "House",
+        "district": "60",
+        "candidates": [
+          {
+            "name": "Lindsay Cross",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 61",
+        "chamber": "House",
+        "district": "61",
+        "candidates": [
+          {
+            "name": "Michael Warner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Linda Chaney",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 62",
+        "chamber": "House",
+        "district": "62",
+        "candidates": [
+          {
+            "name": "Kyandra Darling",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Upton J. Fisher",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Wengay Newton",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 63",
+        "chamber": "House",
+        "district": "63",
+        "candidates": [
+          {
+            "name": "Conrad Schupay",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jacqueline Leeks",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 64",
+        "chamber": "House",
+        "district": "64",
+        "candidates": [
+          {
+            "name": "Jos\u00e9 S\u00e1nchez-S\u00e1nchez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Luis Salazar",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mike Suarez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 65",
+        "chamber": "House",
+        "district": "65",
+        "candidates": [
+          {
+            "name": "Kell Cameron",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Karen Gonzalez Pittman",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 66",
+        "chamber": "House",
+        "district": "66",
+        "candidates": [
+          {
+            "name": "Traci Koster",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 67",
+        "chamber": "House",
+        "district": "67",
+        "candidates": [
+          {
+            "name": "Lisette Bonano",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 69",
+        "chamber": "House",
+        "district": "69",
+        "candidates": [
+          {
+            "name": "Danny Alvarez",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 70",
+        "chamber": "House",
+        "district": "70",
+        "candidates": [
+          {
+            "name": "Luther Keith Wilkins",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael Owen",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 71",
+        "chamber": "House",
+        "district": "71",
+        "candidates": [
+          {
+            "name": "Marie Masferrer",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jordan Varnadore",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kristen Truong",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Melton Little",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 72",
+        "chamber": "House",
+        "district": "72",
+        "candidates": [
+          {
+            "name": "Bill Conerly",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "John Phillips",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 73",
+        "chamber": "House",
+        "district": "73",
+        "candidates": [
+          {
+            "name": "Fiona McFarland",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 74",
+        "chamber": "House",
+        "district": "74",
+        "candidates": [
+          {
+            "name": "Nancy Simpson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Carl Goodrich",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Carlton Nichols",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Chris Felder",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jennifer Winkler",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kelly Ann Walker",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 75",
+        "chamber": "House",
+        "district": "75",
+        "candidates": [
+          {
+            "name": "Danny Nix",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 77",
+        "chamber": "House",
+        "district": "77",
+        "candidates": [
+          {
+            "name": "Cornelius Fowler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael Thompson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tiffany Esposito",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 78",
+        "chamber": "House",
+        "district": "78",
+        "candidates": [
+          {
+            "name": "Cindy Banyai",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jenna Persons-Mulicka",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 79",
+        "chamber": "House",
+        "district": "79",
+        "candidates": [
+          {
+            "name": "Mike Giallombardo",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 80",
+        "chamber": "House",
+        "district": "80",
+        "candidates": [
+          {
+            "name": "Adam Botana",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 81",
+        "chamber": "House",
+        "district": "81",
+        "candidates": [
+          {
+            "name": "Yvette Benarroch",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 82",
+        "chamber": "House",
+        "district": "82",
+        "candidates": [
+          {
+            "name": "Arthur Boyer",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Drew-Montez Clark",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Hugo Vargas",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Liesa Priddy",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 83",
+        "chamber": "House",
+        "district": "83",
+        "candidates": [
+          {
+            "name": "Kaylee Tuck",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 84",
+        "chamber": "House",
+        "district": "84",
+        "candidates": [
+          {
+            "name": "Dana Trabulsy",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 85",
+        "chamber": "House",
+        "district": "85",
+        "candidates": [
+          {
+            "name": "Thomas L. Colter",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 86",
+        "chamber": "House",
+        "district": "86",
+        "candidates": [
+          {
+            "name": "John Snyder",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 87",
+        "chamber": "House",
+        "district": "87",
+        "candidates": [
+          {
+            "name": "Tracy Caruso",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 88",
+        "chamber": "House",
+        "district": "88",
+        "candidates": [
+          {
+            "name": "Denisha Cadet",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tae Edmonds",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "William Joseph",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 90",
+        "chamber": "House",
+        "district": "90",
+        "candidates": [
+          {
+            "name": "Rob Long",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 91",
+        "chamber": "House",
+        "district": "91",
+        "candidates": [
+          {
+            "name": "Peggy Gossett-Seidman",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 92",
+        "chamber": "House",
+        "district": "92",
+        "candidates": [
+          {
+            "name": "Kelly Skidmore",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 93",
+        "chamber": "House",
+        "district": "93",
+        "candidates": [
+          {
+            "name": "August Mangeney",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Anne Gerwig",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 94",
+        "chamber": "House",
+        "district": "94",
+        "candidates": [
+          {
+            "name": "Meg Weinberger",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 95",
+        "chamber": "House",
+        "district": "95",
+        "candidates": [
+          {
+            "name": "Christine Hunschofsky",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Allison Boettcher",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 96",
+        "chamber": "House",
+        "district": "96",
+        "candidates": [
+          {
+            "name": "Dan Daley",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 97",
+        "chamber": "House",
+        "district": "97",
+        "candidates": [
+          {
+            "name": "Lisa Dunkley",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 98",
+        "chamber": "House",
+        "district": "98",
+        "candidates": [
+          {
+            "name": "Keith Abel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mitch Rosenwald",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 99",
+        "chamber": "House",
+        "district": "99",
+        "candidates": [
+          {
+            "name": "Daryl Campbell",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 100",
+        "chamber": "House",
+        "district": "100",
+        "candidates": [
+          {
+            "name": "James Brenner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Raul Gallon",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 101",
+        "chamber": "House",
+        "district": "101",
+        "candidates": [
+          {
+            "name": "Todd Delmay",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Hillary Cassel",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 102",
+        "chamber": "House",
+        "district": "102",
+        "candidates": [
+          {
+            "name": "Jayden D'Onofrio",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael Friend",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mery Lopez-Palma",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 104",
+        "chamber": "House",
+        "district": "104",
+        "candidates": [
+          {
+            "name": "Felicia Robinson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 105",
+        "chamber": "House",
+        "district": "105",
+        "candidates": [
+          {
+            "name": "Marie Woodson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 106",
+        "chamber": "House",
+        "district": "106",
+        "candidates": [
+          {
+            "name": "Ashley Diego",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lucia Baez-Geller",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 107",
+        "chamber": "House",
+        "district": "107",
+        "candidates": [
+          {
+            "name": "Wallace Aristide",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 108",
+        "chamber": "House",
+        "district": "108",
+        "candidates": [
+          {
+            "name": "Daphne Campbell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dinah Escarment",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Wancito Francius",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 111",
+        "chamber": "House",
+        "district": "111",
+        "candidates": [
+          {
+            "name": "David Borrero",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 112",
+        "chamber": "House",
+        "district": "112",
+        "candidates": [
+          {
+            "name": "Alex Rizo",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 113",
+        "chamber": "House",
+        "district": "113",
+        "candidates": [
+          {
+            "name": "Gloria Romero Roses",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Justin Mendoza Routt",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bruno Barreiro",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Frank Lago",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tony Diaz",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 114",
+        "chamber": "House",
+        "district": "114",
+        "candidates": [
+          {
+            "name": "Demi Busatta",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 115",
+        "chamber": "House",
+        "district": "115",
+        "candidates": [
+          {
+            "name": "Omar Blanco",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 116",
+        "chamber": "House",
+        "district": "116",
+        "candidates": [
+          {
+            "name": "Ashley Perez Biliskov",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 118",
+        "chamber": "House",
+        "district": "118",
+        "candidates": [
+          {
+            "name": "Nathan Burandt",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mike Redondo",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 119",
+        "chamber": "House",
+        "district": "119",
+        "candidates": [
+          {
+            "name": "Juan Porras",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL House 120",
+        "chamber": "House",
+        "district": "120",
+        "candidates": [
+          {
+            "name": "Irene Alzerreca Calvo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jim Mooney",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 2",
+        "chamber": "Senate",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Jay Trumbull",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 4",
+        "chamber": "Senate",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Clay Yarborough",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 6",
+        "chamber": "Senate",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Jennifer Bradley",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 8",
+        "chamber": "Senate",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Judy Ngying",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Elizabeth Fetterhoff",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Heather Louise Bendl",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jake Johansson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jason Voelz",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 10",
+        "chamber": "Senate",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Jason Brodeur",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 12",
+        "chamber": "Senate",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Colleen Burton",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 16",
+        "chamber": "Senate",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Fentrice Driskell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michele Rayner-Goolsby",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 18",
+        "chamber": "Senate",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Nick DiCeglie",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 20",
+        "chamber": "Senate",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Jim Boyd",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 22",
+        "chamber": "Senate",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "James Buchanan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 24",
+        "chamber": "Senate",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Mack Bernard",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 26",
+        "chamber": "Senate",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "David Silvers",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rick Roth",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 28",
+        "chamber": "Senate",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Bob Rommel",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Lauren Melo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 30",
+        "chamber": "Senate",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Tina Polsky",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 32",
+        "chamber": "Senate",
+        "district": "32",
+        "candidates": [
+          {
+            "name": "Rosalind Osgood",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 34",
+        "chamber": "Senate",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Pitchie Escarment",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shev Jones",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 36",
+        "chamber": "Senate",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Ileana Garcia",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 38",
+        "chamber": "Senate",
+        "district": "38",
+        "candidates": [
+          {
+            "name": "Alexis Calatayud",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "FL Senate 40",
+        "chamber": "Senate",
+        "district": "40",
+        "candidates": [
+          {
+            "name": "Ana Maria Rodriguez",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Marco Antonio Insua",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ]
   },
-  "uncontested_primaries": [],
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "2",
+      "seat_label": "FL House 2",
+      "pres_margin": "-19.1",
+      "holder_party": "R",
+      "candidate": "Johnny Thompson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "7",
+      "seat_label": "FL House 7",
+      "pres_margin": "-54.2",
+      "holder_party": "R",
+      "candidate": "Reggie Gaffney",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "8",
+      "seat_label": "FL House 8",
+      "pres_margin": "+42.7",
+      "holder_party": "D",
+      "candidate": "Gallop Franklin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "17",
+      "seat_label": "FL House 17",
+      "pres_margin": "-12.4",
+      "holder_party": "R",
+      "candidate": "Bryson Kade Morgan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "19",
+      "seat_label": "FL House 19",
+      "pres_margin": "-24.7",
+      "holder_party": "R",
+      "candidate": "Suzanna Pavelle",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "22",
+      "seat_label": "FL House 22",
+      "pres_margin": "-6.2",
+      "holder_party": "R",
+      "candidate": "Amy Trask",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "25",
+      "seat_label": "FL House 25",
+      "pres_margin": "-16.7",
+      "holder_party": "R",
+      "candidate": "Banks Helfrich",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "26",
+      "seat_label": "FL House 26",
+      "pres_margin": "-28.8",
+      "holder_party": "R",
+      "candidate": "Robyn Elaine Lawrence",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "32",
+      "seat_label": "FL House 32",
+      "pres_margin": "-19.9",
+      "holder_party": "R",
+      "candidate": "Juan Hinojosa",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "33",
+      "seat_label": "FL House 33",
+      "pres_margin": "-11.4",
+      "holder_party": "R",
+      "candidate": "Daniel McDow",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "35",
+      "seat_label": "FL House 35",
+      "pres_margin": "-4.2",
+      "holder_party": "R",
+      "candidate": "Eric Gray",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "37",
+      "seat_label": "FL House 37",
+      "pres_margin": "+2.9",
+      "holder_party": "R",
+      "candidate": "Jane Aman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "38",
+      "seat_label": "FL House 38",
+      "pres_margin": "+1.7",
+      "holder_party": "R",
+      "candidate": "Michelle DeJesus",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "41",
+      "seat_label": "FL House 41",
+      "pres_margin": "+42.4",
+      "holder_party": "D",
+      "candidate": "Jane't Buford Johnson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "42",
+      "seat_label": "FL House 42",
+      "pres_margin": "+15.0",
+      "holder_party": "D",
+      "candidate": "Felipe Sousa Lazaballet",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "43",
+      "seat_label": "FL House 43",
+      "pres_margin": "+10.9",
+      "holder_party": "D",
+      "candidate": "Samuel Vilchez Santiago",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "44",
+      "seat_label": "FL House 44",
+      "pres_margin": "+10.9",
+      "holder_party": "D",
+      "candidate": "Rita Harris",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "45",
+      "seat_label": "FL House 45",
+      "pres_margin": "-0.6",
+      "holder_party": "D",
+      "candidate": "Leonard Spencer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "48",
+      "seat_label": "FL House 48",
+      "pres_margin": "-15.9",
+      "holder_party": "R",
+      "candidate": "Luis Davila",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "50",
+      "seat_label": "FL House 50",
+      "pres_margin": "-21.3",
+      "holder_party": "R",
+      "candidate": "Carlos Gamez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "51",
+      "seat_label": "FL House 51",
+      "pres_margin": "-13.6",
+      "holder_party": "R",
+      "candidate": "Octavio Hernandez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "58",
+      "seat_label": "FL House 58",
+      "pres_margin": "-12.1",
+      "holder_party": "R",
+      "candidate": "Bryan Beckman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "60",
+      "seat_label": "FL House 60",
+      "pres_margin": "+6.7",
+      "holder_party": "D",
+      "candidate": "Lindsay Cross",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "61",
+      "seat_label": "FL House 61",
+      "pres_margin": "-8.5",
+      "holder_party": "R",
+      "candidate": "Michael Warner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "65",
+      "seat_label": "FL House 65",
+      "pres_margin": "-6.3",
+      "holder_party": "R",
+      "candidate": "Kell Cameron",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "70",
+      "seat_label": "FL House 70",
+      "pres_margin": "-13.6",
+      "holder_party": "R",
+      "candidate": "Luther Keith Wilkins",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "71",
+      "seat_label": "FL House 71",
+      "pres_margin": "-16.2",
+      "holder_party": "R",
+      "candidate": "Marie Masferrer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "74",
+      "seat_label": "FL House 74",
+      "pres_margin": "-25.3",
+      "holder_party": "R",
+      "candidate": "Nancy Simpson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "77",
+      "seat_label": "FL House 77",
+      "pres_margin": "-25.9",
+      "holder_party": "R",
+      "candidate": "Cornelius Fowler",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "78",
+      "seat_label": "FL House 78",
+      "pres_margin": "-15.2",
+      "holder_party": "R",
+      "candidate": "Cindy Banyai",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "82",
+      "seat_label": "FL House 82",
+      "pres_margin": "-35.8",
+      "holder_party": "R",
+      "candidate": "Arthur Boyer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "90",
+      "seat_label": "FL House 90",
+      "pres_margin": "+10.4",
+      "holder_party": "D",
+      "candidate": "Rob Long",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "92",
+      "seat_label": "FL House 92",
+      "pres_margin": "+7.9",
+      "holder_party": "D",
+      "candidate": "Kelly Skidmore",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "93",
+      "seat_label": "FL House 93",
+      "pres_margin": "+1.0",
+      "holder_party": "R",
+      "candidate": "August Mangeney",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "95",
+      "seat_label": "FL House 95",
+      "pres_margin": "+12.1",
+      "holder_party": "D",
+      "candidate": "Christine Hunschofsky",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "96",
+      "seat_label": "FL House 96",
+      "pres_margin": "+18.9",
+      "holder_party": "D",
+      "candidate": "Dan Daley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "97",
+      "seat_label": "FL House 97",
+      "pres_margin": "+52.1",
+      "holder_party": "D",
+      "candidate": "Lisa Dunkley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "99",
+      "seat_label": "FL House 99",
+      "pres_margin": "+44.4",
+      "holder_party": "D",
+      "candidate": "Daryl Campbell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "100",
+      "seat_label": "FL House 100",
+      "pres_margin": "-7.8",
+      "holder_party": "R",
+      "candidate": "James Brenner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "101",
+      "seat_label": "FL House 101",
+      "pres_margin": "-2.5",
+      "holder_party": "R",
+      "candidate": "Todd Delmay",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "104",
+      "seat_label": "FL House 104",
+      "pres_margin": "+28.2",
+      "holder_party": "D",
+      "candidate": "Felicia Robinson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "105",
+      "seat_label": "FL House 105",
+      "pres_margin": "+27.0",
+      "holder_party": "D",
+      "candidate": "Marie Woodson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "107",
+      "seat_label": "FL House 107",
+      "pres_margin": "+34.6",
+      "holder_party": "D",
+      "candidate": "Wallace Aristide",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "118",
+      "seat_label": "FL House 118",
+      "pres_margin": "-34.5",
+      "holder_party": "R",
+      "candidate": "Nathan Burandt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "8",
+      "seat_label": "FL Senate 8",
+      "pres_margin": "-22.0",
+      "holder_party": "R",
+      "candidate": "Judy Ngying",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "24",
+      "seat_label": "FL Senate 24",
+      "pres_margin": "+10.1",
+      "holder_party": "D",
+      "candidate": "Mack Bernard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "26",
+      "seat_label": "FL Senate 26",
+      "pres_margin": "+5.7",
+      "holder_party": "D",
+      "candidate": "David Silvers",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "30",
+      "seat_label": "FL Senate 30",
+      "pres_margin": "+8.5",
+      "holder_party": "D",
+      "candidate": "Tina Polsky",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "32",
+      "seat_label": "FL Senate 32",
+      "pres_margin": "+39.2",
+      "holder_party": "D",
+      "candidate": "Rosalind Osgood",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "1",
+      "seat_label": "FL House 1",
+      "pres_margin": "-25.7",
+      "holder_party": "R",
+      "candidate": "Michelle Salzman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "3",
+      "seat_label": "FL House 3",
+      "pres_margin": "-54.8",
+      "holder_party": "R",
+      "candidate": "Nathan Boyles",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "6",
+      "seat_label": "FL House 6",
+      "pres_margin": "-47.2",
+      "holder_party": "R",
+      "candidate": "Griff Griffitts",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "7",
+      "seat_label": "FL House 7",
+      "pres_margin": "-54.2",
+      "holder_party": "R",
+      "candidate": "Jason Shoaf",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "12",
+      "seat_label": "FL House 12",
+      "pres_margin": "-10.2",
+      "holder_party": "R",
+      "candidate": "Terrance Freeman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "15",
+      "seat_label": "FL House 15",
+      "pres_margin": "-27.9",
+      "holder_party": "R",
+      "candidate": "Dean Black",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "17",
+      "seat_label": "FL House 17",
+      "pres_margin": "-12.4",
+      "holder_party": "R",
+      "candidate": "Jessica Baker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "18",
+      "seat_label": "FL House 18",
+      "pres_margin": "-33.9",
+      "holder_party": "R",
+      "candidate": "Kim Kendall",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "19",
+      "seat_label": "FL House 19",
+      "pres_margin": "-24.7",
+      "holder_party": "R",
+      "candidate": "Sam Greco",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "20",
+      "seat_label": "FL House 20",
+      "pres_margin": "-48.2",
+      "holder_party": "R",
+      "candidate": "Judson Sapp",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "22",
+      "seat_label": "FL House 22",
+      "pres_margin": "-6.2",
+      "holder_party": "R",
+      "candidate": "Chad Johnson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "29",
+      "seat_label": "FL House 29",
+      "pres_margin": "-16.0",
+      "holder_party": "R",
+      "candidate": "Jason Michael Leslie",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "33",
+      "seat_label": "FL House 33",
+      "pres_margin": "-11.4",
+      "holder_party": "R",
+      "candidate": "Monique Miller",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "35",
+      "seat_label": "FL House 35",
+      "pres_margin": "-4.2",
+      "holder_party": "R",
+      "candidate": "Erika Booth",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "36",
+      "seat_label": "FL House 36",
+      "pres_margin": "-3.1",
+      "holder_party": "R",
+      "candidate": "Rachel Plakon",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "37",
+      "seat_label": "FL House 37",
+      "pres_margin": "+2.9",
+      "holder_party": "R",
+      "candidate": "Susan Plasencia",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "39",
+      "seat_label": "FL House 39",
+      "pres_margin": "-3.2",
+      "holder_party": "R",
+      "candidate": "Doug Bankson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "41",
+      "seat_label": "FL House 41",
+      "pres_margin": "+42.4",
+      "holder_party": "D",
+      "candidate": "Michael Lincoln-Mccreignt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "42",
+      "seat_label": "FL House 42",
+      "pres_margin": "+15.0",
+      "holder_party": "D",
+      "candidate": "Bonnie Jackson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "43",
+      "seat_label": "FL House 43",
+      "pres_margin": "+10.9",
+      "holder_party": "D",
+      "candidate": "Robert Allen Prater",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "48",
+      "seat_label": "FL House 48",
+      "pres_margin": "-15.9",
+      "holder_party": "R",
+      "candidate": "Jon Albert",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "49",
+      "seat_label": "FL House 49",
+      "pres_margin": "-32.9",
+      "holder_party": "R",
+      "candidate": "Jennifer Kincart Jonsson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "50",
+      "seat_label": "FL House 50",
+      "pres_margin": "-21.3",
+      "holder_party": "R",
+      "candidate": "Jennifer Canady",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "53",
+      "seat_label": "FL House 53",
+      "pres_margin": "-36.3",
+      "holder_party": "R",
+      "candidate": "Jeff Holcomb",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "54",
+      "seat_label": "FL House 54",
+      "pres_margin": "-17.8",
+      "holder_party": "R",
+      "candidate": "Randy Maggard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "57",
+      "seat_label": "FL House 57",
+      "pres_margin": "-16.6",
+      "holder_party": "R",
+      "candidate": "Adam Anderson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "59",
+      "seat_label": "FL House 59",
+      "pres_margin": "-16.0",
+      "holder_party": "R",
+      "candidate": "Berny Jacques",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "61",
+      "seat_label": "FL House 61",
+      "pres_margin": "-8.5",
+      "holder_party": "R",
+      "candidate": "Linda Chaney",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "65",
+      "seat_label": "FL House 65",
+      "pres_margin": "-6.3",
+      "holder_party": "R",
+      "candidate": "Karen Gonzalez Pittman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "66",
+      "seat_label": "FL House 66",
+      "pres_margin": "-12.8",
+      "holder_party": "R",
+      "candidate": "Traci Koster",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "67",
+      "seat_label": "FL House 67",
+      "pres_margin": "+10.3",
+      "holder_party": "D",
+      "candidate": "Lisette Bonano",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "69",
+      "seat_label": "FL House 69",
+      "pres_margin": "-8.7",
+      "holder_party": "R",
+      "candidate": "Danny Alvarez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "70",
+      "seat_label": "FL House 70",
+      "pres_margin": "-13.6",
+      "holder_party": "R",
+      "candidate": "Michael Owen",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "73",
+      "seat_label": "FL House 73",
+      "pres_margin": "-7.1",
+      "holder_party": "R",
+      "candidate": "Fiona McFarland",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "75",
+      "seat_label": "FL House 75",
+      "pres_margin": "-30.6",
+      "holder_party": "R",
+      "candidate": "Danny Nix",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "78",
+      "seat_label": "FL House 78",
+      "pres_margin": "-15.2",
+      "holder_party": "R",
+      "candidate": "Jenna Persons-Mulicka",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "79",
+      "seat_label": "FL House 79",
+      "pres_margin": "-36.7",
+      "holder_party": "R",
+      "candidate": "Mike Giallombardo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "80",
+      "seat_label": "FL House 80",
+      "pres_margin": "-30.3",
+      "holder_party": "R",
+      "candidate": "Adam Botana",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "81",
+      "seat_label": "FL House 81",
+      "pres_margin": "-31.1",
+      "holder_party": "R",
+      "candidate": "Yvette Benarroch",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "83",
+      "seat_label": "FL House 83",
+      "pres_margin": "-45.6",
+      "holder_party": "R",
+      "candidate": "Kaylee Tuck",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "84",
+      "seat_label": "FL House 84",
+      "pres_margin": "-10.9",
+      "holder_party": "R",
+      "candidate": "Dana Trabulsy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "85",
+      "seat_label": "FL House 85",
+      "pres_margin": "-13.1",
+      "holder_party": "R",
+      "candidate": "Thomas L. Colter",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "86",
+      "seat_label": "FL House 86",
+      "pres_margin": "-27.6",
+      "holder_party": "R",
+      "candidate": "John Snyder",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "87",
+      "seat_label": "FL House 87",
+      "pres_margin": "-10.6",
+      "holder_party": null,
+      "candidate": "Tracy Caruso",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "88",
+      "seat_label": "FL House 88",
+      "pres_margin": "+37.1",
+      "holder_party": "D",
+      "candidate": "William Joseph",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "91",
+      "seat_label": "FL House 91",
+      "pres_margin": "-8.5",
+      "holder_party": "R",
+      "candidate": "Peggy Gossett-Seidman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "93",
+      "seat_label": "FL House 93",
+      "pres_margin": "+1.0",
+      "holder_party": "R",
+      "candidate": "Anne Gerwig",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "94",
+      "seat_label": "FL House 94",
+      "pres_margin": "-9.8",
+      "holder_party": "R",
+      "candidate": "Meg Weinberger",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "95",
+      "seat_label": "FL House 95",
+      "pres_margin": "+12.1",
+      "holder_party": "D",
+      "candidate": "Allison Boettcher",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "100",
+      "seat_label": "FL House 100",
+      "pres_margin": "-7.8",
+      "holder_party": "R",
+      "candidate": "Raul Gallon",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "101",
+      "seat_label": "FL House 101",
+      "pres_margin": "-2.5",
+      "holder_party": "R",
+      "candidate": "Hillary Cassel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "102",
+      "seat_label": "FL House 102",
+      "pres_margin": "+4.1",
+      "holder_party": "D",
+      "candidate": "Mery Lopez-Palma",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "108",
+      "seat_label": "FL House 108",
+      "pres_margin": "+46.6",
+      "holder_party": "D",
+      "candidate": "Wancito Francius",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "111",
+      "seat_label": "FL House 111",
+      "pres_margin": "-35.6",
+      "holder_party": "R",
+      "candidate": "David Borrero",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "112",
+      "seat_label": "FL House 112",
+      "pres_margin": "-45.4",
+      "holder_party": "R",
+      "candidate": "Alex Rizo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "114",
+      "seat_label": "FL House 114",
+      "pres_margin": "-10.4",
+      "holder_party": "R",
+      "candidate": "Demi Busatta",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "115",
+      "seat_label": "FL House 115",
+      "pres_margin": "-15.8",
+      "holder_party": "R",
+      "candidate": "Omar Blanco",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "116",
+      "seat_label": "FL House 116",
+      "pres_margin": "-34.5",
+      "holder_party": "R",
+      "candidate": "Ashley Perez Biliskov",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "118",
+      "seat_label": "FL House 118",
+      "pres_margin": "-34.5",
+      "holder_party": "R",
+      "candidate": "Mike Redondo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "119",
+      "seat_label": "FL House 119",
+      "pres_margin": "-28.3",
+      "holder_party": "R",
+      "candidate": "Juan Porras",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "2",
+      "seat_label": "FL Senate 2",
+      "pres_margin": "-49.2",
+      "holder_party": "R",
+      "candidate": "Jay Trumbull",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "4",
+      "seat_label": "FL Senate 4",
+      "pres_margin": "-23.8",
+      "holder_party": "R",
+      "candidate": "Clay Yarborough",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "6",
+      "seat_label": "FL Senate 6",
+      "pres_margin": "-27.5",
+      "holder_party": "R",
+      "candidate": "Jennifer Bradley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "10",
+      "seat_label": "FL Senate 10",
+      "pres_margin": "-1.6",
+      "holder_party": "R",
+      "candidate": "Jason Brodeur",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "12",
+      "seat_label": "FL Senate 12",
+      "pres_margin": "-15.6",
+      "holder_party": "R",
+      "candidate": "Colleen Burton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "18",
+      "seat_label": "FL Senate 18",
+      "pres_margin": "-9.5",
+      "holder_party": "R",
+      "candidate": "Nick DiCeglie",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "20",
+      "seat_label": "FL Senate 20",
+      "pres_margin": "-18.9",
+      "holder_party": "R",
+      "candidate": "Jim Boyd",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "22",
+      "seat_label": "FL Senate 22",
+      "pres_margin": "-18.0",
+      "holder_party": "R",
+      "candidate": "James Buchanan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "26",
+      "seat_label": "FL Senate 26",
+      "pres_margin": "+5.7",
+      "holder_party": "D",
+      "candidate": "Rick Roth",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "36",
+      "seat_label": "FL Senate 36",
+      "pres_margin": "-16.1",
+      "holder_party": "R",
+      "candidate": "Ileana Garcia",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "38",
+      "seat_label": "FL Senate 38",
+      "pres_margin": "-10.3",
+      "holder_party": "R",
+      "candidate": "Alexis Calatayud",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [
     {
       "number": "Changes to Budget Stabilization Fund Amendment",

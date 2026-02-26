@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T22:14:48.704533Z",
   "state": {
     "name": "Rhode Island",
     "abbr": "RI",
@@ -1126,9 +1126,80 @@
       "candidates": []
     },
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "RI House 67",
+        "chamber": "House",
+        "district": "67",
+        "candidates": [
+          {
+            "name": "Nicole Jellinek",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "RI Senate 34",
+        "chamber": "Senate",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Samantha Wilcox",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "RI Senate 36",
+        "chamber": "Senate",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Mark Mesrobian",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      }
+    ]
   },
-  "uncontested_primaries": [],
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "67",
+      "seat_label": "RI House 67",
+      "pres_margin": "+31.1",
+      "holder_party": "D",
+      "candidate": "Nicole Jellinek",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "34",
+      "seat_label": "RI Senate 34",
+      "pres_margin": "-4.6",
+      "holder_party": "R",
+      "candidate": "Samantha Wilcox",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "36",
+      "seat_label": "RI Senate 36",
+      "pres_margin": "+20.6",
+      "holder_party": "D",
+      "candidate": "Mark Mesrobian",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [],
   "filing_deadline": "2026-06-24",
   "primary_date": "2026-09-08"

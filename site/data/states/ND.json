@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T22:14:44.623151Z",
   "state": {
     "name": "North Dakota",
     "abbr": "ND",
@@ -1387,36 +1387,323 @@
   "elections_2026": {
     "governor": null,
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "ND House 13 Seat B",
+        "chamber": "House",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Austen Schauer",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jim Jonas",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ND House 27 Seat B",
+        "chamber": "House",
+        "district": "27",
+        "candidates": [
+          {
+            "name": "Greg Stemen",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Shawn Kessel",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ND House 31 Seat A",
+        "chamber": "House",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "James Schmidt",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ND House 43 Seat B",
+        "chamber": "House",
+        "district": "43",
+        "candidates": [
+          {
+            "name": "Eric Murphy",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ND Senate 11",
+        "chamber": "Senate",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Tim Mathern",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ND Senate 13",
+        "chamber": "Senate",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Judy Lee",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ND Senate 17",
+        "chamber": "Senate",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Jonathan Sickler",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ND Senate 31",
+        "chamber": "Senate",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "Don Schaible",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ND Senate 35",
+        "chamber": "Senate",
+        "district": "35",
+        "candidates": [
+          {
+            "name": "Sean Cleary",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ND Senate 37",
+        "chamber": "Senate",
+        "district": "37",
+        "candidates": [
+          {
+            "name": "Dean Rummel",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ND Senate 45",
+        "chamber": "Senate",
+        "district": "45",
+        "candidates": [
+          {
+            "name": "Ron Sorvaag",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ]
   },
-  "uncontested_primaries": [],
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "11",
+      "seat_label": "ND Senate 11",
+      "pres_margin": "+11.6",
+      "holder_party": "D",
+      "candidate": "Tim Mathern",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "13",
+      "seat_label": "ND House 13 Seat A",
+      "pres_margin": "-11.4",
+      "holder_party": "R",
+      "candidate": "Jim Jonas",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "13",
+      "seat_label": "ND House 13 Seat B",
+      "pres_margin": "-11.4",
+      "holder_party": "R",
+      "candidate": "Austen Schauer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "27",
+      "seat_label": "ND House 27 Seat B",
+      "pres_margin": "-21.1",
+      "holder_party": "R",
+      "candidate": "Greg Stemen",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "27",
+      "seat_label": "ND House 27 Seat A",
+      "pres_margin": "-21.1",
+      "holder_party": "R",
+      "candidate": "Shawn Kessel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "31",
+      "seat_label": "ND House 31 Seat A",
+      "pres_margin": "-48.3",
+      "holder_party": "R",
+      "candidate": "James Schmidt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "43",
+      "seat_label": "ND House 43 Seat B",
+      "pres_margin": "-6.2",
+      "holder_party": "R",
+      "candidate": "Eric Murphy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "13",
+      "seat_label": "ND Senate 13",
+      "pres_margin": "-11.4",
+      "holder_party": "R",
+      "candidate": "Judy Lee",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "17",
+      "seat_label": "ND Senate 17",
+      "pres_margin": "-18.6",
+      "holder_party": "R",
+      "candidate": "Jonathan Sickler",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "31",
+      "seat_label": "ND Senate 31",
+      "pres_margin": "-48.3",
+      "holder_party": "R",
+      "candidate": "Don Schaible",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "35",
+      "seat_label": "ND Senate 35",
+      "pres_margin": "-24.0",
+      "holder_party": "R",
+      "candidate": "Sean Cleary",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "37",
+      "seat_label": "ND Senate 37",
+      "pres_margin": "-57.7",
+      "holder_party": "R",
+      "candidate": "Dean Rummel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "45",
+      "seat_label": "ND Senate 45",
+      "pres_margin": "-14.9",
+      "holder_party": "R",
+      "candidate": "Ron Sorvaag",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [
     {
-      "number": "60% Vote Requirement for Constitutional Amendments Measure",
-      "title": "60% Vote Requirement for Constitutional Amendments Measure",
-      "description": "Require constitutional amendments to receive a 60% supermajority vote to be adopted. This legislatively referred constitutional amendment is on the North Dakota 2026 ballot.",
+      "number": "Constitutional Measure 1",
+      "title": "Constitutional Measure 1",
+      "description": "Establish term limits for state legislators of four complete four-year terms regardless of chamber; repeal provisions from Constitutional Measure 1 of 2022",
       "type": "Legislative Constitutional Amendment",
       "status": "On Ballot",
       "result": "Pending",
       "date": "2026-11-03"
     },
     {
-      "number": "Changes to State Legislative Term Limits Amendment",
-      "title": "Changes to State Legislative Term Limits Amendment",
-      "description": "Establish term limits for state legislators of four complete four-year terms in the state legislature regardless of chamber; provide that a term that is less than four-years does not count toward the term limit; repeal the constitutional provision established by Constitutional Measure 1 of 2022 which provided that term limits could only be amended or repealed by initiative petition and not by the state legislature. This legislatively referred constitutional amendment is on the North Dakota 2026 ballot.",
-      "type": "Legislative Constitutional Amendment",
-      "status": "On Ballot",
-      "result": "Pending",
-      "date": "2026-11-03"
-    },
-    {
-      "number": "Single-Subject Requirement for Constitutional Amendments Measure",
-      "title": "Single-Subject Requirement for Constitutional Amendments Measure",
-      "description": "Create a single-subject requirement for initiated constitutional amendments and legislatively referred constitutional amendments in North Dakota. This legislatively referred constitutional amendment is on the North Dakota 2026 ballot.",
+      "number": "Constitutional Measure 1",
+      "title": "Constitutional Measure 1",
+      "description": "Create a single-subject requirement for initiated and legislatively referred constitutional amendments",
       "type": "Legislative Constitutional Amendment",
       "status": "On Ballot",
       "result": "Pending",
       "date": "2026-06-09"
+    },
+    {
+      "number": "Constitutional Measure 2",
+      "title": "Constitutional Measure 2",
+      "description": "Require constitutional amendments to receive a 60% supermajority vote to be adopted",
+      "type": "Legislative Constitutional Amendment",
+      "status": "On Ballot",
+      "result": "Pending",
+      "date": "2026-11-03"
     }
   ],
   "filing_deadline": "2026-04-06",

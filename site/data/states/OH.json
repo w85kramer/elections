@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T19:43:13.006886Z",
+  "generated_at": "2026-02-26T22:13:34.523886Z",
   "state": {
     "name": "Ohio",
     "abbr": "OH",
@@ -3321,6 +3321,37 @@
         ]
       },
       {
+        "seat_label": "OH House 85",
+        "chamber": "House",
+        "district": "85",
+        "candidates": [
+          {
+            "name": "John Clayton Newlin II",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Pamela Grogean",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Victoria Maddox",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tim Barhorst",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "OH House 86",
         "chamber": "House",
         "district": "86",
@@ -5436,6 +5467,16 @@
       "district": "83",
       "seat_label": "OH House 83",
       "pres_margin": "-45.2",
+      "holder_party": "R",
+      "candidate": "Tim Barhorst",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "85",
+      "seat_label": "OH House 85",
+      "pres_margin": "-57.4",
       "holder_party": "R",
       "candidate": "Tim Barhorst",
       "is_open_seat": null

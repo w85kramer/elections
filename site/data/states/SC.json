@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T22:13:56.919647Z",
   "state": {
     "name": "South Carolina",
     "abbr": "SC",
@@ -1663,9 +1663,34 @@
       "candidates": []
     },
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "SC House 41",
+        "chamber": "House",
+        "district": "41",
+        "candidates": [
+          {
+            "name": "Tibi Czentye",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ]
   },
-  "uncontested_primaries": [],
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "41",
+      "seat_label": "SC House 41",
+      "pres_margin": "+14.0",
+      "holder_party": "D",
+      "candidate": "Tibi Czentye",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [],
   "filing_deadline": "2026-03-30",
   "primary_date": "2026-06-09"

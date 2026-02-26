@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T20:47:08.696693Z",
+  "generated_at": "2026-02-26T22:13:44.023131Z",
   "state": {
     "name": "Pennsylvania",
     "abbr": "PA",
@@ -2386,9 +2386,149 @@
       "candidates": []
     },
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "PA House 11",
+        "chamber": "House",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Marci Mustello",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 24",
+        "chamber": "House",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "La'Tasha Mayes",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 106",
+        "chamber": "House",
+        "district": "106",
+        "candidates": [
+          {
+            "name": "Tom Mehaffie",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 120",
+        "chamber": "House",
+        "district": "120",
+        "candidates": [
+          {
+            "name": "Brenda Pugh",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 139",
+        "chamber": "House",
+        "district": "139",
+        "candidates": [
+          {
+            "name": "Dominique Azzollini",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 38",
+        "chamber": "Senate",
+        "district": "38",
+        "candidates": [
+          {
+            "name": "Thomas West",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ]
   },
-  "uncontested_primaries": [],
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "24",
+      "seat_label": "PA House 24",
+      "pres_margin": "+77.1",
+      "holder_party": "D",
+      "candidate": "La'Tasha Mayes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "139",
+      "seat_label": "PA House 139",
+      "pres_margin": "-31.7",
+      "holder_party": "R",
+      "candidate": "Dominique Azzollini",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "11",
+      "seat_label": "PA House 11",
+      "pres_margin": "-37.8",
+      "holder_party": "R",
+      "candidate": "Marci Mustello",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "106",
+      "seat_label": "PA House 106",
+      "pres_margin": "-9.8",
+      "holder_party": "R",
+      "candidate": "Tom Mehaffie",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "120",
+      "seat_label": "PA House 120",
+      "pres_margin": "-11.7",
+      "holder_party": "R",
+      "candidate": "Brenda Pugh",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "38",
+      "seat_label": "PA Senate 38",
+      "pres_margin": "+10.2",
+      "holder_party": "D",
+      "candidate": "Thomas West",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [],
   "filing_deadline": "2026-03-10",
   "primary_date": "2026-05-19"

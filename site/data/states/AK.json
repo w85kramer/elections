@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T22:15:02.257622Z",
   "state": {
     "name": "Alaska",
     "abbr": "AK",
@@ -687,7 +687,21 @@
       "candidates": []
     },
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "AK House 18",
+        "chamber": "House",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Cliff Groh",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary"
+          }
+        ]
+      }
+    ]
   },
   "uncontested_primaries": [],
   "ballot_measures": [

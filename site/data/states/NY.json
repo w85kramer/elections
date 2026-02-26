@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T22:14:05.943430Z",
   "state": {
     "name": "New York",
     "abbr": "NY",
@@ -2027,9 +2027,565 @@
       "candidates": []
     },
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "NY Assembly 41",
+        "chamber": "Assembly",
+        "district": "41",
+        "candidates": [
+          {
+            "name": "Zahava Durchin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Assembly 82",
+        "chamber": "Assembly",
+        "district": "82",
+        "candidates": [
+          {
+            "name": "Jake Kuhl",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Assembly 119",
+        "chamber": "Assembly",
+        "district": "119",
+        "candidates": [
+          {
+            "name": "John Lipe",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Assembly 126",
+        "chamber": "Assembly",
+        "district": "126",
+        "candidates": [
+          {
+            "name": "Dave Knapp",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Assembly 137",
+        "chamber": "Assembly",
+        "district": "137",
+        "candidates": [
+          {
+            "name": "Mercedes Vazquez Simmons",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Assembly 142",
+        "chamber": "Assembly",
+        "district": "142",
+        "candidates": [
+          {
+            "name": "Gary Dickson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Assembly 149",
+        "chamber": "Assembly",
+        "district": "149",
+        "candidates": [
+          {
+            "name": "Adam Bojak",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Senate 1",
+        "chamber": "Senate",
+        "district": "1",
+        "candidates": [
+          {
+            "name": "Farzeen Bham",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Senate 8",
+        "chamber": "Senate",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Josh Taveras",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Senate 11",
+        "chamber": "Senate",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Adam Azam",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Senate 28",
+        "chamber": "Senate",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Alina Bonsell",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Senate 39",
+        "chamber": "Senate",
+        "district": "39",
+        "candidates": [
+          {
+            "name": "Lisa Kaul",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Senate 43",
+        "chamber": "Senate",
+        "district": "43",
+        "candidates": [
+          {
+            "name": "Devin Lander",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jake Ashby",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Senate 44",
+        "chamber": "Senate",
+        "district": "44",
+        "candidates": [
+          {
+            "name": "Patrick Nelson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Senate 45",
+        "chamber": "Senate",
+        "district": "45",
+        "candidates": [
+          {
+            "name": "Melissa Seale",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Senate 48",
+        "chamber": "Senate",
+        "district": "48",
+        "candidates": [
+          {
+            "name": "Rich McCarron",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Senate 50",
+        "chamber": "Senate",
+        "district": "50",
+        "candidates": [
+          {
+            "name": "Chris Ryan",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "James Corl",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Senate 51",
+        "chamber": "Senate",
+        "district": "51",
+        "candidates": [
+          {
+            "name": "Christopher Tague",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Senate 52",
+        "chamber": "Senate",
+        "district": "52",
+        "candidates": [
+          {
+            "name": "Lea Webb",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Senate 54",
+        "chamber": "Senate",
+        "district": "54",
+        "candidates": [
+          {
+            "name": "Pam Helming",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Senate 57",
+        "chamber": "Senate",
+        "district": "57",
+        "candidates": [
+          {
+            "name": "George Borrello",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Senate 61",
+        "chamber": "Senate",
+        "district": "61",
+        "candidates": [
+          {
+            "name": "Jonathan Rivera",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dan Gagliardo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ]
   },
-  "uncontested_primaries": [],
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "41",
+      "seat_label": "NY Assembly 41",
+      "pres_margin": "-3.8",
+      "holder_party": "D",
+      "candidate": "Zahava Durchin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "82",
+      "seat_label": "NY Assembly 82",
+      "pres_margin": "+29.5",
+      "holder_party": "D",
+      "candidate": "Jake Kuhl",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "119",
+      "seat_label": "NY Assembly 119",
+      "pres_margin": "-14.5",
+      "holder_party": "D",
+      "candidate": "John Lipe",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "137",
+      "seat_label": "NY Assembly 137",
+      "pres_margin": "+45.1",
+      "holder_party": "D",
+      "candidate": "Mercedes Vazquez Simmons",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "149",
+      "seat_label": "NY Assembly 149",
+      "pres_margin": "+19.7",
+      "holder_party": "D",
+      "candidate": "Adam Bojak",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "1",
+      "seat_label": "NY Senate 1",
+      "pres_margin": "-1.5",
+      "holder_party": "R",
+      "candidate": "Farzeen Bham",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "8",
+      "seat_label": "NY Senate 8",
+      "pres_margin": "-27.6",
+      "holder_party": "R",
+      "candidate": "Josh Taveras",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "11",
+      "seat_label": "NY Senate 11",
+      "pres_margin": "+9.2",
+      "holder_party": "D",
+      "candidate": "Adam Azam",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "39",
+      "seat_label": "NY Senate 39",
+      "pres_margin": "+4.2",
+      "holder_party": "R",
+      "candidate": "Lisa Kaul",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "43",
+      "seat_label": "NY Senate 43",
+      "pres_margin": "+3.2",
+      "holder_party": "R",
+      "candidate": "Devin Lander",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "44",
+      "seat_label": "NY Senate 44",
+      "pres_margin": "+7.6",
+      "holder_party": "R",
+      "candidate": "Patrick Nelson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "45",
+      "seat_label": "NY Senate 45",
+      "pres_margin": "-6.4",
+      "holder_party": "R",
+      "candidate": "Melissa Seale",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "50",
+      "seat_label": "NY Senate 50",
+      "pres_margin": "+4.3",
+      "holder_party": "D",
+      "candidate": "Chris Ryan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "52",
+      "seat_label": "NY Senate 52",
+      "pres_margin": "+19.2",
+      "holder_party": "D",
+      "candidate": "Lea Webb",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "61",
+      "seat_label": "NY Senate 61",
+      "pres_margin": "+22.1",
+      "holder_party": "D",
+      "candidate": "Jonathan Rivera",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "126",
+      "seat_label": "NY Assembly 126",
+      "pres_margin": "0.0",
+      "holder_party": "R",
+      "candidate": "Dave Knapp",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "142",
+      "seat_label": "NY Assembly 142",
+      "pres_margin": "+0.2",
+      "holder_party": "D",
+      "candidate": "Gary Dickson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "28",
+      "seat_label": "NY Senate 28",
+      "pres_margin": "+57.0",
+      "holder_party": "D",
+      "candidate": "Alina Bonsell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "43",
+      "seat_label": "NY Senate 43",
+      "pres_margin": "+3.2",
+      "holder_party": "R",
+      "candidate": "Jake Ashby",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "48",
+      "seat_label": "NY Senate 48",
+      "pres_margin": "+14.1",
+      "holder_party": "D",
+      "candidate": "Rich McCarron",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "50",
+      "seat_label": "NY Senate 50",
+      "pres_margin": "+4.3",
+      "holder_party": "D",
+      "candidate": "James Corl",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "51",
+      "seat_label": "NY Senate 51",
+      "pres_margin": "-14.6",
+      "holder_party": "R",
+      "candidate": "Christopher Tague",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "54",
+      "seat_label": "NY Senate 54",
+      "pres_margin": "-10.9",
+      "holder_party": "R",
+      "candidate": "Pam Helming",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "57",
+      "seat_label": "NY Senate 57",
+      "pres_margin": "-32.0",
+      "holder_party": "R",
+      "candidate": "George Borrello",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "61",
+      "seat_label": "NY Senate 61",
+      "pres_margin": "+22.1",
+      "holder_party": "D",
+      "candidate": "Dan Gagliardo",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [],
   "filing_deadline": "2026-04-06",
   "primary_date": "2026-06-23"

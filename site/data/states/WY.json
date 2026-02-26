@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T22:14:57.549045Z",
   "state": {
     "name": "Wyoming",
     "abbr": "WY",
@@ -938,9 +938,34 @@
       "candidates": []
     },
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "WY House 57",
+        "chamber": "House",
+        "district": "57",
+        "candidates": [
+          {
+            "name": "Julie Jarvis",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ]
   },
-  "uncontested_primaries": [],
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "57",
+      "seat_label": "WY House 57",
+      "pres_margin": "-41.6",
+      "holder_party": "R",
+      "candidate": "Julie Jarvis",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [
     {
       "number": "Homeowner's Primary Residence Property Tax Exemption Initiative",

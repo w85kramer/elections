@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T22:13:52.931868Z",
   "state": {
     "name": "Nevada",
     "abbr": "NV",
@@ -684,9 +684,214 @@
       "candidates": []
     },
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "NV Assembly 2",
+        "chamber": "Assembly",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Drew Teitelbaum",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 20",
+        "chamber": "Assembly",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Tony Smith",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 29",
+        "chamber": "Assembly",
+        "district": "29",
+        "candidates": [
+          {
+            "name": "Alex Pereszlenyi",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Christian Bishop",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 32",
+        "chamber": "Assembly",
+        "district": "32",
+        "candidates": [
+          {
+            "name": "Alexis Hansen",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 33",
+        "chamber": "Assembly",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Bert Gurr",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 34",
+        "chamber": "Assembly",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Brandon Davis",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 42",
+        "chamber": "Assembly",
+        "district": "42",
+        "candidates": [
+          {
+            "name": "Dayton Vasquez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Senate 14",
+        "chamber": "Senate",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Ira Hansen",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Senate 16",
+        "chamber": "Senate",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Lisa Krasner",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ]
   },
-  "uncontested_primaries": [],
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "20",
+      "seat_label": "NV Assembly 20",
+      "pres_margin": "+15.3",
+      "holder_party": "D",
+      "candidate": "Tony Smith",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "42",
+      "seat_label": "NV Assembly 42",
+      "pres_margin": "+5.1",
+      "holder_party": "D",
+      "candidate": "Dayton Vasquez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "2",
+      "seat_label": "NV Assembly 2",
+      "pres_margin": "-5.6",
+      "holder_party": "R",
+      "candidate": "Drew Teitelbaum",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "32",
+      "seat_label": "NV Assembly 32",
+      "pres_margin": "-32.0",
+      "holder_party": "R",
+      "candidate": "Alexis Hansen",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "33",
+      "seat_label": "NV Assembly 33",
+      "pres_margin": "-57.3",
+      "holder_party": "R",
+      "candidate": "Bert Gurr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "34",
+      "seat_label": "NV Assembly 34",
+      "pres_margin": "+8.4",
+      "holder_party": "D",
+      "candidate": "Brandon Davis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "14",
+      "seat_label": "NV Senate 14",
+      "pres_margin": "-23.1",
+      "holder_party": "R",
+      "candidate": "Ira Hansen",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "16",
+      "seat_label": "NV Senate 16",
+      "pres_margin": "-10.4",
+      "holder_party": "R",
+      "candidate": "Lisa Krasner",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [
     {
       "number": "Question 6",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T22:14:35.854137Z",
   "state": {
     "name": "Delaware",
     "abbr": "DE",
@@ -661,9 +661,80 @@
   "elections_2026": {
     "governor": null,
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "DE House 20",
+        "chamber": "House",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Ruby Schaeffer",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "DE House 33",
+        "chamber": "House",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Matt Bucher",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "DE Senate 8",
+        "chamber": "Senate",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Mara Gorman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      }
+    ]
   },
-  "uncontested_primaries": [],
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "20",
+      "seat_label": "DE House 20",
+      "pres_margin": "+8.6",
+      "holder_party": "D",
+      "candidate": "Ruby Schaeffer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "8",
+      "seat_label": "DE Senate 8",
+      "pres_margin": "+27.5",
+      "holder_party": "D",
+      "candidate": "Mara Gorman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "33",
+      "seat_label": "DE House 33",
+      "pres_margin": "-14.1",
+      "holder_party": "R",
+      "candidate": "Matt Bucher",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [],
   "filing_deadline": "2026-07-14",
   "primary_date": "2026-09-15"

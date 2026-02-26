@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T22:14:31.698517Z",
   "state": {
     "name": "Connecticut",
     "abbr": "CT",
@@ -1800,9 +1800,260 @@
       "candidates": []
     },
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "CT House 18",
+        "chamber": "House",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Tiffani McGinnis",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "CT House 34",
+        "chamber": "House",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Melissa Ziobron",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "CT House 52",
+        "chamber": "House",
+        "district": "52",
+        "candidates": [
+          {
+            "name": "Vincent Tocci",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "CT House 58",
+        "chamber": "House",
+        "district": "58",
+        "candidates": [
+          {
+            "name": "John Santanella",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "CT House 70",
+        "chamber": "House",
+        "district": "70",
+        "candidates": [
+          {
+            "name": "Seth Bronko",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "CT House 92",
+        "chamber": "House",
+        "district": "92",
+        "candidates": [
+          {
+            "name": "Eli Sabin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Justin Farmer",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "CT House 102",
+        "chamber": "House",
+        "district": "102",
+        "candidates": [
+          {
+            "name": "Ray Ingraham",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "CT House 117",
+        "chamber": "House",
+        "district": "117",
+        "candidates": [
+          {
+            "name": "Raymond Collins III",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "CT Senate 3",
+        "chamber": "Senate",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Saud Anwar",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "CT Senate 13",
+        "chamber": "Senate",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Jonathan Fazzino",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "CT Senate 33",
+        "chamber": "Senate",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Charles Ferraro",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ]
   },
-  "uncontested_primaries": [],
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "18",
+      "seat_label": "CT House 18",
+      "pres_margin": "+55.7",
+      "holder_party": "D",
+      "candidate": "Tiffani McGinnis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "52",
+      "seat_label": "CT House 52",
+      "pres_margin": "-14.7",
+      "holder_party": "R",
+      "candidate": "Vincent Tocci",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "58",
+      "seat_label": "CT House 58",
+      "pres_margin": "+6.5",
+      "holder_party": "D",
+      "candidate": "John Santanella",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "3",
+      "seat_label": "CT Senate 3",
+      "pres_margin": "+22.7",
+      "holder_party": "D",
+      "candidate": "Saud Anwar",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "13",
+      "seat_label": "CT Senate 13",
+      "pres_margin": "+15.4",
+      "holder_party": "D",
+      "candidate": "Jonathan Fazzino",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "34",
+      "seat_label": "CT House 34",
+      "pres_margin": "+0.6",
+      "holder_party": "R",
+      "candidate": "Melissa Ziobron",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "70",
+      "seat_label": "CT House 70",
+      "pres_margin": "-10.2",
+      "holder_party": "R",
+      "candidate": "Seth Bronko",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "102",
+      "seat_label": "CT House 102",
+      "pres_margin": "+14.8",
+      "holder_party": "D",
+      "candidate": "Ray Ingraham",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "117",
+      "seat_label": "CT House 117",
+      "pres_margin": "+4.0",
+      "holder_party": "D",
+      "candidate": "Raymond Collins III",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "33",
+      "seat_label": "CT Senate 33",
+      "pres_margin": "+9.4",
+      "holder_party": "D",
+      "candidate": "Charles Ferraro",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [],
   "filing_deadline": "2026-06-09",
   "primary_date": "2026-08-11"

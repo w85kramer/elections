@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T22:14:40.464047Z",
   "state": {
     "name": "Hawaii",
     "abbr": "HI",
@@ -787,9 +787,34 @@
       "candidates": []
     },
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "HI Senate 2",
+        "chamber": "Senate",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Joy San Buenaventura",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      }
+    ]
   },
-  "uncontested_primaries": [],
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "2",
+      "seat_label": "HI Senate 2",
+      "pres_margin": "+26.9",
+      "holder_party": "D",
+      "candidate": "Joy San Buenaventura",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [
     {
       "number": "Increase Time for Senate to Act on Judicial Appointments Amendment",

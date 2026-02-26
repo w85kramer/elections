@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T00:43:34.007902Z",
+  "generated_at": "2026-02-26T22:13:48.705162Z",
   "state": {
     "name": "Iowa",
     "abbr": "IA",
@@ -24,11 +24,11 @@
       "forecast": "Lean R",
       "forecast_details": [
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Lean R"
         },
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Lean R"
         }
       ]
@@ -1466,9 +1466,869 @@
       "candidates": []
     },
     "statewide": [],
-    "legislative": []
+    "legislative": [
+      {
+        "seat_label": "IA House 2",
+        "chamber": "House",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Bob Henderson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 12",
+        "chamber": "House",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Brady Meyer",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Steven Holt",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 33",
+        "chamber": "House",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Cody Smith",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 37",
+        "chamber": "House",
+        "district": "37",
+        "candidates": [
+          {
+            "name": "John Jacobs",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 38",
+        "chamber": "House",
+        "district": "38",
+        "candidates": [
+          {
+            "name": "Matt Oleson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 43",
+        "chamber": "House",
+        "district": "43",
+        "candidates": [
+          {
+            "name": "Nicole Hasso",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 51",
+        "chamber": "House",
+        "district": "51",
+        "candidates": [
+          {
+            "name": "Teresa Perin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 54",
+        "chamber": "House",
+        "district": "54",
+        "candidates": [
+          {
+            "name": "Leila Staton",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 58",
+        "chamber": "House",
+        "district": "58",
+        "candidates": [
+          {
+            "name": "India May",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 70",
+        "chamber": "House",
+        "district": "70",
+        "candidates": [
+          {
+            "name": "George Pickup",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Norlin Mommsen",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 75",
+        "chamber": "House",
+        "district": "75",
+        "candidates": [
+          {
+            "name": "Drew Stensland",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 80",
+        "chamber": "House",
+        "district": "80",
+        "candidates": [
+          {
+            "name": "John Thompson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 81",
+        "chamber": "House",
+        "district": "81",
+        "candidates": [
+          {
+            "name": "Dillon Fillion",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 84",
+        "chamber": "House",
+        "district": "84",
+        "candidates": [
+          {
+            "name": "Tom Gerhold",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 87",
+        "chamber": "House",
+        "district": "87",
+        "candidates": [
+          {
+            "name": "Thomas O'Donnell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 88",
+        "chamber": "House",
+        "district": "88",
+        "candidates": [
+          {
+            "name": "Grant Hill",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 90",
+        "chamber": "House",
+        "district": "90",
+        "candidates": [
+          {
+            "name": "Adam Zabner",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 92",
+        "chamber": "House",
+        "district": "92",
+        "candidates": [
+          {
+            "name": "Heather Hora",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 97",
+        "chamber": "House",
+        "district": "97",
+        "candidates": [
+          {
+            "name": "Adam Peters",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 98",
+        "chamber": "House",
+        "district": "98",
+        "candidates": [
+          {
+            "name": "Andrew Fitzgerald",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nathan Ramker",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 99",
+        "chamber": "House",
+        "district": "99",
+        "candidates": [
+          {
+            "name": "Marcques Derby",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 100",
+        "chamber": "House",
+        "district": "100",
+        "candidates": [
+          {
+            "name": "Matt Mohrfeld",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA Senate 3",
+        "chamber": "Senate",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Lynn Evans",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA Senate 5",
+        "chamber": "Senate",
+        "district": "5",
+        "candidates": [
+          {
+            "name": "Stacy Besch",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA Senate 11",
+        "chamber": "Senate",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Sinikka Waugh",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jon Thorup",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Mandee Shivers",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA Senate 13",
+        "chamber": "Senate",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Austin Garmon",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA Senate 19",
+        "chamber": "Senate",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Barb Kniff McCulla",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA Senate 21",
+        "chamber": "Senate",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Mike Bousselot",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA Senate 27",
+        "chamber": "Senate",
+        "district": "27",
+        "candidates": [
+          {
+            "name": "Annette Sweeney",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA Senate 33",
+        "chamber": "Senate",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Blake Clyde",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA Senate 35",
+        "chamber": "Senate",
+        "district": "35",
+        "candidates": [
+          {
+            "name": "Mike Zimmer",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joe Stutting",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA Senate 41",
+        "chamber": "Senate",
+        "district": "41",
+        "candidates": [
+          {
+            "name": "Kerry Gruenhagen",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA Senate 45",
+        "chamber": "Senate",
+        "district": "45",
+        "candidates": [
+          {
+            "name": "Janice Weiner",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA Senate 47",
+        "chamber": "Senate",
+        "district": "47",
+        "candidates": [
+          {
+            "name": "Nikhil Wagle",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      }
+    ]
   },
-  "uncontested_primaries": [],
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "12",
+      "seat_label": "IA House 12",
+      "pres_margin": "-45.7",
+      "holder_party": "R",
+      "candidate": "Brady Meyer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "33",
+      "seat_label": "IA House 33",
+      "pres_margin": "+24.6",
+      "holder_party": "D",
+      "candidate": "Cody Smith",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "51",
+      "seat_label": "IA House 51",
+      "pres_margin": "-21.3",
+      "holder_party": "R",
+      "candidate": "Teresa Perin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "54",
+      "seat_label": "IA House 54",
+      "pres_margin": "-39.1",
+      "holder_party": "R",
+      "candidate": "Leila Staton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "58",
+      "seat_label": "IA House 58",
+      "pres_margin": "-33.1",
+      "holder_party": "R",
+      "candidate": "India May",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "70",
+      "seat_label": "IA House 70",
+      "pres_margin": "-28.6",
+      "holder_party": "R",
+      "candidate": "George Pickup",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "75",
+      "seat_label": "IA House 75",
+      "pres_margin": "+8.8",
+      "holder_party": "D",
+      "candidate": "Drew Stensland",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "87",
+      "seat_label": "IA House 87",
+      "pres_margin": "-20.9",
+      "holder_party": "R",
+      "candidate": "Thomas O'Donnell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "90",
+      "seat_label": "IA House 90",
+      "pres_margin": "+53.2",
+      "holder_party": "D",
+      "candidate": "Adam Zabner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "97",
+      "seat_label": "IA House 97",
+      "pres_margin": "+19.1",
+      "holder_party": "D",
+      "candidate": "Adam Peters",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "98",
+      "seat_label": "IA House 98",
+      "pres_margin": "-1.7",
+      "holder_party": "D",
+      "candidate": "Andrew Fitzgerald",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "99",
+      "seat_label": "IA House 99",
+      "pres_margin": "-8.3",
+      "holder_party": "R",
+      "candidate": "Marcques Derby",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "100",
+      "seat_label": "IA House 100",
+      "pres_margin": "-26.8",
+      "holder_party": "R",
+      "candidate": "Matt Mohrfeld",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "11",
+      "seat_label": "IA Senate 11",
+      "pres_margin": "-21.9",
+      "holder_party": "R",
+      "candidate": "Sinikka Waugh",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "33",
+      "seat_label": "IA Senate 33",
+      "pres_margin": "-28.2",
+      "holder_party": "R",
+      "candidate": "Blake Clyde",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "35",
+      "seat_label": "IA Senate 35",
+      "pres_margin": "-21.1",
+      "holder_party": "D",
+      "candidate": "Mike Zimmer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "45",
+      "seat_label": "IA Senate 45",
+      "pres_margin": "+52.6",
+      "holder_party": "D",
+      "candidate": "Janice Weiner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "47",
+      "seat_label": "IA Senate 47",
+      "pres_margin": "-8.0",
+      "holder_party": "R",
+      "candidate": "Nikhil Wagle",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "2",
+      "seat_label": "IA House 2",
+      "pres_margin": "-18.6",
+      "holder_party": "R",
+      "candidate": "Bob Henderson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "12",
+      "seat_label": "IA House 12",
+      "pres_margin": "-45.7",
+      "holder_party": "R",
+      "candidate": "Steven Holt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "37",
+      "seat_label": "IA House 37",
+      "pres_margin": "-44.3",
+      "holder_party": "R",
+      "candidate": "John Jacobs",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "38",
+      "seat_label": "IA House 38",
+      "pres_margin": "-24.6",
+      "holder_party": "R",
+      "candidate": "Matt Oleson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "43",
+      "seat_label": "IA House 43",
+      "pres_margin": "+4.0",
+      "holder_party": "R",
+      "candidate": "Nicole Hasso",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "70",
+      "seat_label": "IA House 70",
+      "pres_margin": "-28.6",
+      "holder_party": "R",
+      "candidate": "Norlin Mommsen",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "80",
+      "seat_label": "IA House 80",
+      "pres_margin": "+9.3",
+      "holder_party": "D",
+      "candidate": "John Thompson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "81",
+      "seat_label": "IA House 81",
+      "pres_margin": "+1.3",
+      "holder_party": "D",
+      "candidate": "Dillon Fillion",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "84",
+      "seat_label": "IA House 84",
+      "pres_margin": "-27.6",
+      "holder_party": "R",
+      "candidate": "Tom Gerhold",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "88",
+      "seat_label": "IA House 88",
+      "pres_margin": "-49.0",
+      "holder_party": "R",
+      "candidate": "Grant Hill",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "92",
+      "seat_label": "IA House 92",
+      "pres_margin": "-15.2",
+      "holder_party": "R",
+      "candidate": "Heather Hora",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "98",
+      "seat_label": "IA House 98",
+      "pres_margin": "-1.7",
+      "holder_party": "D",
+      "candidate": "Nathan Ramker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "3",
+      "seat_label": "IA Senate 3",
+      "pres_margin": "-46.7",
+      "holder_party": "R",
+      "candidate": "Lynn Evans",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "5",
+      "seat_label": "IA Senate 5",
+      "pres_margin": "-41.0",
+      "holder_party": "R",
+      "candidate": "Stacy Besch",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "13",
+      "seat_label": "IA Senate 13",
+      "pres_margin": "-40.5",
+      "holder_party": "R",
+      "candidate": "Austin Garmon",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "19",
+      "seat_label": "IA Senate 19",
+      "pres_margin": "-35.2",
+      "holder_party": "R",
+      "candidate": "Barb Kniff McCulla",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "21",
+      "seat_label": "IA Senate 21",
+      "pres_margin": "-2.2",
+      "holder_party": "R",
+      "candidate": "Mike Bousselot",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "27",
+      "seat_label": "IA Senate 27",
+      "pres_margin": "-29.5",
+      "holder_party": "R",
+      "candidate": "Annette Sweeney",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "35",
+      "seat_label": "IA Senate 35",
+      "pres_margin": "-21.1",
+      "holder_party": "D",
+      "candidate": "Joe Stutting",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "41",
+      "seat_label": "IA Senate 41",
+      "pres_margin": "-11.3",
+      "holder_party": "R",
+      "candidate": "Kerry Gruenhagen",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [],
   "filing_deadline": "2026-03-13",
   "primary_date": "2026-06-02"
