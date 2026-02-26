@@ -291,6 +291,7 @@
 <div class="tooltip" id="tooltip"></div>
 
 <script src="js/common.js"></script>
+<script src="js/supabase.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (async function() {
@@ -330,11 +331,36 @@
     return;
   }
 
+  // --- Live data: fetch uncertified 2026 elections from Supabase ---
+  const seatIds = district.seats.map(s => s.seat_id);
+  let liveDataApplied = false;
+
+  if (needsLiveData(district)) {
+    try {
+      let liveElections = getCachedLiveData(seatIds);
+      if (!liveElections) {
+        liveElections = await fetchLiveElections(seatIds);
+        setCachedLiveData(seatIds, liveElections);
+      }
+      if (liveElections && liveElections.length > 0) {
+        mergeLiveElections(district, liveElections);
+        liveDataApplied = true;
+      }
+    } catch (err) {
+      console.warn('Live data fetch failed, using static:', err.message);
+    }
+  }
+
   // Set page title
   const displayName = district.district_name || `${chamber} ${distNum}`;
   const fullLabel = `${stateName} ${getChamberLabel(stateAbbr, chamber)} District ${distNum}`;
   document.title = `${displayName} — ${stateName} | State Elections Tracker`;
   document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+  if (liveDataApplied) {
+    document.getElementById('gen-date').innerHTML =
+      formatDate(data.generated_at.split('T')[0]) +
+      ' <span title="2026 election data loaded live from database" style="color:var(--ms-gold);font-weight:600;cursor:help">\u25CF Live</span>';
+  }
 
   // Breadcrumb
   document.getElementById('breadcrumb').innerHTML = `
