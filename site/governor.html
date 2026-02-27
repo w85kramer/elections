@@ -759,11 +759,25 @@
           style="pointer-events:none">${initials}</text>`;
       }
 
-      // Election diamond marker
-      if (t.election_year && t.margin != null) {
-        const elecDate = new Date(t.election_year, 10, 1); // approx November
+      // Find all elections won by this governor during their term
+      const lastName = t.name.split(' ').pop().toLowerCase();
+      const termElections = (data.elections || [])
+        .filter(e =>
+          e.type === 'General' && e.year >= t.startDate.getFullYear() - 1
+          && e.year <= (t.endDate ? t.endDate.getFullYear() : 2030)
+          && e.candidates.some(c => c.result === 'Won' && c.name.toLowerCase().includes(lastName))
+        )
+        .sort((a, b) => a.year - b.year);
+      t._termElections = termElections;
+
+      // Election diamond markers — one per election during the term
+      for (const elec of termElections) {
+        const winner = elec.candidates.find(c => c.result === 'Won' && c.name.toLowerCase().includes(lastName));
+        const runnerUp = elec.candidates.filter(c => c.result === 'Lost').sort((a, b) => (b.pct || 0) - (a.pct || 0))[0];
+        const margin = (winner && runnerUp && winner.pct && runnerUp.pct) ? winner.pct - runnerUp.pct : (t.election_year === elec.year ? t.margin : null);
+        const elecDate = new Date(elec.year, 10, 1);
         const dx = xPos(elecDate);
-        const diamondSize = Math.min(6, 3 + Math.abs(t.margin) / 20 * 3);
+        const diamondSize = margin != null ? Math.min(6, 3 + Math.abs(margin) / 20 * 3) : 4;
         svg += `<polygon points="${dx},${BAR_Y - diamondSize - 2} ${dx + diamondSize},${BAR_Y - 2} ${dx},${BAR_Y + diamondSize - 2} ${dx - diamondSize},${BAR_Y - 2}" fill="${color}" opacity="0.8"/>`;
       }
     });
@@ -782,7 +796,6 @@
         const startStr = t.start ? formatDate(t.start) : '?';
         const endStr = t.end ? formatDate(t.end) : 'Present';
         const reasonStr = t.start_reason ? reasonLabel(t.start_reason) : '';
-        const marginStr = t.margin != null ? `Margin: ${Math.abs(t.margin).toFixed(1)}% (${t.election_year})` : '';
         const endReasonStr = t.end_reason ? `Left office: ${reasonLabel(t.end_reason)}` : '';
 
         let ttHtml = `<div class="tt-name" style="${partyColorStyle(t.party)}">${t.name}
@@ -791,7 +804,37 @@
         if (reasonStr) ttHtml += `<div class="tt-reason">${reasonStr}</div>`;
         if (t._electedYear) ttHtml += `<div class="tt-reason">Won election in ${t._electedYear}</div>`;
         if (endReasonStr) ttHtml += `<div class="tt-reason">${endReasonStr}</div>`;
-        if (marginStr) ttHtml += `<div class="tt-margin">${marginStr}</div>`;
+
+        // Show election history for this governor's term
+        const elecs = t._termElections || [];
+        if (elecs.length > 0) {
+          const lastName = t.name.split(' ').pop().toLowerCase();
+          for (let ei = 0; ei < elecs.length; ei++) {
+            const elec = elecs[ei];
+            const winner = elec.candidates.find(c => c.result === 'Won' && c.name.toLowerCase().includes(lastName));
+            const runnerUp = elec.candidates.filter(c => c.result === 'Lost').sort((a, b) => (b.pct || 0) - (a.pct || 0))[0];
+            const label = ei === 0 && t.start_reason === 'elected' ? 'Elected' : ei === 0 ? 'Won election' : 'Reelected';
+            let line = `${label} ${elec.year}`;
+            if (winner && runnerUp && winner.pct && runnerUp.pct) {
+              const margin = (winner.pct - runnerUp.pct).toFixed(1);
+              line += ` (+${margin}% vs. ${runnerUp.name})`;
+            } else if (winner && winner.pct) {
+              line += ` (${winner.pct.toFixed(1)}%)`;
+            } else {
+              // Fall back to timeline margin data for the initial election
+              if (t.margin != null && elec.year === t.election_year) {
+                line += ` (+${Math.abs(t.margin).toFixed(1)}%)`;
+              }
+            }
+            ttHtml += `<div class="tt-margin">${line}</div>`;
+          }
+          if (elecs.length > 1) {
+            ttHtml += `<div class="tt-reason" style="margin-top:2px;font-style:italic">${elecs.length} terms</div>`;
+          }
+        } else if (t.margin != null) {
+          // Fallback: no elections matched, use timeline margin
+          ttHtml += `<div class="tt-margin">Margin: ${Math.abs(t.margin).toFixed(1)}% (${t.election_year})</div>`;
+        }
 
         tooltip.innerHTML = ttHtml;
         tooltip.classList.add('visible');
