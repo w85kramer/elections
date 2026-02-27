@@ -760,19 +760,19 @@
       }
 
       // Find all elections won by this governor during their term
-      const lastName = t.name.split(' ').pop().toLowerCase();
+      const lastNameLower = lastName.toLowerCase();
       const termElections = (data.elections || [])
         .filter(e =>
           e.type === 'General' && e.year >= t.startDate.getFullYear() - 1
           && e.year <= (t.endDate ? t.endDate.getFullYear() : 2030)
-          && e.candidates.some(c => c.result === 'Won' && c.name.toLowerCase().includes(lastName))
+          && e.candidates.some(c => c.result === 'Won' && c.name.toLowerCase().includes(lastNameLower))
         )
         .sort((a, b) => a.year - b.year);
       t._termElections = termElections;
 
       // Election diamond markers — one per election during the term
       for (const elec of termElections) {
-        const winner = elec.candidates.find(c => c.result === 'Won' && c.name.toLowerCase().includes(lastName));
+        const winner = elec.candidates.find(c => c.result === 'Won' && c.name.toLowerCase().includes(lastNameLower));
         const runnerUp = elec.candidates.filter(c => c.result === 'Lost').sort((a, b) => (b.pct || 0) - (a.pct || 0))[0];
         const margin = (winner && runnerUp && winner.pct && runnerUp.pct) ? winner.pct - runnerUp.pct : (t.election_year === elec.year ? t.margin : null);
         const elecDate = new Date(elec.year, 10, 1);
