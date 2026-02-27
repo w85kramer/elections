@@ -370,17 +370,56 @@ def name_match(wiki_name, db_name):
     return False
 
 
+def esc(s):
+    """Escape single quotes for SQL."""
+    if s is None:
+        return ''
+    return str(s).replace("'", "''")
+
+
+def split_name(full_name):
+    """Split full name into (first_name, last_name)."""
+    parts = full_name.strip().split()
+    if not parts:
+        return ('', '')
+    if len(parts) == 1:
+        return ('', parts[0])
+    first_name = parts[0]
+    last_name = parts[-1]
+    suffixes = {'jr.', 'sr.', 'ii', 'iii', 'iv', 'jr', 'sr', 'v'}
+    if last_name.lower().rstrip('.') in suffixes and len(parts) > 2:
+        last_name = parts[-2]
+    return (first_name, last_name)
+
+
+def find_candidate(wiki_name, candidate_cache):
+    """Find existing candidate in cache by exact or fuzzy name match. Returns id or None."""
+    lower = wiki_name.lower().strip()
+    if lower in candidate_cache:
+        return candidate_cache[lower]['id']
+    for cached_info in candidate_cache.values():
+        if name_match(wiki_name, cached_info['full_name']):
+            return cached_info['id']
+    return None
+
+
 def main():
     parser = argparse.ArgumentParser(description='Backfill governor vote data from Wikipedia')
     parser.add_argument('--dry-run', action='store_true', help='Show what would change')
     parser.add_argument('--state', type=str, help='Process only this state')
     parser.add_argument('--min-year', type=int, default=0, help='Minimum election year')
     parser.add_argument('--max-year', type=int, default=2025, help='Maximum election year')
+    parser.add_argument('--add-losers', action='store_true',
+                        help='Add runner-up candidates/candidacies from Wikipedia')
     args = parser.parse_args()
 
-    # Step 1: Get all governor elections missing vote data
-    print('Fetching governor elections missing vote data...')
-    where_clause = "AND e.total_votes_cast IS NULL AND e.election_year <= " + str(args.max_year)
+    # Step 1: Get governor elections
+    if args.add_losers:
+        print('Fetching governor elections with vote data (to add losers)...')
+        where_clause = f"AND e.total_votes_cast IS NOT NULL AND e.election_year <= {args.max_year}"
+    else:
+        print('Fetching governor elections missing vote data...')
+        where_clause = f"AND e.total_votes_cast IS NULL AND e.election_year <= {args.max_year}"
     if args.min_year:
         where_clause += f" AND e.election_year >= {args.min_year}"
     if args.state:
@@ -422,9 +461,24 @@ def main():
 
     print(f'  {len(elections)} elections to process\n')
 
+    # Pre-load candidate cache for add-losers mode
+    candidate_cache = {}
+    if args.add_losers:
+        print('Loading candidate cache...')
+        all_cands = run_sql("SELECT id, full_name FROM candidates ORDER BY id")
+        if all_cands:
+            for c in all_cands:
+                candidate_cache[c['full_name'].lower().strip()] = {
+                    'id': c['id'], 'full_name': c['full_name']
+                }
+        print(f'  {len(candidate_cache)} candidates cached\n')
+
     # Step 2: Process each election
     updated_elections = 0
     updated_candidacies = 0
+    new_candidates_created = 0
+    total_new_candidacies = 0
+    new_candidacies_pending = []  # Collected for batch insert
     failed = []
     no_data = []
 
@@ -442,6 +496,7 @@ def main():
         # Match Wikipedia candidates to DB candidacies
         matched = 0
         updates = []
+        unmatched_wiki = []
 
         for wiki_cand in wiki['candidates']:
             best_match = None
@@ -458,7 +513,8 @@ def main():
                     'pct': wiki_cand['pct'],
                     'name': wiki_cand['name'],
                 })
-            # Don't worry about unmatched wiki candidates (write-ins, minor party)
+            else:
+                unmatched_wiki.append(wiki_cand)
 
         if matched == 0 and election['candidacies']:
             print(f'0 matches (wiki: {[c["name"] for c in wiki["candidates"][:3]]}, db: {[c["name"] for c in election["candidacies"][:3]]})')
@@ -467,36 +523,129 @@ def main():
 
         total_votes = wiki['total']
 
-        if args.dry_run:
-            print(f'{matched} matches, total={total_votes:,}')
+        if args.add_losers:
+            # Add-losers mode: find/create candidates for unmatched wiki entries
+            n_new = 0
+            for wiki_cand in unmatched_wiki:
+                clean = wiki_cand['name'].strip()
+                if not clean or len(clean) < 3:
+                    continue
+                # Skip very minor candidates (< 1% of vote)
+                if wiki_cand['pct'] is not None and wiki_cand['pct'] < 1.0:
+                    continue
+
+                cand_id = find_candidate(clean, candidate_cache)
+
+                if cand_id is None:
+                    if args.dry_run:
+                        new_candidates_created += 1
+                        n_new += 1
+                        continue
+                    # Create new candidate
+                    first_name, last_name = split_name(clean)
+                    result = run_sql(f"""
+                        INSERT INTO candidates (full_name, last_name, first_name)
+                        VALUES ('{esc(clean)}', '{esc(last_name)}', '{esc(first_name)}')
+                        RETURNING id
+                    """)
+                    if result and len(result) > 0:
+                        cand_id = result[0]['id']
+                        candidate_cache[clean.lower()] = {'id': cand_id, 'full_name': clean}
+                        new_candidates_created += 1
+                    else:
+                        print(f'[FAIL: {clean}]', end=' ')
+                        continue
+
+                # Check no duplicate candidacy for this candidate+election
+                already_exists = any(
+                    db_cand['candidate_id'] == cand_id
+                    for db_cand in election['candidacies']
+                )
+                if already_exists:
+                    continue
+
+                party = wiki_cand['party'] or ''
+                caucus = party
+                result_val = 'Won' if wiki_cand['is_winner'] else 'Lost'
+
+                if not args.dry_run:
+                    new_candidacies_pending.append({
+                        'election_id': election['election_id'],
+                        'candidate_id': cand_id,
+                        'party': party,
+                        'caucus': caucus,
+                        'votes': wiki_cand['votes'],
+                        'pct': wiki_cand['pct'],
+                        'result': result_val,
+                    })
+                n_new += 1
+
+            total_new_candidacies += n_new
+            if n_new > 0:
+                updated_elections += 1
+            print(f'{matched} matched, {n_new} new losers')
+        else:
+            # Original mode: update vote data
+            if args.dry_run:
+                print(f'{matched} matches, total={total_votes:,}')
+                updated_elections += 1
+                updated_candidacies += matched
+                continue
+
+            # Update candidacies
+            for u in updates:
+                pct_val = f"{u['pct']}" if u['pct'] is not None else 'NULL'
+                run_sql(f"""
+                    UPDATE candidacies
+                    SET votes_received = {u['votes']}, vote_percentage = {pct_val}
+                    WHERE id = {u['candidacy_id']}
+                """)
+
+            # Update election total
+            if total_votes:
+                run_sql(f"""
+                    UPDATE elections SET total_votes_cast = {total_votes}
+                    WHERE id = {election['election_id']}
+                """)
+
             updated_elections += 1
             updated_candidacies += matched
-            continue
+            print(f'{matched} matches, total={total_votes:,}')
 
-        # Update candidacies
-        for u in updates:
-            pct_val = f"{u['pct']}" if u['pct'] is not None else 'NULL'
-            run_sql(f"""
-                UPDATE candidacies
-                SET votes_received = {u['votes']}, vote_percentage = {pct_val}
-                WHERE id = {u['candidacy_id']}
-            """)
-
-        # Update election total
-        if total_votes:
-            run_sql(f"""
-                UPDATE elections SET total_votes_cast = {total_votes}
-                WHERE id = {election['election_id']}
-            """)
-
-        updated_elections += 1
-        updated_candidacies += matched
-        print(f'{matched} matches, total={total_votes:,}')
+    # Batch insert new candidacies (add-losers mode)
+    if new_candidacies_pending and not args.dry_run:
+        print(f'\nInserting {len(new_candidacies_pending)} new candidacies in batches...')
+        batch_size = 50
+        for i in range(0, len(new_candidacies_pending), batch_size):
+            batch = new_candidacies_pending[i:i + batch_size]
+            values = []
+            for c in batch:
+                pct_val = str(c['pct']) if c['pct'] is not None else 'NULL'
+                values.append(
+                    f"({c['election_id']}, {c['candidate_id']}, "
+                    f"'{esc(c['party'])}', '{esc(c['caucus'])}', "
+                    f"{c['votes']}, {pct_val}, '{c['result']}', false, false)"
+                )
+            sql = f"""
+                INSERT INTO candidacies
+                (election_id, candidate_id, party, caucus, votes_received,
+                 vote_percentage, result, is_incumbent, is_write_in)
+                VALUES {', '.join(values)}
+            """
+            run_sql(sql)
+            print(f'  Batch {i // batch_size + 1}: {len(batch)} inserted')
+            time.sleep(2)
 
     # Summary
     print(f'\n{"DRY RUN — " if args.dry_run else ""}SUMMARY:')
-    print(f'  Elections updated: {updated_elections}/{len(elections)}')
-    print(f'  Candidacies updated: {updated_candidacies}')
+    if args.add_losers:
+        print(f'  Elections processed: {len(elections)}')
+        print(f'  Elections with new losers: {updated_elections}')
+        print(f'  New candidates created: {new_candidates_created}')
+        print(f'  New candidacies added: {total_new_candidacies}')
+    else:
+        print(f'  Elections updated: {updated_elections}/{len(elections)}')
+        print(f'  Candidacies updated: {updated_candidacies}')
     if no_data:
         print(f'  No Wikipedia data ({len(no_data)}): {", ".join(no_data[:20])}{"..." if len(no_data) > 20 else ""}')
     if failed:
