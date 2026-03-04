@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-04T16:10:00.206957Z",
+  "generated_at": "2026-03-04T19:01:26.578876Z",
   "state": {
     "name": "North Carolina",
     "abbr": "NC",
@@ -1672,6 +1672,24 @@
         "district": "1",
         "candidates": [
           {
+            "name": "Dorsey Harris",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Ed Goodwin",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Dorsey Harris",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Ed Goodwin",
             "party": "R",
             "is_incumbent": true,
@@ -1686,10 +1704,84 @@
         ]
       },
       {
+        "seat_label": "NC House 2",
+        "chamber": "House",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Ray Jeffers",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Ray Jeffers",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 3",
+        "chamber": "House",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Diannia Bright",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Angela Humphries",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Steve Tyson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Diannia Bright",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Steve Tyson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 4",
         "chamber": "House",
         "district": "4",
         "candidates": [
+          {
+            "name": "Vernon Moore",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jimmy Dixon",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Vernon Moore",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Jimmy Dixon",
             "party": "R",
@@ -1705,10 +1797,53 @@
         ]
       },
       {
+        "seat_label": "NC House 5",
+        "chamber": "House",
+        "district": "5",
+        "candidates": [
+          {
+            "name": "Sam Davis III",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Bill Ward",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Sam Davis III",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bill Ward",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 6",
         "chamber": "House",
         "district": "6",
         "candidates": [
+          {
+            "name": "Tony Spears",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Joe Pike",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Joshua Estep",
             "party": "D",
@@ -1736,10 +1871,84 @@
         ]
       },
       {
+        "seat_label": "NC House 7",
+        "chamber": "House",
+        "district": "7",
+        "candidates": [
+          {
+            "name": "Mark Speed",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Cory Thornton",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mark Speed",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cory Thornton",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 8",
+        "chamber": "House",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Gloristine Brown",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Cathy Bynum",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Gloristine Brown",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cathy Bynum",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 9",
         "chamber": "House",
         "district": "9",
         "candidates": [
+          {
+            "name": "Claire Kempner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Tim Reeder",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Claire Kempner",
             "party": "D",
@@ -1751,6 +1960,180 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Tim Reeder",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 10",
+        "chamber": "House",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Zyaire Webb",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "John Bell",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Zyaire Webb",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Bell",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 11",
+        "chamber": "House",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Allison Dahle",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Matthew Kordon",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Allison Dahle",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 12",
+        "chamber": "House",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Don Hardy",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Chris Humphrey",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Don Hardy",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Chris Humphrey",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 13",
+        "chamber": "House",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Jason Moore",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Celeste Cairns",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Jason Moore",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Celeste Cairns",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 14",
+        "chamber": "House",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Wyatt Gable",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Wyatt Gable",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 15",
+        "chamber": "House",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Christopher Schulte",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Phil Shepard",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Christopher Schulte",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Phil Shepard",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1759,6 +2142,24 @@
         "chamber": "House",
         "district": "16",
         "candidates": [
+          {
+            "name": "Jim Harris",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Carson Smith",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Jim Harris",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Carson Smith",
             "party": "R",
@@ -1779,6 +2180,24 @@
         "district": "17",
         "candidates": [
           {
+            "name": "Dennis Breen",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Frank Iler",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Dennis Breen",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Frank Iler",
             "party": "R",
             "is_incumbent": true,
@@ -1793,10 +2212,146 @@
         ]
       },
       {
+        "seat_label": "NC House 18",
+        "chamber": "House",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Deb Butler",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Latisha Grady",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Deb Butler",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Latisha Grady",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 19",
+        "chamber": "House",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Scott Nasiff",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Charlie Miller",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Scott Nasiff",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Charlie Miller",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 20",
+        "chamber": "House",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Tim Merrick",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Dane Scalise",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Tim Merrick",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dane Scalise",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 21",
+        "chamber": "House",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Ya Liu",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Bryson Johnson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Ya Liu",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bryson Johnson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 22",
         "chamber": "House",
         "district": "22",
         "candidates": [
+          {
+            "name": "Jimmy Melvin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jimmy Melvin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Jerol Kivett",
             "party": "R",
@@ -1820,6 +2375,18 @@
             "name": "Patricia Smith",
             "party": "D",
             "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Brent Roberson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Patricia Smith",
+            "party": "D",
+            "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
@@ -1827,6 +2394,43 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Brent Roberson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 24",
+        "chamber": "House",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Dante Pittman",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Blake Boykin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Dante Pittman",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Blake Boykin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1835,6 +2439,24 @@
         "chamber": "House",
         "district": "25",
         "candidates": [
+          {
+            "name": "Lorenza M. Wilkins",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Nick Taylor",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Allen Chesser",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Harris Walker",
             "party": "D",
@@ -1846,6 +2468,12 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Allen Chesser",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1854,6 +2482,24 @@
         "chamber": "House",
         "district": "26",
         "candidates": [
+          {
+            "name": "L'Bertrice Solomon",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Donna White",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "L'Bertrice Solomon",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Donna White",
             "party": "R",
@@ -1874,6 +2520,18 @@
         "district": "27",
         "candidates": [
           {
+            "name": "Rodney Pierce",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Kenneth Bentley Jr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Michael Wray",
             "party": "D",
             "is_incumbent": false,
@@ -1884,6 +2542,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Kenneth Bentley Jr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1892,6 +2556,24 @@
         "chamber": "House",
         "district": "28",
         "candidates": [
+          {
+            "name": "D. Matthew Bailey",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Larry Strickland",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "D. Matthew Bailey",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Eric Bowles Sr.",
             "party": "R",
@@ -1907,10 +2589,85 @@
         ]
       },
       {
+        "seat_label": "NC House 29",
+        "chamber": "House",
+        "district": "29",
+        "candidates": [
+          {
+            "name": "Vernetta Alston",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Vernetta Alston",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 30",
+        "chamber": "House",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Marcia Morey",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Ray Ubinger",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Marcia Morey",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 31",
+        "chamber": "House",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "Zack Hawkins",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Zack Hawkins",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 32",
         "chamber": "House",
         "district": "32",
         "candidates": [
+          {
+            "name": "Curtis McRae",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Frank Sossamon",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
           {
             "name": "Curtis McRae",
             "party": "D",
@@ -1938,10 +2695,84 @@
         ]
       },
       {
+        "seat_label": "NC House 33",
+        "chamber": "House",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Monika Johnson-Hostler",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Matthew Orr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Monika Johnson-Hostler",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Matthew Orr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 34",
+        "chamber": "House",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Tim Longest",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Ed George",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Tim Longest",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 35",
         "chamber": "House",
         "district": "35",
         "candidates": [
+          {
+            "name": "Evonne S. Hopkins",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mike Schietzelt",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Evonne S. Hopkins",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Michele Joyner-Dinwiddie",
             "party": "R",
@@ -1957,10 +2788,53 @@
         ]
       },
       {
+        "seat_label": "NC House 36",
+        "chamber": "House",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Julie von Haefen",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Mary Insprucker",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Julie von Haefen",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mary Insprucker",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 37",
         "chamber": "House",
         "district": "37",
         "candidates": [
+          {
+            "name": "Winn Decker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Erin Par\u00e9",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Marcus Gadson",
             "party": "D",
@@ -1978,6 +2852,12 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Erin Par\u00e9",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1986,6 +2866,12 @@
         "chamber": "House",
         "district": "38",
         "candidates": [
+          {
+            "name": "Abe Jones",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Abe Jones",
             "party": "D",
@@ -2001,10 +2887,134 @@
         ]
       },
       {
+        "seat_label": "NC House 39",
+        "chamber": "House",
+        "district": "39",
+        "candidates": [
+          {
+            "name": "James Roberson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Wayne Cockrell",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jorge Cordova",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "James Roberson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jorge Cordova",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 40",
+        "chamber": "House",
+        "district": "40",
+        "candidates": [
+          {
+            "name": "Phil Rubin",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Lucas Jones",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Phil Rubin",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 41",
+        "chamber": "House",
+        "district": "41",
+        "candidates": [
+          {
+            "name": "Maria Cervania",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Bruce Forster",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Maria Cervania",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bruce Forster",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 42",
+        "chamber": "House",
+        "district": "42",
+        "candidates": [
+          {
+            "name": "Mike Colvin",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Mike Colvin",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 43",
         "chamber": "House",
         "district": "43",
         "candidates": [
+          {
+            "name": "Janene Ackles",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Diane Wheatley",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Janene Ackles",
             "party": "D",
@@ -2032,10 +3042,47 @@
         ]
       },
       {
+        "seat_label": "NC House 44",
+        "chamber": "House",
+        "district": "44",
+        "candidates": [
+          {
+            "name": "Charles Smith",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Jackie Weyhenmeyer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Charles Smith",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jackie Weyhenmeyer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 45",
         "chamber": "House",
         "district": "45",
         "candidates": [
+          {
+            "name": "Frances Jackson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Frances Jackson",
             "party": "D",
@@ -2051,10 +3098,90 @@
         ]
       },
       {
+        "seat_label": "NC House 46",
+        "chamber": "House",
+        "district": "46",
+        "candidates": [
+          {
+            "name": "Brittany Newton",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Brenden Jones",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Brittany Newton",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brenden Jones",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 47",
+        "chamber": "House",
+        "district": "47",
+        "candidates": [
+          {
+            "name": "Eshonda Hooper",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "John Lowery",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Eshonda Hooper",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Lowery",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 48",
         "chamber": "House",
         "district": "48",
         "candidates": [
+          {
+            "name": "Garland Pierce",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Ralph Carter",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Garland Pierce",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Kirk Lowery",
             "party": "R",
@@ -2070,10 +3197,47 @@
         ]
       },
       {
+        "seat_label": "NC House 49",
+        "chamber": "House",
+        "district": "49",
+        "candidates": [
+          {
+            "name": "Cynthia Ball",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Daran Thomas",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Cynthia Ball",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Daran Thomas",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 50",
         "chamber": "House",
         "district": "50",
         "candidates": [
+          {
+            "name": "Ren\u00e9e Price",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Brandall Redd",
             "party": "D",
@@ -2100,6 +3264,24 @@
         "district": "51",
         "candidates": [
           {
+            "name": "Tasherra Nichols McDuffie",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "April Montgomery",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Tasherra Nichols McDuffie",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Charles Taylor",
             "party": "R",
             "is_incumbent": false,
@@ -2114,10 +3296,109 @@
         ]
       },
       {
+        "seat_label": "NC House 52",
+        "chamber": "House",
+        "district": "52",
+        "candidates": [
+          {
+            "name": "Joe Parfitt",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Ben Moss",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Joe Parfitt",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ben Moss",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 53",
+        "chamber": "House",
+        "district": "53",
+        "candidates": [
+          {
+            "name": "Kevin G. Thurman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Christopher Sessions",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Howard Penny",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Kevin G. Thurman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Howard Penny",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 54",
+        "chamber": "House",
+        "district": "54",
+        "candidates": [
+          {
+            "name": "Robert Reives",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Robert Reives",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 55",
         "chamber": "House",
         "district": "55",
         "candidates": [
+          {
+            "name": "John J. Kirkpatrick IV",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "John J. Kirkpatrick IV",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Clancy Baucom",
             "party": "R",
@@ -2139,10 +3420,79 @@
         ]
       },
       {
+        "seat_label": "NC House 56",
+        "chamber": "House",
+        "district": "56",
+        "candidates": [
+          {
+            "name": "Allen Buansi",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Matthew Clements",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Allen Buansi",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 57",
+        "chamber": "House",
+        "district": "57",
+        "candidates": [
+          {
+            "name": "Tracy Clark",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Tracy Clark",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 58",
+        "chamber": "House",
+        "district": "58",
+        "candidates": [
+          {
+            "name": "Amos Quick",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Amos Quick",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 59",
         "chamber": "House",
         "district": "59",
         "candidates": [
+          {
+            "name": "Alan Branson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "C. Bradley Hunt II",
             "party": "D",
@@ -2154,6 +3504,12 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Alan Branson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2162,6 +3518,12 @@
         "chamber": "House",
         "district": "60",
         "candidates": [
+          {
+            "name": "Joseph Perrotta",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
           {
             "name": "Amanda Cook",
             "party": "D",
@@ -2185,6 +3547,124 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph Perrotta",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 61",
+        "chamber": "House",
+        "district": "61",
+        "candidates": [
+          {
+            "name": "Pricey Harrison",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Pricey Harrison",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 62",
+        "chamber": "House",
+        "district": "62",
+        "candidates": [
+          {
+            "name": "Shelly Headen",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "John Blust",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Shelly Headen",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Blust",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 63",
+        "chamber": "House",
+        "district": "63",
+        "candidates": [
+          {
+            "name": "Whitney Olive",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Ryan Moffitt",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Whitney Olive",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ryan Moffitt",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 64",
+        "chamber": "House",
+        "district": "64",
+        "candidates": [
+          {
+            "name": "LeVon Barnes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Dennis Riddell",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "LeVon Barnes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dennis Riddell",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2193,6 +3673,18 @@
         "chamber": "House",
         "district": "65",
         "candidates": [
+          {
+            "name": "Gavin McGaughey",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Gavin McGaughey",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "A. Reece Pyrtle, Jr.",
             "party": "R",
@@ -2214,10 +3706,35 @@
         ]
       },
       {
+        "seat_label": "NC House 66",
+        "chamber": "House",
+        "district": "66",
+        "candidates": [
+          {
+            "name": "Sarah Crawford",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Sarah Crawford",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 67",
         "chamber": "House",
         "district": "67",
         "candidates": [
+          {
+            "name": "Cody Huneycutt",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Jocelyn Torres",
             "party": "D",
@@ -2229,6 +3746,143 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Cody Huneycutt",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 68",
+        "chamber": "House",
+        "district": "68",
+        "candidates": [
+          {
+            "name": "Derek Warriner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "David Willis",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Derek Warriner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Willis",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 69",
+        "chamber": "House",
+        "district": "69",
+        "candidates": [
+          {
+            "name": "Heidi Sinsley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Dean Arp",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Heidi Sinsley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dean Arp",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 70",
+        "chamber": "House",
+        "district": "70",
+        "candidates": [
+          {
+            "name": "Bill McCaskill",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Brian Biggs",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Bill McCaskill",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brian Biggs",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 71",
+        "chamber": "House",
+        "district": "71",
+        "candidates": [
+          {
+            "name": "Kanika Brown",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Kanika Brown",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 72",
+        "chamber": "House",
+        "district": "72",
+        "candidates": [
+          {
+            "name": "Amber Baker",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Amber Baker",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
           }
         ]
       },
@@ -2237,6 +3891,18 @@
         "chamber": "House",
         "district": "73",
         "candidates": [
+          {
+            "name": "Thomas Monks",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jonathan Almond",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Kim DeLaney",
             "party": "D",
@@ -2248,6 +3914,136 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Jonathan Almond",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 74",
+        "chamber": "House",
+        "district": "74",
+        "candidates": [
+          {
+            "name": "Amy Taylor North",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jeff Zenger",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Amy Taylor North",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jeff Zenger",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 75",
+        "chamber": "House",
+        "district": "75",
+        "candidates": [
+          {
+            "name": "Jen Wiles",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Donny Lambeth",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Jen Wiles",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Donny Lambeth",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 76",
+        "chamber": "House",
+        "district": "76",
+        "candidates": [
+          {
+            "name": "Scott Huffman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Greg Edds",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Scott Huffman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Greg Edds",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 77",
+        "chamber": "House",
+        "district": "77",
+        "candidates": [
+          {
+            "name": "Sabrina Harris",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Julia Howard",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Sabrina Harris",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Julia Howard",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2256,6 +4052,18 @@
         "chamber": "House",
         "district": "78",
         "candidates": [
+          {
+            "name": "Matt Borja",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Matt Borja",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Mark Dutton",
             "party": "R",
@@ -2295,6 +4103,18 @@
         "district": "80",
         "candidates": [
           {
+            "name": "JacQuez Johnson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "JacQuez Johnson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Joseph Byrne",
             "party": "R",
             "is_incumbent": false,
@@ -2314,6 +4134,18 @@
         "district": "81",
         "candidates": [
           {
+            "name": "Dylan Tucker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Dylan Tucker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Larry Potts",
             "party": "R",
             "is_incumbent": true,
@@ -2328,10 +4160,239 @@
         ]
       },
       {
+        "seat_label": "NC House 82",
+        "chamber": "House",
+        "district": "82",
+        "candidates": [
+          {
+            "name": "Chris Bishopp",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Brian Echevarria",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Chris Bishopp",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brian Echevarria",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 83",
+        "chamber": "House",
+        "district": "83",
+        "candidates": [
+          {
+            "name": "Cortez Ferrell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Grant Campbell",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Cortez Ferrell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Grant Campbell",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 84",
+        "chamber": "House",
+        "district": "84",
+        "candidates": [
+          {
+            "name": "Chris E. Gilbert",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jeff McNeely",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Chris E. Gilbert",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jeff McNeely",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 85",
+        "chamber": "House",
+        "district": "85",
+        "candidates": [
+          {
+            "name": "Suzanne Gavenus",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Dudley Greene",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Suzanne Gavenus",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dudley Greene",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 86",
+        "chamber": "House",
+        "district": "86",
+        "candidates": [
+          {
+            "name": "Wesley Hendrix",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Hugh Blackwell",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Wesley Hendrix",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Hugh Blackwell",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 87",
+        "chamber": "House",
+        "district": "87",
+        "candidates": [
+          {
+            "name": "Iris Bender",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Destin Hall",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Iris Bender",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Destin Hall",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 88",
+        "chamber": "House",
+        "district": "88",
+        "candidates": [
+          {
+            "name": "Mary Belk",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Ray Craig",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mary Belk",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ray Craig",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 89",
         "chamber": "House",
         "district": "89",
         "candidates": [
+          {
+            "name": "Robert Thompson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Robert Thompson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Lisa Koperski",
             "party": "R",
@@ -2351,6 +4412,18 @@
         "chamber": "House",
         "district": "90",
         "candidates": [
+          {
+            "name": "Ken Badgett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Ken Badgett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "A.J. Daoud",
             "party": "R",
@@ -2372,10 +4445,134 @@
         ]
       },
       {
+        "seat_label": "NC House 91",
+        "chamber": "House",
+        "district": "91",
+        "candidates": [
+          {
+            "name": "Lucille Puckett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kyle Hall",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Lucille Puckett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kyle Hall",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 92",
+        "chamber": "House",
+        "district": "92",
+        "candidates": [
+          {
+            "name": "Terry Brown",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Terry Brown",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 93",
+        "chamber": "House",
+        "district": "93",
+        "candidates": [
+          {
+            "name": "Charlie Wallin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Ray Pickett",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Charlie Wallin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ray Pickett",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 94",
+        "chamber": "House",
+        "district": "94",
+        "candidates": [
+          {
+            "name": "Andy Warren",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Blair Eddins",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Andy Warren",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Blair Eddins",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 95",
         "chamber": "House",
         "district": "95",
         "candidates": [
+          {
+            "name": "Mike Robinson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mike Robinson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Mike Kubiniec",
             "party": "R",
@@ -2386,6 +4583,99 @@
             "name": "Todd Carver",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 96",
+        "chamber": "House",
+        "district": "96",
+        "candidates": [
+          {
+            "name": "Park Inglefield",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jay Adams",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Park Inglefield",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jay Adams",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 97",
+        "chamber": "House",
+        "district": "97",
+        "candidates": [
+          {
+            "name": "Greg McBryde",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Heather Rhyne",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Greg McBryde",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Heather Rhyne",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 98",
+        "chamber": "House",
+        "district": "98",
+        "candidates": [
+          {
+            "name": "Beth Gardner Helfrich",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "John Rhodes",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Beth Gardner Helfrich",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Rhodes",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -2416,10 +4706,141 @@
         ]
       },
       {
+        "seat_label": "NC House 100",
+        "chamber": "House",
+        "district": "100",
+        "candidates": [
+          {
+            "name": "Julia Greenfield",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Julia Greenfield",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 101",
+        "chamber": "House",
+        "district": "101",
+        "candidates": [
+          {
+            "name": "Carolyn Logan",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Carolyn Logan",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 102",
+        "chamber": "House",
+        "district": "102",
+        "candidates": [
+          {
+            "name": "Becky Carney",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Daniel Schmidt",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Becky Carney",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Daniel Schmidt",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 103",
+        "chamber": "House",
+        "district": "103",
+        "candidates": [
+          {
+            "name": "Laura Budd",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Laura Budd",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 104",
+        "chamber": "House",
+        "district": "104",
+        "candidates": [
+          {
+            "name": "Brandon Lofton",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Trina V. Boyd",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Brandon Lofton",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Trina V. Boyd",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 105",
         "chamber": "House",
         "district": "105",
         "candidates": [
+          {
+            "name": "Ken McCool",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Ken McCool",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Kelly VanHorn",
             "party": "R",
@@ -2460,10 +4881,103 @@
         ]
       },
       {
+        "seat_label": "NC House 107",
+        "chamber": "House",
+        "district": "107",
+        "candidates": [
+          {
+            "name": "Aisha Dew",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Aisha Dew",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 108",
+        "chamber": "House",
+        "district": "108",
+        "candidates": [
+          {
+            "name": "Sydnie Hutchinson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "John Torbett",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Sydnie Hutchinson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Torbett",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 109",
+        "chamber": "House",
+        "district": "109",
+        "candidates": [
+          {
+            "name": "Mark Carver",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Donnie Loftis",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Mark Carver",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Donnie Loftis",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 110",
         "chamber": "House",
         "district": "110",
         "candidates": [
+          {
+            "name": "Mary Silver",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mary Silver",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Caroline Eason",
             "party": "R",
@@ -2479,10 +4993,72 @@
         ]
       },
       {
+        "seat_label": "NC House 111",
+        "chamber": "House",
+        "district": "111",
+        "candidates": [
+          {
+            "name": "Jerry Blake",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Paul Scott",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Jerry Blake",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Paul Scott",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 112",
+        "chamber": "House",
+        "district": "112",
+        "candidates": [
+          {
+            "name": "Jordan Lopez",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Jordan Lopez",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 113",
         "chamber": "House",
         "district": "113",
         "candidates": [
+          {
+            "name": "Mason Rhodes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mason Rhodes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Jake Johnson",
             "party": "R",
@@ -2498,10 +5074,91 @@
         ]
       },
       {
+        "seat_label": "NC House 114",
+        "chamber": "House",
+        "district": "114",
+        "candidates": [
+          {
+            "name": "Eric Ager",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Eric Ager",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 115",
+        "chamber": "House",
+        "district": "115",
+        "candidates": [
+          {
+            "name": "Lindsey Prather",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Anthony Penland",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Lindsey Prather",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Anthony Penland",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC House 116",
+        "chamber": "House",
+        "district": "116",
+        "candidates": [
+          {
+            "name": "Brian Turner",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Brian Turner",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "NC House 117",
         "chamber": "House",
         "district": "117",
         "candidates": [
+          {
+            "name": "Lynne Russo",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Lynne Russo",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Christopher Wilson",
             "party": "R",
@@ -2522,6 +5179,18 @@
         "district": "118",
         "candidates": [
           {
+            "name": "Danny Davis",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Danny Davis",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Jimmy Rogers",
             "party": "R",
             "is_incumbent": false,
@@ -2540,6 +5209,18 @@
         "chamber": "House",
         "district": "119",
         "candidates": [
+          {
+            "name": "Mark R. Burrows",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mark R. Burrows",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Anna Ferguson",
             "party": "R",
@@ -2561,10 +5242,59 @@
         ]
       },
       {
+        "seat_label": "NC House 120",
+        "chamber": "House",
+        "district": "120",
+        "candidates": [
+          {
+            "name": "Caleb Brown",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Karl Gillespie",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Caleb Brown",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Karl Gillespie",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC Senate 1",
         "chamber": "Senate",
         "district": "1",
         "candidates": [
+          {
+            "name": "Melissa Zehner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jerry R. Tillett",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Melissa Zehner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Cole Johnson",
             "party": "R",
@@ -2592,10 +5322,121 @@
         ]
       },
       {
+        "seat_label": "NC Senate 2",
+        "chamber": "Senate",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Roy Surrett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Norman Sanderson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Roy Surrett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Norman Sanderson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 3",
+        "chamber": "Senate",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Charles Dudley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Bob Brinson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Charles Dudley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bob Brinson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 4",
+        "chamber": "Senate",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Jess Rivera",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Eldon Sharpe Newton III",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Jess Rivera",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Eldon Sharpe Newton III",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC Senate 5",
         "chamber": "Senate",
         "district": "5",
         "candidates": [
+          {
+            "name": "Kandie Smith",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Henry Hostetler",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kandie Smith",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Angelene Mitchell",
             "party": "R",
@@ -2611,10 +5452,127 @@
         ]
       },
       {
+        "seat_label": "NC Senate 6",
+        "chamber": "Senate",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Andi Morrow",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Michael Lazzara",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Andi Morrow",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael Lazzara",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 7",
+        "chamber": "Senate",
+        "district": "7",
+        "candidates": [
+          {
+            "name": "Jessica Bichler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Michael Lee",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Jessica Bichler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael Lee",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 8",
+        "chamber": "Senate",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Richard Combes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Tim White",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Bill Rabon",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Richard Combes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bill Rabon",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC Senate 9",
         "chamber": "Senate",
         "district": "9",
         "candidates": [
+          {
+            "name": "Helen Bronson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Brent Jackson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Helen Bronson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Brent Jackson",
             "party": "R",
@@ -2635,6 +5593,30 @@
         "district": "10",
         "candidates": [
           {
+            "name": "Pat LeGrand",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kevin Terrett",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Benton Sawrey",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Pat LeGrand",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Benton Sawrey",
             "party": "R",
             "is_incumbent": true,
@@ -2649,10 +5631,59 @@
         ]
       },
       {
+        "seat_label": "NC Senate 11",
+        "chamber": "Senate",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "James Gailliard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Gavin Bell",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Lisa Barnes",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "James Gailliard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lisa Barnes",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC Senate 12",
         "chamber": "Senate",
         "district": "12",
         "candidates": [
+          {
+            "name": "Tanya White Anderson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jim Burgin",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Jheri Hardaway",
             "party": "D",
@@ -2680,10 +5711,164 @@
         ]
       },
       {
+        "seat_label": "NC Senate 13",
+        "chamber": "Senate",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Lisa Grafstein",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Robert van Brederode",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Lisa Grafstein",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert van Brederode",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 14",
+        "chamber": "Senate",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Dan Blue",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Angela McCarty",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Dan Blue",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Angela McCarty",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 15",
+        "chamber": "Senate",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Jay Chaudhuri",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "David Bankert",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jay Chaudhuri",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Bankert",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 16",
+        "chamber": "Senate",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Gale Adcock",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Jonathan Miller",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Philip Hensley",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Gale Adcock",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Philip Hensley",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC Senate 17",
         "chamber": "Senate",
         "district": "17",
         "candidates": [
+          {
+            "name": "Sydney Batch",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Patrick Bowersox",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Shirley Johnson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Sydney Batch",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Sarah Al-Baghdadi",
             "party": "R",
@@ -2704,6 +5889,30 @@
         "district": "18",
         "candidates": [
           {
+            "name": "Terence Everitt",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Brad Hessel",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Chris Stock",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Terence Everitt",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Cheryl Caulfield",
             "party": "R",
             "is_incumbent": false,
@@ -2718,10 +5927,78 @@
         ]
       },
       {
+        "seat_label": "NC Senate 19",
+        "chamber": "Senate",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Val Applewhite",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Venus de la Cruz",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Val Applewhite",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Venus de la Cruz",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 20",
+        "chamber": "Senate",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Natalie Murdock",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Natalie Murdock",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "NC Senate 21",
         "chamber": "Senate",
         "district": "21",
         "candidates": [
+          {
+            "name": "Paul Taylor",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Tom McInnis",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Paul Taylor",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Ray Daly",
             "party": "R",
@@ -2742,6 +6019,18 @@
         "district": "22",
         "candidates": [
           {
+            "name": "Sophia Chitlik",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Lakeshia Alston",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "DeDreana Freeman",
             "party": "D",
             "is_incumbent": false,
@@ -2752,6 +6041,105 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Lakeshia Alston",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 23",
+        "chamber": "Senate",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "Graig Meyer",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Laura Pichardo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Graig Meyer",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Laura Pichardo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 24",
+        "chamber": "Senate",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Catina Hamm",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Danny Britt",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Catina Hamm",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Danny Britt",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 25",
+        "chamber": "Senate",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "Southey Blanton",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Amy Galey",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Southey Blanton",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Amy Galey",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2760,6 +6148,18 @@
         "chamber": "Senate",
         "district": "26",
         "candidates": [
+          {
+            "name": "Steve Luking",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Steve Luking",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Phil Berger",
             "party": "R",
@@ -2775,10 +6175,97 @@
         ]
       },
       {
+        "seat_label": "NC Senate 27",
+        "chamber": "Senate",
+        "district": "27",
+        "candidates": [
+          {
+            "name": "Michael Garrett",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Michael Garrett",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 28",
+        "chamber": "Senate",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Gladys Robinson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Gladys Robinson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 29",
+        "chamber": "Senate",
+        "district": "29",
+        "candidates": [
+          {
+            "name": "Bob Morrison",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Dave Craven",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Bob Morrison",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dave Craven",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC Senate 30",
         "chamber": "Senate",
         "district": "30",
         "candidates": [
+          {
+            "name": "Pamela D. McAfee",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Steve Jarvis",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Pamela D. McAfee",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Eddie Gallimore",
             "party": "R",
@@ -2794,10 +6281,53 @@
         ]
       },
       {
+        "seat_label": "NC Senate 31",
+        "chamber": "Senate",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "Andy Bowline",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Dana Jones",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Andy Bowline",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dana Jones",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC Senate 32",
         "chamber": "Senate",
         "district": "32",
         "candidates": [
+          {
+            "name": "Paul Lowe",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Peter Antinozzi",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
           {
             "name": "Gardenia Henley",
             "party": "D",
@@ -2809,6 +6339,43 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Peter Antinozzi",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 33",
+        "chamber": "Senate",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Gary Weart",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Carl Ford",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Gary Weart",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Carl Ford",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2817,6 +6384,24 @@
         "chamber": "Senate",
         "district": "34",
         "candidates": [
+          {
+            "name": "April Cook",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kevin Crutchfield",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "April Cook",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Chris Measmer",
             "party": "R",
@@ -2832,10 +6417,84 @@
         ]
       },
       {
+        "seat_label": "NC Senate 35",
+        "chamber": "Senate",
+        "district": "35",
+        "candidates": [
+          {
+            "name": "Christine Winward",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Todd Johnson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Christine Winward",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Todd Johnson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 36",
+        "chamber": "Senate",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Trevor Hardwick",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Eddie Settle",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Trevor Hardwick",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Eddie Settle",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NC Senate 37",
         "chamber": "Senate",
         "district": "37",
         "candidates": [
+          {
+            "name": "Raygan Angel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Vickie Sawyer",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Precinda Bjorgen",
             "party": "D",
@@ -2847,12 +6506,2838 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Vickie Sawyer",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 38",
+        "chamber": "Senate",
+        "district": "38",
+        "candidates": [
+          {
+            "name": "Mujtaba Mohammed",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Mujtaba Mohammed",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 39",
+        "chamber": "Senate",
+        "district": "39",
+        "candidates": [
+          {
+            "name": "DeAndrea Salvador",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "DeAndrea Salvador",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 40",
+        "chamber": "Senate",
+        "district": "40",
+        "candidates": [
+          {
+            "name": "Joyce Waddell",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Bobbie Shields",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Joyce Waddell",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bobbie Shields",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 41",
+        "chamber": "Senate",
+        "district": "41",
+        "candidates": [
+          {
+            "name": "Caleb Theodros",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Kevin Gray",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Caleb Theodros",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kevin Gray",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 42",
+        "chamber": "Senate",
+        "district": "42",
+        "candidates": [
+          {
+            "name": "Woodson Bradley",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Stacie McGinn",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Woodson Bradley",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Stacie McGinn",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 43",
+        "chamber": "Senate",
+        "district": "43",
+        "candidates": [
+          {
+            "name": "Steve Rutherford",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Brad Overcash",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Steve Rutherford",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brad Overcash",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 44",
+        "chamber": "Senate",
+        "district": "44",
+        "candidates": [
+          {
+            "name": "Rod Powell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Ted Alexander",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Rod Powell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ted Alexander",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 45",
+        "chamber": "Senate",
+        "district": "45",
+        "candidates": [
+          {
+            "name": "Greg Cranford",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mark Hollo",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Greg Cranford",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mark Hollo",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 46",
+        "chamber": "Senate",
+        "district": "46",
+        "candidates": [
+          {
+            "name": "Kyle Whisnant",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Warren Daniel",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Kyle Whisnant",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Warren Daniel",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 47",
+        "chamber": "Senate",
+        "district": "47",
+        "candidates": [
+          {
+            "name": "Frank Patton Hughes III",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Ralph Hise",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Frank Patton Hughes III",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ralph Hise",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 48",
+        "chamber": "Senate",
+        "district": "48",
+        "candidates": [
+          {
+            "name": "Doyle Brown Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Tim Moffitt",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Doyle Brown Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tim Moffitt",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 49",
+        "chamber": "Senate",
+        "district": "49",
+        "candidates": [
+          {
+            "name": "Julie Mayfield",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "C.J. Domingo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Julie Mayfield",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "C.J. Domingo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NC Senate 50",
+        "chamber": "Senate",
+        "district": "50",
+        "candidates": [
+          {
+            "name": "Tom Downing",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kevin Corbin",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Tom Downing",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kevin Corbin",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
           }
         ]
       }
     ]
   },
-  "uncontested_primaries": [],
+  "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "1",
+      "seat_label": "NC House 1",
+      "pres_margin": "-29.7",
+      "holder_party": "R",
+      "candidate": "Dorsey Harris",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "2",
+      "seat_label": "NC House 2",
+      "pres_margin": "+10.2",
+      "holder_party": "D",
+      "candidate": "Ray Jeffers",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "3",
+      "seat_label": "NC House 3",
+      "pres_margin": "-20.1",
+      "holder_party": "R",
+      "candidate": "Diannia Bright",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "4",
+      "seat_label": "NC House 4",
+      "pres_margin": "-24.3",
+      "holder_party": "R",
+      "candidate": "Vernon Moore",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "5",
+      "seat_label": "NC House 5",
+      "pres_margin": "-6.7",
+      "holder_party": "R",
+      "candidate": "Sam Davis III",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "7",
+      "seat_label": "NC House 7",
+      "pres_margin": "-12.5",
+      "holder_party": "R",
+      "candidate": "Mark Speed",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "8",
+      "seat_label": "NC House 8",
+      "pres_margin": "+26.9",
+      "holder_party": "D",
+      "candidate": "Gloristine Brown",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "10",
+      "seat_label": "NC House 10",
+      "pres_margin": "-16.3",
+      "holder_party": "R",
+      "candidate": "Zyaire Webb",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "11",
+      "seat_label": "NC House 11",
+      "pres_margin": "+32.6",
+      "holder_party": "D",
+      "candidate": "Allison Dahle",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "12",
+      "seat_label": "NC House 12",
+      "pres_margin": "-11.6",
+      "holder_party": "R",
+      "candidate": "Don Hardy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "13",
+      "seat_label": "NC House 13",
+      "pres_margin": "-40.5",
+      "holder_party": "R",
+      "candidate": "Jason Moore",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "15",
+      "seat_label": "NC House 15",
+      "pres_margin": "-33.5",
+      "holder_party": "R",
+      "candidate": "Christopher Schulte",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "16",
+      "seat_label": "NC House 16",
+      "pres_margin": "-39.3",
+      "holder_party": "R",
+      "candidate": "Jim Harris",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "17",
+      "seat_label": "NC House 17",
+      "pres_margin": "-23.2",
+      "holder_party": "R",
+      "candidate": "Dennis Breen",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "18",
+      "seat_label": "NC House 18",
+      "pres_margin": "+21.3",
+      "holder_party": "D",
+      "candidate": "Deb Butler",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "19",
+      "seat_label": "NC House 19",
+      "pres_margin": "-21.0",
+      "holder_party": "R",
+      "candidate": "Scott Nasiff",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "20",
+      "seat_label": "NC House 20",
+      "pres_margin": "-10.3",
+      "holder_party": "R",
+      "candidate": "Tim Merrick",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "21",
+      "seat_label": "NC House 21",
+      "pres_margin": "+26.4",
+      "holder_party": "D",
+      "candidate": "Ya Liu",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "22",
+      "seat_label": "NC House 22",
+      "pres_margin": "-26.9",
+      "holder_party": "R",
+      "candidate": "Jimmy Melvin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "24",
+      "seat_label": "NC House 24",
+      "pres_margin": "-1.7",
+      "holder_party": "D",
+      "candidate": "Dante Pittman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "26",
+      "seat_label": "NC House 26",
+      "pres_margin": "-11.7",
+      "holder_party": "R",
+      "candidate": "L'Bertrice Solomon",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "28",
+      "seat_label": "NC House 28",
+      "pres_margin": "-34.2",
+      "holder_party": "R",
+      "candidate": "D. Matthew Bailey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "29",
+      "seat_label": "NC House 29",
+      "pres_margin": "+68.5",
+      "holder_party": "D",
+      "candidate": "Vernetta Alston",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "30",
+      "seat_label": "NC House 30",
+      "pres_margin": "+71.3",
+      "holder_party": "D",
+      "candidate": "Marcia Morey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "31",
+      "seat_label": "NC House 31",
+      "pres_margin": "+60.3",
+      "holder_party": "D",
+      "candidate": "Zack Hawkins",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "33",
+      "seat_label": "NC House 33",
+      "pres_margin": "+41.3",
+      "holder_party": "D",
+      "candidate": "Monika Johnson-Hostler",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "34",
+      "seat_label": "NC House 34",
+      "pres_margin": "+30.9",
+      "holder_party": "D",
+      "candidate": "Tim Longest",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "35",
+      "seat_label": "NC House 35",
+      "pres_margin": "-1.9",
+      "holder_party": "R",
+      "candidate": "Evonne S. Hopkins",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "36",
+      "seat_label": "NC House 36",
+      "pres_margin": "+11.7",
+      "holder_party": "D",
+      "candidate": "Julie von Haefen",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "39",
+      "seat_label": "NC House 39",
+      "pres_margin": "+25.2",
+      "holder_party": "D",
+      "candidate": "James Roberson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "40",
+      "seat_label": "NC House 40",
+      "pres_margin": "+27.7",
+      "holder_party": "D",
+      "candidate": "Phil Rubin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "41",
+      "seat_label": "NC House 41",
+      "pres_margin": "+34.2",
+      "holder_party": "D",
+      "candidate": "Maria Cervania",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "42",
+      "seat_label": "NC House 42",
+      "pres_margin": "+46.6",
+      "holder_party": "D",
+      "candidate": "Mike Colvin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "44",
+      "seat_label": "NC House 44",
+      "pres_margin": "+20.5",
+      "holder_party": "D",
+      "candidate": "Charles Smith",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "46",
+      "seat_label": "NC House 46",
+      "pres_margin": "-34.8",
+      "holder_party": "R",
+      "candidate": "Brittany Newton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "47",
+      "seat_label": "NC House 47",
+      "pres_margin": "-24.0",
+      "holder_party": "R",
+      "candidate": "Eshonda Hooper",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "48",
+      "seat_label": "NC House 48",
+      "pres_margin": "+0.9",
+      "holder_party": "D",
+      "candidate": "Garland Pierce",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "49",
+      "seat_label": "NC House 49",
+      "pres_margin": "+40.3",
+      "holder_party": "D",
+      "candidate": "Cynthia Ball",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "51",
+      "seat_label": "NC House 51",
+      "pres_margin": "-25.7",
+      "holder_party": "R",
+      "candidate": "Tasherra Nichols McDuffie",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "52",
+      "seat_label": "NC House 52",
+      "pres_margin": "-18.9",
+      "holder_party": "R",
+      "candidate": "Joe Parfitt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "53",
+      "seat_label": "NC House 53",
+      "pres_margin": "-25.7",
+      "holder_party": "R",
+      "candidate": "Kevin G. Thurman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "54",
+      "seat_label": "NC House 54",
+      "pres_margin": "+8.4",
+      "holder_party": "D",
+      "candidate": "Robert Reives",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "55",
+      "seat_label": "NC House 55",
+      "pres_margin": "-25.8",
+      "holder_party": "R",
+      "candidate": "John J. Kirkpatrick IV",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "56",
+      "seat_label": "NC House 56",
+      "pres_margin": "+71.8",
+      "holder_party": "D",
+      "candidate": "Allen Buansi",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "57",
+      "seat_label": "NC House 57",
+      "pres_margin": "+35.4",
+      "holder_party": "D",
+      "candidate": "Tracy Clark",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "58",
+      "seat_label": "NC House 58",
+      "pres_margin": "+49.9",
+      "holder_party": "D",
+      "candidate": "Amos Quick",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "61",
+      "seat_label": "NC House 61",
+      "pres_margin": "+56.2",
+      "holder_party": "D",
+      "candidate": "Pricey Harrison",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "62",
+      "seat_label": "NC House 62",
+      "pres_margin": "-6.0",
+      "holder_party": "R",
+      "candidate": "Shelly Headen",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "63",
+      "seat_label": "NC House 63",
+      "pres_margin": "-7.7",
+      "holder_party": "R",
+      "candidate": "Whitney Olive",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "64",
+      "seat_label": "NC House 64",
+      "pres_margin": "-8.6",
+      "holder_party": "R",
+      "candidate": "LeVon Barnes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "65",
+      "seat_label": "NC House 65",
+      "pres_margin": "-35.9",
+      "holder_party": "R",
+      "candidate": "Gavin McGaughey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "66",
+      "seat_label": "NC House 66",
+      "pres_margin": "+27.6",
+      "holder_party": "D",
+      "candidate": "Sarah Crawford",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "68",
+      "seat_label": "NC House 68",
+      "pres_margin": "-20.0",
+      "holder_party": "R",
+      "candidate": "Derek Warriner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "69",
+      "seat_label": "NC House 69",
+      "pres_margin": "-25.0",
+      "holder_party": "R",
+      "candidate": "Heidi Sinsley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "70",
+      "seat_label": "NC House 70",
+      "pres_margin": "-53.0",
+      "holder_party": "R",
+      "candidate": "Bill McCaskill",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "71",
+      "seat_label": "NC House 71",
+      "pres_margin": "+38.5",
+      "holder_party": "D",
+      "candidate": "Kanika Brown",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "72",
+      "seat_label": "NC House 72",
+      "pres_margin": "+49.1",
+      "holder_party": "D",
+      "candidate": "Amber Baker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "74",
+      "seat_label": "NC House 74",
+      "pres_margin": "-7.5",
+      "holder_party": "R",
+      "candidate": "Amy Taylor North",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "75",
+      "seat_label": "NC House 75",
+      "pres_margin": "-11.9",
+      "holder_party": "R",
+      "candidate": "Jen Wiles",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "76",
+      "seat_label": "NC House 76",
+      "pres_margin": "-24.1",
+      "holder_party": "R",
+      "candidate": "Scott Huffman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "77",
+      "seat_label": "NC House 77",
+      "pres_margin": "-53.4",
+      "holder_party": "R",
+      "candidate": "Sabrina Harris",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "78",
+      "seat_label": "NC House 78",
+      "pres_margin": "-49.6",
+      "holder_party": "R",
+      "candidate": "Matt Borja",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "80",
+      "seat_label": "NC House 80",
+      "pres_margin": "-50.6",
+      "holder_party": "R",
+      "candidate": "JacQuez Johnson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "81",
+      "seat_label": "NC House 81",
+      "pres_margin": "-43.7",
+      "holder_party": "R",
+      "candidate": "Dylan Tucker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "82",
+      "seat_label": "NC House 82",
+      "pres_margin": "-8.5",
+      "holder_party": "R",
+      "candidate": "Chris Bishopp",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "83",
+      "seat_label": "NC House 83",
+      "pres_margin": "-31.3",
+      "holder_party": "R",
+      "candidate": "Cortez Ferrell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "84",
+      "seat_label": "NC House 84",
+      "pres_margin": "-35.8",
+      "holder_party": "R",
+      "candidate": "Chris E. Gilbert",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "85",
+      "seat_label": "NC House 85",
+      "pres_margin": "-47.0",
+      "holder_party": "R",
+      "candidate": "Suzanne Gavenus",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "86",
+      "seat_label": "NC House 86",
+      "pres_margin": "-41.2",
+      "holder_party": "R",
+      "candidate": "Wesley Hendrix",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "87",
+      "seat_label": "NC House 87",
+      "pres_margin": "-49.3",
+      "holder_party": "R",
+      "candidate": "Iris Bender",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "88",
+      "seat_label": "NC House 88",
+      "pres_margin": "+38.1",
+      "holder_party": "D",
+      "candidate": "Mary Belk",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "89",
+      "seat_label": "NC House 89",
+      "pres_margin": "-49.2",
+      "holder_party": "R",
+      "candidate": "Robert Thompson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "90",
+      "seat_label": "NC House 90",
+      "pres_margin": "-56.6",
+      "holder_party": "R",
+      "candidate": "Ken Badgett",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "91",
+      "seat_label": "NC House 91",
+      "pres_margin": "-34.4",
+      "holder_party": "R",
+      "candidate": "Lucille Puckett",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "92",
+      "seat_label": "NC House 92",
+      "pres_margin": "+39.1",
+      "holder_party": "D",
+      "candidate": "Terry Brown",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "93",
+      "seat_label": "NC House 93",
+      "pres_margin": "-16.2",
+      "holder_party": "R",
+      "candidate": "Charlie Wallin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "94",
+      "seat_label": "NC House 94",
+      "pres_margin": "-57.8",
+      "holder_party": "R",
+      "candidate": "Andy Warren",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "95",
+      "seat_label": "NC House 95",
+      "pres_margin": "-27.3",
+      "holder_party": "R",
+      "candidate": "Mike Robinson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "96",
+      "seat_label": "NC House 96",
+      "pres_margin": "-26.7",
+      "holder_party": "R",
+      "candidate": "Park Inglefield",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "97",
+      "seat_label": "NC House 97",
+      "pres_margin": "-45.7",
+      "holder_party": "R",
+      "candidate": "Greg McBryde",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "98",
+      "seat_label": "NC House 98",
+      "pres_margin": "+2.7",
+      "holder_party": "D",
+      "candidate": "Beth Gardner Helfrich",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "100",
+      "seat_label": "NC House 100",
+      "pres_margin": "+25.3",
+      "holder_party": "D",
+      "candidate": "Julia Greenfield",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "101",
+      "seat_label": "NC House 101",
+      "pres_margin": "+37.6",
+      "holder_party": "D",
+      "candidate": "Carolyn Logan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "102",
+      "seat_label": "NC House 102",
+      "pres_margin": "+48.7",
+      "holder_party": "D",
+      "candidate": "Becky Carney",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "103",
+      "seat_label": "NC House 103",
+      "pres_margin": "+14.6",
+      "holder_party": "D",
+      "candidate": "Laura Budd",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "104",
+      "seat_label": "NC House 104",
+      "pres_margin": "+19.3",
+      "holder_party": "D",
+      "candidate": "Brandon Lofton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "105",
+      "seat_label": "NC House 105",
+      "pres_margin": "+0.6",
+      "holder_party": "R",
+      "candidate": "Ken McCool",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "107",
+      "seat_label": "NC House 107",
+      "pres_margin": "+59.8",
+      "holder_party": "D",
+      "candidate": "Aisha Dew",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "108",
+      "seat_label": "NC House 108",
+      "pres_margin": "-30.0",
+      "holder_party": "R",
+      "candidate": "Sydnie Hutchinson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "109",
+      "seat_label": "NC House 109",
+      "pres_margin": "-15.0",
+      "holder_party": "R",
+      "candidate": "Mark Carver",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "110",
+      "seat_label": "NC House 110",
+      "pres_margin": "-32.3",
+      "holder_party": "R",
+      "candidate": "Mary Silver",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "111",
+      "seat_label": "NC House 111",
+      "pres_margin": "-47.8",
+      "holder_party": "R",
+      "candidate": "Jerry Blake",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "112",
+      "seat_label": "NC House 112",
+      "pres_margin": "+52.4",
+      "holder_party": "D",
+      "candidate": "Jordan Lopez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "113",
+      "seat_label": "NC House 113",
+      "pres_margin": "-31.5",
+      "holder_party": "R",
+      "candidate": "Mason Rhodes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "114",
+      "seat_label": "NC House 114",
+      "pres_margin": "+17.5",
+      "holder_party": "D",
+      "candidate": "Eric Ager",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "115",
+      "seat_label": "NC House 115",
+      "pres_margin": "-2.9",
+      "holder_party": "D",
+      "candidate": "Lindsey Prather",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "116",
+      "seat_label": "NC House 116",
+      "pres_margin": "+60.9",
+      "holder_party": "D",
+      "candidate": "Brian Turner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "117",
+      "seat_label": "NC House 117",
+      "pres_margin": "-12.3",
+      "holder_party": "R",
+      "candidate": "Lynne Russo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "118",
+      "seat_label": "NC House 118",
+      "pres_margin": "-24.7",
+      "holder_party": "R",
+      "candidate": "Danny Davis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "119",
+      "seat_label": "NC House 119",
+      "pres_margin": "-12.6",
+      "holder_party": "R",
+      "candidate": "Mark R. Burrows",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "120",
+      "seat_label": "NC House 120",
+      "pres_margin": "-48.7",
+      "holder_party": "R",
+      "candidate": "Caleb Brown",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "1",
+      "seat_label": "NC Senate 1",
+      "pres_margin": "-14.8",
+      "holder_party": "R",
+      "candidate": "Melissa Zehner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "2",
+      "seat_label": "NC Senate 2",
+      "pres_margin": "-16.9",
+      "holder_party": "R",
+      "candidate": "Roy Surrett",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "3",
+      "seat_label": "NC Senate 3",
+      "pres_margin": "-19.6",
+      "holder_party": "R",
+      "candidate": "Charles Dudley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "4",
+      "seat_label": "NC Senate 4",
+      "pres_margin": "-10.0",
+      "holder_party": "R",
+      "candidate": "Jess Rivera",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "5",
+      "seat_label": "NC Senate 5",
+      "pres_margin": "+9.6",
+      "holder_party": "D",
+      "candidate": "Kandie Smith",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "6",
+      "seat_label": "NC Senate 6",
+      "pres_margin": "-35.9",
+      "holder_party": "R",
+      "candidate": "Andi Morrow",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "7",
+      "seat_label": "NC Senate 7",
+      "pres_margin": "-5.6",
+      "holder_party": "R",
+      "candidate": "Jessica Bichler",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "8",
+      "seat_label": "NC Senate 8",
+      "pres_margin": "-18.9",
+      "holder_party": "R",
+      "candidate": "Richard Combes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "9",
+      "seat_label": "NC Senate 9",
+      "pres_margin": "-29.3",
+      "holder_party": "R",
+      "candidate": "Helen Bronson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "10",
+      "seat_label": "NC Senate 10",
+      "pres_margin": "-21.5",
+      "holder_party": "R",
+      "candidate": "Pat LeGrand",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "11",
+      "seat_label": "NC Senate 11",
+      "pres_margin": "-3.5",
+      "holder_party": "R",
+      "candidate": "James Gailliard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "13",
+      "seat_label": "NC Senate 13",
+      "pres_margin": "+4.6",
+      "holder_party": "D",
+      "candidate": "Lisa Grafstein",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "14",
+      "seat_label": "NC Senate 14",
+      "pres_margin": "+46.9",
+      "holder_party": "D",
+      "candidate": "Dan Blue",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "15",
+      "seat_label": "NC Senate 15",
+      "pres_margin": "+37.1",
+      "holder_party": "D",
+      "candidate": "Jay Chaudhuri",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "16",
+      "seat_label": "NC Senate 16",
+      "pres_margin": "+34.8",
+      "holder_party": "D",
+      "candidate": "Gale Adcock",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "17",
+      "seat_label": "NC Senate 17",
+      "pres_margin": "+29.3",
+      "holder_party": "D",
+      "candidate": "Sydney Batch",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "18",
+      "seat_label": "NC Senate 18",
+      "pres_margin": "-0.5",
+      "holder_party": "D",
+      "candidate": "Terence Everitt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "19",
+      "seat_label": "NC Senate 19",
+      "pres_margin": "+28.4",
+      "holder_party": "D",
+      "candidate": "Val Applewhite",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "20",
+      "seat_label": "NC Senate 20",
+      "pres_margin": "+44.1",
+      "holder_party": "D",
+      "candidate": "Natalie Murdock",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "21",
+      "seat_label": "NC Senate 21",
+      "pres_margin": "-22.7",
+      "holder_party": "R",
+      "candidate": "Paul Taylor",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "23",
+      "seat_label": "NC Senate 23",
+      "pres_margin": "+30.0",
+      "holder_party": "D",
+      "candidate": "Graig Meyer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "24",
+      "seat_label": "NC Senate 24",
+      "pres_margin": "-15.0",
+      "holder_party": "R",
+      "candidate": "Catina Hamm",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "25",
+      "seat_label": "NC Senate 25",
+      "pres_margin": "-19.5",
+      "holder_party": "R",
+      "candidate": "Southey Blanton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "26",
+      "seat_label": "NC Senate 26",
+      "pres_margin": "-21.9",
+      "holder_party": "R",
+      "candidate": "Steve Luking",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "27",
+      "seat_label": "NC Senate 27",
+      "pres_margin": "+20.0",
+      "holder_party": "D",
+      "candidate": "Michael Garrett",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "28",
+      "seat_label": "NC Senate 28",
+      "pres_margin": "+52.1",
+      "holder_party": "D",
+      "candidate": "Gladys Robinson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "29",
+      "seat_label": "NC Senate 29",
+      "pres_margin": "-37.9",
+      "holder_party": "R",
+      "candidate": "Bob Morrison",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "30",
+      "seat_label": "NC Senate 30",
+      "pres_margin": "-46.9",
+      "holder_party": "R",
+      "candidate": "Pamela D. McAfee",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "31",
+      "seat_label": "NC Senate 31",
+      "pres_margin": "-23.0",
+      "holder_party": "R",
+      "candidate": "Andy Bowline",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "33",
+      "seat_label": "NC Senate 33",
+      "pres_margin": "-40.8",
+      "holder_party": "R",
+      "candidate": "Gary Weart",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "34",
+      "seat_label": "NC Senate 34",
+      "pres_margin": "-8.2",
+      "holder_party": "R",
+      "candidate": "April Cook",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "35",
+      "seat_label": "NC Senate 35",
+      "pres_margin": "-24.3",
+      "holder_party": "R",
+      "candidate": "Christine Winward",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "36",
+      "seat_label": "NC Senate 36",
+      "pres_margin": "-58.1",
+      "holder_party": "R",
+      "candidate": "Trevor Hardwick",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "38",
+      "seat_label": "NC Senate 38",
+      "pres_margin": "+36.5",
+      "holder_party": "D",
+      "candidate": "Mujtaba Mohammed",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "39",
+      "seat_label": "NC Senate 39",
+      "pres_margin": "+33.4",
+      "holder_party": "D",
+      "candidate": "DeAndrea Salvador",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "40",
+      "seat_label": "NC Senate 40",
+      "pres_margin": "+49.1",
+      "holder_party": "D",
+      "candidate": "Joyce Waddell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "41",
+      "seat_label": "NC Senate 41",
+      "pres_margin": "+51.6",
+      "holder_party": "D",
+      "candidate": "Caleb Theodros",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "42",
+      "seat_label": "NC Senate 42",
+      "pres_margin": "+6.6",
+      "holder_party": "D",
+      "candidate": "Woodson Bradley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "43",
+      "seat_label": "NC Senate 43",
+      "pres_margin": "-22.1",
+      "holder_party": "R",
+      "candidate": "Steve Rutherford",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "44",
+      "seat_label": "NC Senate 44",
+      "pres_margin": "-42.1",
+      "holder_party": "R",
+      "candidate": "Rod Powell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "45",
+      "seat_label": "NC Senate 45",
+      "pres_margin": "-42.2",
+      "holder_party": "R",
+      "candidate": "Greg Cranford",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "46",
+      "seat_label": "NC Senate 46",
+      "pres_margin": "-31.9",
+      "holder_party": "R",
+      "candidate": "Kyle Whisnant",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "47",
+      "seat_label": "NC Senate 47",
+      "pres_margin": "-28.7",
+      "holder_party": "R",
+      "candidate": "Frank Patton Hughes III",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "48",
+      "seat_label": "NC Senate 48",
+      "pres_margin": "-25.7",
+      "holder_party": "R",
+      "candidate": "Doyle Brown Jr.",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "49",
+      "seat_label": "NC Senate 49",
+      "pres_margin": "+36.2",
+      "holder_party": "D",
+      "candidate": "Julie Mayfield",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "50",
+      "seat_label": "NC Senate 50",
+      "pres_margin": "-29.3",
+      "holder_party": "R",
+      "candidate": "Tom Downing",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "3",
+      "seat_label": "NC House 3",
+      "pres_margin": "-20.1",
+      "holder_party": "R",
+      "candidate": "Steve Tyson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "5",
+      "seat_label": "NC House 5",
+      "pres_margin": "-6.7",
+      "holder_party": "R",
+      "candidate": "Bill Ward",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "7",
+      "seat_label": "NC House 7",
+      "pres_margin": "-12.5",
+      "holder_party": "R",
+      "candidate": "Cory Thornton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "8",
+      "seat_label": "NC House 8",
+      "pres_margin": "+26.9",
+      "holder_party": "D",
+      "candidate": "Cathy Bynum",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "9",
+      "seat_label": "NC House 9",
+      "pres_margin": "-9.8",
+      "holder_party": "R",
+      "candidate": "Tim Reeder",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "10",
+      "seat_label": "NC House 10",
+      "pres_margin": "-16.3",
+      "holder_party": "R",
+      "candidate": "John Bell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "12",
+      "seat_label": "NC House 12",
+      "pres_margin": "-11.6",
+      "holder_party": "R",
+      "candidate": "Chris Humphrey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "13",
+      "seat_label": "NC House 13",
+      "pres_margin": "-40.5",
+      "holder_party": "R",
+      "candidate": "Celeste Cairns",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "14",
+      "seat_label": "NC House 14",
+      "pres_margin": "-31.5",
+      "holder_party": "R",
+      "candidate": "Wyatt Gable",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "15",
+      "seat_label": "NC House 15",
+      "pres_margin": "-33.5",
+      "holder_party": "R",
+      "candidate": "Phil Shepard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "18",
+      "seat_label": "NC House 18",
+      "pres_margin": "+21.3",
+      "holder_party": "D",
+      "candidate": "Latisha Grady",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "19",
+      "seat_label": "NC House 19",
+      "pres_margin": "-21.0",
+      "holder_party": "R",
+      "candidate": "Charlie Miller",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "20",
+      "seat_label": "NC House 20",
+      "pres_margin": "-10.3",
+      "holder_party": "R",
+      "candidate": "Dane Scalise",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "21",
+      "seat_label": "NC House 21",
+      "pres_margin": "+26.4",
+      "holder_party": "D",
+      "candidate": "Bryson Johnson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "23",
+      "seat_label": "NC House 23",
+      "pres_margin": "+12.6",
+      "holder_party": "D",
+      "candidate": "Brent Roberson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "24",
+      "seat_label": "NC House 24",
+      "pres_margin": "-1.7",
+      "holder_party": "D",
+      "candidate": "Blake Boykin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "25",
+      "seat_label": "NC House 25",
+      "pres_margin": "-0.1",
+      "holder_party": "R",
+      "candidate": "Allen Chesser",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "27",
+      "seat_label": "NC House 27",
+      "pres_margin": "+17.0",
+      "holder_party": "D",
+      "candidate": "Kenneth Bentley Jr.",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "33",
+      "seat_label": "NC House 33",
+      "pres_margin": "+41.3",
+      "holder_party": "D",
+      "candidate": "Matthew Orr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "36",
+      "seat_label": "NC House 36",
+      "pres_margin": "+11.7",
+      "holder_party": "D",
+      "candidate": "Mary Insprucker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "37",
+      "seat_label": "NC House 37",
+      "pres_margin": "-2.9",
+      "holder_party": "R",
+      "candidate": "Erin Par\u00e9",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "39",
+      "seat_label": "NC House 39",
+      "pres_margin": "+25.2",
+      "holder_party": "D",
+      "candidate": "Jorge Cordova",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "41",
+      "seat_label": "NC House 41",
+      "pres_margin": "+34.2",
+      "holder_party": "D",
+      "candidate": "Bruce Forster",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "44",
+      "seat_label": "NC House 44",
+      "pres_margin": "+20.5",
+      "holder_party": "D",
+      "candidate": "Jackie Weyhenmeyer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "46",
+      "seat_label": "NC House 46",
+      "pres_margin": "-34.8",
+      "holder_party": "R",
+      "candidate": "Brenden Jones",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "47",
+      "seat_label": "NC House 47",
+      "pres_margin": "-24.0",
+      "holder_party": "R",
+      "candidate": "John Lowery",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "49",
+      "seat_label": "NC House 49",
+      "pres_margin": "+40.3",
+      "holder_party": "D",
+      "candidate": "Daran Thomas",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "52",
+      "seat_label": "NC House 52",
+      "pres_margin": "-18.9",
+      "holder_party": "R",
+      "candidate": "Ben Moss",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "53",
+      "seat_label": "NC House 53",
+      "pres_margin": "-25.7",
+      "holder_party": "R",
+      "candidate": "Howard Penny",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "59",
+      "seat_label": "NC House 59",
+      "pres_margin": "-9.9",
+      "holder_party": "R",
+      "candidate": "Alan Branson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "60",
+      "seat_label": "NC House 60",
+      "pres_margin": "+24.4",
+      "holder_party": "D",
+      "candidate": "Joseph Perrotta",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "62",
+      "seat_label": "NC House 62",
+      "pres_margin": "-6.0",
+      "holder_party": "R",
+      "candidate": "John Blust",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "63",
+      "seat_label": "NC House 63",
+      "pres_margin": "-7.7",
+      "holder_party": "R",
+      "candidate": "Ryan Moffitt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "64",
+      "seat_label": "NC House 64",
+      "pres_margin": "-8.6",
+      "holder_party": "R",
+      "candidate": "Dennis Riddell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "67",
+      "seat_label": "NC House 67",
+      "pres_margin": "-47.5",
+      "holder_party": "R",
+      "candidate": "Cody Huneycutt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "68",
+      "seat_label": "NC House 68",
+      "pres_margin": "-20.0",
+      "holder_party": "R",
+      "candidate": "David Willis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "69",
+      "seat_label": "NC House 69",
+      "pres_margin": "-25.0",
+      "holder_party": "R",
+      "candidate": "Dean Arp",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "70",
+      "seat_label": "NC House 70",
+      "pres_margin": "-53.0",
+      "holder_party": "R",
+      "candidate": "Brian Biggs",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "73",
+      "seat_label": "NC House 73",
+      "pres_margin": "-6.4",
+      "holder_party": "R",
+      "candidate": "Jonathan Almond",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "74",
+      "seat_label": "NC House 74",
+      "pres_margin": "-7.5",
+      "holder_party": "R",
+      "candidate": "Jeff Zenger",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "75",
+      "seat_label": "NC House 75",
+      "pres_margin": "-11.9",
+      "holder_party": "R",
+      "candidate": "Donny Lambeth",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "76",
+      "seat_label": "NC House 76",
+      "pres_margin": "-24.1",
+      "holder_party": "R",
+      "candidate": "Greg Edds",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "77",
+      "seat_label": "NC House 77",
+      "pres_margin": "-53.4",
+      "holder_party": "R",
+      "candidate": "Julia Howard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "82",
+      "seat_label": "NC House 82",
+      "pres_margin": "-8.5",
+      "holder_party": "R",
+      "candidate": "Brian Echevarria",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "83",
+      "seat_label": "NC House 83",
+      "pres_margin": "-31.3",
+      "holder_party": "R",
+      "candidate": "Grant Campbell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "84",
+      "seat_label": "NC House 84",
+      "pres_margin": "-35.8",
+      "holder_party": "R",
+      "candidate": "Jeff McNeely",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "85",
+      "seat_label": "NC House 85",
+      "pres_margin": "-47.0",
+      "holder_party": "R",
+      "candidate": "Dudley Greene",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "86",
+      "seat_label": "NC House 86",
+      "pres_margin": "-41.2",
+      "holder_party": "R",
+      "candidate": "Hugh Blackwell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "87",
+      "seat_label": "NC House 87",
+      "pres_margin": "-49.3",
+      "holder_party": "R",
+      "candidate": "Destin Hall",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "88",
+      "seat_label": "NC House 88",
+      "pres_margin": "+38.1",
+      "holder_party": "D",
+      "candidate": "Ray Craig",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "91",
+      "seat_label": "NC House 91",
+      "pres_margin": "-34.4",
+      "holder_party": "R",
+      "candidate": "Kyle Hall",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "93",
+      "seat_label": "NC House 93",
+      "pres_margin": "-16.2",
+      "holder_party": "R",
+      "candidate": "Ray Pickett",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "94",
+      "seat_label": "NC House 94",
+      "pres_margin": "-57.8",
+      "holder_party": "R",
+      "candidate": "Blair Eddins",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "96",
+      "seat_label": "NC House 96",
+      "pres_margin": "-26.7",
+      "holder_party": "R",
+      "candidate": "Jay Adams",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "97",
+      "seat_label": "NC House 97",
+      "pres_margin": "-45.7",
+      "holder_party": "R",
+      "candidate": "Heather Rhyne",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "98",
+      "seat_label": "NC House 98",
+      "pres_margin": "+2.7",
+      "holder_party": "D",
+      "candidate": "John Rhodes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "102",
+      "seat_label": "NC House 102",
+      "pres_margin": "+48.7",
+      "holder_party": "D",
+      "candidate": "Daniel Schmidt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "104",
+      "seat_label": "NC House 104",
+      "pres_margin": "+19.3",
+      "holder_party": "D",
+      "candidate": "Trina V. Boyd",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "108",
+      "seat_label": "NC House 108",
+      "pres_margin": "-30.0",
+      "holder_party": "R",
+      "candidate": "John Torbett",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "109",
+      "seat_label": "NC House 109",
+      "pres_margin": "-15.0",
+      "holder_party": "R",
+      "candidate": "Donnie Loftis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "111",
+      "seat_label": "NC House 111",
+      "pres_margin": "-47.8",
+      "holder_party": "R",
+      "candidate": "Paul Scott",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "115",
+      "seat_label": "NC House 115",
+      "pres_margin": "-2.9",
+      "holder_party": "D",
+      "candidate": "Anthony Penland",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "120",
+      "seat_label": "NC House 120",
+      "pres_margin": "-48.7",
+      "holder_party": "R",
+      "candidate": "Karl Gillespie",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "2",
+      "seat_label": "NC Senate 2",
+      "pres_margin": "-16.9",
+      "holder_party": "R",
+      "candidate": "Norman Sanderson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "3",
+      "seat_label": "NC Senate 3",
+      "pres_margin": "-19.6",
+      "holder_party": "R",
+      "candidate": "Bob Brinson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "4",
+      "seat_label": "NC Senate 4",
+      "pres_margin": "-10.0",
+      "holder_party": "R",
+      "candidate": "Eldon Sharpe Newton III",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "6",
+      "seat_label": "NC Senate 6",
+      "pres_margin": "-35.9",
+      "holder_party": "R",
+      "candidate": "Michael Lazzara",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "7",
+      "seat_label": "NC Senate 7",
+      "pres_margin": "-5.6",
+      "holder_party": "R",
+      "candidate": "Michael Lee",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "8",
+      "seat_label": "NC Senate 8",
+      "pres_margin": "-18.9",
+      "holder_party": "R",
+      "candidate": "Bill Rabon",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "11",
+      "seat_label": "NC Senate 11",
+      "pres_margin": "-3.5",
+      "holder_party": "R",
+      "candidate": "Lisa Barnes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "13",
+      "seat_label": "NC Senate 13",
+      "pres_margin": "+4.6",
+      "holder_party": "D",
+      "candidate": "Robert van Brederode",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "14",
+      "seat_label": "NC Senate 14",
+      "pres_margin": "+46.9",
+      "holder_party": "D",
+      "candidate": "Angela McCarty",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "15",
+      "seat_label": "NC Senate 15",
+      "pres_margin": "+37.1",
+      "holder_party": "D",
+      "candidate": "David Bankert",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "16",
+      "seat_label": "NC Senate 16",
+      "pres_margin": "+34.8",
+      "holder_party": "D",
+      "candidate": "Philip Hensley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "19",
+      "seat_label": "NC Senate 19",
+      "pres_margin": "+28.4",
+      "holder_party": "D",
+      "candidate": "Venus de la Cruz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "22",
+      "seat_label": "NC Senate 22",
+      "pres_margin": "+59.0",
+      "holder_party": "D",
+      "candidate": "Lakeshia Alston",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "23",
+      "seat_label": "NC Senate 23",
+      "pres_margin": "+30.0",
+      "holder_party": "D",
+      "candidate": "Laura Pichardo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "24",
+      "seat_label": "NC Senate 24",
+      "pres_margin": "-15.0",
+      "holder_party": "R",
+      "candidate": "Danny Britt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "25",
+      "seat_label": "NC Senate 25",
+      "pres_margin": "-19.5",
+      "holder_party": "R",
+      "candidate": "Amy Galey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "29",
+      "seat_label": "NC Senate 29",
+      "pres_margin": "-37.9",
+      "holder_party": "R",
+      "candidate": "Dave Craven",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "31",
+      "seat_label": "NC Senate 31",
+      "pres_margin": "-23.0",
+      "holder_party": "R",
+      "candidate": "Dana Jones",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "32",
+      "seat_label": "NC Senate 32",
+      "pres_margin": "+40.0",
+      "holder_party": "D",
+      "candidate": "Peter Antinozzi",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "33",
+      "seat_label": "NC Senate 33",
+      "pres_margin": "-40.8",
+      "holder_party": "R",
+      "candidate": "Carl Ford",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "35",
+      "seat_label": "NC Senate 35",
+      "pres_margin": "-24.3",
+      "holder_party": "R",
+      "candidate": "Todd Johnson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "36",
+      "seat_label": "NC Senate 36",
+      "pres_margin": "-58.1",
+      "holder_party": "R",
+      "candidate": "Eddie Settle",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "37",
+      "seat_label": "NC Senate 37",
+      "pres_margin": "-26.7",
+      "holder_party": "R",
+      "candidate": "Vickie Sawyer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "40",
+      "seat_label": "NC Senate 40",
+      "pres_margin": "+49.1",
+      "holder_party": "D",
+      "candidate": "Bobbie Shields",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "41",
+      "seat_label": "NC Senate 41",
+      "pres_margin": "+51.6",
+      "holder_party": "D",
+      "candidate": "Kevin Gray",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "42",
+      "seat_label": "NC Senate 42",
+      "pres_margin": "+6.6",
+      "holder_party": "D",
+      "candidate": "Stacie McGinn",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "43",
+      "seat_label": "NC Senate 43",
+      "pres_margin": "-22.1",
+      "holder_party": "R",
+      "candidate": "Brad Overcash",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "44",
+      "seat_label": "NC Senate 44",
+      "pres_margin": "-42.1",
+      "holder_party": "R",
+      "candidate": "Ted Alexander",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "45",
+      "seat_label": "NC Senate 45",
+      "pres_margin": "-42.2",
+      "holder_party": "R",
+      "candidate": "Mark Hollo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "46",
+      "seat_label": "NC Senate 46",
+      "pres_margin": "-31.9",
+      "holder_party": "R",
+      "candidate": "Warren Daniel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "47",
+      "seat_label": "NC Senate 47",
+      "pres_margin": "-28.7",
+      "holder_party": "R",
+      "candidate": "Ralph Hise",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "48",
+      "seat_label": "NC Senate 48",
+      "pres_margin": "-25.7",
+      "holder_party": "R",
+      "candidate": "Tim Moffitt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "49",
+      "seat_label": "NC Senate 49",
+      "pres_margin": "+36.2",
+      "holder_party": "D",
+      "candidate": "C.J. Domingo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "50",
+      "seat_label": "NC Senate 50",
+      "pres_margin": "-29.3",
+      "holder_party": "R",
+      "candidate": "Kevin Corbin",
+      "is_open_seat": null
+    }
+  ],
   "ballot_measures": [
     {
       "number": "Require Voter Identification Amendment",

@@ -294,59 +294,59 @@ def download_bp_page(state_name, chamber_type):
 # STEP 2: Parse HTML → Extract Candidates
 # ══════════════════════════════════════════════════════════════════════
 
-def parse_primary_candidates(html_text):
+def _find_table_by_type(html_text, target_type):
     """
-    Parse Ballotpedia primary election table and extract candidates.
+    Find a candidateListTablePartisan table by its h4 title keyword.
 
-    Returns list of (district_number: int, candidate_name: str, party: str, is_incumbent: bool)
+    Args:
+        html_text: Full page HTML
+        target_type: 'primary' or 'general'
+
+    Returns: HTML string of just that table section, or None if not found.
     """
-    # Find all candidateListTablePartisan tables
     table_starts = list(re.finditer(
         r'<table class="wikitable sortable collapsible candidateListTablePartisan">',
         html_text
     ))
-
     if not table_starts:
-        return []
+        return None
 
-    # The first table is the primary table. Extract HTML between first and second table.
-    primary_start = table_starts[0].start()
-    if len(table_starts) > 1:
-        primary_end = table_starts[1].start()
-    else:
-        primary_end = len(html_text)
-    primary_html = html_text[primary_start:primary_end]
+    for i, t in enumerate(table_starts):
+        # Extract this table's HTML (up to next table or end)
+        start = t.start()
+        end = table_starts[i + 1].start() if i + 1 < len(table_starts) else len(html_text)
+        table_html = html_text[start:end]
 
-    # Verify it's actually a primary table
-    title_match = re.search(r'<h4>([^<]+)</h4>', primary_html)
-    if title_match:
-        title = title_match.group(1).lower()
-        if 'primary' not in title:
-            print(f'    WARNING: First table is not primary: "{title_match.group(1)}"')
+        title_match = re.search(r'<h4>([^<]+)</h4>', table_html)
+        if title_match:
+            title = title_match.group(1).lower()
+            if target_type in title:
+                return table_html
 
-    # Parse district rows.
-    # Pattern: <tr> <td><a href="...District_N">District N</a></td> <td>Dem</td> <td>Rep</td> <td>Other</td> </tr>
-    # Also handles ID-style "District 1A" — captures optional seat letter suffix
+    return None
+
+
+def _parse_candidate_table(table_html):
+    """
+    Parse candidates from a candidateListTablePartisan table HTML block.
+
+    Returns list of (district_number: int, candidate_name: str, party: str,
+                     is_incumbent: bool, seat_suffix: str or None)
+    """
     row_pattern = re.compile(
         r'<tr>\s*<td>\s*<a\s+href="[^"]*?District[_\s]+(\d+)[A-Z]?\s*"[^>]*>'
         r'District\s+\d+([A-Z])?\s*</a>[^<]*</td>'
         r'(.*?)</tr>',
         re.DOTALL
     )
-
-    # Candidate span pattern
     cand_pattern = re.compile(
         r'<span\s+class="candidate">\s*<a\s+href="[^"]*">([^<]+)</a>\s*(.*?)</span>',
         re.DOTALL
     )
-
-    # Split row content into <td> columns
     td_pattern = re.compile(r'<td[^>]*>(.*?)</td>', re.DOTALL)
 
     candidates = []
-    rows = row_pattern.findall(primary_html)
-
-    for dist_str, seat_suffix, rest in rows:
+    for dist_str, seat_suffix, rest in row_pattern.findall(table_html):
         dist_num = int(dist_str)
         tds = td_pattern.findall(rest)
 
@@ -358,13 +358,43 @@ def parse_primary_candidates(html_text):
             else:
                 party = 'Other'
 
-            cands = cand_pattern.findall(td_content)
-            for name_raw, suffix in cands:
+            for name_raw, suffix in cand_pattern.findall(td_content):
                 name = htmlmod.unescape(name_raw.strip())
                 is_incumbent = '(i)' in suffix
                 candidates.append((dist_num, name, party, is_incumbent, seat_suffix or None))
 
     return candidates
+
+
+def parse_primary_candidates(html_text):
+    """
+    Parse Ballotpedia primary election table and extract candidates.
+
+    Finds the table whose h4 contains "primary" (handles pages where
+    table order varies, e.g. AR House has general before primary).
+
+    Returns list of (district_number, candidate_name, party, is_incumbent, seat_suffix)
+    """
+    table_html = _find_table_by_type(html_text, 'primary')
+    if not table_html:
+        return []
+    return _parse_candidate_table(table_html)
+
+
+def parse_general_election_candidates(html_text):
+    """
+    Parse Ballotpedia general election table and extract candidates.
+
+    Finds the table whose h4 contains "general" — works regardless of
+    table order or extra tables (e.g. TX has a conventions table).
+
+    Returns list of (district_number, candidate_name, party, is_incumbent, seat_suffix)
+    """
+    table_html = _find_table_by_type(html_text, 'general')
+    if not table_html:
+        return []
+    return _parse_candidate_table(table_html)
+
 
 # ══════════════════════════════════════════════════════════════════════
 # STEP 2b: Parse Statewide Votebox HTML → Extract Candidates
@@ -1022,45 +1052,200 @@ def process_state(state_abbrev, dry_run=False, force=False):
         with open(fname, 'w', encoding='utf-8') as f:
             f.write(html_text)
 
-        # Parse
-        print(f"  Parsing candidates...")
+        # Parse primary candidates
+        print(f"  Parsing primary candidates...")
         parsed = parse_primary_candidates(html_text)
-        if not parsed:
+
+        # Parse general election candidates (second table)
+        general_parsed = parse_general_election_candidates(html_text)
+
+        # Merge uncontested candidates from general table into primary list.
+        # Candidates in the general table who are NOT already in the primary list
+        # are uncontested primary winners (BP only shows contested primaries).
+        if general_parsed:
+            primary_keys = set((c[0], c[1].lower().strip(), c[2]) for c in parsed)  # (dist, name, party)
+            added_from_general = 0
+            for entry in general_parsed:
+                dist_num, name, party, is_incumbent, seat_suffix = entry
+                if party == 'Other':
+                    continue  # Third-party candidates skip primaries
+                key = (dist_num, name.lower().strip(), party)
+                if key not in primary_keys:
+                    parsed.append(entry)
+                    primary_keys.add(key)
+                    added_from_general += 1
+            if added_from_general:
+                print(f"  Added {added_from_general} uncontested primary candidates from general table")
+
+        if not parsed and not general_parsed:
             print(f"  WARNING: No candidates parsed from {chamber_label}")
             continue
 
-        party_counts = Counter(c[2] for c in parsed)
-        inc_count = sum(1 for c in parsed if c[3])
-        districts = len(set(c[0] for c in parsed))
-        print(f"  Parsed: {len(parsed)} candidates in {districts} districts")
-        print(f"    D: {party_counts.get('D', 0)}, R: {party_counts.get('R', 0)}, "
-              f"Other: {party_counts.get('Other', 0)}")
-        print(f"    Incumbents (BP): {inc_count}")
+        if parsed:
+            party_counts = Counter(c[2] for c in parsed)
+            inc_count = sum(1 for c in parsed if c[3])
+            districts = len(set(c[0] for c in parsed))
+            print(f"  Primary candidates: {len(parsed)} in {districts} districts")
+            print(f"    D: {party_counts.get('D', 0)}, R: {party_counts.get('R', 0)}, "
+                  f"Other: {party_counts.get('Other', 0)}")
+            print(f"    Incumbents (BP): {inc_count}")
 
-        # Match
-        print(f"  Matching to DB elections...")
-        matched, unmatched = match_candidates(
-            parsed, office_type, seat_map, multi_seat_map, election_map, incumbent_map
-        )
-        print(f"  Matched: {len(matched)}, Unmatched: {len(unmatched)}")
+            # Match primary candidates to primary elections
+            print(f"  Matching primary candidates to DB elections...")
+            matched, unmatched = match_candidates(
+                parsed, office_type, seat_map, multi_seat_map, election_map, incumbent_map
+            )
+            print(f"  Primary matched: {len(matched)}, Unmatched: {len(unmatched)}")
 
-        if unmatched:
-            reasons = Counter(u[3] for u in unmatched)
-            for reason, count in reasons.most_common():
-                print(f"    Unmatched ({reason}): {count}")
-            # Show first few unmatched
-            for dist, name, party, reason in unmatched[:5]:
-                print(f"      District {dist}: {name} ({party}) — {reason}")
+            if unmatched:
+                reasons = Counter(u[3] for u in unmatched)
+                for reason, count in reasons.most_common():
+                    print(f"    Unmatched ({reason}): {count}")
+                for dist, name, party, reason in unmatched[:5]:
+                    print(f"      District {dist}: {name} ({party}) — {reason}")
 
-        state_total_matched += len(matched)
-        state_total_unmatched += len(unmatched)
+            state_total_matched += len(matched)
+            state_total_unmatched += len(unmatched)
 
-        # Insert
-        if matched:
-            print(f"  Inserting candidacies...")
-            new_cands, cand_count = insert_candidacies(matched, dry_run=dry_run, force=force)
-            state_new_candidates += new_cands
-            state_candidacies += cand_count
+            # Insert primary candidacies
+            if matched:
+                print(f"  Inserting primary candidacies...")
+                new_cands, cand_count = insert_candidacies(matched, dry_run=dry_run, force=force)
+                state_new_candidates += new_cands
+                state_candidacies += cand_count
+
+        # Now populate General election candidacies from the general table
+        if general_parsed:
+            gen_party_counts = Counter(c[2] for c in general_parsed)
+            gen_districts = len(set(c[0] for c in general_parsed))
+            print(f"\n  General election candidates: {len(general_parsed)} in {gen_districts} districts")
+            print(f"    D: {gen_party_counts.get('D', 0)}, R: {gen_party_counts.get('R', 0)}, "
+                  f"Other: {gen_party_counts.get('Other', 0)}")
+
+            # Match general candidates to General elections
+            gen_matched = []
+            gen_unmatched = []
+
+            by_district = defaultdict(list)
+            for entry in general_parsed:
+                dist_num, name, party, is_incumbent, seat_suffix = entry
+                by_district[dist_num].append((name, party, is_incumbent, seat_suffix))
+
+            for dist_num in sorted(by_district.keys()):
+                dist_str = str(dist_num)
+                key = (office_type, dist_str)
+                candidates_in_district = by_district[dist_num]
+
+                if key in seat_map:
+                    seat_id = seat_map[key]
+                    elections = election_map.get(seat_id, {})
+                    general_election_id = elections.get('General')
+                    if not general_election_id:
+                        for name, party, bp_inc, _ss in candidates_in_district:
+                            gen_unmatched.append((dist_num, name, party, 'no_General_election'))
+                        continue
+
+                    incumbent_info = incumbent_map.get(seat_id)
+                    for name, party, bp_incumbent, _ss in candidates_in_district:
+                        candidate_id = None
+                        is_inc = False
+                        if bp_incumbent and incumbent_info:
+                            sim = name_similarity(name, incumbent_info[1])
+                            if sim >= 0.3:
+                                candidate_id = incumbent_info[0]
+                                is_inc = True
+                        elif not bp_incumbent and incumbent_info:
+                            sim = name_similarity(name, incumbent_info[1])
+                            if sim >= 0.7:
+                                candidate_id = incumbent_info[0]
+                                is_inc = True
+
+                        gen_matched.append({
+                            'election_id': general_election_id,
+                            'candidate_id': candidate_id,
+                            'candidate_name': name,
+                            'party': party,
+                            'is_incumbent': is_inc,
+                            'seat_id': seat_id,
+                        })
+
+                elif key in multi_seat_map:
+                    seat_ids = multi_seat_map[key]
+                    desig_to_sid = {}
+                    for idx, sid in enumerate(seat_ids):
+                        desig_to_sid[chr(ord('A') + idx)] = sid
+
+                    has_seat_suffixes = any(ss for _, _, _, ss in candidates_in_district)
+
+                    for name, party, bp_incumbent, seat_suffix in candidates_in_district:
+                        assigned = False
+                        if has_seat_suffixes and seat_suffix:
+                            sid = desig_to_sid.get(seat_suffix)
+                            if sid:
+                                gen_eid = election_map.get(sid, {}).get('General')
+                                if gen_eid:
+                                    inc_info = incumbent_map.get(sid)
+                                    cand_id = None
+                                    is_inc = False
+                                    if bp_incumbent and inc_info and name_similarity(name, inc_info[1]) >= 0.3:
+                                        cand_id = inc_info[0]
+                                        is_inc = True
+                                    elif inc_info and name_similarity(name, inc_info[1]) >= 0.7:
+                                        cand_id = inc_info[0]
+                                        is_inc = True
+                                    gen_matched.append({
+                                        'election_id': gen_eid,
+                                        'candidate_id': cand_id,
+                                        'candidate_name': name,
+                                        'party': party,
+                                        'is_incumbent': is_inc,
+                                        'seat_id': sid,
+                                    })
+                                    assigned = True
+                        if not assigned:
+                            # Try first seat with a General election
+                            for sid in seat_ids:
+                                gen_eid = election_map.get(sid, {}).get('General')
+                                if gen_eid:
+                                    inc_info = incumbent_map.get(sid)
+                                    cand_id = None
+                                    is_inc = False
+                                    if bp_incumbent and inc_info and name_similarity(name, inc_info[1]) >= 0.3:
+                                        cand_id = inc_info[0]
+                                        is_inc = True
+                                    elif inc_info and name_similarity(name, inc_info[1]) >= 0.7:
+                                        cand_id = inc_info[0]
+                                        is_inc = True
+                                    gen_matched.append({
+                                        'election_id': gen_eid,
+                                        'candidate_id': cand_id,
+                                        'candidate_name': name,
+                                        'party': party,
+                                        'is_incumbent': is_inc,
+                                        'seat_id': sid,
+                                    })
+                                    assigned = True
+                                    break
+                        if not assigned:
+                            gen_unmatched.append((dist_num, name, party, 'no_General_election'))
+                else:
+                    for name, party, bp_inc, _ss in candidates_in_district:
+                        gen_unmatched.append((dist_num, name, party, 'no_seat_in_db'))
+
+            print(f"  General matched: {len(gen_matched)}, Unmatched: {len(gen_unmatched)}")
+            if gen_unmatched:
+                reasons = Counter(u[3] for u in gen_unmatched)
+                for reason, count in reasons.most_common():
+                    print(f"    Unmatched ({reason}): {count}")
+
+            state_total_matched += len(gen_matched)
+            state_total_unmatched += len(gen_unmatched)
+
+            if gen_matched:
+                print(f"  Inserting general election candidacies...")
+                new_cands, cand_count = insert_candidacies(gen_matched, dry_run=dry_run, force=force)
+                state_new_candidates += new_cands
+                state_candidacies += cand_count
 
     # Summary
     print(f"\n  {'=' * 40}")
