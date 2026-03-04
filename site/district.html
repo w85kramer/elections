@@ -697,10 +697,21 @@
       const hasAfter = elecYears.some(y => y >= ry);
       if (hasBefore && hasAfter) {
         const marginStr = district.pres_2024_margin ? marginLabel(district.pres_2024_margin) : null;
+        // Place between last special (old lines) and first regular (new lines) in redistricting year
+        let redistrictDate = `${ry}-01-01`;
+        const ryElecs = elections.filter(e => e.year === ry && e.date);
+        const specialDates = ryElecs.filter(e => e.type.includes('Special')).map(e => e.date).sort();
+        const regularDates = ryElecs.filter(e => !e.type.includes('Special')).map(e => e.date).sort();
+        if (specialDates.length > 0) {
+          // Place the day after the last special election in the redistricting year
+          const d = new Date(specialDates[specialDates.length - 1] + 'T00:00:00');
+          d.setDate(d.getDate() + 1);
+          redistrictDate = d.toISOString().split('T')[0];
+        }
         events.push({
           type: 'redistricting',
           year: ry,
-          date: `${ry}-01-01`,
+          date: redistrictDate,
           data: { year: ry, newMargin: marginStr }
         });
       }
