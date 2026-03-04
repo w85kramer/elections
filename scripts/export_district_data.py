@@ -68,6 +68,7 @@ def export_all_districts(dry_run=False, single_state=None):
             d.num_seats,
             d.pres_2024_margin,
             d.pres_2024_winner,
+            d.redistricting_cycle,
             d.is_floterial,
             s.id as seat_id,
             s.seat_label,
@@ -289,6 +290,10 @@ def export_all_districts(dry_run=False, single_state=None):
         if state not in districts_by_state:
             districts_by_state[state] = {}
         if did not in districts_by_state[state]:
+            # Compute redistricting_year from redistricting_cycle
+            rc = r.get('redistricting_cycle')
+            redistricting_year = int(rc) if rc and rc != 'permanent' else None
+
             districts_by_state[state][did] = {
                 'district_number': r['district_number'],
                 'district_name': r['district_name'],
@@ -296,6 +301,7 @@ def export_all_districts(dry_run=False, single_state=None):
                 'num_seats': r['num_seats'],
                 'pres_2024_margin': r['pres_2024_margin'],
                 'pres_2024_winner': r['pres_2024_winner'],
+                'redistricting_year': redistricting_year,
                 'is_floterial': r['is_floterial'],
                 'seats': [],
             }
@@ -510,6 +516,7 @@ def export_all_districts(dry_run=False, single_state=None):
                 'is_floterial': d['is_floterial'],
                 'pres_2024_margin': d['pres_2024_margin'],
                 'pres_2024_winner': d['pres_2024_winner'],
+                'redistricting_year': d.get('redistricting_year'),
                 'seats': d['seats'],
                 'partisan_shift': partisan_shift,
                 'similar_districts': similar,

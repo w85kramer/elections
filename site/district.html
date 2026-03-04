@@ -201,6 +201,26 @@
     font-style: normal;
   }
 
+  /* Redistricting event rows */
+  .event-row.redistricting-row td {
+    background: #e8f0fe;
+    border-left: 3px dashed var(--ms-navy);
+    font-style: normal;
+    color: var(--ms-navy);
+  }
+  .event-row.redistricting-row td:first-child {
+    border-left: 3px dashed var(--ms-navy);
+  }
+  .redistricting-label {
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .redistricting-detail {
+    font-size: 11px;
+    color: var(--ms-text-light);
+    font-weight: 400;
+  }
+
   /* Similar districts */
   .similar-grid {
     display: grid;
@@ -669,6 +689,22 @@
     for (const te of (seat.term_events || [])) {
       events.push({ type: 'term_event', year: te.year, date: te.date || '', data: te });
     }
+    // Inject redistricting event if district has elections spanning the redistricting boundary
+    const ry = district.redistricting_year;
+    if (ry) {
+      const elecYears = elections.map(e => e.year);
+      const hasBefore = elecYears.some(y => y < ry);
+      const hasAfter = elecYears.some(y => y >= ry);
+      if (hasBefore && hasAfter) {
+        const marginStr = district.pres_2024_margin ? marginLabel(district.pres_2024_margin) : null;
+        events.push({
+          type: 'redistricting',
+          year: ry,
+          date: `${ry}-01-01`,
+          data: { year: ry, newMargin: marginStr }
+        });
+      }
+    }
     // Sort: descending year, then descending date within year (latest event on top)
     events.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
 
@@ -705,6 +741,24 @@
           <td>${te.year}</td>
           <td><span class="term-event-reason">${reasonLabel}</span>${dateLabel}</td>
           <td><span style="${partyColorStyle(te.party)}">${te.name}</span> ${badge}${notesLabel}</td>
+          <td colspan="3"></td>
+        </tr>`;
+        continue;
+      }
+
+      // Handle redistricting events
+      if (ev.type === 'redistricting') {
+        const rd = ev.data;
+        const cycleKey = `${rd.year}`;
+        if (cycleKey !== lastCycleKey) {
+          html += `<tr class="cycle-header"><td colspan="6">${rd.year}</td></tr>`;
+          lastCycleKey = cycleKey;
+        }
+        const marginNote = rd.newMargin ? ` <span class="redistricting-detail">&middot; New lines: ${rd.newMargin}</span>` : '';
+        html += `<tr class="event-row redistricting-row">
+          <td>${rd.year}</td>
+          <td><span class="redistricting-label">District Redrawn</span></td>
+          <td>New district lines took effect${marginNote}</td>
           <td colspan="3"></td>
         </tr>`;
         continue;
@@ -989,6 +1043,14 @@
       const pmY = yPos(pmVal);
       svg += `<line x1="${PAD_L}" y1="${pmY}" x2="${W - PAD_R}" y2="${pmY}" stroke="var(--ms-other)" stroke-width="1.5" stroke-dasharray="6,4"/>`;
       svg += `<text x="${W - PAD_R + 4}" y="${pmY + 4}" font-size="10" fill="var(--ms-other)" font-family="Work Sans,sans-serif">2024 Pres</text>`;
+    }
+
+    // Redistricting vertical line
+    if (district.redistricting_year && district.redistricting_year > minYear && district.redistricting_year <= maxYear) {
+      const ry = district.redistricting_year;
+      const rx = xPos(ry) - perYear * 0.35;
+      svg += `<line x1="${rx}" y1="${PAD_T}" x2="${rx}" y2="${H - PAD_B}" stroke="var(--ms-navy)" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.5"/>`;
+      svg += `<text x="${rx}" y="${PAD_T - 4}" text-anchor="middle" font-size="9" fill="var(--ms-navy)" font-family="Work Sans,sans-serif" opacity="0.7">Redistricted</text>`;
     }
 
     // Bars — group by year (multi-member can have multiple elections same year)
