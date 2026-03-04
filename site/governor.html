@@ -506,7 +506,21 @@
       }
 
       const e = ev.data;
-      const winner = e.candidates.find(c => c.result === 'Won' || c.result === 'Advanced');
+
+      // Check if election date has passed
+      const isPast = e.date && new Date(e.date + 'T00:00:00') < new Date();
+
+      // Past election with 0 candidates and no results = uncontested/no data, skip the row
+      if (isPast && e.candidates.length === 0 && !e.result_status) {
+        continue;
+      }
+
+      let winner = e.candidates.find(c => c.result === 'Won' || c.result === 'Advanced');
+
+      // If past election with 1 candidate still "Pending", treat as uncontested winner
+      if (!winner && isPast && e.candidates.length === 1 && e.candidates[0].result === 'Pending') {
+        winner = e.candidates[0];
+      }
 
       let typeLabel = e.type.replace(/_/g, ' ');
       if (e.date) {
@@ -522,6 +536,9 @@
         const badgeParty = winner.party || '';
         winnerName = `<span style="${partyColorStyle(badgeParty)}">${winner.name}</span>
           <span class="party-badge ${partyBadgeClass(badgeParty)}" style="font-size:10px;padding:1px 5px;margin-left:4px">${badgeParty || '?'}</span>`;
+        if (winner && e.candidates.length === 1) {
+          winnerName += ' <span class="incumbent-marker">(uncontested)</span>';
+        }
 
         if (winner.pct != null) {
           const marginPct = Math.max(0, (winner.pct - 50) * 2);
