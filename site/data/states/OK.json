@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T22:14:14.217735Z",
+  "generated_at": "2026-03-04T19:55:48.142431Z",
   "state": {
     "name": "Oklahoma",
     "abbr": "OK",
@@ -1679,6 +1679,12 @@
         "district": "32",
         "candidates": [
           {
+            "name": "Andy Brown",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Jack Vaughan",
             "party": "R",
             "is_incumbent": false,
@@ -1947,6 +1953,12 @@
           },
           {
             "name": "Bruce Fleming",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Michael Freeman",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"

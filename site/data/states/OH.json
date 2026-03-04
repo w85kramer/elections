@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T22:13:34.523886Z",
+  "generated_at": "2026-03-04T19:55:40.961158Z",
   "state": {
     "name": "Ohio",
     "abbr": "OH",
@@ -2216,6 +2216,12 @@
         "district": "36",
         "candidates": [
           {
+            "name": "Chuck Horn",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Rose Lounsbury",
             "party": "D",
             "is_incumbent": false,
@@ -3307,6 +3313,12 @@
             "election_type": "Primary_D"
           },
           {
+            "name": "Sheila Coressel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Victoria Maddox",
             "party": "D",
             "is_incumbent": false,
@@ -3316,6 +3328,31 @@
             "name": "Tim Barhorst",
             "party": "R",
             "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Ty Mathews",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "OH House 84",
+        "chamber": "House",
+        "district": "84",
+        "candidates": [
+          {
+            "name": "Arienne Childrey",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Angie King",
+            "party": "R",
+            "is_incumbent": true,
             "election_type": "Primary_R"
           }
         ]
@@ -4654,6 +4691,16 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "84",
+      "seat_label": "OH House 84",
+      "pres_margin": "-64.5",
+      "holder_party": "R",
+      "candidate": "Arienne Childrey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "86",
       "seat_label": "OH House 86",
       "pres_margin": "-31.4",
@@ -5464,11 +5511,11 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "83",
-      "seat_label": "OH House 83",
-      "pres_margin": "-45.2",
+      "district": "84",
+      "seat_label": "OH House 84",
+      "pres_margin": "-64.5",
       "holder_party": "R",
-      "candidate": "Tim Barhorst",
+      "candidate": "Angie King",
       "is_open_seat": null
     },
     {

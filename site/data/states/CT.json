@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T22:14:31.698517Z",
+  "generated_at": "2026-03-04T19:54:00.473724Z",
   "state": {
     "name": "Connecticut",
     "abbr": "CT",
@@ -1925,10 +1925,29 @@
         ]
       },
       {
+        "seat_label": "CT Senate 8",
+        "chamber": "Senate",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Andrew Ziemba",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "CT Senate 13",
         "chamber": "Senate",
         "district": "13",
         "candidates": [
+          {
+            "name": "Jim Jinks",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Jonathan Fazzino",
             "party": "D",
@@ -1994,16 +2013,6 @@
       "is_open_seat": null
     },
     {
-      "election_type": "Primary_D",
-      "chamber": "Senate",
-      "district": "13",
-      "seat_label": "CT Senate 13",
-      "pres_margin": "+15.4",
-      "holder_party": "D",
-      "candidate": "Jonathan Fazzino",
-      "is_open_seat": null
-    },
-    {
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "34",
@@ -2041,6 +2050,16 @@
       "pres_margin": "+4.0",
       "holder_party": "D",
       "candidate": "Raymond Collins III",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "8",
+      "seat_label": "CT Senate 8",
+      "pres_margin": "+9.8",
+      "holder_party": "D",
+      "candidate": "Andrew Ziemba",
       "is_open_seat": null
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T22:14:05.943430Z",
+  "generated_at": "2026-03-04T19:55:35.708360Z",
   "state": {
     "name": "New York",
     "abbr": "NY",
@@ -2042,6 +2042,19 @@
         ]
       },
       {
+        "seat_label": "NY Assembly 65",
+        "chamber": "Assembly",
+        "district": "65",
+        "candidates": [
+          {
+            "name": "Jasmin Sanchez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "NY Assembly 82",
         "chamber": "Assembly",
         "district": "82",
@@ -2055,6 +2068,19 @@
         ]
       },
       {
+        "seat_label": "NY Assembly 102",
+        "chamber": "Assembly",
+        "district": "102",
+        "candidates": [
+          {
+            "name": "Marcus Molinaro",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NY Assembly 119",
         "chamber": "Assembly",
         "district": "119",
@@ -2064,6 +2090,19 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NY Assembly 123",
+        "chamber": "Assembly",
+        "district": "123",
+        "candidates": [
+          {
+            "name": "Lynn Parker",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2243,6 +2282,19 @@
         ]
       },
       {
+        "seat_label": "NY Senate 49",
+        "chamber": "Senate",
+        "district": "49",
+        "candidates": [
+          {
+            "name": "Cassie Robbins-Forbus",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "NY Senate 50",
         "chamber": "Senate",
         "district": "50",
@@ -2284,6 +2336,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Mike Bolles",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2343,6 +2401,16 @@
       "pres_margin": "-3.8",
       "holder_party": "D",
       "candidate": "Zahava Durchin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "65",
+      "seat_label": "NY Assembly 65",
+      "pres_margin": "+52.4",
+      "holder_party": "D",
+      "candidate": "Jasmin Sanchez",
       "is_open_seat": null
     },
     {
@@ -2458,6 +2526,16 @@
     {
       "election_type": "Primary_D",
       "chamber": "Senate",
+      "district": "49",
+      "seat_label": "NY Senate 49",
+      "pres_margin": "-32.6",
+      "holder_party": "R",
+      "candidate": "Cassie Robbins-Forbus",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
       "district": "50",
       "seat_label": "NY Senate 50",
       "pres_margin": "+4.3",
@@ -2483,6 +2561,26 @@
       "pres_margin": "+22.1",
       "holder_party": "D",
       "candidate": "Jonathan Rivera",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "102",
+      "seat_label": "NY Assembly 102",
+      "pres_margin": "-16.7",
+      "holder_party": "R",
+      "candidate": "Marcus Molinaro",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "123",
+      "seat_label": "NY Assembly 123",
+      "pres_margin": "+14.4",
+      "holder_party": "D",
+      "candidate": "Lynn Parker",
       "is_open_seat": null
     },
     {
@@ -2553,6 +2651,16 @@
       "pres_margin": "-14.6",
       "holder_party": "R",
       "candidate": "Christopher Tague",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "52",
+      "seat_label": "NY Senate 52",
+      "pres_margin": "+19.2",
+      "holder_party": "D",
+      "candidate": "Mike Bolles",
       "is_open_seat": null
     },
     {

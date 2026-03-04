@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T19:42:58.593010Z",
+  "generated_at": "2026-03-04T19:53:39.012558Z",
   "state": {
     "name": "Arizona",
     "abbr": "AZ",
@@ -1000,10 +1000,29 @@
         ]
       },
       {
+        "seat_label": "AZ House 17 Seat A",
+        "chamber": "House",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Blase Henry",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
         "seat_label": "AZ House 19 Seat A",
         "chamber": "House",
         "district": "19",
         "candidates": [
+          {
+            "name": "Cheryl Caswell",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
           {
             "name": "Aiden Swallow",
             "party": "D",
@@ -1093,6 +1112,19 @@
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 10",
+        "chamber": "Senate",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Nick Fierro",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
           }
         ]
       },

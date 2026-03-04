@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T22:13:48.705162Z",
+  "generated_at": "2026-03-04T19:54:20.114812Z",
   "state": {
     "name": "Iowa",
     "abbr": "IA",
@@ -1591,6 +1591,32 @@
         ]
       },
       {
+        "seat_label": "IA House 60",
+        "chamber": "House",
+        "district": "60",
+        "candidates": [
+          {
+            "name": "Jane Bloomingdale",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "IA House 61",
+        "chamber": "House",
+        "district": "61",
+        "candidates": [
+          {
+            "name": "Vincent Collis",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "IA House 70",
         "chamber": "House",
         "district": "70",
@@ -1723,6 +1749,12 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Ken Croken",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
           }
         ]
       },
@@ -1789,6 +1821,12 @@
         "chamber": "Senate",
         "district": "5",
         "candidates": [
+          {
+            "name": "Dave Rowley",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
           {
             "name": "Stacy Besch",
             "party": "R",
@@ -1944,6 +1982,19 @@
             "election_type": "Primary_D"
           }
         ]
+      },
+      {
+        "seat_label": "IA Senate 49",
+        "chamber": "Senate",
+        "district": "49",
+        "candidates": [
+          {
+            "name": "Cindy Winckler",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
       }
     ]
   },
@@ -2001,6 +2052,16 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "61",
+      "seat_label": "IA House 61",
+      "pres_margin": "+4.5",
+      "holder_party": "D",
+      "candidate": "Vincent Collis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "70",
       "seat_label": "IA House 70",
       "pres_margin": "-28.6",
@@ -2036,16 +2097,6 @@
       "pres_margin": "+53.2",
       "holder_party": "D",
       "candidate": "Adam Zabner",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House",
-      "district": "97",
-      "seat_label": "IA House 97",
-      "pres_margin": "+19.1",
-      "holder_party": "D",
-      "candidate": "Adam Peters",
       "is_open_seat": null
     },
     {
@@ -2129,6 +2180,16 @@
       "is_open_seat": null
     },
     {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "49",
+      "seat_label": "IA Senate 49",
+      "pres_margin": "+8.7",
+      "holder_party": "D",
+      "candidate": "Cindy Winckler",
+      "is_open_seat": null
+    },
+    {
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "2",
@@ -2176,6 +2237,16 @@
       "pres_margin": "+4.0",
       "holder_party": "R",
       "candidate": "Nicole Hasso",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "60",
+      "seat_label": "IA House 60",
+      "pres_margin": "-29.2",
+      "holder_party": "R",
+      "candidate": "Jane Bloomingdale",
       "is_open_seat": null
     },
     {
@@ -2256,16 +2327,6 @@
       "pres_margin": "-46.7",
       "holder_party": "R",
       "candidate": "Lynn Evans",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_R",
-      "chamber": "Senate",
-      "district": "5",
-      "seat_label": "IA Senate 5",
-      "pres_margin": "-41.0",
-      "holder_party": "R",
-      "candidate": "Stacy Besch",
       "is_open_seat": null
     },
     {

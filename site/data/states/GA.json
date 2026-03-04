@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T20:47:11.977171Z",
+  "generated_at": "2026-03-04T19:54:13.233276Z",
   "state": {
     "name": "Georgia",
     "abbr": "GA",
@@ -2312,6 +2312,12 @@
         "district": "6",
         "candidates": [
           {
+            "name": "Derrian Smith",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Jason Ridley",
             "party": "R",
             "is_incumbent": true,
@@ -2695,6 +2701,19 @@
         ]
       },
       {
+        "seat_label": "GA House 51",
+        "chamber": "House",
+        "district": "51",
+        "candidates": [
+          {
+            "name": "Aaron Baker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "GA House 52",
         "chamber": "House",
         "district": "52",
@@ -2717,6 +2736,12 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Deborah Silcox",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2890,6 +2915,19 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 70",
+        "chamber": "House",
+        "district": "70",
+        "candidates": [
+          {
+            "name": "Melissa Stuckey",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3388,6 +3426,12 @@
         "district": "127",
         "candidates": [
           {
+            "name": "Channing Taylor",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Mark Newton",
             "party": "R",
             "is_incumbent": true,
@@ -3647,6 +3691,12 @@
         "district": "157",
         "candidates": [
           {
+            "name": "Micah King",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Bill Werkheiser",
             "party": "R",
             "is_incumbent": true,
@@ -3745,6 +3795,19 @@
         "candidates": [
           {
             "name": "Jay Morris",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 167",
+        "chamber": "House",
+        "district": "167",
+        "candidates": [
+          {
+            "name": "Laurie Thompson",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3946,6 +4009,19 @@
         ]
       },
       {
+        "seat_label": "GA Senate 5",
+        "chamber": "Senate",
+        "district": "5",
+        "candidates": [
+          {
+            "name": "Robin McCoy",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "GA Senate 7",
         "chamber": "Senate",
         "district": "7",
@@ -3964,6 +4040,12 @@
           },
           {
             "name": "Rahul Garabadu",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ruwa Romman",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -4247,6 +4329,12 @@
         "district": "32",
         "candidates": [
           {
+            "name": "Michael Hettig",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Kay Kirkpatrick",
             "party": "R",
             "is_incumbent": true,
@@ -4350,6 +4438,12 @@
         "chamber": "Senate",
         "district": "46",
         "candidates": [
+          {
+            "name": "Ray Smith",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "William Gaulden",
             "party": "D",
@@ -4510,6 +4604,16 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "6",
+      "seat_label": "GA House 6",
+      "pres_margin": "-69.0",
+      "holder_party": "R",
+      "candidate": "Derrian Smith",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "28",
       "seat_label": "GA House 28",
       "pres_margin": "-50.9",
@@ -4565,6 +4669,16 @@
       "pres_margin": "-8.5",
       "holder_party": "R",
       "candidate": "Dumont Walker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "51",
+      "seat_label": "GA House 51",
+      "pres_margin": "+18.8",
+      "holder_party": "D",
+      "candidate": "Aaron Baker",
       "is_open_seat": null
     },
     {
@@ -4900,6 +5014,16 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "127",
+      "seat_label": "GA House 127",
+      "pres_margin": "-25.5",
+      "holder_party": "R",
+      "candidate": "Channing Taylor",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "128",
       "seat_label": "GA House 128",
       "pres_margin": "-4.4",
@@ -4970,6 +5094,16 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "157",
+      "seat_label": "GA House 157",
+      "pres_margin": "-54.9",
+      "holder_party": "R",
+      "candidate": "Micah King",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "162",
       "seat_label": "GA House 162",
       "pres_margin": "+29.6",
@@ -4990,6 +5124,16 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "167",
+      "seat_label": "GA House 167",
+      "pres_margin": "-36.6",
+      "holder_party": "R",
+      "candidate": "Laurie Thompson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "177",
       "seat_label": "GA House 177",
       "pres_margin": "+7.3",
@@ -5005,6 +5149,16 @@
       "pres_margin": "+43.2",
       "holder_party": "D",
       "candidate": "Derek Mallow",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "5",
+      "seat_label": "GA Senate 5",
+      "pres_margin": "+33.7",
+      "holder_party": "D",
+      "candidate": "Robin McCoy",
       "is_open_seat": null
     },
     {
@@ -5080,6 +5234,16 @@
     {
       "election_type": "Primary_D",
       "chamber": "Senate",
+      "district": "32",
+      "seat_label": "GA Senate 32",
+      "pres_margin": "-12.9",
+      "holder_party": "R",
+      "candidate": "Michael Hettig",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
       "district": "35",
       "seat_label": "GA Senate 35",
       "pres_margin": "+56.0",
@@ -5125,16 +5289,6 @@
       "pres_margin": "+77.5",
       "holder_party": "D",
       "candidate": "Elena Parent",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "Senate",
-      "district": "46",
-      "seat_label": "GA Senate 46",
-      "pres_margin": "-19.4",
-      "holder_party": "R",
-      "candidate": "William Gaulden",
       "is_open_seat": null
     },
     {
@@ -5405,6 +5559,26 @@
       "pres_margin": "-6.3",
       "holder_party": "R",
       "candidate": "Chuck Martin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "53",
+      "seat_label": "GA House 53",
+      "pres_margin": "+6.9",
+      "holder_party": "R",
+      "candidate": "Deborah Silcox",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "70",
+      "seat_label": "GA House 70",
+      "pres_margin": "-22.7",
+      "holder_party": "R",
+      "candidate": "Melissa Stuckey",
       "is_open_seat": null
     },
     {

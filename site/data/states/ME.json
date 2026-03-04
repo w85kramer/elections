@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T20:47:14.649152Z",
+  "generated_at": "2026-03-04T19:54:58.438812Z",
   "state": {
     "name": "Maine",
     "abbr": "ME",
@@ -1854,6 +1854,19 @@
         ]
       },
       {
+        "seat_label": "ME House 16",
+        "chamber": "House",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Gary Runnells",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
         "seat_label": "ME House 17",
         "chamber": "House",
         "district": "17",
@@ -2025,6 +2038,19 @@
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 58",
+        "chamber": "House",
+        "district": "58",
+        "candidates": [
+          {
+            "name": "Sharon Frost",
+            "party": "Other",
+            "is_incumbent": true,
+            "election_type": "General"
           }
         ]
       },
@@ -2274,6 +2300,19 @@
         ]
       },
       {
+        "seat_label": "ME House 134",
+        "chamber": "House",
+        "district": "134",
+        "candidates": [
+          {
+            "name": "Allen Daggett",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
         "seat_label": "ME House 137",
         "chamber": "House",
         "district": "137",
@@ -2317,6 +2356,12 @@
         "chamber": "House",
         "district": "141",
         "candidates": [
+          {
+            "name": "David Mongeau",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
           {
             "name": "Marc Boisse",
             "party": "R",
@@ -2554,6 +2599,12 @@
         "district": "12",
         "candidates": [
           {
+            "name": "Nicole Kalloch",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Ann Matlack",
             "party": "D",
             "is_incumbent": false,
@@ -2566,6 +2617,12 @@
         "chamber": "Senate",
         "district": "13",
         "candidates": [
+          {
+            "name": "Edwin Mitchell",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
           {
             "name": "Cameron Reny",
             "party": "D",
@@ -2784,6 +2841,12 @@
             "election_type": "Primary_D"
           },
           {
+            "name": "Kenneth J. Cianchette",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Peter Violette",
             "party": "R",
             "is_incumbent": false,
@@ -2810,6 +2873,12 @@
         "district": "31",
         "candidates": [
           {
+            "name": "Lauren Grenier",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Donna Bailey",
             "party": "D",
             "is_incumbent": true,
@@ -2822,6 +2891,12 @@
         "chamber": "Senate",
         "district": "32",
         "candidates": [
+          {
+            "name": "Jason Litalien",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
           {
             "name": "Henry Ingwersen",
             "party": "D",
@@ -2860,6 +2935,12 @@
         "chamber": "Senate",
         "district": "34",
         "candidates": [
+          {
+            "name": "Paul Bennett",
+            "party": "Other",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
           {
             "name": "Daniel Sayre",
             "party": "D",
@@ -3660,16 +3741,6 @@
       "pres_margin": "+40.8",
       "holder_party": "D",
       "candidate": "Bernard Porter",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_R",
-      "chamber": "Senate",
-      "district": "26",
-      "seat_label": "ME Senate 26",
-      "pres_margin": "+9.4",
-      "holder_party": "D",
-      "candidate": "Peter Violette",
       "is_open_seat": null
     },
     {

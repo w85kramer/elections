@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T22:13:44.023131Z",
+  "generated_at": "2026-03-04T19:56:00.339387Z",
   "state": {
     "name": "Pennsylvania",
     "abbr": "PA",
@@ -2388,6 +2388,19 @@
     "statewide": [],
     "legislative": [
       {
+        "seat_label": "PA House 9",
+        "chamber": "House",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Justin Byers",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "PA House 11",
         "chamber": "House",
         "district": "11",
@@ -2453,6 +2466,19 @@
         ]
       },
       {
+        "seat_label": "PA Senate 18",
+        "chamber": "Senate",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Scott Janney",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "PA Senate 38",
         "chamber": "Senate",
         "district": "38",
@@ -2468,6 +2494,16 @@
     ]
   },
   "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "9",
+      "seat_label": "PA House 9",
+      "pres_margin": "-29.7",
+      "holder_party": "R",
+      "candidate": "Justin Byers",
+      "is_open_seat": null
+    },
     {
       "election_type": "Primary_D",
       "chamber": "House",
@@ -2516,6 +2552,16 @@
       "pres_margin": "-11.7",
       "holder_party": "R",
       "candidate": "Brenda Pugh",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "18",
+      "seat_label": "PA Senate 18",
+      "pres_margin": "+12.7",
+      "holder_party": "D",
+      "candidate": "Scott Janney",
       "is_open_seat": null
     },
     {
