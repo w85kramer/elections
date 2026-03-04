@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-04T15:45:19.236432Z",
+  "generated_at": "2026-03-04T18:22:40.920015Z",
   "state": {
     "name": "Arkansas",
     "abbr": "AR",
@@ -1334,10 +1334,50 @@
           "is_incumbent": false,
           "election_type": "Primary_D",
           "status": "Filed"
+        },
+        {
+          "name": "Sarah Huckabee Sanders",
+          "party": "R",
+          "is_incumbent": true,
+          "election_type": "Primary_R",
+          "status": null
         }
       ]
     },
     "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Tim Griffin",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Auditor",
+        "candidates": [
+          {
+            "name": "Dennis Milligan",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Lt. Governor",
+        "candidates": [
+          {
+            "name": "Leslie Rutledge",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
       {
         "office": "Secretary of State",
         "candidates": [
@@ -1357,6 +1397,17 @@
             "name": "Kim Hammer",
             "party": "R",
             "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "John Thurston",
+            "party": "R",
+            "is_incumbent": true,
             "election_type": "Primary_R"
           }
         ]
