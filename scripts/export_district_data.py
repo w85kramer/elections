@@ -146,7 +146,7 @@ def export_all_districts(dry_run=False, single_state=None):
             cy.votes_received DESC NULLS LAST
     """
 
-    # Query 4: Seat terms (officeholder history) — for "Since YYYY" info
+    # Query 4: Seat terms (officeholder history) — ALL terms for timeline events + "Since YYYY"
     q_terms = f"""
         SELECT
             st.abbreviation as state,
@@ -156,7 +156,9 @@ def export_all_districts(dry_run=False, single_state=None):
             stm.caucus as holder_caucus,
             stm.start_date,
             stm.end_date,
-            stm.start_reason
+            stm.start_reason,
+            stm.end_reason,
+            stm.notes
         FROM seat_terms stm
         JOIN seats s ON stm.seat_id = s.id
         JOIN districts d ON s.district_id = d.id
@@ -164,9 +166,8 @@ def export_all_districts(dry_run=False, single_state=None):
         JOIN candidates c ON stm.candidate_id = c.id
         WHERE s.office_level = 'Legislative'
           AND COALESCE(d.redistricting_cycle, '2022') = '2022'
-          AND stm.end_date IS NULL
           {state_filter}
-        ORDER BY st.abbreviation, stm.seat_id
+        ORDER BY st.abbreviation, stm.seat_id, stm.start_date
     """
 
     # Query 5: State info (for primary type, runoffs)
@@ -258,10 +259,13 @@ def export_all_districts(dry_run=False, single_state=None):
     for r in candidacies_data:
         candidacies_by_election.setdefault(r['election_id'], []).append(r)
 
-    # Current terms indexed by seat_id
-    terms_by_seat = {}
+    # All terms indexed by seat_id (list), plus current holder (end_date IS NULL)
+    all_terms_by_seat = {}
+    current_term_by_seat = {}
     for r in terms_data:
-        terms_by_seat[r['seat_id']] = r
+        all_terms_by_seat.setdefault(r['seat_id'], []).append(r)
+        if r['end_date'] is None:
+            current_term_by_seat[r['seat_id']] = r
 
     # Forecasts indexed by seat_id
     forecasts_by_seat = {}
@@ -297,10 +301,25 @@ def export_all_districts(dry_run=False, single_state=None):
             }
         # Build seat object
         seat_id = r['seat_id']
-        term = terms_by_seat.get(seat_id)
+        term = current_term_by_seat.get(seat_id)
         since_year = None
         if term and term.get('start_date'):
             since_year = int(str(term['start_date'])[:4])
+
+        # Build term_events: resignations, deaths, removals for timeline display
+        interesting_reasons = {'resigned', 'died', 'removed', 'appointed_elsewhere'}
+        term_events = []
+        for t in all_terms_by_seat.get(seat_id, []):
+            if t.get('end_reason') in interesting_reasons and t.get('end_date'):
+                end_date_str = str(t['end_date'])
+                term_events.append({
+                    'name': t['holder_name'],
+                    'party': t['holder_party'],
+                    'year': int(end_date_str[:4]),
+                    'date': end_date_str,
+                    'reason': t['end_reason'],
+                    'notes': t.get('notes'),
+                })
 
         # Build election history for this seat
         min_year = MIN_EXPORT_YEAR.get(r['state'], 0)
@@ -372,6 +391,7 @@ def export_all_districts(dry_run=False, single_state=None):
             'since_year': since_year,
             'elections': seat_elections,
             'party_switches': seat_switches,
+            'term_events': term_events,
             'forecast': forecast,
         }
         # Include raw caucus for coalition annotation (AK)

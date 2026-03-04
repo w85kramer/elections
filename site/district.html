@@ -181,6 +181,26 @@
     border-left: 3px solid #f5a623;
   }
 
+  /* Term event rows (resignations, deaths, removals) */
+  .event-row.term-event-row td {
+    background: #f0f0f0;
+    border-left: 3px solid #999;
+    font-style: italic;
+    color: #555;
+  }
+  .event-row.term-event-row td:first-child {
+    border-left: 3px solid #999;
+  }
+  .term-event-reason {
+    font-weight: 600;
+    color: #666;
+  }
+  .term-event-notes {
+    font-size: 11px;
+    color: #888;
+    font-style: normal;
+  }
+
   /* Similar districts */
   .similar-grid {
     display: grid;
@@ -634,9 +654,9 @@
   // ==========================
   function buildHistoryTable(seat, containerId) {
     const elections = seat.elections.slice().sort((a, b) => b.year - a.year || a.type.localeCompare(b.type));
-    if (elections.length === 0 && (!seat.party_switches || seat.party_switches.length === 0)) return '<p class="text-muted">No office history available.</p>';
+    if (elections.length === 0 && (!seat.party_switches || seat.party_switches.length === 0) && (!seat.term_events || seat.term_events.length === 0)) return '<p class="text-muted">No office history available.</p>';
 
-    // Combine elections and party switches into unified timeline
+    // Combine elections, party switches, and term events into unified timeline
     const events = [];
     for (const e of elections) {
       events.push({ type: 'election', year: e.year, sort: 0, data: e });
@@ -644,7 +664,12 @@
     for (const ps of (seat.party_switches || [])) {
       events.push({ type: 'party_switch', year: ps.year, sort: 1, data: ps });
     }
-    // Sort: descending year, party switches after elections in same year
+    for (const te of (seat.term_events || [])) {
+      // Term events sort BEFORE elections in the same year (sort: -1)
+      // since a resignation triggers the subsequent special election
+      events.push({ type: 'term_event', year: te.year, sort: -1, data: te });
+    }
+    // Sort: descending year, then by sort order (term_events before elections, party switches after)
     events.sort((a, b) => b.year - a.year || a.sort - b.sort);
 
     let html = `<table class="history-table"><thead><tr>
@@ -655,6 +680,36 @@
     let rowIdx = 0;
 
     for (const ev of events) {
+      // Handle term events (resignations, deaths, removals)
+      if (ev.type === 'term_event') {
+        const te = ev.data;
+        const cycleKey = `${te.year}`;
+        if (cycleKey !== lastCycleKey) {
+          html += `<tr class="cycle-header"><td colspan="6">${te.year}</td></tr>`;
+          lastCycleKey = cycleKey;
+        }
+        const dateStr = te.date
+          ? new Date(te.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+          : '';
+        const reasonLabels = {
+          'resigned': 'Resigned',
+          'died': 'Died in Office',
+          'removed': 'Removed',
+          'appointed_elsewhere': 'Appointed Elsewhere',
+        };
+        const reasonLabel = reasonLabels[te.reason] || te.reason;
+        const dateLabel = dateStr ? ` &middot; ${dateStr}` : '';
+        const notesLabel = te.notes ? ` <span class="term-event-notes">${te.notes}</span>` : '';
+        const badge = `<span class="party-badge ${partyBadgeClass(te.party)}" style="font-size:10px;padding:1px 5px">${te.party || '?'}</span>`;
+        html += `<tr class="event-row term-event-row">
+          <td>${te.year}</td>
+          <td><span class="term-event-reason">${reasonLabel}</span>${dateLabel}</td>
+          <td><span style="${partyColorStyle(te.party)}">${te.name}</span> ${badge}${notesLabel}</td>
+          <td colspan="3"></td>
+        </tr>`;
+        continue;
+      }
+
       // Handle party switch events
       if (ev.type === 'party_switch') {
         const ps = ev.data;
