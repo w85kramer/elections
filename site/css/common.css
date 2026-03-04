@@ -322,6 +322,14 @@ details .details-content {
 .text-muted { color: var(--ms-text-light); }
 .text-sm { font-size: 13px; }
 
+/* Reporting percentage (election night) */
+.reporting-pct {
+  display: block;
+  font-size: 11px;
+  color: var(--ms-text-light);
+  font-style: italic;
+}
+
 /* Two-column layout */
 .two-col {
   display: grid;

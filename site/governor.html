@@ -555,7 +555,16 @@
         marginHtml = `<span class="text-muted">&mdash;</span>`;
       }
 
-      const votes = e.total_votes ? numberWithCommas(e.total_votes) : '&mdash;';
+      let reportingNote = '';
+      if (e.result_status && e.result_status !== 'Certified') {
+        if (e.precincts_reporting != null && e.precincts_total) {
+          const pct = Math.round(e.precincts_reporting / e.precincts_total * 100);
+          reportingNote = `<span class="reporting-pct">${pct}% reporting</span>`;
+        } else {
+          reportingNote = `<span class="reporting-pct">Unofficial</span>`;
+        }
+      }
+      const votes = (e.total_votes ? numberWithCommas(e.total_votes) : '&mdash;') + reportingNote;
       const isWinner = winner ? ' winner-row' : '';
       const expandId = `exp-${rowIdx}`;
       const hasCands = e.candidates.length > (winner ? 1 : 0);

@@ -106,7 +106,9 @@ def export_governor_pages(dry_run=False, single_state=None):
             e.result_status,
             e.is_open_seat,
             e.filing_deadline,
-            e.forecast_rating
+            e.forecast_rating,
+            e.precincts_reporting,
+            e.precincts_total
         FROM elections e
         JOIN seats se ON e.seat_id = se.id
         JOIN districts d ON se.district_id = d.id
@@ -315,7 +317,7 @@ def export_governor_pages(dry_run=False, single_state=None):
                     'is_major': c.get('is_major') or False,
                 })
 
-            elections_list.append({
+            elec_obj = {
                 'year': e['election_year'],
                 'type': e['election_type'],
                 'date': str(e['election_date']) if e.get('election_date') else None,
@@ -325,7 +327,11 @@ def export_governor_pages(dry_run=False, single_state=None):
                 'filing_deadline': str(e['filing_deadline']) if e.get('filing_deadline') else None,
                 'forecast_rating': e['forecast_rating'],
                 'candidates': candidate_list,
-            })
+            }
+            if e.get('precincts_reporting') is not None:
+                elec_obj['precincts_reporting'] = e['precincts_reporting']
+                elec_obj['precincts_total'] = e['precincts_total']
+            elections_list.append(elec_obj)
 
         # Current governor (first term with no end_date)
         current_gov = None

@@ -721,7 +721,16 @@
         winnerName = `<span class="text-muted">${n} candidate${n !== 1 ? 's' : ''} filed</span>`;
       }
 
-      const votes = e.total_votes ? numberWithCommas(e.total_votes) : '—';
+      let reportingNote = '';
+      if (e.result_status && e.result_status !== 'Certified') {
+        if (e.precincts_reporting != null && e.precincts_total) {
+          const pct = Math.round(e.precincts_reporting / e.precincts_total * 100);
+          reportingNote = `<span class="reporting-pct">${pct}% reporting</span>`;
+        } else {
+          reportingNote = `<span class="reporting-pct">Unofficial</span>`;
+        }
+      }
+      const votes = (e.total_votes ? numberWithCommas(e.total_votes) : '—') + reportingNote;
       const isWinner = winner ? ' winner-row' : '';
       const expandId = `exp-${containerId}-${rowIdx}`;
 

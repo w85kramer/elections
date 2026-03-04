@@ -111,6 +111,8 @@ CREATE TABLE elections (
                             'Counting', 'Called', 'Certified'
                         )),                 -- NULL=not yet held, Counting=votes coming in, Called=projected winner, Certified=official
     total_votes_cast    INTEGER,
+    precincts_reporting INTEGER,         -- number of precincts that have reported results
+    precincts_total     INTEGER,         -- total number of precincts in the race
     is_open_seat        BOOLEAN,         -- TRUE if no incumbent running, NULL=unknown
     notes           TEXT
 );

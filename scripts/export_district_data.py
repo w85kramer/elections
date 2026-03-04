@@ -105,7 +105,9 @@ def export_all_districts(dry_run=False, single_state=None):
             e.is_open_seat,
             e.result_status,
             e.filing_deadline,
-            e.forecast_rating
+            e.forecast_rating,
+            e.precincts_reporting,
+            e.precincts_total
         FROM elections e
         JOIN seats s ON e.seat_id = s.id
         JOIN districts d ON s.district_id = d.id
@@ -323,7 +325,7 @@ def export_all_districts(dry_run=False, single_state=None):
                     cand_obj['caucus'] = c['caucus']
                 candidate_list.append(cand_obj)
 
-            seat_elections.append({
+            elec_obj = {
                 'year': e['election_year'],
                 'type': e['election_type'],
                 'date': str(e['election_date']) if e.get('election_date') else None,
@@ -333,7 +335,11 @@ def export_all_districts(dry_run=False, single_state=None):
                 'filing_deadline': str(e['filing_deadline']) if e.get('filing_deadline') else None,
                 'forecast_rating': e['forecast_rating'],
                 'candidates': candidate_list,
-            })
+            }
+            if e.get('precincts_reporting') is not None:
+                elec_obj['precincts_reporting'] = e['precincts_reporting']
+                elec_obj['precincts_total'] = e['precincts_total']
+            seat_elections.append(elec_obj)
 
         # Forecast info for this seat
         forecast = forecasts_by_seat.get(seat_id)

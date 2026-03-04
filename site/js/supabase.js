@@ -68,6 +68,7 @@ async function fetchLiveElections(seatIds) {
 
   const select = 'id,seat_id,election_type,election_date,election_year,' +
     'result_status,total_votes_cast,is_open_seat,filing_deadline,forecast_rating,' +
+    'precincts_reporting,precincts_total,' +
     'candidacies(party,caucus,votes_received,vote_percentage,result,is_incumbent,is_write_in,' +
     'candidates(full_name))';
 
@@ -120,7 +121,7 @@ function transformElection(pg) {
     return (b.votes || 0) - (a.votes || 0);
   });
 
-  return {
+  var result = {
     year: pg.election_year,
     type: pg.election_type,
     date: pg.election_date,
@@ -131,6 +132,11 @@ function transformElection(pg) {
     forecast_rating: pg.forecast_rating,
     candidates: candidates,
   };
+  if (pg.precincts_reporting != null) {
+    result.precincts_reporting = pg.precincts_reporting;
+    result.precincts_total = pg.precincts_total;
+  }
+  return result;
 }
 
 /**
