@@ -657,20 +657,20 @@
     if (elections.length === 0 && (!seat.party_switches || seat.party_switches.length === 0) && (!seat.term_events || seat.term_events.length === 0)) return '<p class="text-muted">No office history available.</p>';
 
     // Combine elections, party switches, and term events into unified timeline
+    // Sort within each year by date descending (latest on top), so reading bottom-to-top
+    // within a year gives chronological order (primaries → general → etc.)
     const events = [];
     for (const e of elections) {
-      events.push({ type: 'election', year: e.year, sort: 0, data: e });
+      events.push({ type: 'election', year: e.year, date: e.date || '', data: e });
     }
     for (const ps of (seat.party_switches || [])) {
-      events.push({ type: 'party_switch', year: ps.year, sort: 1, data: ps });
+      events.push({ type: 'party_switch', year: ps.year, date: ps.date || '', data: ps });
     }
     for (const te of (seat.term_events || [])) {
-      // Term events sort BEFORE elections in the same year (sort: -1)
-      // since a resignation triggers the subsequent special election
-      events.push({ type: 'term_event', year: te.year, sort: -1, data: te });
+      events.push({ type: 'term_event', year: te.year, date: te.date || '', data: te });
     }
-    // Sort: descending year, then by sort order (term_events before elections, party switches after)
-    events.sort((a, b) => b.year - a.year || a.sort - b.sort);
+    // Sort: descending year, then descending date within year (latest event on top)
+    events.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
 
     let html = `<table class="history-table"><thead><tr>
       <th>Year</th><th>Type</th><th>Winner</th><th>Margin</th><th>Votes</th><th></th>
