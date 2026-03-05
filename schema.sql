@@ -97,7 +97,7 @@ CREATE TABLE elections (
     election_year   INTEGER NOT NULL,
     election_type   TEXT NOT NULL CHECK (election_type IN (
                         'General', 'General_Runoff',
-                        'Primary', 'Primary_D', 'Primary_R', 'Primary_Nonpartisan',
+                        'Primary', 'Primary_D', 'Primary_R', 'Primary_Nonpartisan', 'Primary_Runoff',
                         'Special', 'Special_Primary', 'Special_Runoff',
                         'Recall'
                     )),
