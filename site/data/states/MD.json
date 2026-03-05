@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-04T23:45:12.734666Z",
+  "generated_at": "2026-03-05T01:33:11.341472Z",
   "state": {
     "name": "Maryland",
     "abbr": "MD",
@@ -2228,7 +2228,7 @@
         ]
       },
       {
-        "seat_label": "MD HoD 5 Seat B",
+        "seat_label": "MD HoD 5 Seat A",
         "chamber": "House of Delegates",
         "district": "5",
         "candidates": [
@@ -2404,7 +2404,7 @@
         ]
       },
       {
-        "seat_label": "MD HoD 8 Seat B",
+        "seat_label": "MD HoD 8 Seat A",
         "chamber": "House of Delegates",
         "district": "8",
         "candidates": [
@@ -2562,7 +2562,7 @@
         ]
       },
       {
-        "seat_label": "MD HoD 13 Seat A",
+        "seat_label": "MD HoD 13 Seat C",
         "chamber": "House of Delegates",
         "district": "13",
         "candidates": [
@@ -2611,7 +2611,7 @@
         ]
       },
       {
-        "seat_label": "MD HoD 14 Seat A",
+        "seat_label": "MD HoD 14 Seat C",
         "chamber": "House of Delegates",
         "district": "14",
         "candidates": [
@@ -2979,7 +2979,7 @@
         ]
       },
       {
-        "seat_label": "MD HoD 22 Seat B",
+        "seat_label": "MD HoD 22 Seat A",
         "chamber": "House of Delegates",
         "district": "22",
         "candidates": [
@@ -3314,7 +3314,7 @@
         ]
       },
       {
-        "seat_label": "MD HoD 28 Seat A",
+        "seat_label": "MD HoD 28 Seat C",
         "chamber": "House of Delegates",
         "district": "28",
         "candidates": [
@@ -3533,7 +3533,7 @@
         ]
       },
       {
-        "seat_label": "MD HoD 36 Seat C",
+        "seat_label": "MD HoD 36 Seat A",
         "chamber": "House of Delegates",
         "district": "36",
         "candidates": [
@@ -3789,7 +3789,7 @@
         ]
       },
       {
-        "seat_label": "MD HoD 45 Seat C",
+        "seat_label": "MD HoD 45 Seat A",
         "chamber": "House of Delegates",
         "district": "45",
         "candidates": [
@@ -5974,16 +5974,6 @@
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
       "district": "3",
-      "seat_label": "MD HoD 3 Seat C",
-      "pres_margin": "+32.7",
-      "holder_party": "D",
-      "candidate": "Karen Simpson",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House of Delegates",
-      "district": "3",
       "seat_label": "MD HoD 3 Seat B",
       "pres_margin": "+32.7",
       "holder_party": "D",
@@ -5993,11 +5983,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
-      "district": "4",
-      "seat_label": "MD HoD 4 Seat B",
-      "pres_margin": "-6.1",
-      "holder_party": "R",
-      "candidate": "Andrew Duck",
+      "district": "3",
+      "seat_label": "MD HoD 3 Seat C",
+      "pres_margin": "+32.7",
+      "holder_party": "D",
+      "candidate": "Karen Simpson",
       "is_open_seat": null
     },
     {
@@ -6008,6 +5998,16 @@
       "pres_margin": "-6.1",
       "holder_party": "R",
       "candidate": "Paul Gilligan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "4",
+      "seat_label": "MD HoD 4 Seat B",
+      "pres_margin": "-6.1",
+      "holder_party": "R",
+      "candidate": "Andrew Duck",
       "is_open_seat": null
     },
     {
@@ -6054,20 +6054,20 @@
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
       "district": "8",
-      "seat_label": "MD HoD 8 Seat C",
+      "seat_label": "MD HoD 8 Seat B",
       "pres_margin": "+25.9",
       "holder_party": "D",
-      "candidate": "Kim Ross",
+      "candidate": "Harry Bhandari",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
       "district": "8",
-      "seat_label": "MD HoD 8 Seat B",
+      "seat_label": "MD HoD 8 Seat C",
       "pres_margin": "+25.9",
       "holder_party": "D",
-      "candidate": "Harry Bhandari",
+      "candidate": "Kim Ross",
       "is_open_seat": null
     },
     {
@@ -6094,16 +6094,6 @@
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
       "district": "13",
-      "seat_label": "MD HoD 13 Seat B",
-      "pres_margin": "+49.4",
-      "holder_party": "D",
-      "candidate": "Gabriel Moreno",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House of Delegates",
-      "district": "13",
       "seat_label": "MD HoD 13 Seat C",
       "pres_margin": "+49.4",
       "holder_party": "D",
@@ -6113,11 +6103,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
-      "district": "14",
-      "seat_label": "MD HoD 14 Seat C",
-      "pres_margin": "+42.6",
+      "district": "13",
+      "seat_label": "MD HoD 13 Seat B",
+      "pres_margin": "+49.4",
       "holder_party": "D",
-      "candidate": "Alicia Contreras-Donello",
+      "candidate": "Gabriel Moreno",
       "is_open_seat": null
     },
     {
@@ -6128,6 +6118,16 @@
       "pres_margin": "+42.6",
       "holder_party": "D",
       "candidate": "Bernice Mireku-North",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "14",
+      "seat_label": "MD HoD 14 Seat C",
+      "pres_margin": "+42.6",
+      "holder_party": "D",
+      "candidate": "Alicia Contreras-Donello",
       "is_open_seat": null
     },
     {
@@ -6164,16 +6164,6 @@
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
       "district": "17",
-      "seat_label": "MD HoD 17 Seat C",
-      "pres_margin": "+53.9",
-      "holder_party": "D",
-      "candidate": "Joe Vogel",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House of Delegates",
-      "district": "17",
       "seat_label": "MD HoD 17 Seat B",
       "pres_margin": "+53.9",
       "holder_party": "D",
@@ -6183,11 +6173,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
-      "district": "18",
-      "seat_label": "MD HoD 18 Seat C",
-      "pres_margin": "+61.4",
+      "district": "17",
+      "seat_label": "MD HoD 17 Seat C",
+      "pres_margin": "+53.9",
       "holder_party": "D",
-      "candidate": "Jared Solomon",
+      "candidate": "Joe Vogel",
       "is_open_seat": null
     },
     {
@@ -6203,11 +6193,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
-      "district": "19",
-      "seat_label": "MD HoD 19 Seat C",
-      "pres_margin": "+47.7",
+      "district": "18",
+      "seat_label": "MD HoD 18 Seat C",
+      "pres_margin": "+61.4",
       "holder_party": "D",
-      "candidate": "Vaughn Stewart",
+      "candidate": "Jared Solomon",
       "is_open_seat": null
     },
     {
@@ -6223,11 +6213,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
-      "district": "20",
-      "seat_label": "MD HoD 20 Seat C",
-      "pres_margin": "+70.4",
+      "district": "19",
+      "seat_label": "MD HoD 19 Seat C",
+      "pres_margin": "+47.7",
       "holder_party": "D",
-      "candidate": "Jheanelle Wilkins",
+      "candidate": "Vaughn Stewart",
       "is_open_seat": null
     },
     {
@@ -6238,6 +6228,16 @@
       "pres_margin": "+70.4",
       "holder_party": "D",
       "candidate": "David Moon",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "20",
+      "seat_label": "MD HoD 20 Seat C",
+      "pres_margin": "+70.4",
+      "holder_party": "D",
+      "candidate": "Jheanelle Wilkins",
       "is_open_seat": null
     },
     {
@@ -6304,20 +6304,20 @@
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
       "district": "24",
-      "seat_label": "MD HoD 24 Seat C",
+      "seat_label": "MD HoD 24 Seat B",
       "pres_margin": "+81.2",
       "holder_party": "D",
-      "candidate": "Andrea Harrison",
+      "candidate": "Derrick Coley",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
       "district": "24",
-      "seat_label": "MD HoD 24 Seat B",
+      "seat_label": "MD HoD 24 Seat C",
       "pres_margin": "+81.2",
       "holder_party": "D",
-      "candidate": "Derrick Coley",
+      "candidate": "Andrea Harrison",
       "is_open_seat": null
     },
     {
@@ -6344,16 +6344,6 @@
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
       "district": "26",
-      "seat_label": "MD HoD 26 Seat B",
-      "pres_margin": "+79.4",
-      "holder_party": "D",
-      "candidate": "Kris Valderrama",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House of Delegates",
-      "district": "26",
       "seat_label": "MD HoD 26 Seat C",
       "pres_margin": "+79.4",
       "holder_party": "D",
@@ -6363,11 +6353,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
-      "district": "28",
-      "seat_label": "MD HoD 28 Seat C",
-      "pres_margin": "+39.2",
+      "district": "26",
+      "seat_label": "MD HoD 26 Seat B",
+      "pres_margin": "+79.4",
       "holder_party": "D",
-      "candidate": "Abena Affum-McAllister",
+      "candidate": "Kris Valderrama",
       "is_open_seat": null
     },
     {
@@ -6383,11 +6373,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
-      "district": "31",
-      "seat_label": "MD HoD 31 Seat C",
-      "pres_margin": "-10.8",
-      "holder_party": "R",
-      "candidate": "Ryan Shaban",
+      "district": "28",
+      "seat_label": "MD HoD 28 Seat C",
+      "pres_margin": "+39.2",
+      "holder_party": "D",
+      "candidate": "Abena Affum-McAllister",
       "is_open_seat": null
     },
     {
@@ -6398,6 +6388,16 @@
       "pres_margin": "-10.8",
       "holder_party": "R",
       "candidate": "Heidi Schmidt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "31",
+      "seat_label": "MD HoD 31 Seat C",
+      "pres_margin": "-10.8",
+      "holder_party": "R",
+      "candidate": "Ryan Shaban",
       "is_open_seat": null
     },
     {
@@ -6444,16 +6444,6 @@
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
       "district": "39",
-      "seat_label": "MD HoD 39 Seat C",
-      "pres_margin": "+45.7",
-      "holder_party": "D",
-      "candidate": "Greg Wims",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House of Delegates",
-      "district": "39",
       "seat_label": "MD HoD 39 Seat B",
       "pres_margin": "+45.7",
       "holder_party": "D",
@@ -6463,11 +6453,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
-      "district": "40",
-      "seat_label": "MD HoD 40 Seat B",
-      "pres_margin": "+79.4",
+      "district": "39",
+      "seat_label": "MD HoD 39 Seat C",
+      "pres_margin": "+45.7",
       "holder_party": "D",
-      "candidate": "Frank Conaway",
+      "candidate": "Greg Wims",
       "is_open_seat": null
     },
     {
@@ -6478,6 +6468,16 @@
       "pres_margin": "+79.4",
       "holder_party": "D",
       "candidate": "Melissa Wells",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "40",
+      "seat_label": "MD HoD 40 Seat B",
+      "pres_margin": "+79.4",
+      "holder_party": "D",
+      "candidate": "Frank Conaway",
       "is_open_seat": null
     },
     {
@@ -6964,16 +6964,6 @@
       "election_type": "Primary_R",
       "chamber": "House of Delegates",
       "district": "4",
-      "seat_label": "MD HoD 4 Seat B",
-      "pres_margin": "-6.1",
-      "holder_party": "R",
-      "candidate": "April Miller",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_R",
-      "chamber": "House of Delegates",
-      "district": "4",
       "seat_label": "MD HoD 4 Seat C",
       "pres_margin": "-6.1",
       "holder_party": "R",
@@ -6983,11 +6973,11 @@
     {
       "election_type": "Primary_R",
       "chamber": "House of Delegates",
-      "district": "5",
-      "seat_label": "MD HoD 5 Seat B",
-      "pres_margin": "-21.2",
+      "district": "4",
+      "seat_label": "MD HoD 4 Seat B",
+      "pres_margin": "-6.1",
       "holder_party": "R",
-      "candidate": "April Rose",
+      "candidate": "April Miller",
       "is_open_seat": null
     },
     {
@@ -7003,11 +6993,11 @@
     {
       "election_type": "Primary_R",
       "chamber": "House of Delegates",
-      "district": "6",
-      "seat_label": "MD HoD 6 Seat B",
-      "pres_margin": "-17.9",
+      "district": "5",
+      "seat_label": "MD HoD 5 Seat B",
+      "pres_margin": "-21.2",
       "holder_party": "R",
-      "candidate": "Bob Long",
+      "candidate": "April Rose",
       "is_open_seat": null
     },
     {
@@ -7023,11 +7013,11 @@
     {
       "election_type": "Primary_R",
       "chamber": "House of Delegates",
-      "district": "8",
-      "seat_label": "MD HoD 8 Seat B",
-      "pres_margin": "+25.9",
-      "holder_party": "D",
-      "candidate": "Brian Campbell",
+      "district": "6",
+      "seat_label": "MD HoD 6 Seat B",
+      "pres_margin": "-17.9",
+      "holder_party": "R",
+      "candidate": "Bob Long",
       "is_open_seat": null
     },
     {
@@ -7038,6 +7028,16 @@
       "pres_margin": "+25.9",
       "holder_party": "D",
       "candidate": "Glen Geelhaar",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "8",
+      "seat_label": "MD HoD 8 Seat B",
+      "pres_margin": "+25.9",
+      "holder_party": "D",
+      "candidate": "Brian Campbell",
       "is_open_seat": null
     },
     {
