@@ -169,15 +169,8 @@
     color: #999;
     font-style: italic;
   }
-  .roster-table .multi-member-names {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2px 12px;
-    line-height: 1.5;
-  }
-  .roster-table .multi-member-names .mm-name {
-    white-space: nowrap;
-  }
+  .roster-table .mm-group-first td { border-top: 2px solid #ddd; }
+  .roster-table .mm-group-mid td { border-bottom: none; }
   .roster-table .seats-badge {
     display: inline-block;
     font-size: 10px;
@@ -580,66 +573,131 @@
       });
 
       tbody2.innerHTML = '';
-      for (const r of sorted) {
-        const tr = document.createElement('tr');
 
-        // ── District cell ──
-        const dtd = tr.insertCell();
+      // Helper: build margin cell content
+      function buildMarginCell(td, r) {
+        if (r.pres_margin) {
+          const maxM = 40;
+          const absM = Math.min(Math.abs(r.marginVal), maxM);
+          const widthPct = (absM / maxM) * 50;
+          const isD = r.marginVal > 0;
+          const barColor = isD ? 'var(--ms-dem-blue)' : 'var(--ms-rep-red)';
+          const leftPos = isD ? (50 - widthPct) : 50;
+          const marginLabel = r.marginVal > 0 ? `D+${r.marginVal.toFixed(1)}`
+                            : r.marginVal < 0 ? `R+${Math.abs(r.marginVal).toFixed(1)}`
+                            : 'Even';
+          td.innerHTML = `<div class="margin-cell">
+            <div class="margin-bar-wrap">
+              <div class="center-line"></div>
+              <div class="margin-bar-fill" style="left:${leftPos}%;width:${widthPct}%;background:${barColor}"></div>
+            </div>
+            <span class="margin-text" style="color:${barColor}">${marginLabel}</span>
+          </div>`;
+        } else {
+          td.textContent = '—';
+        }
+      }
+
+      // Helper: build next-election cell content
+      function buildElectionCell(td, r) {
+        if (r.next_election) {
+          const is2026 = r.next_election === 2026;
+          const badge = document.createElement('span');
+          badge.className = 'up-badge';
+          if (!is2026) badge.style.cssText = 'background:#eee;color:#999';
+          badge.textContent = r.next_election;
+          badge.style.cursor = 'help';
+          badge.addEventListener('mouseenter', () => {
+            tt.show(`<div class="tt-title">General Election</div><div>${electionDateStr(r.next_election)}</div>`);
+          });
+          badge.addEventListener('mousemove', (e) => tt.move(e));
+          badge.addEventListener('mouseleave', () => tt.hide());
+          td.appendChild(badge);
+        }
+      }
+
+      // Helper: build district link
+      function buildDistLink(r) {
         const distLink = document.createElement('a');
         distLink.href = `district.html?st=${stateAbbr}&chamber=${encodeURIComponent(ch)}&d=${encodeURIComponent(r.district)}`;
         distLink.style.textDecoration = 'none';
         distLink.style.fontWeight = '600';
         distLink.addEventListener('mouseenter', () => distLink.style.textDecoration = 'underline');
         distLink.addEventListener('mouseleave', () => distLink.style.textDecoration = 'none');
+        return distLink;
+      }
 
+      for (const r of sorted) {
         if (r.isMulti) {
-          // ── Multi-member district row ──
-          const linkColor = r.party ? getPartyColor(r.party) : 'var(--ms-navy)';
-          distLink.style.color = linkColor;
-          distLink.textContent = r.distLabel;
-          dtd.appendChild(distLink);
-          const seatsBadge = document.createElement('span');
-          seatsBadge.className = 'seats-badge';
-          seatsBadge.textContent = `${r.seatCount} seats`;
-          dtd.appendChild(seatsBadge);
-
-          // Member names — compact inline list
-          const ntd = tr.insertCell();
-          const namesDiv = document.createElement('div');
-          namesDiv.className = 'multi-member-names';
-          for (const m of r.members) {
-            const span = document.createElement('span');
-            span.className = 'mm-name';
-            if (m.name) {
-              const pc = getPartyColor(m.party);
-              span.innerHTML = `<span class="party-badge ${partyBadgeClass(m.party)}" style="font-size:9px;padding:0 4px;vertical-align:1px">${m.party || '?'}</span> <span style="color:${pc || 'inherit'}">${m.name}</span>`;
-            } else {
-              span.innerHTML = '<span style="color:#999;font-style:italic">Vacant</span>';
+          // ── Multi-member: one <tr> per member, rowspan on district/margin/election ──
+          const span = r.members.length;
+          r.members.forEach((m, idx) => {
+            const tr = document.createElement('tr');
+            if (idx === 0) tr.className = 'mm-group-first';
+            if (idx < span - 1) tr.classList.add('mm-group-mid');
+            if (idx === 0) {
+              // District cell (rowspan)
+              const dtd = tr.insertCell();
+              dtd.rowSpan = span;
+              dtd.style.verticalAlign = 'top';
+              const distLink = buildDistLink(r);
+              const linkColor = r.party ? getPartyColor(r.party) : 'var(--ms-navy)';
+              distLink.style.color = linkColor;
+              distLink.textContent = r.distLabel;
+              dtd.appendChild(distLink);
+              const seatsBadge = document.createElement('span');
+              seatsBadge.className = 'seats-badge';
+              seatsBadge.textContent = `${r.seatCount} seats`;
+              dtd.appendChild(seatsBadge);
             }
-            namesDiv.appendChild(span);
-          }
-          ntd.appendChild(namesDiv);
 
-          // Party column — show breakdown like "2R, 1D"
-          const ptd = tr.insertCell();
-          ptd.className = 'party-col';
-          const partyCounts = {};
-          for (const m of r.members) {
-            const p = m.name ? (m.party || '?') : null;
-            if (p) partyCounts[p] = (partyCounts[p] || 0) + 1;
-          }
-          const breakdown = Object.entries(partyCounts)
-            .sort((a, b) => b[1] - a[1])
-            .map(([p, c]) => `<span style="color:${getPartyColor(p)};font-weight:600">${c}${p}</span>`)
-            .join(' ');
-          const vacantPart = r.vacantCount > 0 ? ` <span style="color:#999">${r.vacantCount}V</span>` : '';
-          ptd.innerHTML = `<span style="font-size:11px;white-space:nowrap">${breakdown}${vacantPart}</span>`;
+            // Member name cell
+            const ntd = tr.insertCell();
+            const pc = m.name ? getPartyColor(m.party) : '';
+            if (m.name) {
+              ntd.textContent = m.name;
+              if (pc) ntd.style.color = pc;
+            } else {
+              ntd.textContent = 'Vacant';
+              ntd.style.color = '#999';
+              ntd.style.fontStyle = 'italic';
+              tr.className = 'vacant-row';
+            }
+
+            // Party badge cell
+            const ptd = tr.insertCell();
+            ptd.className = 'party-col';
+            if (m.name && m.party) {
+              ptd.innerHTML = `<span class="party-badge ${partyBadgeClass(m.party)}" style="font-size:11px;padding:1px 6px">${m.party}</span>`;
+            } else if (!m.name) {
+              ptd.textContent = '—';
+            }
+
+            if (idx === 0) {
+              // Margin cell (rowspan)
+              const mtd = tr.insertCell();
+              mtd.rowSpan = span;
+              mtd.style.verticalAlign = 'middle';
+              buildMarginCell(mtd, r);
+
+              // Next election cell (rowspan)
+              const utd = tr.insertCell();
+              utd.rowSpan = span;
+              utd.style.verticalAlign = 'middle';
+              buildElectionCell(utd, r);
+            }
+
+            tbody2.appendChild(tr);
+          });
 
         } else {
           // ── Single-member district row ──
+          const tr = document.createElement('tr');
           const partyColor = getPartyColor(r.party);
           if (!r.name) tr.className = 'vacant-row';
 
+          const dtd = tr.insertCell();
+          const distLink = buildDistLink(r);
           distLink.textContent = r.distLabel;
           if (partyColor) distLink.style.color = partyColor;
           else distLink.style.color = 'var(--ms-navy)';
@@ -671,49 +729,17 @@
           } else {
             ptd.textContent = '—';
           }
-        }
 
-        // ── Margin mini-bar (same for both) ──
-        const mtd = tr.insertCell();
-        if (r.pres_margin) {
-          const maxM = 40;
-          const absM = Math.min(Math.abs(r.marginVal), maxM);
-          const widthPct = (absM / maxM) * 50;
-          const isD = r.marginVal > 0;
-          const barColor = isD ? 'var(--ms-dem-blue)' : 'var(--ms-rep-red)';
-          const leftPos = isD ? (50 - widthPct) : 50;
-          const marginLabel = r.marginVal > 0 ? `D+${r.marginVal.toFixed(1)}`
-                            : r.marginVal < 0 ? `R+${Math.abs(r.marginVal).toFixed(1)}`
-                            : 'Even';
-          mtd.innerHTML = `<div class="margin-cell">
-            <div class="margin-bar-wrap">
-              <div class="center-line"></div>
-              <div class="margin-bar-fill" style="left:${leftPos}%;width:${widthPct}%;background:${barColor}"></div>
-            </div>
-            <span class="margin-text" style="color:${barColor}">${marginLabel}</span>
-          </div>`;
-        } else {
-          mtd.textContent = '—';
-        }
+          // Margin
+          const mtd = tr.insertCell();
+          buildMarginCell(mtd, r);
 
-        // ── Next election ──
-        const utd = tr.insertCell();
-        if (r.next_election) {
-          const is2026 = r.next_election === 2026;
-          const badge = document.createElement('span');
-          badge.className = 'up-badge';
-          if (!is2026) badge.style.cssText = 'background:#eee;color:#999';
-          badge.textContent = r.next_election;
-          badge.style.cursor = 'help';
-          badge.addEventListener('mouseenter', () => {
-            tt.show(`<div class="tt-title">General Election</div><div>${electionDateStr(r.next_election)}</div>`);
-          });
-          badge.addEventListener('mousemove', (e) => tt.move(e));
-          badge.addEventListener('mouseleave', () => tt.hide());
-          utd.appendChild(badge);
-        }
+          // Next election
+          const utd = tr.insertCell();
+          buildElectionCell(utd, r);
 
-        tbody2.appendChild(tr);
+          tbody2.appendChild(tr);
+        }
       }
     }
 
