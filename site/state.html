@@ -169,6 +169,26 @@
     color: #999;
     font-style: italic;
   }
+  .roster-table .multi-member-names {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 12px;
+    line-height: 1.5;
+  }
+  .roster-table .multi-member-names .mm-name {
+    white-space: nowrap;
+  }
+  .roster-table .seats-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    background: #e8eef3;
+    color: var(--ms-text-light);
+    border-radius: 3px;
+    padding: 1px 5px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
   .roster-table .party-col { width: 40px; text-align: center; }
   .margin-cell {
     display: flex;
@@ -453,7 +473,6 @@
     if (!members || members.length === 0) continue;
 
     const det = document.createElement('details');
-    det.open = sortedChambers.length <= 2 && members.length <= 150;
     const wrap = document.createElement('div');
     wrap.className = 'roster-wrap';
 
@@ -484,29 +503,68 @@
     const tbody2 = document.createElement('tbody');
     table.appendChild(tbody2);
 
-    // Prepare rows data
-    const rows = members.map(m => {
-      const distLabel = m.district_name || (m.seat_designator ? m.district + m.seat_designator : m.district);
-      const marginVal = parseMargin(m.pres_margin);
-      const distSuffix = m.seat_designator || '';
-      return { ...m, distLabel, marginVal, distSuffix };
-    });
+    // Group members by district for multi-member collapse
+    const distGroups = new Map();
+    for (const m of members) {
+      const key = m.district;
+      if (!distGroups.has(key)) distGroups.set(key, []);
+      distGroups.get(key).push(m);
+    }
+
+    // Build row data: one row per district
+    const rows = [];
+    for (const [dist, group] of distGroups) {
+      const first = group[0];
+      const isMulti = group.length > 1;
+      const distLabel = first.district_name || first.district;
+      const marginVal = parseMargin(first.pres_margin);
+      const filled = group.filter(m => m.name);
+      const vacantCount = group.length - filled.length;
+      // For single-member, majority party; for multi, dominant party for link color
+      const majorityParty = filled.length > 0
+        ? (filled.reduce((acc, m) => { acc[m.party] = (acc[m.party] || 0) + 1; return acc; }, {}))
+        : {};
+      const topParty = Object.entries(majorityParty).sort((a, b) => b[1] - a[1])[0]?.[0] || null;
+
+      rows.push({
+        district: dist,
+        distLabel,
+        marginVal,
+        pres_margin: first.pres_margin,
+        next_election: first.next_election,
+        isMulti,
+        seatCount: group.length,
+        members: group,
+        filled,
+        vacantCount,
+        // For single-member rows, keep individual fields
+        name: isMulti ? null : first.name,
+        party: isMulti ? topParty : first.party,
+        caucus: isMulti ? null : first.caucus,
+      });
+    }
 
     // Natural sort comparator for districts (handles "1", "10", "Belknap-1", etc.)
     const distCollator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
 
+    det.open = sortedChambers.length <= 2 && rows.length <= 200;
+
     let sortCol = 'district';
     let sortAsc = true;
+
+    function getPartyColor(party) {
+      return party === 'D' ? 'var(--ms-dem-blue)' : party === 'R' ? 'var(--ms-rep-red)' : party === 'I' ? 'var(--ms-purple)' : party === 'NP' ? 'var(--ms-gold)' : '';
+    }
 
     function renderRows() {
       const sorted = rows.slice().sort((a, b) => {
         let cmp = 0;
         switch (sortCol) {
           case 'district':
-            cmp = distCollator.compare(a.district, b.district) || a.distSuffix.localeCompare(b.distSuffix);
+            cmp = distCollator.compare(a.district, b.district);
             break;
           case 'name':
-            cmp = (a.name || 'zzz').localeCompare(b.name || 'zzz');
+            cmp = (a.name || a.distLabel || 'zzz').localeCompare(b.name || b.distLabel || 'zzz');
             break;
           case 'party':
             cmp = (a.party || 'zzz').localeCompare(b.party || 'zzz');
@@ -524,52 +582,98 @@
       tbody2.innerHTML = '';
       for (const r of sorted) {
         const tr = document.createElement('tr');
-        if (!r.name) tr.className = 'vacant-row';
 
-        // Party color for text — use caucus color for NE (r.party is already COALESCE(caucus, party))
-        const partyColor = r.party === 'D' ? 'var(--ms-dem-blue)' : r.party === 'R' ? 'var(--ms-rep-red)' : r.party === 'I' ? 'var(--ms-purple)' : r.party === 'NP' ? 'var(--ms-gold)' : '';
-
-        // District — link to district detail page
+        // ── District cell ──
         const dtd = tr.insertCell();
         const distLink = document.createElement('a');
         distLink.href = `district.html?st=${stateAbbr}&chamber=${encodeURIComponent(ch)}&d=${encodeURIComponent(r.district)}`;
-        distLink.textContent = r.distLabel;
         distLink.style.textDecoration = 'none';
         distLink.style.fontWeight = '600';
-        if (partyColor) distLink.style.color = partyColor;
-        else distLink.style.color = 'var(--ms-navy)';
         distLink.addEventListener('mouseenter', () => distLink.style.textDecoration = 'underline');
         distLink.addEventListener('mouseleave', () => distLink.style.textDecoration = 'none');
-        dtd.appendChild(distLink);
 
-        // Member name + caucus annotation for special cases (NE nonpartisan, AK coalition)
-        const ntd = tr.insertCell();
-        let caucusNote = '';
-        if (stateAbbr === 'NE' && r.name) {
-          if (r.party === 'R') caucusNote = ' <span class="text-muted text-sm">(caucuses with Republicans)</span>';
-          else if (r.party === 'D') caucusNote = ' <span class="text-muted text-sm">(caucuses with Democrats)</span>';
-        } else if (r.caucus === 'C' && r.name) {
-          caucusNote = ' <span class="text-sm" style="color:var(--ms-purple);font-style:italic">(majority coalition)</span>';
-        }
-        if (caucusNote) {
-          ntd.innerHTML = `<span style="color:${partyColor || 'var(--ms-other)'}">${r.name}</span>${caucusNote}`;
+        if (r.isMulti) {
+          // ── Multi-member district row ──
+          const linkColor = r.party ? getPartyColor(r.party) : 'var(--ms-navy)';
+          distLink.style.color = linkColor;
+          distLink.textContent = r.distLabel;
+          dtd.appendChild(distLink);
+          const seatsBadge = document.createElement('span');
+          seatsBadge.className = 'seats-badge';
+          seatsBadge.textContent = `${r.seatCount} seats`;
+          dtd.appendChild(seatsBadge);
+
+          // Member names — compact inline list
+          const ntd = tr.insertCell();
+          const namesDiv = document.createElement('div');
+          namesDiv.className = 'multi-member-names';
+          for (const m of r.members) {
+            const span = document.createElement('span');
+            span.className = 'mm-name';
+            if (m.name) {
+              const pc = getPartyColor(m.party);
+              span.innerHTML = `<span class="party-badge ${partyBadgeClass(m.party)}" style="font-size:9px;padding:0 4px;vertical-align:1px">${m.party || '?'}</span> <span style="color:${pc || 'inherit'}">${m.name}</span>`;
+            } else {
+              span.innerHTML = '<span style="color:#999;font-style:italic">Vacant</span>';
+            }
+            namesDiv.appendChild(span);
+          }
+          ntd.appendChild(namesDiv);
+
+          // Party column — show breakdown like "2R, 1D"
+          const ptd = tr.insertCell();
+          ptd.className = 'party-col';
+          const partyCounts = {};
+          for (const m of r.members) {
+            const p = m.name ? (m.party || '?') : null;
+            if (p) partyCounts[p] = (partyCounts[p] || 0) + 1;
+          }
+          const breakdown = Object.entries(partyCounts)
+            .sort((a, b) => b[1] - a[1])
+            .map(([p, c]) => `<span style="color:${getPartyColor(p)};font-weight:600">${c}${p}</span>`)
+            .join(' ');
+          const vacantPart = r.vacantCount > 0 ? ` <span style="color:#999">${r.vacantCount}V</span>` : '';
+          ptd.innerHTML = `<span style="font-size:11px;white-space:nowrap">${breakdown}${vacantPart}</span>`;
+
         } else {
-          ntd.textContent = r.name || 'Vacant';
-          if (partyColor) ntd.style.color = partyColor;
+          // ── Single-member district row ──
+          const partyColor = getPartyColor(r.party);
+          if (!r.name) tr.className = 'vacant-row';
+
+          distLink.textContent = r.distLabel;
+          if (partyColor) distLink.style.color = partyColor;
+          else distLink.style.color = 'var(--ms-navy)';
+          dtd.appendChild(distLink);
+
+          // Member name + caucus annotation
+          const ntd = tr.insertCell();
+          let caucusNote = '';
+          if (stateAbbr === 'NE' && r.name) {
+            if (r.party === 'R') caucusNote = ' <span class="text-muted text-sm">(caucuses with Republicans)</span>';
+            else if (r.party === 'D') caucusNote = ' <span class="text-muted text-sm">(caucuses with Democrats)</span>';
+          } else if (r.caucus === 'C' && r.name) {
+            caucusNote = ' <span class="text-sm" style="color:var(--ms-purple);font-style:italic">(majority coalition)</span>';
+          }
+          if (caucusNote) {
+            ntd.innerHTML = `<span style="color:${partyColor || 'var(--ms-other)'}">${r.name}</span>${caucusNote}`;
+          } else {
+            ntd.textContent = r.name || 'Vacant';
+            if (partyColor) ntd.style.color = partyColor;
+          }
+
+          // Party badge
+          const ptd = tr.insertCell();
+          ptd.className = 'party-col';
+          if (stateAbbr === 'NE' && r.name) {
+            ptd.innerHTML = `<span class="party-badge party-np" style="font-size:11px;padding:1px 6px">NP</span>`;
+          } else if (r.party) {
+            ptd.innerHTML = `<span class="party-badge ${partyBadgeClass(r.party)}" style="font-size:11px;padding:1px 6px">${r.party}</span>`;
+          } else {
+            ptd.textContent = '—';
+          }
         }
 
-        // Party badge — NE is officially nonpartisan; everyone else shows actual party
-        const ptd = tr.insertCell();
-        ptd.className = 'party-col';
-        if (stateAbbr === 'NE' && r.name) {
-          ptd.innerHTML = `<span class="party-badge party-np" style="font-size:11px;padding:1px 6px">NP</span>`;
-        } else if (r.party) {
-          ptd.innerHTML = `<span class="party-badge ${partyBadgeClass(r.party)}" style="font-size:11px;padding:1px 6px">${r.party}</span>`;
-        } else {
-          ptd.textContent = '—';
-        }
-
-        // Margin mini-bar
+        // ── Margin mini-bar (same for both) ──
         const mtd = tr.insertCell();
         if (r.pres_margin) {
           const maxM = 40;
@@ -592,7 +696,7 @@
           mtd.textContent = '—';
         }
 
-        // Next election
+        // ── Next election ──
         const utd = tr.insertCell();
         if (r.next_election) {
           const is2026 = r.next_election === 2026;
@@ -640,7 +744,10 @@
     renderRows();
     wrap.appendChild(table);
     const summary = document.createElement('summary');
-    summary.textContent = `${ch} (${members.length} members)`;
+    const hasMulti = rows.some(r => r.isMulti);
+    summary.textContent = hasMulti
+      ? `${ch} (${members.length} members across ${rows.length} districts)`
+      : `${ch} (${members.length} members)`;
     det.appendChild(summary);
     det.appendChild(wrap);
     rosterContainer.appendChild(det);

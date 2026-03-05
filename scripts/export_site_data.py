@@ -183,6 +183,7 @@ def export_states_summary(dry_run=False):
         JOIN districts d ON s.district_id = d.id
         JOIN states st ON d.state_id = st.id
         WHERE s.office_level = 'Legislative'
+          AND COALESCE(d.redistricting_cycle, '2022') = '2022'
         GROUP BY st.abbreviation, st.state_name, st.senate_seats, st.house_seats,
                  st.next_gov_election_year, d.chamber
         ORDER BY st.abbreviation, d.chamber
@@ -467,6 +468,7 @@ def export_pres_margins(dry_run=False):
         JOIN districts d ON s.district_id = d.id
         JOIN states st ON d.state_id = st.id
         WHERE s.office_level = 'Legislative'
+          AND COALESCE(d.redistricting_cycle, '2022') = '2022'
         ORDER BY st.abbreviation, d.chamber,
             CASE WHEN d.district_number SIMILAR TO '[0-9]+' THEN d.district_number::int ELSE 99999 END,
             d.district_number, s.seat_designator
@@ -561,6 +563,7 @@ def export_state_detail(state_abbr, dry_run=False):
         JOIN states st ON d.state_id = st.id
         WHERE st.abbreviation = '{state_abbr}'
           AND s.office_level = 'Legislative'
+          AND COALESCE(d.redistricting_cycle, '2022') = '2022'
         ORDER BY d.chamber,
             CASE WHEN d.district_number SIMILAR TO '[0-9]+' THEN d.district_number::int ELSE 99999 END,
             d.district_number, s.seat_designator
@@ -934,6 +937,7 @@ def export_all_state_details(dry_run=False):
         JOIN districts d ON s.district_id = d.id
         JOIN states st ON d.state_id = st.id
         WHERE s.office_level = 'Legislative'
+          AND COALESCE(d.redistricting_cycle, '2022') = '2022'
         ORDER BY st.abbreviation, d.chamber,
             CASE WHEN d.district_number SIMILAR TO '[0-9]+' THEN d.district_number::int ELSE 99999 END,
             d.district_number, s.seat_designator
