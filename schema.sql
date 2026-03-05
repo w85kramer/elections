@@ -98,7 +98,7 @@ CREATE TABLE elections (
     election_type   TEXT NOT NULL CHECK (election_type IN (
                         'General', 'General_Runoff',
                         'Primary', 'Primary_D', 'Primary_R', 'Primary_Nonpartisan', 'Primary_Runoff',
-                        'Special', 'Special_Primary', 'Special_Runoff',
+                        'Special', 'Special_Primary', 'Special_Primary_D', 'Special_Primary_R', 'Special_Runoff',
                         'Recall'
                     )),
     related_election_id INTEGER REFERENCES elections(id),  -- links primary→general, runoff→parent
