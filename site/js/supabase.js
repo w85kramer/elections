@@ -69,7 +69,7 @@ async function fetchLiveElections(seatIds) {
   const select = 'id,seat_id,election_type,election_date,election_year,' +
     'result_status,total_votes_cast,is_open_seat,filing_deadline,forecast_rating,' +
     'precincts_reporting,precincts_total,' +
-    'candidacies(party,caucus,votes_received,vote_percentage,result,is_incumbent,is_write_in,' +
+    'candidacies(candidate_id,party,caucus,votes_received,vote_percentage,result,is_incumbent,is_write_in,' +
     'candidates(full_name))';
 
   const seatList = seatIds.join(',');
@@ -100,6 +100,7 @@ async function fetchLiveElections(seatIds) {
 function transformElection(pg) {
   const candidates = (pg.candidacies || []).map(function(cy) {
     var obj = {
+      id: cy.candidate_id,
       name: cy.candidates ? cy.candidates.full_name : 'Unknown',
       party: cy.party,
       votes: cy.votes_received,

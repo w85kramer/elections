@@ -124,6 +124,7 @@ def export_all_districts(dry_run=False, single_state=None):
         SELECT
             st.abbreviation as state,
             cy.election_id,
+            cy.candidate_id,
             c.full_name as name,
             cy.party,
             cy.caucus,
@@ -338,6 +339,7 @@ def export_all_districts(dry_run=False, single_state=None):
             candidate_list = []
             for c in cands:
                 cand_obj = {
+                    'id': c['candidate_id'],
                     'name': c['name'],
                     'party': c['party'],
                     'votes': c['votes'],

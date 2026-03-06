@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candidate | State Elections Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<style>
+  /* Hero */
+  .candidate-hero { margin-bottom: 32px; }
+  .candidate-name {
+    font-weight: 800;
+    font-size: 38px;
+    color: var(--ms-navy);
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .candidate-office {
+    font-size: 16px;
+    margin-top: 6px;
+  }
+  .candidate-office a {
+    color: var(--ms-dem-blue);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .candidate-office a:hover { text-decoration: underline; }
+  .candidate-meta {
+    font-size: 14px;
+    color: var(--ms-text-light);
+    margin-top: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+  }
+
+  /* Offices held summary */
+  .offices-summary {
+    margin-bottom: 8px;
+  }
+  .office-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    padding: 4px 0;
+  }
+  .office-line a {
+    color: var(--ms-dem-blue);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .office-line a:hover { text-decoration: underline; }
+  .office-tenure {
+    color: var(--ms-text-light);
+    font-size: 13px;
+  }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 24px; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #ddd;
+  }
+  .timeline-year {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--ms-navy);
+    padding: 16px 0 8px;
+    position: relative;
+  }
+  .timeline-year::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 22px;
+    width: 10px;
+    height: 10px;
+    background: var(--ms-navy);
+    border-radius: 50%;
+  }
+  .timeline-entry {
+    position: relative;
+    margin-bottom: 12px;
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    overflow: hidden;
+  }
+  .timeline-entry::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 18px;
+    width: 8px;
+    height: 8px;
+    background: #bbb;
+    border-radius: 50%;
+  }
+  .timeline-entry.entry-won::before { background: #28a745; }
+  .timeline-entry.entry-lost::before { background: var(--ms-rep-red); }
+  .timeline-entry.entry-pending::before { background: var(--ms-gold); }
+
+  /* Entry styling by type */
+  .timeline-entry.entry-general { border-left: 4px solid var(--ms-navy); }
+  .timeline-entry.entry-special { border-left: 4px solid var(--ms-navy); }
+  .timeline-entry.entry-primary { border-left: 4px solid #ccc; }
+  .timeline-entry.entry-upcoming { border-left: 4px solid var(--ms-gold); }
+
+  .entry-header {
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--ms-text-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .entry-type {
+    font-weight: 700;
+    color: var(--ms-navy);
+  }
+  .entry-district a {
+    color: var(--ms-dem-blue);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .entry-district a:hover { text-decoration: underline; }
+
+  /* Candidate rows inside timeline entry */
+  .entry-candidates {
+    padding: 0 14px 10px;
+  }
+  .entry-cand-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    gap: 8px;
+    align-items: center;
+    padding: 3px 0;
+    font-size: 13px;
+  }
+  .entry-cand-row.subject-row {
+    font-weight: 700;
+    background: rgba(4, 56, 88, 0.03);
+    margin: 0 -14px;
+    padding: 4px 14px;
+  }
+  .cand-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .cand-name a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .cand-name a:hover { text-decoration: underline; }
+  .cand-pct { text-align: right; font-weight: 600; min-width: 50px; }
+  .cand-votes { text-align: right; color: var(--ms-text-light); min-width: 60px; font-size: 12px; }
+  .cand-result { text-align: right; min-width: 40px; font-size: 12px; }
+  .cand-result-won { color: #28a745; font-weight: 700; }
+  .cand-result-lost { color: var(--ms-rep-red); }
+
+  /* Party switch event in timeline */
+  .timeline-event {
+    position: relative;
+    margin-bottom: 12px;
+    padding: 8px 14px;
+    border-radius: var(--ms-radius);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .timeline-event::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .timeline-event.party-switch-event {
+    background: #fff8e1;
+    border-left: 3px solid #f5a623;
+  }
+  .timeline-event.party-switch-event::before { background: #f5a623; }
+
+  .primary-muted { opacity: 0.7; }
+  .primary-muted .entry-header { color: #999; }
+  .primary-muted .entry-type { color: #888; font-weight: 600; }
+
+  .error-msg {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--ms-text-light);
+  }
+  .error-msg h2 { color: var(--ms-navy); margin-bottom: 12px; }
+
+  @media (max-width: 768px) {
+    .candidate-name { font-size: 28px; }
+    .entry-cand-row {
+      grid-template-columns: auto 1fr auto auto;
+      font-size: 12px;
+    }
+    .cand-votes { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+  <!-- Header -->
+  <div class="site-header">
+    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
+    <a href="index.html" class="site-title">State Elections Tracker</a>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb" id="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; <span>Loading...</span>
+  </div>
+
+  <!-- Content -->
+  <div id="page-content"></div>
+
+  <!-- Footer -->
+  <div class="site-footer">
+    <img src="assets/multistate-logomark.png" alt="MultiState">
+    <span class="footer-text">Source: MultiState. Data generated <span id="gen-date"></span>.</span>
+  </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script>
+(async function() {
+  const params = new URLSearchParams(window.location.search);
+  const candidateId = parseInt(params.get('id'), 10);
+  const content = document.getElementById('page-content');
+
+  if (!candidateId) {
+    content.innerHTML = `<div class="error-msg"><h2>Candidate Not Found</h2>
+      <p>No candidate ID specified. Browse candidates from a <a href="index.html#states">state page</a>.</p></div>`;
+    return;
+  }
+
+  // We need to find which state file contains this candidate.
+  // Strategy: check URL hint param ?st=XX first, then scan all states.
+  const stateHint = (params.get('st') || '').toUpperCase();
+  let candidateData = null;
+  let stateFileData = null;
+
+  async function findInState(st) {
+    try {
+      const data = await loadJSON(`data/candidates/${st}.json`);
+      const cand = data.candidates.find(c => c.id === candidateId);
+      if (cand) {
+        candidateData = cand;
+        stateFileData = data;
+        return true;
+      }
+    } catch(e) {}
+    return false;
+  }
+
+  // Try hint state first
+  if (stateHint && STATE_NAMES[stateHint]) {
+    await findInState(stateHint);
+  }
+
+  // If not found, scan all states
+  if (!candidateData) {
+    const states = Object.keys(STATE_NAMES);
+    // Try in batches to avoid too many simultaneous requests
+    for (let i = 0; i < states.length && !candidateData; i += 10) {
+      const batch = states.slice(i, i + 10).filter(s => s !== stateHint);
+      const results = await Promise.all(batch.map(s => findInState(s)));
+      if (results.some(r => r)) break;
+    }
+  }
+
+  if (!candidateData) {
+    content.innerHTML = `<div class="error-msg"><h2>Candidate Not Found</h2>
+      <p>No candidate found with ID ${candidateId}.</p>
+      <p><a href="index.html">Back to Home</a></p></div>`;
+    return;
+  }
+
+  const c = candidateData;
+  const st = stateFileData.state;
+  const stateName = STATE_NAMES[st] || st;
+
+  document.title = `${c.full_name} — ${stateName} | State Elections Tracker`;
+  document.getElementById('gen-date').textContent = formatDate(stateFileData.generated_at.split('T')[0]);
+
+  // Helper functions
+  function partyColorStyle(p) {
+    if (p === 'D') return 'color:var(--ms-dem-blue)';
+    if (p === 'R') return 'color:var(--ms-rep-red)';
+    if (p === 'I') return 'color:var(--ms-purple)';
+    if (p === 'NP') return 'color:var(--ms-gold)';
+    return 'color:var(--ms-other)';
+  }
+
+  function districtUrl(state, chamber, district) {
+    return `district.html?st=${state}&chamber=${encodeURIComponent(chamber)}&d=${encodeURIComponent(district)}`;
+  }
+
+  function districtLabel(state, chamber, district, districtName) {
+    const chamberLabel = getChamberLabel(state, chamber);
+    if (districtName && districtName !== `${chamber === 'Senate' ? 'SD' : 'HD'}-${district}`) {
+      return `${state} ${chamberLabel} ${districtName}`;
+    }
+    return `${state} ${chamberLabel} District ${district}`;
+  }
+
+  function shortDistrictLabel(state, chamber, district) {
+    const chamberShort = chamber === 'Senate' ? 'SD' : (chamber === 'Legislature' ? 'LD' : 'HD');
+    return `${state} ${chamberShort}-${district}`;
+  }
+
+  function forecastClass(rating) {
+    if (!rating) return '';
+    const r = rating.toLowerCase();
+    if (r.includes('toss')) return 'forecast-tossup';
+    if (r.includes('lean d') || r.includes('tilt d')) return 'forecast-lean-d';
+    if (r.includes('lean r') || r.includes('tilt r')) return 'forecast-lean-r';
+    if (r.includes('likely d')) return 'forecast-likely-d';
+    if (r.includes('likely r')) return 'forecast-likely-r';
+    if (r.includes('solid d') || r.includes('safe d')) return 'forecast-solid-d';
+    if (r.includes('solid r') || r.includes('safe r')) return 'forecast-solid-r';
+    return '';
+  }
+
+  // Determine display party (prefer caucus)
+  const displayParty = c.party || (c.candidacies && c.candidacies.length > 0
+    ? (c.candidacies[0].caucus || c.candidacies[0].party) : '');
+
+  // Breadcrumb
+  document.getElementById('breadcrumb').innerHTML = `
+    <a href="index.html">Home</a> &rsaquo;
+    <a href="state.html?st=${st}">${stateName}</a> &rsaquo;
+    <span>${c.full_name}</span>`;
+
+  // ==========================
+  // 1. HERO SECTION
+  // ==========================
+  let heroHtml = `<div class="candidate-hero">
+    <div class="candidate-name">
+      <span class="party-badge ${partyBadgeClass(displayParty)}">${displayParty || '?'}</span>
+      ${c.full_name}
+    </div>`;
+
+  if (c.current_office) {
+    const co = c.current_office;
+    const url = districtUrl(co.state, co.chamber, co.district);
+    const label = districtLabel(co.state, co.chamber, co.district, co.district_name);
+    const sinceStr = co.since ? `, since ${formatDate(co.since)}` : '';
+    heroHtml += `<div class="candidate-office">
+      <a href="${url}">${label}</a>${sinceStr}
+    </div>`;
+  }
+
+  const metaParts = [];
+  if (c.hometown) metaParts.push(c.hometown);
+  if (c.gender === 'M') metaParts.push('Male');
+  else if (c.gender === 'F') metaParts.push('Female');
+  if (metaParts.length > 0) {
+    heroHtml += `<div class="candidate-meta">${metaParts.join(' &middot; ')}</div>`;
+  }
+  heroHtml += `</div>`;
+
+  // ==========================
+  // 2. OFFICES HELD SUMMARY
+  // ==========================
+  let officesHtml = '';
+  const terms = c.seat_terms || [];
+  if (terms.length > 0) {
+    officesHtml = `<div class="section"><div class="section-title">Offices Held</div><div class="offices-summary">`;
+    // Show most recent first
+    const sortedTerms = terms.slice().sort((a, b) => (b.start_date || '').localeCompare(a.start_date || ''));
+    for (const t of sortedTerms) {
+      const url = districtUrl(t.state, t.chamber, t.district);
+      const label = shortDistrictLabel(t.state, t.chamber, t.district);
+      const party = t.caucus || t.party || '?';
+      const startStr = t.start_date ? formatDate(t.start_date) : '?';
+      const endStr = t.end_date ? formatDate(t.end_date) : 'present';
+      const startReason = t.start_reason ? capitalize(t.start_reason.replace('_', ' ')) : '';
+      const endReason = t.end_reason ? capitalize(t.end_reason.replace('_', ' ')) : '';
+      const reasonStr = [startReason, endReason].filter(Boolean).join(' → ');
+      officesHtml += `<div class="office-line">
+        <span class="party-badge ${partyBadgeClass(party)}" style="font-size:11px;padding:1px 6px">${party}</span>
+        <a href="${url}">${label}</a>
+        <span class="office-tenure">${startStr} – ${endStr}${reasonStr ? ' &middot; ' + reasonStr : ''}</span>
+      </div>`;
+    }
+    officesHtml += `</div></div>`;
+  }
+
+  // ==========================
+  // 3. ELECTION TIMELINE
+  // ==========================
+  // Build a unified timeline of candidacies and party switches
+  const events = [];
+
+  for (const cy of c.candidacies) {
+    events.push({
+      type: 'candidacy',
+      year: cy.year,
+      date: cy.date || `${cy.year}-01-01`,
+      data: cy,
+    });
+  }
+
+  const switches = c.party_switches || [];
+  for (const sw of switches) {
+    events.push({
+      type: 'party_switch',
+      year: sw.year,
+      date: sw.date || `${sw.year}-06-01`,
+      data: sw,
+    });
+  }
+
+  // Sort descending by year, then by date
+  events.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
+
+  let timelineHtml = '';
+  if (events.length > 0) {
+    timelineHtml = `<div class="section"><div class="section-title">Election History</div><div class="timeline">`;
+
+    let lastYear = null;
+
+    for (const ev of events) {
+      // Year header
+      if (ev.year !== lastYear) {
+        timelineHtml += `<div class="timeline-year">${ev.year}</div>`;
+        lastYear = ev.year;
+      }
+
+      if (ev.type === 'party_switch') {
+        const sw = ev.data;
+        const dateStr = sw.date ? formatDateShort(sw.date) : '';
+        const oldBadge = `<span class="party-badge ${partyBadgeClass(sw.old_party)}" style="font-size:10px;padding:1px 5px">${sw.old_party}</span>`;
+        const newBadge = `<span class="party-badge ${partyBadgeClass(sw.new_party)}" style="font-size:10px;padding:1px 5px">${sw.new_party}</span>`;
+        timelineHtml += `<div class="timeline-event party-switch-event">
+          ${dateStr ? dateStr + ' &middot; ' : ''}Party Switch: ${oldBadge} &rarr; ${newBadge}
+        </div>`;
+        continue;
+      }
+
+      const cy = ev.data;
+      const isPrimary = cy.type.includes('Primary') || cy.type.endsWith('_D') || cy.type.endsWith('_R');
+      const isSpecial = cy.type.includes('Special');
+      const isPast = cy.date && new Date(cy.date + 'T00:00:00') < new Date();
+      const isUpcoming = !isPast;
+
+      let entryClass = 'timeline-entry';
+      if (isUpcoming) entryClass += ' entry-upcoming';
+      else if (isPrimary) entryClass += ' entry-primary primary-muted';
+      else if (isSpecial) entryClass += ' entry-special';
+      else entryClass += ' entry-general';
+
+      // Result class
+      if (cy.result === 'Won' || cy.result === 'Advanced') entryClass += ' entry-won';
+      else if (cy.result === 'Lost') entryClass += ' entry-lost';
+      else if (isUpcoming || cy.result === 'Pending') entryClass += ' entry-pending';
+
+      const dateStr = cy.date ? formatDateShort(cy.date) : '';
+      const typeLabel = cy.type.replace(/_/g, ' ');
+      const distUrl = districtUrl(cy.state, cy.chamber, cy.district);
+      const distLabel = shortDistrictLabel(cy.state, cy.chamber, cy.district);
+
+      let forecastTag = '';
+      if (cy.forecast_rating) {
+        forecastTag = ` <span class="forecast-tag ${forecastClass(cy.forecast_rating)}" style="font-size:11px;padding:2px 8px">${cy.forecast_rating}</span>`;
+      }
+
+      timelineHtml += `<div class="${entryClass}">
+        <div class="entry-header">
+          <span>${dateStr}</span>
+          <span class="separator">·</span>
+          <span class="entry-type">${typeLabel}</span>
+          <span class="separator">·</span>
+          <span class="entry-district"><a href="${distUrl}">${distLabel}</a></span>
+          ${forecastTag}
+        </div>
+        <div class="entry-candidates">`;
+
+      // Build all candidates for this election (subject + opponents)
+      const allCands = [];
+      // Subject candidate first
+      allCands.push({
+        name: c.full_name,
+        id: c.id,
+        party: cy.party,
+        caucus: cy.caucus,
+        pct: cy.pct,
+        votes: cy.votes,
+        result: cy.result,
+        is_incumbent: cy.is_incumbent,
+        is_subject: true,
+      });
+      // Opponents
+      for (const opp of (cy.opponents || [])) {
+        allCands.push({
+          name: opp.name,
+          id: opp.id,
+          party: opp.party,
+          caucus: opp.caucus,
+          pct: opp.pct,
+          votes: opp.votes,
+          result: opp.result,
+          is_subject: false,
+        });
+      }
+
+      // Sort: Won/Advanced first, then by votes desc
+      allCands.sort((a, b) => {
+        const order = { Won: 0, Advanced: 1 };
+        const aOrd = order[a.result] != null ? order[a.result] : 2;
+        const bOrd = order[b.result] != null ? order[b.result] : 2;
+        if (aOrd !== bOrd) return aOrd - bOrd;
+        return (b.votes || 0) - (a.votes || 0);
+      });
+
+      for (const cand of allCands) {
+        const rowClass = cand.is_subject ? 'entry-cand-row subject-row' : 'entry-cand-row';
+        const candParty = inferParty(cand.party, cy.type, cy.state) || cand.party || '?';
+        const ep = cand.caucus || candParty;
+        const badge = `<span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty}</span>`;
+
+        let nameHtml;
+        if (cand.is_subject) {
+          nameHtml = `<span class="cand-name" style="${partyColorStyle(ep)}">${cand.name}</span>`;
+        } else {
+          nameHtml = `<span class="cand-name"><a href="candidate.html?id=${cand.id}&st=${cy.state}" style="${partyColorStyle(ep)}">${cand.name}</a></span>`;
+        }
+
+        const pctStr = cand.pct != null ? `${cand.pct.toFixed(1)}%` : '';
+        const votesStr = cand.votes != null ? numberWithCommas(cand.votes) : '';
+        let resultStr = '';
+        if (cand.result === 'Won') resultStr = '<span class="cand-result-won">Won</span>';
+        else if (cand.result === 'Lost') resultStr = '<span class="cand-result-lost">Lost</span>';
+        else if (cand.result === 'Advanced') resultStr = '<span class="cand-result-won">Adv.</span>';
+        else if (cand.result) resultStr = cand.result;
+
+        const incStr = cand.is_incumbent ? ' <span class="incumbent-marker">(i)</span>' : '';
+
+        timelineHtml += `<div class="${rowClass}">
+          ${badge}
+          ${nameHtml}${incStr}
+          <span class="cand-pct">${pctStr}</span>
+          <span class="cand-votes">${votesStr}</span>
+          <span class="cand-result">${resultStr}</span>
+        </div>`;
+      }
+
+      timelineHtml += `</div></div>`;
+    }
+
+    timelineHtml += `</div></div>`;
+  }
+
+  // ==========================
+  // 4. BACK NAVIGATION
+  // ==========================
+  let navHtml = `<div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--ms-border);font-size:14px">
+    <a href="state.html?st=${st}" style="color:var(--ms-dem-blue);text-decoration:none;font-weight:600">← Back to ${stateName}</a>`;
+  if (c.current_office) {
+    const co = c.current_office;
+    navHtml += ` &middot; <a href="${districtUrl(co.state, co.chamber, co.district)}" style="color:var(--ms-dem-blue);text-decoration:none;font-weight:600">View District</a>`;
+  }
+  navHtml += `</div>`;
+
+  // ==========================
+  // RENDER
+  // ==========================
+  content.innerHTML = heroHtml + officesHtml + timelineHtml + navHtml;
+
+  function capitalize(s) {
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+})();
+</script>
+</body>
+</html>

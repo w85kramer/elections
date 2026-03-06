@@ -490,6 +490,12 @@
     return '';
   }
 
+  // Wrap candidate name in link to candidate page if ID is available
+  function candLink(name, id, style) {
+    if (!id) return `<span${style ? ' style="' + style + '"' : ''}>${name}</span>`;
+    return `<a href="candidate.html?id=${id}&st=${stateAbbr}" style="${style || ''}text-decoration:none">${name}</a>`;
+  }
+
   function forecastClass(rating) {
     if (!rating) return '';
     const r = rating.toLowerCase();
@@ -689,7 +695,7 @@
           const ep = effectiveParty(c);
           const nameStyle = ep !== candParty ? ` style="${partyColorStyle(ep)}"` : '';
           const caucusNote = candidateCaucusNote(c);
-          candsHtml += `<li><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:11px;padding:1px 6px">${candParty || '?'}</span> <span${nameStyle}>${c.name}</span>${caucusNote} ${inc} ${typeLabel}</li>`;
+          candsHtml += `<li><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:11px;padding:1px 6px">${candParty || '?'}</span> ${candLink(c.name, c.id, ep !== candParty ? partyColorStyle(ep) + ';' : '')}${caucusNote} ${inc} ${typeLabel}</li>`;
         }
         candsHtml += '</ul>';
       } else {
@@ -888,7 +894,7 @@
         const ep = effectiveParty(winner);
         winnerParty = ep || badgeParty;
         const winCaucusNote = candidateCaucusNote(winner);
-        winnerName = `<span class="party-badge ${partyBadgeClass(badgeParty)}" style="font-size:10px;padding:1px 5px">${badgeParty || '?'}</span> <span style="${partyColorStyle(ep || badgeParty)}">${winner.name}</span>${winCaucusNote}`;
+        winnerName = `<span class="party-badge ${partyBadgeClass(badgeParty)}" style="font-size:10px;padding:1px 5px">${badgeParty || '?'}</span> ${candLink(winner.name, winner.id, partyColorStyle(ep || badgeParty) + ';')}${winCaucusNote}`;
         if (winner && e.candidates.length === 1) {
           winnerName += ' <span class="incumbent-marker">(uncontested)</span>';
         }
@@ -952,7 +958,7 @@
         const wInc = w.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
         html += `<tr class="candidate-detail always-visible ${childTierClass}">
           <td></td>
-          <td></td><td><span class="party-badge ${partyBadgeClass(wBadgeParty)}" style="font-size:10px;padding:1px 5px">${wBadgeParty || '?'}</span> <span style="${partyColorStyle(wEp || wBadgeParty)}">${w.name}</span>${wCaucusNote}${wInc}</td>
+          <td></td><td><span class="party-badge ${partyBadgeClass(wBadgeParty)}" style="font-size:10px;padding:1px 5px">${wBadgeParty || '?'}</span> ${candLink(w.name, w.id, partyColorStyle(wEp || wBadgeParty) + ';')}${wCaucusNote}${wInc}</td>
           <td>${wPctStr}</td>
           <td>${wVotesStr}</td>
           <td>${wResultBadge}</td>
@@ -973,7 +979,7 @@
           if (autoExpand) {
             html += `<tr class="candidate-detail always-visible ${childTierClass}">
               <td></td>
-              <td></td><td><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
+              <td></td><td><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> ${candLink(c.name, c.id, partyColorStyle(candEp || candParty) + ';')}${candCaucusNote}${inc}${wi}</td>
               <td>${pctStr}</td>
               <td>${votesStr}</td>
               <td>${resultBadge}</td>
@@ -981,7 +987,7 @@
           } else {
             html += `<tr class="candidate-detail ${childTierClass}" data-expand="${expandId}">
               <td></td>
-              <td></td><td><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
+              <td></td><td><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> ${candLink(c.name, c.id, partyColorStyle(candEp || candParty) + ';')}${candCaucusNote}${inc}${wi}</td>
               <td>${pctStr}</td>
               <td>${votesStr}</td>
               <td>${resultBadge}</td>
@@ -1172,7 +1178,7 @@
         const ep = effectiveParty(winner);
         winnerParty = ep || badgeParty;
         const winCaucusNote = candidateCaucusNote(winner);
-        winnerName = `<span class="party-badge ${partyBadgeClass(badgeParty)}" style="font-size:10px;padding:1px 5px">${badgeParty || '?'}</span> <span style="${partyColorStyle(ep || badgeParty)}">${winner.name}</span>${winCaucusNote}`;
+        winnerName = `<span class="party-badge ${partyBadgeClass(badgeParty)}" style="font-size:10px;padding:1px 5px">${badgeParty || '?'}</span> ${candLink(winner.name, winner.id, partyColorStyle(ep || badgeParty) + ';')}${winCaucusNote}`;
         if (winner && e.candidates.length === 1) {
           winnerName += ' <span class="incumbent-marker">(uncontested)</span>';
         }
@@ -1231,7 +1237,7 @@
         const wInc = w.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
         html += `<tr class="candidate-detail always-visible ${childTierClass}">
           <td></td>
-          <td></td><td><span class="party-badge ${partyBadgeClass(wBadgeParty)}" style="font-size:10px;padding:1px 5px">${wBadgeParty || '?'}</span> <span style="${partyColorStyle(wEp || wBadgeParty)}">${w.name}</span>${wCaucusNote}${wInc}</td>
+          <td></td><td><span class="party-badge ${partyBadgeClass(wBadgeParty)}" style="font-size:10px;padding:1px 5px">${wBadgeParty || '?'}</span> ${candLink(w.name, w.id, partyColorStyle(wEp || wBadgeParty) + ';')}${wCaucusNote}${wInc}</td>
           <td>${wPctStr}</td>
           <td>${wVotesStr}</td>
           <td>${wResultBadge}</td>
@@ -1252,7 +1258,7 @@
           if (autoExpand) {
             html += `<tr class="candidate-detail always-visible ${childTierClass}">
               <td></td>
-              <td></td><td><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
+              <td></td><td><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> ${candLink(c.name, c.id, partyColorStyle(candEp || candParty) + ';')}${candCaucusNote}${inc}${wi}</td>
               <td>${pctStr}</td>
               <td>${votesStr}</td>
               <td>${resultBadge}</td>
@@ -1260,7 +1266,7 @@
           } else {
             html += `<tr class="candidate-detail ${childTierClass}" data-expand="${expandId}">
               <td></td>
-              <td></td><td><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
+              <td></td><td><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> ${candLink(c.name, c.id, partyColorStyle(candEp || candParty) + ';')}${candCaucusNote}${inc}${wi}</td>
               <td>${pctStr}</td>
               <td>${votesStr}</td>
               <td>${resultBadge}</td>
