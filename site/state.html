@@ -719,7 +719,10 @@
           } else if (r.caucus === 'C' && r.name) {
             caucusNote = ' <span class="text-sm" style="color:var(--ms-purple);font-style:italic">(majority coalition)</span>';
           }
-          if (caucusNote) {
+          if (r.name && r.candidate_id) {
+            const candLink = `<a href="candidate.html?id=${r.candidate_id}&st=${stateAbbr}" style="color:${partyColor || 'var(--ms-other)'};text-decoration:none">${r.name}</a>`;
+            ntd.innerHTML = candLink + caucusNote;
+          } else if (caucusNote) {
             ntd.innerHTML = `<span style="color:${partyColor || 'var(--ms-other)'}">${r.name}</span>${caucusNote}`;
           } else {
             ntd.textContent = r.name || 'Vacant';
