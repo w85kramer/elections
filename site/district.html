@@ -904,8 +904,8 @@
           const marginPct = Math.max(0, (winner.pct - 50) * 2);
           const barW = Math.min(marginPct, 60) / 60 * 80;
           const barColor = (ep || badgeParty) === 'D' ? 'var(--ms-dem-blue)' : (ep || badgeParty) === 'R' ? 'var(--ms-rep-red)' : 'var(--ms-other)';
-          const label = `${winner.pct.toFixed(1)}%`;
-          marginHtml = `<span class="margin-bar-inline" style="width:${barW}px;background:${barColor}"></span><span style="font-size:12px;color:${barColor}">${label}</span>`;
+          const marginNote = winner.pct > 50 ? ` <span style="font-size:11px;color:#999">(+${marginPct.toFixed(1)})</span>` : '';
+          marginHtml = `<span class="margin-bar-inline" style="width:${barW}px;background:${barColor}"></span><span style="font-size:12px;color:${barColor}">${winner.pct.toFixed(1)}%</span>${marginNote}`;
         }
       }
 
@@ -1183,8 +1183,8 @@
           const marginPct = Math.max(0, (winner.pct - 50) * 2);
           const barW = Math.min(marginPct, 60) / 60 * 80;
           const barColor = (ep || badgeParty) === 'D' ? 'var(--ms-dem-blue)' : (ep || badgeParty) === 'R' ? 'var(--ms-rep-red)' : 'var(--ms-other)';
-          const label = `${winner.pct.toFixed(1)}%`;
-          marginHtml = `<span class="margin-bar-inline" style="width:${barW}px;background:${barColor}"></span><span style="font-size:12px;color:${barColor}">${label}</span>`;
+          const marginNote = winner.pct > 50 ? ` <span style="font-size:11px;color:#999">(+${marginPct.toFixed(1)})</span>` : '';
+          marginHtml = `<span class="margin-bar-inline" style="width:${barW}px;background:${barColor}"></span><span style="font-size:12px;color:${barColor}">${winner.pct.toFixed(1)}%</span>${marginNote}`;
         }
       }
 
