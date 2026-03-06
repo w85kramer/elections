@@ -952,7 +952,7 @@
         const wCaucusNote = candidateCaucusNote(w);
         const wPctStr = w.pct != null ? `${w.pct.toFixed(1)}%` : '';
         const wVotesStr = w.votes != null ? numberWithCommas(w.votes) : '';
-        const wResultBadge = w.result === 'Won' ? '<strong style="color:#155724">Won</strong>' : (w.result || '');
+        const wResultBadge = w.result === 'Won' ? (isPrimaryTier ? '<span style="color:#155724">Won</span>' : '<strong style="color:#155724">Won</strong>') : (w.result || '');
         const wInc = w.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
         html += `<tr class="candidate-detail always-visible ${childTierClass}">
           <td></td>
@@ -968,7 +968,7 @@
         for (const c of nonWinners) {
           const pctStr = c.pct != null ? `${c.pct.toFixed(1)}%` : '';
           const votesStr = c.votes != null ? numberWithCommas(c.votes) : '';
-          const resultBadge = c.result === 'Won' ? '<strong style="color:#155724">Won</strong>' : (c.result || '');
+          const resultBadge = c.result === 'Won' ? (isPrimaryTier ? '<span style="color:#155724">Won</span>' : '<strong style="color:#155724">Won</strong>') : (c.result || '');
           const inc = c.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
           const wi = c.is_write_in ? ' <em>W/I</em>' : '';
           const candParty = inferParty(c.party, e.type, stateAbbr);
@@ -1231,7 +1231,7 @@
         const wCaucusNote = candidateCaucusNote(w);
         const wPctStr = w.pct != null ? `${w.pct.toFixed(1)}%` : '';
         const wVotesStr = w.votes != null ? numberWithCommas(w.votes) : '';
-        const wResultBadge = w.result === 'Won' ? '<strong style="color:#155724">Won</strong>' : (w.result || '');
+        const wResultBadge = w.result === 'Won' ? (isPrimaryTier ? '<span style="color:#155724">Won</span>' : '<strong style="color:#155724">Won</strong>') : (w.result || '');
         const wInc = w.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
         html += `<tr class="candidate-detail always-visible ${childTierClass}">
           <td></td>
@@ -1247,7 +1247,7 @@
         for (const c of nonWinners) {
           const pctStr = c.pct != null ? `${c.pct.toFixed(1)}%` : '';
           const votesStr = c.votes != null ? numberWithCommas(c.votes) : '';
-          const resultBadge = c.result === 'Won' ? '<strong style="color:#155724">Won</strong>' : (c.result || '');
+          const resultBadge = c.result === 'Won' ? (isPrimaryTier ? '<span style="color:#155724">Won</span>' : '<strong style="color:#155724">Won</strong>') : (c.result || '');
           const inc = c.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
           const wi = c.is_write_in ? ' <em>W/I</em>' : '';
           const candParty = inferParty(c.party, e.type, stateAbbr);
