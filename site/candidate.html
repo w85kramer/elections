@@ -520,7 +520,7 @@
     for (const t of merged) {
       const url = districtUrl(t.state, t.chamber, t.district);
       const label = shortDistrictLabel(t.state, t.chamber, t.district);
-      const party = t.caucus || t.party || '?';
+      const party = t.caucus || t.party || displayParty || '?';
       const startStr = t.start_date ? formatDate(t.start_date) : '?';
       const endStr = t.end_date ? formatDate(t.end_date) : 'present';
       // Show start reason only if noteworthy (not "elected")
