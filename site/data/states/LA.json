@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-05T01:33:01.995081Z",
+  "generated_at": "2026-03-06T17:20:47.438150Z",
   "state": {
     "name": "Louisiana",
     "abbr": "LA",
@@ -82,14 +82,14 @@
   ],
   "chambers": {
     "House": {
-      "total": 105,
+      "total": 202,
       "composition": {
-        "D": 29,
-        "R": 71,
+        "D": 59,
+        "R": 140,
         "Other": 0,
-        "Vacant": 5
+        "Vacant": 3
       },
-      "supermajority": 70,
+      "supermajority": 135,
       "seats_up_2026": 0,
       "members": [
         {
@@ -99,7 +99,18 @@
           "name": "Danny McCormick",
           "party": "R",
           "pres_margin": "-48.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9605
+        },
+        {
+          "district": "1",
+          "district_name": "HD-1",
+          "seat_designator": null,
+          "name": "Danny McCormick",
+          "party": "R",
+          "pres_margin": "-48.3",
+          "next_election": 2027,
+          "candidate_id": 9605
         },
         {
           "district": "2",
@@ -108,7 +119,18 @@
           "name": "Steven Jackson",
           "party": "D",
           "pres_margin": "+56.9",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9699
+        },
+        {
+          "district": "2",
+          "district_name": "HD-2",
+          "seat_designator": null,
+          "name": "Steven Jackson",
+          "party": "D",
+          "pres_margin": "+56.9",
+          "next_election": 2027,
+          "candidate_id": 9699
         },
         {
           "district": "3",
@@ -117,7 +139,18 @@
           "name": "Tammy Phelps",
           "party": "D",
           "pres_margin": "+62.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9702
+        },
+        {
+          "district": "3",
+          "district_name": "HD-3",
+          "seat_designator": null,
+          "name": "Tammy Phelps",
+          "party": "D",
+          "pres_margin": "+62.3",
+          "next_election": 2027,
+          "candidate_id": 9702
         },
         {
           "district": "4",
@@ -126,7 +159,18 @@
           "name": "Joy Walters",
           "party": "D",
           "pres_margin": "+49.4",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 31947
+        },
+        {
+          "district": "4",
+          "district_name": "HD-4",
+          "seat_designator": null,
+          "name": "Joy Walters",
+          "party": "D",
+          "pres_margin": "+49.4",
+          "next_election": 2027,
+          "candidate_id": 9645
         },
         {
           "district": "5",
@@ -135,7 +179,18 @@
           "name": "Dennis Bamburg",
           "party": "R",
           "pres_margin": "-44.9",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9581
+        },
+        {
+          "district": "5",
+          "district_name": "HD-5",
+          "seat_designator": null,
+          "name": "Dennis Bamburg",
+          "party": "R",
+          "pres_margin": "-44.9",
+          "next_election": 2027,
+          "candidate_id": 9609
         },
         {
           "district": "6",
@@ -144,7 +199,18 @@
           "name": "Michael Melerine",
           "party": "R",
           "pres_margin": "-26.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9667
+        },
+        {
+          "district": "6",
+          "district_name": "HD-6",
+          "seat_designator": null,
+          "name": "Michael Melerine",
+          "party": "R",
+          "pres_margin": "-26.3",
+          "next_election": 2027,
+          "candidate_id": 9667
         },
         {
           "district": "7",
@@ -153,7 +219,18 @@
           "name": "Larry Bagley",
           "party": "R",
           "pres_margin": "-43.4",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9658
+        },
+        {
+          "district": "7",
+          "district_name": "HD-7",
+          "seat_designator": null,
+          "name": "Larry Bagley",
+          "party": "R",
+          "pres_margin": "-43.4",
+          "next_election": 2027,
+          "candidate_id": 9658
         },
         {
           "district": "8",
@@ -162,7 +239,18 @@
           "name": "Raymond Crews",
           "party": "R",
           "pres_margin": "-46.9",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9683
+        },
+        {
+          "district": "8",
+          "district_name": "HD-8",
+          "seat_designator": null,
+          "name": "Raymond Crews",
+          "party": "R",
+          "pres_margin": "-46.9",
+          "next_election": 2027,
+          "candidate_id": 9683
         },
         {
           "district": "9",
@@ -171,7 +259,18 @@
           "name": "Dodie Horton",
           "party": "R",
           "pres_margin": "-45.9",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9611
+        },
+        {
+          "district": "9",
+          "district_name": "HD-9",
+          "seat_designator": null,
+          "name": "Dodie Horton",
+          "party": "R",
+          "pres_margin": "-45.9",
+          "next_election": 2027,
+          "candidate_id": 9611
         },
         {
           "district": "10",
@@ -180,7 +279,18 @@
           "name": "Wayne McMahen",
           "party": "R",
           "pres_margin": "-39.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9714
+        },
+        {
+          "district": "10",
+          "district_name": "HD-10",
+          "seat_designator": null,
+          "name": "Wayne McMahen",
+          "party": "R",
+          "pres_margin": "-39.2",
+          "next_election": 2027,
+          "candidate_id": 9714
         },
         {
           "district": "11",
@@ -189,7 +299,18 @@
           "name": "Rashid Young",
           "party": "D",
           "pres_margin": "+13.9",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9682
+        },
+        {
+          "district": "11",
+          "district_name": "HD-11",
+          "seat_designator": null,
+          "name": "Rashid Young",
+          "party": "D",
+          "pres_margin": "+13.9",
+          "next_election": 2027,
+          "candidate_id": 31967
         },
         {
           "district": "12",
@@ -198,7 +319,18 @@
           "name": "Chris Turner",
           "party": "R",
           "pres_margin": "-57.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9604
+        },
+        {
+          "district": "12",
+          "district_name": "HD-12",
+          "seat_designator": null,
+          "name": "Chris Turner",
+          "party": "R",
+          "pres_margin": "-57.2",
+          "next_election": 2027,
+          "candidate_id": 9604
         },
         {
           "district": "13",
@@ -207,7 +339,18 @@
           "name": "Jack McFarland",
           "party": "R",
           "pres_margin": "-46.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9628
+        },
+        {
+          "district": "13",
+          "district_name": "HD-13",
+          "seat_designator": null,
+          "name": "Jack McFarland",
+          "party": "R",
+          "pres_margin": "-46.2",
+          "next_election": 2027,
+          "candidate_id": 9628
         },
         {
           "district": "14",
@@ -216,7 +359,18 @@
           "name": "Michael Echols",
           "party": "R",
           "pres_margin": "-44.5",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9665
+        },
+        {
+          "district": "14",
+          "district_name": "HD-14",
+          "seat_designator": null,
+          "name": "Michael Echols",
+          "party": "R",
+          "pres_margin": "-44.5",
+          "next_election": 2027,
+          "candidate_id": 9665
         },
         {
           "district": "15",
@@ -225,7 +379,18 @@
           "name": "Foy Gadberry",
           "party": "R",
           "pres_margin": "-77.6",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9618
+        },
+        {
+          "district": "15",
+          "district_name": "HD-15",
+          "seat_designator": null,
+          "name": "Foy Gadberry",
+          "party": "R",
+          "pres_margin": "-77.6",
+          "next_election": 2027,
+          "candidate_id": 9618
         },
         {
           "district": "16",
@@ -234,7 +399,18 @@
           "name": "Adrian Fisher",
           "party": "D",
           "pres_margin": "+28.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9579
+        },
+        {
+          "district": "16",
+          "district_name": "HD-16",
+          "seat_designator": null,
+          "name": "Adrian Fisher",
+          "party": "D",
+          "pres_margin": "+28.2",
+          "next_election": 2027,
+          "candidate_id": 9579
         },
         {
           "district": "17",
@@ -243,7 +419,18 @@
           "name": "Pat Moore",
           "party": "D",
           "pres_margin": "+43.1",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9673
+        },
+        {
+          "district": "17",
+          "district_name": "HD-17",
+          "seat_designator": null,
+          "name": "Pat Moore",
+          "party": "D",
+          "pres_margin": "+43.1",
+          "next_election": 2027,
+          "candidate_id": 9673
         },
         {
           "district": "18",
@@ -252,7 +439,18 @@
           "name": "Jeremy LaCombe",
           "party": "R",
           "pres_margin": "-27.4",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9636
+        },
+        {
+          "district": "18",
+          "district_name": "HD-18",
+          "seat_designator": null,
+          "name": "Jeremy LaCombe",
+          "party": "R",
+          "pres_margin": "-27.4",
+          "next_election": 2027,
+          "candidate_id": 9636
         },
         {
           "district": "19",
@@ -261,7 +459,18 @@
           "name": "Francis Thompson",
           "party": "R",
           "pres_margin": "-52.5",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9619
+        },
+        {
+          "district": "19",
+          "district_name": "HD-19",
+          "seat_designator": null,
+          "name": "Francis Thompson",
+          "party": "R",
+          "pres_margin": "-52.5",
+          "next_election": 2027,
+          "candidate_id": 9619
         },
         {
           "district": "20",
@@ -270,7 +479,18 @@
           "name": "Neil Riser",
           "party": "R",
           "pres_margin": "-72.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9671
+        },
+        {
+          "district": "20",
+          "district_name": "HD-20",
+          "seat_designator": null,
+          "name": "Neil Riser",
+          "party": "R",
+          "pres_margin": "-72.3",
+          "next_election": 2027,
+          "candidate_id": 9671
         },
         {
           "district": "21",
@@ -279,7 +499,18 @@
           "name": "Travis Johnson",
           "party": "D",
           "pres_margin": "+0.1",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9598
+        },
+        {
+          "district": "21",
+          "district_name": "HD-21",
+          "seat_designator": null,
+          "name": "Travis Johnson",
+          "party": "D",
+          "pres_margin": "+0.1",
+          "next_election": 2027,
+          "candidate_id": 9598
         },
         {
           "district": "22",
@@ -288,7 +519,18 @@
           "name": "Gabe Firment",
           "party": "R",
           "pres_margin": "-55.7",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9666
+        },
+        {
+          "district": "22",
+          "district_name": "HD-22",
+          "seat_designator": null,
+          "name": "Gabe Firment",
+          "party": "R",
+          "pres_margin": "-55.7",
+          "next_election": 2027,
+          "candidate_id": 9666
         },
         {
           "district": "23",
@@ -297,7 +539,18 @@
           "name": "Shaun Mena",
           "party": "D",
           "pres_margin": "+78.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9695
+        },
+        {
+          "district": "23",
+          "district_name": "HD-23",
+          "seat_designator": null,
+          "name": "Shaun Mena",
+          "party": "D",
+          "pres_margin": "+78.2",
+          "next_election": 2027,
+          "candidate_id": 9695
         },
         {
           "district": "24",
@@ -306,7 +559,18 @@
           "name": "Rodney Schamerhorn",
           "party": "R",
           "pres_margin": "-78.5",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9689
+        },
+        {
+          "district": "24",
+          "district_name": "HD-24",
+          "seat_designator": null,
+          "name": "Rodney Schamerhorn",
+          "party": "R",
+          "pres_margin": "-78.5",
+          "next_election": 2027,
+          "candidate_id": 9689
         },
         {
           "district": "25",
@@ -315,7 +579,18 @@
           "name": "Jason DeWitt",
           "party": "R",
           "pres_margin": "-46.5",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9631
+        },
+        {
+          "district": "25",
+          "district_name": "HD-25",
+          "seat_designator": null,
+          "name": "Jason DeWitt",
+          "party": "R",
+          "pres_margin": "-46.5",
+          "next_election": 2027,
+          "candidate_id": 9631
         },
         {
           "district": "26",
@@ -324,7 +599,18 @@
           "name": "Ed Larvadain",
           "party": "D",
           "pres_margin": "+41.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9613
+        },
+        {
+          "district": "26",
+          "district_name": "HD-26",
+          "seat_designator": null,
+          "name": "Ed Larvadain",
+          "party": "D",
+          "pres_margin": "+41.3",
+          "next_election": 2027,
+          "candidate_id": 9613
         },
         {
           "district": "27",
@@ -333,7 +619,18 @@
           "name": "Mike Johnson",
           "party": "R",
           "pres_margin": "-71.6",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9668
+        },
+        {
+          "district": "27",
+          "district_name": "HD-27",
+          "seat_designator": null,
+          "name": "Mike Johnson",
+          "party": "R",
+          "pres_margin": "-71.6",
+          "next_election": 2027,
+          "candidate_id": 9668
         },
         {
           "district": "28",
@@ -342,7 +639,18 @@
           "name": "Daryl Deshotel",
           "party": "R",
           "pres_margin": "-45.1",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9606
+        },
+        {
+          "district": "28",
+          "district_name": "HD-28",
+          "seat_designator": null,
+          "name": "Daryl Deshotel",
+          "party": "R",
+          "pres_margin": "-45.1",
+          "next_election": 2027,
+          "candidate_id": 9606
         },
         {
           "district": "29",
@@ -351,7 +659,18 @@
           "name": "Edmond Jordan",
           "party": "D",
           "pres_margin": "+49.8",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9615
+        },
+        {
+          "district": "29",
+          "district_name": "HD-29",
+          "seat_designator": null,
+          "name": "Edmond Jordan",
+          "party": "D",
+          "pres_margin": "+49.8",
+          "next_election": 2027,
+          "candidate_id": 9615
         },
         {
           "district": "30",
@@ -360,7 +679,18 @@
           "name": "Chuck Owen",
           "party": "R",
           "pres_margin": "-46.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9603
+        },
+        {
+          "district": "30",
+          "district_name": "HD-30",
+          "seat_designator": null,
+          "name": "Chuck Owen",
+          "party": "R",
+          "pres_margin": "-46.3",
+          "next_election": 2027,
+          "candidate_id": 9603
         },
         {
           "district": "31",
@@ -369,7 +699,18 @@
           "name": "Troy Hebert",
           "party": "R",
           "pres_margin": "-49.4",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9708
+        },
+        {
+          "district": "31",
+          "district_name": "HD-31",
+          "seat_designator": null,
+          "name": "Troy Hebert",
+          "party": "R",
+          "pres_margin": "-49.4",
+          "next_election": 2027,
+          "candidate_id": 9708
         },
         {
           "district": "32",
@@ -378,7 +719,18 @@
           "name": "Dewith Carrier",
           "party": "R",
           "pres_margin": "-72.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9680
+        },
+        {
+          "district": "32",
+          "district_name": "HD-32",
+          "seat_designator": null,
+          "name": "Dewith Carrier",
+          "party": "R",
+          "pres_margin": "-72.3",
+          "next_election": 2027,
+          "candidate_id": 9680
         },
         {
           "district": "33",
@@ -387,7 +739,18 @@
           "name": "Les Farnum",
           "party": "R",
           "pres_margin": "-70.1",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9659
+        },
+        {
+          "district": "33",
+          "district_name": "HD-33",
+          "seat_designator": null,
+          "name": "Les Farnum",
+          "party": "R",
+          "pres_margin": "-70.1",
+          "next_election": 2027,
+          "candidate_id": 9659
         },
         {
           "district": "34",
@@ -396,7 +759,18 @@
           "name": "Wilford Carter",
           "party": "D",
           "pres_margin": "+57.1",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 32051
+        },
+        {
+          "district": "34",
+          "district_name": "HD-34",
+          "seat_designator": null,
+          "name": "Wilford Carter",
+          "party": "D",
+          "pres_margin": "+57.1",
+          "next_election": 2027,
+          "candidate_id": 9715
         },
         {
           "district": "35",
@@ -405,7 +779,18 @@
           "name": "Brett Geymann",
           "party": "R",
           "pres_margin": "-65.0",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9594
+        },
+        {
+          "district": "35",
+          "district_name": "HD-35",
+          "seat_designator": null,
+          "name": "Brett Geymann",
+          "party": "R",
+          "pres_margin": "-65.0",
+          "next_election": 2027,
+          "candidate_id": 32054
         },
         {
           "district": "36",
@@ -414,7 +799,18 @@
           "name": "Phil Tarver",
           "party": "R",
           "pres_margin": "-50.9",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9677
+        },
+        {
+          "district": "36",
+          "district_name": "HD-36",
+          "seat_designator": null,
+          "name": "Phil Tarver",
+          "party": "R",
+          "pres_margin": "-50.9",
+          "next_election": 2027,
+          "candidate_id": 9677
         },
         {
           "district": "37",
@@ -432,7 +828,18 @@
           "name": "Rhonda Butler",
           "party": "R",
           "pres_margin": "-54.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9685
+        },
+        {
+          "district": "38",
+          "district_name": "HD-38",
+          "seat_designator": null,
+          "name": "Rhonda Butler",
+          "party": "R",
+          "pres_margin": "-54.2",
+          "next_election": 2027,
+          "candidate_id": 9685
         },
         {
           "district": "39",
@@ -441,7 +848,18 @@
           "name": "Julie Emerson",
           "party": "R",
           "pres_margin": "-37.6",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9646
+        },
+        {
+          "district": "39",
+          "district_name": "HD-39",
+          "seat_designator": null,
+          "name": "Julie Emerson",
+          "party": "R",
+          "pres_margin": "-37.6",
+          "next_election": 2027,
+          "candidate_id": 9646
         },
         {
           "district": "40",
@@ -450,7 +868,18 @@
           "name": "Dustin Miller",
           "party": "D",
           "pres_margin": "+10.0",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9612
+        },
+        {
+          "district": "40",
+          "district_name": "HD-40",
+          "seat_designator": null,
+          "name": "Dustin Miller",
+          "party": "D",
+          "pres_margin": "+10.0",
+          "next_election": 2027,
+          "candidate_id": 9612
         },
         {
           "district": "41",
@@ -459,7 +888,18 @@
           "name": "Phillip DeVillier",
           "party": "R",
           "pres_margin": "-58.9",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9678
+        },
+        {
+          "district": "41",
+          "district_name": "HD-41",
+          "seat_designator": null,
+          "name": "Phillip DeVillier",
+          "party": "R",
+          "pres_margin": "-58.9",
+          "next_election": 2027,
+          "candidate_id": 9678
         },
         {
           "district": "42",
@@ -468,7 +908,8 @@
           "name": "Chance Henry",
           "party": "R",
           "pres_margin": "-59.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9602
         },
         {
           "district": "43",
@@ -477,7 +918,18 @@
           "name": "Josh Carlson",
           "party": "R",
           "pres_margin": "-42.5",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9644
+        },
+        {
+          "district": "43",
+          "district_name": "HD-43",
+          "seat_designator": null,
+          "name": "Josh Carlson",
+          "party": "R",
+          "pres_margin": "-42.5",
+          "next_election": 2027,
+          "candidate_id": 9644
         },
         {
           "district": "44",
@@ -486,7 +938,18 @@
           "name": "Tehmi Chassion",
           "party": "D",
           "pres_margin": "+32.0",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9703
+        },
+        {
+          "district": "44",
+          "district_name": "HD-44",
+          "seat_designator": null,
+          "name": "Tehmi Chassion",
+          "party": "D",
+          "pres_margin": "+32.0",
+          "next_election": 2027,
+          "candidate_id": 9703
         },
         {
           "district": "45",
@@ -495,7 +958,8 @@
           "name": "Annie Spell",
           "party": "R",
           "pres_margin": "-31.1",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9583
         },
         {
           "district": "46",
@@ -504,7 +968,18 @@
           "name": "Chad Boyer",
           "party": "R",
           "pres_margin": "-53.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 32089
+        },
+        {
+          "district": "46",
+          "district_name": "HD-46",
+          "seat_designator": null,
+          "name": "Chad Boyer",
+          "party": "R",
+          "pres_margin": "-53.2",
+          "next_election": 2027,
+          "candidate_id": 9601
         },
         {
           "district": "47",
@@ -513,7 +988,18 @@
           "name": "Ryan Bourriaque",
           "party": "R",
           "pres_margin": "-70.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9693
+        },
+        {
+          "district": "47",
+          "district_name": "HD-47",
+          "seat_designator": null,
+          "name": "Ryan Bourriaque",
+          "party": "R",
+          "pres_margin": "-70.3",
+          "next_election": 2027,
+          "candidate_id": 9693
         },
         {
           "district": "48",
@@ -522,7 +1008,18 @@
           "name": "Beau Beaullieu",
           "party": "R",
           "pres_margin": "-55.8",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9622
+        },
+        {
+          "district": "48",
+          "district_name": "HD-48",
+          "seat_designator": null,
+          "name": "Beau Beaullieu",
+          "party": "R",
+          "pres_margin": "-55.8",
+          "next_election": 2027,
+          "candidate_id": 9622
         },
         {
           "district": "49",
@@ -531,7 +1028,18 @@
           "name": "Jacob Landry",
           "party": "R",
           "pres_margin": "-66.0",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9630
+        },
+        {
+          "district": "49",
+          "district_name": "HD-49",
+          "seat_designator": null,
+          "name": "Jacob Landry",
+          "party": "R",
+          "pres_margin": "-66.0",
+          "next_election": 2027,
+          "candidate_id": 9630
         },
         {
           "district": "50",
@@ -540,7 +1048,18 @@
           "name": "Vinney St. Blanc",
           "party": "R",
           "pres_margin": "-30.8",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9712
+        },
+        {
+          "district": "50",
+          "district_name": "HD-50",
+          "seat_designator": null,
+          "name": "Vinney St. Blanc",
+          "party": "R",
+          "pres_margin": "-30.8",
+          "next_election": 2027,
+          "candidate_id": 32101
         },
         {
           "district": "51",
@@ -549,7 +1068,18 @@
           "name": "Beryl Amed\u00e9e",
           "party": "R",
           "pres_margin": "-47.6",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9586
+        },
+        {
+          "district": "51",
+          "district_name": "HD-51",
+          "seat_designator": null,
+          "name": "Beryl Amed\u00e9e",
+          "party": "R",
+          "pres_margin": "-47.6",
+          "next_election": 2027,
+          "candidate_id": 9586
         },
         {
           "district": "52",
@@ -558,7 +1088,18 @@
           "name": "Jerome Zeringue",
           "party": "R",
           "pres_margin": "-60.0",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9637
+        },
+        {
+          "district": "52",
+          "district_name": "HD-52",
+          "seat_designator": null,
+          "name": "Jerome Zeringue",
+          "party": "R",
+          "pres_margin": "-60.0",
+          "next_election": 2027,
+          "candidate_id": 9637
         },
         {
           "district": "53",
@@ -567,7 +1108,18 @@
           "name": "Jessica Domangue",
           "party": "R",
           "pres_margin": "-50.6",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9638
+        },
+        {
+          "district": "53",
+          "district_name": "HD-53",
+          "seat_designator": null,
+          "name": "Jessica Domangue",
+          "party": "R",
+          "pres_margin": "-50.6",
+          "next_election": 2027,
+          "candidate_id": 9638
         },
         {
           "district": "54",
@@ -576,7 +1128,18 @@
           "name": "Joe Orgeron",
           "party": "R",
           "pres_margin": "-79.4",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9643
+        },
+        {
+          "district": "54",
+          "district_name": "HD-54",
+          "seat_designator": null,
+          "name": "Joe Orgeron",
+          "party": "R",
+          "pres_margin": "-79.4",
+          "next_election": 2027,
+          "candidate_id": 9643
         },
         {
           "district": "55",
@@ -585,7 +1148,18 @@
           "name": "Bryan Fontenot",
           "party": "R",
           "pres_margin": "-50.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9596
+        },
+        {
+          "district": "55",
+          "district_name": "HD-55",
+          "seat_designator": null,
+          "name": "Bryan Fontenot",
+          "party": "R",
+          "pres_margin": "-50.3",
+          "next_election": 2027,
+          "candidate_id": 9596
         },
         {
           "district": "56",
@@ -594,7 +1168,18 @@
           "name": "Beth Billings",
           "party": "R",
           "pres_margin": "-41.9",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9625
+        },
+        {
+          "district": "56",
+          "district_name": "HD-56",
+          "seat_designator": null,
+          "name": "Beth Billings",
+          "party": "R",
+          "pres_margin": "-41.9",
+          "next_election": 2027,
+          "candidate_id": 9587
         },
         {
           "district": "57",
@@ -603,7 +1188,18 @@
           "name": "Sylvia Taylor",
           "party": "D",
           "pres_margin": "+34.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9701
+        },
+        {
+          "district": "57",
+          "district_name": "HD-57",
+          "seat_designator": null,
+          "name": "Sylvia Taylor",
+          "party": "D",
+          "pres_margin": "+34.2",
+          "next_election": 2027,
+          "candidate_id": 9701
         },
         {
           "district": "58",
@@ -612,7 +1208,18 @@
           "name": "Ken Brass",
           "party": "D",
           "pres_margin": "+25.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9650
+        },
+        {
+          "district": "58",
+          "district_name": "HD-58",
+          "seat_designator": null,
+          "name": "Ken Brass",
+          "party": "D",
+          "pres_margin": "+25.2",
+          "next_election": 2027,
+          "candidate_id": 9650
         },
         {
           "district": "59",
@@ -621,16 +1228,28 @@
           "name": "Tony Bacala",
           "party": "R",
           "pres_margin": "-36.8",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9707
+        },
+        {
+          "district": "59",
+          "district_name": "HD-59",
+          "seat_designator": null,
+          "name": "Tony Bacala",
+          "party": "R",
+          "pres_margin": "-36.8",
+          "next_election": 2027,
+          "candidate_id": 9707
         },
         {
           "district": "60",
           "district_name": "HD-60",
           "seat_designator": null,
           "name": null,
-          "party": null,
+          "party": "D",
           "pres_margin": "-13.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 18384
         },
         {
           "district": "61",
@@ -639,7 +1258,18 @@
           "name": "Denise Marcelle",
           "party": "D",
           "pres_margin": "+68.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9597
+        },
+        {
+          "district": "61",
+          "district_name": "HD-61",
+          "seat_designator": null,
+          "name": "Denise Marcelle",
+          "party": "D",
+          "pres_margin": "+68.2",
+          "next_election": 2027,
+          "candidate_id": 9597
         },
         {
           "district": "62",
@@ -648,7 +1278,18 @@
           "name": "Roy Adams",
           "party": "D",
           "pres_margin": "+9.1",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9691
+        },
+        {
+          "district": "62",
+          "district_name": "HD-62",
+          "seat_designator": null,
+          "name": "Roy Adams",
+          "party": "D",
+          "pres_margin": "+9.1",
+          "next_election": 2027,
+          "candidate_id": 9691
         },
         {
           "district": "63",
@@ -657,7 +1298,18 @@
           "name": "Barbara Carpenter",
           "party": "D",
           "pres_margin": "+29.4",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9585
+        },
+        {
+          "district": "63",
+          "district_name": "HD-63",
+          "seat_designator": null,
+          "name": "Barbara Carpenter",
+          "party": "D",
+          "pres_margin": "+29.4",
+          "next_election": 2027,
+          "candidate_id": 9585
         },
         {
           "district": "64",
@@ -666,7 +1318,18 @@
           "name": "Kellee Hennessy",
           "party": "R",
           "pres_margin": "-70.5",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9649
+        },
+        {
+          "district": "64",
+          "district_name": "HD-64",
+          "seat_designator": null,
+          "name": "Kellee Hennessy",
+          "party": "R",
+          "pres_margin": "-70.5",
+          "next_election": 2027,
+          "candidate_id": 32156
         },
         {
           "district": "65",
@@ -675,7 +1338,18 @@
           "name": "Lauren Ventrella",
           "party": "R",
           "pres_margin": "-39.6",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9656
+        },
+        {
+          "district": "65",
+          "district_name": "HD-65",
+          "seat_designator": null,
+          "name": "Lauren Ventrella",
+          "party": "R",
+          "pres_margin": "-39.6",
+          "next_election": 2027,
+          "candidate_id": 9656
         },
         {
           "district": "66",
@@ -684,7 +1358,18 @@
           "name": "Emily Chenevert",
           "party": "R",
           "pres_margin": "-36.4",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9617
+        },
+        {
+          "district": "66",
+          "district_name": "HD-66",
+          "seat_designator": null,
+          "name": "Emily Chenevert",
+          "party": "R",
+          "pres_margin": "-36.4",
+          "next_election": 2027,
+          "candidate_id": 9617
         },
         {
           "district": "67",
@@ -693,7 +1378,8 @@
           "name": "Terry Landry",
           "party": "D",
           "pres_margin": "+52.7",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9704
         },
         {
           "district": "68",
@@ -702,7 +1388,18 @@
           "name": "Dixon McMakin",
           "party": "R",
           "pres_margin": "-11.0",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9610
+        },
+        {
+          "district": "68",
+          "district_name": "HD-68",
+          "seat_designator": null,
+          "name": "Dixon McMakin",
+          "party": "R",
+          "pres_margin": "-11.0",
+          "next_election": 2027,
+          "candidate_id": 9610
         },
         {
           "district": "69",
@@ -720,7 +1417,18 @@
           "name": "Barbara Freiberg",
           "party": "R",
           "pres_margin": "-9.1",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9584
+        },
+        {
+          "district": "70",
+          "district_name": "HD-70",
+          "seat_designator": null,
+          "name": "Barbara Freiberg",
+          "party": "R",
+          "pres_margin": "-9.1",
+          "next_election": 2027,
+          "candidate_id": 9584
         },
         {
           "district": "71",
@@ -729,7 +1437,18 @@
           "name": "Roger Wilder",
           "party": "R",
           "pres_margin": "-53.8",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9690
+        },
+        {
+          "district": "71",
+          "district_name": "HD-71",
+          "seat_designator": null,
+          "name": "Roger Wilder",
+          "party": "R",
+          "pres_margin": "-53.8",
+          "next_election": 2027,
+          "candidate_id": 9690
         },
         {
           "district": "72",
@@ -738,7 +1457,18 @@
           "name": "Robby Carter",
           "party": "D",
           "pres_margin": "+6.6",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9687
+        },
+        {
+          "district": "72",
+          "district_name": "HD-72",
+          "seat_designator": null,
+          "name": "Robby Carter",
+          "party": "D",
+          "pres_margin": "+6.6",
+          "next_election": 2027,
+          "candidate_id": 9687
         },
         {
           "district": "73",
@@ -747,7 +1477,18 @@
           "name": "Kim Coates",
           "party": "R",
           "pres_margin": "-57.8",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9652
+        },
+        {
+          "district": "73",
+          "district_name": "HD-73",
+          "seat_designator": null,
+          "name": "Kim Coates",
+          "party": "R",
+          "pres_margin": "-57.8",
+          "next_election": 2027,
+          "candidate_id": 9652
         },
         {
           "district": "74",
@@ -756,7 +1497,18 @@
           "name": "Peter Egan",
           "party": "R",
           "pres_margin": "-63.6",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9676
+        },
+        {
+          "district": "74",
+          "district_name": "HD-74",
+          "seat_designator": null,
+          "name": "Peter Egan",
+          "party": "R",
+          "pres_margin": "-63.6",
+          "next_election": 2027,
+          "candidate_id": 9676
         },
         {
           "district": "75",
@@ -765,7 +1517,18 @@
           "name": "John Wyble",
           "party": "R",
           "pres_margin": "-40.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9641
+        },
+        {
+          "district": "75",
+          "district_name": "HD-75",
+          "seat_designator": null,
+          "name": "John Wyble",
+          "party": "R",
+          "pres_margin": "-40.3",
+          "next_election": 2027,
+          "candidate_id": 9641
         },
         {
           "district": "76",
@@ -774,7 +1537,18 @@
           "name": "Stephanie Berault",
           "party": "R",
           "pres_margin": "-21.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9697
+        },
+        {
+          "district": "76",
+          "district_name": "HD-76",
+          "seat_designator": null,
+          "name": "Stephanie Berault",
+          "party": "R",
+          "pres_margin": "-21.2",
+          "next_election": 2027,
+          "candidate_id": 9697
         },
         {
           "district": "77",
@@ -783,7 +1557,18 @@
           "name": "Mark Wright",
           "party": "R",
           "pres_margin": "-52.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9663
+        },
+        {
+          "district": "77",
+          "district_name": "HD-77",
+          "seat_designator": null,
+          "name": "Mark Wright",
+          "party": "R",
+          "pres_margin": "-52.3",
+          "next_election": 2027,
+          "candidate_id": 9663
         },
         {
           "district": "78",
@@ -792,7 +1577,18 @@
           "name": "John Illg",
           "party": "R",
           "pres_margin": "-41.6",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9640
+        },
+        {
+          "district": "78",
+          "district_name": "HD-78",
+          "seat_designator": null,
+          "name": "John Illg",
+          "party": "R",
+          "pres_margin": "-41.6",
+          "next_election": 2027,
+          "candidate_id": 9640
         },
         {
           "district": "79",
@@ -801,7 +1597,18 @@
           "name": "Debbie Villio",
           "party": "R",
           "pres_margin": "-32.6",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9607
+        },
+        {
+          "district": "79",
+          "district_name": "HD-79",
+          "seat_designator": null,
+          "name": "Debbie Villio",
+          "party": "R",
+          "pres_margin": "-32.6",
+          "next_election": 2027,
+          "candidate_id": 9607
         },
         {
           "district": "80",
@@ -810,7 +1617,18 @@
           "name": "Polly Thomas",
           "party": "R",
           "pres_margin": "-30.4",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9679
+        },
+        {
+          "district": "80",
+          "district_name": "HD-80",
+          "seat_designator": null,
+          "name": "Polly Thomas",
+          "party": "R",
+          "pres_margin": "-30.4",
+          "next_election": 2027,
+          "candidate_id": 9679
         },
         {
           "district": "81",
@@ -819,7 +1637,18 @@
           "name": "Jeff Wiley",
           "party": "R",
           "pres_margin": "-63.0",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9634
+        },
+        {
+          "district": "81",
+          "district_name": "HD-81",
+          "seat_designator": null,
+          "name": "Jeff Wiley",
+          "party": "R",
+          "pres_margin": "-63.0",
+          "next_election": 2027,
+          "candidate_id": 9634
         },
         {
           "district": "82",
@@ -828,7 +1657,18 @@
           "name": "Laurie Schlegel",
           "party": "R",
           "pres_margin": "-23.0",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9657
+        },
+        {
+          "district": "82",
+          "district_name": "HD-82",
+          "seat_designator": null,
+          "name": "Laurie Schlegel",
+          "party": "R",
+          "pres_margin": "-23.0",
+          "next_election": 2027,
+          "candidate_id": 9657
         },
         {
           "district": "83",
@@ -837,7 +1677,18 @@
           "name": "Kyle Green",
           "party": "D",
           "pres_margin": "+22.0",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9654
+        },
+        {
+          "district": "83",
+          "district_name": "HD-83",
+          "seat_designator": null,
+          "name": "Kyle Green",
+          "party": "D",
+          "pres_margin": "+22.0",
+          "next_election": 2027,
+          "candidate_id": 9654
         },
         {
           "district": "84",
@@ -846,7 +1697,18 @@
           "name": "Tim Kerner",
           "party": "R",
           "pres_margin": "-36.7",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9706
+        },
+        {
+          "district": "84",
+          "district_name": "HD-84",
+          "seat_designator": null,
+          "name": "Tim Kerner",
+          "party": "R",
+          "pres_margin": "-36.7",
+          "next_election": 2027,
+          "candidate_id": 31846
         },
         {
           "district": "85",
@@ -855,7 +1717,18 @@
           "name": "Vincent Cox",
           "party": "R",
           "pres_margin": "+7.9",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9711
+        },
+        {
+          "district": "85",
+          "district_name": "HD-85",
+          "seat_designator": null,
+          "name": "Vincent Cox",
+          "party": "R",
+          "pres_margin": "+7.9",
+          "next_election": 2027,
+          "candidate_id": 9711
         },
         {
           "district": "86",
@@ -864,7 +1737,18 @@
           "name": "Nicholas Muscarello",
           "party": "R",
           "pres_margin": "-49.0",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9672
+        },
+        {
+          "district": "86",
+          "district_name": "HD-86",
+          "seat_designator": null,
+          "name": "Nicholas Muscarello",
+          "party": "R",
+          "pres_margin": "-49.0",
+          "next_election": 2027,
+          "candidate_id": 9672
         },
         {
           "district": "87",
@@ -873,7 +1757,18 @@
           "name": "Rodney Lyons",
           "party": "D",
           "pres_margin": "+43.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9688
+        },
+        {
+          "district": "87",
+          "district_name": "HD-87",
+          "seat_designator": null,
+          "name": "Rodney Lyons",
+          "party": "D",
+          "pres_margin": "+43.2",
+          "next_election": 2027,
+          "candidate_id": 9688
         },
         {
           "district": "88",
@@ -882,7 +1777,18 @@
           "name": "Kathy Edmonston",
           "party": "R",
           "pres_margin": "-55.5",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9647
+        },
+        {
+          "district": "88",
+          "district_name": "HD-88",
+          "seat_designator": null,
+          "name": "Kathy Edmonston",
+          "party": "R",
+          "pres_margin": "-55.5",
+          "next_election": 2027,
+          "candidate_id": 9647
         },
         {
           "district": "89",
@@ -891,7 +1797,18 @@
           "name": "Kim Carver",
           "party": "R",
           "pres_margin": "-50.4",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9651
+        },
+        {
+          "district": "89",
+          "district_name": "HD-89",
+          "seat_designator": null,
+          "name": "Kim Carver",
+          "party": "R",
+          "pres_margin": "-50.4",
+          "next_election": 2027,
+          "candidate_id": 9651
         },
         {
           "district": "90",
@@ -900,7 +1817,18 @@
           "name": "Brian Glorioso",
           "party": "R",
           "pres_margin": "-30.9",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9595
+        },
+        {
+          "district": "90",
+          "district_name": "HD-90",
+          "seat_designator": null,
+          "name": "Brian Glorioso",
+          "party": "R",
+          "pres_margin": "-30.9",
+          "next_election": 2027,
+          "candidate_id": 9595
         },
         {
           "district": "91",
@@ -909,7 +1837,18 @@
           "name": "Mandie Landry",
           "party": "D",
           "pres_margin": "+71.8",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9660
+        },
+        {
+          "district": "91",
+          "district_name": "HD-91",
+          "seat_designator": null,
+          "name": "Mandie Landry",
+          "party": "D",
+          "pres_margin": "+71.8",
+          "next_election": 2027,
+          "candidate_id": 9660
         },
         {
           "district": "92",
@@ -918,7 +1857,18 @@
           "name": "Joe Stagni",
           "party": "R",
           "pres_margin": "+4.1",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9642
+        },
+        {
+          "district": "92",
+          "district_name": "HD-92",
+          "seat_designator": null,
+          "name": "Joe Stagni",
+          "party": "R",
+          "pres_margin": "+4.1",
+          "next_election": 2027,
+          "candidate_id": 9642
         },
         {
           "district": "93",
@@ -927,7 +1877,18 @@
           "name": "Alonzo Knox",
           "party": "D",
           "pres_margin": "+77.6",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9582
+        },
+        {
+          "district": "93",
+          "district_name": "HD-93",
+          "seat_designator": null,
+          "name": "Alonzo Knox",
+          "party": "D",
+          "pres_margin": "+77.6",
+          "next_election": 2027,
+          "candidate_id": 9582
         },
         {
           "district": "94",
@@ -936,7 +1897,18 @@
           "name": "Stephanie Hilferty",
           "party": "R",
           "pres_margin": "-12.4",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9698
+        },
+        {
+          "district": "94",
+          "district_name": "HD-94",
+          "seat_designator": null,
+          "name": "Stephanie Hilferty",
+          "party": "R",
+          "pres_margin": "-12.4",
+          "next_election": 2027,
+          "candidate_id": 9698
         },
         {
           "district": "95",
@@ -945,7 +1917,18 @@
           "name": "Shane Mack",
           "party": "R",
           "pres_margin": "-67.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9696
+        },
+        {
+          "district": "95",
+          "district_name": "HD-95",
+          "seat_designator": null,
+          "name": "Shane Mack",
+          "party": "R",
+          "pres_margin": "-67.3",
+          "next_election": 2027,
+          "candidate_id": 9696
         },
         {
           "district": "96",
@@ -954,7 +1937,18 @@
           "name": "Marcus Bryant",
           "party": "D",
           "pres_margin": "+14.8",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9661
+        },
+        {
+          "district": "96",
+          "district_name": "HD-96",
+          "seat_designator": null,
+          "name": "Marcus Bryant",
+          "party": "D",
+          "pres_margin": "+14.8",
+          "next_election": 2027,
+          "candidate_id": 9661
         },
         {
           "district": "97",
@@ -972,7 +1966,18 @@
           "name": "Aimee Freeman",
           "party": "D",
           "pres_margin": "+54.4",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9580
+        },
+        {
+          "district": "98",
+          "district_name": "HD-98",
+          "seat_designator": null,
+          "name": "Aimee Freeman",
+          "party": "D",
+          "pres_margin": "+54.4",
+          "next_election": 2027,
+          "candidate_id": 9580
         },
         {
           "district": "99",
@@ -981,16 +1986,28 @@
           "name": "Candace Newell",
           "party": "D",
           "pres_margin": "+86.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9600
+        },
+        {
+          "district": "99",
+          "district_name": "HD-99",
+          "seat_designator": null,
+          "name": "Candace Newell",
+          "party": "D",
+          "pres_margin": "+86.3",
+          "next_election": 2027,
+          "candidate_id": 9600
         },
         {
           "district": "100",
           "district_name": "HD-100",
           "seat_designator": null,
           "name": null,
-          "party": null,
+          "party": "D",
           "pres_margin": "+65.4",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 32300
         },
         {
           "district": "101",
@@ -999,7 +2016,18 @@
           "name": "Vanessa LaFleur",
           "party": "D",
           "pres_margin": "+43.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9710
+        },
+        {
+          "district": "101",
+          "district_name": "HD-101",
+          "seat_designator": null,
+          "name": "Vanessa LaFleur",
+          "party": "D",
+          "pres_margin": "+43.2",
+          "next_election": 2027,
+          "candidate_id": 9710
         },
         {
           "district": "102",
@@ -1008,7 +2036,18 @@
           "name": "Delisha Boyd",
           "party": "D",
           "pres_margin": "+63.9",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9608
+        },
+        {
+          "district": "102",
+          "district_name": "HD-102",
+          "seat_designator": null,
+          "name": "Delisha Boyd",
+          "party": "D",
+          "pres_margin": "+63.9",
+          "next_election": 2027,
+          "candidate_id": 9608
         },
         {
           "district": "103",
@@ -1017,7 +2056,18 @@
           "name": "Mike Bayham",
           "party": "R",
           "pres_margin": "-29.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9669
+        },
+        {
+          "district": "103",
+          "district_name": "HD-103",
+          "seat_designator": null,
+          "name": "Mike Bayham",
+          "party": "R",
+          "pres_margin": "-29.3",
+          "next_election": 2027,
+          "candidate_id": 9669
         },
         {
           "district": "104",
@@ -1026,7 +2076,18 @@
           "name": "Jay Gall\u00e9",
           "party": "R",
           "pres_margin": "-37.6",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9632
+        },
+        {
+          "district": "104",
+          "district_name": "HD-104",
+          "seat_designator": null,
+          "name": "Jay Gall\u00e9",
+          "party": "R",
+          "pres_margin": "-37.6",
+          "next_election": 2027,
+          "candidate_id": 9632
         },
         {
           "district": "105",
@@ -1035,19 +2096,30 @@
           "name": "Jacob Braud",
           "party": "R",
           "pres_margin": "-8.8",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9629
+        },
+        {
+          "district": "105",
+          "district_name": "HD-105",
+          "seat_designator": null,
+          "name": "Jacob Braud",
+          "party": "R",
+          "pres_margin": "-8.8",
+          "next_election": 2027,
+          "candidate_id": 9629
         }
       ]
     },
     "Senate": {
-      "total": 39,
+      "total": 73,
       "composition": {
-        "D": 10,
-        "R": 28,
+        "D": 18,
+        "R": 54,
         "Other": 0,
         "Vacant": 1
       },
-      "supermajority": 26,
+      "supermajority": 49,
       "seats_up_2026": 0,
       "members": [
         {
@@ -1057,7 +2129,18 @@
           "name": "Bob Owen",
           "party": "R",
           "pres_margin": "-33.5",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9592
+        },
+        {
+          "district": "1",
+          "district_name": "SD-1",
+          "seat_designator": null,
+          "name": "Bob Owen",
+          "party": "R",
+          "pres_margin": "-33.5",
+          "next_election": 2027,
+          "candidate_id": 9592
         },
         {
           "district": "2",
@@ -1066,7 +2149,18 @@
           "name": "Ed Price",
           "party": "D",
           "pres_margin": "+28.5",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9616
+        },
+        {
+          "district": "2",
+          "district_name": "SD-2",
+          "seat_designator": null,
+          "name": "Ed Price",
+          "party": "D",
+          "pres_margin": "+28.5",
+          "next_election": 2027,
+          "candidate_id": 9616
         },
         {
           "district": "3",
@@ -1084,7 +2178,8 @@
           "name": "Jimmy Harris",
           "party": "D",
           "pres_margin": "+62.7",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9639
         },
         {
           "district": "5",
@@ -1093,7 +2188,18 @@
           "name": "Royce Duplessis",
           "party": "D",
           "pres_margin": "+72.4",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9692
+        },
+        {
+          "district": "5",
+          "district_name": "SD-5",
+          "seat_designator": null,
+          "name": "Royce Duplessis",
+          "party": "D",
+          "pres_margin": "+72.4",
+          "next_election": 2027,
+          "candidate_id": 9692
         },
         {
           "district": "6",
@@ -1102,7 +2208,18 @@
           "name": "Rick Edmonds",
           "party": "R",
           "pres_margin": "-39.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9686
+        },
+        {
+          "district": "6",
+          "district_name": "SD-6",
+          "seat_designator": null,
+          "name": "Rick Edmonds",
+          "party": "R",
+          "pres_margin": "-39.2",
+          "next_election": 2027,
+          "candidate_id": 9686
         },
         {
           "district": "7",
@@ -1111,7 +2228,18 @@
           "name": "Gary Carter",
           "party": "D",
           "pres_margin": "+50.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9621
+        },
+        {
+          "district": "7",
+          "district_name": "SD-7",
+          "seat_designator": null,
+          "name": "Gary Carter",
+          "party": "D",
+          "pres_margin": "+50.3",
+          "next_election": 2027,
+          "candidate_id": 9621
         },
         {
           "district": "8",
@@ -1120,7 +2248,18 @@
           "name": "Patrick Connick",
           "party": "R",
           "pres_margin": "-24.7",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9674
+        },
+        {
+          "district": "8",
+          "district_name": "SD-8",
+          "seat_designator": null,
+          "name": "Patrick Connick",
+          "party": "R",
+          "pres_margin": "-24.7",
+          "next_election": 2027,
+          "candidate_id": 9674
         },
         {
           "district": "9",
@@ -1129,7 +2268,18 @@
           "name": "Cameron Henry",
           "party": "R",
           "pres_margin": "-16.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9627
+        },
+        {
+          "district": "9",
+          "district_name": "SD-9",
+          "seat_designator": null,
+          "name": "Cameron Henry",
+          "party": "R",
+          "pres_margin": "-16.3",
+          "next_election": 2027,
+          "candidate_id": 9627
         },
         {
           "district": "10",
@@ -1138,7 +2288,18 @@
           "name": "Kirk Talbot",
           "party": "R",
           "pres_margin": "-33.0",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9653
+        },
+        {
+          "district": "10",
+          "district_name": "SD-10",
+          "seat_designator": null,
+          "name": "Kirk Talbot",
+          "party": "R",
+          "pres_margin": "-33.0",
+          "next_election": 2027,
+          "candidate_id": 9653
         },
         {
           "district": "11",
@@ -1147,7 +2308,18 @@
           "name": "Patrick McMath",
           "party": "R",
           "pres_margin": "-47.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9675
+        },
+        {
+          "district": "11",
+          "district_name": "SD-11",
+          "seat_designator": null,
+          "name": "Patrick McMath",
+          "party": "R",
+          "pres_margin": "-47.3",
+          "next_election": 2027,
+          "candidate_id": 9675
         },
         {
           "district": "12",
@@ -1156,7 +2328,18 @@
           "name": "Beth Mizell",
           "party": "R",
           "pres_margin": "-48.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9588
+        },
+        {
+          "district": "12",
+          "district_name": "SD-12",
+          "seat_designator": null,
+          "name": "Beth Mizell",
+          "party": "R",
+          "pres_margin": "-48.2",
+          "next_election": 2027,
+          "candidate_id": 9588
         },
         {
           "district": "13",
@@ -1165,7 +2348,18 @@
           "name": "Valarie Hodges",
           "party": "R",
           "pres_margin": "-66.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9709
+        },
+        {
+          "district": "13",
+          "district_name": "SD-13",
+          "seat_designator": null,
+          "name": "Valarie Hodges",
+          "party": "R",
+          "pres_margin": "-66.3",
+          "next_election": 2027,
+          "candidate_id": 9709
         },
         {
           "district": "14",
@@ -1174,7 +2368,8 @@
           "name": "Larry Selders",
           "party": "D",
           "pres_margin": "+49.9",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9655
         },
         {
           "district": "15",
@@ -1183,7 +2378,18 @@
           "name": "Regina Barrow",
           "party": "D",
           "pres_margin": "+55.5",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9684
+        },
+        {
+          "district": "15",
+          "district_name": "SD-15",
+          "seat_designator": null,
+          "name": "Regina Barrow",
+          "party": "D",
+          "pres_margin": "+55.5",
+          "next_election": 2027,
+          "candidate_id": 9684
         },
         {
           "district": "16",
@@ -1192,7 +2398,18 @@
           "name": "Franklin Foil",
           "party": "R",
           "pres_margin": "-18.8",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9620
+        },
+        {
+          "district": "16",
+          "district_name": "SD-16",
+          "seat_designator": null,
+          "name": "Franklin Foil",
+          "party": "R",
+          "pres_margin": "-18.8",
+          "next_election": 2027,
+          "candidate_id": 9620
         },
         {
           "district": "17",
@@ -1201,7 +2418,18 @@
           "name": "Caleb Kleinpeter",
           "party": "R",
           "pres_margin": "-35.0",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9599
+        },
+        {
+          "district": "17",
+          "district_name": "SD-17",
+          "seat_designator": null,
+          "name": "Caleb Kleinpeter",
+          "party": "R",
+          "pres_margin": "-35.0",
+          "next_election": 2027,
+          "candidate_id": 9599
         },
         {
           "district": "18",
@@ -1210,7 +2438,8 @@
           "name": "Eddie Lambert",
           "party": "R",
           "pres_margin": "-51.5",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9614
         },
         {
           "district": "19",
@@ -1219,7 +2448,18 @@
           "name": "Greg Miller",
           "party": "R",
           "pres_margin": "-25.7",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9625
+        },
+        {
+          "district": "19",
+          "district_name": "SD-19",
+          "seat_designator": null,
+          "name": "Greg Miller",
+          "party": "R",
+          "pres_margin": "-25.7",
+          "next_election": 2027,
+          "candidate_id": 9625
         },
         {
           "district": "20",
@@ -1228,7 +2468,18 @@
           "name": "Mike F\u00e9si",
           "party": "R",
           "pres_margin": "-63.5",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9664
+        },
+        {
+          "district": "20",
+          "district_name": "SD-20",
+          "seat_designator": null,
+          "name": "Mike F\u00e9si",
+          "party": "R",
+          "pres_margin": "-63.5",
+          "next_election": 2027,
+          "candidate_id": 31881
         },
         {
           "district": "21",
@@ -1237,7 +2488,18 @@
           "name": "Robert Allain",
           "party": "R",
           "pres_margin": "-41.8",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9681
+        },
+        {
+          "district": "21",
+          "district_name": "SD-21",
+          "seat_designator": null,
+          "name": "Robert Allain",
+          "party": "R",
+          "pres_margin": "-41.8",
+          "next_election": 2027,
+          "candidate_id": 9681
         },
         {
           "district": "22",
@@ -1246,7 +2508,18 @@
           "name": "Blake Miguez",
           "party": "R",
           "pres_margin": "-40.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9590
+        },
+        {
+          "district": "22",
+          "district_name": "SD-22",
+          "seat_designator": null,
+          "name": "Blake Miguez",
+          "party": "R",
+          "pres_margin": "-40.3",
+          "next_election": 2027,
+          "candidate_id": 9590
         },
         {
           "district": "23",
@@ -1255,7 +2528,8 @@
           "name": "Brach Myers",
           "party": "R",
           "pres_margin": "-45.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9593
         },
         {
           "district": "24",
@@ -1264,7 +2538,18 @@
           "name": "Gerald Boudreaux",
           "party": "D",
           "pres_margin": "+8.1",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9623
+        },
+        {
+          "district": "24",
+          "district_name": "SD-24",
+          "seat_designator": null,
+          "name": "Gerald Boudreaux",
+          "party": "D",
+          "pres_margin": "+8.1",
+          "next_election": 2027,
+          "candidate_id": 9623
         },
         {
           "district": "25",
@@ -1273,7 +2558,18 @@
           "name": "Mark Abraham",
           "party": "R",
           "pres_margin": "-51.8",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9662
+        },
+        {
+          "district": "25",
+          "district_name": "SD-25",
+          "seat_designator": null,
+          "name": "Mark Abraham",
+          "party": "R",
+          "pres_margin": "-51.8",
+          "next_election": 2027,
+          "candidate_id": 9662
         },
         {
           "district": "26",
@@ -1282,7 +2578,18 @@
           "name": "Bob Hensgens",
           "party": "R",
           "pres_margin": "-62.1",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9591
+        },
+        {
+          "district": "26",
+          "district_name": "SD-26",
+          "seat_designator": null,
+          "name": "Bob Hensgens",
+          "party": "R",
+          "pres_margin": "-62.1",
+          "next_election": 2027,
+          "candidate_id": 9591
         },
         {
           "district": "27",
@@ -1291,7 +2598,18 @@
           "name": "Jeremy Stine",
           "party": "R",
           "pres_margin": "-30.3",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9635
+        },
+        {
+          "district": "27",
+          "district_name": "SD-27",
+          "seat_designator": null,
+          "name": "Jeremy Stine",
+          "party": "R",
+          "pres_margin": "-30.3",
+          "next_election": 2027,
+          "candidate_id": 9635
         },
         {
           "district": "28",
@@ -1300,7 +2618,18 @@
           "name": "Heather Cloud",
           "party": "R",
           "pres_margin": "-50.4",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9626
+        },
+        {
+          "district": "28",
+          "district_name": "SD-28",
+          "seat_designator": null,
+          "name": "Heather Cloud",
+          "party": "R",
+          "pres_margin": "-50.4",
+          "next_election": 2027,
+          "candidate_id": 9626
         },
         {
           "district": "29",
@@ -1309,7 +2638,18 @@
           "name": "Jay Luneau",
           "party": "D",
           "pres_margin": "+21.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9713
+        },
+        {
+          "district": "29",
+          "district_name": "SD-29",
+          "seat_designator": null,
+          "name": "Jay Luneau",
+          "party": "D",
+          "pres_margin": "+21.2",
+          "next_election": 2027,
+          "candidate_id": 9713
         },
         {
           "district": "30",
@@ -1318,7 +2658,18 @@
           "name": "Mike Reese",
           "party": "R",
           "pres_margin": "-71.9",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9670
+        },
+        {
+          "district": "30",
+          "district_name": "SD-30",
+          "seat_designator": null,
+          "name": "Mike Reese",
+          "party": "R",
+          "pres_margin": "-71.9",
+          "next_election": 2027,
+          "candidate_id": 9670
         },
         {
           "district": "31",
@@ -1327,7 +2678,18 @@
           "name": "Alan Seabaugh",
           "party": "R",
           "pres_margin": "-45.5",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9581
+        },
+        {
+          "district": "31",
+          "district_name": "SD-31",
+          "seat_designator": null,
+          "name": "Alan Seabaugh",
+          "party": "R",
+          "pres_margin": "-45.5",
+          "next_election": 2027,
+          "candidate_id": 9581
         },
         {
           "district": "32",
@@ -1336,7 +2698,18 @@
           "name": "Glen Womack",
           "party": "R",
           "pres_margin": "-64.5",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9624
+        },
+        {
+          "district": "32",
+          "district_name": "SD-32",
+          "seat_designator": null,
+          "name": "Glen Womack",
+          "party": "R",
+          "pres_margin": "-64.5",
+          "next_election": 2027,
+          "candidate_id": 9624
         },
         {
           "district": "33",
@@ -1345,7 +2718,18 @@
           "name": "Stewart Cathey",
           "party": "R",
           "pres_margin": "-54.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9700
+        },
+        {
+          "district": "33",
+          "district_name": "SD-33",
+          "seat_designator": null,
+          "name": "Stewart Cathey",
+          "party": "R",
+          "pres_margin": "-54.2",
+          "next_election": 2027,
+          "candidate_id": 9700
         },
         {
           "district": "34",
@@ -1354,7 +2738,18 @@
           "name": "Katrina Jackson-Andrews",
           "party": "D",
           "pres_margin": "+21.8",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9648
+        },
+        {
+          "district": "34",
+          "district_name": "SD-34",
+          "seat_designator": null,
+          "name": "Katrina Jackson-Andrews",
+          "party": "D",
+          "pres_margin": "+21.8",
+          "next_election": 2027,
+          "candidate_id": 31921
         },
         {
           "district": "35",
@@ -1363,7 +2758,18 @@
           "name": "Jay Morris",
           "party": "R",
           "pres_margin": "-62.1",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9633
+        },
+        {
+          "district": "35",
+          "district_name": "SD-35",
+          "seat_designator": null,
+          "name": "Jay Morris",
+          "party": "R",
+          "pres_margin": "-62.1",
+          "next_election": 2027,
+          "candidate_id": 9633
         },
         {
           "district": "36",
@@ -1372,7 +2778,18 @@
           "name": "Adam Bass",
           "party": "R",
           "pres_margin": "-44.9",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9578
+        },
+        {
+          "district": "36",
+          "district_name": "SD-36",
+          "seat_designator": null,
+          "name": "Adam Bass",
+          "party": "R",
+          "pres_margin": "-44.9",
+          "next_election": 2027,
+          "candidate_id": 9578
         },
         {
           "district": "37",
@@ -1381,7 +2798,18 @@
           "name": "Bill Wheat",
           "party": "R",
           "pres_margin": "-41.0",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 31930
+        },
+        {
+          "district": "37",
+          "district_name": "SD-37",
+          "seat_designator": null,
+          "name": "Bill Wheat",
+          "party": "R",
+          "pres_margin": "-41.0",
+          "next_election": 2027,
+          "candidate_id": 9589
         },
         {
           "district": "38",
@@ -1390,7 +2818,18 @@
           "name": "Thomas Pressly",
           "party": "R",
           "pres_margin": "-22.6",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9705
+        },
+        {
+          "district": "38",
+          "district_name": "SD-38",
+          "seat_designator": null,
+          "name": "Thomas Pressly",
+          "party": "R",
+          "pres_margin": "-22.6",
+          "next_election": 2027,
+          "candidate_id": 9705
         },
         {
           "district": "39",
@@ -1399,7 +2838,18 @@
           "name": "Sam Jenkins",
           "party": "D",
           "pres_margin": "+28.5",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 9694
+        },
+        {
+          "district": "39",
+          "district_name": "SD-39",
+          "seat_designator": null,
+          "name": "Sam Jenkins",
+          "party": "D",
+          "pres_margin": "+28.5",
+          "next_election": 2027,
+          "candidate_id": 9694
         }
       ]
     }

@@ -38,6 +38,25 @@
     gap: 4px 16px;
   }
 
+  /* Scorecard */
+  .scorecard-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .scorecard-grid .stat-number { font-size: 32px; }
+  .scorecard-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    font-size: 13px;
+    color: var(--ms-text-light);
+    padding: 0 4px;
+  }
+  .scorecard-detail span { white-space: nowrap; }
+  .scorecard-detail strong { color: var(--ms-text); font-weight: 600; }
+
   /* Offices held summary */
   .offices-summary {
     margin-bottom: 8px;
@@ -108,6 +127,8 @@
   .timeline-entry.entry-won::before { background: #28a745; }
   .timeline-entry.entry-lost::before { background: var(--ms-rep-red); }
   .timeline-entry.entry-pending::before { background: var(--ms-gold); }
+  .timeline-entry.entry-won:not(.primary-muted) { background: rgba(40, 167, 69, 0.03); }
+  .timeline-entry.entry-lost:not(.primary-muted) { background: rgba(220, 53, 69, 0.03); }
 
   /* Entry styling by type */
   .timeline-entry.entry-general { border-left: 4px solid var(--ms-navy); }
@@ -206,6 +227,8 @@
 
   @media (max-width: 768px) {
     .candidate-name { font-size: 28px; }
+    .scorecard-grid { grid-template-columns: repeat(3, 1fr); }
+    .scorecard-grid .stat-number { font-size: 26px; }
     .entry-cand-row {
       grid-template-columns: auto 1fr auto auto;
       font-size: 12px;
@@ -379,7 +402,65 @@
   heroHtml += `</div>`;
 
   // ==========================
-  // 2. OFFICES HELD SUMMARY
+  // 2. ELECTION SCORECARD
+  // ==========================
+  let scorecardHtml = '';
+  {
+    // Only count general and special elections (not primaries/runoffs)
+    const scored = c.candidacies.filter(cy =>
+      !cy.type.includes('Primary') && !cy.type.endsWith('_D') && !cy.type.endsWith('_R')
+      && !cy.type.endsWith('_L') && !cy.type.endsWith('_Nonpartisan') && cy.type !== 'Runoff'
+    );
+    if (scored.length > 0) {
+      const wins = scored.filter(cy => cy.result === 'Won').length;
+      const losses = scored.filter(cy => cy.result === 'Lost').length;
+      const totalDecided = wins + losses;
+      const winRate = totalDecided > 0 ? (wins / totalDecided * 100) : null;
+
+      // Avg vote share (only contested races with pct)
+      const withPct = scored.filter(cy => cy.pct != null && (cy.opponents || []).length > 0);
+      const avgPct = withPct.length > 0 ? withPct.reduce((s, cy) => s + cy.pct, 0) / withPct.length : null;
+
+      // Best / worst performance (contested only)
+      let bestPct = null, worstPct = null, bestYear = null, worstYear = null;
+      for (const cy of withPct) {
+        if (bestPct === null || cy.pct > bestPct) { bestPct = cy.pct; bestYear = cy.year; }
+        if (worstPct === null || cy.pct < worstPct) { worstPct = cy.pct; worstYear = cy.year; }
+      }
+
+      // Uncontested wins
+      const uncontestedWins = scored.filter(cy => cy.result === 'Won' && (cy.opponents || []).length === 0).length;
+
+      // Times as incumbent
+      const timesIncumbent = scored.filter(cy => cy.is_incumbent).length;
+
+      scorecardHtml = `<div class="section"><div class="section-title">Election Scorecard</div>
+        <div class="scorecard-grid">
+          <div class="card stat-card"><div class="stat-number">${scored.length}</div><div class="stat-label">${scored.length === 1 ? 'Race' : 'Races'}</div></div>
+          <div class="card stat-card"><div class="stat-number" style="color:#28a745">${wins}</div><div class="stat-label">${wins === 1 ? 'Win' : 'Wins'}</div></div>
+          <div class="card stat-card"><div class="stat-number" style="color:var(--ms-rep-red)">${losses}</div><div class="stat-label">${losses === 1 ? 'Loss' : 'Losses'}</div></div>
+          <div class="card stat-card"><div class="stat-number">${winRate != null ? winRate.toFixed(0) + '%' : '—'}</div><div class="stat-label">Win Rate</div></div>
+          <div class="card stat-card"><div class="stat-number">${avgPct != null ? avgPct.toFixed(1) + '%' : '—'}</div><div class="stat-label">Avg. Vote Share</div></div>
+        </div>
+        <div class="scorecard-detail">`;
+
+      if (bestPct != null && withPct.length > 1) {
+        scorecardHtml += `<span>Best: <strong>${bestPct.toFixed(1)}%</strong> (${bestYear})</span>`;
+        scorecardHtml += `<span>Worst: <strong>${worstPct.toFixed(1)}%</strong> (${worstYear})</span>`;
+      }
+      if (uncontestedWins > 0) {
+        scorecardHtml += `<span>Uncontested wins: <strong>${uncontestedWins}</strong></span>`;
+      }
+      if (timesIncumbent > 0) {
+        scorecardHtml += `<span>As incumbent: <strong>${timesIncumbent}</strong></span>`;
+      }
+
+      scorecardHtml += `</div></div>`;
+    }
+  }
+
+  // ==========================
+  // 3. OFFICES HELD SUMMARY
   // ==========================
   let officesHtml = '';
   const terms = c.seat_terms || [];
@@ -422,7 +503,7 @@
   }
 
   // ==========================
-  // 3. ELECTION TIMELINE
+  // 4. ELECTION TIMELINE
   // ==========================
   // Build a unified timeline of candidacies and party switches
   const events = [];
@@ -586,7 +667,7 @@
   }
 
   // ==========================
-  // 4. BACK NAVIGATION
+  // 5. BACK NAVIGATION
   // ==========================
   let navHtml = `<div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--ms-border);font-size:14px">
     <a href="state.html?st=${st}" style="color:var(--ms-dem-blue);text-decoration:none;font-weight:600">← Back to ${stateName}</a>`;
@@ -599,7 +680,7 @@
   // ==========================
   // RENDER
   // ==========================
-  content.innerHTML = heroHtml + officesHtml + timelineHtml + navHtml;
+  content.innerHTML = heroHtml + scorecardHtml + officesHtml + timelineHtml + navHtml;
 
   function capitalize(s) {
     return s.charAt(0).toUpperCase() + s.slice(1);

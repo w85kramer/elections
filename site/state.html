@@ -656,8 +656,17 @@
             const ntd = tr.insertCell();
             const pc = m.name ? getPartyColor(m.party) : '';
             if (m.name) {
-              ntd.textContent = m.name;
-              if (pc) ntd.style.color = pc;
+              if (m.candidate_id) {
+                const a = document.createElement('a');
+                a.href = `candidate.html?id=${m.candidate_id}&st=${stateAbbr}`;
+                a.textContent = m.name;
+                a.style.textDecoration = 'none';
+                if (pc) a.style.color = pc;
+                ntd.appendChild(a);
+              } else {
+                ntd.textContent = m.name;
+                if (pc) ntd.style.color = pc;
+              }
             } else {
               ntd.textContent = 'Vacant';
               ntd.style.color = '#999';

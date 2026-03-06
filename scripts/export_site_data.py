@@ -557,10 +557,12 @@ def export_state_detail(state_abbr, dry_run=False):
             s.current_holder_caucus as caucus,
             d.pres_2024_margin as pres_margin,
             s.next_regular_election_year,
-            s.seat_label
+            s.seat_label,
+            stm.candidate_id
         FROM seats s
         JOIN districts d ON s.district_id = d.id
         JOIN states st ON d.state_id = st.id
+        LEFT JOIN seat_terms stm ON s.id = stm.seat_id AND stm.end_date IS NULL
         WHERE st.abbreviation = '{state_abbr}'
           AND s.office_level = 'Legislative'
           AND COALESCE(d.redistricting_cycle, '2022') = '2022'
@@ -733,6 +735,8 @@ def export_state_detail(state_abbr, dry_run=False):
             'pres_margin': r['pres_margin'],
             'next_election': r['next_regular_election_year'],
         }
+        if r.get('candidate_id'):
+            member['candidate_id'] = r['candidate_id']
         if r.get('caucus') and r['caucus'] != party:
             member['caucus'] = r['caucus']
         chambers[ch]['members'].append(member)
@@ -932,10 +936,12 @@ def export_all_state_details(dry_run=False):
             s.current_holder_caucus as caucus,
             d.pres_2024_margin as pres_margin,
             s.next_regular_election_year,
-            s.seat_label
+            s.seat_label,
+            stm.candidate_id
         FROM seats s
         JOIN districts d ON s.district_id = d.id
         JOIN states st ON d.state_id = st.id
+        LEFT JOIN seat_terms stm ON s.id = stm.seat_id AND stm.end_date IS NULL
         WHERE s.office_level = 'Legislative'
           AND COALESCE(d.redistricting_cycle, '2022') = '2022'
         ORDER BY st.abbreviation, d.chamber,
@@ -1166,6 +1172,8 @@ def export_all_state_details(dry_run=False):
                 'pres_margin': r['pres_margin'],
                 'next_election': r['next_regular_election_year'],
             }
+            if r.get('candidate_id'):
+                member['candidate_id'] = r['candidate_id']
             # Include raw caucus when it provides additional info (coalition, cross-party)
             if r.get('caucus') and r['caucus'] != party:
                 member['caucus'] = r['caucus']
