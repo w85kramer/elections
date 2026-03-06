@@ -240,6 +240,7 @@ def export_candidates(dry_run=False, single_state=None):
                 'name': opp['name'],
                 'id': opp['candidate_id'],
                 'party': opp['party'],
+                'votes': opp['votes'],
                 'pct': float(opp['pct']) if opp['pct'] is not None else None,
                 'result': opp['result'],
             }
