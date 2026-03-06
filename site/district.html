@@ -162,14 +162,12 @@
     color: var(--ms-text-light);
     background: rgba(0, 0, 0, 0.02);
   }
-  .history-table .primary-row.winner-row td {
-    background: rgba(0, 0, 0, 0.04);
-  }
 
-  /* Candidate detail rows inherit tier */
-  .candidate-detail.always-visible.general-child td {
+  /* Candidate detail rows inherit tier background */
+  .candidate-detail.general-child td {
     font-weight: 600;
     color: var(--ms-text);
+    background: rgba(4, 56, 88, 0.05);
   }
   .candidate-detail.primary-child td {
     color: var(--ms-text-light);
@@ -792,7 +790,7 @@
         html += `<tr class="event-row term-event-row">
           <td>${teDateLabel}</td>
           <td><span class="term-event-reason">${reasonLabel}</span></td>
-          <td><span style="${partyColorStyle(te.party)}">${te.name}</span> ${badge}${notesLabel}</td>
+          <td>${badge} <span style="${partyColorStyle(te.party)}">${te.name}</span>${notesLabel}</td>
           <td colspan="3"></td>
         </tr>`;
         continue;
@@ -1085,7 +1083,7 @@
         html += `<tr class="event-row term-event-row">
           <td>${teDateLabel}</td>
           <td><span class="term-event-reason">${reasonLabel}</span></td>
-          <td><span style="${partyColorStyle(te.party)}">${te.name}</span> ${badge}${notesLabel}</td>
+          <td>${badge} <span style="${partyColorStyle(te.party)}">${te.name}</span>${notesLabel}</td>
           <td colspan="3"></td>
         </tr>`;
         continue;
