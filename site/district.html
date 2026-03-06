@@ -763,7 +763,7 @@
     events.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
 
     let html = `<table class="history-table"><thead><tr>
-      <th>Year</th><th>Type</th><th>Candidates</th><th>Vote Share</th><th>Votes</th><th></th>
+      <th>Date</th><th>Type</th><th>Candidates</th><th>Vote Share</th><th>Votes</th><th></th>
     </tr></thead><tbody>`;
 
     let lastCycleKey = null;
@@ -788,12 +788,12 @@
           'appointed_elsewhere': 'Appointed Elsewhere',
         };
         const reasonLabel = reasonLabels[te.reason] || te.reason;
-        const dateLabel = dateStr ? ` &middot; ${dateStr}` : '';
+        const teDateLabel = dateStr ? `<div class="text-muted" style="font-size:11px">${dateStr}</div>` : '';
         const notesLabel = te.notes ? ` <span class="term-event-notes">${te.notes}</span>` : '';
         const badge = `<span class="party-badge ${partyBadgeClass(te.party)}" style="font-size:10px;padding:1px 5px">${te.party || '?'}</span>`;
         html += `<tr class="event-row term-event-row">
-          <td>${te.year}</td>
-          <td><span class="term-event-reason">${reasonLabel}</span>${dateLabel}</td>
+          <td>${teDateLabel}</td>
+          <td><span class="term-event-reason">${reasonLabel}</span></td>
           <td><span style="${partyColorStyle(te.party)}">${te.name}</span> ${badge}${notesLabel}</td>
           <td colspan="3"></td>
         </tr>`;
@@ -810,7 +810,7 @@
         }
         const marginNote = rd.newMargin ? ` <span class="redistricting-detail">&middot; New lines: ${rd.newMargin}</span>` : '';
         html += `<tr class="event-row redistricting-row">
-          <td>${rd.year}</td>
+          <td></td>
           <td><span class="redistricting-label">District Redrawn</span></td>
           <td>New district lines took effect${marginNote}</td>
           <td colspan="3"></td>
@@ -829,12 +829,12 @@
         const dateStr = ps.date
           ? new Date(ps.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
           : '';
-        const dateLabel = dateStr ? ` <span class="text-muted" style="font-size:11px">&middot; ${dateStr}</span>` : '';
+        const psDateLabel = dateStr ? `<div class="text-muted" style="font-size:11px">${dateStr}</div>` : '';
         const oldBadge = `<span class="party-badge ${partyBadgeClass(ps.old_party)}" style="font-size:10px;padding:1px 5px">${ps.old_party}</span>`;
         const newBadge = `<span class="party-badge ${partyBadgeClass(ps.new_party)}" style="font-size:10px;padding:1px 5px">${ps.new_party}</span>`;
         html += `<tr class="event-row party-switch-row">
-          <td>${ps.year}</td>
-          <td>Party Switch${dateLabel}</td>
+          <td>${psDateLabel}</td>
+          <td>Party Switch</td>
           <td><span style="${partyColorStyle(ps.new_party)}">${ps.name}</span> switched ${oldBadge} &rarr; ${newBadge}</td>
           <td colspan="3"></td>
         </tr>`;
@@ -873,10 +873,10 @@
       const winner = winners[0] || null;
 
       let typeLabel = e.type.replace(/_/g, ' ');
+      let dateLabel = '';
       if (e.date) {
         const d = new Date(e.date + 'T00:00:00');
-        const shortDate = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-        typeLabel += ` <span class="text-muted" style="font-size:11px">· ${shortDate}</span>`;
+        dateLabel = `<div class="text-muted" style="font-size:11px">${d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</div>`;
       }
       const isMultiWinner = winners.length > 1;
       let winnerName = '—';
@@ -935,7 +935,7 @@
       const expandBtn = (hasNonWinners && !autoExpand) ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${nonWinners.length} more</button>` : '';
 
       html += `<tr class="${tierClass}${isWinnerRow}">
-        <td>${e.year}</td>
+        <td>${dateLabel}</td>
         <td>${typeLabel}</td>
         <td>${winnerName}</td>
         <td>${marginHtml}</td>
@@ -1057,7 +1057,7 @@
     events.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
 
     let html = `<table class="history-table"><thead><tr>
-      <th>Year</th><th>Type</th><th>Candidates</th><th>Vote Share</th><th>Votes</th><th></th>
+      <th>Date</th><th>Type</th><th>Candidates</th><th>Vote Share</th><th>Votes</th><th></th>
     </tr></thead><tbody>`;
 
     let lastCycleKey = null;
@@ -1081,12 +1081,12 @@
           'appointed_elsewhere': 'Appointed Elsewhere',
         };
         const reasonLabel = reasonLabels[te.reason] || te.reason;
-        const dateLabel = dateStr ? ` &middot; ${dateStr}` : '';
+        const teDateLabel = dateStr ? `<div class="text-muted" style="font-size:11px">${dateStr}</div>` : '';
         const notesLabel = te.notes ? ` <span class="term-event-notes">${te.notes}</span>` : '';
         const badge = `<span class="party-badge ${partyBadgeClass(te.party)}" style="font-size:10px;padding:1px 5px">${te.party || '?'}</span>`;
         html += `<tr class="event-row term-event-row">
-          <td>${te.year}</td>
-          <td><span class="term-event-reason">${reasonLabel}</span>${dateLabel}</td>
+          <td>${teDateLabel}</td>
+          <td><span class="term-event-reason">${reasonLabel}</span></td>
           <td><span style="${partyColorStyle(te.party)}">${te.name}</span> ${badge}${notesLabel}</td>
           <td colspan="3"></td>
         </tr>`;
@@ -1102,7 +1102,7 @@
         }
         const marginNote = rd.newMargin ? ` <span class="redistricting-detail">&middot; New lines: ${rd.newMargin}</span>` : '';
         html += `<tr class="event-row redistricting-row">
-          <td>${rd.year}</td>
+          <td></td>
           <td><span class="redistricting-label">District Redrawn</span></td>
           <td>New district lines took effect${marginNote}</td>
           <td colspan="3"></td>
@@ -1120,12 +1120,12 @@
         const dateStr = ps.date
           ? new Date(ps.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
           : '';
-        const dateLabel = dateStr ? ` <span class="text-muted" style="font-size:11px">&middot; ${dateStr}</span>` : '';
+        const psDateLabel = dateStr ? `<div class="text-muted" style="font-size:11px">${dateStr}</div>` : '';
         const oldBadge = `<span class="party-badge ${partyBadgeClass(ps.old_party)}" style="font-size:10px;padding:1px 5px">${ps.old_party}</span>`;
         const newBadge = `<span class="party-badge ${partyBadgeClass(ps.new_party)}" style="font-size:10px;padding:1px 5px">${ps.new_party}</span>`;
         html += `<tr class="event-row party-switch-row">
-          <td>${ps.year}</td>
-          <td>Party Switch${dateLabel}</td>
+          <td>${psDateLabel}</td>
+          <td>Party Switch</td>
           <td><span style="${partyColorStyle(ps.new_party)}">${ps.name}</span> switched ${oldBadge} &rarr; ${newBadge}</td>
           <td colspan="3"></td>
         </tr>`;
@@ -1157,10 +1157,10 @@
       const winner = winners[0] || null;
 
       let typeLabel = e.type.replace(/_/g, ' ');
+      let dateLabel = '';
       if (e.date) {
         const d = new Date(e.date + 'T00:00:00');
-        const shortDate = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-        typeLabel += ` <span class="text-muted" style="font-size:11px">· ${shortDate}</span>`;
+        dateLabel = `<div class="text-muted" style="font-size:11px">${d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</div>`;
       }
 
       const isMultiWinner = winners.length > 1;
@@ -1215,7 +1215,7 @@
       const expandBtn = (hasNonWinners && !autoExpand) ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${nonWinners.length} more</button>` : '';
 
       html += `<tr class="${tierClass}${isWinnerRow}">
-        <td>${e.year}</td>
+        <td>${dateLabel}</td>
         <td>${typeLabel}</td>
         <td>${winnerName}</td>
         <td>${marginHtml}</td>
