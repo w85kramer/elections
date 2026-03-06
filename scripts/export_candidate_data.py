@@ -372,6 +372,36 @@ def export_candidates(dry_run=False, single_state=None):
     print(f'\n  Total: {total_candidates} candidates across {len(candidates_by_state)} states')
     print(f'  Written to {out_dir}/')
 
+    # --- Write search index ---
+    # Lightweight array for the browse/search page
+    search_index = []
+    for state in sorted(candidates_by_state.keys()):
+        for cand in candidates_by_state[state].values():
+            current = cand.get('current_office')
+            entry = {
+                'id': cand['id'],
+                'n': cand['full_name'],
+                'st': state,
+                'p': cand.get('party', ''),
+            }
+            if current:
+                entry['ch'] = current['chamber']
+                entry['d'] = current['district']
+                entry['a'] = 1  # active (current officeholder)
+            else:
+                # Use most recent candidacy for chamber/district
+                if cand['candidacies']:
+                    latest = cand['candidacies'][0]
+                    entry['ch'] = latest['chamber']
+                    entry['d'] = latest['district']
+            search_index.append(entry)
+
+    search_path = os.path.join(SITE_DATA_DIR, 'candidate_search.json')
+    with open(search_path, 'w') as f:
+        json.dump({'generated_at': generated_at, 'candidates': search_index}, f, separators=(',', ':'))
+    size_kb = os.path.getsize(search_path) / 1024
+    print(f'\n  Search index: {len(search_index)} entries, {size_kb:.0f} KB')
+
 
 def main():
     parser = argparse.ArgumentParser(description='Export candidate data for site pages')

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candidates | State Elections Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<style>
+  .search-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .search-bar input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 14px;
+    font-size: 15px;
+    font-family: 'Work Sans', sans-serif;
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    outline: none;
+  }
+  .search-bar input[type="text"]:focus {
+    border-color: var(--ms-navy);
+    box-shadow: 0 0 0 2px rgba(4,56,88,0.1);
+  }
+  .filter-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter-row select {
+    padding: 7px 10px;
+    font-size: 13px;
+    font-family: 'Work Sans', sans-serif;
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    background: white;
+    cursor: pointer;
+  }
+  .filter-row label {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .filter-row .filter-label {
+    font-size: 12px;
+    color: var(--ms-text-light);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .result-count {
+    font-size: 13px;
+    color: var(--ms-text-light);
+    margin-bottom: 8px;
+  }
+
+  .cand-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  .cand-table th {
+    text-align: left;
+    padding: 8px 10px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--ms-text-light);
+    border-bottom: 2px solid var(--ms-navy);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+  .cand-table th:hover { color: var(--ms-navy); }
+  .cand-table th .sort-arrow {
+    display: inline-block;
+    margin-left: 4px;
+    opacity: 0.3;
+    font-size: 10px;
+  }
+  .cand-table th.sort-active .sort-arrow { opacity: 1; }
+  .cand-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+  }
+  .cand-table tr:hover td { background: #f8f9fa; }
+  .cand-table td a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .cand-table td a:hover { text-decoration: underline; }
+  .cand-table .party-col { width: 40px; text-align: center; }
+  .cand-table .status-active {
+    color: #28a745;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .cand-table .status-former {
+    color: var(--ms-text-light);
+    font-size: 12px;
+  }
+
+  .load-msg {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--ms-text-light);
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  .pagination button {
+    padding: 6px 14px;
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    background: white;
+    cursor: pointer;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 13px;
+  }
+  .pagination button:hover:not(:disabled) { background: #f0f0f0; }
+  .pagination button:disabled { opacity: 0.4; cursor: default; }
+  .pagination .page-info { color: var(--ms-text-light); font-size: 13px; }
+
+  @media (max-width: 768px) {
+    .cand-table .district-col { display: none; }
+    .cand-table td, .cand-table th { padding: 6px 6px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+  <!-- Header -->
+  <div class="site-header">
+    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
+    <a href="index.html" class="site-title">State Elections Tracker</a>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; <span>Candidates</span>
+  </div>
+
+  <h1 class="page-title" style="font-weight:800;font-size:32px;color:var(--ms-navy);margin-bottom:24px">Candidates</h1>
+
+  <!-- Search + Filters -->
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search by name..." autocomplete="off">
+  </div>
+  <div class="filter-row">
+    <span class="filter-label">Filters:</span>
+    <select id="filter-state"><option value="">All States</option></select>
+    <select id="filter-party">
+      <option value="">All Parties</option>
+      <option value="D">Democrat</option>
+      <option value="R">Republican</option>
+      <option value="I">Independent</option>
+      <option value="L">Libertarian</option>
+      <option value="NP">Nonpartisan</option>
+      <option value="other">Other</option>
+    </select>
+    <select id="filter-chamber">
+      <option value="">All Chambers</option>
+      <option value="House">House</option>
+      <option value="Senate">Senate</option>
+    </select>
+    <label><input type="checkbox" id="filter-active"> Current officeholders only</label>
+  </div>
+
+  <div class="result-count" id="result-count"></div>
+
+  <!-- Results -->
+  <div id="results">
+    <div class="load-msg" id="load-msg">Loading candidates...</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="site-footer">
+    <img src="assets/multistate-logomark.png" alt="MultiState">
+    <span class="footer-text">Source: MultiState. Data generated <span id="gen-date"></span>.</span>
+  </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script>
+(async function() {
+  const PAGE_SIZE = 100;
+  let allCandidates = [];
+  let filtered = [];
+  let currentPage = 0;
+  let sortCol = 'n';
+  let sortAsc = true;
+
+  // Load search index
+  try {
+    const data = await loadJSON('data/candidate_search.json');
+    allCandidates = data.candidates;
+    document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+  } catch(e) {
+    document.getElementById('load-msg').textContent = 'Failed to load candidate data.';
+    return;
+  }
+
+  // Populate state dropdown
+  const stateSelect = document.getElementById('filter-state');
+  const states = [...new Set(allCandidates.map(c => c.st))].sort();
+  for (const st of states) {
+    const opt = document.createElement('option');
+    opt.value = st;
+    opt.textContent = STATE_NAMES[st] || st;
+    stateSelect.appendChild(opt);
+  }
+
+  // --- Filtering ---
+  const searchInput = document.getElementById('search-input');
+  const filterState = document.getElementById('filter-state');
+  const filterParty = document.getElementById('filter-party');
+  const filterChamber = document.getElementById('filter-chamber');
+  const filterActive = document.getElementById('filter-active');
+
+  function applyFilters() {
+    const q = searchInput.value.trim().toLowerCase();
+    const st = filterState.value;
+    const party = filterParty.value;
+    const chamber = filterChamber.value;
+    const activeOnly = filterActive.checked;
+
+    filtered = allCandidates.filter(c => {
+      if (q && !c.n.toLowerCase().includes(q)) return false;
+      if (st && c.st !== st) return false;
+      if (party === 'other') {
+        if (['D','R','I','L','NP'].includes(c.p)) return false;
+      } else if (party && c.p !== party) return false;
+      if (chamber) {
+        if (chamber === 'House' && c.ch === 'Senate') return false;
+        if (chamber === 'Senate' && c.ch !== 'Senate') return false;
+      }
+      if (activeOnly && !c.a) return false;
+      return true;
+    });
+
+    applySort();
+    currentPage = 0;
+    render();
+  }
+
+  // --- Sorting ---
+  function applySort() {
+    filtered.sort((a, b) => {
+      let va, vb;
+      if (sortCol === 'n') {
+        va = a.n.toLowerCase(); vb = b.n.toLowerCase();
+      } else if (sortCol === 'st') {
+        va = a.st; vb = b.st;
+      } else if (sortCol === 'p') {
+        va = a.p || 'zzz'; vb = b.p || 'zzz';
+      } else if (sortCol === 'd') {
+        va = (a.ch || '') + (a.d || ''); vb = (b.ch || '') + (b.d || '');
+      } else if (sortCol === 'status') {
+        va = a.a ? 0 : 1; vb = b.a ? 0 : 1;
+      }
+      if (va < vb) return sortAsc ? -1 : 1;
+      if (va > vb) return sortAsc ? 1 : -1;
+      return 0;
+    });
+  }
+
+  // --- Rendering ---
+  function render() {
+    const resultsDiv = document.getElementById('results');
+    const countDiv = document.getElementById('result-count');
+    const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+    const start = currentPage * PAGE_SIZE;
+    const page = filtered.slice(start, start + PAGE_SIZE);
+
+    countDiv.textContent = `${numberWithCommas(filtered.length)} candidate${filtered.length !== 1 ? 's' : ''} found`;
+
+    if (filtered.length === 0) {
+      resultsDiv.innerHTML = '<div class="load-msg">No candidates match your filters.</div>';
+      return;
+    }
+
+    function thClass(col) {
+      return sortCol === col ? 'sort-active' : '';
+    }
+    function arrow(col) {
+      if (sortCol !== col) return '<span class="sort-arrow">&#9650;</span>';
+      return sortAsc ? '<span class="sort-arrow">&#9650;</span>' : '<span class="sort-arrow">&#9660;</span>';
+    }
+
+    let html = `<table class="cand-table">
+      <thead><tr>
+        <th class="${thClass('n')}" data-col="n">Name ${arrow('n')}</th>
+        <th class="${thClass('st')}" data-col="st">State ${arrow('st')}</th>
+        <th class="party-col ${thClass('p')}" data-col="p">Party ${arrow('p')}</th>
+        <th class="district-col ${thClass('d')}" data-col="d">District ${arrow('d')}</th>
+        <th class="${thClass('status')}" data-col="status">Status ${arrow('status')}</th>
+      </tr></thead><tbody>`;
+
+    for (const c of page) {
+      const party = c.p || '';
+      const badge = party ? `<span class="party-badge ${partyBadgeClass(party)}" style="font-size:10px;padding:1px 5px">${party}</span>` : '';
+      const chamberShort = c.ch === 'Senate' ? 'SD' : (c.ch === 'Legislature' ? 'LD' : 'HD');
+      const distLabel = c.d ? `${chamberShort}-${c.d}` : '';
+      const distLink = c.d ? `<a href="district.html?st=${c.st}&chamber=${encodeURIComponent(c.ch)}&d=${encodeURIComponent(c.d)}">${distLabel}</a>` : '';
+      const statusHtml = c.a
+        ? '<span class="status-active">Current</span>'
+        : '<span class="status-former">Former</span>';
+
+      html += `<tr>
+        <td><a href="candidate.html?id=${c.id}&st=${c.st}">${c.n}</a></td>
+        <td>${c.st}</td>
+        <td class="party-col">${badge}</td>
+        <td class="district-col">${distLink}</td>
+        <td>${statusHtml}</td>
+      </tr>`;
+    }
+
+    html += '</tbody></table>';
+
+    // Pagination
+    if (totalPages > 1) {
+      html += `<div class="pagination">
+        <button id="prev-btn" ${currentPage === 0 ? 'disabled' : ''}>&#8592; Prev</button>
+        <span class="page-info">Page ${currentPage + 1} of ${numberWithCommas(totalPages)}</span>
+        <button id="next-btn" ${currentPage >= totalPages - 1 ? 'disabled' : ''}>Next &#8594;</button>
+      </div>`;
+    }
+
+    resultsDiv.innerHTML = html;
+
+    // Bind sort headers
+    resultsDiv.querySelectorAll('th[data-col]').forEach(th => {
+      th.addEventListener('click', () => {
+        const col = th.dataset.col;
+        if (sortCol === col) { sortAsc = !sortAsc; }
+        else { sortCol = col; sortAsc = true; }
+        applySort();
+        currentPage = 0;
+        render();
+      });
+    });
+
+    // Bind pagination
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    if (prevBtn) prevBtn.addEventListener('click', () => { currentPage--; render(); window.scrollTo(0, 0); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { currentPage++; render(); window.scrollTo(0, 0); });
+  }
+
+  // --- URL param initialization ---
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('st')) filterState.value = params.get('st').toUpperCase();
+  if (params.get('party')) filterParty.value = params.get('party');
+  if (params.get('chamber')) filterChamber.value = params.get('chamber');
+  if (params.get('q')) searchInput.value = params.get('q');
+  if (params.get('active') === '1') filterActive.checked = true;
+
+  // --- Event listeners ---
+  searchInput.addEventListener('input', debounce(applyFilters, 200));
+  filterState.addEventListener('change', applyFilters);
+  filterParty.addEventListener('change', applyFilters);
+  filterChamber.addEventListener('change', applyFilters);
+  filterActive.addEventListener('change', applyFilters);
+
+  function debounce(fn, ms) {
+    let timer;
+    return function() {
+      clearTimeout(timer);
+      timer = setTimeout(fn, ms);
+    };
+  }
+
+  // Initial render
+  applyFilters();
+})();
+</script>
+</body>
+</html>
