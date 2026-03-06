@@ -160,13 +160,10 @@
   /* Tier 2: Primary elections */
   .history-table .primary-row td {
     color: var(--ms-text-light);
-    font-size: 12px;
-  }
-  .history-table .primary-row td:first-child {
-    padding-left: 16px;
+    background: rgba(0, 0, 0, 0.02);
   }
   .history-table .primary-row.winner-row td {
-    background: rgba(102, 102, 102, 0.03);
+    background: rgba(0, 0, 0, 0.04);
   }
 
   /* Candidate detail rows inherit tier */
@@ -175,7 +172,8 @@
     color: var(--ms-text);
   }
   .candidate-detail.primary-child td {
-    color: #999;
+    color: var(--ms-text-light);
+    background: rgba(0, 0, 0, 0.02);
   }
   .expand-btn {
     cursor: pointer;
