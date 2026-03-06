@@ -164,6 +164,7 @@
   .expand-btn:hover { text-decoration: underline; }
   .candidate-detail { display: none; }
   .candidate-detail.open { display: table-row; }
+  .candidate-detail.always-visible { display: table-row; }
   .candidate-detail td {
     padding: 4px 10px 4px 28px;
     font-size: 12px;
@@ -832,12 +833,15 @@
         lastCycleKey = cycleKey;
       }
 
-      let winner = e.candidates.find(c => c.result === 'Won' || c.result === 'Advanced');
+      // Find all winners/advancers
+      const winners = e.candidates.filter(c => c.result === 'Won' || c.result === 'Advanced');
 
       // If past election with 1 candidate still "Pending", treat as uncontested winner
-      if (!winner && isPast && e.candidates.length === 1 && e.candidates[0].result === 'Pending') {
-        winner = e.candidates[0];
+      if (winners.length === 0 && isPast && e.candidates.length === 1 && e.candidates[0].result === 'Pending') {
+        winners.push(e.candidates[0]);
       }
+      const winner = winners[0] || null;
+
       let typeLabel = e.type.replace(/_/g, ' ');
       if (e.date) {
         const d = new Date(e.date + 'T00:00:00');
@@ -888,8 +892,10 @@
       const isWinner = winner ? ' winner-row' : '';
       const expandId = `exp-${containerId}-${rowIdx}`;
 
-      const hasCands = e.candidates.length > (winner ? 1 : 0);
-      const expandBtn = hasCands ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${e.candidates.length - (winner ? 1 : 0)} more</button>` : '';
+      // Non-winners go behind expand button; winners/advancers shown by default
+      const nonWinners = e.candidates.filter(c => !winners.includes(c));
+      const hasNonWinners = nonWinners.length > 0;
+      const expandBtn = hasNonWinners ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${nonWinners.length} more</button>` : '';
 
       html += `<tr class="${isWinner}">
         <td>${e.year}</td>
@@ -900,9 +906,28 @@
         <td>${expandBtn}</td>
       </tr>`;
 
-      // Expandable candidate rows
-      if (hasCands) {
-        for (const c of e.candidates) {
+      // Show additional winners/advancers as always-visible rows
+      for (let wi = 1; wi < winners.length; wi++) {
+        const w = winners[wi];
+        const wBadgeParty = inferParty(w.party, e.type, stateAbbr) || '';
+        const wEp = effectiveParty(w);
+        const wCaucusNote = candidateCaucusNote(w);
+        const wPctStr = w.pct != null ? `${w.pct.toFixed(1)}%` : '';
+        const wVotesStr = w.votes != null ? numberWithCommas(w.votes) : '';
+        const wResultBadge = w.result === 'Won' ? '<strong style="color:#155724">Won</strong>' : (w.result || '');
+        const wInc = w.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
+        html += `<tr class="candidate-detail always-visible">
+          <td></td>
+          <td colspan="2"><span class="party-badge ${partyBadgeClass(wBadgeParty)}" style="font-size:10px;padding:1px 5px">${wBadgeParty || '?'}</span> <span style="${partyColorStyle(wEp || wBadgeParty)}">${w.name}</span>${wCaucusNote}${wInc}</td>
+          <td>${wPctStr}</td>
+          <td>${wVotesStr}</td>
+          <td>${wResultBadge}</td>
+        </tr>`;
+      }
+
+      // Expandable non-winner candidate rows
+      if (hasNonWinners) {
+        for (const c of nonWinners) {
           const pctStr = c.pct != null ? `${c.pct.toFixed(1)}%` : '';
           const votesStr = c.votes != null ? numberWithCommas(c.votes) : '';
           const resultBadge = c.result === 'Won' ? '<strong style="color:#155724">Won</strong>' : (c.result || '');
@@ -1070,10 +1095,12 @@
         lastCycleKey = cycleKey;
       }
 
-      let winner = e.candidates.find(c => c.result === 'Won' || c.result === 'Advanced');
-      if (!winner && isPast && e.candidates.length === 1 && e.candidates[0].result === 'Pending') {
-        winner = e.candidates[0];
+      // Find all winners/advancers
+      const winners = e.candidates.filter(c => c.result === 'Won' || c.result === 'Advanced');
+      if (winners.length === 0 && isPast && e.candidates.length === 1 && e.candidates[0].result === 'Pending') {
+        winners.push(e.candidates[0]);
       }
+      const winner = winners[0] || null;
 
       let typeLabel = e.type.replace(/_/g, ' ');
       if (e.date) {
@@ -1124,8 +1151,9 @@
       const isWinner = winner ? ' winner-row' : '';
       const expandId = `exp-unified-${rowIdx}`;
 
-      const hasCands = e.candidates.length > (winner ? 1 : 0);
-      const expandBtn = hasCands ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${e.candidates.length - (winner ? 1 : 0)} more</button>` : '';
+      const nonWinners = e.candidates.filter(c => !winners.includes(c));
+      const hasNonWinners = nonWinners.length > 0;
+      const expandBtn = hasNonWinners ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${nonWinners.length} more</button>` : '';
 
       html += `<tr class="${isWinner}">
         <td>${e.year}</td>
@@ -1136,8 +1164,28 @@
         <td>${expandBtn}</td>
       </tr>`;
 
-      if (hasCands) {
-        for (const c of e.candidates) {
+      // Show additional winners/advancers as always-visible rows
+      for (let wi = 1; wi < winners.length; wi++) {
+        const w = winners[wi];
+        const wBadgeParty = inferParty(w.party, e.type, stateAbbr) || '';
+        const wEp = effectiveParty(w);
+        const wCaucusNote = candidateCaucusNote(w);
+        const wPctStr = w.pct != null ? `${w.pct.toFixed(1)}%` : '';
+        const wVotesStr = w.votes != null ? numberWithCommas(w.votes) : '';
+        const wResultBadge = w.result === 'Won' ? '<strong style="color:#155724">Won</strong>' : (w.result || '');
+        const wInc = w.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
+        html += `<tr class="candidate-detail always-visible">
+          <td></td>
+          <td colspan="2"><span class="party-badge ${partyBadgeClass(wBadgeParty)}" style="font-size:10px;padding:1px 5px">${wBadgeParty || '?'}</span> <span style="${partyColorStyle(wEp || wBadgeParty)}">${w.name}</span>${wCaucusNote}${wInc}</td>
+          <td>${wPctStr}</td>
+          <td>${wVotesStr}</td>
+          <td>${wResultBadge}</td>
+        </tr>`;
+      }
+
+      // Expandable non-winner candidate rows
+      if (hasNonWinners) {
+        for (const c of nonWinners) {
           const pctStr = c.pct != null ? `${c.pct.toFixed(1)}%` : '';
           const votesStr = c.votes != null ? numberWithCommas(c.votes) : '';
           const resultBadge = c.result === 'Won' ? '<strong style="color:#155724">Won</strong>' : (c.result || '');
