@@ -440,8 +440,9 @@ def export_candidates(dry_run=False, single_state=None):
 
     # --- Write search index ---
     # Lightweight array for the browse/search page
-    search_index = []
-    for state in sorted(candidates_by_state.keys()):
+    new_entries = []
+    exported_states = set(candidates_by_state.keys())
+    for state in sorted(exported_states):
         for cand in candidates_by_state[state].values():
             current = cand.get('current_office')
             entry = {
@@ -460,9 +461,23 @@ def export_candidates(dry_run=False, single_state=None):
                     latest = cand['candidacies'][0]
                     entry['ch'] = latest['chamber']
                     entry['d'] = latest['district']
-            search_index.append(entry)
+            new_entries.append(entry)
 
     search_path = os.path.join(SITE_DATA_DIR, 'candidate_search.json')
+
+    # When exporting a single state, merge with existing index
+    if single_state:
+        try:
+            with open(search_path) as f:
+                existing = json.load(f).get('candidates', [])
+            # Keep entries from other states, replace entries from exported state(s)
+            kept = [e for e in existing if e.get('st') not in exported_states]
+            search_index = sorted(kept + new_entries, key=lambda e: (e.get('st', ''), e.get('n', '')))
+        except (FileNotFoundError, json.JSONDecodeError):
+            search_index = new_entries
+    else:
+        search_index = new_entries
+
     with open(search_path, 'w') as f:
         json.dump({'generated_at': generated_at, 'candidates': search_index}, f, separators=(',', ':'))
     size_kb = os.path.getsize(search_path) / 1024
