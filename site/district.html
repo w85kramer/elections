@@ -929,10 +929,13 @@
       const isWinner = winner ? ' winner-row' : '';
       const expandId = `exp-${containerId}-${rowIdx}`;
 
+      // Auto-expand pending Tier 1 elections (generals/specials) so candidates are visible
+      const autoExpand = !isPrimaryTier && !winner && e.candidates.length > 0;
+
       // Non-winners go behind expand button; winners/advancers shown by default
       const nonWinners = e.candidates.filter(c => !winners.includes(c));
       const hasNonWinners = nonWinners.length > 0;
-      const expandBtn = hasNonWinners ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${nonWinners.length} more</button>` : '';
+      const expandBtn = (hasNonWinners && !autoExpand) ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${nonWinners.length} more</button>` : '';
 
       html += `<tr class="${tierClass}${isWinner}">
         <td>${e.year}</td>
@@ -962,7 +965,7 @@
         </tr>`;
       }
 
-      // Expandable non-winner candidate rows
+      // Expandable non-winner candidate rows (or always-visible if autoExpand)
       if (hasNonWinners) {
         for (const c of nonWinners) {
           const pctStr = c.pct != null ? `${c.pct.toFixed(1)}%` : '';
@@ -973,13 +976,23 @@
           const candParty = inferParty(c.party, e.type, stateAbbr);
           const candEp = effectiveParty(c);
           const candCaucusNote = candidateCaucusNote(c);
-          html += `<tr class="candidate-detail ${childTierClass}" data-expand="${expandId}">
-            <td></td>
-            <td colspan="2"><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
-            <td>${pctStr}</td>
-            <td>${votesStr}</td>
-            <td>${resultBadge}</td>
-          </tr>`;
+          if (autoExpand) {
+            html += `<tr class="candidate-detail always-visible ${childTierClass}">
+              <td></td>
+              <td colspan="2"><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
+              <td>${pctStr}</td>
+              <td>${votesStr}</td>
+              <td>${resultBadge}</td>
+            </tr>`;
+          } else {
+            html += `<tr class="candidate-detail ${childTierClass}" data-expand="${expandId}">
+              <td></td>
+              <td colspan="2"><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
+              <td>${pctStr}</td>
+              <td>${votesStr}</td>
+              <td>${resultBadge}</td>
+            </tr>`;
+          }
         }
       }
 
@@ -1194,9 +1207,12 @@
       const isWinner = winner ? ' winner-row' : '';
       const expandId = `exp-unified-${rowIdx}`;
 
+      // Auto-expand pending Tier 1 elections (generals/specials) so candidates are visible
+      const autoExpand = !isPrimaryTier && !winner && e.candidates.length > 0;
+
       const nonWinners = e.candidates.filter(c => !winners.includes(c));
       const hasNonWinners = nonWinners.length > 0;
-      const expandBtn = hasNonWinners ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${nonWinners.length} more</button>` : '';
+      const expandBtn = (hasNonWinners && !autoExpand) ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${nonWinners.length} more</button>` : '';
 
       html += `<tr class="${tierClass}${isWinner}">
         <td>${e.year}</td>
@@ -1226,7 +1242,7 @@
         </tr>`;
       }
 
-      // Expandable non-winner candidate rows
+      // Expandable non-winner candidate rows (or always-visible if autoExpand)
       if (hasNonWinners) {
         for (const c of nonWinners) {
           const pctStr = c.pct != null ? `${c.pct.toFixed(1)}%` : '';
@@ -1237,13 +1253,23 @@
           const candParty = inferParty(c.party, e.type, stateAbbr);
           const candEp = effectiveParty(c);
           const candCaucusNote = candidateCaucusNote(c);
-          html += `<tr class="candidate-detail ${childTierClass}" data-expand="${expandId}">
-            <td></td>
-            <td colspan="2"><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
-            <td>${pctStr}</td>
-            <td>${votesStr}</td>
-            <td>${resultBadge}</td>
-          </tr>`;
+          if (autoExpand) {
+            html += `<tr class="candidate-detail always-visible ${childTierClass}">
+              <td></td>
+              <td colspan="2"><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
+              <td>${pctStr}</td>
+              <td>${votesStr}</td>
+              <td>${resultBadge}</td>
+            </tr>`;
+          } else {
+            html += `<tr class="candidate-detail ${childTierClass}" data-expand="${expandId}">
+              <td></td>
+              <td colspan="2"><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
+              <td>${pctStr}</td>
+              <td>${votesStr}</td>
+              <td>${resultBadge}</td>
+            </tr>`;
+          }
         }
       }
 
