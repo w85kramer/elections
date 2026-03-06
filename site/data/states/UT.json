@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-06T21:24:16.565981Z",
+  "generated_at": "2026-03-06T21:39:33.737289Z",
   "state": {
     "name": "Utah",
     "abbr": "UT",
@@ -165,7 +165,7 @@
           "party": "R",
           "pres_margin": "-2.8",
           "next_election": 2026,
-          "candidate_id": 12945
+          "candidate_id": 17959
         },
         {
           "district": "10",
@@ -175,7 +175,7 @@
           "party": "R",
           "pres_margin": "-2.8",
           "next_election": 2026,
-          "candidate_id": 17959
+          "candidate_id": 12945
         },
         {
           "district": "11",
@@ -555,7 +555,7 @@
           "party": "R",
           "pres_margin": "-19.3",
           "next_election": 2026,
-          "candidate_id": 17980
+          "candidate_id": 12927
         },
         {
           "district": "48",
@@ -565,7 +565,7 @@
           "party": "R",
           "pres_margin": "-19.3",
           "next_election": 2026,
-          "candidate_id": 12927
+          "candidate_id": 17980
         },
         {
           "district": "49",
@@ -843,8 +843,8 @@
       "total": 29,
       "composition": {
         "D": 6,
-        "R": 23,
-        "Other": 0,
+        "R": 22,
+        "Other": 1,
         "Vacant": 0
       },
       "supermajority": 20,
@@ -955,7 +955,7 @@
           "district_name": "SD-11",
           "seat_designator": null,
           "name": "Emily Buss",
-          "party": "R",
+          "party": "F",
           "pres_margin": "-34.4",
           "next_election": 2026,
           "candidate_id": 12930
@@ -3172,7 +3172,7 @@
         "candidates": [
           {
             "name": "Emily Buss",
-            "party": "Other",
+            "party": "F",
             "is_incumbent": true,
             "election_type": "General"
           },
@@ -3962,7 +3962,7 @@
       "district": "11",
       "seat_label": "UT Senate 11",
       "pres_margin": "-34.4",
-      "holder_party": "R",
+      "holder_party": "F",
       "candidate": "Mackenzie Miller",
       "is_open_seat": null
     },
