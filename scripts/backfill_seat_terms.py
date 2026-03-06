@@ -120,10 +120,15 @@ def backfill_terms(dry_run=False, single_state=None):
     existing_data = run_sql(q_existing)
     print(f'    Existing seat_terms: {len(existing_data)} rows')
 
-    # Index existing terms by (seat_id, candidate_id)
-    existing_set = set()
+    # Index existing terms by (seat_id, candidate_id, election_id)
+    # Also track date ranges per (seat_id, candidate_id) to detect overlaps
+    existing_by_election = set()
+    existing_ranges = defaultdict(list)  # (seat_id, cand_id) -> [(start, end), ...]
     for r in existing_data:
-        existing_set.add((r['seat_id'], r['candidate_id']))
+        existing_by_election.add((r['seat_id'], r['candidate_id'], r['election_id']))
+        existing_ranges[(r['seat_id'], r['candidate_id'])].append(
+            (r['start_date'], r['end_date'])
+        )
 
     # Group winners by seat_id, in chronological order
     winners_by_seat = defaultdict(list)
@@ -139,8 +144,8 @@ def backfill_terms(dry_run=False, single_state=None):
         winners.sort(key=lambda w: (w['election_year'], w['election_date'] or ''))
 
         for i, w in enumerate(winners):
-            # Skip if this candidate already has a term for this seat
-            if (seat_id, w['candidate_id']) in existing_set:
+            # Skip if this candidate already has a term for this seat from this election
+            if (seat_id, w['candidate_id'], w['election_id']) in existing_by_election:
                 skipped += 1
                 continue
 
@@ -153,17 +158,27 @@ def backfill_terms(dry_run=False, single_state=None):
 
             # Infer start_date
             if is_special and w['election_date']:
-                # Special election winners typically take office soon after
-                # Use election_date as start (close enough)
                 start_date = w['election_date']
             elif w['election_date']:
-                # General election: sworn in Jan 1 of the year after election
-                # (approximate — varies by state within first 2 weeks of Jan)
                 start_year = w['election_year'] + 1
                 start_date = f'{start_year}-01-01'
             else:
                 start_year = w['election_year'] + 1
                 start_date = f'{start_year}-01-01'
+
+            # Skip if an existing term already covers this start_date
+            # (e.g. original current-holder term with no election_id)
+            start_str = str(start_date)
+            overlaps = False
+            for (ex_start, ex_end) in existing_ranges.get((seat_id, w['candidate_id']), []):
+                ex_s = str(ex_start) if ex_start else '0000-01-01'
+                ex_e = str(ex_end) if ex_end else '9999-12-31'
+                if ex_s <= start_str <= ex_e:
+                    overlaps = True
+                    break
+            if overlaps:
+                skipped += 1
+                continue
 
             # Infer end_date from the NEXT winner of this seat
             end_date = None
