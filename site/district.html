@@ -763,7 +763,7 @@
     events.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
 
     let html = `<table class="history-table"><thead><tr>
-      <th>Year</th><th>Type</th><th>Winner</th><th>Vote Share</th><th>Votes</th><th></th>
+      <th>Year</th><th>Type</th><th>Candidates</th><th>Vote Share</th><th>Votes</th><th></th>
     </tr></thead><tbody>`;
 
     let lastCycleKey = null;
@@ -878,11 +878,16 @@
         const shortDate = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
         typeLabel += ` <span class="text-muted" style="font-size:11px">· ${shortDate}</span>`;
       }
+      const isMultiWinner = winners.length > 1;
       let winnerName = '—';
       let marginHtml = '—';
       let winnerParty = '';
 
-      if (winner) {
+      if (isMultiWinner) {
+        // Multi-winner: summary in main row, all winners as equal child rows
+        winnerName = `<span class="text-muted">${winners.length} elected</span>`;
+        marginHtml = '';
+      } else if (winner) {
         const badgeParty = inferParty(winner.party, e.type, stateAbbr) || '';
         const ep = effectiveParty(winner);
         winnerParty = ep || badgeParty;
@@ -896,7 +901,7 @@
         if (winner.pct != null) {
           const marginPct = Math.max(0, (winner.pct - 50) * 2);
           const partyColor = (ep || badgeParty) === 'D' ? 'var(--ms-dem-blue)' : (ep || badgeParty) === 'R' ? 'var(--ms-rep-red)' : 'var(--ms-other)';
-          const marginNote = winner.pct > 50 && winner.pct < 100 && winners.length === 1 ? ` <span style="font-size:11px;color:#999">(+${marginPct.toFixed(1)})</span>` : '';
+          const marginNote = winner.pct > 50 && winner.pct < 100 ? ` <span style="font-size:11px;color:#999">(+${marginPct.toFixed(1)})</span>` : '';
           marginHtml = `<span style="font-size:12px;color:${partyColor}">${winner.pct.toFixed(1)}%</span>${marginNote}`;
         }
       }
@@ -918,18 +923,19 @@
         }
       }
       const votes = (e.total_votes ? numberWithCommas(e.total_votes) : '—') + reportingNote;
-      const isWinner = winner ? ' winner-row' : '';
+      const isWinnerRow = winner ? ' winner-row' : '';
       const expandId = `exp-${containerId}-${rowIdx}`;
 
       // Auto-expand pending Tier 1 elections (generals/specials) so candidates are visible
       const autoExpand = !isPrimaryTier && !winner && e.candidates.length > 0;
 
-      // Non-winners go behind expand button; winners/advancers shown by default
+      // For multi-winner, all candidates not in winners list go behind expand
+      // For single-winner, non-winners go behind expand
       const nonWinners = e.candidates.filter(c => !winners.includes(c));
       const hasNonWinners = nonWinners.length > 0;
       const expandBtn = (hasNonWinners && !autoExpand) ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${nonWinners.length} more</button>` : '';
 
-      html += `<tr class="${tierClass}${isWinner}">
+      html += `<tr class="${tierClass}${isWinnerRow}">
         <td>${e.year}</td>
         <td>${typeLabel}</td>
         <td>${winnerName}</td>
@@ -938,9 +944,10 @@
         <td>${expandBtn}</td>
       </tr>`;
 
-      // Show additional winners/advancers as always-visible rows
-      for (let wi = 1; wi < winners.length; wi++) {
-        const w = winners[wi];
+      // Show winners as always-visible child rows
+      // For multi-winner: all winners; for single-winner: additional winners only (first is in main row)
+      const childWinners = isMultiWinner ? winners : winners.slice(1);
+      for (const w of childWinners) {
         const wBadgeParty = inferParty(w.party, e.type, stateAbbr) || '';
         const wEp = effectiveParty(w);
         const wCaucusNote = candidateCaucusNote(w);
@@ -1051,7 +1058,7 @@
     events.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
 
     let html = `<table class="history-table"><thead><tr>
-      <th>Year</th><th>Type</th><th>Winner</th><th>Vote Share</th><th>Votes</th><th></th>
+      <th>Year</th><th>Type</th><th>Candidates</th><th>Vote Share</th><th>Votes</th><th></th>
     </tr></thead><tbody>`;
 
     let lastCycleKey = null;
@@ -1157,11 +1164,15 @@
         typeLabel += ` <span class="text-muted" style="font-size:11px">· ${shortDate}</span>`;
       }
 
+      const isMultiWinner = winners.length > 1;
       let winnerName = '—';
       let marginHtml = '—';
       let winnerParty = '';
 
-      if (winner) {
+      if (isMultiWinner) {
+        winnerName = `<span class="text-muted">${winners.length} elected</span>`;
+        marginHtml = '';
+      } else if (winner) {
         const badgeParty = inferParty(winner.party, e.type, stateAbbr) || '';
         const ep = effectiveParty(winner);
         winnerParty = ep || badgeParty;
@@ -1174,7 +1185,7 @@
         if (winner.pct != null) {
           const marginPct = Math.max(0, (winner.pct - 50) * 2);
           const partyColor = (ep || badgeParty) === 'D' ? 'var(--ms-dem-blue)' : (ep || badgeParty) === 'R' ? 'var(--ms-rep-red)' : 'var(--ms-other)';
-          const marginNote = winner.pct > 50 && winner.pct < 100 && winners.length === 1 ? ` <span style="font-size:11px;color:#999">(+${marginPct.toFixed(1)})</span>` : '';
+          const marginNote = winner.pct > 50 && winner.pct < 100 ? ` <span style="font-size:11px;color:#999">(+${marginPct.toFixed(1)})</span>` : '';
           marginHtml = `<span style="font-size:12px;color:${partyColor}">${winner.pct.toFixed(1)}%</span>${marginNote}`;
         }
       }
@@ -1195,7 +1206,7 @@
         }
       }
       const votes = (e.total_votes ? numberWithCommas(e.total_votes) : '—') + reportingNote;
-      const isWinner = winner ? ' winner-row' : '';
+      const isWinnerRow = winner ? ' winner-row' : '';
       const expandId = `exp-unified-${rowIdx}`;
 
       // Auto-expand pending Tier 1 elections (generals/specials) so candidates are visible
@@ -1205,7 +1216,7 @@
       const hasNonWinners = nonWinners.length > 0;
       const expandBtn = (hasNonWinners && !autoExpand) ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${nonWinners.length} more</button>` : '';
 
-      html += `<tr class="${tierClass}${isWinner}">
+      html += `<tr class="${tierClass}${isWinnerRow}">
         <td>${e.year}</td>
         <td>${typeLabel}</td>
         <td>${winnerName}</td>
@@ -1214,9 +1225,9 @@
         <td>${expandBtn}</td>
       </tr>`;
 
-      // Show additional winners/advancers as always-visible rows
-      for (let wi = 1; wi < winners.length; wi++) {
-        const w = winners[wi];
+      // Show winners as always-visible child rows
+      const childWinners = isMultiWinner ? winners : winners.slice(1);
+      for (const w of childWinners) {
         const wBadgeParty = inferParty(w.party, e.type, stateAbbr) || '';
         const wEp = effectiveParty(w);
         const wCaucusNote = candidateCaucusNote(w);
