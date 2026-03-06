@@ -885,7 +885,7 @@
 
       if (isMultiWinner) {
         // Multi-winner: summary in main row, all winners as equal child rows
-        winnerName = `<span class="text-muted">${winners.length} elected</span>`;
+        winnerName = `<span class="text-muted">${winners.length} ${isPrimaryTier ? 'advanced' : 'elected'}</span>`;
         marginHtml = '';
       } else if (winner) {
         const badgeParty = inferParty(winner.party, e.type, stateAbbr) || '';
@@ -1170,7 +1170,7 @@
       let winnerParty = '';
 
       if (isMultiWinner) {
-        winnerName = `<span class="text-muted">${winners.length} elected</span>`;
+        winnerName = `<span class="text-muted">${winners.length} ${isPrimaryTier ? 'advanced' : 'elected'}</span>`;
         marginHtml = '';
       } else if (winner) {
         const badgeParty = inferParty(winner.party, e.type, stateAbbr) || '';
