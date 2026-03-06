@@ -538,11 +538,12 @@
         const ep = cand.caucus || candParty;
         const badge = `<span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty}</span>`;
 
+        const incStr = cand.is_incumbent ? ' <span class="incumbent-marker">(i)</span>' : '';
         let nameHtml;
         if (cand.is_subject) {
-          nameHtml = `<span class="cand-name" style="${partyColorStyle(ep)}">${cand.name}</span>`;
+          nameHtml = `<span class="cand-name"><span style="${partyColorStyle(ep)}">${cand.name}</span>${incStr}</span>`;
         } else {
-          nameHtml = `<span class="cand-name"><a href="candidate.html?id=${cand.id}&st=${cy.state}" style="${partyColorStyle(ep)}">${cand.name}</a></span>`;
+          nameHtml = `<span class="cand-name"><a href="candidate.html?id=${cand.id}&st=${cy.state}" style="${partyColorStyle(ep)}">${cand.name}</a>${incStr}</span>`;
         }
 
         const pctStr = cand.pct != null ? `${cand.pct.toFixed(1)}%` : '';
@@ -553,11 +554,9 @@
         else if (cand.result === 'Advanced') resultStr = '<span class="cand-result-won">Adv.</span>';
         else if (cand.result) resultStr = cand.result;
 
-        const incStr = cand.is_incumbent ? ' <span class="incumbent-marker">(i)</span>' : '';
-
         timelineHtml += `<div class="${rowClass}">
           ${badge}
-          ${nameHtml}${incStr}
+          ${nameHtml}
           <span class="cand-pct">${pctStr}</span>
           <span class="cand-votes">${votesStr}</span>
           <span class="cand-result">${resultStr}</span>
