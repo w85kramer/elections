@@ -516,7 +516,10 @@
       const majorityParty = filled.length > 0
         ? (filled.reduce((acc, m) => { acc[m.party] = (acc[m.party] || 0) + 1; return acc; }, {}))
         : {};
-      const topParty = Object.entries(majorityParty).sort((a, b) => b[1] - a[1])[0]?.[0] || null;
+      const partySorted = Object.entries(majorityParty).sort((a, b) => b[1] - a[1]);
+      // Clear majority = top party has strictly more seats than second place
+      const hasMajority = partySorted.length === 1 || (partySorted.length > 1 && partySorted[0][1] > partySorted[1][1]);
+      const topParty = partySorted.length > 0 ? (hasMajority ? partySorted[0][0] : 'split') : null;
 
       rows.push({
         district: dist,
@@ -545,7 +548,7 @@
     let sortAsc = true;
 
     function getPartyColor(party) {
-      return party === 'D' ? 'var(--ms-dem-blue)' : party === 'R' ? 'var(--ms-rep-red)' : party === 'I' ? 'var(--ms-purple)' : party === 'NP' ? 'var(--ms-gold)' : '';
+      return party === 'D' ? 'var(--ms-dem-blue)' : party === 'R' ? 'var(--ms-rep-red)' : party === 'I' ? 'var(--ms-purple)' : party === 'split' ? 'var(--ms-purple)' : party === 'NP' ? 'var(--ms-gold)' : '';
     }
 
     function renderRows() {
@@ -695,7 +698,8 @@
           const dtd = tr.insertCell();
           const distLink = buildDistLink(r);
           distLink.textContent = r.distLabel;
-          if (partyColor) distLink.style.color = partyColor;
+          if (!r.name) distLink.style.color = '#999';
+          else if (partyColor) distLink.style.color = partyColor;
           else distLink.style.color = 'var(--ms-navy)';
           dtd.appendChild(distLink);
 
