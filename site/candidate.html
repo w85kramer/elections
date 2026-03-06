@@ -385,9 +385,25 @@
   const terms = c.seat_terms || [];
   if (terms.length > 0) {
     officesHtml = `<div class="section"><div class="section-title">Offices Held</div><div class="offices-summary">`;
-    // Show most recent first
-    const sortedTerms = terms.slice().sort((a, b) => (b.start_date || '').localeCompare(a.start_date || ''));
+    // Merge consecutive terms for the same seat into one line.
+    // Two terms are consecutive if the earlier one's end_date matches the later one's start_date
+    // and they share the same seat (state + chamber + district).
+    const sortedTerms = terms.slice().sort((a, b) => (a.start_date || '').localeCompare(b.start_date || ''));
+    const merged = [];
     for (const t of sortedTerms) {
+      const key = `${t.state}|${t.chamber}|${t.district}`;
+      const prev = merged.length > 0 ? merged[merged.length - 1] : null;
+      if (prev && prev._key === key && prev.end_date && prev.end_date === t.start_date) {
+        // Extend the previous merged entry
+        prev.end_date = t.end_date;
+        prev.end_reason = t.end_reason;
+      } else {
+        merged.push({ ...t, _key: key });
+      }
+    }
+    // Show most recent first
+    merged.reverse();
+    for (const t of merged) {
       const url = districtUrl(t.state, t.chamber, t.district);
       const label = shortDistrictLabel(t.state, t.chamber, t.district);
       const party = t.caucus || t.party || '?';
