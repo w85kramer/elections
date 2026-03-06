@@ -331,12 +331,21 @@ def export_candidates(dry_run=False, single_state=None):
                 if current_term.get('caucus'):
                     cand['current_office']['caucus'] = current_term['caucus']
 
-            # Determine most recent party from candidacies or seat terms
-            if cand['candidacies']:
-                cand['party'] = cand['candidacies'][0].get('caucus') or cand['candidacies'][0].get('party')
-            elif cand['seat_terms']:
-                last_term = cand['seat_terms'][-1]
-                cand['party'] = last_term.get('caucus') or last_term.get('party')
+            # Determine most recent party: current office > candidacies > seat terms
+            party = None
+            if current_term:
+                party = current_term.get('caucus') or current_term.get('party')
+            if not party:
+                for cy in cand['candidacies']:
+                    party = cy.get('caucus') or cy.get('party')
+                    if party:
+                        break
+            if not party:
+                for t in reversed(cand['seat_terms']):
+                    party = t.get('caucus') or t.get('party')
+                    if party:
+                        break
+            cand['party'] = party
 
             # Strip empty lists to save space
             if not cand['party_switches']:
