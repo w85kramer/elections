@@ -112,107 +112,155 @@
   .forecast-solid-d { background: var(--ms-dem-blue); color: white; }
   .forecast-solid-r { background: var(--ms-rep-red); color: white; }
 
-  /* Election history */
-  .history-table {
-    width: 100%;
-    border-collapse: collapse;
+  /* Election history timeline */
+  .timeline { position: relative; padding-left: 24px; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #ddd;
+  }
+  .timeline-year {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--ms-navy);
+    padding: 16px 0 8px;
+    position: relative;
+  }
+  .timeline-year::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 22px;
+    width: 10px;
+    height: 10px;
+    background: var(--ms-navy);
+    border-radius: 50%;
+  }
+  .timeline-entry {
+    position: relative;
+    margin-bottom: 12px;
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    overflow: hidden;
+  }
+  .timeline-entry::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 18px;
+    width: 8px;
+    height: 8px;
+    background: #bbb;
+    border-radius: 50%;
+  }
+  .timeline-entry.entry-has-winner::before { background: #28a745; }
+  .timeline-entry.entry-pending::before { background: var(--ms-gold); }
+  .timeline-entry.entry-has-winner:not(.primary-muted) { background: rgba(40, 167, 69, 0.03); }
+
+  /* Entry styling by type */
+  .timeline-entry.entry-general { border-left: 4px solid var(--ms-navy); }
+  .timeline-entry.entry-special { border-left: 4px solid var(--ms-navy); }
+  .timeline-entry.entry-primary { border-left: 4px solid #ccc; }
+  .timeline-entry.entry-upcoming { border-left: 4px solid var(--ms-gold); }
+
+  .entry-header {
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--ms-text-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .entry-type {
+    font-weight: 700;
+    color: var(--ms-navy);
+  }
+
+  /* Candidate rows inside timeline entry */
+  .entry-candidates {
+    padding: 0 14px 10px;
+  }
+  .entry-cand-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    gap: 8px;
+    align-items: center;
+    padding: 3px 0;
     font-size: 13px;
   }
-  .history-table th {
-    text-align: left;
-    font-weight: 600;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--ms-text-light);
-    padding: 6px 10px;
-    border-bottom: 2px solid var(--ms-navy);
-  }
-  .history-table td {
-    padding: 6px 10px;
-    border-bottom: 1px solid #eee;
-    vertical-align: top;
-  }
-  .history-table tr:hover td { background: #f8f9fa; }
-  .history-table .cycle-header td {
+  .entry-cand-row.winner-row {
     font-weight: 700;
-    font-size: 14px;
-    color: var(--ms-navy);
-    padding-top: 18px;
-    border-bottom: 1px solid #ccc;
-    background: transparent;
-  }
-  .history-table .winner-row td {
     background: rgba(4, 56, 88, 0.03);
+    margin: 0 -14px;
+    padding: 4px 14px;
   }
+  .cand-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .cand-name a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .cand-name a:hover { text-decoration: underline; }
+  .cand-pct { text-align: right; font-weight: 600; min-width: 50px; }
+  .cand-votes { text-align: right; color: var(--ms-text-light); min-width: 60px; font-size: 12px; }
+  .cand-result { text-align: right; min-width: 40px; font-size: 12px; }
+  .cand-result-won { color: #28a745; font-weight: 700; }
+  .cand-result-lost { color: var(--ms-rep-red); }
 
-  /* Tier 1: General & Special elections */
-  .history-table .general-row td {
-    font-weight: 600;
-  }
-  .history-table .general-row td:first-child {
-    border-left: 3px solid var(--ms-navy);
-  }
-  .history-table .general-row.winner-row td {
-    background: rgba(4, 56, 88, 0.05);
-  }
-
-  /* Tier 2: Primary elections */
-  .history-table .primary-row td {
-    color: var(--ms-text-light);
-    background: rgba(0, 0, 0, 0.02);
-  }
-
-  /* Candidate detail rows inherit tier background */
-  .candidate-detail.general-child td {
-    font-weight: 600;
-    color: var(--ms-text);
-    background: rgba(4, 56, 88, 0.05);
-  }
-  .candidate-detail.primary-child td {
-    color: var(--ms-text-light);
-    background: rgba(0, 0, 0, 0.02);
-  }
   .expand-btn {
     cursor: pointer;
     font-size: 11px;
     color: var(--ms-dem-blue);
     border: none;
     background: none;
-    padding: 2px 4px;
+    padding: 4px 4px 2px;
     font-weight: 600;
   }
   .expand-btn:hover { text-decoration: underline; }
-  .candidate-detail { display: none; }
-  .candidate-detail.open { display: table-row; }
-  .candidate-detail.always-visible { display: table-row; }
-  .candidate-detail td {
-    padding: 4px 10px;
-    font-size: 12px;
-    border-bottom: 1px solid #f0f0f0;
-    color: var(--ms-text-light);
-  }
+  .cand-hidden { display: none; }
+  .cand-hidden.open { display: grid; }
 
-  /* Party switch event rows */
-  .event-row.party-switch-row td {
+  .primary-muted { opacity: 0.7; }
+  .primary-muted .entry-header { color: #999; }
+  .primary-muted .entry-type { color: #888; font-weight: 600; }
+
+  /* Timeline event cards */
+  .timeline-event {
+    position: relative;
+    margin-bottom: 12px;
+    padding: 8px 14px;
+    border-radius: var(--ms-radius);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .timeline-event::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .timeline-event.party-switch-event {
     background: #fff8e1;
     border-left: 3px solid #f5a623;
-    font-style: italic;
   }
-  .event-row.party-switch-row td:first-child {
-    border-left: 3px solid #f5a623;
-  }
-
-  /* Term event rows (resignations, deaths, removals) */
-  .event-row.term-event-row td {
+  .timeline-event.party-switch-event::before { background: #f5a623; }
+  .timeline-event.term-event {
     background: #f0f0f0;
     border-left: 3px solid #999;
-    font-style: italic;
     color: #555;
   }
-  .event-row.term-event-row td:first-child {
-    border-left: 3px solid #999;
-  }
+  .timeline-event.term-event::before { background: #999; }
   .term-event-reason {
     font-weight: 600;
     color: #666;
@@ -222,17 +270,13 @@
     color: #888;
     font-style: normal;
   }
-
-  /* Redistricting event rows */
-  .event-row.redistricting-row td {
+  .timeline-event.redistricting-event {
     background: #e8f0fe;
     border-left: 3px dashed var(--ms-navy);
     font-style: normal;
     color: var(--ms-navy);
   }
-  .event-row.redistricting-row td:first-child {
-    border-left: 3px dashed var(--ms-navy);
-  }
+  .timeline-event.redistricting-event::before { background: var(--ms-navy); }
   .redistricting-label {
     font-weight: 700;
     font-size: 13px;
@@ -332,6 +376,11 @@
     .quick-stats { flex-direction: column; gap: 4px; }
     .similar-grid { grid-template-columns: 1fr; }
     #district-map { height: 250px; }
+    .entry-cand-row {
+      grid-template-columns: auto 1fr auto auto;
+      font-size: 12px;
+    }
+    .cand-votes { display: none; }
   }
 </style>
 </head>
@@ -717,13 +766,210 @@
   // ==========================
   // 4. ELECTION HISTORY TABLE
   // ==========================
+  // --- Shared timeline rendering helpers ---
+
+  function renderTermEventCard(te) {
+    const dateStr = te.date
+      ? new Date(te.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+      : '';
+    const reasonLabels = {
+      'resigned': 'Resigned',
+      'died': 'Died in Office',
+      'removed': 'Removed',
+      'appointed_elsewhere': 'Appointed Elsewhere',
+    };
+    const reasonLabel = reasonLabels[te.reason] || te.reason;
+    const notesLabel = te.notes ? ` <span class="term-event-notes">${te.notes}</span>` : '';
+    const badge = `<span class="party-badge ${partyBadgeClass(te.party)}" style="font-size:10px;padding:1px 5px">${te.party || '?'}</span>`;
+    return `<div class="timeline-event term-event">
+      ${dateStr ? dateStr + ' &middot; ' : ''}<span class="term-event-reason">${reasonLabel}</span>
+      &middot; ${badge} <span style="${partyColorStyle(te.party)}">${te.name}</span>${notesLabel}
+    </div>`;
+  }
+
+  function renderPartySwitchCard(ps) {
+    const dateStr = ps.date
+      ? new Date(ps.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+      : '';
+    const oldBadge = `<span class="party-badge ${partyBadgeClass(ps.old_party)}" style="font-size:10px;padding:1px 5px">${ps.old_party}</span>`;
+    const newBadge = `<span class="party-badge ${partyBadgeClass(ps.new_party)}" style="font-size:10px;padding:1px 5px">${ps.new_party}</span>`;
+    return `<div class="timeline-event party-switch-event">
+      ${dateStr ? dateStr + ' &middot; ' : ''}Party Switch: <span style="${partyColorStyle(ps.new_party)}">${ps.name}</span> ${oldBadge} &rarr; ${newBadge}
+    </div>`;
+  }
+
+  function renderRedistrictingCard(rd) {
+    const marginNote = rd.newMargin ? ` <span class="redistricting-detail">&middot; New lines: ${rd.newMargin}</span>` : '';
+    return `<div class="timeline-event redistricting-event">
+      <span class="redistricting-label">District Redrawn</span> &middot; New district lines took effect${marginNote}
+    </div>`;
+  }
+
+  function renderElectionCard(e, containerId, rowIdx) {
+    const isPrimaryTier = e.type.includes('Primary')
+      || e.type.endsWith('_D') || e.type.endsWith('_R') || e.type.endsWith('_Nonpartisan');
+    const isSpecial = e.type.includes('Special');
+    const isPast = e.date && new Date(e.date + 'T00:00:00') < new Date();
+
+    // Past election with 0 candidates and no results = skip
+    if (isPast && e.candidates.length === 0 && !e.result_status) return '';
+
+    // Find all winners/advancers
+    const winners = e.candidates.filter(c => c.result === 'Won' || c.result === 'Advanced');
+    if (winners.length === 0 && isPast && e.candidates.length === 1 && e.candidates[0].result === 'Pending') {
+      winners.push(e.candidates[0]);
+    }
+    const hasWinner = winners.length > 0;
+
+    // Build entry class
+    let entryClass = 'timeline-entry';
+    if (!isPast) entryClass += ' entry-upcoming';
+    else if (isPrimaryTier) entryClass += ' entry-primary primary-muted';
+    else if (isSpecial) entryClass += ' entry-special';
+    else entryClass += ' entry-general';
+
+    if (hasWinner) entryClass += ' entry-has-winner';
+    else if (!isPast || !e.result_status) entryClass += ' entry-pending';
+
+    // Header: date · type
+    const typeLabel = e.type.replace(/_/g, ' ');
+    let dateStr = '';
+    if (e.date) {
+      const d = new Date(e.date + 'T00:00:00');
+      dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    }
+
+    // Forecast tag
+    let forecastTag = '';
+    if (e.forecast_rating) {
+      forecastTag = ` <span class="forecast-tag ${forecastClass(e.forecast_rating)}" style="font-size:11px;padding:2px 8px">${e.forecast_rating}</span>`;
+    }
+
+    // Reporting status
+    let reportingTag = '';
+    if (e.result_status && e.result_status !== 'Certified') {
+      if (e.precincts_reporting != null && e.precincts_total) {
+        const pct = Math.round(e.precincts_reporting / e.precincts_total * 100);
+        reportingTag = ` <span class="reporting-pct">${pct}% reporting</span>`;
+      } else {
+        reportingTag = ` <span class="reporting-pct">Unofficial</span>`;
+      }
+    }
+
+    // Uncontested label
+    const isUncontested = hasWinner && e.candidates.length === 1;
+    const uncontestedTag = isUncontested ? ' <span class="incumbent-marker">(uncontested)</span>' : '';
+
+    // Upcoming with candidates but no results
+    const hasResults = hasWinner || e.result_status;
+    let filedNote = '';
+    if (!hasResults && e.candidates.length > 0) {
+      const n = e.candidates.length;
+      filedNote = ` <span class="text-muted">&middot; ${n} candidate${n !== 1 ? 's' : ''} filed</span>`;
+    }
+
+    let html = `<div class="${entryClass}">
+      <div class="entry-header">
+        <span>${dateStr}</span>
+        <span class="separator">&middot;</span>
+        <span class="entry-type">${typeLabel}</span>
+        ${forecastTag}${reportingTag}${uncontestedTag}${filedNote}
+      </div>
+      <div class="entry-candidates">`;
+
+    // Sort candidates: Won/Advanced first, then by votes desc
+    const sortedCands = e.candidates.slice().sort((a, b) => {
+      const order = { Won: 0, Advanced: 1 };
+      const aOrd = order[a.result] != null ? order[a.result] : 2;
+      const bOrd = order[b.result] != null ? order[b.result] : 2;
+      if (aOrd !== bOrd) return aOrd - bOrd;
+      return (b.votes || 0) - (a.votes || 0);
+    });
+
+    // Auto-expand pending Tier 1 elections (generals/specials)
+    const autoExpand = !isPrimaryTier && !hasWinner && e.candidates.length > 0;
+
+    // Expand threshold: 6+ candidates get collapsed
+    const EXPAND_THRESHOLD = 6;
+    const needsExpand = !autoExpand && sortedCands.length >= EXPAND_THRESHOLD;
+    const visibleCount = needsExpand ? 5 : sortedCands.length;
+    const expandId = `exp-${containerId}-${rowIdx}`;
+
+    for (let i = 0; i < sortedCands.length; i++) {
+      const cand = sortedCands[i];
+      const isWinner = cand.result === 'Won' || cand.result === 'Advanced';
+      const rowClass = isWinner ? 'entry-cand-row winner-row' : 'entry-cand-row';
+      const hiddenClass = (needsExpand && i >= visibleCount) ? ' cand-hidden' : '';
+      const expandAttr = (needsExpand && i >= visibleCount) ? ` data-expand="${expandId}"` : '';
+
+      const candParty = inferParty(cand.party, e.type, stateAbbr) || cand.party || '?';
+      const ep = effectiveParty(cand);
+      const badge = `<span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty}</span>`;
+
+      const incStr = cand.is_incumbent ? ' <span class="incumbent-marker">(i)</span>' : '';
+      const wi = cand.is_write_in ? ' <em>W/I</em>' : '';
+      const caucusNote = candidateCaucusNote(cand);
+      const nameHtml = `<span class="cand-name">${candLink(cand.name, cand.id, partyColorStyle(ep || candParty) + ';')}${caucusNote}${incStr}${wi}</span>`;
+
+      const pctStr = cand.pct != null ? `${cand.pct.toFixed(1)}%` : '';
+      const votesStr = cand.votes != null ? numberWithCommas(cand.votes) : '';
+      let resultStr = '';
+      if (cand.result === 'Won') resultStr = '<span class="cand-result-won">Won</span>';
+      else if (cand.result === 'Lost') resultStr = '<span class="cand-result-lost">Lost</span>';
+      else if (cand.result === 'Advanced') resultStr = '<span class="cand-result-won">Adv.</span>';
+      else if (cand.result) resultStr = cand.result;
+
+      html += `<div class="${rowClass}${hiddenClass}"${expandAttr}>
+        ${badge}
+        ${nameHtml}
+        <span class="cand-pct">${pctStr}</span>
+        <span class="cand-votes">${votesStr}</span>
+        <span class="cand-result">${resultStr}</span>
+      </div>`;
+    }
+
+    // Expand button
+    if (needsExpand) {
+      const hiddenCount = sortedCands.length - visibleCount;
+      html += `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${hiddenCount} more</button>`;
+    }
+
+    html += `</div></div>`;
+    return html;
+  }
+
+  function renderTimelineEvents(events, containerId) {
+    let html = '<div class="timeline">';
+    let lastYear = null;
+    let rowIdx = 0;
+
+    for (const ev of events) {
+      // Year header
+      if (ev.year !== lastYear) {
+        html += `<div class="timeline-year">${ev.year}</div>`;
+        lastYear = ev.year;
+      }
+
+      if (ev.type === 'term_event') {
+        html += renderTermEventCard(ev.data);
+      } else if (ev.type === 'redistricting') {
+        html += renderRedistrictingCard(ev.data);
+      } else if (ev.type === 'party_switch') {
+        html += renderPartySwitchCard(ev.data);
+      } else if (ev.type === 'election') {
+        html += renderElectionCard(ev.data, containerId, rowIdx);
+        rowIdx++;
+      }
+    }
+
+    html += '</div>';
+    return html;
+  }
+
   function buildHistoryTable(seat, containerId) {
     const elections = seat.elections.slice().sort((a, b) => b.year - a.year || a.type.localeCompare(b.type));
     if (elections.length === 0 && (!seat.party_switches || seat.party_switches.length === 0) && (!seat.term_events || seat.term_events.length === 0)) return '<p class="text-muted">No office history available.</p>';
 
-    // Combine elections, party switches, and term events into unified timeline
-    // Sort within each year by date descending (latest on top), so reading bottom-to-top
-    // within a year gives chronological order (primaries → general → etc.)
     const events = [];
     for (const e of elections) {
       events.push({ type: 'election', year: e.year, date: e.date || '', data: e });
@@ -734,7 +980,7 @@
     for (const te of (seat.term_events || [])) {
       events.push({ type: 'term_event', year: te.year, date: te.date || '', data: te });
     }
-    // Inject redistricting event if district has elections spanning the redistricting boundary
+    // Inject redistricting event
     const ry = district.redistricting_year;
     if (ry) {
       const elecYears = elections.map(e => e.year);
@@ -742,13 +988,10 @@
       const hasAfter = elecYears.some(y => y >= ry);
       if (hasBefore && hasAfter) {
         const marginStr = district.pres_2024_margin ? marginLabel(district.pres_2024_margin) : null;
-        // Place between last special (old lines) and first regular (new lines) in redistricting year
         let redistrictDate = `${ry}-01-01`;
         const ryElecs = elections.filter(e => e.year === ry && e.date);
         const specialDates = ryElecs.filter(e => e.type.includes('Special')).map(e => e.date).sort();
-        const regularDates = ryElecs.filter(e => !e.type.includes('Special')).map(e => e.date).sort();
         if (specialDates.length > 0) {
-          // Place the day after the last special election in the redistricting year
           const d = new Date(specialDates[specialDates.length - 1] + 'T00:00:00');
           d.setDate(d.getDate() + 1);
           redistrictDate = d.toISOString().split('T')[0];
@@ -761,272 +1004,25 @@
         });
       }
     }
-    // Sort: descending year, then descending date within year (latest event on top)
     events.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
 
-    let html = `<table class="history-table"><thead><tr>
-      <th>Date</th><th>Type</th><th>Candidates</th><th>Vote Share</th><th>Votes</th><th></th>
-    </tr></thead><tbody>`;
-
-    let lastCycleKey = null;
-    let rowIdx = 0;
-
-    for (const ev of events) {
-      // Handle term events (resignations, deaths, removals)
-      if (ev.type === 'term_event') {
-        const te = ev.data;
-        const cycleKey = `${te.year}`;
-        if (cycleKey !== lastCycleKey) {
-          html += `<tr class="cycle-header"><td colspan="6">${te.year}</td></tr>`;
-          lastCycleKey = cycleKey;
-        }
-        const dateStr = te.date
-          ? new Date(te.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
-          : '';
-        const reasonLabels = {
-          'resigned': 'Resigned',
-          'died': 'Died in Office',
-          'removed': 'Removed',
-          'appointed_elsewhere': 'Appointed Elsewhere',
-        };
-        const reasonLabel = reasonLabels[te.reason] || te.reason;
-        const teDateLabel = dateStr ? `<div class="text-muted" style="font-size:11px">${dateStr}</div>` : '';
-        const notesLabel = te.notes ? ` <span class="term-event-notes">${te.notes}</span>` : '';
-        const badge = `<span class="party-badge ${partyBadgeClass(te.party)}" style="font-size:10px;padding:1px 5px">${te.party || '?'}</span>`;
-        html += `<tr class="event-row term-event-row">
-          <td>${teDateLabel}</td>
-          <td><span class="term-event-reason">${reasonLabel}</span></td>
-          <td>${badge} <span style="${partyColorStyle(te.party)}">${te.name}</span>${notesLabel}</td>
-          <td colspan="3"></td>
-        </tr>`;
-        continue;
-      }
-
-      // Handle redistricting events
-      if (ev.type === 'redistricting') {
-        const rd = ev.data;
-        const cycleKey = `${rd.year}`;
-        if (cycleKey !== lastCycleKey) {
-          html += `<tr class="cycle-header"><td colspan="6">${rd.year}</td></tr>`;
-          lastCycleKey = cycleKey;
-        }
-        const marginNote = rd.newMargin ? ` <span class="redistricting-detail">&middot; New lines: ${rd.newMargin}</span>` : '';
-        html += `<tr class="event-row redistricting-row">
-          <td></td>
-          <td><span class="redistricting-label">District Redrawn</span></td>
-          <td>New district lines took effect${marginNote}</td>
-          <td colspan="3"></td>
-        </tr>`;
-        continue;
-      }
-
-      // Handle party switch events
-      if (ev.type === 'party_switch') {
-        const ps = ev.data;
-        const cycleKey = `${ps.year}`;
-        if (cycleKey !== lastCycleKey) {
-          html += `<tr class="cycle-header"><td colspan="6">${ps.year}</td></tr>`;
-          lastCycleKey = cycleKey;
-        }
-        const dateStr = ps.date
-          ? new Date(ps.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
-          : '';
-        const psDateLabel = dateStr ? `<div class="text-muted" style="font-size:11px">${dateStr}</div>` : '';
-        const oldBadge = `<span class="party-badge ${partyBadgeClass(ps.old_party)}" style="font-size:10px;padding:1px 5px">${ps.old_party}</span>`;
-        const newBadge = `<span class="party-badge ${partyBadgeClass(ps.new_party)}" style="font-size:10px;padding:1px 5px">${ps.new_party}</span>`;
-        html += `<tr class="event-row party-switch-row">
-          <td>${psDateLabel}</td>
-          <td>Party Switch</td>
-          <td><span style="${partyColorStyle(ps.new_party)}">${ps.name}</span> switched ${oldBadge} &rarr; ${newBadge}</td>
-          <td colspan="3"></td>
-        </tr>`;
-        continue;
-      }
-
-      const e = ev.data;
-
-      const isPrimaryTier = e.type.includes('Primary')
-        || e.type.endsWith('_D') || e.type.endsWith('_R') || e.type.endsWith('_Nonpartisan');
-      const tierClass = isPrimaryTier ? 'primary-row' : 'general-row';
-      const childTierClass = isPrimaryTier ? 'primary-child' : 'general-child';
-
-      // Check if election date has passed
-      const isPast = e.date && new Date(e.date + 'T00:00:00') < new Date();
-
-      // Past election with 0 candidates and no results = uncontested/no data, skip the row
-      if (isPast && e.candidates.length === 0 && !e.result_status) {
-        continue;
-      }
-
-      // Group by year
-      const cycleKey = `${e.year}`;
-      if (cycleKey !== lastCycleKey) {
-        html += `<tr class="cycle-header"><td colspan="6">${e.year}</td></tr>`;
-        lastCycleKey = cycleKey;
-      }
-
-      // Find all winners/advancers
-      const winners = e.candidates.filter(c => c.result === 'Won' || c.result === 'Advanced');
-
-      // If past election with 1 candidate still "Pending", treat as uncontested winner
-      if (winners.length === 0 && isPast && e.candidates.length === 1 && e.candidates[0].result === 'Pending') {
-        winners.push(e.candidates[0]);
-      }
-      const winner = winners[0] || null;
-
-      let typeLabel = e.type.replace(/_/g, ' ');
-      let dateLabel = '';
-      if (e.date) {
-        const d = new Date(e.date + 'T00:00:00');
-        dateLabel = `<div class="text-muted" style="font-size:11px">${d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</div>`;
-      }
-      const isMultiWinner = winners.length > 1;
-      let winnerName = '—';
-      let marginHtml = '—';
-      let winnerParty = '';
-
-      if (isMultiWinner) {
-        // Multi-winner: summary in main row, all winners as equal child rows
-        winnerName = `<span class="text-muted">${winners.length} ${isPrimaryTier ? 'advanced' : 'elected'}</span>`;
-        marginHtml = '';
-      } else if (winner) {
-        const badgeParty = inferParty(winner.party, e.type, stateAbbr) || '';
-        const ep = effectiveParty(winner);
-        winnerParty = ep || badgeParty;
-        const winCaucusNote = candidateCaucusNote(winner);
-        winnerName = `<span class="party-badge ${partyBadgeClass(badgeParty)}" style="font-size:10px;padding:1px 5px">${badgeParty || '?'}</span> ${candLink(winner.name, winner.id, partyColorStyle(ep || badgeParty) + ';')}${winCaucusNote}`;
-        if (winner && e.candidates.length === 1) {
-          winnerName += ' <span class="incumbent-marker">(uncontested)</span>';
-        }
-
-        if (winner.pct != null) {
-          const marginPct = Math.max(0, (winner.pct - 50) * 2);
-          const partyColor = (ep || badgeParty) === 'D' ? 'var(--ms-dem-blue)' : (ep || badgeParty) === 'R' ? 'var(--ms-rep-red)' : 'var(--ms-other)';
-          const marginNote = winner.pct > 50 && winner.pct < 100 ? ` <span style="font-size:11px;color:#999">(+${marginPct.toFixed(1)})</span>` : '';
-          marginHtml = `<span style="font-size:12px;color:${partyColor}">${winner.pct.toFixed(1)}%</span>${marginNote}`;
-        }
-      }
-
-      // For upcoming elections with candidates but no winner, show "N candidates filed"
-      const hasResults = winner || e.result_status;
-      if (!hasResults && e.candidates.length > 0) {
-        const n = e.candidates.length;
-        winnerName = `<span class="text-muted">${n} candidate${n !== 1 ? 's' : ''} filed</span>`;
-      }
-
-      let reportingNote = '';
-      if (e.result_status && e.result_status !== 'Certified') {
-        if (e.precincts_reporting != null && e.precincts_total) {
-          const pct = Math.round(e.precincts_reporting / e.precincts_total * 100);
-          reportingNote = `<span class="reporting-pct">${pct}% reporting</span>`;
-        } else {
-          reportingNote = `<span class="reporting-pct">Unofficial</span>`;
-        }
-      }
-      let votesStr = '—';
-      if (winner && winner.votes != null) {
-        votesStr = numberWithCommas(winner.votes);
-      } else if (e.total_votes) {
-        votesStr = numberWithCommas(e.total_votes);
-      }
-      votesStr += reportingNote;
-      const isWinnerRow = winner ? ' winner-row' : '';
-      const expandId = `exp-${containerId}-${rowIdx}`;
-
-      // Auto-expand pending Tier 1 elections (generals/specials) so candidates are visible
-      const autoExpand = !isPrimaryTier && !winner && e.candidates.length > 0;
-
-      // For multi-winner, all candidates not in winners list go behind expand
-      // For single-winner, non-winners go behind expand
-      const nonWinners = e.candidates.filter(c => !winners.includes(c));
-      const hasNonWinners = nonWinners.length > 0;
-      const expandBtn = (hasNonWinners && !autoExpand) ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${nonWinners.length} more</button>` : '';
-
-      html += `<tr class="${tierClass}${isWinnerRow}">
-        <td>${dateLabel}</td>
-        <td>${typeLabel}</td>
-        <td>${winnerName}</td>
-        <td>${marginHtml}</td>
-        <td>${votesStr}</td>
-        <td>${expandBtn}</td>
-      </tr>`;
-
-      // Show winners as always-visible child rows
-      // For multi-winner: all winners; for single-winner: additional winners only (first is in main row)
-      const childWinners = isMultiWinner ? winners : winners.slice(1);
-      for (const w of childWinners) {
-        const wBadgeParty = inferParty(w.party, e.type, stateAbbr) || '';
-        const wEp = effectiveParty(w);
-        const wCaucusNote = candidateCaucusNote(w);
-        const wPctStr = w.pct != null ? `${w.pct.toFixed(1)}%` : '';
-        const wVotesStr = w.votes != null ? numberWithCommas(w.votes) : '';
-        const wResultBadge = w.result === 'Won' ? (isPrimaryTier ? '<span style="color:#155724">Won</span>' : '<strong style="color:#155724">Won</strong>') : (w.result || '');
-        const wInc = w.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
-        html += `<tr class="candidate-detail always-visible ${childTierClass}">
-          <td></td>
-          <td></td><td><span class="party-badge ${partyBadgeClass(wBadgeParty)}" style="font-size:10px;padding:1px 5px">${wBadgeParty || '?'}</span> ${candLink(w.name, w.id, partyColorStyle(wEp || wBadgeParty) + ';')}${wCaucusNote}${wInc}</td>
-          <td>${wPctStr}</td>
-          <td>${wVotesStr}</td>
-          <td>${wResultBadge}</td>
-        </tr>`;
-      }
-
-      // Expandable non-winner candidate rows (or always-visible if autoExpand)
-      if (hasNonWinners) {
-        for (const c of nonWinners) {
-          const pctStr = c.pct != null ? `${c.pct.toFixed(1)}%` : '';
-          const votesStr = c.votes != null ? numberWithCommas(c.votes) : '';
-          const resultBadge = c.result === 'Won' ? (isPrimaryTier ? '<span style="color:#155724">Won</span>' : '<strong style="color:#155724">Won</strong>') : (c.result || '');
-          const inc = c.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
-          const wi = c.is_write_in ? ' <em>W/I</em>' : '';
-          const candParty = inferParty(c.party, e.type, stateAbbr);
-          const candEp = effectiveParty(c);
-          const candCaucusNote = candidateCaucusNote(c);
-          if (autoExpand) {
-            html += `<tr class="candidate-detail always-visible ${childTierClass}">
-              <td></td>
-              <td></td><td><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> ${candLink(c.name, c.id, partyColorStyle(candEp || candParty) + ';')}${candCaucusNote}${inc}${wi}</td>
-              <td>${pctStr}</td>
-              <td>${votesStr}</td>
-              <td>${resultBadge}</td>
-            </tr>`;
-          } else {
-            html += `<tr class="candidate-detail ${childTierClass}" data-expand="${expandId}">
-              <td></td>
-              <td></td><td><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> ${candLink(c.name, c.id, partyColorStyle(candEp || candParty) + ';')}${candCaucusNote}${inc}${wi}</td>
-              <td>${pctStr}</td>
-              <td>${votesStr}</td>
-              <td>${resultBadge}</td>
-            </tr>`;
-          }
-        }
-      }
-
-      rowIdx++;
-    }
-
-    html += '</tbody></table>';
-    return html;
+    return renderTimelineEvents(events, containerId);
   }
 
-  // Unified history table for bloc-voting multi-member districts
+  // Unified history for bloc-voting multi-member districts
   function buildUnifiedHistoryTable(district) {
     const events = [];
     const seenElections = new Set();
 
     for (let si = 0; si < district.seats.length; si++) {
       const seat = district.seats[si];
-
       for (const e of seat.elections) {
-        // Dedup general/primary elections (identical across seats for bloc voting)
-        // But keep special elections per-seat (they're seat-specific)
         const isSpecial = e.type.includes('Special');
         const dedupKey = isSpecial ? `${e.year}-${e.type}-${e.date}-s${si}` : `${e.year}-${e.type}-${e.date}`;
         if (seenElections.has(dedupKey)) continue;
         seenElections.add(dedupKey);
         events.push({ type: 'election', year: e.year, date: e.date || '', data: e });
       }
-
       for (const ps of (seat.party_switches || [])) {
         events.push({ type: 'party_switch', year: ps.year, date: ps.date || '', data: ps });
       }
@@ -1064,234 +1060,7 @@
 
     events.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
 
-    let html = `<table class="history-table"><thead><tr>
-      <th>Date</th><th>Type</th><th>Candidates</th><th>Vote Share</th><th>Votes</th><th></th>
-    </tr></thead><tbody>`;
-
-    let lastCycleKey = null;
-    let rowIdx = 0;
-
-    for (const ev of events) {
-      if (ev.type === 'term_event') {
-        const te = ev.data;
-        const cycleKey = `${te.year}`;
-        if (cycleKey !== lastCycleKey) {
-          html += `<tr class="cycle-header"><td colspan="6">${te.year}</td></tr>`;
-          lastCycleKey = cycleKey;
-        }
-        const dateStr = te.date
-          ? new Date(te.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
-          : '';
-        const reasonLabels = {
-          'resigned': 'Resigned',
-          'died': 'Died in Office',
-          'removed': 'Removed',
-          'appointed_elsewhere': 'Appointed Elsewhere',
-        };
-        const reasonLabel = reasonLabels[te.reason] || te.reason;
-        const teDateLabel = dateStr ? `<div class="text-muted" style="font-size:11px">${dateStr}</div>` : '';
-        const notesLabel = te.notes ? ` <span class="term-event-notes">${te.notes}</span>` : '';
-        const badge = `<span class="party-badge ${partyBadgeClass(te.party)}" style="font-size:10px;padding:1px 5px">${te.party || '?'}</span>`;
-        html += `<tr class="event-row term-event-row">
-          <td>${teDateLabel}</td>
-          <td><span class="term-event-reason">${reasonLabel}</span></td>
-          <td>${badge} <span style="${partyColorStyle(te.party)}">${te.name}</span>${notesLabel}</td>
-          <td colspan="3"></td>
-        </tr>`;
-        continue;
-      }
-
-      if (ev.type === 'redistricting') {
-        const rd = ev.data;
-        const cycleKey = `${rd.year}`;
-        if (cycleKey !== lastCycleKey) {
-          html += `<tr class="cycle-header"><td colspan="6">${rd.year}</td></tr>`;
-          lastCycleKey = cycleKey;
-        }
-        const marginNote = rd.newMargin ? ` <span class="redistricting-detail">&middot; New lines: ${rd.newMargin}</span>` : '';
-        html += `<tr class="event-row redistricting-row">
-          <td></td>
-          <td><span class="redistricting-label">District Redrawn</span></td>
-          <td>New district lines took effect${marginNote}</td>
-          <td colspan="3"></td>
-        </tr>`;
-        continue;
-      }
-
-      if (ev.type === 'party_switch') {
-        const ps = ev.data;
-        const cycleKey = `${ps.year}`;
-        if (cycleKey !== lastCycleKey) {
-          html += `<tr class="cycle-header"><td colspan="6">${ps.year}</td></tr>`;
-          lastCycleKey = cycleKey;
-        }
-        const dateStr = ps.date
-          ? new Date(ps.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
-          : '';
-        const psDateLabel = dateStr ? `<div class="text-muted" style="font-size:11px">${dateStr}</div>` : '';
-        const oldBadge = `<span class="party-badge ${partyBadgeClass(ps.old_party)}" style="font-size:10px;padding:1px 5px">${ps.old_party}</span>`;
-        const newBadge = `<span class="party-badge ${partyBadgeClass(ps.new_party)}" style="font-size:10px;padding:1px 5px">${ps.new_party}</span>`;
-        html += `<tr class="event-row party-switch-row">
-          <td>${psDateLabel}</td>
-          <td>Party Switch</td>
-          <td><span style="${partyColorStyle(ps.new_party)}">${ps.name}</span> switched ${oldBadge} &rarr; ${newBadge}</td>
-          <td colspan="3"></td>
-        </tr>`;
-        continue;
-      }
-
-      const e = ev.data;
-
-      const isPrimaryTier = e.type.includes('Primary')
-        || e.type.endsWith('_D') || e.type.endsWith('_R') || e.type.endsWith('_Nonpartisan');
-      const tierClass = isPrimaryTier ? 'primary-row' : 'general-row';
-      const childTierClass = isPrimaryTier ? 'primary-child' : 'general-child';
-
-      const isPast = e.date && new Date(e.date + 'T00:00:00') < new Date();
-
-      if (isPast && e.candidates.length === 0 && !e.result_status) continue;
-
-      const cycleKey = `${e.year}`;
-      if (cycleKey !== lastCycleKey) {
-        html += `<tr class="cycle-header"><td colspan="6">${e.year}</td></tr>`;
-        lastCycleKey = cycleKey;
-      }
-
-      // Find all winners/advancers
-      const winners = e.candidates.filter(c => c.result === 'Won' || c.result === 'Advanced');
-      if (winners.length === 0 && isPast && e.candidates.length === 1 && e.candidates[0].result === 'Pending') {
-        winners.push(e.candidates[0]);
-      }
-      const winner = winners[0] || null;
-
-      let typeLabel = e.type.replace(/_/g, ' ');
-      let dateLabel = '';
-      if (e.date) {
-        const d = new Date(e.date + 'T00:00:00');
-        dateLabel = `<div class="text-muted" style="font-size:11px">${d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</div>`;
-      }
-
-      const isMultiWinner = winners.length > 1;
-      let winnerName = '—';
-      let marginHtml = '—';
-      let winnerParty = '';
-
-      if (isMultiWinner) {
-        winnerName = `<span class="text-muted">${winners.length} ${isPrimaryTier ? 'advanced' : 'elected'}</span>`;
-        marginHtml = '';
-      } else if (winner) {
-        const badgeParty = inferParty(winner.party, e.type, stateAbbr) || '';
-        const ep = effectiveParty(winner);
-        winnerParty = ep || badgeParty;
-        const winCaucusNote = candidateCaucusNote(winner);
-        winnerName = `<span class="party-badge ${partyBadgeClass(badgeParty)}" style="font-size:10px;padding:1px 5px">${badgeParty || '?'}</span> ${candLink(winner.name, winner.id, partyColorStyle(ep || badgeParty) + ';')}${winCaucusNote}`;
-        if (winner && e.candidates.length === 1) {
-          winnerName += ' <span class="incumbent-marker">(uncontested)</span>';
-        }
-        if (winner.pct != null) {
-          const marginPct = Math.max(0, (winner.pct - 50) * 2);
-          const partyColor = (ep || badgeParty) === 'D' ? 'var(--ms-dem-blue)' : (ep || badgeParty) === 'R' ? 'var(--ms-rep-red)' : 'var(--ms-other)';
-          const marginNote = winner.pct > 50 && winner.pct < 100 ? ` <span style="font-size:11px;color:#999">(+${marginPct.toFixed(1)})</span>` : '';
-          marginHtml = `<span style="font-size:12px;color:${partyColor}">${winner.pct.toFixed(1)}%</span>${marginNote}`;
-        }
-      }
-
-      const hasResults = winner || e.result_status;
-      if (!hasResults && e.candidates.length > 0) {
-        const n = e.candidates.length;
-        winnerName = `<span class="text-muted">${n} candidate${n !== 1 ? 's' : ''} filed</span>`;
-      }
-
-      let reportingNote = '';
-      if (e.result_status && e.result_status !== 'Certified') {
-        if (e.precincts_reporting != null && e.precincts_total) {
-          const pct = Math.round(e.precincts_reporting / e.precincts_total * 100);
-          reportingNote = `<span class="reporting-pct">${pct}% reporting</span>`;
-        } else {
-          reportingNote = `<span class="reporting-pct">Unofficial</span>`;
-        }
-      }
-      let votesStr = '—';
-      if (winner && winner.votes != null) {
-        votesStr = numberWithCommas(winner.votes);
-      } else if (e.total_votes) {
-        votesStr = numberWithCommas(e.total_votes);
-      }
-      votesStr += reportingNote;
-      const isWinnerRow = winner ? ' winner-row' : '';
-      const expandId = `exp-unified-${rowIdx}`;
-
-      // Auto-expand pending Tier 1 elections (generals/specials) so candidates are visible
-      const autoExpand = !isPrimaryTier && !winner && e.candidates.length > 0;
-
-      const nonWinners = e.candidates.filter(c => !winners.includes(c));
-      const hasNonWinners = nonWinners.length > 0;
-      const expandBtn = (hasNonWinners && !autoExpand) ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${nonWinners.length} more</button>` : '';
-
-      html += `<tr class="${tierClass}${isWinnerRow}">
-        <td>${dateLabel}</td>
-        <td>${typeLabel}</td>
-        <td>${winnerName}</td>
-        <td>${marginHtml}</td>
-        <td>${votesStr}</td>
-        <td>${expandBtn}</td>
-      </tr>`;
-
-      // Show winners as always-visible child rows
-      const childWinners = isMultiWinner ? winners : winners.slice(1);
-      for (const w of childWinners) {
-        const wBadgeParty = inferParty(w.party, e.type, stateAbbr) || '';
-        const wEp = effectiveParty(w);
-        const wCaucusNote = candidateCaucusNote(w);
-        const wPctStr = w.pct != null ? `${w.pct.toFixed(1)}%` : '';
-        const wVotesStr = w.votes != null ? numberWithCommas(w.votes) : '';
-        const wResultBadge = w.result === 'Won' ? (isPrimaryTier ? '<span style="color:#155724">Won</span>' : '<strong style="color:#155724">Won</strong>') : (w.result || '');
-        const wInc = w.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
-        html += `<tr class="candidate-detail always-visible ${childTierClass}">
-          <td></td>
-          <td></td><td><span class="party-badge ${partyBadgeClass(wBadgeParty)}" style="font-size:10px;padding:1px 5px">${wBadgeParty || '?'}</span> ${candLink(w.name, w.id, partyColorStyle(wEp || wBadgeParty) + ';')}${wCaucusNote}${wInc}</td>
-          <td>${wPctStr}</td>
-          <td>${wVotesStr}</td>
-          <td>${wResultBadge}</td>
-        </tr>`;
-      }
-
-      // Expandable non-winner candidate rows (or always-visible if autoExpand)
-      if (hasNonWinners) {
-        for (const c of nonWinners) {
-          const pctStr = c.pct != null ? `${c.pct.toFixed(1)}%` : '';
-          const votesStr = c.votes != null ? numberWithCommas(c.votes) : '';
-          const resultBadge = c.result === 'Won' ? (isPrimaryTier ? '<span style="color:#155724">Won</span>' : '<strong style="color:#155724">Won</strong>') : (c.result || '');
-          const inc = c.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
-          const wi = c.is_write_in ? ' <em>W/I</em>' : '';
-          const candParty = inferParty(c.party, e.type, stateAbbr);
-          const candEp = effectiveParty(c);
-          const candCaucusNote = candidateCaucusNote(c);
-          if (autoExpand) {
-            html += `<tr class="candidate-detail always-visible ${childTierClass}">
-              <td></td>
-              <td></td><td><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> ${candLink(c.name, c.id, partyColorStyle(candEp || candParty) + ';')}${candCaucusNote}${inc}${wi}</td>
-              <td>${pctStr}</td>
-              <td>${votesStr}</td>
-              <td>${resultBadge}</td>
-            </tr>`;
-          } else {
-            html += `<tr class="candidate-detail ${childTierClass}" data-expand="${expandId}">
-              <td></td>
-              <td></td><td><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> ${candLink(c.name, c.id, partyColorStyle(candEp || candParty) + ';')}${candCaucusNote}${inc}${wi}</td>
-              <td>${pctStr}</td>
-              <td>${votesStr}</td>
-              <td>${resultBadge}</td>
-            </tr>`;
-          }
-        }
-      }
-
-      rowIdx++;
-    }
-
-    html += '</tbody></table>';
-    return html;
+    return renderTimelineEvents(events, 'unified');
   }
 
   let historyHtml = `<div class="section"><div class="section-title">Office History</div>`;
@@ -1583,11 +1352,11 @@
 
 // Global functions for interactivity
 function toggleExpand(id, btn) {
-  const rows = document.querySelectorAll(`[data-expand="${id}"]`);
-  const isOpen = rows[0] && rows[0].classList.contains('open');
-  rows.forEach(r => r.classList.toggle('open'));
+  const items = document.querySelectorAll(`[data-expand="${id}"]`);
+  const isOpen = items[0] && items[0].classList.contains('open');
+  items.forEach(r => r.classList.toggle('open'));
   if (btn) {
-    btn.textContent = isOpen ? `+${rows.length} more` : 'Hide';
+    btn.textContent = isOpen ? `+${items.length} more` : 'Hide';
   }
 }
 
