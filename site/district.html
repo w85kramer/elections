@@ -892,8 +892,7 @@
         const ep = effectiveParty(winner);
         winnerParty = ep || badgeParty;
         const winCaucusNote = candidateCaucusNote(winner);
-        winnerName = `<span style="${partyColorStyle(ep || badgeParty)}">${winner.name}</span>
-          <span class="party-badge ${partyBadgeClass(badgeParty)}" style="font-size:10px;padding:1px 5px;margin-left:4px">${badgeParty || '?'}</span>${winCaucusNote}`;
+        winnerName = `<span class="party-badge ${partyBadgeClass(badgeParty)}" style="font-size:10px;padding:1px 5px">${badgeParty || '?'}</span> <span style="${partyColorStyle(ep || badgeParty)}">${winner.name}</span>${winCaucusNote}`;
         if (winner && e.candidates.length === 1) {
           winnerName += ' <span class="incumbent-marker">(uncontested)</span>';
         }
@@ -1177,8 +1176,7 @@
         const ep = effectiveParty(winner);
         winnerParty = ep || badgeParty;
         const winCaucusNote = candidateCaucusNote(winner);
-        winnerName = `<span style="${partyColorStyle(ep || badgeParty)}">${winner.name}</span>
-          <span class="party-badge ${partyBadgeClass(badgeParty)}" style="font-size:10px;padding:1px 5px;margin-left:4px">${badgeParty || '?'}</span>${winCaucusNote}`;
+        winnerName = `<span class="party-badge ${partyBadgeClass(badgeParty)}" style="font-size:10px;padding:1px 5px">${badgeParty || '?'}</span> <span style="${partyColorStyle(ep || badgeParty)}">${winner.name}</span>${winCaucusNote}`;
         if (winner && e.candidates.length === 1) {
           winnerName += ' <span class="incumbent-marker">(uncontested)</span>';
         }
