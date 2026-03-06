@@ -405,6 +405,47 @@ def export_all_districts(dry_run=False, single_state=None):
             seat_obj['raw_caucus'] = 'C'
         districts_by_state[state][did]['seats'].append(seat_obj)
 
+    # --- Detect bloc voting for multi-member districts ---
+    # Bloc voting: seats share identical candidate sets for the same election.
+    # If no elections have candidates to compare, assume bloc voting for multi-member.
+    for state, dists in districts_by_state.items():
+        for did, dinfo in dists.items():
+            uses_bloc = False
+            seats = dinfo['seats']
+            if len(seats) > 1:
+                # Build seat 0's non-special election candidate sets
+                seat0_elecs = {}
+                for e in seats[0]['elections']:
+                    if 'Special' in e['type']:
+                        continue  # Skip specials — those are per-seat even in bloc voting
+                    cnames = set(c['name'] for c in e['candidates'])
+                    if cnames:
+                        seat0_elecs[(e['year'], e['type'])] = cnames
+                if not seat0_elecs:
+                    # No non-special elections with candidates — assume bloc for multi-member
+                    uses_bloc = True
+                else:
+                    # Check if any other seat has different candidates (= position-based)
+                    found_different = False
+                    found_match = False
+                    for other_seat in seats[1:]:
+                        for e in other_seat['elections']:
+                            if 'Special' in e['type']:
+                                continue
+                            key = (e['year'], e['type'])
+                            other_cnames = set(c['name'] for c in e['candidates'])
+                            if key in seat0_elecs and other_cnames:
+                                if seat0_elecs[key] == other_cnames:
+                                    found_match = True
+                                else:
+                                    found_different = True
+                                    break
+                        if found_different:
+                            break
+                    # Bloc unless we found evidence of different candidates per seat
+                    uses_bloc = not found_different
+            dinfo['uses_bloc_voting'] = uses_bloc
+
     # --- Compute similar districts across all states ---
     # Collect all districts with their pres margins for cross-state similarity
     all_district_margins = []
@@ -518,6 +559,7 @@ def export_all_districts(dry_run=False, single_state=None):
                 'pres_2024_winner': d['pres_2024_winner'],
                 'redistricting_year': d.get('redistricting_year'),
                 'seats': d['seats'],
+                'uses_bloc_voting': d.get('uses_bloc_voting', False),
                 'partisan_shift': partisan_shift,
                 'similar_districts': similar,
             }

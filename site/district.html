@@ -498,6 +498,7 @@
   }
 
   const isMultiSeat = district.seats.length > 1;
+  const isBlocVoting = district.uses_bloc_voting || false;
   const primarySeat = district.seats[0];
 
   // ==========================
@@ -516,10 +517,11 @@
       const colorParty = s.current_holder_caucus || s.current_holder_party;
       const sinceStr = s.since_year ? ` &middot; Since ${s.since_year}` : '';
       const annotation = caucusAnnotation(s.current_holder_party, s.current_holder_caucus, s.raw_caucus);
+      const seatPrefix = isBlocVoting ? '' : `${label} &middot; `;
       heroHtml += `<div class="holder-row">
         <span class="party-badge ${partyBadgeClass(dispParty)}">${dispParty}</span>
         <span class="holder-name" style="${displayColor(s.current_holder_party, s.current_holder_caucus)}">${s.current_holder || 'Vacant'}</span>${annotation}
-        <span class="holder-since">${label}${sinceStr}</span>
+        <span class="holder-since">${isBlocVoting ? (s.since_year ? `Since ${s.since_year}` : '') : label + sinceStr}</span>
       </div>`;
     }
     heroHtml += `</div>`;
@@ -589,6 +591,19 @@
   }
   allGenerals.sort((a, b) => a.year - b.year);
 
+  // Deduplicate trend bars for bloc voting (all seats share the same election)
+  if (isBlocVoting) {
+    const seen = new Set();
+    const deduped = allGenerals.filter(g => {
+      const key = g.year;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+    allGenerals.length = 0;
+    allGenerals.push(...deduped);
+  }
+
   if (allGenerals.length >= 2) {
     trendHtml = `<div class="section">
       <div class="section-title">Partisan Trend</div>
@@ -611,10 +626,12 @@
 
   if (races2026.length > 0) {
     elec2026Html = `<div class="section"><div class="section-title">2026 Election</div>`;
-    for (const race of races2026) {
+    // For bloc voting, show one combined card using the first race's data
+    const races2026Display = isBlocVoting ? [races2026[0]] : races2026;
+    for (const race of races2026Display) {
       const s = race.seat;
       const gen = race.general;
-      const seatLabel = isMultiSeat && s.seat_designator ? ` — Seat ${s.seat_designator}` : '';
+      const seatLabel = isBlocVoting ? ` (${district.num_seats} seats)` : (isMultiSeat && s.seat_designator ? ` — Seat ${s.seat_designator}` : '');
 
       let forecastHtml = '';
       if (s.forecast && s.forecast.length > 0) {
@@ -911,10 +928,248 @@
     return html;
   }
 
+  // Unified history table for bloc-voting multi-member districts
+  function buildUnifiedHistoryTable(district) {
+    const events = [];
+    const seenElections = new Set();
+
+    for (let si = 0; si < district.seats.length; si++) {
+      const seat = district.seats[si];
+
+      for (const e of seat.elections) {
+        // Dedup general/primary elections (identical across seats for bloc voting)
+        // But keep special elections per-seat (they're seat-specific)
+        const isSpecial = e.type.includes('Special');
+        const dedupKey = isSpecial ? `${e.year}-${e.type}-${e.date}-s${si}` : `${e.year}-${e.type}-${e.date}`;
+        if (seenElections.has(dedupKey)) continue;
+        seenElections.add(dedupKey);
+        events.push({ type: 'election', year: e.year, date: e.date || '', data: e });
+      }
+
+      for (const ps of (seat.party_switches || [])) {
+        events.push({ type: 'party_switch', year: ps.year, date: ps.date || '', data: ps });
+      }
+      for (const te of (seat.term_events || [])) {
+        events.push({ type: 'term_event', year: te.year, date: te.date || '', data: te });
+      }
+    }
+
+    // Inject redistricting event
+    const ry = district.redistricting_year;
+    if (ry) {
+      const elecYears = events.filter(ev => ev.type === 'election').map(ev => ev.year);
+      const hasBefore = elecYears.some(y => y < ry);
+      const hasAfter = elecYears.some(y => y >= ry);
+      if (hasBefore && hasAfter) {
+        const marginStr = district.pres_2024_margin ? marginLabel(district.pres_2024_margin) : null;
+        let redistrictDate = `${ry}-01-01`;
+        const ryElecs = events.filter(ev => ev.type === 'election' && ev.year === ry && ev.data.date);
+        const specialDates = ryElecs.filter(ev => ev.data.type.includes('Special')).map(ev => ev.data.date).sort();
+        if (specialDates.length > 0) {
+          const d = new Date(specialDates[specialDates.length - 1] + 'T00:00:00');
+          d.setDate(d.getDate() + 1);
+          redistrictDate = d.toISOString().split('T')[0];
+        }
+        events.push({
+          type: 'redistricting',
+          year: ry,
+          date: redistrictDate,
+          data: { year: ry, newMargin: marginStr }
+        });
+      }
+    }
+
+    if (events.length === 0) return '<p class="text-muted">No office history available.</p>';
+
+    events.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
+
+    let html = `<table class="history-table"><thead><tr>
+      <th>Year</th><th>Type</th><th>Winner</th><th>Margin</th><th>Votes</th><th></th>
+    </tr></thead><tbody>`;
+
+    let lastCycleKey = null;
+    let rowIdx = 0;
+
+    for (const ev of events) {
+      if (ev.type === 'term_event') {
+        const te = ev.data;
+        const cycleKey = `${te.year}`;
+        if (cycleKey !== lastCycleKey) {
+          html += `<tr class="cycle-header"><td colspan="6">${te.year}</td></tr>`;
+          lastCycleKey = cycleKey;
+        }
+        const dateStr = te.date
+          ? new Date(te.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+          : '';
+        const reasonLabels = {
+          'resigned': 'Resigned',
+          'died': 'Died in Office',
+          'removed': 'Removed',
+          'appointed_elsewhere': 'Appointed Elsewhere',
+        };
+        const reasonLabel = reasonLabels[te.reason] || te.reason;
+        const dateLabel = dateStr ? ` &middot; ${dateStr}` : '';
+        const notesLabel = te.notes ? ` <span class="term-event-notes">${te.notes}</span>` : '';
+        const badge = `<span class="party-badge ${partyBadgeClass(te.party)}" style="font-size:10px;padding:1px 5px">${te.party || '?'}</span>`;
+        html += `<tr class="event-row term-event-row">
+          <td>${te.year}</td>
+          <td><span class="term-event-reason">${reasonLabel}</span>${dateLabel}</td>
+          <td><span style="${partyColorStyle(te.party)}">${te.name}</span> ${badge}${notesLabel}</td>
+          <td colspan="3"></td>
+        </tr>`;
+        continue;
+      }
+
+      if (ev.type === 'redistricting') {
+        const rd = ev.data;
+        const cycleKey = `${rd.year}`;
+        if (cycleKey !== lastCycleKey) {
+          html += `<tr class="cycle-header"><td colspan="6">${rd.year}</td></tr>`;
+          lastCycleKey = cycleKey;
+        }
+        const marginNote = rd.newMargin ? ` <span class="redistricting-detail">&middot; New lines: ${rd.newMargin}</span>` : '';
+        html += `<tr class="event-row redistricting-row">
+          <td>${rd.year}</td>
+          <td><span class="redistricting-label">District Redrawn</span></td>
+          <td>New district lines took effect${marginNote}</td>
+          <td colspan="3"></td>
+        </tr>`;
+        continue;
+      }
+
+      if (ev.type === 'party_switch') {
+        const ps = ev.data;
+        const cycleKey = `${ps.year}`;
+        if (cycleKey !== lastCycleKey) {
+          html += `<tr class="cycle-header"><td colspan="6">${ps.year}</td></tr>`;
+          lastCycleKey = cycleKey;
+        }
+        const dateStr = ps.date
+          ? new Date(ps.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+          : '';
+        const dateLabel = dateStr ? ` <span class="text-muted" style="font-size:11px">&middot; ${dateStr}</span>` : '';
+        const oldBadge = `<span class="party-badge ${partyBadgeClass(ps.old_party)}" style="font-size:10px;padding:1px 5px">${ps.old_party}</span>`;
+        const newBadge = `<span class="party-badge ${partyBadgeClass(ps.new_party)}" style="font-size:10px;padding:1px 5px">${ps.new_party}</span>`;
+        html += `<tr class="event-row party-switch-row">
+          <td>${ps.year}</td>
+          <td>Party Switch${dateLabel}</td>
+          <td><span style="${partyColorStyle(ps.new_party)}">${ps.name}</span> switched ${oldBadge} &rarr; ${newBadge}</td>
+          <td colspan="3"></td>
+        </tr>`;
+        continue;
+      }
+
+      const e = ev.data;
+      const isPast = e.date && new Date(e.date + 'T00:00:00') < new Date();
+
+      if (isPast && e.candidates.length === 0 && !e.result_status) continue;
+
+      const cycleKey = `${e.year}`;
+      if (cycleKey !== lastCycleKey) {
+        html += `<tr class="cycle-header"><td colspan="6">${e.year}</td></tr>`;
+        lastCycleKey = cycleKey;
+      }
+
+      let winner = e.candidates.find(c => c.result === 'Won' || c.result === 'Advanced');
+      if (!winner && isPast && e.candidates.length === 1 && e.candidates[0].result === 'Pending') {
+        winner = e.candidates[0];
+      }
+
+      let typeLabel = e.type.replace(/_/g, ' ');
+      if (e.date) {
+        const d = new Date(e.date + 'T00:00:00');
+        const shortDate = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        typeLabel += ` <span class="text-muted" style="font-size:11px">· ${shortDate}</span>`;
+      }
+
+      let winnerName = '—';
+      let marginHtml = '—';
+      let winnerParty = '';
+
+      if (winner) {
+        const badgeParty = inferParty(winner.party, e.type, stateAbbr) || '';
+        const ep = effectiveParty(winner);
+        winnerParty = ep || badgeParty;
+        const winCaucusNote = candidateCaucusNote(winner);
+        winnerName = `<span style="${partyColorStyle(ep || badgeParty)}">${winner.name}</span>
+          <span class="party-badge ${partyBadgeClass(badgeParty)}" style="font-size:10px;padding:1px 5px;margin-left:4px">${badgeParty || '?'}</span>${winCaucusNote}`;
+        if (winner && e.candidates.length === 1) {
+          winnerName += ' <span class="incumbent-marker">(uncontested)</span>';
+        }
+        if (winner.pct != null) {
+          const marginPct = Math.max(0, (winner.pct - 50) * 2);
+          const barW = Math.min(marginPct, 60) / 60 * 80;
+          const barColor = (ep || badgeParty) === 'D' ? 'var(--ms-dem-blue)' : (ep || badgeParty) === 'R' ? 'var(--ms-rep-red)' : 'var(--ms-other)';
+          const label = winner.pct >= 50 ? `${marginPct.toFixed(1)}%` : `${winner.pct.toFixed(1)}%`;
+          marginHtml = `<span class="margin-bar-inline" style="width:${barW}px;background:${barColor}"></span><span style="font-size:12px;color:${barColor}">${label}</span>`;
+        }
+      }
+
+      const hasResults = winner || e.result_status;
+      if (!hasResults && e.candidates.length > 0) {
+        const n = e.candidates.length;
+        winnerName = `<span class="text-muted">${n} candidate${n !== 1 ? 's' : ''} filed</span>`;
+      }
+
+      let reportingNote = '';
+      if (e.result_status && e.result_status !== 'Certified') {
+        if (e.precincts_reporting != null && e.precincts_total) {
+          const pct = Math.round(e.precincts_reporting / e.precincts_total * 100);
+          reportingNote = `<span class="reporting-pct">${pct}% reporting</span>`;
+        } else {
+          reportingNote = `<span class="reporting-pct">Unofficial</span>`;
+        }
+      }
+      const votes = (e.total_votes ? numberWithCommas(e.total_votes) : '—') + reportingNote;
+      const isWinner = winner ? ' winner-row' : '';
+      const expandId = `exp-unified-${rowIdx}`;
+
+      const hasCands = e.candidates.length > (winner ? 1 : 0);
+      const expandBtn = hasCands ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${e.candidates.length - (winner ? 1 : 0)} more</button>` : '';
+
+      html += `<tr class="${isWinner}">
+        <td>${e.year}</td>
+        <td>${typeLabel}</td>
+        <td>${winnerName}</td>
+        <td>${marginHtml}</td>
+        <td>${votes}</td>
+        <td>${expandBtn}</td>
+      </tr>`;
+
+      if (hasCands) {
+        for (const c of e.candidates) {
+          const pctStr = c.pct != null ? `${c.pct.toFixed(1)}%` : '';
+          const votesStr = c.votes != null ? numberWithCommas(c.votes) : '';
+          const resultBadge = c.result === 'Won' ? '<strong style="color:#155724">Won</strong>' : (c.result || '');
+          const inc = c.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
+          const wi = c.is_write_in ? ' <em>W/I</em>' : '';
+          const candParty = inferParty(c.party, e.type, stateAbbr);
+          const candEp = effectiveParty(c);
+          const candCaucusNote = candidateCaucusNote(c);
+          html += `<tr class="candidate-detail" data-expand="${expandId}">
+            <td></td>
+            <td colspan="2"><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
+            <td>${pctStr}</td>
+            <td>${votesStr}</td>
+            <td>${resultBadge}</td>
+          </tr>`;
+        }
+      }
+
+      rowIdx++;
+    }
+
+    html += '</tbody></table>';
+    return html;
+  }
+
   let historyHtml = `<div class="section"><div class="section-title">Office History</div>`;
 
-  if (isMultiSeat) {
-    // Seat tabs
+  if (isMultiSeat && isBlocVoting) {
+    // Bloc voting: single unified table, no seat tabs
+    historyHtml += buildUnifiedHistoryTable(district);
+  } else if (isMultiSeat) {
+    // Position-based multi-member: keep per-seat tabs
     historyHtml += `<div class="seat-tabs" id="seat-tabs">`;
     for (let i = 0; i < district.seats.length; i++) {
       const s = district.seats[i];
@@ -1086,7 +1341,7 @@
         const barH = Math.max(barBot - barTop, 2);
 
         svg += `<rect x="${bx}" y="${barTop}" width="${barW}" height="${barH}" fill="${color}" rx="2" opacity="0.85">
-          <title>${e.year}: ${e.winner} (${e.party}) — ${margin > 0 ? 'D' : 'R'}+${Math.abs(margin).toFixed(1)}%${e.seat ? ' [Seat ' + e.seat + ']' : ''}</title>
+          <title>${e.year}: ${e.winner} (${e.party}) — ${margin > 0 ? 'D' : 'R'}+${Math.abs(margin).toFixed(1)}%${!isBlocVoting && e.seat ? ' [Seat ' + e.seat + ']' : ''}</title>
         </rect>`;
       });
 
