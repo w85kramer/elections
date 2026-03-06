@@ -191,7 +191,7 @@
   .candidate-detail.open { display: table-row; }
   .candidate-detail.always-visible { display: table-row; }
   .candidate-detail td {
-    padding: 4px 10px 4px 28px;
+    padding: 4px 10px;
     font-size: 12px;
     border-bottom: 1px solid #f0f0f0;
     color: var(--ms-text-light);
@@ -957,7 +957,7 @@
         const wInc = w.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
         html += `<tr class="candidate-detail always-visible ${childTierClass}">
           <td></td>
-          <td colspan="2"><span class="party-badge ${partyBadgeClass(wBadgeParty)}" style="font-size:10px;padding:1px 5px">${wBadgeParty || '?'}</span> <span style="${partyColorStyle(wEp || wBadgeParty)}">${w.name}</span>${wCaucusNote}${wInc}</td>
+          <td></td><td><span class="party-badge ${partyBadgeClass(wBadgeParty)}" style="font-size:10px;padding:1px 5px">${wBadgeParty || '?'}</span> <span style="${partyColorStyle(wEp || wBadgeParty)}">${w.name}</span>${wCaucusNote}${wInc}</td>
           <td>${wPctStr}</td>
           <td>${wVotesStr}</td>
           <td>${wResultBadge}</td>
@@ -978,7 +978,7 @@
           if (autoExpand) {
             html += `<tr class="candidate-detail always-visible ${childTierClass}">
               <td></td>
-              <td colspan="2"><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
+              <td></td><td><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
               <td>${pctStr}</td>
               <td>${votesStr}</td>
               <td>${resultBadge}</td>
@@ -986,7 +986,7 @@
           } else {
             html += `<tr class="candidate-detail ${childTierClass}" data-expand="${expandId}">
               <td></td>
-              <td colspan="2"><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
+              <td></td><td><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
               <td>${pctStr}</td>
               <td>${votesStr}</td>
               <td>${resultBadge}</td>
@@ -1237,7 +1237,7 @@
         const wInc = w.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
         html += `<tr class="candidate-detail always-visible ${childTierClass}">
           <td></td>
-          <td colspan="2"><span class="party-badge ${partyBadgeClass(wBadgeParty)}" style="font-size:10px;padding:1px 5px">${wBadgeParty || '?'}</span> <span style="${partyColorStyle(wEp || wBadgeParty)}">${w.name}</span>${wCaucusNote}${wInc}</td>
+          <td></td><td><span class="party-badge ${partyBadgeClass(wBadgeParty)}" style="font-size:10px;padding:1px 5px">${wBadgeParty || '?'}</span> <span style="${partyColorStyle(wEp || wBadgeParty)}">${w.name}</span>${wCaucusNote}${wInc}</td>
           <td>${wPctStr}</td>
           <td>${wVotesStr}</td>
           <td>${wResultBadge}</td>
@@ -1258,7 +1258,7 @@
           if (autoExpand) {
             html += `<tr class="candidate-detail always-visible ${childTierClass}">
               <td></td>
-              <td colspan="2"><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
+              <td></td><td><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
               <td>${pctStr}</td>
               <td>${votesStr}</td>
               <td>${resultBadge}</td>
@@ -1266,7 +1266,7 @@
           } else {
             html += `<tr class="candidate-detail ${childTierClass}" data-expand="${expandId}">
               <td></td>
-              <td colspan="2"><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
+              <td></td><td><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
               <td>${pctStr}</td>
               <td>${votesStr}</td>
               <td>${resultBadge}</td>
