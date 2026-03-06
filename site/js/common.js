@@ -54,11 +54,12 @@ function partyColor(party) {
 }
 
 function partyLabel(party) {
-  if (party === 'D') return 'Democrat';
-  if (party === 'R') return 'Republican';
-  if (party === 'I') return 'Independent';
-  if (party === 'NP') return 'Nonpartisan';
-  return party || 'Vacant';
+  const PARTY_NAMES = {
+    D: 'Democrat', R: 'Republican', I: 'Independent', NP: 'Nonpartisan',
+    L: 'Libertarian', G: 'Green', F: 'Forward Party', C: 'Constitution Party',
+    W: 'Working Families Party', WF: 'Working Families Party',
+  };
+  return PARTY_NAMES[party] || party || 'Vacant';
 }
 
 function partyBadgeClass(party) {
@@ -67,6 +68,20 @@ function partyBadgeClass(party) {
   if (party === 'NP') return 'party-np';
   return 'party-i';
 }
+
+/** Auto-add title (hover text) to all .party-badge elements */
+(function() {
+  function addTitles(root) {
+    for (const el of root.querySelectorAll('.party-badge:not([title])')) {
+      const code = el.textContent.trim();
+      if (code) el.title = partyLabel(code);
+    }
+  }
+  // Run after DOM updates via MutationObserver
+  if (typeof MutationObserver !== 'undefined') {
+    new MutationObserver(() => addTitles(document)).observe(document.documentElement, { childList: true, subtree: true });
+  }
+})();
 
 /** Infer candidate party from election type when party is null/unknown */
 function inferParty(candidateParty, electionType, stateAbbr) {
