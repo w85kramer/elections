@@ -331,21 +331,32 @@ def export_candidates(dry_run=False, single_state=None):
                 if current_term.get('caucus'):
                     cand['current_office']['caucus'] = current_term['caucus']
 
-            # Determine most recent party: current office > candidacies > seat terms
+            # Determine most recent party for display.
+            # Use actual registered party (not caucus). Caucus is stored
+            # separately for annotations (AK coalition, NE nonpartisan).
             party = None
+            caucus = None
             if current_term:
-                party = current_term.get('caucus') or current_term.get('party')
+                party = current_term.get('party')
+                caucus = current_term.get('caucus')
             if not party:
                 for cy in cand['candidacies']:
-                    party = cy.get('caucus') or cy.get('party')
+                    party = cy.get('party')
+                    if not caucus:
+                        caucus = cy.get('caucus')
                     if party:
                         break
             if not party:
                 for t in reversed(cand['seat_terms']):
-                    party = t.get('caucus') or t.get('party')
+                    party = t.get('party')
+                    if not caucus:
+                        caucus = t.get('caucus')
                     if party:
                         break
             cand['party'] = party
+            # Store caucus when it adds info beyond party (AK coalition, NE)
+            if caucus and caucus != party:
+                cand['caucus'] = caucus
 
             # Strip empty lists to save space
             if not cand['party_switches']:
@@ -451,6 +462,8 @@ def export_candidates(dry_run=False, single_state=None):
                 'st': state,
                 'p': cand.get('party', ''),
             }
+            if cand.get('caucus'):
+                entry['c'] = cand['caucus']
             if current:
                 entry['ch'] = current['chamber']
                 entry['d'] = current['district']

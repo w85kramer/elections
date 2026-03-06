@@ -320,6 +320,11 @@
     for (const c of page) {
       const party = c.p || '';
       const badge = party ? `<span class="party-badge ${partyBadgeClass(party)}" style="font-size:10px;padding:1px 5px">${party}</span>` : '';
+      // Caucus annotation for AK coalition / NE nonpartisan
+      let caucusNote = '';
+      if (c.c === 'C') caucusNote = ' <span style="font-size:11px;color:var(--ms-purple);font-style:italic">(coalition)</span>';
+      else if (c.st === 'NE' && party === 'NP' && c.c === 'R') caucusNote = ' <span class="text-muted" style="font-size:11px">(R)</span>';
+      else if (c.st === 'NE' && party === 'NP' && c.c === 'D') caucusNote = ' <span class="text-muted" style="font-size:11px">(D)</span>';
       const chamberShort = c.ch === 'Senate' ? 'SD' : (c.ch === 'Legislature' ? 'LD' : 'HD');
       const distLabel = c.d ? `${chamberShort}-${c.d}` : '';
       const distLink = c.d ? `<a href="district.html?st=${c.st}&chamber=${encodeURIComponent(c.ch)}&d=${encodeURIComponent(c.d)}">${distLabel}</a>` : '';
@@ -328,7 +333,7 @@
         : '<span class="status-former">Former</span>';
 
       html += `<tr>
-        <td><a href="candidate.html?id=${c.id}&st=${c.st}">${c.n}</a></td>
+        <td><a href="candidate.html?id=${c.id}&st=${c.st}">${c.n}</a>${caucusNote}</td>
         <td>${c.st}</td>
         <td class="party-col">${badge}</td>
         <td class="district-col">${distLink}</td>

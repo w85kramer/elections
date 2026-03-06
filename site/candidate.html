@@ -384,20 +384,32 @@
     return '';
   }
 
-  // Determine display party (prefer current office > candidacies > seat terms)
+  // Determine display party (export now provides c.party = actual party, c.caucus = annotation)
   let displayParty = c.party;
-  if (!displayParty && c.current_office) displayParty = c.current_office.caucus || c.current_office.party;
+  if (!displayParty && c.current_office) displayParty = c.current_office.party;
   if (!displayParty && c.candidacies) {
     for (const cy of c.candidacies) {
-      displayParty = cy.caucus || cy.party;
+      displayParty = cy.party;
       if (displayParty) break;
     }
   }
   if (!displayParty && c.seat_terms) {
     for (let i = c.seat_terms.length - 1; i >= 0; i--) {
-      displayParty = c.seat_terms[i].caucus || c.seat_terms[i].party;
+      displayParty = c.seat_terms[i].party;
       if (displayParty) break;
     }
+  }
+
+  // Caucus annotation (AK coalition, NE nonpartisan)
+  const displayCaucus = c.caucus || (c.current_office && c.current_office.caucus) || null;
+  function caucusAnnotation() {
+    if (!displayCaucus || displayCaucus === displayParty) return '';
+    if (displayCaucus === 'C') return ' <span style="font-size:13px;color:var(--ms-purple);font-style:italic">(majority coalition)</span>';
+    if (st === 'NE' && displayParty === 'NP') {
+      if (displayCaucus === 'R') return ' <span style="font-size:13px;color:var(--ms-text-light);font-style:italic">(caucuses with Republicans)</span>';
+      if (displayCaucus === 'D') return ' <span style="font-size:13px;color:var(--ms-text-light);font-style:italic">(caucuses with Democrats)</span>';
+    }
+    return '';
   }
 
   // Breadcrumb
@@ -421,7 +433,7 @@
     const label = districtLabel(co.state, co.chamber, co.district, co.district_name);
     const sinceStr = co.since ? `, since ${formatDate(co.since)}` : '';
     heroHtml += `<div class="candidate-office">
-      <a href="${url}">${label}</a>${sinceStr}
+      <a href="${url}">${label}</a>${sinceStr}${caucusAnnotation()}
     </div>`;
   }
 
@@ -520,7 +532,7 @@
     for (const t of merged) {
       const url = districtUrl(t.state, t.chamber, t.district);
       const label = shortDistrictLabel(t.state, t.chamber, t.district);
-      const party = t.caucus || t.party || displayParty || '?';
+      const party = t.party || displayParty || '?';
       const startStr = t.start_date ? formatDate(t.start_date) : '?';
       const endStr = t.end_date ? formatDate(t.end_date) : 'present';
       // Show start reason only if noteworthy (not "elected")
