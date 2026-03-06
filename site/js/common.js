@@ -56,7 +56,7 @@ function partyColor(party) {
 function partyLabel(party) {
   const PARTY_NAMES = {
     D: 'Democrat', R: 'Republican', I: 'Independent', NP: 'Nonpartisan',
-    L: 'Libertarian', G: 'Green', F: 'Forward Party', C: 'Constitution Party',
+    L: 'Libertarian', G: 'Green', F: 'Forward Party', C: 'Coalition',
     W: 'Working Families Party', WF: 'Working Families Party',
   };
   return PARTY_NAMES[party] || party || 'Vacant';
