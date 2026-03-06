@@ -138,12 +138,44 @@
     font-weight: 700;
     font-size: 14px;
     color: var(--ms-navy);
-    padding-top: 14px;
+    padding-top: 18px;
     border-bottom: 1px solid #ccc;
     background: transparent;
   }
   .history-table .winner-row td {
     background: rgba(4, 56, 88, 0.03);
+  }
+
+  /* Tier 1: General & Special elections */
+  .history-table .general-row td {
+    font-weight: 600;
+  }
+  .history-table .general-row td:first-child {
+    border-left: 3px solid var(--ms-navy);
+  }
+  .history-table .general-row.winner-row td {
+    background: rgba(4, 56, 88, 0.05);
+  }
+
+  /* Tier 2: Primary elections */
+  .history-table .primary-row td {
+    color: var(--ms-text-light);
+    font-size: 12px;
+  }
+  .history-table .primary-row td:first-child {
+    padding-left: 16px;
+  }
+  .history-table .primary-row.winner-row td {
+    background: rgba(102, 102, 102, 0.03);
+  }
+
+  /* Candidate detail rows inherit tier */
+  .candidate-detail.always-visible.general-child td {
+    font-weight: 600;
+    color: var(--ms-text);
+  }
+  .candidate-detail.primary-child td {
+    color: #999;
   }
   .margin-bar-inline {
     display: inline-block;
@@ -818,6 +850,11 @@
 
       const e = ev.data;
 
+      const isPrimaryTier = e.type.includes('Primary')
+        || e.type.endsWith('_D') || e.type.endsWith('_R') || e.type.endsWith('_Nonpartisan');
+      const tierClass = isPrimaryTier ? 'primary-row' : 'general-row';
+      const childTierClass = isPrimaryTier ? 'primary-child' : 'general-child';
+
       // Check if election date has passed
       const isPast = e.date && new Date(e.date + 'T00:00:00') < new Date();
 
@@ -897,7 +934,7 @@
       const hasNonWinners = nonWinners.length > 0;
       const expandBtn = hasNonWinners ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${nonWinners.length} more</button>` : '';
 
-      html += `<tr class="${isWinner}">
+      html += `<tr class="${tierClass}${isWinner}">
         <td>${e.year}</td>
         <td>${typeLabel}</td>
         <td>${winnerName}</td>
@@ -916,7 +953,7 @@
         const wVotesStr = w.votes != null ? numberWithCommas(w.votes) : '';
         const wResultBadge = w.result === 'Won' ? '<strong style="color:#155724">Won</strong>' : (w.result || '');
         const wInc = w.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
-        html += `<tr class="candidate-detail always-visible">
+        html += `<tr class="candidate-detail always-visible ${childTierClass}">
           <td></td>
           <td colspan="2"><span class="party-badge ${partyBadgeClass(wBadgeParty)}" style="font-size:10px;padding:1px 5px">${wBadgeParty || '?'}</span> <span style="${partyColorStyle(wEp || wBadgeParty)}">${w.name}</span>${wCaucusNote}${wInc}</td>
           <td>${wPctStr}</td>
@@ -936,7 +973,7 @@
           const candParty = inferParty(c.party, e.type, stateAbbr);
           const candEp = effectiveParty(c);
           const candCaucusNote = candidateCaucusNote(c);
-          html += `<tr class="candidate-detail" data-expand="${expandId}">
+          html += `<tr class="candidate-detail ${childTierClass}" data-expand="${expandId}">
             <td></td>
             <td colspan="2"><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
             <td>${pctStr}</td>
@@ -1085,6 +1122,12 @@
       }
 
       const e = ev.data;
+
+      const isPrimaryTier = e.type.includes('Primary')
+        || e.type.endsWith('_D') || e.type.endsWith('_R') || e.type.endsWith('_Nonpartisan');
+      const tierClass = isPrimaryTier ? 'primary-row' : 'general-row';
+      const childTierClass = isPrimaryTier ? 'primary-child' : 'general-child';
+
       const isPast = e.date && new Date(e.date + 'T00:00:00') < new Date();
 
       if (isPast && e.candidates.length === 0 && !e.result_status) continue;
@@ -1155,7 +1198,7 @@
       const hasNonWinners = nonWinners.length > 0;
       const expandBtn = hasNonWinners ? `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${nonWinners.length} more</button>` : '';
 
-      html += `<tr class="${isWinner}">
+      html += `<tr class="${tierClass}${isWinner}">
         <td>${e.year}</td>
         <td>${typeLabel}</td>
         <td>${winnerName}</td>
@@ -1174,7 +1217,7 @@
         const wVotesStr = w.votes != null ? numberWithCommas(w.votes) : '';
         const wResultBadge = w.result === 'Won' ? '<strong style="color:#155724">Won</strong>' : (w.result || '');
         const wInc = w.is_incumbent ? ' <span class="incumbent-marker">(incumbent)</span>' : '';
-        html += `<tr class="candidate-detail always-visible">
+        html += `<tr class="candidate-detail always-visible ${childTierClass}">
           <td></td>
           <td colspan="2"><span class="party-badge ${partyBadgeClass(wBadgeParty)}" style="font-size:10px;padding:1px 5px">${wBadgeParty || '?'}</span> <span style="${partyColorStyle(wEp || wBadgeParty)}">${w.name}</span>${wCaucusNote}${wInc}</td>
           <td>${wPctStr}</td>
@@ -1194,7 +1237,7 @@
           const candParty = inferParty(c.party, e.type, stateAbbr);
           const candEp = effectiveParty(c);
           const candCaucusNote = candidateCaucusNote(c);
-          html += `<tr class="candidate-detail" data-expand="${expandId}">
+          html += `<tr class="candidate-detail ${childTierClass}" data-expand="${expandId}">
             <td></td>
             <td colspan="2"><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty || '?'}</span> <span style="${partyColorStyle(candEp || candParty)}">${c.name}</span>${candCaucusNote}${inc}${wi}</td>
             <td>${pctStr}</td>
