@@ -475,11 +475,11 @@
       const key = `${t.state}|${t.chamber}|${t.district}`;
       const prev = merged.length > 0 ? merged[merged.length - 1] : null;
       if (prev && prev._key === key && prev.end_date && prev.end_date === t.start_date) {
-        // Extend the previous merged entry
         prev.end_date = t.end_date;
         prev.end_reason = t.end_reason;
+        prev._termCount++;
       } else {
-        merged.push({ ...t, _key: key });
+        merged.push({ ...t, _key: key, _termCount: 1 });
       }
     }
     // Show most recent first
@@ -490,13 +490,17 @@
       const party = t.caucus || t.party || '?';
       const startStr = t.start_date ? formatDate(t.start_date) : '?';
       const endStr = t.end_date ? formatDate(t.end_date) : 'present';
-      const startReason = t.start_reason ? capitalize(t.start_reason.replace('_', ' ')) : '';
-      const endReason = t.end_reason ? capitalize(t.end_reason.replace('_', ' ')) : '';
-      const reasonStr = [startReason, endReason].filter(Boolean).join(' → ');
+      // Show start reason only if noteworthy (not "elected")
+      const startReason = t.start_reason && t.start_reason !== 'elected'
+        ? ` (${capitalize(t.start_reason.replace(/_/g, ' '))})` : '';
+      // Show end reason if present
+      const endReason = t.end_reason && t.end_reason !== 'term_expired'
+        ? ` (${capitalize(t.end_reason.replace(/_/g, ' '))})` : '';
+      const termStr = t._termCount > 1 ? ` &middot; ${t._termCount} terms` : ' &middot; 1 term';
       officesHtml += `<div class="office-line">
         <span class="party-badge ${partyBadgeClass(party)}" style="font-size:11px;padding:1px 6px">${party}</span>
         <a href="${url}">${label}</a>
-        <span class="office-tenure">${startStr} – ${endStr}${reasonStr ? ' &middot; ' + reasonStr : ''}</span>
+        <span class="office-tenure">${startStr}${startReason} – ${endStr}${endReason}${termStr}</span>
       </div>`;
     }
     officesHtml += `</div></div>`;
