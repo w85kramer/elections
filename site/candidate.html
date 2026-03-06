@@ -218,6 +218,27 @@
   .primary-muted .entry-header { color: #999; }
   .primary-muted .entry-type { color: #888; font-weight: 600; }
 
+  /* Quality flags */
+  .quality-flags {
+    margin-top: 4px;
+  }
+  .quality-flag {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: var(--ms-radius);
+    font-size: 13px;
+    background: #fff8e1;
+    border-left: 3px solid #f5a623;
+  }
+  .quality-flag.flag-duplicate { background: #fff3e0; border-left-color: #e65100; }
+  .quality-flag.flag-missing { background: #fce4ec; border-left-color: #c62828; }
+  .quality-flag .flag-icon { font-weight: 700; min-width: 16px; }
+  .quality-flag a { color: var(--ms-dem-blue); text-decoration: none; }
+  .quality-flag a:hover { text-decoration: underline; }
+
   .error-msg {
     text-align: center;
     padding: 80px 20px;
@@ -683,7 +704,40 @@
   }
 
   // ==========================
-  // 5. BACK NAVIGATION
+  // 5. DATA QUALITY FLAGS
+  // ==========================
+  let flagsHtml = '';
+  const flags = c.quality_flags || [];
+  if (flags.length > 0) {
+    flagsHtml = `<div class="section"><div class="section-title">Data Quality Notes</div><div class="quality-flags">`;
+    for (const f of flags) {
+      let cssClass = 'quality-flag';
+      let icon = '⚠';
+      if (f.type === 'potential_duplicate') {
+        cssClass += ' flag-duplicate';
+        let links = '';
+        if (f.ids && f.ids.length > 0) {
+          links = ' — ' + f.ids.map(id =>
+            `<a href="candidate.html?id=${id}&st=${st}">View #${id}</a>`
+          ).join(', ');
+        }
+        flagsHtml += `<div class="${cssClass}"><span class="flag-icon">${icon}</span><span>${f.msg}${links}</span></div>`;
+      } else if (f.type === 'missing_party') {
+        cssClass += ' flag-missing';
+        flagsHtml += `<div class="${cssClass}"><span class="flag-icon">${icon}</span><span>${f.msg}</span></div>`;
+      } else if (f.type === 'missing_votes') {
+        flagsHtml += `<div class="${cssClass}"><span class="flag-icon">${icon}</span><span>${f.msg}</span></div>`;
+      } else if (f.type === 'no_candidacies') {
+        flagsHtml += `<div class="${cssClass}"><span class="flag-icon">${icon}</span><span>${f.msg}</span></div>`;
+      } else {
+        flagsHtml += `<div class="${cssClass}"><span class="flag-icon">${icon}</span><span>${f.msg}</span></div>`;
+      }
+    }
+    flagsHtml += `</div></div>`;
+  }
+
+  // ==========================
+  // 6. BACK NAVIGATION
   // ==========================
   let navHtml = `<div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--ms-border);font-size:14px">
     <a href="state.html?st=${st}" style="color:var(--ms-dem-blue);text-decoration:none;font-weight:600">← Back to ${stateName}</a>`;
@@ -696,7 +750,7 @@
   // ==========================
   // RENDER
   // ==========================
-  content.innerHTML = heroHtml + scorecardHtml + officesHtml + timelineHtml + navHtml;
+  content.innerHTML = heroHtml + scorecardHtml + officesHtml + timelineHtml + flagsHtml + navHtml;
 
   function capitalize(s) {
     return s.charAt(0).toUpperCase() + s.slice(1);

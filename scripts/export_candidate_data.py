@@ -353,6 +353,63 @@ def export_candidates(dry_run=False, single_state=None):
             if not cand['seat_terms']:
                 del cand['seat_terms']
 
+    # --- Compute quality flags ---
+    total_flags = 0
+    for state, cands in candidates_by_state.items():
+        # Build name index for duplicate detection
+        # Key: (last_name_lower, first_3_chars_lower) -> list of candidates
+        name_groups = defaultdict(list)
+        for cid, cand in cands.items():
+            ln = (cand.get('last_name') or '').lower().strip()
+            fn = (cand.get('first_name') or '').lower().strip()[:3]
+            if len(ln) >= 2 and len(fn) >= 2:
+                name_groups[(ln, fn)].append(cand)
+
+        for cid, cand in cands.items():
+            flags = []
+
+            # 1. Potential duplicate name
+            ln = (cand.get('last_name') or '').lower().strip()
+            fn = (cand.get('first_name') or '').lower().strip()[:3]
+            if len(ln) >= 2 and len(fn) >= 2:
+                group = name_groups.get((ln, fn), [])
+                others = [c for c in group if c['id'] != cand['id']]
+                if others:
+                    flags.append({
+                        'type': 'potential_duplicate',
+                        'msg': f"{len(others)} other '{cand.get('last_name')}' in {state}",
+                        'ids': [c['id'] for c in others],
+                    })
+
+            # 2. Missing party
+            if not cand.get('party'):
+                flags.append({'type': 'missing_party', 'msg': 'No party identified'})
+
+            # 3. Missing votes on certified general/special elections
+            missing_votes = 0
+            for cy in cand['candidacies']:
+                if cy.get('result_status') == 'Certified' and cy.get('result') in ('Won', 'Lost'):
+                    if cy.get('votes') is None and cy.get('pct') is None:
+                        missing_votes += 1
+            if missing_votes:
+                flags.append({
+                    'type': 'missing_votes',
+                    'msg': f'{missing_votes} certified race(s) without vote totals',
+                })
+
+            # 4. Current officeholder with no candidacies
+            if cand.get('current_office') and not cand['candidacies']:
+                flags.append({
+                    'type': 'no_candidacies',
+                    'msg': 'Current officeholder with no election history',
+                })
+
+            if flags:
+                cand['quality_flags'] = flags
+                total_flags += len(flags)
+
+    print(f'\n  Quality flags: {total_flags} flags across all candidates')
+
     # --- Write per-state JSON files ---
     out_dir = os.path.join(SITE_DATA_DIR, 'candidates')
     os.makedirs(out_dir, exist_ok=True)
