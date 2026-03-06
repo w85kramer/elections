@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-06T17:20:47.438150Z",
+  "generated_at": "2026-03-06T21:24:16.565981Z",
   "state": {
     "name": "Vermont",
     "abbr": "VT",
@@ -76,31 +76,21 @@
   ],
   "chambers": {
     "House": {
-      "total": 204,
+      "total": 150,
       "composition": {
-        "D": 131,
-        "R": 72,
+        "D": 93,
+        "R": 56,
         "Other": 0,
         "Vacant": 1
       },
-      "supermajority": 136,
-      "seats_up_2026": 204,
+      "supermajority": 100,
+      "seats_up_2026": 150,
       "members": [
         {
           "district": "Addison-1",
           "district_name": "Addison-1",
           "seat_designator": "A",
           "name": "Robin Scheu",
-          "party": "D",
-          "pres_margin": "+56.6",
-          "next_election": 2026,
-          "candidate_id": 14258
-        },
-        {
-          "district": "Addison-1",
-          "district_name": "Addison-1",
-          "seat_designator": "B",
-          "name": "Amy Sheldon",
           "party": "D",
           "pres_margin": "+56.6",
           "next_election": 2026,
@@ -139,32 +129,12 @@
         {
           "district": "Addison-3",
           "district_name": "Addison-3",
-          "seat_designator": "A",
-          "name": "Matt Birong",
-          "party": "R",
-          "pres_margin": "+29.2",
-          "next_election": 2026,
-          "candidate_id": 14341
-        },
-        {
-          "district": "Addison-3",
-          "district_name": "Addison-3",
           "seat_designator": "B",
           "name": "Rob North",
           "party": "D",
           "pres_margin": "+29.2",
           "next_election": 2026,
           "candidate_id": 14341
-        },
-        {
-          "district": "Addison-3",
-          "district_name": "Addison-3",
-          "seat_designator": "B",
-          "name": "Rob North",
-          "party": "D",
-          "pres_margin": "+29.2",
-          "next_election": 2026,
-          "candidate_id": 14340
         },
         {
           "district": "Addison-4",
@@ -179,32 +149,12 @@
         {
           "district": "Addison-4",
           "district_name": "Addison-4",
-          "seat_designator": "A",
-          "name": "Karen Lueders",
-          "party": "D",
-          "pres_margin": "+33.4",
-          "next_election": 2026,
-          "candidate_id": 14309
-        },
-        {
-          "district": "Addison-4",
-          "district_name": "Addison-4",
           "seat_designator": "B",
           "name": "Herb Olson",
           "party": "D",
           "pres_margin": "+33.4",
           "next_election": 2026,
           "candidate_id": 14309
-        },
-        {
-          "district": "Addison-4",
-          "district_name": "Addison-4",
-          "seat_designator": "B",
-          "name": "Herb Olson",
-          "party": "D",
-          "pres_margin": "+33.4",
-          "next_election": 2026,
-          "candidate_id": 14308
         },
         {
           "district": "Addison-5",
@@ -279,26 +229,6 @@
         {
           "district": "Bennington-4",
           "district_name": "Bennington-4",
-          "seat_designator": "A",
-          "name": "Rob Hunter",
-          "party": "D",
-          "pres_margin": "+33.1",
-          "next_election": 2026,
-          "candidate_id": 14317
-        },
-        {
-          "district": "Bennington-4",
-          "district_name": "Bennington-4",
-          "seat_designator": "B",
-          "name": "Kathleen James",
-          "party": "D",
-          "pres_margin": "+33.1",
-          "next_election": 2026,
-          "candidate_id": 14316
-        },
-        {
-          "district": "Bennington-4",
-          "district_name": "Bennington-4",
           "seat_designator": "B",
           "name": "Kathleen James",
           "party": "D",
@@ -335,16 +265,6 @@
           "pres_margin": "+25.8",
           "next_election": 2026,
           "candidate_id": 13069
-        },
-        {
-          "district": "Caledonia-1",
-          "district_name": "Caledonia-1",
-          "seat_designator": null,
-          "name": "Debbie Powers",
-          "party": "R",
-          "pres_margin": "+6.5",
-          "next_election": 2026,
-          "candidate_id": 10716
         },
         {
           "district": "Caledonia-1",
@@ -394,16 +314,6 @@
           "party": "R",
           "pres_margin": "+15.6",
           "next_election": 2026,
-          "candidate_id": 14297
-        },
-        {
-          "district": "Caledonia-Essex",
-          "district_name": "Caledonia-Essex",
-          "seat_designator": "A",
-          "name": "Scott Campbell",
-          "party": "R",
-          "pres_margin": "+15.6",
-          "next_election": 2026,
           "candidate_id": 14296
         },
         {
@@ -415,16 +325,6 @@
           "pres_margin": "+15.6",
           "next_election": 2026,
           "candidate_id": 14297
-        },
-        {
-          "district": "Caledonia-Essex",
-          "district_name": "Caledonia-Essex",
-          "seat_designator": "B",
-          "name": "Debbie Dolgin",
-          "party": "D",
-          "pres_margin": "+15.6",
-          "next_election": 2026,
-          "candidate_id": 14296
         },
         {
           "district": "Caledonia-Washington",
@@ -517,16 +417,6 @@
           "candidate_id": 14272
         },
         {
-          "district": "Chittenden-14",
-          "district_name": "Chittenden-14",
-          "seat_designator": "B",
-          "name": "Mary-Katherine Stone",
-          "party": "D",
-          "pres_margin": "+80.4",
-          "next_election": 2026,
-          "candidate_id": 14271
-        },
-        {
           "district": "Chittenden-15",
           "district_name": "Chittenden-15",
           "seat_designator": "A",
@@ -535,16 +425,6 @@
           "pres_margin": "+81.8",
           "next_election": 2026,
           "candidate_id": 14277
-        },
-        {
-          "district": "Chittenden-15",
-          "district_name": "Chittenden-15",
-          "seat_designator": "A",
-          "name": "Brian Cina",
-          "party": "D",
-          "pres_margin": "+81.8",
-          "next_election": 2026,
-          "candidate_id": 14278
         },
         {
           "district": "Chittenden-15",
@@ -594,16 +474,6 @@
           "party": "D",
           "pres_margin": "+57.8",
           "next_election": 2026,
-          "candidate_id": 14285
-        },
-        {
-          "district": "Chittenden-18",
-          "district_name": "Chittenden-18",
-          "seat_designator": "A",
-          "name": "Bob Hooper",
-          "party": "D",
-          "pres_margin": "+57.8",
-          "next_election": 2026,
           "candidate_id": 14284
         },
         {
@@ -614,16 +484,6 @@
           "party": "D",
           "pres_margin": "+57.8",
           "next_election": 2026,
-          "candidate_id": 59138
-        },
-        {
-          "district": "Chittenden-18",
-          "district_name": "Chittenden-18",
-          "seat_designator": "B",
-          "name": "Carol Ode",
-          "party": "D",
-          "pres_margin": "+57.8",
-          "next_election": 2026,
           "candidate_id": 14285
         },
         {
@@ -639,16 +499,6 @@
         {
           "district": "Chittenden-19",
           "district_name": "Chittenden-19",
-          "seat_designator": "A",
-          "name": "Sarita Austin",
-          "party": "D",
-          "pres_margin": "+37.1",
-          "next_election": 2026,
-          "candidate_id": 14355
-        },
-        {
-          "district": "Chittenden-19",
-          "district_name": "Chittenden-19",
           "seat_designator": "B",
           "name": "Wendy Critchlow",
           "party": "D",
@@ -657,40 +507,10 @@
           "candidate_id": 14355
         },
         {
-          "district": "Chittenden-19",
-          "district_name": "Chittenden-19",
-          "seat_designator": "B",
-          "name": "Wendy Critchlow",
-          "party": "D",
-          "pres_margin": "+37.1",
-          "next_election": 2026,
-          "candidate_id": 14354
-        },
-        {
           "district": "Chittenden-2",
           "district_name": "Chittenden-2",
           "seat_designator": "A",
           "name": "Angela Arsenault",
-          "party": "D",
-          "pres_margin": "+48.6",
-          "next_election": 2026,
-          "candidate_id": 14263
-        },
-        {
-          "district": "Chittenden-2",
-          "district_name": "Chittenden-2",
-          "seat_designator": "A",
-          "name": "Angela Arsenault",
-          "party": "D",
-          "pres_margin": "+48.6",
-          "next_election": 2026,
-          "candidate_id": 14264
-        },
-        {
-          "district": "Chittenden-2",
-          "district_name": "Chittenden-2",
-          "seat_designator": "B",
-          "name": "Erin Brady",
           "party": "D",
           "pres_margin": "+48.6",
           "next_election": 2026,
@@ -734,16 +554,6 @@
           "party": "D",
           "pres_margin": "+62.3",
           "next_election": 2026,
-          "candidate_id": 14287
-        },
-        {
-          "district": "Chittenden-21",
-          "district_name": "Chittenden-21",
-          "seat_designator": "A",
-          "name": "Daisy Berbeco",
-          "party": "D",
-          "pres_margin": "+62.3",
-          "next_election": 2026,
           "candidate_id": 14286
         },
         {
@@ -769,42 +579,12 @@
         {
           "district": "Chittenden-22",
           "district_name": "Chittenden-22",
-          "seat_designator": "A",
-          "name": "Karen Dolan",
-          "party": "D",
-          "pres_margin": "+46.6",
-          "next_election": 2026,
-          "candidate_id": 14315
-        },
-        {
-          "district": "Chittenden-22",
-          "district_name": "Chittenden-22",
           "seat_designator": "B",
           "name": "Lori Houghton",
           "party": "D",
           "pres_margin": "+46.6",
           "next_election": 2026,
           "candidate_id": 14315
-        },
-        {
-          "district": "Chittenden-22",
-          "district_name": "Chittenden-22",
-          "seat_designator": "B",
-          "name": "Lori Houghton",
-          "party": "D",
-          "pres_margin": "+46.6",
-          "next_election": 2026,
-          "candidate_id": 14314
-        },
-        {
-          "district": "Chittenden-23",
-          "district_name": "Chittenden-23",
-          "seat_designator": "A",
-          "name": "Leonora Dodge",
-          "party": "D",
-          "pres_margin": "+43.8",
-          "next_election": 2026,
-          "candidate_id": 55566
         },
         {
           "district": "Chittenden-23",
@@ -851,26 +631,6 @@
           "district_name": "Chittenden-3",
           "seat_designator": "A",
           "name": "Edye Graning",
-          "party": "D",
-          "pres_margin": "+48.3",
-          "next_election": 2026,
-          "candidate_id": 14300
-        },
-        {
-          "district": "Chittenden-3",
-          "district_name": "Chittenden-3",
-          "seat_designator": "A",
-          "name": "Edye Graning",
-          "party": "D",
-          "pres_margin": "+48.3",
-          "next_election": 2026,
-          "candidate_id": 14301
-        },
-        {
-          "district": "Chittenden-3",
-          "district_name": "Chittenden-3",
-          "seat_designator": "B",
-          "name": "Trevor Squirrell",
           "party": "D",
           "pres_margin": "+48.3",
           "next_election": 2026,
@@ -967,16 +727,6 @@
           "candidate_id": 14268
         },
         {
-          "district": "Chittenden-Franklin",
-          "district_name": "Chittenden-Franklin",
-          "seat_designator": "B",
-          "name": "Chris Taylor",
-          "party": "R",
-          "pres_margin": "+11.0",
-          "next_election": 2026,
-          "candidate_id": 59139
-        },
-        {
           "district": "Essex-Caledonia",
           "district_name": "Essex-Caledonia",
           "seat_designator": null,
@@ -1009,42 +759,12 @@
         {
           "district": "Franklin-1",
           "district_name": "Franklin-1",
-          "seat_designator": "A",
-          "name": "Ashley Bartley",
-          "party": "R",
-          "pres_margin": "+7.8",
-          "next_election": 2026,
-          "candidate_id": 14270
-        },
-        {
-          "district": "Franklin-1",
-          "district_name": "Franklin-1",
           "seat_designator": "B",
           "name": "Carolyn Branagan",
           "party": "R",
           "pres_margin": "+7.8",
           "next_election": 2026,
           "candidate_id": 14270
-        },
-        {
-          "district": "Franklin-1",
-          "district_name": "Franklin-1",
-          "seat_designator": "B",
-          "name": "Carolyn Branagan",
-          "party": "R",
-          "pres_margin": "+7.8",
-          "next_election": 2026,
-          "candidate_id": 14269
-        },
-        {
-          "district": "Franklin-2",
-          "district_name": "Franklin-2",
-          "seat_designator": null,
-          "name": "Lynn Dickinson",
-          "party": "D",
-          "pres_margin": "+7.0",
-          "next_election": 2026,
-          "candidate_id": 55587
         },
         {
           "district": "Franklin-2",
@@ -1074,26 +794,6 @@
           "party": "R",
           "pres_margin": "-9.3",
           "next_election": 2026,
-          "candidate_id": 14339
-        },
-        {
-          "district": "Franklin-4",
-          "district_name": "Franklin-4",
-          "seat_designator": "A",
-          "name": "Tom Oliver",
-          "party": "R",
-          "pres_margin": "-9.3",
-          "next_election": 2026,
-          "candidate_id": 14338
-        },
-        {
-          "district": "Franklin-4",
-          "district_name": "Franklin-4",
-          "seat_designator": "B",
-          "name": "Matt Walker",
-          "party": "R",
-          "pres_margin": "-9.3",
-          "next_election": 2026,
           "candidate_id": 14338
         },
         {
@@ -1111,26 +811,6 @@
           "district_name": "Franklin-5",
           "seat_designator": "A",
           "name": "Lisa Hango",
-          "party": "R",
-          "pres_margin": "-20.5",
-          "next_election": 2026,
-          "candidate_id": 14330
-        },
-        {
-          "district": "Franklin-5",
-          "district_name": "Franklin-5",
-          "seat_designator": "A",
-          "name": "Lisa Hango",
-          "party": "R",
-          "pres_margin": "-20.5",
-          "next_election": 2026,
-          "candidate_id": 14329
-        },
-        {
-          "district": "Franklin-5",
-          "district_name": "Franklin-5",
-          "seat_designator": "B",
-          "name": "Wayne Laroche",
           "party": "R",
           "pres_margin": "-20.5",
           "next_election": 2026,
@@ -1167,16 +847,6 @@
           "candidate_id": 13064
         },
         {
-          "district": "Franklin-7",
-          "district_name": "Franklin-7",
-          "seat_designator": null,
-          "name": "Penny Demar",
-          "party": "R",
-          "pres_margin": "+0.7",
-          "next_election": 2026,
-          "candidate_id": 55613
-        },
-        {
           "district": "Franklin-8",
           "district_name": "Franklin-8",
           "seat_designator": null,
@@ -1190,16 +860,6 @@
           "district_name": "Grand Isle-Chittenden",
           "seat_designator": "A",
           "name": "Leland Morgan",
-          "party": "R",
-          "pres_margin": "+18.9",
-          "next_election": 2026,
-          "candidate_id": 14323
-        },
-        {
-          "district": "Grand Isle-Chittenden",
-          "district_name": "Grand Isle-Chittenden",
-          "seat_designator": "B",
-          "name": "Mike Morgan",
           "party": "R",
           "pres_margin": "+18.9",
           "next_election": 2026,
@@ -1246,16 +906,6 @@
           "candidate_id": 14291
         },
         {
-          "district": "Lamoille-2",
-          "district_name": "Lamoille-2",
-          "seat_designator": "B",
-          "name": "Dan Noyes",
-          "party": "R",
-          "pres_margin": "+22.0",
-          "next_election": 2026,
-          "candidate_id": 14290
-        },
-        {
           "district": "Lamoille-3",
           "district_name": "Lamoille-3",
           "seat_designator": null,
@@ -1273,16 +923,6 @@
           "party": "D",
           "pres_margin": "+43.0",
           "next_election": 2026,
-          "candidate_id": 14293
-        },
-        {
-          "district": "Lamoille-Washington",
-          "district_name": "Lamoille-Washington",
-          "seat_designator": "A",
-          "name": "Saudia Lamont",
-          "party": "D",
-          "pres_margin": "+43.0",
-          "next_election": 2026,
           "candidate_id": 14292
         },
         {
@@ -1294,16 +934,6 @@
           "pres_margin": "+43.0",
           "next_election": 2026,
           "candidate_id": 14293
-        },
-        {
-          "district": "Lamoille-Washington",
-          "district_name": "Lamoille-Washington",
-          "seat_designator": "B",
-          "name": "Dave Yacovone",
-          "party": "D",
-          "pres_margin": "+43.0",
-          "next_election": 2026,
-          "candidate_id": 14292
         },
         {
           "district": "Orange-1",
@@ -1463,16 +1093,6 @@
           "party": "R",
           "pres_margin": "-1.7",
           "next_election": 2026,
-          "candidate_id": 14295
-        },
-        {
-          "district": "Rutland-2",
-          "district_name": "Rutland-2",
-          "seat_designator": "A",
-          "name": "Dave Bosch",
-          "party": "R",
-          "pres_margin": "-1.7",
-          "next_election": 2026,
           "candidate_id": 14294
         },
         {
@@ -1484,26 +1104,6 @@
           "pres_margin": "-1.7",
           "next_election": 2026,
           "candidate_id": 14295
-        },
-        {
-          "district": "Rutland-2",
-          "district_name": "Rutland-2",
-          "seat_designator": "B",
-          "name": "Tom Burditt",
-          "party": "R",
-          "pres_margin": "-1.7",
-          "next_election": 2026,
-          "candidate_id": 14294
-        },
-        {
-          "district": "Rutland-3",
-          "district_name": "Rutland-3",
-          "seat_designator": null,
-          "name": "Zak Harvey",
-          "party": "R",
-          "pres_margin": "-3.3",
-          "next_election": 2026,
-          "candidate_id": 10539
         },
         {
           "district": "Rutland-3",
@@ -1623,26 +1223,6 @@
           "party": "D",
           "pres_margin": "+60.4",
           "next_election": 2026,
-          "candidate_id": 14283
-        },
-        {
-          "district": "Washington-2",
-          "district_name": "Washington-2",
-          "seat_designator": "A",
-          "name": "Dara Torre",
-          "party": "D",
-          "pres_margin": "+60.4",
-          "next_election": 2026,
-          "candidate_id": 14282
-        },
-        {
-          "district": "Washington-2",
-          "district_name": "Washington-2",
-          "seat_designator": "B",
-          "name": "Candice White",
-          "party": "D",
-          "pres_margin": "+60.4",
-          "next_election": 2026,
           "candidate_id": 14282
         },
         {
@@ -1668,16 +1248,6 @@
         {
           "district": "Washington-3",
           "district_name": "Washington-3",
-          "seat_designator": "A",
-          "name": "Michael Boutin",
-          "party": "D",
-          "pres_margin": "+25.7",
-          "next_election": 2026,
-          "candidate_id": 14343
-        },
-        {
-          "district": "Washington-3",
-          "district_name": "Washington-3",
           "seat_designator": "B",
           "name": "Teddy Waszazak",
           "party": "D",
@@ -1686,40 +1256,10 @@
           "candidate_id": 14343
         },
         {
-          "district": "Washington-3",
-          "district_name": "Washington-3",
-          "seat_designator": "B",
-          "name": "Teddy Waszazak",
-          "party": "D",
-          "pres_margin": "+25.7",
-          "next_election": 2026,
-          "candidate_id": 59141
-        },
-        {
           "district": "Washington-4",
           "district_name": "Washington-4",
           "seat_designator": "A",
           "name": "Conor Casey",
-          "party": "D",
-          "pres_margin": "+76.1",
-          "next_election": 2026,
-          "candidate_id": 14288
-        },
-        {
-          "district": "Washington-4",
-          "district_name": "Washington-4",
-          "seat_designator": "A",
-          "name": "Conor Casey",
-          "party": "D",
-          "pres_margin": "+76.1",
-          "next_election": 2026,
-          "candidate_id": 14289
-        },
-        {
-          "district": "Washington-4",
-          "district_name": "Washington-4",
-          "seat_designator": "B",
-          "name": "Kate McCann",
           "party": "D",
           "pres_margin": "+76.1",
           "next_election": 2026,
@@ -1776,16 +1316,6 @@
           "candidate_id": 14357
         },
         {
-          "district": "Washington-Chittenden",
-          "district_name": "Washington-Chittenden",
-          "seat_designator": "B",
-          "name": "Theresa Wood",
-          "party": "D",
-          "pres_margin": "+54.6",
-          "next_election": 2026,
-          "candidate_id": 14356
-        },
-        {
           "district": "Washington-Orange",
           "district_name": "Washington-Orange",
           "seat_designator": "A",
@@ -1830,26 +1360,6 @@
           "district_name": "Windham-3",
           "seat_designator": "A",
           "name": "Michelle Bos-Lun",
-          "party": "D",
-          "pres_margin": "+37.8",
-          "next_election": 2026,
-          "candidate_id": 14328
-        },
-        {
-          "district": "Windham-3",
-          "district_name": "Windham-3",
-          "seat_designator": "A",
-          "name": "Michelle Bos-Lun",
-          "party": "D",
-          "pres_margin": "+37.8",
-          "next_election": 2026,
-          "candidate_id": 14327
-        },
-        {
-          "district": "Windham-3",
-          "district_name": "Windham-3",
-          "seat_designator": "B",
-          "name": "Leslie Goldman",
           "party": "D",
           "pres_margin": "+37.8",
           "next_election": 2026,
@@ -1978,32 +1488,12 @@
         {
           "district": "Windsor-3",
           "district_name": "Windsor-3",
-          "seat_designator": "A",
-          "name": "Alice Emmons",
-          "party": "D",
-          "pres_margin": "+13.5",
-          "next_election": 2026,
-          "candidate_id": 14254
-        },
-        {
-          "district": "Windsor-3",
-          "district_name": "Windsor-3",
           "seat_designator": "B",
           "name": "Kristi Morris",
           "party": "D",
           "pres_margin": "+13.5",
           "next_election": 2026,
           "candidate_id": 14254
-        },
-        {
-          "district": "Windsor-3",
-          "district_name": "Windsor-3",
-          "seat_designator": "B",
-          "name": "Kristi Morris",
-          "party": "D",
-          "pres_margin": "+13.5",
-          "next_election": 2026,
-          "candidate_id": 14253
         },
         {
           "district": "Windsor-4",
@@ -2030,26 +1520,6 @@
           "district_name": "Windsor-6",
           "seat_designator": "A",
           "name": "Kevin Christie",
-          "party": "D",
-          "pres_margin": "+43.1",
-          "next_election": 2026,
-          "candidate_id": 14304
-        },
-        {
-          "district": "Windsor-6",
-          "district_name": "Windsor-6",
-          "seat_designator": "A",
-          "name": "Kevin Christie",
-          "party": "D",
-          "pres_margin": "+43.1",
-          "next_election": 2026,
-          "candidate_id": 14305
-        },
-        {
-          "district": "Windsor-6",
-          "district_name": "Windsor-6",
-          "seat_designator": "B",
-          "name": "Esme Cole",
           "party": "D",
           "pres_margin": "+43.1",
           "next_election": 2026,
@@ -2093,16 +1563,6 @@
           "party": "D",
           "pres_margin": "+62.0",
           "next_election": 2026,
-          "candidate_id": 14311
-        },
-        {
-          "district": "Windsor-Orange-2",
-          "district_name": "Windsor-Orange-2",
-          "seat_designator": "A",
-          "name": "Rebecca Holcombe",
-          "party": "D",
-          "pres_margin": "+62.0",
-          "next_election": 2026,
           "candidate_id": 14310
         },
         {
@@ -2128,15 +1588,15 @@
       ]
     },
     "Senate": {
-      "total": 33,
+      "total": 30,
       "composition": {
-        "D": 18,
-        "R": 15,
+        "D": 17,
+        "R": 13,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 22,
-      "seats_up_2026": 33,
+      "supermajority": 20,
+      "seats_up_2026": 30,
       "members": [
         {
           "district": "Addison",
@@ -2157,16 +1617,6 @@
           "pres_margin": "+36.2",
           "next_election": 2026,
           "candidate_id": 14353
-        },
-        {
-          "district": "Bennington",
-          "district_name": "Bennington",
-          "seat_designator": "A",
-          "name": "Seth Bongartz",
-          "party": "D",
-          "pres_margin": "+23.1",
-          "next_election": 2026,
-          "candidate_id": 14349
         },
         {
           "district": "Bennington",
@@ -2309,16 +1759,6 @@
           "candidate_id": 14347
         },
         {
-          "district": "Franklin",
-          "district_name": "Franklin",
-          "seat_designator": "B",
-          "name": "Bob Norris",
-          "party": "R",
-          "pres_margin": "+0.2",
-          "next_election": 2026,
-          "candidate_id": 59142
-        },
-        {
           "district": "Grand Isle",
           "district_name": "Grand Isle",
           "seat_designator": null,
@@ -2357,16 +1797,6 @@
           "pres_margin": "+5.0",
           "next_election": 2026,
           "candidate_id": 14279
-        },
-        {
-          "district": "Rutland",
-          "district_name": "Rutland",
-          "seat_designator": "A",
-          "name": "Brian Collamore",
-          "party": "R",
-          "pres_margin": "+5.0",
-          "next_election": 2026,
-          "candidate_id": 14281
         },
         {
           "district": "Rutland",

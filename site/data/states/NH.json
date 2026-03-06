@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-06T17:20:47.438150Z",
+  "generated_at": "2026-03-06T21:24:16.565981Z",
   "state": {
     "name": "New Hampshire",
     "abbr": "NH",
@@ -81,15 +81,15 @@
   ],
   "chambers": {
     "House": {
-      "total": 575,
+      "total": 401,
       "composition": {
-        "D": 257,
-        "R": 314,
+        "D": 179,
+        "R": 218,
         "Other": 0,
         "Vacant": 4
       },
-      "supermajority": 384,
-      "seats_up_2026": 575,
+      "supermajority": 268,
+      "seats_up_2026": 401,
       "members": [
         {
           "district": "Belknap-1",
@@ -118,8 +118,7 @@
           "name": null,
           "party": "R",
           "pres_margin": "-2.4",
-          "next_election": 2026,
-          "candidate_id": 14689
+          "next_election": 2026
         },
         {
           "district": "Belknap-3",
@@ -154,32 +153,12 @@
         {
           "district": "Belknap-5",
           "district_name": "Belknap-5",
-          "seat_designator": "A",
-          "name": "Steven Bogert",
-          "party": "R",
-          "pres_margin": "-9.1",
-          "next_election": 2026,
-          "candidate_id": 14695
-        },
-        {
-          "district": "Belknap-5",
-          "district_name": "Belknap-5",
           "seat_designator": "B",
           "name": "Mike Bordes",
           "party": "R",
           "pres_margin": "-9.1",
           "next_election": 2026,
           "candidate_id": 14693
-        },
-        {
-          "district": "Belknap-5",
-          "district_name": "Belknap-5",
-          "seat_designator": "B",
-          "name": "Mike Bordes",
-          "party": "R",
-          "pres_margin": "-9.1",
-          "next_election": 2026,
-          "candidate_id": 14692
         },
         {
           "district": "Belknap-5",
@@ -194,32 +173,12 @@
         {
           "district": "Belknap-5",
           "district_name": "Belknap-5",
-          "seat_designator": "C",
-          "name": "Charlie St. Clair",
-          "party": "R",
-          "pres_margin": "-9.1",
-          "next_election": 2026,
-          "candidate_id": 14695
-        },
-        {
-          "district": "Belknap-5",
-          "district_name": "Belknap-5",
           "seat_designator": "D",
           "name": "Sheri Minor",
           "party": "R",
           "pres_margin": "-9.1",
           "next_election": 2026,
           "candidate_id": 14695
-        },
-        {
-          "district": "Belknap-5",
-          "district_name": "Belknap-5",
-          "seat_designator": "D",
-          "name": "Sheri Minor",
-          "party": "R",
-          "pres_margin": "-9.1",
-          "next_election": 2026,
-          "candidate_id": 14693
         },
         {
           "district": "Belknap-6",
@@ -230,16 +189,6 @@
           "pres_margin": "-9.7",
           "next_election": 2026,
           "candidate_id": 14696
-        },
-        {
-          "district": "Belknap-6",
-          "district_name": "Belknap-6",
-          "seat_designator": "A",
-          "name": "Glen Aldrich",
-          "party": "R",
-          "pres_margin": "-9.7",
-          "next_election": 2026,
-          "candidate_id": 14699
         },
         {
           "district": "Belknap-6",
@@ -254,16 +203,6 @@
         {
           "district": "Belknap-6",
           "district_name": "Belknap-6",
-          "seat_designator": "B",
-          "name": "Harry Bean",
-          "party": "R",
-          "pres_margin": "-9.7",
-          "next_election": 2026,
-          "candidate_id": 14699
-        },
-        {
-          "district": "Belknap-6",
-          "district_name": "Belknap-6",
           "seat_designator": "C",
           "name": "Russell Dumais",
           "party": "R",
@@ -274,26 +213,6 @@
         {
           "district": "Belknap-6",
           "district_name": "Belknap-6",
-          "seat_designator": "C",
-          "name": "Russell Dumais",
-          "party": "R",
-          "pres_margin": "-9.7",
-          "next_election": 2026,
-          "candidate_id": 14696
-        },
-        {
-          "district": "Belknap-6",
-          "district_name": "Belknap-6",
-          "seat_designator": "D",
-          "name": "David Nagel",
-          "party": "R",
-          "pres_margin": "-9.7",
-          "next_election": 2026,
-          "candidate_id": 14696
-        },
-        {
-          "district": "Belknap-6",
-          "district_name": "Belknap-6",
           "seat_designator": "D",
           "name": "David Nagel",
           "party": "R",
@@ -306,26 +225,6 @@
           "district_name": "Belknap-7",
           "seat_designator": "A",
           "name": "Barbara Comtois",
-          "party": "R",
-          "pres_margin": "-24.2",
-          "next_election": 2026,
-          "candidate_id": 14700
-        },
-        {
-          "district": "Belknap-7",
-          "district_name": "Belknap-7",
-          "seat_designator": "A",
-          "name": "Barbara Comtois",
-          "party": "R",
-          "pres_margin": "-24.2",
-          "next_election": 2026,
-          "candidate_id": 14701
-        },
-        {
-          "district": "Belknap-7",
-          "district_name": "Belknap-7",
-          "seat_designator": "B",
-          "name": "Paul Terry",
           "party": "R",
           "pres_margin": "-24.2",
           "next_election": 2026,
@@ -359,16 +258,6 @@
           "party": "R",
           "pres_margin": "-18.2",
           "next_election": 2026,
-          "candidate_id": 14704
-        },
-        {
-          "district": "Belknap-8",
-          "district_name": "Belknap-8",
-          "seat_designator": "A",
-          "name": "Lisa Freeman",
-          "party": "R",
-          "pres_margin": "-18.2",
-          "next_election": 2026,
           "candidate_id": 14703
         },
         {
@@ -380,16 +269,6 @@
           "pres_margin": "-18.2",
           "next_election": 2026,
           "candidate_id": 14704
-        },
-        {
-          "district": "Belknap-8",
-          "district_name": "Belknap-8",
-          "seat_designator": "B",
-          "name": "Douglas Trottier",
-          "party": "R",
-          "pres_margin": "-18.2",
-          "next_election": 2026,
-          "candidate_id": 14703
         },
         {
           "district": "Carroll-1",
@@ -400,16 +279,6 @@
           "pres_margin": "+14.2",
           "next_election": 2026,
           "candidate_id": 14705
-        },
-        {
-          "district": "Carroll-1",
-          "district_name": "Carroll-1",
-          "seat_designator": "A",
-          "name": "Tom Buco",
-          "party": "D",
-          "pres_margin": "+14.2",
-          "next_election": 2026,
-          "candidate_id": 14707
         },
         {
           "district": "Carroll-1",
@@ -444,26 +313,6 @@
         {
           "district": "Carroll-2",
           "district_name": "Carroll-2",
-          "seat_designator": "A",
-          "name": "Anita Burroughs",
-          "party": "D",
-          "pres_margin": "+24.2",
-          "next_election": 2026,
-          "candidate_id": 14709
-        },
-        {
-          "district": "Carroll-2",
-          "district_name": "Carroll-2",
-          "seat_designator": "B",
-          "name": "Chris McAleer",
-          "party": "D",
-          "pres_margin": "+24.2",
-          "next_election": 2026,
-          "candidate_id": 14708
-        },
-        {
-          "district": "Carroll-2",
-          "district_name": "Carroll-2",
           "seat_designator": "B",
           "name": "Chris McAleer",
           "party": "D",
@@ -489,16 +338,6 @@
           "party": "R",
           "pres_margin": "-5.1",
           "next_election": 2026,
-          "candidate_id": 14710
-        },
-        {
-          "district": "Carroll-3",
-          "district_name": "Carroll-3",
-          "seat_designator": "B",
-          "name": "Joseph Hamblen",
-          "party": "R",
-          "pres_margin": "-5.1",
-          "next_election": 2026,
           "candidate_id": 14711
         },
         {
@@ -506,26 +345,6 @@
           "district_name": "Carroll-4",
           "seat_designator": "A",
           "name": "Lino Avellani",
-          "party": "R",
-          "pres_margin": "-20.8",
-          "next_election": 2026,
-          "candidate_id": 14712
-        },
-        {
-          "district": "Carroll-4",
-          "district_name": "Carroll-4",
-          "seat_designator": "A",
-          "name": "Lino Avellani",
-          "party": "R",
-          "pres_margin": "-20.8",
-          "next_election": 2026,
-          "candidate_id": 14713
-        },
-        {
-          "district": "Carroll-4",
-          "district_name": "Carroll-4",
-          "seat_designator": "B",
-          "name": "Mike Belcher",
           "party": "R",
           "pres_margin": "-20.8",
           "next_election": 2026,
@@ -559,16 +378,6 @@
           "party": "R",
           "pres_margin": "-2.4",
           "next_election": 2026,
-          "candidate_id": 59508
-        },
-        {
-          "district": "Carroll-6",
-          "district_name": "Carroll-6",
-          "seat_designator": "A",
-          "name": "John MacDonald",
-          "party": "R",
-          "pres_margin": "-2.4",
-          "next_election": 2026,
           "candidate_id": 14715
         },
         {
@@ -582,16 +391,6 @@
           "candidate_id": 14716
         },
         {
-          "district": "Carroll-6",
-          "district_name": "Carroll-6",
-          "seat_designator": "B",
-          "name": "Katy Peternel",
-          "party": "R",
-          "pres_margin": "-2.4",
-          "next_election": 2026,
-          "candidate_id": 59508
-        },
-        {
           "district": "Carroll-7",
           "district_name": "Carroll-7",
           "seat_designator": null,
@@ -599,16 +398,6 @@
           "party": null,
           "pres_margin": "-9.2",
           "next_election": 2026
-        },
-        {
-          "district": "Carroll-8",
-          "district_name": "Carroll-8",
-          "seat_designator": "A",
-          "name": "Richard Brown",
-          "party": "R",
-          "pres_margin": "-12.4",
-          "next_election": 2026,
-          "candidate_id": 14718
         },
         {
           "district": "Carroll-8",
@@ -637,18 +426,7 @@
           "name": null,
           "party": "D",
           "pres_margin": "+30.7",
-          "next_election": 2026,
-          "candidate_id": 41699
-        },
-        {
-          "district": "Cheshire-10",
-          "district_name": "Cheshire-10",
-          "seat_designator": "A",
-          "name": "Barrett Faulkner",
-          "party": "R",
-          "pres_margin": "-4.5",
-          "next_election": 2026,
-          "candidate_id": 14720
+          "next_election": 2026
         },
         {
           "district": "Cheshire-10",
@@ -669,16 +447,6 @@
           "pres_margin": "-4.5",
           "next_election": 2026,
           "candidate_id": 14720
-        },
-        {
-          "district": "Cheshire-10",
-          "district_name": "Cheshire-10",
-          "seat_designator": "B",
-          "name": "Sly Karasinski",
-          "party": "D",
-          "pres_margin": "-4.5",
-          "next_election": 2026,
-          "candidate_id": 14719
         },
         {
           "district": "Cheshire-11",
@@ -738,16 +506,6 @@
           "party": "D",
           "pres_margin": "+25.0",
           "next_election": 2026,
-          "candidate_id": 14725
-        },
-        {
-          "district": "Cheshire-15",
-          "district_name": "Cheshire-15",
-          "seat_designator": "B",
-          "name": "Samantha Jacobs",
-          "party": "D",
-          "pres_margin": "+25.0",
-          "next_election": 2026,
           "candidate_id": 14726
         },
         {
@@ -783,32 +541,12 @@
         {
           "district": "Cheshire-18",
           "district_name": "Cheshire-18",
-          "seat_designator": "A",
-          "name": "Rita Mattson",
-          "party": "R",
-          "pres_margin": "-9.8",
-          "next_election": 2026,
-          "candidate_id": 14730
-        },
-        {
-          "district": "Cheshire-18",
-          "district_name": "Cheshire-18",
           "seat_designator": "B",
           "name": "Jim Qualey",
           "party": "R",
           "pres_margin": "-9.8",
           "next_election": 2026,
           "candidate_id": 14730
-        },
-        {
-          "district": "Cheshire-18",
-          "district_name": "Cheshire-18",
-          "seat_designator": "B",
-          "name": "Jim Qualey",
-          "party": "R",
-          "pres_margin": "-9.8",
-          "next_election": 2026,
-          "candidate_id": 14729
         },
         {
           "district": "Cheshire-2",
@@ -855,26 +593,6 @@
           "district_name": "Cheshire-6",
           "seat_designator": "A",
           "name": "Paul Berch",
-          "party": "D",
-          "pres_margin": "+8.8",
-          "next_election": 2026,
-          "candidate_id": 14736
-        },
-        {
-          "district": "Cheshire-6",
-          "district_name": "Cheshire-6",
-          "seat_designator": "A",
-          "name": "Paul Berch",
-          "party": "D",
-          "pres_margin": "+8.8",
-          "next_election": 2026,
-          "candidate_id": 14735
-        },
-        {
-          "district": "Cheshire-6",
-          "district_name": "Cheshire-6",
-          "seat_designator": "B",
-          "name": "Cathryn A. Harvey",
           "party": "D",
           "pres_margin": "+8.8",
           "next_election": 2026,
@@ -941,16 +659,6 @@
           "candidate_id": 14741
         },
         {
-          "district": "Coos-1",
-          "district_name": "Coos-1",
-          "seat_designator": "B",
-          "name": "James Tierney",
-          "party": "R",
-          "pres_margin": "-16.1",
-          "next_election": 2026,
-          "candidate_id": 14740
-        },
-        {
           "district": "Coos-2",
           "district_name": "Coos-2",
           "seat_designator": null,
@@ -1003,16 +711,6 @@
         {
           "district": "Coos-5",
           "district_name": "Coos-5",
-          "seat_designator": "B",
-          "name": "Peter Morency",
-          "party": "R",
-          "pres_margin": "-3.9",
-          "next_election": 2026,
-          "candidate_id": 16554
-        },
-        {
-          "district": "Coos-5",
-          "district_name": "Coos-5",
           "seat_designator": "C",
           "name": "Lori Korzen",
           "party": "R",
@@ -1039,16 +737,6 @@
           "pres_margin": "-6.2",
           "next_election": 2026,
           "candidate_id": 14748
-        },
-        {
-          "district": "Grafton-1",
-          "district_name": "Grafton-1",
-          "seat_designator": "B",
-          "name": "Calvin Beaulier",
-          "party": "R",
-          "pres_margin": "-6.2",
-          "next_election": 2026,
-          "candidate_id": 14750
         },
         {
           "district": "Grafton-1",
@@ -1113,26 +801,6 @@
         {
           "district": "Grafton-12",
           "district_name": "Grafton-12",
-          "seat_designator": "B",
-          "name": "Russell Muirhead",
-          "party": "D",
-          "pres_margin": "+71.0",
-          "next_election": 2026,
-          "candidate_id": 14756
-        },
-        {
-          "district": "Grafton-12",
-          "district_name": "Grafton-12",
-          "seat_designator": "C",
-          "name": "Ellen Rockmore",
-          "party": "D",
-          "pres_margin": "+71.0",
-          "next_election": 2026,
-          "candidate_id": 14753
-        },
-        {
-          "district": "Grafton-12",
-          "district_name": "Grafton-12",
           "seat_designator": "C",
           "name": "Ellen Rockmore",
           "party": "D",
@@ -1149,16 +817,6 @@
           "pres_margin": "+71.0",
           "next_election": 2026,
           "candidate_id": 14756
-        },
-        {
-          "district": "Grafton-12",
-          "district_name": "Grafton-12",
-          "seat_designator": "D",
-          "name": "Terry Spahr",
-          "party": "D",
-          "pres_margin": "+71.0",
-          "next_election": 2026,
-          "candidate_id": 14754
         },
         {
           "district": "Grafton-13",
@@ -1258,16 +916,6 @@
           "party": "R",
           "pres_margin": "-19.6",
           "next_election": 2026,
-          "candidate_id": 14767
-        },
-        {
-          "district": "Grafton-5",
-          "district_name": "Grafton-5",
-          "seat_designator": "A",
-          "name": "Marie Louise Bjelobrk",
-          "party": "R",
-          "pres_margin": "-19.6",
-          "next_election": 2026,
           "candidate_id": 14766
         },
         {
@@ -1313,42 +961,12 @@
         {
           "district": "Grafton-8",
           "district_name": "Grafton-8",
-          "seat_designator": "A",
-          "name": "Bill Bolton",
-          "party": "D",
-          "pres_margin": "+15.6",
-          "next_election": 2026,
-          "candidate_id": 14772
-        },
-        {
-          "district": "Grafton-8",
-          "district_name": "Grafton-8",
           "seat_designator": "B",
           "name": "Sallie Fellows",
           "party": "D",
           "pres_margin": "+15.6",
           "next_election": 2026,
           "candidate_id": 14771
-        },
-        {
-          "district": "Grafton-8",
-          "district_name": "Grafton-8",
-          "seat_designator": "B",
-          "name": "Sallie Fellows",
-          "party": "D",
-          "pres_margin": "+15.6",
-          "next_election": 2026,
-          "candidate_id": 14772
-        },
-        {
-          "district": "Grafton-8",
-          "district_name": "Grafton-8",
-          "seat_designator": "C",
-          "name": "Peter Lovett",
-          "party": "D",
-          "pres_margin": "+15.6",
-          "next_election": 2026,
-          "candidate_id": 14770
         },
         {
           "district": "Grafton-8",
@@ -1383,16 +1001,6 @@
         {
           "district": "Hillsborough-1",
           "district_name": "Hillsborough-1",
-          "seat_designator": "A",
-          "name": "Tim Mannion",
-          "party": "R",
-          "pres_margin": "-25.2",
-          "next_election": 2026,
-          "candidate_id": 14776
-        },
-        {
-          "district": "Hillsborough-1",
-          "district_name": "Hillsborough-1",
           "seat_designator": "B",
           "name": "Tom Mannion",
           "party": "R",
@@ -1403,38 +1011,8 @@
         {
           "district": "Hillsborough-1",
           "district_name": "Hillsborough-1",
-          "seat_designator": "B",
-          "name": "Tom Mannion",
-          "party": "R",
-          "pres_margin": "-25.2",
-          "next_election": 2026,
-          "candidate_id": 14774
-        },
-        {
-          "district": "Hillsborough-1",
-          "district_name": "Hillsborough-1",
           "seat_designator": "C",
           "name": "Sandra Panek",
-          "party": "R",
-          "pres_margin": "-25.2",
-          "next_election": 2026,
-          "candidate_id": 14776
-        },
-        {
-          "district": "Hillsborough-1",
-          "district_name": "Hillsborough-1",
-          "seat_designator": "C",
-          "name": "Sandra Panek",
-          "party": "R",
-          "pres_margin": "-25.2",
-          "next_election": 2026,
-          "candidate_id": 14775
-        },
-        {
-          "district": "Hillsborough-1",
-          "district_name": "Hillsborough-1",
-          "seat_designator": "D",
-          "name": "Jeffrey Tenczar",
           "party": "R",
           "pres_margin": "-25.2",
           "next_election": 2026,
@@ -1465,16 +1043,6 @@
           "district_name": "Hillsborough-10",
           "seat_designator": "B",
           "name": "Martin Jack",
-          "party": "D",
-          "pres_margin": "+11.9",
-          "next_election": 2026,
-          "candidate_id": 14779
-        },
-        {
-          "district": "Hillsborough-10",
-          "district_name": "Hillsborough-10",
-          "seat_designator": "C",
-          "name": "Bill Ohm",
           "party": "D",
           "pres_margin": "+11.9",
           "next_election": 2026,
@@ -1521,16 +1089,6 @@
           "candidate_id": 14783
         },
         {
-          "district": "Hillsborough-11",
-          "district_name": "Hillsborough-11",
-          "seat_designator": "C",
-          "name": "Laura Telerski",
-          "party": "D",
-          "pres_margin": "+19.7",
-          "next_election": 2026,
-          "candidate_id": 14781
-        },
-        {
           "district": "Hillsborough-12",
           "district_name": "Hillsborough-12",
           "seat_designator": "A",
@@ -1539,26 +1097,6 @@
           "pres_margin": "+2.3",
           "next_election": 2026,
           "candidate_id": 14784
-        },
-        {
-          "district": "Hillsborough-12",
-          "district_name": "Hillsborough-12",
-          "seat_designator": "A",
-          "name": "Bill Boyd",
-          "party": "D",
-          "pres_margin": "+2.3",
-          "next_election": 2026,
-          "candidate_id": 14791
-        },
-        {
-          "district": "Hillsborough-12",
-          "district_name": "Hillsborough-12",
-          "seat_designator": "B",
-          "name": "Julie Miles",
-          "party": "D",
-          "pres_margin": "+2.3",
-          "next_election": 2026,
-          "candidate_id": 14787
         },
         {
           "district": "Hillsborough-12",
@@ -1578,16 +1116,6 @@
           "party": "D",
           "pres_margin": "+2.3",
           "next_election": 2026,
-          "candidate_id": 14787
-        },
-        {
-          "district": "Hillsborough-12",
-          "district_name": "Hillsborough-12",
-          "seat_designator": "C",
-          "name": "Maureen Mooney",
-          "party": "D",
-          "pres_margin": "+2.3",
-          "next_election": 2026,
           "candidate_id": 14786
         },
         {
@@ -1596,26 +1124,6 @@
           "seat_designator": "D",
           "name": "Nancy Murphy",
           "party": "R",
-          "pres_margin": "+2.3",
-          "next_election": 2026,
-          "candidate_id": 14787
-        },
-        {
-          "district": "Hillsborough-12",
-          "district_name": "Hillsborough-12",
-          "seat_designator": "D",
-          "name": "Nancy Murphy",
-          "party": "R",
-          "pres_margin": "+2.3",
-          "next_election": 2026,
-          "candidate_id": 14789
-        },
-        {
-          "district": "Hillsborough-12",
-          "district_name": "Hillsborough-12",
-          "seat_designator": "E",
-          "name": "Jeanine Notter",
-          "party": "D",
           "pres_margin": "+2.3",
           "next_election": 2026,
           "candidate_id": 14787
@@ -1629,16 +1137,6 @@
           "pres_margin": "+2.3",
           "next_election": 2026,
           "candidate_id": 14788
-        },
-        {
-          "district": "Hillsborough-12",
-          "district_name": "Hillsborough-12",
-          "seat_designator": "F",
-          "name": "Adam Presa",
-          "party": "R",
-          "pres_margin": "+2.3",
-          "next_election": 2026,
-          "candidate_id": 14786
         },
         {
           "district": "Hillsborough-12",
@@ -1663,42 +1161,12 @@
         {
           "district": "Hillsborough-12",
           "district_name": "Hillsborough-12",
-          "seat_designator": "G",
-          "name": "Rosemarie Rung",
-          "party": "R",
-          "pres_margin": "+2.3",
-          "next_election": 2026,
-          "candidate_id": 14785
-        },
-        {
-          "district": "Hillsborough-12",
-          "district_name": "Hillsborough-12",
           "seat_designator": "H",
           "name": "Wendy Thomas",
           "party": "D",
           "pres_margin": "+2.3",
           "next_election": 2026,
           "candidate_id": 14791
-        },
-        {
-          "district": "Hillsborough-12",
-          "district_name": "Hillsborough-12",
-          "seat_designator": "H",
-          "name": "Wendy Thomas",
-          "party": "D",
-          "pres_margin": "+2.3",
-          "next_election": 2026,
-          "candidate_id": 14787
-        },
-        {
-          "district": "Hillsborough-13",
-          "district_name": "Hillsborough-13",
-          "seat_designator": "A",
-          "name": "Dillon Dumont",
-          "party": "R",
-          "pres_margin": "-10.9",
-          "next_election": 2026,
-          "candidate_id": 14795
         },
         {
           "district": "Hillsborough-13",
@@ -1718,27 +1186,7 @@
           "party": "R",
           "pres_margin": "-10.9",
           "next_election": 2026,
-          "candidate_id": 14795
-        },
-        {
-          "district": "Hillsborough-13",
-          "district_name": "Hillsborough-13",
-          "seat_designator": "B",
-          "name": "Cathy Kenny",
-          "party": "R",
-          "pres_margin": "-10.9",
-          "next_election": 2026,
           "candidate_id": 14793
-        },
-        {
-          "district": "Hillsborough-13",
-          "district_name": "Hillsborough-13",
-          "seat_designator": "C",
-          "name": "Andrew Prout",
-          "party": "R",
-          "pres_margin": "-10.9",
-          "next_election": 2026,
-          "candidate_id": 14797
         },
         {
           "district": "Hillsborough-13",
@@ -1759,16 +1207,6 @@
           "pres_margin": "-10.9",
           "next_election": 2026,
           "candidate_id": 14795
-        },
-        {
-          "district": "Hillsborough-13",
-          "district_name": "Hillsborough-13",
-          "seat_designator": "D",
-          "name": "Jeremy Slottje",
-          "party": "R",
-          "pres_margin": "-10.9",
-          "next_election": 2026,
-          "candidate_id": 14793
         },
         {
           "district": "Hillsborough-13",
@@ -1779,26 +1217,6 @@
           "pres_margin": "-10.9",
           "next_election": 2026,
           "candidate_id": 14796
-        },
-        {
-          "district": "Hillsborough-13",
-          "district_name": "Hillsborough-13",
-          "seat_designator": "E",
-          "name": "Jordan Ulery",
-          "party": "R",
-          "pres_margin": "-10.9",
-          "next_election": 2026,
-          "candidate_id": 14795
-        },
-        {
-          "district": "Hillsborough-13",
-          "district_name": "Hillsborough-13",
-          "seat_designator": "F",
-          "name": "Robert Wherry",
-          "party": "R",
-          "pres_margin": "-10.9",
-          "next_election": 2026,
-          "candidate_id": 14794
         },
         {
           "district": "Hillsborough-13",
@@ -1829,26 +1247,6 @@
           "pres_margin": "-10.6",
           "next_election": 2026,
           "candidate_id": 14799
-        },
-        {
-          "district": "Hillsborough-14",
-          "district_name": "Hillsborough-14",
-          "seat_designator": "B",
-          "name": "Ray Peeples",
-          "party": "R",
-          "pres_margin": "-10.6",
-          "next_election": 2026,
-          "candidate_id": 14798
-        },
-        {
-          "district": "Hillsborough-15",
-          "district_name": "Hillsborough-15",
-          "seat_designator": "A",
-          "name": "Mark McLean",
-          "party": "R",
-          "pres_margin": "-3.7",
-          "next_election": 2026,
-          "candidate_id": 14801
         },
         {
           "district": "Hillsborough-15",
@@ -1908,16 +1306,6 @@
           "party": "D",
           "pres_margin": "+15.1",
           "next_election": 2026,
-          "candidate_id": 14804
-        },
-        {
-          "district": "Hillsborough-17",
-          "district_name": "Hillsborough-17",
-          "seat_designator": "B",
-          "name": "David Preece",
-          "party": "D",
-          "pres_margin": "+15.1",
-          "next_election": 2026,
           "candidate_id": 14805
         },
         {
@@ -1929,16 +1317,6 @@
           "pres_margin": "+9.7",
           "next_election": 2026,
           "candidate_id": 14806
-        },
-        {
-          "district": "Hillsborough-18",
-          "district_name": "Hillsborough-18",
-          "seat_designator": "A",
-          "name": "Jessica Grill",
-          "party": "R",
-          "pres_margin": "+9.7",
-          "next_election": 2026,
-          "candidate_id": 14807
         },
         {
           "district": "Hillsborough-18",
@@ -1963,42 +1341,12 @@
         {
           "district": "Hillsborough-19",
           "district_name": "Hillsborough-19",
-          "seat_designator": "A",
-          "name": "Suzanne L. Chretien",
-          "party": "R",
-          "pres_margin": "+2.8",
-          "next_election": 2026,
-          "candidate_id": 14809
-        },
-        {
-          "district": "Hillsborough-19",
-          "district_name": "Hillsborough-19",
-          "seat_designator": "B",
-          "name": "Matt Drew",
-          "party": "D",
-          "pres_margin": "+2.8",
-          "next_election": 2026,
-          "candidate_id": 14808
-        },
-        {
-          "district": "Hillsborough-19",
-          "district_name": "Hillsborough-19",
           "seat_designator": "B",
           "name": "Matt Drew",
           "party": "D",
           "pres_margin": "+2.8",
           "next_election": 2026,
           "candidate_id": 14809
-        },
-        {
-          "district": "Hillsborough-2",
-          "district_name": "Hillsborough-2",
-          "seat_designator": "A",
-          "name": "Loren Foxx",
-          "party": "R",
-          "pres_margin": "+3.3",
-          "next_election": 2026,
-          "candidate_id": 14812
         },
         {
           "district": "Hillsborough-2",
@@ -2028,16 +1376,6 @@
           "party": "R",
           "pres_margin": "+3.3",
           "next_election": 2026,
-          "candidate_id": 14813
-        },
-        {
-          "district": "Hillsborough-2",
-          "district_name": "Hillsborough-2",
-          "seat_designator": "C",
-          "name": "Linda Gould",
-          "party": "R",
-          "pres_margin": "+3.3",
-          "next_election": 2026,
           "candidate_id": 14812
         },
         {
@@ -2048,16 +1386,6 @@
           "party": "R",
           "pres_margin": "+3.3",
           "next_election": 2026,
-          "candidate_id": 14816
-        },
-        {
-          "district": "Hillsborough-2",
-          "district_name": "Hillsborough-2",
-          "seat_designator": "D",
-          "name": "Brian Labrie",
-          "party": "R",
-          "pres_margin": "+3.3",
-          "next_election": 2026,
           "candidate_id": 14813
         },
         {
@@ -2066,26 +1394,6 @@
           "seat_designator": "E",
           "name": "Kristin Noble",
           "party": "D",
-          "pres_margin": "+3.3",
-          "next_election": 2026,
-          "candidate_id": 14814
-        },
-        {
-          "district": "Hillsborough-2",
-          "district_name": "Hillsborough-2",
-          "seat_designator": "E",
-          "name": "Kristin Noble",
-          "party": "D",
-          "pres_margin": "+3.3",
-          "next_election": 2026,
-          "candidate_id": 14810
-        },
-        {
-          "district": "Hillsborough-2",
-          "district_name": "Hillsborough-2",
-          "seat_designator": "F",
-          "name": "Catherine Rombeau",
-          "party": "R",
           "pres_margin": "+3.3",
           "next_election": 2026,
           "candidate_id": 14814
@@ -2128,16 +1436,6 @@
           "party": "R",
           "pres_margin": "+0.6",
           "next_election": 2026,
-          "candidate_id": 14817
-        },
-        {
-          "district": "Hillsborough-20",
-          "district_name": "Hillsborough-20",
-          "seat_designator": "B",
-          "name": "Alissandra Murray",
-          "party": "R",
-          "pres_margin": "+0.6",
-          "next_election": 2026,
           "candidate_id": 14818
         },
         {
@@ -2145,16 +1443,6 @@
           "district_name": "Hillsborough-21",
           "seat_designator": "A",
           "name": "Christine Seibert",
-          "party": "D",
-          "pres_margin": "+20.2",
-          "next_election": 2026,
-          "candidate_id": 14819
-        },
-        {
-          "district": "Hillsborough-21",
-          "district_name": "Hillsborough-21",
-          "seat_designator": "B",
-          "name": "Matt Wilhelm",
           "party": "D",
           "pres_margin": "+20.2",
           "next_election": 2026,
@@ -2198,26 +1486,6 @@
           "party": "D",
           "pres_margin": "+22.0",
           "next_election": 2026,
-          "candidate_id": 14824
-        },
-        {
-          "district": "Hillsborough-23",
-          "district_name": "Hillsborough-23",
-          "seat_designator": "A",
-          "name": "Mary Ngwanda Georges",
-          "party": "D",
-          "pres_margin": "+22.0",
-          "next_election": 2026,
-          "candidate_id": 14823
-        },
-        {
-          "district": "Hillsborough-23",
-          "district_name": "Hillsborough-23",
-          "seat_designator": "B",
-          "name": "Jean Jeudy",
-          "party": "D",
-          "pres_margin": "+22.0",
-          "next_election": 2026,
           "candidate_id": 14823
         },
         {
@@ -2243,32 +1511,11 @@
         {
           "district": "Hillsborough-24",
           "district_name": "Hillsborough-24",
-          "seat_designator": "A",
-          "name": "Christopher Herbert",
-          "party": "D",
-          "pres_margin": "+8.8",
-          "next_election": 2026,
-          "candidate_id": 42201
-        },
-        {
-          "district": "Hillsborough-24",
-          "district_name": "Hillsborough-24",
           "seat_designator": "B",
           "name": null,
           "party": "D",
           "pres_margin": "+8.8",
-          "next_election": 2026,
-          "candidate_id": 42201
-        },
-        {
-          "district": "Hillsborough-25",
-          "district_name": "Hillsborough-25",
-          "seat_designator": "A",
-          "name": "Kathleen Paquette",
-          "party": "D",
-          "pres_margin": "+6.7",
-          "next_election": 2026,
-          "candidate_id": 14827
+          "next_election": 2026
         },
         {
           "district": "Hillsborough-25",
@@ -2299,16 +1546,6 @@
           "pres_margin": "+5.9",
           "next_election": 2026,
           "candidate_id": 14828
-        },
-        {
-          "district": "Hillsborough-26",
-          "district_name": "Hillsborough-26",
-          "seat_designator": "A",
-          "name": "Brian Cole",
-          "party": "D",
-          "pres_margin": "+5.9",
-          "next_election": 2026,
-          "candidate_id": 14829
         },
         {
           "district": "Hillsborough-26",
@@ -2371,26 +1608,6 @@
           "candidate_id": 14831
         },
         {
-          "district": "Hillsborough-28",
-          "district_name": "Hillsborough-28",
-          "seat_designator": null,
-          "name": "Travis Corcoran",
-          "party": "R",
-          "pres_margin": "-21.9",
-          "next_election": 2026,
-          "candidate_id": 15036
-        },
-        {
-          "district": "Hillsborough-29",
-          "district_name": "Hillsborough-29",
-          "seat_designator": "A",
-          "name": "Henry Giasson",
-          "party": "R",
-          "pres_margin": "-2.9",
-          "next_election": 2026,
-          "candidate_id": 14834
-        },
-        {
           "district": "Hillsborough-29",
           "district_name": "Hillsborough-29",
           "seat_designator": "A",
@@ -2423,22 +1640,11 @@
         {
           "district": "Hillsborough-29",
           "district_name": "Hillsborough-29",
-          "seat_designator": "C",
-          "name": "Sherri Reinfurt",
-          "party": "R",
-          "pres_margin": "-2.9",
-          "next_election": 2026,
-          "candidate_id": 42466
-        },
-        {
-          "district": "Hillsborough-29",
-          "district_name": "Hillsborough-29",
           "seat_designator": "D",
           "name": null,
           "party": "R",
           "pres_margin": "-2.9",
-          "next_election": 2026,
-          "candidate_id": 42466
+          "next_election": 2026
         },
         {
           "district": "Hillsborough-29",
@@ -2458,16 +1664,6 @@
           "party": "D",
           "pres_margin": "+15.4",
           "next_election": 2026,
-          "candidate_id": 14836
-        },
-        {
-          "district": "Hillsborough-3",
-          "district_name": "Hillsborough-3",
-          "seat_designator": "A",
-          "name": "Paige Beauchemin",
-          "party": "D",
-          "pres_margin": "+15.4",
-          "next_election": 2026,
           "candidate_id": 14835
         },
         {
@@ -2483,32 +1679,12 @@
         {
           "district": "Hillsborough-3",
           "district_name": "Hillsborough-3",
-          "seat_designator": "B",
-          "name": "Fred Davis",
-          "party": "D",
-          "pres_margin": "+15.4",
-          "next_election": 2026,
-          "candidate_id": 14837
-        },
-        {
-          "district": "Hillsborough-3",
-          "district_name": "Hillsborough-3",
           "seat_designator": "C",
           "name": "Marc Plamondon",
           "party": "D",
           "pres_margin": "+15.4",
           "next_election": 2026,
           "candidate_id": 14837
-        },
-        {
-          "district": "Hillsborough-3",
-          "district_name": "Hillsborough-3",
-          "seat_designator": "C",
-          "name": "Marc Plamondon",
-          "party": "D",
-          "pres_margin": "+15.4",
-          "next_election": 2026,
-          "candidate_id": 14835
         },
         {
           "district": "Hillsborough-30",
@@ -2525,26 +1701,6 @@
           "district_name": "Hillsborough-30",
           "seat_designator": "B",
           "name": "Jim Creighton",
-          "party": "R",
-          "pres_margin": "-11.8",
-          "next_election": 2026,
-          "candidate_id": 14838
-        },
-        {
-          "district": "Hillsborough-30",
-          "district_name": "Hillsborough-30",
-          "seat_designator": "B",
-          "name": "Jim Creighton",
-          "party": "R",
-          "pres_margin": "-11.8",
-          "next_election": 2026,
-          "candidate_id": 14839
-        },
-        {
-          "district": "Hillsborough-30",
-          "district_name": "Hillsborough-30",
-          "seat_designator": "C",
-          "name": "Jim Fedolfi",
           "party": "R",
           "pres_margin": "-11.8",
           "next_election": 2026,
@@ -2583,42 +1739,12 @@
         {
           "district": "Hillsborough-32",
           "district_name": "Hillsborough-32",
-          "seat_designator": "A",
-          "name": "Diane Kelley",
-          "party": "R",
-          "pres_margin": "-20.3",
-          "next_election": 2026,
-          "candidate_id": 14843
-        },
-        {
-          "district": "Hillsborough-32",
-          "district_name": "Hillsborough-32",
-          "seat_designator": "B",
-          "name": "Jim Kofalt",
-          "party": "R",
-          "pres_margin": "-20.3",
-          "next_election": 2026,
-          "candidate_id": 14842
-        },
-        {
-          "district": "Hillsborough-32",
-          "district_name": "Hillsborough-32",
           "seat_designator": "B",
           "name": "Jim Kofalt",
           "party": "R",
           "pres_margin": "-20.3",
           "next_election": 2026,
           "candidate_id": 14843
-        },
-        {
-          "district": "Hillsborough-33",
-          "district_name": "Hillsborough-33",
-          "seat_designator": "A",
-          "name": "Peter Leishman",
-          "party": "D",
-          "pres_margin": "+36.6",
-          "next_election": 2026,
-          "candidate_id": 14845
         },
         {
           "district": "Hillsborough-33",
@@ -2653,38 +1779,8 @@
         {
           "district": "Hillsborough-34",
           "district_name": "Hillsborough-34",
-          "seat_designator": "A",
-          "name": "Stephanie Grund",
-          "party": "D",
-          "pres_margin": "+16.3",
-          "next_election": 2026,
-          "candidate_id": 14848
-        },
-        {
-          "district": "Hillsborough-34",
-          "district_name": "Hillsborough-34",
           "seat_designator": "B",
           "name": "Daniel LeClerc",
-          "party": "D",
-          "pres_margin": "+16.3",
-          "next_election": 2026,
-          "candidate_id": 14848
-        },
-        {
-          "district": "Hillsborough-34",
-          "district_name": "Hillsborough-34",
-          "seat_designator": "B",
-          "name": "Daniel LeClerc",
-          "party": "D",
-          "pres_margin": "+16.3",
-          "next_election": 2026,
-          "candidate_id": 14847
-        },
-        {
-          "district": "Hillsborough-34",
-          "district_name": "Hillsborough-34",
-          "seat_designator": "C",
-          "name": "Daniel Veilleux",
           "party": "D",
           "pres_margin": "+16.3",
           "next_election": 2026,
@@ -2739,16 +1835,6 @@
           "pres_margin": "-3.6",
           "next_election": 2026,
           "candidate_id": 14852
-        },
-        {
-          "district": "Hillsborough-36",
-          "district_name": "Hillsborough-36",
-          "seat_designator": "B",
-          "name": "John W. Suiter",
-          "party": "R",
-          "pres_margin": "-3.6",
-          "next_election": 2026,
-          "candidate_id": 14851
         },
         {
           "district": "Hillsborough-36",
@@ -2837,26 +1923,6 @@
           "party": "R",
           "pres_margin": "-1.3",
           "next_election": 2026,
-          "candidate_id": 14857
-        },
-        {
-          "district": "Hillsborough-39",
-          "district_name": "Hillsborough-39",
-          "seat_designator": "A",
-          "name": "Jonathan Morton",
-          "party": "R",
-          "pres_margin": "-1.3",
-          "next_election": 2026,
-          "candidate_id": 14856
-        },
-        {
-          "district": "Hillsborough-39",
-          "district_name": "Hillsborough-39",
-          "seat_designator": "B",
-          "name": "Mark Warden",
-          "party": "R",
-          "pres_margin": "-1.3",
-          "next_election": 2026,
           "candidate_id": 14856
         },
         {
@@ -2874,16 +1940,6 @@
           "district_name": "Hillsborough-4",
           "seat_designator": "A",
           "name": "Ray Newman",
-          "party": "D",
-          "pres_margin": "+15.0",
-          "next_election": 2026,
-          "candidate_id": 14858
-        },
-        {
-          "district": "Hillsborough-4",
-          "district_name": "Hillsborough-4",
-          "seat_designator": "B",
-          "name": "Sue Newman",
           "party": "D",
           "pres_margin": "+15.0",
           "next_election": 2026,
@@ -2922,16 +1978,6 @@
         {
           "district": "Hillsborough-40",
           "district_name": "Hillsborough-40",
-          "seat_designator": "A",
-          "name": "Suraj Budathoki",
-          "party": "D",
-          "pres_margin": "+12.4",
-          "next_election": 2026,
-          "candidate_id": 15039
-        },
-        {
-          "district": "Hillsborough-40",
-          "district_name": "Hillsborough-40",
           "seat_designator": "B",
           "name": "Erin Kerwin",
           "party": "D",
@@ -2940,30 +1986,10 @@
           "candidate_id": 14862
         },
         {
-          "district": "Hillsborough-40",
-          "district_name": "Hillsborough-40",
-          "seat_designator": "B",
-          "name": "Erin Kerwin",
-          "party": "D",
-          "pres_margin": "+12.4",
-          "next_election": 2026,
-          "candidate_id": 14861
-        },
-        {
           "district": "Hillsborough-41",
           "district_name": "Hillsborough-41",
           "seat_designator": "A",
           "name": "Lily M. Foss",
-          "party": "D",
-          "pres_margin": "+9.9",
-          "next_election": 2026,
-          "candidate_id": 14863
-        },
-        {
-          "district": "Hillsborough-41",
-          "district_name": "Hillsborough-41",
-          "seat_designator": "B",
-          "name": "Tim Hartnett",
           "party": "D",
           "pres_margin": "+9.9",
           "next_election": 2026,
@@ -2997,16 +2023,6 @@
           "party": "R",
           "pres_margin": "+5.4",
           "next_election": 2026,
-          "candidate_id": 15044
-        },
-        {
-          "district": "Hillsborough-43",
-          "district_name": "Hillsborough-43",
-          "seat_designator": "A",
-          "name": "Gary Daniels",
-          "party": "R",
-          "pres_margin": "+5.4",
-          "next_election": 2026,
           "candidate_id": 14866
         },
         {
@@ -3018,16 +2034,6 @@
           "pres_margin": "+5.4",
           "next_election": 2026,
           "candidate_id": 14867
-        },
-        {
-          "district": "Hillsborough-44",
-          "district_name": "Hillsborough-44",
-          "seat_designator": null,
-          "name": "Ross Berry",
-          "party": "R",
-          "pres_margin": "-9.7",
-          "next_election": 2026,
-          "candidate_id": 15045
         },
         {
           "district": "Hillsborough-44",
@@ -3066,16 +2072,6 @@
           "party": "D",
           "pres_margin": "+11.6",
           "next_election": 2026,
-          "candidate_id": 14872
-        },
-        {
-          "district": "Hillsborough-5",
-          "district_name": "Hillsborough-5",
-          "seat_designator": "A",
-          "name": "Susan Elberger",
-          "party": "D",
-          "pres_margin": "+11.6",
-          "next_election": 2026,
           "candidate_id": 14870
         },
         {
@@ -3091,26 +2087,6 @@
         {
           "district": "Hillsborough-5",
           "district_name": "Hillsborough-5",
-          "seat_designator": "B",
-          "name": "Heather Raymond",
-          "party": "D",
-          "pres_margin": "+11.6",
-          "next_election": 2026,
-          "candidate_id": 14870
-        },
-        {
-          "district": "Hillsborough-5",
-          "district_name": "Hillsborough-5",
-          "seat_designator": "C",
-          "name": "Dale Swanson",
-          "party": "D",
-          "pres_margin": "+11.6",
-          "next_election": 2026,
-          "candidate_id": 14870
-        },
-        {
-          "district": "Hillsborough-5",
-          "district_name": "Hillsborough-5",
           "seat_designator": "C",
           "name": "Dale Swanson",
           "party": "D",
@@ -3123,26 +2099,6 @@
           "district_name": "Hillsborough-6",
           "seat_designator": "A",
           "name": "Lee Ann Kluger",
-          "party": "D",
-          "pres_margin": "+15.4",
-          "next_election": 2026,
-          "candidate_id": 14873
-        },
-        {
-          "district": "Hillsborough-6",
-          "district_name": "Hillsborough-6",
-          "seat_designator": "A",
-          "name": "Lee Ann Kluger",
-          "party": "D",
-          "pres_margin": "+15.4",
-          "next_election": 2026,
-          "candidate_id": 14874
-        },
-        {
-          "district": "Hillsborough-6",
-          "district_name": "Hillsborough-6",
-          "seat_designator": "B",
-          "name": "Carry Spier",
           "party": "D",
           "pres_margin": "+15.4",
           "next_election": 2026,
@@ -3169,26 +2125,6 @@
           "candidate_id": 14875
         },
         {
-          "district": "Hillsborough-6",
-          "district_name": "Hillsborough-6",
-          "seat_designator": "C",
-          "name": "Suzanne Vail",
-          "party": "D",
-          "pres_margin": "+15.4",
-          "next_election": 2026,
-          "candidate_id": 14873
-        },
-        {
-          "district": "Hillsborough-7",
-          "district_name": "Hillsborough-7",
-          "seat_designator": "A",
-          "name": "Alicia Gregg",
-          "party": "D",
-          "pres_margin": "+9.0",
-          "next_election": 2026,
-          "candidate_id": 14878
-        },
-        {
           "district": "Hillsborough-7",
           "district_name": "Hillsborough-7",
           "seat_designator": "A",
@@ -3197,16 +2133,6 @@
           "pres_margin": "+9.0",
           "next_election": 2026,
           "candidate_id": 14876
-        },
-        {
-          "district": "Hillsborough-7",
-          "district_name": "Hillsborough-7",
-          "seat_designator": "B",
-          "name": "Louis Juris",
-          "party": "D",
-          "pres_margin": "+9.0",
-          "next_election": 2026,
-          "candidate_id": 14878
         },
         {
           "district": "Hillsborough-7",
@@ -3226,27 +2152,7 @@
           "party": "D",
           "pres_margin": "+9.0",
           "next_election": 2026,
-          "candidate_id": 14876
-        },
-        {
-          "district": "Hillsborough-7",
-          "district_name": "Hillsborough-7",
-          "seat_designator": "C",
-          "name": "Catherine Sofikitis",
-          "party": "D",
-          "pres_margin": "+9.0",
-          "next_election": 2026,
           "candidate_id": 14878
-        },
-        {
-          "district": "Hillsborough-8",
-          "district_name": "Hillsborough-8",
-          "seat_designator": "A",
-          "name": "Efstathia Booras",
-          "party": "D",
-          "pres_margin": "+10.2",
-          "next_election": 2026,
-          "candidate_id": 14880
         },
         {
           "district": "Hillsborough-8",
@@ -3279,16 +2185,6 @@
           "candidate_id": 14881
         },
         {
-          "district": "Hillsborough-8",
-          "district_name": "Hillsborough-8",
-          "seat_designator": "C",
-          "name": "Kevin Scully",
-          "party": "D",
-          "pres_margin": "+10.2",
-          "next_election": 2026,
-          "candidate_id": 14879
-        },
-        {
           "district": "Hillsborough-9",
           "district_name": "Hillsborough-9",
           "seat_designator": "A",
@@ -3297,16 +2193,6 @@
           "pres_margin": "+8.5",
           "next_election": 2026,
           "candidate_id": 14882
-        },
-        {
-          "district": "Hillsborough-9",
-          "district_name": "Hillsborough-9",
-          "seat_designator": "B",
-          "name": "Sanjeev K. Manohar",
-          "party": "D",
-          "pres_margin": "+8.5",
-          "next_election": 2026,
-          "candidate_id": 14884
         },
         {
           "district": "Hillsborough-9",
@@ -3329,16 +2215,6 @@
           "candidate_id": 14884
         },
         {
-          "district": "Hillsborough-9",
-          "district_name": "Hillsborough-9",
-          "seat_designator": "C",
-          "name": "Santosh Salvi",
-          "party": "D",
-          "pres_margin": "+8.5",
-          "next_election": 2026,
-          "candidate_id": 14882
-        },
-        {
           "district": "Merrimack-1",
           "district_name": "Merrimack-1",
           "seat_designator": null,
@@ -3347,16 +2223,6 @@
           "pres_margin": "-12.8",
           "next_election": 2026,
           "candidate_id": 14885
-        },
-        {
-          "district": "Merrimack-10",
-          "district_name": "Merrimack-10",
-          "seat_designator": "A",
-          "name": "Stephen Boyd",
-          "party": "R",
-          "pres_margin": "-6.4",
-          "next_election": 2026,
-          "candidate_id": 14887
         },
         {
           "district": "Merrimack-10",
@@ -3376,16 +2242,6 @@
           "party": "R",
           "pres_margin": "-6.4",
           "next_election": 2026,
-          "candidate_id": 14888
-        },
-        {
-          "district": "Merrimack-10",
-          "district_name": "Merrimack-10",
-          "seat_designator": "B",
-          "name": "John Leavitt",
-          "party": "R",
-          "pres_margin": "-6.4",
-          "next_election": 2026,
           "candidate_id": 14887
         },
         {
@@ -3401,32 +2257,12 @@
         {
           "district": "Merrimack-10",
           "district_name": "Merrimack-10",
-          "seat_designator": "C",
-          "name": "Yury Polozov",
-          "party": "R",
-          "pres_margin": "-6.4",
-          "next_election": 2026,
-          "candidate_id": 14889
-        },
-        {
-          "district": "Merrimack-10",
-          "district_name": "Merrimack-10",
           "seat_designator": "D",
           "name": "Thomas Walsh",
           "party": "R",
           "pres_margin": "-6.4",
           "next_election": 2026,
           "candidate_id": 14889
-        },
-        {
-          "district": "Merrimack-10",
-          "district_name": "Merrimack-10",
-          "seat_designator": "D",
-          "name": "Thomas Walsh",
-          "party": "R",
-          "pres_margin": "-6.4",
-          "next_election": 2026,
-          "candidate_id": 14888
         },
         {
           "district": "Merrimack-11",
@@ -3437,16 +2273,6 @@
           "pres_margin": "-12.0",
           "next_election": 2026,
           "candidate_id": 14890
-        },
-        {
-          "district": "Merrimack-12",
-          "district_name": "Merrimack-12",
-          "seat_designator": "A",
-          "name": "Peter Mehegan",
-          "party": "R",
-          "pres_margin": "-1.0",
-          "next_election": 2026,
-          "candidate_id": 14892
         },
         {
           "district": "Merrimack-12",
@@ -3636,16 +2462,6 @@
           "party": "R",
           "pres_margin": "-10.4",
           "next_election": 2026,
-          "candidate_id": 14910
-        },
-        {
-          "district": "Merrimack-27",
-          "district_name": "Merrimack-27",
-          "seat_designator": "A",
-          "name": "Carol McGuire",
-          "party": "R",
-          "pres_margin": "-10.4",
-          "next_election": 2026,
           "candidate_id": 14909
         },
         {
@@ -3657,16 +2473,6 @@
           "pres_margin": "-10.4",
           "next_election": 2026,
           "candidate_id": 14910
-        },
-        {
-          "district": "Merrimack-27",
-          "district_name": "Merrimack-27",
-          "seat_designator": "B",
-          "name": "Ray Plante",
-          "party": "R",
-          "pres_margin": "-10.4",
-          "next_election": 2026,
-          "candidate_id": 14909
         },
         {
           "district": "Merrimack-28",
@@ -3693,26 +2499,6 @@
           "district_name": "Merrimack-3",
           "seat_designator": "A",
           "name": "Ernesto Leonardo Gonzalez",
-          "party": "R",
-          "pres_margin": "-16.1",
-          "next_election": 2026,
-          "candidate_id": 14914
-        },
-        {
-          "district": "Merrimack-3",
-          "district_name": "Merrimack-3",
-          "seat_designator": "A",
-          "name": "Ernesto Leonardo Gonzalez",
-          "party": "R",
-          "pres_margin": "-16.1",
-          "next_election": 2026,
-          "candidate_id": 14913
-        },
-        {
-          "district": "Merrimack-3",
-          "district_name": "Merrimack-3",
-          "seat_designator": "B",
-          "name": "Bryan Morse",
           "party": "R",
           "pres_margin": "-16.1",
           "next_election": 2026,
@@ -3771,16 +2557,6 @@
         {
           "district": "Merrimack-5",
           "district_name": "Merrimack-5",
-          "seat_designator": "A",
-          "name": "Louise Andrus",
-          "party": "R",
-          "pres_margin": "-14.8",
-          "next_election": 2026,
-          "candidate_id": 14919
-        },
-        {
-          "district": "Merrimack-5",
-          "district_name": "Merrimack-5",
           "seat_designator": "B",
           "name": "Deborah Aylward",
           "party": "R",
@@ -3811,16 +2587,6 @@
         {
           "district": "Merrimack-7",
           "district_name": "Merrimack-7",
-          "seat_designator": "A",
-          "name": "Karen Ebel",
-          "party": "D",
-          "pres_margin": "+24.4",
-          "next_election": 2026,
-          "candidate_id": 14922
-        },
-        {
-          "district": "Merrimack-7",
-          "district_name": "Merrimack-7",
           "seat_designator": "B",
           "name": "Gregory Sargent",
           "party": "D",
@@ -3841,16 +2607,6 @@
         {
           "district": "Merrimack-8",
           "district_name": "Merrimack-8",
-          "seat_designator": "A",
-          "name": "Tony Caplan",
-          "party": "D",
-          "pres_margin": "+7.1",
-          "next_election": 2026,
-          "candidate_id": 14925
-        },
-        {
-          "district": "Merrimack-8",
-          "district_name": "Merrimack-8",
           "seat_designator": "B",
           "name": "Eileen Kelly",
           "party": "D",
@@ -3861,16 +2617,6 @@
         {
           "district": "Merrimack-8",
           "district_name": "Merrimack-8",
-          "seat_designator": "B",
-          "name": "Eileen Kelly",
-          "party": "D",
-          "pres_margin": "+7.1",
-          "next_election": 2026,
-          "candidate_id": 14923
-        },
-        {
-          "district": "Merrimack-8",
-          "district_name": "Merrimack-8",
           "seat_designator": "C",
           "name": "Stephanie Payeur",
           "party": "D",
@@ -3879,26 +2625,6 @@
           "candidate_id": 14925
         },
         {
-          "district": "Merrimack-8",
-          "district_name": "Merrimack-8",
-          "seat_designator": "C",
-          "name": "Stephanie Payeur",
-          "party": "D",
-          "pres_margin": "+7.1",
-          "next_election": 2026,
-          "candidate_id": 14923
-        },
-        {
-          "district": "Merrimack-9",
-          "district_name": "Merrimack-9",
-          "seat_designator": "A",
-          "name": "Eleana Colby",
-          "party": "D",
-          "pres_margin": "+20.8",
-          "next_election": 2026,
-          "candidate_id": 14927
-        },
-        {
           "district": "Merrimack-9",
           "district_name": "Merrimack-9",
           "seat_designator": "A",
@@ -3917,16 +2643,6 @@
           "pres_margin": "+20.8",
           "next_election": 2026,
           "candidate_id": 14927
-        },
-        {
-          "district": "Merrimack-9",
-          "district_name": "Merrimack-9",
-          "seat_designator": "B",
-          "name": "Muriel Hall",
-          "party": "D",
-          "pres_margin": "+20.8",
-          "next_election": 2026,
-          "candidate_id": 14926
         },
         {
           "district": "Merrimack-9",
@@ -3979,40 +2695,10 @@
           "candidate_id": 14932
         },
         {
-          "district": "Rockingham-10",
-          "district_name": "Rockingham-10",
-          "seat_designator": null,
-          "name": "Michael Cahill",
-          "party": "D",
-          "pres_margin": "+29.3",
-          "next_election": 2026,
-          "candidate_id": 15048
-        },
-        {
           "district": "Rockingham-11",
           "district_name": "Rockingham-11",
           "seat_designator": "A",
           "name": "Julie Gilman",
-          "party": "D",
-          "pres_margin": "+33.0",
-          "next_election": 2026,
-          "candidate_id": 14934
-        },
-        {
-          "district": "Rockingham-11",
-          "district_name": "Rockingham-11",
-          "seat_designator": "A",
-          "name": "Julie Gilman",
-          "party": "D",
-          "pres_margin": "+33.0",
-          "next_election": 2026,
-          "candidate_id": 14933
-        },
-        {
-          "district": "Rockingham-11",
-          "district_name": "Rockingham-11",
-          "seat_designator": "B",
-          "name": "Gaby Grossman",
           "party": "D",
           "pres_margin": "+33.0",
           "next_election": 2026,
@@ -4041,16 +2727,6 @@
         {
           "district": "Rockingham-12",
           "district_name": "Rockingham-12",
-          "seat_designator": "A",
-          "name": "Allison Knab",
-          "party": "D",
-          "pres_margin": "+20.3",
-          "next_election": 2026,
-          "candidate_id": 14936
-        },
-        {
-          "district": "Rockingham-12",
-          "district_name": "Rockingham-12",
           "seat_designator": "B",
           "name": "Zoe Manos",
           "party": "D",
@@ -4066,27 +2742,7 @@
           "party": "R",
           "pres_margin": "-11.9",
           "next_election": 2026,
-          "candidate_id": 15051
-        },
-        {
-          "district": "Rockingham-13",
-          "district_name": "Rockingham-13",
-          "seat_designator": "A",
-          "name": "Charles Foote",
-          "party": "R",
-          "pres_margin": "-11.9",
-          "next_election": 2026,
           "candidate_id": 14937
-        },
-        {
-          "district": "Rockingham-13",
-          "district_name": "Rockingham-13",
-          "seat_designator": "B",
-          "name": "Phyllis Katsakiores",
-          "party": "R",
-          "pres_margin": "-11.9",
-          "next_election": 2026,
-          "candidate_id": 15053
         },
         {
           "district": "Rockingham-13",
@@ -4109,40 +2765,10 @@
           "candidate_id": 14939
         },
         {
-          "district": "Rockingham-13",
-          "district_name": "Rockingham-13",
-          "seat_designator": "C",
-          "name": "Erica Layon",
-          "party": "R",
-          "pres_margin": "-11.9",
-          "next_election": 2026,
-          "candidate_id": 15052
-        },
-        {
           "district": "Rockingham-14",
           "district_name": "Rockingham-14",
           "seat_designator": "A",
           "name": "Pam Brown",
-          "party": "R",
-          "pres_margin": "-15.1",
-          "next_election": 2026,
-          "candidate_id": 14941
-        },
-        {
-          "district": "Rockingham-14",
-          "district_name": "Rockingham-14",
-          "seat_designator": "A",
-          "name": "Pam Brown",
-          "party": "R",
-          "pres_margin": "-15.1",
-          "next_election": 2026,
-          "candidate_id": 14940
-        },
-        {
-          "district": "Rockingham-14",
-          "district_name": "Rockingham-14",
-          "seat_designator": "B",
-          "name": "Ken Weyler",
           "party": "R",
           "pres_margin": "-15.1",
           "next_election": 2026,
@@ -4186,16 +2812,6 @@
           "party": "R",
           "pres_margin": "-18.8",
           "next_election": 2026,
-          "candidate_id": 14942
-        },
-        {
-          "district": "Rockingham-15",
-          "district_name": "Rockingham-15",
-          "seat_designator": "B",
-          "name": "Lilli Walsh",
-          "party": "R",
-          "pres_margin": "-18.8",
-          "next_election": 2026,
           "candidate_id": 14943
         },
         {
@@ -4221,26 +2837,6 @@
         {
           "district": "Rockingham-17",
           "district_name": "Rockingham-17",
-          "seat_designator": "A",
-          "name": "Katelyn Kuttab",
-          "party": "R",
-          "pres_margin": "-11.8",
-          "next_election": 2026,
-          "candidate_id": 14947
-        },
-        {
-          "district": "Rockingham-17",
-          "district_name": "Rockingham-17",
-          "seat_designator": "B",
-          "name": "Robert J. Lynn",
-          "party": "R",
-          "pres_margin": "-11.8",
-          "next_election": 2026,
-          "candidate_id": 14948
-        },
-        {
-          "district": "Rockingham-17",
-          "district_name": "Rockingham-17",
           "seat_designator": "B",
           "name": "Robert J. Lynn",
           "party": "R",
@@ -4257,26 +2853,6 @@
           "pres_margin": "-11.8",
           "next_election": 2026,
           "candidate_id": 14947
-        },
-        {
-          "district": "Rockingham-17",
-          "district_name": "Rockingham-17",
-          "seat_designator": "C",
-          "name": "Charles McMahon",
-          "party": "R",
-          "pres_margin": "-11.8",
-          "next_election": 2026,
-          "candidate_id": 14948
-        },
-        {
-          "district": "Rockingham-17",
-          "district_name": "Rockingham-17",
-          "seat_designator": "D",
-          "name": "Daniel Popovici-Muller",
-          "party": "R",
-          "pres_margin": "-11.8",
-          "next_election": 2026,
-          "candidate_id": 14946
         },
         {
           "district": "Rockingham-17",
@@ -4431,32 +3007,12 @@
         {
           "district": "Rockingham-2",
           "district_name": "Rockingham-2",
-          "seat_designator": "A",
-          "name": "Jason Osborne",
-          "party": "R",
-          "pres_margin": "-19.0",
-          "next_election": 2026,
-          "candidate_id": 14953
-        },
-        {
-          "district": "Rockingham-2",
-          "district_name": "Rockingham-2",
           "seat_designator": "B",
           "name": "James Spillane",
           "party": "R",
           "pres_margin": "-19.0",
           "next_election": 2026,
           "candidate_id": 14953
-        },
-        {
-          "district": "Rockingham-2",
-          "district_name": "Rockingham-2",
-          "seat_designator": "B",
-          "name": "James Spillane",
-          "party": "R",
-          "pres_margin": "-19.0",
-          "next_election": 2026,
-          "candidate_id": 14954
         },
         {
           "district": "Rockingham-2",
@@ -4467,16 +3023,6 @@
           "pres_margin": "-19.0",
           "next_election": 2026,
           "candidate_id": 14954
-        },
-        {
-          "district": "Rockingham-20",
-          "district_name": "Rockingham-20",
-          "seat_designator": "A",
-          "name": "Robert Harb",
-          "party": "R",
-          "pres_margin": "-18.1",
-          "next_election": 2026,
-          "candidate_id": 14956
         },
         {
           "district": "Rockingham-20",
@@ -4497,16 +3043,6 @@
           "pres_margin": "-18.1",
           "next_election": 2026,
           "candidate_id": 14956
-        },
-        {
-          "district": "Rockingham-20",
-          "district_name": "Rockingham-20",
-          "seat_designator": "B",
-          "name": "Charles Melvin Sr.",
-          "party": "R",
-          "pres_margin": "-18.1",
-          "next_election": 2026,
-          "candidate_id": 14957
         },
         {
           "district": "Rockingham-20",
@@ -4726,16 +3262,6 @@
           "party": "R",
           "pres_margin": "-18.8",
           "next_election": 2026,
-          "candidate_id": 15067
-        },
-        {
-          "district": "Rockingham-25",
-          "district_name": "Rockingham-25",
-          "seat_designator": null,
-          "name": "Lorie Ball",
-          "party": "R",
-          "pres_margin": "-18.8",
-          "next_election": 2026,
           "candidate_id": 14962
         },
         {
@@ -4811,32 +3337,12 @@
         {
           "district": "Rockingham-29",
           "district_name": "Rockingham-29",
-          "seat_designator": "A",
-          "name": "Nicholas Bridle",
-          "party": "D",
-          "pres_margin": "+6.5",
-          "next_election": 2026,
-          "candidate_id": 14967
-        },
-        {
-          "district": "Rockingham-29",
-          "district_name": "Rockingham-29",
           "seat_designator": "B",
           "name": "Michael Edgar",
           "party": "D",
           "pres_margin": "+6.5",
           "next_election": 2026,
           "candidate_id": 14967
-        },
-        {
-          "district": "Rockingham-29",
-          "district_name": "Rockingham-29",
-          "seat_designator": "B",
-          "name": "Michael Edgar",
-          "party": "D",
-          "pres_margin": "+6.5",
-          "next_election": 2026,
-          "candidate_id": 15072
         },
         {
           "district": "Rockingham-3",
@@ -4886,16 +3392,6 @@
           "party": "R",
           "pres_margin": "-22.5",
           "next_election": 2026,
-          "candidate_id": 15074
-        },
-        {
-          "district": "Rockingham-30",
-          "district_name": "Rockingham-30",
-          "seat_designator": null,
-          "name": "Aboul Khan",
-          "party": "R",
-          "pres_margin": "-22.5",
-          "next_election": 2026,
           "candidate_id": 14969
         },
         {
@@ -4907,16 +3403,6 @@
           "pres_margin": "-19.1",
           "next_election": 2026,
           "candidate_id": 14970
-        },
-        {
-          "district": "Rockingham-31",
-          "district_name": "Rockingham-31",
-          "seat_designator": null,
-          "name": "Jess Edwards",
-          "party": "R",
-          "pres_margin": "-19.1",
-          "next_election": 2026,
-          "candidate_id": 15075
         },
         {
           "district": "Rockingham-32",
@@ -5006,16 +3492,6 @@
           "party": "R",
           "pres_margin": "-23.3",
           "next_election": 2026,
-          "candidate_id": 15078
-        },
-        {
-          "district": "Rockingham-4",
-          "district_name": "Rockingham-4",
-          "seat_designator": null,
-          "name": "Cindy Bennett",
-          "party": "R",
-          "pres_margin": "-23.3",
-          "next_election": 2026,
           "candidate_id": 14978
         },
         {
@@ -5027,16 +3503,6 @@
           "pres_margin": "-11.6",
           "next_election": 2026,
           "candidate_id": 14979
-        },
-        {
-          "district": "Rockingham-5",
-          "district_name": "Rockingham-5",
-          "seat_designator": null,
-          "name": "Mark Vallone",
-          "party": "R",
-          "pres_margin": "-11.6",
-          "next_election": 2026,
-          "candidate_id": 15080
         },
         {
           "district": "Rockingham-6",
@@ -5115,16 +3581,6 @@
           "party": "R",
           "pres_margin": "-24.8",
           "next_election": 2026,
-          "candidate_id": 15081
-        },
-        {
-          "district": "Rockingham-9",
-          "district_name": "Rockingham-9",
-          "seat_designator": null,
-          "name": "Donald Selby",
-          "party": "R",
-          "pres_margin": "-24.8",
-          "next_election": 2026,
           "candidate_id": 14983
         },
         {
@@ -5146,16 +3602,6 @@
           "pres_margin": "-22.6",
           "next_election": 2026,
           "candidate_id": 14985
-        },
-        {
-          "district": "Strafford-10",
-          "district_name": "Strafford-10",
-          "seat_designator": "A",
-          "name": "Wayne Burton",
-          "party": "D",
-          "pres_margin": "+44.9",
-          "next_election": 2026,
-          "candidate_id": 14988
         },
         {
           "district": "Strafford-10",
@@ -5198,26 +3644,6 @@
           "candidate_id": 14989
         },
         {
-          "district": "Strafford-10",
-          "district_name": "Strafford-10",
-          "seat_designator": "D",
-          "name": "Marjorie Smith",
-          "party": "D",
-          "pres_margin": "+44.9",
-          "next_election": 2026,
-          "candidate_id": 14987
-        },
-        {
-          "district": "Strafford-11",
-          "district_name": "Strafford-11",
-          "seat_designator": "A",
-          "name": "Erik Johnson",
-          "party": "D",
-          "pres_margin": "+29.0",
-          "next_election": 2026,
-          "candidate_id": 14991
-        },
-        {
           "district": "Strafford-11",
           "district_name": "Strafford-11",
           "seat_designator": "A",
@@ -5236,16 +3662,6 @@
           "pres_margin": "+29.0",
           "next_election": 2026,
           "candidate_id": 14991
-        },
-        {
-          "district": "Strafford-11",
-          "district_name": "Strafford-11",
-          "seat_designator": "B",
-          "name": "Tom Southworth",
-          "party": "D",
-          "pres_margin": "+29.0",
-          "next_election": 2026,
-          "candidate_id": 14992
         },
         {
           "district": "Strafford-11",
@@ -5280,26 +3696,6 @@
         {
           "district": "Strafford-12",
           "district_name": "Strafford-12",
-          "seat_designator": "B",
-          "name": "Myles England",
-          "party": "D",
-          "pres_margin": "+11.7",
-          "next_election": 2026,
-          "candidate_id": 43499
-        },
-        {
-          "district": "Strafford-12",
-          "district_name": "Strafford-12",
-          "seat_designator": "C",
-          "name": "Wayne Pearson",
-          "party": "D",
-          "pres_margin": "+11.7",
-          "next_election": 2026,
-          "candidate_id": 14994
-        },
-        {
-          "district": "Strafford-12",
-          "district_name": "Strafford-12",
           "seat_designator": "C",
           "name": "Wayne Pearson",
           "party": "D",
@@ -5316,16 +3712,6 @@
           "pres_margin": "+11.7",
           "next_election": 2026,
           "candidate_id": 14996
-        },
-        {
-          "district": "Strafford-12",
-          "district_name": "Strafford-12",
-          "seat_designator": "D",
-          "name": "John Joseph Stone",
-          "party": "D",
-          "pres_margin": "+11.7",
-          "next_election": 2026,
-          "candidate_id": 14994
         },
         {
           "district": "Strafford-13",
@@ -5395,16 +3781,6 @@
           "party": "R",
           "pres_margin": "-2.5",
           "next_election": 2026,
-          "candidate_id": 15005
-        },
-        {
-          "district": "Strafford-19",
-          "district_name": "Strafford-19",
-          "seat_designator": "A",
-          "name": "John Larochelle",
-          "party": "R",
-          "pres_margin": "-2.5",
-          "next_election": 2026,
           "candidate_id": 15003
         },
         {
@@ -5420,32 +3796,12 @@
         {
           "district": "Strafford-19",
           "district_name": "Strafford-19",
-          "seat_designator": "B",
-          "name": "Kelley Potenza",
-          "party": "D",
-          "pres_margin": "-2.5",
-          "next_election": 2026,
-          "candidate_id": 15003
-        },
-        {
-          "district": "Strafford-19",
-          "district_name": "Strafford-19",
           "seat_designator": "C",
           "name": "David Walker",
           "party": "D",
           "pres_margin": "-2.5",
           "next_election": 2026,
           "candidate_id": 15005
-        },
-        {
-          "district": "Strafford-19",
-          "district_name": "Strafford-19",
-          "seat_designator": "C",
-          "name": "David Walker",
-          "party": "D",
-          "pres_margin": "-2.5",
-          "next_election": 2026,
-          "candidate_id": 15003
         },
         {
           "district": "Strafford-2",
@@ -5495,16 +3851,6 @@
           "party": "D",
           "pres_margin": "+31.7",
           "next_election": 2026,
-          "candidate_id": 15011
-        },
-        {
-          "district": "Strafford-21",
-          "district_name": "Strafford-21",
-          "seat_designator": "A",
-          "name": "Luz Bay",
-          "party": "D",
-          "pres_margin": "+31.7",
-          "next_election": 2026,
           "candidate_id": 15010
         },
         {
@@ -5512,16 +3858,6 @@
           "district_name": "Strafford-21",
           "seat_designator": "B",
           "name": "Seth Miller",
-          "party": "D",
-          "pres_margin": "+31.7",
-          "next_election": 2026,
-          "candidate_id": 15011
-        },
-        {
-          "district": "Strafford-21",
-          "district_name": "Strafford-21",
-          "seat_designator": "C",
-          "name": "Geoff Smith",
           "party": "D",
           "pres_margin": "+31.7",
           "next_election": 2026,
@@ -5555,27 +3891,7 @@
           "party": "D",
           "pres_margin": "+1.2",
           "next_election": 2026,
-          "candidate_id": 15015
-        },
-        {
-          "district": "Strafford-4",
-          "district_name": "Strafford-4",
-          "seat_designator": "A",
-          "name": "Heath Howard",
-          "party": "D",
-          "pres_margin": "+1.2",
-          "next_election": 2026,
           "candidate_id": 15014
-        },
-        {
-          "district": "Strafford-4",
-          "district_name": "Strafford-4",
-          "seat_designator": "B",
-          "name": "Cassandra Levesque",
-          "party": "R",
-          "pres_margin": "+1.2",
-          "next_election": 2026,
-          "candidate_id": 15016
         },
         {
           "district": "Strafford-4",
@@ -5680,42 +3996,12 @@
         {
           "district": "Sullivan-3",
           "district_name": "Sullivan-3",
-          "seat_designator": "A",
-          "name": "Skip Rollins",
-          "party": "R",
-          "pres_margin": "-17.4",
-          "next_election": 2026,
-          "candidate_id": 15026
-        },
-        {
-          "district": "Sullivan-3",
-          "district_name": "Sullivan-3",
-          "seat_designator": "B",
-          "name": "Steven Smith",
-          "party": "R",
-          "pres_margin": "-17.4",
-          "next_election": 2026,
-          "candidate_id": 15024
-        },
-        {
-          "district": "Sullivan-3",
-          "district_name": "Sullivan-3",
           "seat_designator": "B",
           "name": "Steven Smith",
           "party": "R",
           "pres_margin": "-17.4",
           "next_election": 2026,
           "candidate_id": 15025
-        },
-        {
-          "district": "Sullivan-3",
-          "district_name": "Sullivan-3",
-          "seat_designator": "C",
-          "name": "Walter Spilsbury",
-          "party": "R",
-          "pres_margin": "-17.4",
-          "next_election": 2026,
-          "candidate_id": 15959
         },
         {
           "district": "Sullivan-3",
@@ -5760,42 +4046,12 @@
         {
           "district": "Sullivan-6",
           "district_name": "Sullivan-6",
-          "seat_designator": "A",
-          "name": "John Cloutier",
-          "party": "R",
-          "pres_margin": "-6.1",
-          "next_election": 2026,
-          "candidate_id": 15031
-        },
-        {
-          "district": "Sullivan-6",
-          "district_name": "Sullivan-6",
           "seat_designator": "B",
           "name": "Dale Girard",
           "party": "R",
           "pres_margin": "-6.1",
           "next_election": 2026,
           "candidate_id": 15030
-        },
-        {
-          "district": "Sullivan-6",
-          "district_name": "Sullivan-6",
-          "seat_designator": "B",
-          "name": "Dale Girard",
-          "party": "R",
-          "pres_margin": "-6.1",
-          "next_election": 2026,
-          "candidate_id": 15031
-        },
-        {
-          "district": "Sullivan-6",
-          "district_name": "Sullivan-6",
-          "seat_designator": "C",
-          "name": "Wayne Hemingway",
-          "party": "D",
-          "pres_margin": "-6.1",
-          "next_election": 2026,
-          "candidate_id": 15029
         },
         {
           "district": "Sullivan-6",
@@ -5840,15 +4096,15 @@
       ]
     },
     "Senate": {
-      "total": 27,
+      "total": 24,
       "composition": {
-        "D": 10,
-        "R": 17,
+        "D": 8,
+        "R": 16,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 18,
-      "seats_up_2026": 27,
+      "supermajority": 16,
+      "seats_up_2026": 24,
       "members": [
         {
           "district": "1",
@@ -5859,16 +4115,6 @@
           "pres_margin": "-8.9",
           "next_election": 2026,
           "candidate_id": 10973
-        },
-        {
-          "district": "2",
-          "district_name": "SD-2",
-          "seat_designator": null,
-          "name": "Tim Lang",
-          "party": "R",
-          "pres_margin": "-5.2",
-          "next_election": 2026,
-          "candidate_id": 41325
         },
         {
           "district": "2",
@@ -5991,16 +4237,6 @@
           "candidate_id": 10964
         },
         {
-          "district": "13",
-          "district_name": "SD-13",
-          "seat_designator": null,
-          "name": "Cindy Rosenwald",
-          "party": "D",
-          "pres_margin": "+13.6",
-          "next_election": 2026,
-          "candidate_id": 41407
-        },
-        {
           "district": "14",
           "district_name": "SD-14",
           "seat_designator": null,
@@ -6069,16 +4305,6 @@
           "pres_margin": "+10.6",
           "next_election": 2026,
           "candidate_id": 11041
-        },
-        {
-          "district": "20",
-          "district_name": "SD-20",
-          "seat_designator": null,
-          "name": "Pat Long",
-          "party": "D",
-          "pres_margin": "+10.6",
-          "next_election": 2026,
-          "candidate_id": 14829
         },
         {
           "district": "21",

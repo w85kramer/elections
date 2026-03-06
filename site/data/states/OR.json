@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-06T17:20:47.438150Z",
+  "generated_at": "2026-03-06T21:24:16.565981Z",
   "state": {
     "name": "Oregon",
     "abbr": "OR",
@@ -85,15 +85,15 @@
   ],
   "chambers": {
     "House": {
-      "total": 65,
+      "total": 60,
       "composition": {
-        "D": 40,
-        "R": 25,
+        "D": 37,
+        "R": 23,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 44,
-      "seats_up_2026": 65,
+      "supermajority": 40,
+      "seats_up_2026": 60,
       "members": [
         {
           "district": "1",
@@ -356,16 +356,6 @@
           "candidate_id": 12007
         },
         {
-          "district": "26",
-          "district_name": "HD-26",
-          "seat_designator": null,
-          "name": "Sue Rieke Smith",
-          "party": "D",
-          "pres_margin": "+21.2",
-          "next_election": 2026,
-          "candidate_id": 49362
-        },
-        {
           "district": "27",
           "district_name": "HD-27",
           "seat_designator": null,
@@ -444,16 +434,6 @@
           "pres_margin": "+46.0",
           "next_election": 2026,
           "candidate_id": 11988
-        },
-        {
-          "district": "34",
-          "district_name": "HD-34",
-          "seat_designator": null,
-          "name": "Mari Watanabe",
-          "party": "D",
-          "pres_margin": "+46.0",
-          "next_election": 2026,
-          "candidate_id": 11986
         },
         {
           "district": "35",
@@ -593,16 +573,6 @@
           "party": "D",
           "pres_margin": "+10.0",
           "next_election": 2026,
-          "candidate_id": 12934
-        },
-        {
-          "district": "48",
-          "district_name": "HD-48",
-          "seat_designator": null,
-          "name": "Lamar Wise",
-          "party": "D",
-          "pres_margin": "+10.0",
-          "next_election": 2026,
           "candidate_id": 11982
         },
         {
@@ -634,16 +604,6 @@
           "pres_margin": "-18.7",
           "next_election": 2026,
           "candidate_id": 11992
-        },
-        {
-          "district": "51",
-          "district_name": "HD-51",
-          "seat_designator": null,
-          "name": "Matt Bunch",
-          "party": "R",
-          "pres_margin": "-18.7",
-          "next_election": 2026,
-          "candidate_id": 11942
         },
         {
           "district": "52",
@@ -723,16 +683,6 @@
           "party": "R",
           "pres_margin": "-35.6",
           "next_election": 2026,
-          "candidate_id": 49588
-        },
-        {
-          "district": "59",
-          "district_name": "HD-59",
-          "seat_designator": null,
-          "name": "Vikki Breese Iverson",
-          "party": "R",
-          "pres_margin": "-35.6",
-          "next_election": 2026,
           "candidate_id": 12015
         },
         {
@@ -748,15 +698,15 @@
       ]
     },
     "Senate": {
-      "total": 47,
+      "total": 31,
       "composition": {
-        "D": 25,
-        "R": 18,
-        "Other": 4,
+        "D": 16,
+        "R": 13,
+        "Other": 2,
         "Vacant": 0
       },
-      "supermajority": 32,
-      "seats_up_2026": 30,
+      "supermajority": 21,
+      "seats_up_2026": 15,
       "members": [
         {
           "district": "1",
@@ -767,16 +717,6 @@
           "pres_margin": "-32.1",
           "next_election": 2028,
           "candidate_id": 11950
-        },
-        {
-          "district": "1",
-          "district_name": "SD-1",
-          "seat_designator": null,
-          "name": "David Smith",
-          "party": "R",
-          "pres_margin": "-32.1",
-          "next_election": 2028,
-          "candidate_id": 8265
         },
         {
           "district": "2",
@@ -799,16 +739,6 @@
           "candidate_id": 11969
         },
         {
-          "district": "3",
-          "district_name": "SD-3",
-          "seat_designator": null,
-          "name": "Jeff Golden",
-          "party": "D",
-          "pres_margin": "+12.1",
-          "next_election": 2026,
-          "candidate_id": 11969
-        },
-        {
           "district": "4",
           "district_name": "SD-4",
           "seat_designator": null,
@@ -817,26 +747,6 @@
           "pres_margin": "+38.9",
           "next_election": 2026,
           "candidate_id": 11961
-        },
-        {
-          "district": "4",
-          "district_name": "SD-4",
-          "seat_designator": null,
-          "name": "Floyd Prozanski",
-          "party": "D",
-          "pres_margin": "+38.9",
-          "next_election": 2026,
-          "candidate_id": 11961
-        },
-        {
-          "district": "5",
-          "district_name": "SD-5",
-          "seat_designator": null,
-          "name": "Dick Anderson",
-          "party": "R",
-          "pres_margin": "+2.9",
-          "next_election": 2028,
-          "candidate_id": 14123
         },
         {
           "district": "5",
@@ -849,14 +759,14 @@
           "candidate_id": 11954
         },
         {
-          "district": "6",
-          "district_name": "SD-6",
+          "district": "5",
+          "district_name": "SD-5",
           "seat_designator": null,
-          "name": "Cedric Hayden",
+          "name": "Dick Anderson",
           "party": "R",
-          "pres_margin": "-22.3",
-          "next_election": 2026,
-          "candidate_id": 11940
+          "pres_margin": "+2.9",
+          "next_election": 2028,
+          "candidate_id": 14123
         },
         {
           "district": "6",
@@ -877,26 +787,6 @@
           "pres_margin": "+30.0",
           "next_election": 2026,
           "candidate_id": 11965
-        },
-        {
-          "district": "7",
-          "district_name": "SD-7",
-          "seat_designator": null,
-          "name": "James Manning",
-          "party": "D",
-          "pres_margin": "+30.0",
-          "next_election": 2026,
-          "candidate_id": 11965
-        },
-        {
-          "district": "8",
-          "district_name": "SD-8",
-          "seat_designator": null,
-          "name": "Sara Gelser Blouin",
-          "party": "D",
-          "pres_margin": "+23.2",
-          "next_election": 2026,
-          "candidate_id": 12003
         },
         {
           "district": "8",
@@ -929,26 +819,6 @@
           "candidate_id": 11952
         },
         {
-          "district": "10",
-          "district_name": "SD-10",
-          "seat_designator": null,
-          "name": "Deb Patterson",
-          "party": "D",
-          "pres_margin": "+15.5",
-          "next_election": 2026,
-          "candidate_id": 11952
-        },
-        {
-          "district": "11",
-          "district_name": "SD-11",
-          "seat_designator": null,
-          "name": "Kim Thatcher",
-          "party": "R",
-          "pres_margin": "+5.0",
-          "next_election": 2026,
-          "candidate_id": 11980
-        },
-        {
           "district": "11",
           "district_name": "SD-11",
           "seat_designator": null,
@@ -979,16 +849,6 @@
           "candidate_id": 11944
         },
         {
-          "district": "13",
-          "district_name": "SD-13",
-          "seat_designator": null,
-          "name": "Courtney Neron Misslin",
-          "party": "D",
-          "pres_margin": "+29.1",
-          "next_election": 2026,
-          "candidate_id": 49070
-        },
-        {
           "district": "14",
           "district_name": "SD-14",
           "seat_designator": null,
@@ -1007,26 +867,6 @@
           "pres_margin": "+25.5",
           "next_election": 2026,
           "candidate_id": 11967
-        },
-        {
-          "district": "15",
-          "district_name": "SD-15",
-          "seat_designator": null,
-          "name": "Janeen Sollman",
-          "party": "D",
-          "pres_margin": "+25.5",
-          "next_election": 2026,
-          "candidate_id": 11967
-        },
-        {
-          "district": "16",
-          "district_name": "SD-16",
-          "seat_designator": null,
-          "name": "Suzanne Weber",
-          "party": "R",
-          "pres_margin": "-3.6",
-          "next_election": 2026,
-          "candidate_id": 12009
         },
         {
           "district": "16",
@@ -1049,16 +889,6 @@
           "candidate_id": 11986
         },
         {
-          "district": "17",
-          "district_name": "SD-17",
-          "seat_designator": null,
-          "name": "Lisa Reynolds",
-          "party": "D",
-          "pres_margin": "+61.5",
-          "next_election": 2026,
-          "candidate_id": 49091
-        },
-        {
           "district": "18",
           "district_name": "SD-18",
           "seat_designator": null,
@@ -1077,26 +907,6 @@
           "pres_margin": "+44.1",
           "next_election": 2026,
           "candidate_id": 12002
-        },
-        {
-          "district": "19",
-          "district_name": "SD-19",
-          "seat_designator": null,
-          "name": "Rob Wagner",
-          "party": null,
-          "pres_margin": "+44.1",
-          "next_election": 2026,
-          "candidate_id": 12002
-        },
-        {
-          "district": "20",
-          "district_name": "SD-20",
-          "seat_designator": null,
-          "name": "Mark Meek",
-          "party": "D",
-          "pres_margin": "+13.7",
-          "next_election": 2026,
-          "candidate_id": 11990
         },
         {
           "district": "20",
@@ -1149,16 +959,6 @@
           "candidate_id": 11976
         },
         {
-          "district": "24",
-          "district_name": "SD-24",
-          "seat_designator": null,
-          "name": "Kayse Jama",
-          "party": null,
-          "pres_margin": "+23.7",
-          "next_election": 2026,
-          "candidate_id": 11976
-        },
-        {
           "district": "25",
           "district_name": "SD-25",
           "seat_designator": null,
@@ -1177,16 +977,6 @@
           "pres_margin": "-6.8",
           "next_election": 2026,
           "candidate_id": 11942
-        },
-        {
-          "district": "26",
-          "district_name": "SD-26",
-          "seat_designator": null,
-          "name": "Christine Drazan",
-          "party": "R",
-          "pres_margin": "-6.8",
-          "next_election": 2026,
-          "candidate_id": 20983
         },
         {
           "district": "27",

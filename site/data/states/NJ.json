@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-06T17:20:47.438150Z",
+  "generated_at": "2026-03-06T21:24:16.565981Z",
   "state": {
     "name": "New Jersey",
     "abbr": "NJ",
@@ -78,14 +78,14 @@
   ],
   "chambers": {
     "Assembly": {
-      "total": 84,
+      "total": 80,
       "composition": {
-        "D": 60,
-        "R": 24,
+        "D": 57,
+        "R": 23,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 56,
+      "supermajority": 54,
       "seats_up_2026": 0,
       "members": [
         {
@@ -181,32 +181,12 @@
         {
           "district": "5",
           "district_name": "AD-5",
-          "seat_designator": "A",
-          "name": "Bill Moen",
-          "party": "D",
-          "pres_margin": "+29.4",
-          "next_election": 2027,
-          "candidate_id": 16327
-        },
-        {
-          "district": "5",
-          "district_name": "AD-5",
           "seat_designator": "B",
           "name": "Bill Spearman",
           "party": "D",
           "pres_margin": "+29.4",
           "next_election": 2027,
           "candidate_id": 14094
-        },
-        {
-          "district": "5",
-          "district_name": "AD-5",
-          "seat_designator": "B",
-          "name": "Bill Spearman",
-          "party": "D",
-          "pres_margin": "+29.4",
-          "next_election": 2027,
-          "candidate_id": 16328
         },
         {
           "district": "6",
@@ -866,16 +846,6 @@
           "party": "D",
           "pres_margin": "-0.1",
           "next_election": 2027,
-          "candidate_id": 16394
-        },
-        {
-          "district": "38",
-          "district_name": "AD-38",
-          "seat_designator": "B",
-          "name": "Chris Tully",
-          "party": "D",
-          "pres_margin": "-0.1",
-          "next_election": 2027,
           "candidate_id": 14082
         },
         {
@@ -887,16 +857,6 @@
           "pres_margin": "-2.2",
           "next_election": 2027,
           "candidate_id": 14077
-        },
-        {
-          "district": "39",
-          "district_name": "AD-39",
-          "seat_designator": "A",
-          "name": "Bob Auth",
-          "party": "R",
-          "pres_margin": "-2.2",
-          "next_election": 2027,
-          "candidate_id": 16397
         },
         {
           "district": "39",
@@ -931,14 +891,14 @@
       ]
     },
     "Senate": {
-      "total": 79,
+      "total": 40,
       "composition": {
-        "D": 49,
-        "R": 30,
+        "D": 25,
+        "R": 15,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 53,
+      "supermajority": 27,
       "seats_up_2026": 0,
       "members": [
         {
@@ -952,16 +912,6 @@
           "candidate_id": 11096
         },
         {
-          "district": "1",
-          "district_name": "SD-1",
-          "seat_designator": null,
-          "name": "Mike Testa",
-          "party": "R",
-          "pres_margin": "-10.7",
-          "next_election": 2027,
-          "candidate_id": 11096
-        },
-        {
           "district": "2",
           "district_name": "SD-2",
           "seat_designator": null,
@@ -970,26 +920,6 @@
           "pres_margin": "+1.5",
           "next_election": 2027,
           "candidate_id": 11110
-        },
-        {
-          "district": "2",
-          "district_name": "SD-2",
-          "seat_designator": null,
-          "name": "Vince Polistina",
-          "party": "R",
-          "pres_margin": "+1.5",
-          "next_election": 2027,
-          "candidate_id": 11110
-        },
-        {
-          "district": "3",
-          "district_name": "SD-3",
-          "seat_designator": null,
-          "name": "John Burzichelli",
-          "party": "D",
-          "pres_margin": "-7.5",
-          "next_election": 2027,
-          "candidate_id": 11086
         },
         {
           "district": "3",
@@ -1012,16 +942,6 @@
           "candidate_id": 11103
         },
         {
-          "district": "4",
-          "district_name": "SD-4",
-          "seat_designator": null,
-          "name": "Paul Moriarty",
-          "party": "D",
-          "pres_margin": "+1.6",
-          "next_election": 2027,
-          "candidate_id": 11103
-        },
-        {
           "district": "5",
           "district_name": "SD-5",
           "seat_designator": null,
@@ -1030,26 +950,6 @@
           "pres_margin": "+29.4",
           "next_election": 2027,
           "candidate_id": 11098
-        },
-        {
-          "district": "5",
-          "district_name": "SD-5",
-          "seat_designator": null,
-          "name": "Nilsa Cruz-Perez",
-          "party": "D",
-          "pres_margin": "+29.4",
-          "next_election": 2027,
-          "candidate_id": 11098
-        },
-        {
-          "district": "6",
-          "district_name": "SD-6",
-          "seat_designator": null,
-          "name": "Jim Beach",
-          "party": "D",
-          "pres_margin": "+27.5",
-          "next_election": 2027,
-          "candidate_id": 11083
         },
         {
           "district": "6",
@@ -1072,16 +972,6 @@
           "candidate_id": 11108
         },
         {
-          "district": "7",
-          "district_name": "SD-7",
-          "seat_designator": null,
-          "name": "Troy Singleton",
-          "party": "D",
-          "pres_margin": "+29.0",
-          "next_election": 2027,
-          "candidate_id": 11108
-        },
-        {
           "district": "8",
           "district_name": "SD-8",
           "seat_designator": null,
@@ -1090,26 +980,6 @@
           "pres_margin": "+1.1",
           "next_election": 2027,
           "candidate_id": 11093
-        },
-        {
-          "district": "8",
-          "district_name": "SD-8",
-          "seat_designator": null,
-          "name": "Latham Tiver",
-          "party": "R",
-          "pres_margin": "+1.1",
-          "next_election": 2027,
-          "candidate_id": 11093
-        },
-        {
-          "district": "9",
-          "district_name": "SD-9",
-          "seat_designator": null,
-          "name": "Carmen Amato",
-          "party": "R",
-          "pres_margin": "-29.5",
-          "next_election": 2027,
-          "candidate_id": 11078
         },
         {
           "district": "9",
@@ -1132,16 +1002,6 @@
           "candidate_id": 11084
         },
         {
-          "district": "10",
-          "district_name": "SD-10",
-          "seat_designator": null,
-          "name": "Jim Holzapfel",
-          "party": "R",
-          "pres_margin": "-27.9",
-          "next_election": 2027,
-          "candidate_id": 11084
-        },
-        {
           "district": "11",
           "district_name": "SD-11",
           "seat_designator": null,
@@ -1150,26 +1010,6 @@
           "pres_margin": "+4.4",
           "next_election": 2027,
           "candidate_id": 11109
-        },
-        {
-          "district": "11",
-          "district_name": "SD-11",
-          "seat_designator": null,
-          "name": "Vin Gopal",
-          "party": "D",
-          "pres_margin": "+4.4",
-          "next_election": 2027,
-          "candidate_id": 11109
-        },
-        {
-          "district": "12",
-          "district_name": "SD-12",
-          "seat_designator": null,
-          "name": "Owen Henry",
-          "party": "R",
-          "pres_margin": "-25.1",
-          "next_election": 2027,
-          "candidate_id": 11099
         },
         {
           "district": "12",
@@ -1192,16 +1032,6 @@
           "candidate_id": 11079
         },
         {
-          "district": "13",
-          "district_name": "SD-13",
-          "seat_designator": null,
-          "name": "Declan O'Scanlon",
-          "party": "R",
-          "pres_margin": "-15.3",
-          "next_election": 2027,
-          "candidate_id": 11079
-        },
-        {
           "district": "14",
           "district_name": "SD-14",
           "seat_designator": null,
@@ -1210,26 +1040,6 @@
           "pres_margin": "+11.1",
           "next_election": 2027,
           "candidate_id": 11094
-        },
-        {
-          "district": "14",
-          "district_name": "SD-14",
-          "seat_designator": null,
-          "name": "Linda Greenstein",
-          "party": "D",
-          "pres_margin": "+11.1",
-          "next_election": 2027,
-          "candidate_id": 11094
-        },
-        {
-          "district": "15",
-          "district_name": "SD-15",
-          "seat_designator": null,
-          "name": "Shirley Turner",
-          "party": "D",
-          "pres_margin": "+42.0",
-          "next_election": 2027,
-          "candidate_id": 11107
         },
         {
           "district": "15",
@@ -1252,16 +1062,6 @@
           "candidate_id": 11071
         },
         {
-          "district": "16",
-          "district_name": "SD-16",
-          "seat_designator": null,
-          "name": "Andrew Zwicker",
-          "party": "D",
-          "pres_margin": "+14.2",
-          "next_election": 2027,
-          "candidate_id": 11071
-        },
-        {
           "district": "17",
           "district_name": "SD-17",
           "seat_designator": null,
@@ -1270,26 +1070,6 @@
           "pres_margin": "+32.1",
           "next_election": 2027,
           "candidate_id": 11075
-        },
-        {
-          "district": "17",
-          "district_name": "SD-17",
-          "seat_designator": null,
-          "name": "Bob Smith",
-          "party": "D",
-          "pres_margin": "+32.1",
-          "next_election": 2027,
-          "candidate_id": 11075
-        },
-        {
-          "district": "18",
-          "district_name": "SD-18",
-          "seat_designator": null,
-          "name": "Patrick Diegnan",
-          "party": "D",
-          "pres_margin": "+10.2",
-          "next_election": 2027,
-          "candidate_id": 11101
         },
         {
           "district": "18",
@@ -1312,16 +1092,6 @@
           "candidate_id": 11089
         },
         {
-          "district": "19",
-          "district_name": "SD-19",
-          "seat_designator": null,
-          "name": "Joe Vitale",
-          "party": "D",
-          "pres_margin": "+0.7",
-          "next_election": 2027,
-          "candidate_id": 11089
-        },
-        {
           "district": "20",
           "district_name": "SD-20",
           "seat_designator": null,
@@ -1330,26 +1100,6 @@
           "pres_margin": "+24.3",
           "next_election": 2027,
           "candidate_id": 11090
-        },
-        {
-          "district": "20",
-          "district_name": "SD-20",
-          "seat_designator": null,
-          "name": "Joe Cryan",
-          "party": "D",
-          "pres_margin": "+24.3",
-          "next_election": 2027,
-          "candidate_id": 11090
-        },
-        {
-          "district": "21",
-          "district_name": "SD-21",
-          "seat_designator": null,
-          "name": "Jon Bramnick",
-          "party": "R",
-          "pres_margin": "+12.3",
-          "next_election": 2027,
-          "candidate_id": 11087
         },
         {
           "district": "21",
@@ -1372,16 +1122,6 @@
           "candidate_id": 11097
         },
         {
-          "district": "22",
-          "district_name": "SD-22",
-          "seat_designator": null,
-          "name": "Nick Scutari",
-          "party": "D",
-          "pres_margin": "+25.0",
-          "next_election": 2027,
-          "candidate_id": 11097
-        },
-        {
           "district": "23",
           "district_name": "SD-23",
           "seat_designator": null,
@@ -1390,26 +1130,6 @@
           "pres_margin": "-10.1",
           "next_election": 2027,
           "candidate_id": 11080
-        },
-        {
-          "district": "23",
-          "district_name": "SD-23",
-          "seat_designator": null,
-          "name": "Doug Steinhardt",
-          "party": "R",
-          "pres_margin": "-10.1",
-          "next_election": 2027,
-          "candidate_id": 11080
-        },
-        {
-          "district": "24",
-          "district_name": "SD-24",
-          "seat_designator": null,
-          "name": "Parker Space",
-          "party": "R",
-          "pres_margin": "-19.5",
-          "next_election": 2027,
-          "candidate_id": 11100
         },
         {
           "district": "24",
@@ -1432,16 +1152,6 @@
           "candidate_id": 11073
         },
         {
-          "district": "25",
-          "district_name": "SD-25",
-          "seat_designator": null,
-          "name": "Tony Bucco",
-          "party": "R",
-          "pres_margin": "-2.5",
-          "next_election": 2027,
-          "candidate_id": 11073
-        },
-        {
           "district": "26",
           "district_name": "SD-26",
           "seat_designator": null,
@@ -1450,26 +1160,6 @@
           "pres_margin": "-6.4",
           "next_election": 2027,
           "candidate_id": 11091
-        },
-        {
-          "district": "26",
-          "district_name": "SD-26",
-          "seat_designator": null,
-          "name": "Joe Pennacchio",
-          "party": "R",
-          "pres_margin": "-6.4",
-          "next_election": 2027,
-          "candidate_id": 11091
-        },
-        {
-          "district": "27",
-          "district_name": "SD-27",
-          "seat_designator": null,
-          "name": "John McKeon",
-          "party": "D",
-          "pres_margin": "+31.2",
-          "next_election": 2027,
-          "candidate_id": 11085
         },
         {
           "district": "27",
@@ -1492,16 +1182,6 @@
           "candidate_id": 11105
         },
         {
-          "district": "28",
-          "district_name": "SD-28",
-          "seat_designator": null,
-          "name": "Renee Burgess",
-          "party": "D",
-          "pres_margin": "+76.8",
-          "next_election": 2027,
-          "candidate_id": 11105
-        },
-        {
           "district": "29",
           "district_name": "SD-29",
           "seat_designator": null,
@@ -1510,26 +1190,6 @@
           "pres_margin": "+41.2",
           "next_election": 2027,
           "candidate_id": 11095
-        },
-        {
-          "district": "29",
-          "district_name": "SD-29",
-          "seat_designator": null,
-          "name": "Teresa Ruiz",
-          "party": "D",
-          "pres_margin": "+41.2",
-          "next_election": 2027,
-          "candidate_id": 11095
-        },
-        {
-          "district": "30",
-          "district_name": "SD-30",
-          "seat_designator": null,
-          "name": "Bob Singer",
-          "party": "R",
-          "pres_margin": "-46.4",
-          "next_election": 2027,
-          "candidate_id": 11106
         },
         {
           "district": "30",
@@ -1552,26 +1212,6 @@
           "candidate_id": 11072
         },
         {
-          "district": "31",
-          "district_name": "SD-31",
-          "seat_designator": null,
-          "name": "Angela McKnight",
-          "party": "D",
-          "pres_margin": "+27.9",
-          "next_election": 2027,
-          "candidate_id": 11072
-        },
-        {
-          "district": "32",
-          "district_name": "SD-32",
-          "seat_designator": null,
-          "name": "Raj Mukherji",
-          "party": "D",
-          "pres_margin": "+43.2",
-          "next_election": 2027,
-          "candidate_id": 11104
-        },
-        {
           "district": "32",
           "district_name": "SD-32",
           "seat_designator": null,
@@ -1590,26 +1230,6 @@
           "pres_margin": "+13.0",
           "next_election": 2027,
           "candidate_id": 11076
-        },
-        {
-          "district": "33",
-          "district_name": "SD-33",
-          "seat_designator": null,
-          "name": "Brian Stack",
-          "party": "D",
-          "pres_margin": "+13.0",
-          "next_election": 2027,
-          "candidate_id": 11076
-        },
-        {
-          "district": "34",
-          "district_name": "SD-34",
-          "seat_designator": null,
-          "name": "Britnee Timberlake",
-          "party": "D",
-          "pres_margin": "+40.3",
-          "next_election": 2027,
-          "candidate_id": 11077
         },
         {
           "district": "34",
@@ -1642,26 +1262,6 @@
           "candidate_id": 11102
         },
         {
-          "district": "36",
-          "district_name": "SD-36",
-          "seat_designator": null,
-          "name": "Paul Sarlo",
-          "party": "D",
-          "pres_margin": "-4.6",
-          "next_election": 2027,
-          "candidate_id": 11102
-        },
-        {
-          "district": "37",
-          "district_name": "SD-37",
-          "seat_designator": null,
-          "name": "Gordon Johnson",
-          "party": "D",
-          "pres_margin": "+23.0",
-          "next_election": 2027,
-          "candidate_id": 11081
-        },
-        {
           "district": "37",
           "district_name": "SD-37",
           "seat_designator": null,
@@ -1682,16 +1282,6 @@
           "candidate_id": 11088
         },
         {
-          "district": "38",
-          "district_name": "SD-38",
-          "seat_designator": null,
-          "name": "Joe Lagana",
-          "party": "D",
-          "pres_margin": "-0.1",
-          "next_election": 2027,
-          "candidate_id": 11088
-        },
-        {
           "district": "39",
           "district_name": "SD-39",
           "seat_designator": null,
@@ -1700,26 +1290,6 @@
           "pres_margin": "-2.2",
           "next_election": 2027,
           "candidate_id": 11082
-        },
-        {
-          "district": "39",
-          "district_name": "SD-39",
-          "seat_designator": null,
-          "name": "Holly Schepisi",
-          "party": "R",
-          "pres_margin": "-2.2",
-          "next_election": 2027,
-          "candidate_id": 11082
-        },
-        {
-          "district": "40",
-          "district_name": "SD-40",
-          "seat_designator": null,
-          "name": "Kristin Corrado",
-          "party": "R",
-          "pres_margin": "-7.3",
-          "next_election": 2027,
-          "candidate_id": 11092
         },
         {
           "district": "40",

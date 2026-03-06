@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-06T17:20:47.438150Z",
+  "generated_at": "2026-03-06T21:24:16.565981Z",
   "state": {
     "name": "Utah",
     "abbr": "UT",
@@ -57,15 +57,15 @@
   ],
   "chambers": {
     "House": {
-      "total": 80,
+      "total": 77,
       "composition": {
-        "D": 15,
-        "R": 65,
+        "D": 14,
+        "R": 63,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 54,
-      "seats_up_2026": 80,
+      "supermajority": 52,
+      "seats_up_2026": 77,
       "members": [
         {
           "district": "1",
@@ -106,16 +106,6 @@
           "pres_margin": "-15.5",
           "next_election": 2026,
           "candidate_id": 12996
-        },
-        {
-          "district": "4",
-          "district_name": "HD-4",
-          "seat_designator": null,
-          "name": "Tiara Auxier",
-          "party": "R",
-          "pres_margin": "-15.5",
-          "next_election": 2026,
-          "candidate_id": 54784
         },
         {
           "district": "5",
@@ -495,16 +485,6 @@
           "party": "D",
           "pres_margin": "+23.3",
           "next_election": 2026,
-          "candidate_id": 55049
-        },
-        {
-          "district": "41",
-          "district_name": "HD-41",
-          "seat_designator": null,
-          "name": "John Arthur",
-          "party": "D",
-          "pres_margin": "+23.3",
-          "next_election": 2026,
           "candidate_id": 12946
         },
         {
@@ -636,16 +616,6 @@
           "pres_margin": "-37.7",
           "next_election": 2026,
           "candidate_id": 12956
-        },
-        {
-          "district": "54",
-          "district_name": "HD-54",
-          "seat_designator": null,
-          "name": "Kristen Chevrier",
-          "party": "R",
-          "pres_margin": "-45.4",
-          "next_election": 2026,
-          "candidate_id": 12909
         },
         {
           "district": "54",
@@ -870,26 +840,16 @@
       ]
     },
     "Senate": {
-      "total": 44,
+      "total": 29,
       "composition": {
-        "D": 10,
-        "R": 34,
+        "D": 6,
+        "R": 23,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 30,
-      "seats_up_2026": 30,
+      "supermajority": 20,
+      "seats_up_2026": 15,
       "members": [
-        {
-          "district": "1",
-          "district_name": "SD-1",
-          "seat_designator": null,
-          "name": "Scott Sandall",
-          "party": "R",
-          "pres_margin": "-53.8",
-          "next_election": 2026,
-          "candidate_id": 12988
-        },
         {
           "district": "1",
           "district_name": "SD-1",
@@ -941,16 +901,6 @@
           "candidate_id": 12905
         },
         {
-          "district": "5",
-          "district_name": "SD-5",
-          "seat_designator": null,
-          "name": "Ann Millner",
-          "party": "R",
-          "pres_margin": "-11.1",
-          "next_election": 2026,
-          "candidate_id": 12905
-        },
-        {
           "district": "6",
           "district_name": "SD-6",
           "seat_designator": null,
@@ -959,26 +909,6 @@
           "pres_margin": "-32.8",
           "next_election": 2026,
           "candidate_id": 12944
-        },
-        {
-          "district": "6",
-          "district_name": "SD-6",
-          "seat_designator": null,
-          "name": "Jerry Stevenson",
-          "party": "R",
-          "pres_margin": "-32.8",
-          "next_election": 2026,
-          "candidate_id": 12944
-        },
-        {
-          "district": "7",
-          "district_name": "SD-7",
-          "seat_designator": null,
-          "name": "Stuart Adams",
-          "party": "R",
-          "pres_margin": "-24.2",
-          "next_election": 2026,
-          "candidate_id": 12935
         },
         {
           "district": "7",
@@ -1011,16 +941,6 @@
           "candidate_id": 12943
         },
         {
-          "district": "9",
-          "district_name": "SD-9",
-          "seat_designator": null,
-          "name": "Jen Plumb",
-          "party": "D",
-          "pres_margin": "+55.7",
-          "next_election": 2026,
-          "candidate_id": 12943
-        },
-        {
           "district": "10",
           "district_name": "SD-10",
           "seat_designator": null,
@@ -1041,26 +961,6 @@
           "candidate_id": 12930
         },
         {
-          "district": "11",
-          "district_name": "SD-11",
-          "seat_designator": null,
-          "name": "Emily Buss",
-          "party": "R",
-          "pres_margin": "-34.4",
-          "next_election": 2026,
-          "candidate_id": 54655
-        },
-        {
-          "district": "12",
-          "district_name": "SD-12",
-          "seat_designator": null,
-          "name": "Karen Kwan",
-          "party": "D",
-          "pres_margin": "+6.3",
-          "next_election": 2026,
-          "candidate_id": 12951
-        },
-        {
           "district": "12",
           "district_name": "SD-12",
           "seat_designator": null,
@@ -1079,26 +979,6 @@
           "pres_margin": "+38.4",
           "next_election": 2026,
           "candidate_id": 12975
-        },
-        {
-          "district": "13",
-          "district_name": "SD-13",
-          "seat_designator": null,
-          "name": "Nate Blouin",
-          "party": "D",
-          "pres_margin": "+38.4",
-          "next_election": 2026,
-          "candidate_id": 12975
-        },
-        {
-          "district": "14",
-          "district_name": "SD-14",
-          "seat_designator": null,
-          "name": "Stephanie Pitcher",
-          "party": "D",
-          "pres_margin": "+30.7",
-          "next_election": 2026,
-          "candidate_id": 12991
         },
         {
           "district": "14",
@@ -1151,26 +1031,6 @@
           "candidate_id": 12922
         },
         {
-          "district": "18",
-          "district_name": "SD-18",
-          "seat_designator": null,
-          "name": "Dan McCay",
-          "party": "R",
-          "pres_margin": "-29.8",
-          "next_election": 2026,
-          "candidate_id": 12922
-        },
-        {
-          "district": "19",
-          "district_name": "SD-19",
-          "seat_designator": null,
-          "name": "Kirk Cullimore",
-          "party": "R",
-          "pres_margin": "-8.7",
-          "next_election": 2026,
-          "candidate_id": 12960
-        },
-        {
           "district": "19",
           "district_name": "SD-19",
           "seat_designator": null,
@@ -1189,26 +1049,6 @@
           "pres_margin": "-34.6",
           "next_election": 2026,
           "candidate_id": 12983
-        },
-        {
-          "district": "20",
-          "district_name": "SD-20",
-          "seat_designator": null,
-          "name": "Ron Winterton",
-          "party": "R",
-          "pres_margin": "-34.6",
-          "next_election": 2026,
-          "candidate_id": 12983
-        },
-        {
-          "district": "21",
-          "district_name": "SD-21",
-          "seat_designator": null,
-          "name": "Brady Brammer",
-          "party": "R",
-          "pres_margin": "-40.7",
-          "next_election": 2026,
-          "candidate_id": 54718
         },
         {
           "district": "21",
@@ -1229,16 +1069,6 @@
           "pres_margin": "-35.7",
           "next_election": 2028,
           "candidate_id": 12933
-        },
-        {
-          "district": "23",
-          "district_name": "SD-23",
-          "seat_designator": null,
-          "name": "Keith Grover",
-          "party": "R",
-          "pres_margin": "-29.9",
-          "next_election": 2026,
-          "candidate_id": 12957
         },
         {
           "district": "23",
@@ -1289,16 +1119,6 @@
           "pres_margin": "-67.3",
           "next_election": 2028,
           "candidate_id": 12925
-        },
-        {
-          "district": "28",
-          "district_name": "SD-28",
-          "seat_designator": null,
-          "name": "Evan Vickers",
-          "party": "R",
-          "pres_margin": "-57.4",
-          "next_election": 2026,
-          "candidate_id": 12931
         },
         {
           "district": "28",

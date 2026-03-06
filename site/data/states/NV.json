@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-06T17:20:47.438150Z",
+  "generated_at": "2026-03-06T21:24:16.565981Z",
   "state": {
     "name": "Nevada",
     "abbr": "NV",
@@ -85,15 +85,15 @@
   ],
   "chambers": {
     "Assembly": {
-      "total": 45,
+      "total": 42,
       "composition": {
-        "D": 28,
-        "R": 17,
+        "D": 27,
+        "R": 15,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 30,
-      "seats_up_2026": 45,
+      "supermajority": 28,
+      "seats_up_2026": 42,
       "members": [
         {
           "district": "1",
@@ -124,16 +124,6 @@
           "pres_margin": "+8.7",
           "next_election": 2026,
           "candidate_id": 10942
-        },
-        {
-          "district": "3",
-          "district_name": "AD-3",
-          "seat_designator": null,
-          "name": "Selena Torres-Fossett",
-          "party": "D",
-          "pres_margin": "+8.7",
-          "next_election": 2026,
-          "candidate_id": 40960
         },
         {
           "district": "4",
@@ -294,16 +284,6 @@
           "pres_margin": "-29.5",
           "next_election": 2026,
           "candidate_id": 10915
-        },
-        {
-          "district": "19",
-          "district_name": "AD-19",
-          "seat_designator": null,
-          "name": "Jason Patchett",
-          "party": "R",
-          "pres_margin": "-29.5",
-          "next_election": 2026,
-          "candidate_id": 60962
         },
         {
           "district": "20",
@@ -513,16 +493,6 @@
           "party": "R",
           "pres_margin": "-14.9",
           "next_election": 2026,
-          "candidate_id": 41278
-        },
-        {
-          "district": "40",
-          "district_name": "AD-40",
-          "seat_designator": null,
-          "name": "P.K. O'Neill",
-          "party": "R",
-          "pres_margin": "-14.9",
-          "next_election": 2026,
           "candidate_id": 10933
         },
         {
@@ -548,15 +518,15 @@
       ]
     },
     "Senate": {
-      "total": 33,
+      "total": 21,
       "composition": {
-        "D": 21,
-        "R": 12,
+        "D": 13,
+        "R": 8,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 22,
-      "seats_up_2026": 22,
+      "supermajority": 14,
+      "seats_up_2026": 11,
       "members": [
         {
           "district": "1",
@@ -566,27 +536,7 @@
           "party": "D",
           "pres_margin": "+15.6",
           "next_election": 2028,
-          "candidate_id": 40787
-        },
-        {
-          "district": "1",
-          "district_name": "SD-1",
-          "seat_designator": null,
-          "name": "Shelly Crawford",
-          "party": "D",
-          "pres_margin": "+15.6",
-          "next_election": 2028,
           "candidate_id": 10944
-        },
-        {
-          "district": "2",
-          "district_name": "SD-2",
-          "seat_designator": null,
-          "name": "Edgar Flores",
-          "party": "D",
-          "pres_margin": "+30.5",
-          "next_election": 2026,
-          "candidate_id": 10902
         },
         {
           "district": "2",
@@ -659,16 +609,6 @@
           "candidate_id": 10927
         },
         {
-          "district": "8",
-          "district_name": "SD-8",
-          "seat_designator": null,
-          "name": "Marilyn Dondero Loop",
-          "party": "D",
-          "pres_margin": "-2.2",
-          "next_election": 2026,
-          "candidate_id": 10927
-        },
-        {
           "district": "9",
           "district_name": "SD-9",
           "seat_designator": null,
@@ -677,26 +617,6 @@
           "pres_margin": "+2.6",
           "next_election": 2026,
           "candidate_id": 10929
-        },
-        {
-          "district": "9",
-          "district_name": "SD-9",
-          "seat_designator": null,
-          "name": "Melanie Scheible",
-          "party": "D",
-          "pres_margin": "+2.6",
-          "next_election": 2026,
-          "candidate_id": 10929
-        },
-        {
-          "district": "10",
-          "district_name": "SD-10",
-          "seat_designator": null,
-          "name": "Fabian Do\u00f1ate",
-          "party": "D",
-          "pres_margin": "+10.1",
-          "next_election": 2026,
-          "candidate_id": 10906
         },
         {
           "district": "10",
@@ -729,16 +649,6 @@
           "candidate_id": 10922
         },
         {
-          "district": "12",
-          "district_name": "SD-12",
-          "seat_designator": null,
-          "name": "Julie Pazina",
-          "party": "D",
-          "pres_margin": "+0.6",
-          "next_election": 2026,
-          "candidate_id": 10922
-        },
-        {
           "district": "13",
           "district_name": "SD-13",
           "seat_designator": null,
@@ -747,26 +657,6 @@
           "pres_margin": "+18.9",
           "next_election": 2026,
           "candidate_id": 10945
-        },
-        {
-          "district": "13",
-          "district_name": "SD-13",
-          "seat_designator": null,
-          "name": "Skip Daly",
-          "party": "D",
-          "pres_margin": "+18.9",
-          "next_election": 2026,
-          "candidate_id": 10945
-        },
-        {
-          "district": "14",
-          "district_name": "SD-14",
-          "seat_designator": null,
-          "name": "Ira Hansen",
-          "party": "R",
-          "pres_margin": "-23.1",
-          "next_election": 2026,
-          "candidate_id": 10913
         },
         {
           "district": "14",
@@ -797,26 +687,6 @@
           "pres_margin": "-10.4",
           "next_election": 2026,
           "candidate_id": 10925
-        },
-        {
-          "district": "16",
-          "district_name": "SD-16",
-          "seat_designator": null,
-          "name": "Lisa Krasner",
-          "party": "R",
-          "pres_margin": "-10.4",
-          "next_election": 2026,
-          "candidate_id": 10925
-        },
-        {
-          "district": "17",
-          "district_name": "SD-17",
-          "seat_designator": null,
-          "name": "Robin Titus",
-          "party": "R",
-          "pres_margin": "-40.9",
-          "next_election": 2026,
-          "candidate_id": 10938
         },
         {
           "district": "17",
@@ -857,26 +727,6 @@
           "pres_margin": "-22.7",
           "next_election": 2026,
           "candidate_id": 10916
-        },
-        {
-          "district": "20",
-          "district_name": "SD-20",
-          "seat_designator": null,
-          "name": "Jeff Stone",
-          "party": "R",
-          "pres_margin": "-22.7",
-          "next_election": 2026,
-          "candidate_id": 10916
-        },
-        {
-          "district": "21",
-          "district_name": "SD-21",
-          "seat_designator": null,
-          "name": "James Ohrenschall",
-          "party": "D",
-          "pres_margin": "+8.9",
-          "next_election": 2026,
-          "candidate_id": 10914
         },
         {
           "district": "21",

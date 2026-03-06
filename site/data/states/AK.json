@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-06T17:20:47.438150Z",
+  "generated_at": "2026-03-06T21:24:16.565981Z",
   "state": {
     "name": "Alaska",
     "abbr": "AK",
@@ -80,15 +80,15 @@
   ],
   "chambers": {
     "House": {
-      "total": 43,
+      "total": 40,
       "composition": {
         "D": 14,
-        "R": 24,
+        "R": 21,
         "Other": 5,
         "Vacant": 0
       },
-      "supermajority": 29,
-      "seats_up_2026": 43,
+      "supermajority": 27,
+      "seats_up_2026": 40,
       "members": [
         {
           "district": "1",
@@ -363,16 +363,6 @@
           "party": "R",
           "pres_margin": "-54.3",
           "next_election": 2026,
-          "candidate_id": 7550
-        },
-        {
-          "district": "26",
-          "district_name": "HD-26",
-          "seat_designator": null,
-          "name": "Steve St. Clair",
-          "party": "R",
-          "pres_margin": "-54.3",
-          "next_election": 2026,
           "candidate_id": 7593
         },
         {
@@ -404,16 +394,6 @@
           "pres_margin": "-44.9",
           "next_election": 2026,
           "candidate_id": 7561
-        },
-        {
-          "district": "29",
-          "district_name": "HD-29",
-          "seat_designator": null,
-          "name": "Garret Nelson",
-          "party": "R",
-          "pres_margin": "-44.9",
-          "next_election": 2026,
-          "candidate_id": 7564
         },
         {
           "district": "30",
@@ -455,16 +435,6 @@
           "pres_margin": "-51.2",
           "next_election": 2026,
           "candidate_id": 7583
-        },
-        {
-          "district": "33",
-          "district_name": "HD-33",
-          "seat_designator": null,
-          "name": "Mike Prax",
-          "party": "R",
-          "pres_margin": "-51.2",
-          "next_election": 2026,
-          "candidate_id": 19079
         },
         {
           "district": "34",
@@ -544,26 +514,16 @@
       ]
     },
     "Senate": {
-      "total": 30,
+      "total": 20,
       "composition": {
-        "D": 13,
-        "R": 17,
+        "D": 9,
+        "R": 11,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 20,
-      "seats_up_2026": 20,
+      "supermajority": 14,
+      "seats_up_2026": 10,
       "members": [
-        {
-          "district": "1",
-          "district_name": "SD-A",
-          "seat_designator": null,
-          "name": "Bert Stedman",
-          "party": "R",
-          "pres_margin": "-8.0",
-          "next_election": 2026,
-          "candidate_id": 7543
-        },
         {
           "district": "1",
           "district_name": "SD-A",
@@ -584,16 +544,6 @@
           "next_election": 2028,
           "candidate_id": 7569,
           "caucus": "C"
-        },
-        {
-          "district": "3",
-          "district_name": "SD-C",
-          "seat_designator": null,
-          "name": "Gary Stevens",
-          "party": "R",
-          "pres_margin": "-14.8",
-          "next_election": 2026,
-          "candidate_id": 7562
         },
         {
           "district": "3",
@@ -627,16 +577,6 @@
           "candidate_id": 7549
         },
         {
-          "district": "5",
-          "district_name": "SD-E",
-          "seat_designator": null,
-          "name": "Cathy Giessel",
-          "party": "R",
-          "pres_margin": "-0.1",
-          "next_election": 2026,
-          "candidate_id": 7549
-        },
-        {
           "district": "6",
           "district_name": "SD-F",
           "seat_designator": null,
@@ -645,16 +585,6 @@
           "pres_margin": "-0.7",
           "next_election": 2028,
           "candidate_id": 7565
-        },
-        {
-          "district": "7",
-          "district_name": "SD-G",
-          "seat_designator": null,
-          "name": "Elvi Gray-Jackson",
-          "party": "D",
-          "pres_margin": "+11.1",
-          "next_election": 2026,
-          "candidate_id": 7558
         },
         {
           "district": "7",
@@ -688,16 +618,6 @@
           "candidate_id": 7576
         },
         {
-          "district": "9",
-          "district_name": "SD-I",
-          "seat_designator": null,
-          "name": "L\u00f6ki Tobin",
-          "party": "D",
-          "pres_margin": "+14.6",
-          "next_election": 2026,
-          "candidate_id": 7576
-        },
-        {
           "district": "10",
           "district_name": "SD-J",
           "seat_designator": null,
@@ -707,16 +627,6 @@
           "next_election": 2028,
           "candidate_id": 7559,
           "caucus": "C"
-        },
-        {
-          "district": "11",
-          "district_name": "SD-K",
-          "seat_designator": null,
-          "name": "Bill Wielechowski",
-          "party": "D",
-          "pres_margin": "+5.5",
-          "next_election": 2026,
-          "candidate_id": 7545
         },
         {
           "district": "11",
@@ -750,16 +660,6 @@
           "candidate_id": 7550
         },
         {
-          "district": "13",
-          "district_name": "SD-M",
-          "seat_designator": null,
-          "name": "Cathy Tilton",
-          "party": "R",
-          "pres_margin": "-44.4",
-          "next_election": 2026,
-          "candidate_id": 18989
-        },
-        {
           "district": "14",
           "district_name": "SD-N",
           "seat_designator": null,
@@ -778,16 +678,6 @@
           "pres_margin": "-44.8",
           "next_election": 2026,
           "candidate_id": 7564
-        },
-        {
-          "district": "15",
-          "district_name": "SD-O",
-          "seat_designator": null,
-          "name": "George Rauscher",
-          "party": "R",
-          "pres_margin": "-44.8",
-          "next_election": 2026,
-          "candidate_id": 18981
         },
         {
           "district": "16",
@@ -811,16 +701,6 @@
           "candidate_id": 7588
         },
         {
-          "district": "17",
-          "district_name": "SD-Q",
-          "seat_designator": null,
-          "name": "Robert Myers",
-          "party": "R",
-          "pres_margin": "-35.0",
-          "next_election": 2026,
-          "candidate_id": 7588
-        },
-        {
           "district": "18",
           "district_name": "SD-R",
           "seat_designator": null,
@@ -829,16 +709,6 @@
           "pres_margin": "-8.3",
           "next_election": 2028,
           "candidate_id": 7582
-        },
-        {
-          "district": "19",
-          "district_name": "SD-S",
-          "seat_designator": null,
-          "name": "Lyman Hoffman",
-          "party": "D",
-          "pres_margin": "+2.2",
-          "next_election": 2026,
-          "candidate_id": 7578
         },
         {
           "district": "19",

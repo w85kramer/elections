@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-06T17:20:47.438150Z",
+  "generated_at": "2026-03-06T21:24:16.565981Z",
   "state": {
     "name": "Michigan",
     "abbr": "MI",
@@ -78,15 +78,15 @@
   ],
   "chambers": {
     "House": {
-      "total": 113,
+      "total": 111,
       "composition": {
-        "D": 53,
-        "R": 60,
+        "D": 52,
+        "R": 59,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 76,
-      "seats_up_2026": 113,
+      "supermajority": 74,
+      "seats_up_2026": 111,
       "members": [
         {
           "district": "1",
@@ -766,7 +766,7 @@
           "party": "R",
           "pres_margin": "-9.2",
           "next_election": 2026,
-          "candidate_id": 12412
+          "candidate_id": 9998
         },
         {
           "district": "68",
@@ -776,17 +776,7 @@
           "party": "R",
           "pres_margin": "-9.2",
           "next_election": 2026,
-          "candidate_id": 9998
-        },
-        {
-          "district": "69",
-          "district_name": "HD-69",
-          "seat_designator": null,
-          "name": "Jaz Martus",
-          "party": "D",
-          "pres_margin": "+8.1",
-          "next_election": 2026,
-          "candidate_id": 36266
+          "candidate_id": 12412
         },
         {
           "district": "69",
@@ -1146,16 +1136,6 @@
           "party": "R",
           "pres_margin": "-25.1",
           "next_election": 2026,
-          "candidate_id": 31067
-        },
-        {
-          "district": "104",
-          "district_name": "HD-104",
-          "seat_designator": null,
-          "name": "J.R. Roth",
-          "party": "R",
-          "pres_margin": "-25.1",
-          "next_election": 2026,
           "candidate_id": 10036
         },
         {
@@ -1221,15 +1201,15 @@
       ]
     },
     "Senate": {
-      "total": 75,
+      "total": 38,
       "composition": {
-        "D": 38,
-        "R": 37,
+        "D": 19,
+        "R": 19,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 50,
-      "seats_up_2026": 75,
+      "supermajority": 26,
+      "seats_up_2026": 38,
       "members": [
         {
           "district": "1",
@@ -1242,16 +1222,6 @@
           "candidate_id": 10008
         },
         {
-          "district": "1",
-          "district_name": "SD-1",
-          "seat_designator": null,
-          "name": "Erika Geiss",
-          "party": "D",
-          "pres_margin": "+51.8",
-          "next_election": 2026,
-          "candidate_id": 10008
-        },
-        {
           "district": "2",
           "district_name": "SD-2",
           "seat_designator": null,
@@ -1260,26 +1230,6 @@
           "pres_margin": "-2.5",
           "next_election": 2026,
           "candidate_id": 10110
-        },
-        {
-          "district": "2",
-          "district_name": "SD-2",
-          "seat_designator": null,
-          "name": "Sylvia Santana",
-          "party": "D",
-          "pres_margin": "-2.5",
-          "next_election": 2026,
-          "candidate_id": 10110
-        },
-        {
-          "district": "3",
-          "district_name": "SD-3",
-          "seat_designator": null,
-          "name": "Stephanie Chang",
-          "party": "D",
-          "pres_margin": "+76.8",
-          "next_election": 2026,
-          "candidate_id": 10104
         },
         {
           "district": "3",
@@ -1302,16 +1252,6 @@
           "candidate_id": 9997
         },
         {
-          "district": "4",
-          "district_name": "SD-4",
-          "seat_designator": null,
-          "name": "Darrin Camilleri",
-          "party": "D",
-          "pres_margin": "+0.1",
-          "next_election": 2026,
-          "candidate_id": 9997
-        },
-        {
           "district": "5",
           "district_name": "SD-5",
           "seat_designator": null,
@@ -1320,26 +1260,6 @@
           "pres_margin": "+14.9",
           "next_election": 2026,
           "candidate_id": 10000
-        },
-        {
-          "district": "5",
-          "district_name": "SD-5",
-          "seat_designator": null,
-          "name": "Dayna Polehanki",
-          "party": "D",
-          "pres_margin": "+14.9",
-          "next_election": 2026,
-          "candidate_id": 10000
-        },
-        {
-          "district": "6",
-          "district_name": "SD-6",
-          "seat_designator": null,
-          "name": "Mary Cavanagh",
-          "party": "D",
-          "pres_margin": "+77.7",
-          "next_election": 2026,
-          "candidate_id": 10062
         },
         {
           "district": "6",
@@ -1362,16 +1282,6 @@
           "candidate_id": 10026
         },
         {
-          "district": "7",
-          "district_name": "SD-7",
-          "seat_designator": null,
-          "name": "Jeremy Moss",
-          "party": "D",
-          "pres_margin": "+36.2",
-          "next_election": 2026,
-          "candidate_id": 10026
-        },
-        {
           "district": "8",
           "district_name": "SD-8",
           "seat_designator": null,
@@ -1380,26 +1290,6 @@
           "pres_margin": "+11.6",
           "next_election": 2026,
           "candidate_id": 10059
-        },
-        {
-          "district": "8",
-          "district_name": "SD-8",
-          "seat_designator": null,
-          "name": "Mallory McMorrow",
-          "party": "D",
-          "pres_margin": "+11.6",
-          "next_election": 2026,
-          "candidate_id": 10059
-        },
-        {
-          "district": "9",
-          "district_name": "SD-9",
-          "seat_designator": null,
-          "name": "Michael Webber",
-          "party": "R",
-          "pres_margin": "-5.1",
-          "next_election": 2026,
-          "candidate_id": 10068
         },
         {
           "district": "9",
@@ -1422,16 +1312,6 @@
           "candidate_id": 10081
         },
         {
-          "district": "10",
-          "district_name": "SD-10",
-          "seat_designator": null,
-          "name": "Paul Wojno",
-          "party": "D",
-          "pres_margin": "+30.5",
-          "next_election": 2026,
-          "candidate_id": 10081
-        },
-        {
           "district": "11",
           "district_name": "SD-11",
           "seat_designator": null,
@@ -1440,26 +1320,6 @@
           "pres_margin": "+3.2",
           "next_election": 2026,
           "candidate_id": 10119
-        },
-        {
-          "district": "11",
-          "district_name": "SD-11",
-          "seat_designator": null,
-          "name": "Veronica Klinefelt",
-          "party": "D",
-          "pres_margin": "+3.2",
-          "next_election": 2026,
-          "candidate_id": 10119
-        },
-        {
-          "district": "12",
-          "district_name": "SD-12",
-          "seat_designator": null,
-          "name": "Kevin Hertel",
-          "party": "D",
-          "pres_margin": "-7.2",
-          "next_election": 2026,
-          "candidate_id": 10052
         },
         {
           "district": "12",
@@ -1482,16 +1342,6 @@
           "candidate_id": 10095
         },
         {
-          "district": "13",
-          "district_name": "SD-13",
-          "seat_designator": null,
-          "name": "Rosemary Bayer",
-          "party": "D",
-          "pres_margin": "-1.7",
-          "next_election": 2026,
-          "candidate_id": 10095
-        },
-        {
           "district": "14",
           "district_name": "SD-14",
           "seat_designator": null,
@@ -1500,26 +1350,6 @@
           "pres_margin": "+9.7",
           "next_election": 2026,
           "candidate_id": 10109
-        },
-        {
-          "district": "14",
-          "district_name": "SD-14",
-          "seat_designator": null,
-          "name": "Sue Shink",
-          "party": "D",
-          "pres_margin": "+9.7",
-          "next_election": 2026,
-          "candidate_id": 10109
-        },
-        {
-          "district": "15",
-          "district_name": "SD-15",
-          "seat_designator": null,
-          "name": "Jeff Irwin",
-          "party": "D",
-          "pres_margin": "+43.0",
-          "next_election": 2026,
-          "candidate_id": 10023
         },
         {
           "district": "15",
@@ -1542,16 +1372,6 @@
           "candidate_id": 10040
         },
         {
-          "district": "16",
-          "district_name": "SD-16",
-          "seat_designator": null,
-          "name": "Joe Bellino",
-          "party": "R",
-          "pres_margin": "-30.0",
-          "next_election": 2026,
-          "candidate_id": 10040
-        },
-        {
           "district": "17",
           "district_name": "SD-17",
           "seat_designator": null,
@@ -1560,26 +1380,6 @@
           "pres_margin": "-30.0",
           "next_election": 2026,
           "candidate_id": 10038
-        },
-        {
-          "district": "17",
-          "district_name": "SD-17",
-          "seat_designator": null,
-          "name": "Jonathan Lindsey",
-          "party": "R",
-          "pres_margin": "-30.0",
-          "next_election": 2026,
-          "candidate_id": 10038
-        },
-        {
-          "district": "18",
-          "district_name": "SD-18",
-          "seat_designator": null,
-          "name": "Thomas Albert",
-          "party": "R",
-          "pres_margin": "-23.7",
-          "next_election": 2026,
-          "candidate_id": 10111
         },
         {
           "district": "18",
@@ -1602,16 +1402,6 @@
           "candidate_id": 10102
         },
         {
-          "district": "19",
-          "district_name": "SD-19",
-          "seat_designator": null,
-          "name": "Sean McCann",
-          "party": "D",
-          "pres_margin": "+17.1",
-          "next_election": 2026,
-          "candidate_id": 10102
-        },
-        {
           "district": "20",
           "district_name": "SD-20",
           "seat_designator": null,
@@ -1620,26 +1410,6 @@
           "pres_margin": "-16.5",
           "next_election": 2026,
           "candidate_id": 9983
-        },
-        {
-          "district": "20",
-          "district_name": "SD-20",
-          "seat_designator": null,
-          "name": "Aric Nesbitt",
-          "party": "R",
-          "pres_margin": "-16.5",
-          "next_election": 2026,
-          "candidate_id": 9983
-        },
-        {
-          "district": "21",
-          "district_name": "SD-21",
-          "seat_designator": null,
-          "name": "Sarah Anthony",
-          "party": "D",
-          "pres_margin": "+12.3",
-          "next_election": 2026,
-          "candidate_id": 10100
         },
         {
           "district": "21",
@@ -1662,16 +1432,6 @@
           "candidate_id": 10055
         },
         {
-          "district": "22",
-          "district_name": "SD-22",
-          "seat_designator": null,
-          "name": "Lana Theis",
-          "party": "R",
-          "pres_margin": "-24.0",
-          "next_election": 2026,
-          "candidate_id": 10055
-        },
-        {
           "district": "23",
           "district_name": "SD-23",
           "seat_designator": null,
@@ -1680,26 +1440,6 @@
           "pres_margin": "-23.1",
           "next_election": 2026,
           "candidate_id": 10028
-        },
-        {
-          "district": "23",
-          "district_name": "SD-23",
-          "seat_designator": null,
-          "name": "Jim Runestad",
-          "party": "R",
-          "pres_margin": "-23.1",
-          "next_election": 2026,
-          "candidate_id": 10028
-        },
-        {
-          "district": "24",
-          "district_name": "SD-24",
-          "seat_designator": null,
-          "name": "Ruth Johnson",
-          "party": "R",
-          "pres_margin": "-27.5",
-          "next_election": 2026,
-          "candidate_id": 10096
         },
         {
           "district": "24",
@@ -1722,16 +1462,6 @@
           "candidate_id": 9996
         },
         {
-          "district": "25",
-          "district_name": "SD-25",
-          "seat_designator": null,
-          "name": "Dan Lauwers",
-          "party": "R",
-          "pres_margin": "-37.3",
-          "next_election": 2026,
-          "candidate_id": 9996
-        },
-        {
           "district": "26",
           "district_name": "SD-26",
           "seat_designator": null,
@@ -1740,26 +1470,6 @@
           "pres_margin": "-27.4",
           "next_election": 2026,
           "candidate_id": 10051
-        },
-        {
-          "district": "26",
-          "district_name": "SD-26",
-          "seat_designator": null,
-          "name": "Kevin Daley",
-          "party": "R",
-          "pres_margin": "-27.4",
-          "next_election": 2026,
-          "candidate_id": 10051
-        },
-        {
-          "district": "27",
-          "district_name": "SD-27",
-          "seat_designator": null,
-          "name": "John Cherry",
-          "party": "D",
-          "pres_margin": "+18.5",
-          "next_election": 2026,
-          "candidate_id": 10033
         },
         {
           "district": "27",
@@ -1782,16 +1492,6 @@
           "candidate_id": 10098
         },
         {
-          "district": "28",
-          "district_name": "SD-28",
-          "seat_designator": null,
-          "name": "Sam Singh",
-          "party": "D",
-          "pres_margin": "+9.5",
-          "next_election": 2026,
-          "candidate_id": 10098
-        },
-        {
           "district": "29",
           "district_name": "SD-29",
           "seat_designator": null,
@@ -1800,26 +1500,6 @@
           "pres_margin": "+25.9",
           "next_election": 2026,
           "candidate_id": 10123
-        },
-        {
-          "district": "29",
-          "district_name": "SD-29",
-          "seat_designator": null,
-          "name": "Winnie Brinks",
-          "party": "D",
-          "pres_margin": "+25.9",
-          "next_election": 2026,
-          "candidate_id": 10123
-        },
-        {
-          "district": "30",
-          "district_name": "SD-30",
-          "seat_designator": null,
-          "name": "Mark Huizenga",
-          "party": "R",
-          "pres_margin": "+4.5",
-          "next_election": 2026,
-          "candidate_id": 10060
         },
         {
           "district": "30",
@@ -1842,26 +1522,6 @@
           "candidate_id": 10093
         },
         {
-          "district": "31",
-          "district_name": "SD-31",
-          "seat_designator": null,
-          "name": "Roger Victory",
-          "party": "R",
-          "pres_margin": "-18.6",
-          "next_election": 2026,
-          "candidate_id": 10093
-        },
-        {
-          "district": "32",
-          "district_name": "SD-32",
-          "seat_designator": null,
-          "name": "Jon Bumstead",
-          "party": "R",
-          "pres_margin": "-6.9",
-          "next_election": 2026,
-          "candidate_id": 10037
-        },
-        {
           "district": "32",
           "district_name": "SD-32",
           "seat_designator": null,
@@ -1880,26 +1540,6 @@
           "pres_margin": "-34.7",
           "next_election": 2026,
           "candidate_id": 10091
-        },
-        {
-          "district": "33",
-          "district_name": "SD-33",
-          "seat_designator": null,
-          "name": "Rick Outman",
-          "party": "R",
-          "pres_margin": "-34.7",
-          "next_election": 2026,
-          "candidate_id": 10091
-        },
-        {
-          "district": "34",
-          "district_name": "SD-34",
-          "seat_designator": null,
-          "name": "Roger Hauck",
-          "party": "R",
-          "pres_margin": "-31.0",
-          "next_election": 2026,
-          "candidate_id": 10092
         },
         {
           "district": "34",
@@ -1915,7 +1555,7 @@
           "district": "35",
           "district_name": "SD-35",
           "seat_designator": null,
-          "name": null,
+          "name": "Jason Tunney",
           "party": "R",
           "pres_margin": "+0.9",
           "next_election": 2026,
@@ -1932,16 +1572,6 @@
           "candidate_id": 10069
         },
         {
-          "district": "36",
-          "district_name": "SD-36",
-          "seat_designator": null,
-          "name": "Michele Hoitenga",
-          "party": "R",
-          "pres_margin": "-36.8",
-          "next_election": 2026,
-          "candidate_id": 10069
-        },
-        {
           "district": "37",
           "district_name": "SD-37",
           "seat_designator": null,
@@ -1950,26 +1580,6 @@
           "pres_margin": "-10.7",
           "next_election": 2026,
           "candidate_id": 10034
-        },
-        {
-          "district": "37",
-          "district_name": "SD-37",
-          "seat_designator": null,
-          "name": "John Damoose",
-          "party": "R",
-          "pres_margin": "-10.7",
-          "next_election": 2026,
-          "candidate_id": 10034
-        },
-        {
-          "district": "38",
-          "district_name": "SD-38",
-          "seat_designator": null,
-          "name": "Ed McBroom",
-          "party": "R",
-          "pres_margin": "-18.1",
-          "next_election": 2026,
-          "candidate_id": 10006
         },
         {
           "district": "38",

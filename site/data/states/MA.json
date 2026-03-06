@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-06T17:20:47.438150Z",
+  "generated_at": "2026-03-06T21:24:16.565981Z",
   "state": {
     "name": "Massachusetts",
     "abbr": "MA",
@@ -85,15 +85,15 @@
   ],
   "chambers": {
     "House": {
-      "total": 172,
+      "total": 160,
       "composition": {
-        "D": 145,
-        "R": 26,
+        "D": 136,
+        "R": 23,
         "Other": 0,
         "Vacant": 1
       },
-      "supermajority": 115,
-      "seats_up_2026": 172,
+      "supermajority": 107,
+      "seats_up_2026": 160,
       "members": [
         {
           "district": "1",
@@ -273,16 +273,6 @@
           "party": "D",
           "pres_margin": "+7.1",
           "next_election": 2026,
-          "candidate_id": 14889
-        },
-        {
-          "district": "18",
-          "district_name": "12th Essex",
-          "seat_designator": null,
-          "name": "Tom Walsh",
-          "party": "D",
-          "pres_margin": "+7.1",
-          "next_election": 2026,
           "candidate_id": 14678
         },
         {
@@ -394,16 +384,6 @@
           "pres_margin": "+36.1",
           "next_election": 2026,
           "candidate_id": 14527
-        },
-        {
-          "district": "29",
-          "district_name": "13th Suffolk",
-          "seat_designator": null,
-          "name": "Dan Hunt",
-          "party": "D",
-          "pres_margin": "+36.1",
-          "next_election": 2026,
-          "candidate_id": 15097
         },
         {
           "district": "30",
@@ -706,16 +686,6 @@
           "candidate_id": 14630
         },
         {
-          "district": "59",
-          "district_name": "1st Bristol",
-          "seat_designator": null,
-          "name": "Mike Chaisson",
-          "party": "D",
-          "pres_margin": "+11.6",
-          "next_election": 2026,
-          "candidate_id": 14578
-        },
-        {
           "district": "60",
           "district_name": "1st Essex",
           "seat_designator": null,
@@ -732,8 +702,7 @@
           "name": null,
           "party": "D",
           "pres_margin": "+44.1",
-          "next_election": 2026,
-          "candidate_id": 34442
+          "next_election": 2026
         },
         {
           "district": "62",
@@ -816,16 +785,6 @@
           "candidate_id": 14505
         },
         {
-          "district": "69",
-          "district_name": "20th Middlesex",
-          "seat_designator": null,
-          "name": "Brad Jones",
-          "party": "R",
-          "pres_margin": "+6.4",
-          "next_election": 2026,
-          "candidate_id": 34968
-        },
-        {
           "district": "70",
           "district_name": "21st Middlesex",
           "seat_designator": null,
@@ -906,16 +865,6 @@
           "candidate_id": 14584
         },
         {
-          "district": "77",
-          "district_name": "28th Middlesex",
-          "seat_designator": null,
-          "name": "Joe McGonagle",
-          "party": "D",
-          "pres_margin": "+24.7",
-          "next_election": 2026,
-          "candidate_id": 34998
-        },
-        {
           "district": "78",
           "district_name": "29th Middlesex",
           "seat_designator": null,
@@ -924,16 +873,6 @@
           "pres_margin": "+66.9",
           "next_election": 2026,
           "candidate_id": 14668
-        },
-        {
-          "district": "78",
-          "district_name": "29th Middlesex",
-          "seat_designator": null,
-          "name": "Steve Owens",
-          "party": "D",
-          "pres_margin": "+66.9",
-          "next_election": 2026,
-          "candidate_id": 9416
         },
         {
           "district": "79",
@@ -1303,16 +1242,6 @@
           "party": "D",
           "pres_margin": "+12.7",
           "next_election": 2026,
-          "candidate_id": 10586
-        },
-        {
-          "district": "115",
-          "district_name": "4th Norfolk",
-          "seat_designator": null,
-          "name": "Jamie Murphy",
-          "party": "D",
-          "pres_margin": "+12.7",
-          "next_election": 2026,
           "candidate_id": 14562
         },
         {
@@ -1334,16 +1263,6 @@
           "pres_margin": "+27.4",
           "next_election": 2026,
           "candidate_id": 14533
-        },
-        {
-          "district": "118",
-          "district_name": "4th Worcester",
-          "seat_designator": null,
-          "name": "Natalie Higgins",
-          "party": "D",
-          "pres_margin": "+9.2",
-          "next_election": 2026,
-          "candidate_id": 60920
         },
         {
           "district": "118",
@@ -1445,16 +1364,6 @@
           "candidate_id": 14543
         },
         {
-          "district": "127",
-          "district_name": "5th Worcester",
-          "seat_designator": null,
-          "name": "Donnie Berthiaume",
-          "party": "R",
-          "pres_margin": "-10.0",
-          "next_election": 2026,
-          "candidate_id": 34636
-        },
-        {
           "district": "128",
           "district_name": "6th Bristol",
           "seat_designator": null,
@@ -1493,16 +1402,6 @@
           "pres_margin": "+38.8",
           "next_election": 2026,
           "candidate_id": 14649
-        },
-        {
-          "district": "132",
-          "district_name": "6th Norfolk",
-          "seat_designator": null,
-          "name": "Bill Galvin",
-          "party": "D",
-          "pres_margin": "+21.9",
-          "next_election": 2026,
-          "candidate_id": 151
         },
         {
           "district": "132",
@@ -1593,16 +1492,6 @@
           "pres_margin": "+43.8",
           "next_election": 2026,
           "candidate_id": 14652
-        },
-        {
-          "district": "141",
-          "district_name": "7th Plymouth",
-          "seat_designator": null,
-          "name": "Alyson Sullivan-Almeida",
-          "party": "R",
-          "pres_margin": "-3.6",
-          "next_election": 2026,
-          "candidate_id": 34678
         },
         {
           "district": "141",
@@ -1795,16 +1684,6 @@
           "candidate_id": 14536
         },
         {
-          "district": "159",
-          "district_name": "9th Worcester",
-          "seat_designator": null,
-          "name": "Dave Muradian",
-          "party": "D",
-          "pres_margin": "+12.4",
-          "next_election": 2026,
-          "candidate_id": 60949
-        },
-        {
           "district": "160",
           "district_name": "Barnstable, Dukes, and Nantucket",
           "seat_designator": null,
@@ -1817,26 +1696,16 @@
       ]
     },
     "Senate": {
-      "total": 74,
+      "total": 40,
       "composition": {
-        "D": 66,
-        "R": 8,
+        "D": 35,
+        "R": 5,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 50,
-      "seats_up_2026": 74,
+      "supermajority": 27,
+      "seats_up_2026": 40,
       "members": [
-        {
-          "district": "1",
-          "district_name": "1st Bristol and Plymouth",
-          "seat_designator": null,
-          "name": "Paul Mark",
-          "party": "D",
-          "pres_margin": "-6.9",
-          "next_election": 2026,
-          "candidate_id": 14622
-        },
         {
           "district": "1",
           "district_name": "1st Bristol and Plymouth",
@@ -1868,26 +1737,6 @@
           "candidate_id": 14587
         },
         {
-          "district": "3",
-          "district_name": "1st Essex and Middlesex",
-          "seat_designator": null,
-          "name": "Julian Cyr",
-          "party": "R",
-          "pres_margin": "+22.6",
-          "next_election": 2026,
-          "candidate_id": 14511
-        },
-        {
-          "district": "4",
-          "district_name": "1st Middlesex",
-          "seat_designator": null,
-          "name": "Jason Lewis",
-          "party": "D",
-          "pres_margin": "+10.7",
-          "next_election": 2026,
-          "candidate_id": 14683
-        },
-        {
           "district": "4",
           "district_name": "1st Middlesex",
           "seat_designator": null,
@@ -1908,26 +1757,6 @@
           "candidate_id": 14622
         },
         {
-          "district": "5",
-          "district_name": "1st Plymouth and Norfolk",
-          "seat_designator": null,
-          "name": "Michael Rodrigues",
-          "party": "R",
-          "pres_margin": "+18.5",
-          "next_election": 2026,
-          "candidate_id": 14641
-        },
-        {
-          "district": "6",
-          "district_name": "1st Suffolk",
-          "seat_designator": null,
-          "name": "Pavel Payano",
-          "party": "D",
-          "pres_margin": "+48.6",
-          "next_election": 2026,
-          "candidate_id": 14635
-        },
-        {
           "district": "6",
           "district_name": "1st Suffolk",
           "seat_designator": null,
@@ -1936,16 +1765,6 @@
           "pres_margin": "+48.6",
           "next_election": 2026,
           "candidate_id": 14647
-        },
-        {
-          "district": "7",
-          "district_name": "1st Worcester",
-          "seat_designator": null,
-          "name": "Bruce Tarr",
-          "party": "D",
-          "pres_margin": "+29.5",
-          "next_election": 2026,
-          "candidate_id": 14655
         },
         {
           "district": "7",
@@ -1964,18 +1783,7 @@
           "name": null,
           "party": "D",
           "pres_margin": "+3.0",
-          "next_election": 2026,
-          "candidate_id": 14612
-        },
-        {
-          "district": "9",
-          "district_name": "2nd Essex",
-          "seat_designator": null,
-          "name": "Patrick O'Connor",
-          "party": "D",
-          "pres_margin": "+23.1",
-          "next_election": 2026,
-          "candidate_id": 14569
+          "next_election": 2026
         },
         {
           "district": "9",
@@ -1998,26 +1806,6 @@
           "candidate_id": 14635
         },
         {
-          "district": "10",
-          "district_name": "2nd Essex and Middlesex",
-          "seat_designator": null,
-          "name": "Nick Collins",
-          "party": "D",
-          "pres_margin": "+14.4",
-          "next_election": 2026,
-          "candidate_id": 14504
-        },
-        {
-          "district": "11",
-          "district_name": "2nd Middlesex",
-          "seat_designator": null,
-          "name": "Robyn Kennedy",
-          "party": "D",
-          "pres_margin": "+61.7",
-          "next_election": 2026,
-          "candidate_id": 14639
-        },
-        {
           "district": "11",
           "district_name": "2nd Middlesex",
           "seat_designator": null,
@@ -2026,16 +1814,6 @@
           "pres_margin": "+61.7",
           "next_election": 2026,
           "candidate_id": 14655
-        },
-        {
-          "district": "12",
-          "district_name": "2nd Plymouth and Norfolk",
-          "seat_designator": null,
-          "name": "Cindy Friedman",
-          "party": "D",
-          "pres_margin": "+22.2",
-          "next_election": 2026,
-          "candidate_id": 14617
         },
         {
           "district": "12",
@@ -2055,27 +1833,7 @@
           "party": "D",
           "pres_margin": "+74.0",
           "next_election": 2026,
-          "candidate_id": 14605
-        },
-        {
-          "district": "13",
-          "district_name": "2nd Suffolk",
-          "seat_designator": null,
-          "name": "Adam G\u00f3mez",
-          "party": "D",
-          "pres_margin": "+74.0",
-          "next_election": 2026,
           "candidate_id": 14493
-        },
-        {
-          "district": "14",
-          "district_name": "2nd Worcester",
-          "seat_designator": null,
-          "name": "John Velis",
-          "party": "D",
-          "pres_margin": "+19.9",
-          "next_election": 2026,
-          "candidate_id": 14624
         },
         {
           "district": "14",
@@ -2095,16 +1853,6 @@
           "party": "R",
           "pres_margin": "-4.7",
           "next_election": 2026,
-          "candidate_id": 14594
-        },
-        {
-          "district": "15",
-          "district_name": "3rd Bristol and Plymouth",
-          "seat_designator": null,
-          "name": "Jake Oliveira",
-          "party": "R",
-          "pres_margin": "-4.7",
-          "next_election": 2026,
           "candidate_id": 14556
         },
         {
@@ -2115,27 +1863,7 @@
           "party": "D",
           "pres_margin": "+18.7",
           "next_election": 2026,
-          "candidate_id": 14507
-        },
-        {
-          "district": "16",
-          "district_name": "3rd Essex",
-          "seat_designator": null,
-          "name": "Jo Comerford",
-          "party": "D",
-          "pres_margin": "+18.7",
-          "next_election": 2026,
           "candidate_id": 14571
-        },
-        {
-          "district": "17",
-          "district_name": "3rd Middlesex",
-          "seat_designator": null,
-          "name": "Karen Spilka",
-          "party": "D",
-          "pres_margin": "+42.8",
-          "next_election": 2026,
-          "candidate_id": 14619
         },
         {
           "district": "17",
@@ -2158,16 +1886,6 @@
           "candidate_id": 14661
         },
         {
-          "district": "18",
-          "district_name": "3rd Suffolk",
-          "seat_designator": null,
-          "name": "Sal DiDomenico",
-          "party": "D",
-          "pres_margin": "+34.0",
-          "next_election": 2026,
-          "candidate_id": 14606
-        },
-        {
           "district": "19",
           "district_name": "4th Middlesex",
           "seat_designator": null,
@@ -2176,26 +1894,6 @@
           "pres_margin": "+32.2",
           "next_election": 2026,
           "candidate_id": 14558
-        },
-        {
-          "district": "19",
-          "district_name": "4th Middlesex",
-          "seat_designator": null,
-          "name": "Jamie Eldridge",
-          "party": "D",
-          "pres_margin": "+32.2",
-          "next_election": 2026,
-          "candidate_id": 14523
-        },
-        {
-          "district": "20",
-          "district_name": "5th Middlesex",
-          "seat_designator": null,
-          "name": "Cynthia Creem",
-          "party": "D",
-          "pres_margin": "+31.8",
-          "next_election": 2026,
-          "candidate_id": 14563
         },
         {
           "district": "20",
@@ -2218,26 +1916,6 @@
           "candidate_id": 14575
         },
         {
-          "district": "21",
-          "district_name": "Berkshire, Hampden, Franklin, and Hampshire",
-          "seat_designator": null,
-          "name": "John Keenan",
-          "party": "D",
-          "pres_margin": "+33.4",
-          "next_election": 2026,
-          "candidate_id": 14646
-        },
-        {
-          "district": "22",
-          "district_name": "Bristol and Norfolk",
-          "seat_designator": null,
-          "name": "Mike Rush",
-          "party": "D",
-          "pres_margin": "+15.8",
-          "next_election": 2026,
-          "candidate_id": 14645
-        },
-        {
           "district": "22",
           "district_name": "Bristol and Norfolk",
           "seat_designator": null,
@@ -2258,26 +1936,6 @@
           "candidate_id": 14685
         },
         {
-          "district": "23",
-          "district_name": "Cape and Islands",
-          "seat_designator": null,
-          "name": "Bill Driscoll",
-          "party": "D",
-          "pres_margin": "+27.6",
-          "next_election": 2026,
-          "candidate_id": 14587
-        },
-        {
-          "district": "24",
-          "district_name": "Hampden",
-          "seat_designator": null,
-          "name": "Becca Rausch",
-          "party": "D",
-          "pres_margin": "+29.3",
-          "next_election": 2026,
-          "candidate_id": 14493
-        },
-        {
           "district": "24",
           "district_name": "Hampden",
           "seat_designator": null,
@@ -2295,27 +1953,7 @@
           "party": "D",
           "pres_margin": "+9.0",
           "next_election": 2026,
-          "candidate_id": 14573
-        },
-        {
-          "district": "25",
-          "district_name": "Hampden and Hampshire",
-          "seat_designator": null,
-          "name": "Dylan Fernandes",
-          "party": "D",
-          "pres_margin": "+9.0",
-          "next_election": 2026,
           "candidate_id": 14544
-        },
-        {
-          "district": "26",
-          "district_name": "Hampden, Hampshire, and Worcester",
-          "seat_designator": null,
-          "name": "Mark Montigny",
-          "party": "D",
-          "pres_margin": "+8.1",
-          "next_election": 2026,
-          "candidate_id": 14556
         },
         {
           "district": "26",
@@ -2345,16 +1983,6 @@
           "party": "D",
           "pres_margin": "+39.9",
           "next_election": 2026,
-          "candidate_id": 14589
-        },
-        {
-          "district": "28",
-          "district_name": "Middlesex and Norfolk",
-          "seat_designator": null,
-          "name": "Barry Finegold",
-          "party": "D",
-          "pres_margin": "+39.9",
-          "next_election": 2026,
           "candidate_id": 14504
         },
         {
@@ -2368,16 +1996,6 @@
           "candidate_id": 14639
         },
         {
-          "district": "29",
-          "district_name": "Middlesex and Suffolk",
-          "seat_designator": null,
-          "name": "Pat Jehlen",
-          "party": "D",
-          "pres_margin": "+55.9",
-          "next_election": 2026,
-          "candidate_id": 14661
-        },
-        {
           "district": "30",
           "district_name": "Middlesex and Worcester",
           "seat_designator": null,
@@ -2386,26 +2004,6 @@
           "pres_margin": "+40.9",
           "next_election": 2026,
           "candidate_id": 14617
-        },
-        {
-          "district": "30",
-          "district_name": "Middlesex and Worcester",
-          "seat_designator": null,
-          "name": "Mike Brady",
-          "party": "D",
-          "pres_margin": "+40.9",
-          "next_election": 2026,
-          "candidate_id": 14558
-        },
-        {
-          "district": "31",
-          "district_name": "Norfolk and Middlesex",
-          "seat_designator": null,
-          "name": "Liz Miranda",
-          "party": "D",
-          "pres_margin": "+61.9",
-          "next_election": 2026,
-          "candidate_id": 14525
         },
         {
           "district": "31",
@@ -2425,16 +2023,6 @@
           "party": "D",
           "pres_margin": "+14.0",
           "next_election": 2026,
-          "candidate_id": 14575
-        },
-        {
-          "district": "32",
-          "district_name": "Norfolk and Plymouth",
-          "seat_designator": null,
-          "name": "Mike Moore",
-          "party": "D",
-          "pres_margin": "+14.0",
-          "next_election": 2026,
           "candidate_id": 14624
         },
         {
@@ -2445,27 +2033,7 @@
           "party": "D",
           "pres_margin": "+34.4",
           "next_election": 2026,
-          "candidate_id": 14618
-        },
-        {
-          "district": "33",
-          "district_name": "Norfolk and Suffolk",
-          "seat_designator": null,
-          "name": "Will Brownsberger",
-          "party": "D",
-          "pres_margin": "+34.4",
-          "next_election": 2026,
           "candidate_id": 14687
-        },
-        {
-          "district": "34",
-          "district_name": "Norfolk, Plymouth, and Bristol",
-          "seat_designator": null,
-          "name": "Kelly Dooner",
-          "party": "D",
-          "pres_margin": "+20.2",
-          "next_election": 2026,
-          "candidate_id": 34385
         },
         {
           "district": "34",
@@ -2488,26 +2056,6 @@
           "candidate_id": 14507
         },
         {
-          "district": "35",
-          "district_name": "Norfolk, Worcester, and Middlesex",
-          "seat_designator": null,
-          "name": "Brendan Crighton",
-          "party": "D",
-          "pres_margin": "+23.3",
-          "next_election": 2026,
-          "candidate_id": 14650
-        },
-        {
-          "district": "36",
-          "district_name": "Plymouth and Barnstable",
-          "seat_designator": null,
-          "name": "Mike Barrett",
-          "party": "D",
-          "pres_margin": "+10.5",
-          "next_election": 2026,
-          "candidate_id": 14544
-        },
-        {
           "district": "36",
           "district_name": "Plymouth and Barnstable",
           "seat_designator": null,
@@ -2526,16 +2074,6 @@
           "pres_margin": "+61.6",
           "next_election": 2026,
           "candidate_id": 14606
-        },
-        {
-          "district": "37",
-          "district_name": "Suffolk and Middlesex",
-          "seat_designator": null,
-          "name": "Lydia Edwards",
-          "party": "D",
-          "pres_margin": "+61.6",
-          "next_election": 2026,
-          "candidate_id": 14687
         },
         {
           "district": "38",

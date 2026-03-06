@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-06T17:20:47.438150Z",
+  "generated_at": "2026-03-06T21:24:16.565981Z",
   "state": {
     "name": "California",
     "abbr": "CA",
@@ -101,15 +101,15 @@
   ],
   "chambers": {
     "Assembly": {
-      "total": 82,
+      "total": 81,
       "composition": {
-        "D": 62,
+        "D": 61,
         "R": 20,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 55,
-      "seats_up_2026": 82,
+      "supermajority": 54,
+      "seats_up_2026": 81,
       "members": [
         {
           "district": "1",
@@ -889,16 +889,6 @@
           "party": "D",
           "pres_margin": "+29.4",
           "next_election": 2026,
-          "candidate_id": 22249
-        },
-        {
-          "district": "77",
-          "district_name": "AD-77",
-          "seat_designator": null,
-          "name": "Tasha Boerner",
-          "party": "D",
-          "pres_margin": "+29.4",
-          "next_election": 2026,
           "candidate_id": 7873
         },
         {
@@ -934,15 +924,15 @@
       ]
     },
     "Senate": {
-      "total": 60,
+      "total": 40,
       "composition": {
-        "D": 47,
-        "R": 13,
+        "D": 31,
+        "R": 9,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 40,
-      "seats_up_2026": 39,
+      "supermajority": 27,
+      "seats_up_2026": 20,
       "members": [
         {
           "district": "1",
@@ -953,16 +943,6 @@
           "pres_margin": "-20.9",
           "next_election": 2028,
           "candidate_id": 7840
-        },
-        {
-          "district": "2",
-          "district_name": "SD-2",
-          "seat_designator": null,
-          "name": "Mike McGuire",
-          "party": "D",
-          "pres_margin": "+43.2",
-          "next_election": 2026,
-          "candidate_id": 7846
         },
         {
           "district": "2",
@@ -995,16 +975,6 @@
           "candidate_id": 7837
         },
         {
-          "district": "4",
-          "district_name": "SD-4",
-          "seat_designator": null,
-          "name": "Marie Alvarado-Gil",
-          "party": "D",
-          "pres_margin": "-12.6",
-          "next_election": 2026,
-          "candidate_id": 7837
-        },
-        {
           "district": "5",
           "district_name": "SD-5",
           "seat_designator": null,
@@ -1013,16 +983,6 @@
           "pres_margin": "+8.3",
           "next_election": 2028,
           "candidate_id": 7810
-        },
-        {
-          "district": "6",
-          "district_name": "SD-6",
-          "seat_designator": null,
-          "name": "Roger Niello",
-          "party": "R",
-          "pres_margin": "-1.1",
-          "next_election": 2026,
-          "candidate_id": 7858
         },
         {
           "district": "6",
@@ -1055,16 +1015,6 @@
           "candidate_id": 7766
         },
         {
-          "district": "8",
-          "district_name": "SD-8",
-          "seat_designator": null,
-          "name": "Angelique Ashby",
-          "party": "D",
-          "pres_margin": "+32.5",
-          "next_election": 2026,
-          "candidate_id": 7766
-        },
-        {
           "district": "9",
           "district_name": "SD-9",
           "seat_designator": null,
@@ -1073,16 +1023,6 @@
           "pres_margin": "+38.3",
           "next_election": 2028,
           "candidate_id": 7875
-        },
-        {
-          "district": "10",
-          "district_name": "SD-10",
-          "seat_designator": null,
-          "name": "Aisha Wahab",
-          "party": "D",
-          "pres_margin": "+37.2",
-          "next_election": 2026,
-          "candidate_id": 7760
         },
         {
           "district": "10",
@@ -1115,16 +1055,6 @@
           "candidate_id": 7864
         },
         {
-          "district": "12",
-          "district_name": "SD-12",
-          "seat_designator": null,
-          "name": "Shannon Grove",
-          "party": "R",
-          "pres_margin": "-25.9",
-          "next_election": 2026,
-          "candidate_id": 7864
-        },
-        {
           "district": "13",
           "district_name": "SD-13",
           "seat_designator": null,
@@ -1133,16 +1063,6 @@
           "pres_margin": "+52.3",
           "next_election": 2028,
           "candidate_id": 7818
-        },
-        {
-          "district": "14",
-          "district_name": "SD-14",
-          "seat_designator": null,
-          "name": "Anna Caballero",
-          "party": "D",
-          "pres_margin": "+4.0",
-          "next_election": 2026,
-          "candidate_id": 7767
         },
         {
           "district": "14",
@@ -1175,16 +1095,6 @@
           "candidate_id": 7841
         },
         {
-          "district": "16",
-          "district_name": "SD-16",
-          "seat_designator": null,
-          "name": "Melissa Hurtado",
-          "party": "D",
-          "pres_margin": "-8.9",
-          "next_election": 2026,
-          "candidate_id": 7841
-        },
-        {
           "district": "17",
           "district_name": "SD-17",
           "seat_designator": null,
@@ -1193,16 +1103,6 @@
           "pres_margin": "+31.9",
           "next_election": 2028,
           "candidate_id": 7816
-        },
-        {
-          "district": "18",
-          "district_name": "SD-18",
-          "seat_designator": null,
-          "name": "Steve Padilla",
-          "party": "D",
-          "pres_margin": "+13.1",
-          "next_election": 2026,
-          "candidate_id": 7869
         },
         {
           "district": "18",
@@ -1235,16 +1135,6 @@
           "candidate_id": 7777
         },
         {
-          "district": "20",
-          "district_name": "SD-20",
-          "seat_designator": null,
-          "name": "Caroline Menjivar",
-          "party": "D",
-          "pres_margin": "+28.1",
-          "next_election": 2026,
-          "candidate_id": 7777
-        },
-        {
           "district": "21",
           "district_name": "SD-21",
           "seat_designator": null,
@@ -1253,16 +1143,6 @@
           "pres_margin": "+22.8",
           "next_election": 2028,
           "candidate_id": 7847
-        },
-        {
-          "district": "22",
-          "district_name": "SD-22",
-          "seat_designator": null,
-          "name": "Susan Rubio",
-          "party": "D",
-          "pres_margin": "+14.1",
-          "next_election": 2026,
-          "candidate_id": 7871
         },
         {
           "district": "22",
@@ -1295,16 +1175,6 @@
           "candidate_id": 7770
         },
         {
-          "district": "24",
-          "district_name": "SD-24",
-          "seat_designator": null,
-          "name": "Ben Allen",
-          "party": "D",
-          "pres_margin": "+37.8",
-          "next_election": 2026,
-          "candidate_id": 7770
-        },
-        {
           "district": "25",
           "district_name": "SD-25",
           "seat_designator": null,
@@ -1313,16 +1183,6 @@
           "pres_margin": "+24.3",
           "next_election": 2028,
           "candidate_id": 7862
-        },
-        {
-          "district": "26",
-          "district_name": "SD-26",
-          "seat_designator": null,
-          "name": "Mar\u00eda Elena Durazo",
-          "party": "D",
-          "pres_margin": "+54.0",
-          "next_election": 2026,
-          "candidate_id": 7836
         },
         {
           "district": "26",
@@ -1355,16 +1215,6 @@
           "candidate_id": 7832
         },
         {
-          "district": "28",
-          "district_name": "SD-28",
-          "seat_designator": null,
-          "name": "Lola Smallwood-Cuevas",
-          "party": "D",
-          "pres_margin": "+60.0",
-          "next_election": 2026,
-          "candidate_id": 7832
-        },
-        {
           "district": "29",
           "district_name": "SD-29",
           "seat_designator": null,
@@ -1373,16 +1223,6 @@
           "pres_margin": "+9.8",
           "next_election": 2028,
           "candidate_id": 7796
-        },
-        {
-          "district": "30",
-          "district_name": "SD-30",
-          "seat_designator": null,
-          "name": "Bob Archuleta",
-          "party": "D",
-          "pres_margin": "+17.3",
-          "next_election": 2026,
-          "candidate_id": 7773
         },
         {
           "district": "30",
@@ -1415,16 +1255,6 @@
           "candidate_id": 7824
         },
         {
-          "district": "32",
-          "district_name": "SD-32",
-          "seat_designator": null,
-          "name": "Kelly Seyarto",
-          "party": "R",
-          "pres_margin": "-15.0",
-          "next_election": 2026,
-          "candidate_id": 7824
-        },
-        {
           "district": "33",
           "district_name": "SD-33",
           "seat_designator": null,
@@ -1433,16 +1263,6 @@
           "pres_margin": "+36.3",
           "next_election": 2028,
           "candidate_id": 7828
-        },
-        {
-          "district": "34",
-          "district_name": "SD-34",
-          "seat_designator": null,
-          "name": "Tom Umberg",
-          "party": "D",
-          "pres_margin": "+16.4",
-          "next_election": 2026,
-          "candidate_id": 7874
         },
         {
           "district": "34",
@@ -1495,26 +1315,6 @@
           "candidate_id": 7778
         },
         {
-          "district": "38",
-          "district_name": "SD-38",
-          "seat_designator": null,
-          "name": "Catherine Blakespear",
-          "party": "D",
-          "pres_margin": "+12.8",
-          "next_election": 2026,
-          "candidate_id": 7778
-        },
-        {
-          "district": "39",
-          "district_name": "SD-39",
-          "seat_designator": null,
-          "name": "Akilah Weber Pierson",
-          "party": "D",
-          "pres_margin": "+27.5",
-          "next_election": 2028,
-          "candidate_id": 21459
-        },
-        {
           "district": "39",
           "district_name": "SD-39",
           "seat_designator": null,
@@ -1523,16 +1323,6 @@
           "pres_margin": "+27.5",
           "next_election": 2028,
           "candidate_id": 7761
-        },
-        {
-          "district": "40",
-          "district_name": "SD-40",
-          "seat_designator": null,
-          "name": "Brian Jones",
-          "party": "R",
-          "pres_margin": "+3.8",
-          "next_election": 2026,
-          "candidate_id": 7774
         },
         {
           "district": "40",

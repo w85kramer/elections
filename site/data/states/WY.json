@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-06T17:20:47.438150Z",
+  "generated_at": "2026-03-06T21:24:16.565981Z",
   "state": {
     "name": "Wyoming",
     "abbr": "WY",
@@ -69,15 +69,15 @@
   ],
   "chambers": {
     "House": {
-      "total": 64,
+      "total": 63,
       "composition": {
         "D": 6,
-        "R": 58,
+        "R": 57,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 43,
-      "seats_up_2026": 64,
+      "supermajority": 42,
+      "seats_up_2026": 63,
       "members": [
         {
           "district": "1",
@@ -157,7 +157,7 @@
           "party": "R",
           "pres_margin": "-37.4",
           "next_election": 2026,
-          "candidate_id": 13581
+          "candidate_id": 13664
         },
         {
           "district": "8",
@@ -167,7 +167,7 @@
           "party": "R",
           "pres_margin": "-37.4",
           "next_election": 2026,
-          "candidate_id": 13664
+          "candidate_id": 13581
         },
         {
           "district": "9",
@@ -178,16 +178,6 @@
           "pres_margin": "-24.4",
           "next_election": 2026,
           "candidate_id": 13551
-        },
-        {
-          "district": "10",
-          "district_name": "HD-10",
-          "seat_designator": null,
-          "name": "Justin Fornstrom",
-          "party": "R",
-          "pres_margin": "-65.0",
-          "next_election": 2026,
-          "candidate_id": 47309
         },
         {
           "district": "10",
@@ -722,26 +712,16 @@
       ]
     },
     "Senate": {
-      "total": 48,
+      "total": 31,
       "composition": {
-        "D": 4,
-        "R": 44,
+        "D": 2,
+        "R": 29,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 32,
-      "seats_up_2026": 32,
+      "supermajority": 21,
+      "seats_up_2026": 16,
       "members": [
-        {
-          "district": "1",
-          "district_name": "SD-1",
-          "seat_designator": null,
-          "name": "Ogden Driskill",
-          "party": "R",
-          "pres_margin": "-79.8",
-          "next_election": 2026,
-          "candidate_id": 13568
-        },
         {
           "district": "1",
           "district_name": "SD-1",
@@ -761,16 +741,6 @@
           "pres_margin": "-70.8",
           "next_election": 2028,
           "candidate_id": 13510
-        },
-        {
-          "district": "3",
-          "district_name": "SD-3",
-          "seat_designator": null,
-          "name": "Cheri Steinmetz",
-          "party": "R",
-          "pres_margin": "-65.9",
-          "next_election": 2026,
-          "candidate_id": 13513
         },
         {
           "district": "3",
@@ -803,26 +773,6 @@
           "candidate_id": 13558
         },
         {
-          "district": "5",
-          "district_name": "SD-5",
-          "seat_designator": null,
-          "name": "Lynn Hutchings",
-          "party": "R",
-          "pres_margin": "-41.4",
-          "next_election": 2026,
-          "candidate_id": 13558
-        },
-        {
-          "district": "6",
-          "district_name": "SD-6",
-          "seat_designator": null,
-          "name": "Taft Love",
-          "party": "R",
-          "pres_margin": "-65.1",
-          "next_election": 2028,
-          "candidate_id": 18081
-        },
-        {
           "district": "6",
           "district_name": "SD-6",
           "seat_designator": null,
@@ -831,16 +781,6 @@
           "pres_margin": "-65.1",
           "next_election": 2028,
           "candidate_id": 13582
-        },
-        {
-          "district": "7",
-          "district_name": "SD-7",
-          "seat_designator": null,
-          "name": "Stephan Pappas",
-          "party": "R",
-          "pres_margin": "-18.1",
-          "next_election": 2026,
-          "candidate_id": 13579
         },
         {
           "district": "7",
@@ -873,16 +813,6 @@
           "candidate_id": 13515
         },
         {
-          "district": "9",
-          "district_name": "SD-9",
-          "seat_designator": null,
-          "name": "Chris Rothfuss",
-          "party": "D",
-          "pres_margin": "+15.7",
-          "next_election": 2026,
-          "candidate_id": 13515
-        },
-        {
           "district": "10",
           "district_name": "SD-10",
           "seat_designator": null,
@@ -891,16 +821,6 @@
           "pres_margin": "-18.3",
           "next_election": 2028,
           "candidate_id": 13529
-        },
-        {
-          "district": "11",
-          "district_name": "SD-11",
-          "seat_designator": null,
-          "name": "Larry Hicks",
-          "party": "R",
-          "pres_margin": "-59.1",
-          "next_election": 2026,
-          "candidate_id": 13552
         },
         {
           "district": "11",
@@ -933,16 +853,6 @@
           "candidate_id": 13578
         },
         {
-          "district": "13",
-          "district_name": "SD-13",
-          "seat_designator": null,
-          "name": "Stacy Jones",
-          "party": "R",
-          "pres_margin": "-50.3",
-          "next_election": 2026,
-          "candidate_id": 13578
-        },
-        {
           "district": "14",
           "district_name": "SD-14",
           "seat_designator": null,
@@ -951,16 +861,6 @@
           "pres_margin": "-65.4",
           "next_election": 2028,
           "candidate_id": 13553
-        },
-        {
-          "district": "15",
-          "district_name": "SD-15",
-          "seat_designator": null,
-          "name": "Wendy Schuler",
-          "party": "R",
-          "pres_margin": "-62.1",
-          "next_election": 2026,
-          "candidate_id": 13591
         },
         {
           "district": "15",
@@ -993,16 +893,6 @@
           "candidate_id": 13563
         },
         {
-          "district": "17",
-          "district_name": "SD-17",
-          "seat_designator": null,
-          "name": "Mike Gierau",
-          "party": "D",
-          "pres_margin": "+36.1",
-          "next_election": 2026,
-          "candidate_id": 13563
-        },
-        {
           "district": "18",
           "district_name": "SD-18",
           "seat_designator": null,
@@ -1011,16 +901,6 @@
           "pres_margin": "-57.0",
           "next_election": 2028,
           "candidate_id": 13584
-        },
-        {
-          "district": "19",
-          "district_name": "SD-19",
-          "seat_designator": null,
-          "name": "Dan Laursen",
-          "party": "R",
-          "pres_margin": "-65.1",
-          "next_election": 2026,
-          "candidate_id": 13521
         },
         {
           "district": "19",
@@ -1053,16 +933,6 @@
           "candidate_id": 13506
         },
         {
-          "district": "21",
-          "district_name": "SD-21",
-          "seat_designator": null,
-          "name": "Bo Biteman",
-          "party": "R",
-          "pres_margin": "-47.2",
-          "next_election": 2026,
-          "candidate_id": 13506
-        },
-        {
           "district": "22",
           "district_name": "SD-22",
           "seat_designator": null,
@@ -1071,16 +941,6 @@
           "pres_margin": "-58.1",
           "next_election": 2028,
           "candidate_id": 13503
-        },
-        {
-          "district": "23",
-          "district_name": "SD-23",
-          "seat_designator": null,
-          "name": "Eric Barlow",
-          "party": "R",
-          "pres_margin": "-80.2",
-          "next_election": 2026,
-          "candidate_id": 13526
         },
         {
           "district": "23",
@@ -1113,16 +973,6 @@
           "candidate_id": 13511
         },
         {
-          "district": "25",
-          "district_name": "SD-25",
-          "seat_designator": null,
-          "name": "Cale Case",
-          "party": "R",
-          "pres_margin": "-11.7",
-          "next_election": 2026,
-          "candidate_id": 13511
-        },
-        {
           "district": "26",
           "district_name": "SD-26",
           "seat_designator": null,
@@ -1131,16 +981,6 @@
           "pres_margin": "-59.7",
           "next_election": 2028,
           "candidate_id": 13585
-        },
-        {
-          "district": "27",
-          "district_name": "SD-27",
-          "seat_designator": null,
-          "name": "Bill Landen",
-          "party": "R",
-          "pres_margin": "-44.0",
-          "next_election": 2026,
-          "candidate_id": 13505
         },
         {
           "district": "27",
@@ -1173,16 +1013,6 @@
           "candidate_id": 13508
         },
         {
-          "district": "29",
-          "district_name": "SD-29",
-          "seat_designator": null,
-          "name": "Bob Ide",
-          "party": "R",
-          "pres_margin": "-47.0",
-          "next_election": 2026,
-          "candidate_id": 13508
-        },
-        {
           "district": "30",
           "district_name": "SD-30",
           "seat_designator": null,
@@ -1191,16 +1021,6 @@
           "pres_margin": "-62.7",
           "next_election": 2028,
           "candidate_id": 13512
-        },
-        {
-          "district": "31",
-          "district_name": "SD-31",
-          "seat_designator": null,
-          "name": "Evie Brennan",
-          "party": "R",
-          "pres_margin": "-33.8",
-          "next_election": 2026,
-          "candidate_id": 13527
         },
         {
           "district": "31",
