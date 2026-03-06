@@ -630,18 +630,17 @@
 
       for (const r of sorted) {
         if (r.isMulti) {
-          // ── Multi-member: one <tr> per member, rowspan on district/margin/election ──
+          // ── Multi-member: one <tr> per member, empty cells for non-first rows ──
           const span = r.members.length;
           r.members.forEach((m, idx) => {
             const tr = document.createElement('tr');
             if (idx === 0) tr.className = 'mm-group-first';
             if (idx < span - 1) tr.classList.add('mm-group-mid');
             if (idx === span - 1) tr.classList.add('mm-group-last');
+
+            // District cell — only populated on first row, empty on others
+            const dtd = tr.insertCell();
             if (idx === 0) {
-              // District cell (rowspan)
-              const dtd = tr.insertCell();
-              dtd.rowSpan = span;
-              dtd.style.verticalAlign = 'top';
               const distLink = buildDistLink(r);
               const linkColor = r.party ? getPartyColor(r.party) : 'var(--ms-navy)';
               distLink.style.color = linkColor;
@@ -663,7 +662,6 @@
               ntd.textContent = 'Vacant';
               ntd.style.color = '#999';
               ntd.style.fontStyle = 'italic';
-              tr.className = 'vacant-row';
             }
 
             // Party badge cell
@@ -675,17 +673,15 @@
               ptd.textContent = '—';
             }
 
+            // Margin cell — only populated on first row
+            const mtd = tr.insertCell();
             if (idx === 0) {
-              // Margin cell (rowspan)
-              const mtd = tr.insertCell();
-              mtd.rowSpan = span;
-              mtd.style.verticalAlign = 'middle';
               buildMarginCell(mtd, r);
+            }
 
-              // Next election cell (rowspan)
-              const utd = tr.insertCell();
-              utd.rowSpan = span;
-              utd.style.verticalAlign = 'middle';
+            // Next election cell — only populated on first row
+            const utd = tr.insertCell();
+            if (idx === 0) {
               buildElectionCell(utd, r);
             }
 
