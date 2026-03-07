@@ -96,7 +96,6 @@ def export_candidates(dry_run=False, single_state=None):
         JOIN states st ON d.state_id = st.id
         JOIN candidates c ON cy.candidate_id = c.id
         WHERE s.office_level = 'Legislative'
-          AND COALESCE(d.redistricting_cycle, '2022') = '2022'
           {state_filter}
         ORDER BY st.abbreviation, cy.candidate_id, e.election_year DESC, e.election_type
     """
@@ -122,7 +121,6 @@ def export_candidates(dry_run=False, single_state=None):
         JOIN districts d ON s.district_id = d.id
         JOIN states st ON d.state_id = st.id
         WHERE s.office_level = 'Legislative'
-          AND COALESCE(d.redistricting_cycle, '2022') = '2022'
           {state_filter}
         ORDER BY st.abbreviation, stm.candidate_id, stm.start_date
     """
@@ -166,7 +164,6 @@ def export_candidates(dry_run=False, single_state=None):
         JOIN states st ON d.state_id = st.id
         JOIN candidates c ON cy.candidate_id = c.id
         WHERE s.office_level = 'Legislative'
-          AND COALESCE(d.redistricting_cycle, '2022') = '2022'
           {state_filter}
         ORDER BY st.abbreviation, cy.election_id,
             CASE cy.result WHEN 'Won' THEN 0 WHEN 'Advanced' THEN 1 ELSE 2 END,

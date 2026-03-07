@@ -225,26 +225,182 @@ def export_all_districts(dry_run=False, single_state=None):
         ORDER BY st.abbreviation, ps.seat_id, ps.switch_year
     """
 
+    # --- Old-era queries (Q8-Q11): elections from non-current redistricting cycles ---
+
+    # Query 8: Old-era districts + seats (for matching and eliminated district generation)
+    q_old_districts = f"""
+        SELECT
+            st.abbreviation as state,
+            d.id as district_id,
+            d.chamber,
+            d.district_number,
+            d.district_name,
+            d.num_seats,
+            d.redistricting_cycle,
+            s.id as seat_id,
+            s.seat_designator
+        FROM seats s
+        JOIN districts d ON s.district_id = d.id
+        JOIN states st ON d.state_id = st.id
+        WHERE s.office_level = 'Legislative'
+          AND d.redistricting_cycle IS NOT NULL
+          AND d.redistricting_cycle != '2022'
+          AND d.redistricting_cycle != 'permanent'
+          {state_filter}
+        ORDER BY st.abbreviation, d.chamber, d.district_number, s.seat_designator
+    """
+
+    # Query 9: Old-era elections
+    q_old_elections = f"""
+        SELECT
+            st.abbreviation as state,
+            d.chamber as old_chamber,
+            d.district_number as old_district_number,
+            d.num_seats as old_num_seats,
+            d.redistricting_cycle as old_cycle,
+            e.id as election_id,
+            e.seat_id,
+            e.election_date,
+            e.election_year,
+            e.election_type,
+            e.total_votes_cast,
+            e.is_open_seat,
+            e.result_status,
+            e.filing_deadline,
+            e.forecast_rating,
+            e.precincts_reporting,
+            e.precincts_total
+        FROM elections e
+        JOIN seats s ON e.seat_id = s.id
+        JOIN districts d ON s.district_id = d.id
+        JOIN states st ON d.state_id = st.id
+        WHERE s.office_level = 'Legislative'
+          AND d.redistricting_cycle IS NOT NULL
+          AND d.redistricting_cycle != '2022'
+          AND d.redistricting_cycle != 'permanent'
+          {state_filter}
+        ORDER BY st.abbreviation, e.seat_id, e.election_year DESC, e.election_type
+    """
+
+    # Query 10: Old-era candidacies
+    q_old_candidacies = f"""
+        SELECT
+            st.abbreviation as state,
+            d.chamber as old_chamber,
+            d.district_number as old_district_number,
+            cy.election_id,
+            cy.candidate_id,
+            c.full_name as name,
+            cy.party,
+            cy.caucus,
+            cy.votes_received as votes,
+            cy.vote_percentage as pct,
+            cy.result,
+            cy.is_incumbent,
+            cy.is_write_in,
+            cy.candidate_status
+        FROM candidacies cy
+        JOIN elections e ON cy.election_id = e.id
+        JOIN seats s ON e.seat_id = s.id
+        JOIN districts d ON s.district_id = d.id
+        JOIN states st ON d.state_id = st.id
+        JOIN candidates c ON cy.candidate_id = c.id
+        WHERE s.office_level = 'Legislative'
+          AND d.redistricting_cycle IS NOT NULL
+          AND d.redistricting_cycle != '2022'
+          AND d.redistricting_cycle != 'permanent'
+          {state_filter}
+        ORDER BY st.abbreviation, cy.election_id,
+            CASE cy.result WHEN 'Won' THEN 0 WHEN 'Advanced' THEN 1 ELSE 2 END,
+            cy.votes_received DESC NULLS LAST
+    """
+
+    # Query 11: Old-era seat terms
+    q_old_terms = f"""
+        SELECT
+            st.abbreviation as state,
+            d.chamber as old_chamber,
+            d.district_number as old_district_number,
+            stm.seat_id,
+            c.full_name as holder_name,
+            stm.party as holder_party,
+            stm.caucus as holder_caucus,
+            stm.start_date,
+            stm.end_date,
+            stm.start_reason,
+            stm.end_reason,
+            stm.notes
+        FROM seat_terms stm
+        JOIN seats s ON stm.seat_id = s.id
+        JOIN districts d ON s.district_id = d.id
+        JOIN states st ON d.state_id = st.id
+        JOIN candidates c ON stm.candidate_id = c.id
+        WHERE s.office_level = 'Legislative'
+          AND d.redistricting_cycle IS NOT NULL
+          AND d.redistricting_cycle != '2022'
+          AND d.redistricting_cycle != 'permanent'
+          {state_filter}
+        ORDER BY st.abbreviation, stm.seat_id, stm.start_date
+    """
+
+    # Query 12: Old-era party switches
+    q_old_switches = f"""
+        SELECT
+            st.abbreviation as state,
+            d.chamber as old_chamber,
+            d.district_number as old_district_number,
+            ps.seat_id,
+            c.full_name as name,
+            ps.old_party,
+            ps.new_party,
+            ps.old_caucus,
+            ps.new_caucus,
+            ps.switch_year,
+            ps.switch_date,
+            ps.bp_profile_url
+        FROM party_switches ps
+        JOIN seats s ON ps.seat_id = s.id
+        JOIN districts d ON s.district_id = d.id
+        JOIN states st ON d.state_id = st.id
+        JOIN candidates c ON ps.candidate_id = c.id
+        WHERE s.office_level = 'Legislative'
+          AND d.redistricting_cycle IS NOT NULL
+          AND d.redistricting_cycle != '2022'
+          AND d.redistricting_cycle != 'permanent'
+          {state_filter}
+        ORDER BY st.abbreviation, ps.seat_id, ps.switch_year
+    """
+
     if dry_run:
-        print('  Would run 7 queries and write district JSON files')
+        print('  Would run 12 queries and write district JSON files')
         print(f'\n  Sample query (districts):\n{q_districts[:300]}...')
         return
 
-    print('  Running 7 bulk queries...')
+    print('  Running 12 bulk queries...')
     districts_data = run_sql(q_districts)
-    print(f'    1/7 districts+seats: {len(districts_data)} rows')
+    print(f'    1/12 districts+seats: {len(districts_data)} rows')
     elections_data = run_sql(q_elections)
-    print(f'    2/7 elections: {len(elections_data)} rows')
+    print(f'    2/12 elections: {len(elections_data)} rows')
     candidacies_data = run_sql(q_candidacies)
-    print(f'    3/7 candidacies: {len(candidacies_data)} rows')
+    print(f'    3/12 candidacies: {len(candidacies_data)} rows')
     terms_data = run_sql(q_terms)
-    print(f'    4/7 seat_terms: {len(terms_data)} rows')
+    print(f'    4/12 seat_terms: {len(terms_data)} rows')
     states_data = run_sql(q_states)
-    print(f'    5/7 states: {len(states_data)} rows')
+    print(f'    5/12 states: {len(states_data)} rows')
     forecasts_data = run_sql(q_forecasts)
-    print(f'    6/7 forecasts: {len(forecasts_data)} rows')
+    print(f'    6/12 forecasts: {len(forecasts_data)} rows')
     switches_data = run_sql(q_switches)
-    print(f'    7/7 party_switches: {len(switches_data)} rows')
+    print(f'    7/12 party_switches: {len(switches_data)} rows')
+    old_districts_data = run_sql(q_old_districts)
+    print(f'    8/12 old-era districts: {len(old_districts_data)} rows')
+    old_elections_data = run_sql(q_old_elections)
+    print(f'    9/12 old-era elections: {len(old_elections_data)} rows')
+    old_candidacies_data = run_sql(q_old_candidacies)
+    print(f'    10/12 old-era candidacies: {len(old_candidacies_data)} rows')
+    old_terms_data = run_sql(q_old_terms)
+    print(f'    11/12 old-era seat_terms: {len(old_terms_data)} rows')
+    old_switches_data = run_sql(q_old_switches)
+    print(f'    12/12 old-era party_switches: {len(old_switches_data)} rows')
 
     # --- Index data ---
 
@@ -281,6 +437,46 @@ def export_all_districts(dry_run=False, single_state=None):
     switches_by_seat = {}
     for r in switches_data:
         switches_by_seat.setdefault(r['seat_id'], []).append(r)
+
+    # --- Index old-era data ---
+
+    # Old-era elections indexed by seat_id
+    old_elections_by_seat = {}
+    for r in old_elections_data:
+        old_elections_by_seat.setdefault(r['seat_id'], []).append(r)
+
+    # Old-era candidacies indexed by election_id
+    old_candidacies_by_election = {}
+    for r in old_candidacies_data:
+        old_candidacies_by_election.setdefault(r['election_id'], []).append(r)
+
+    # Old-era terms indexed by seat_id
+    old_terms_by_seat = {}
+    for r in old_terms_data:
+        old_terms_by_seat.setdefault(r['seat_id'], []).append(r)
+
+    # Old-era party switches indexed by seat_id
+    old_switches_by_seat = {}
+    for r in old_switches_data:
+        old_switches_by_seat.setdefault(r['seat_id'], []).append(r)
+
+    # Build old-era district info: (state, chamber, district_number) -> {num_seats, cycle, seat_ids}
+    old_district_info = {}  # (state, chamber, district_number) -> dict
+    for r in old_districts_data:
+        key = (r['state'], r['chamber'], r['district_number'])
+        if key not in old_district_info:
+            old_district_info[key] = {
+                'district_id': r['district_id'],
+                'district_name': r['district_name'],
+                'num_seats': r['num_seats'],
+                'redistricting_cycle': r['redistricting_cycle'],
+                'seat_ids': [],
+            }
+        old_district_info[key]['seat_ids'].append(r['seat_id'])
+
+    # Track which old districts are matched to current districts (by name)
+    # Will be populated below when building current districts
+    matched_old_districts = set()
 
     # --- Group districts by state, then by district_id ---
     # Multiple seats can share the same district (multi-member)
@@ -407,6 +603,166 @@ def export_all_districts(dry_run=False, single_state=None):
             seat_obj['raw_caucus'] = 'C'
         districts_by_state[state][did]['seats'].append(seat_obj)
 
+    # --- Helper: build election/term/switch objects from old-era seat data ---
+    def build_old_era_elections(seat_ids, state):
+        """Build election list, term_events, and party_switches from old-era seat IDs."""
+        min_year = MIN_EXPORT_YEAR.get(state, 0)
+        elections = []
+        term_events = []
+        party_switches = []
+        interesting_reasons = {'resigned', 'died', 'removed', 'appointed_elsewhere'}
+
+        for sid in seat_ids:
+            for e in old_elections_by_seat.get(sid, []):
+                if e['election_year'] < min_year:
+                    continue
+                cands = old_candidacies_by_election.get(e['election_id'], [])
+                candidate_list = []
+                for c in cands:
+                    cand_obj = {
+                        'id': c['candidate_id'],
+                        'name': c['name'],
+                        'party': c['party'],
+                        'votes': c['votes'],
+                        'pct': float(c['pct']) if c['pct'] is not None else None,
+                        'result': c['result'],
+                        'is_incumbent': c['is_incumbent'],
+                        'is_write_in': c['is_write_in'],
+                    }
+                    if c.get('caucus'):
+                        cand_obj['caucus'] = c['caucus']
+                    candidate_list.append(cand_obj)
+
+                elec_obj = {
+                    'year': e['election_year'],
+                    'type': e['election_type'],
+                    'date': str(e['election_date']) if e.get('election_date') else None,
+                    'total_votes': e['total_votes_cast'],
+                    'is_open_seat': e['is_open_seat'],
+                    'result_status': e['result_status'],
+                    'filing_deadline': str(e['filing_deadline']) if e.get('filing_deadline') else None,
+                    'forecast_rating': e['forecast_rating'],
+                    'candidates': candidate_list,
+                    'old_era': True,
+                }
+                if e.get('precincts_reporting') is not None:
+                    elec_obj['precincts_reporting'] = e['precincts_reporting']
+                    elec_obj['precincts_total'] = e['precincts_total']
+                elections.append(elec_obj)
+
+            for t in old_terms_by_seat.get(sid, []):
+                if t.get('end_reason') in interesting_reasons and t.get('end_date'):
+                    end_date_str = str(t['end_date'])
+                    term_events.append({
+                        'name': t['holder_name'],
+                        'party': t['holder_party'],
+                        'year': int(end_date_str[:4]),
+                        'date': end_date_str,
+                        'reason': t['end_reason'],
+                        'notes': t.get('notes'),
+                    })
+
+            for sw in old_switches_by_seat.get(sid, []):
+                party_switches.append({
+                    'name': sw['name'],
+                    'year': sw['switch_year'],
+                    'date': str(sw['switch_date']) if sw.get('switch_date') else None,
+                    'old_party': sw['old_party'],
+                    'new_party': sw['new_party'],
+                    'old_caucus': sw.get('old_caucus'),
+                    'new_caucus': sw.get('new_caucus'),
+                    'bp_url': sw.get('bp_profile_url'),
+                })
+
+        return elections, term_events, party_switches
+
+    # --- Merge old-era elections into matching current districts ---
+    for state, dists in districts_by_state.items():
+        for did, dinfo in dists.items():
+            key = (state, dinfo['chamber'], dinfo['district_number'])
+            old_info = old_district_info.get(key)
+            if not old_info:
+                continue
+            matched_old_districts.add(key)
+
+            old_elecs, old_term_evts, old_switches = build_old_era_elections(
+                old_info['seat_ids'], state
+            )
+            if not old_elecs and not old_term_evts and not old_switches:
+                continue
+
+            # Record old-era seat count if different from current
+            if old_info['num_seats'] != dinfo['num_seats']:
+                dinfo['old_era_seats'] = old_info['num_seats']
+
+            # Append old-era elections to the first seat (seat A)
+            # For bloc-voting old-era districts, all candidates appeared in one pool
+            primary_seat = dinfo['seats'][0]
+            primary_seat['elections'].extend(old_elecs)
+            primary_seat['term_events'].extend(old_term_evts)
+            primary_seat['party_switches'].extend(old_switches)
+
+    # --- Generate eliminated district entries (old-era only, not in current cycle) ---
+    for key, old_info in old_district_info.items():
+        if key in matched_old_districts:
+            continue
+        state, chamber, dist_num = key
+        old_elecs, old_term_evts, old_switches = build_old_era_elections(
+            old_info['seat_ids'], state
+        )
+        if not old_elecs:
+            continue  # No elections to show — skip
+
+        rc = old_info['redistricting_cycle']
+        redistricting_year = int(rc) if rc else None
+
+        if state not in districts_by_state:
+            districts_by_state[state] = {}
+
+        # Use a synthetic district_id key (negative to avoid collision)
+        synthetic_id = f'old_{old_info["district_id"]}'
+
+        # Build a minimal seat object for the eliminated district
+        eliminated_seat = {
+            'seat_id': None,
+            'seat_label': f'{chamber} {dist_num}',
+            'seat_designator': 'A',
+            'current_holder': None,
+            'current_holder_party': None,
+            'current_holder_caucus': None,
+            'term_length': None,
+            'next_election': None,
+            'election_class': None,
+            'since_year': None,
+            'elections': old_elecs,
+            'party_switches': old_switches,
+            'term_events': old_term_evts,
+            'forecast': None,
+        }
+
+        districts_by_state[state][synthetic_id] = {
+            'district_number': dist_num,
+            'district_name': old_info['district_name'],
+            'chamber': chamber,
+            'num_seats': old_info['num_seats'],
+            'pres_2024_margin': None,
+            'pres_2024_winner': None,
+            'redistricting_year': redistricting_year,
+            'is_floterial': False,
+            'eliminated': True,
+            'redistricting_cycle': rc,
+            'seats': [eliminated_seat],
+        }
+
+    # --- Detect new districts (exist in 2022 cycle but not in any older cycle) ---
+    for state, dists in districts_by_state.items():
+        for did, dinfo in dists.items():
+            if dinfo.get('eliminated'):
+                continue
+            key = (state, dinfo['chamber'], dinfo['district_number'])
+            if key not in old_district_info and dinfo.get('redistricting_year'):
+                dinfo['is_new_district'] = True
+
     # --- Detect bloc voting for multi-member districts ---
     # Bloc voting: seats share identical candidate sets for the same election.
     # If no elections have candidates to compare, assume bloc voting for multi-member.
@@ -512,7 +868,16 @@ def export_all_districts(dry_run=False, single_state=None):
         dists = districts_by_state[state]
 
         district_list = []
-        for did in sorted(dists.keys()):
+        # Sort districts by chamber, then by district_number (numeric then alpha)
+        def dist_sort_key(did):
+            d = dists[did]
+            dn = d['district_number']
+            try:
+                num = int(dn)
+            except (ValueError, TypeError):
+                num = 99999
+            return (d['chamber'], num, dn)
+        for did in sorted(dists.keys(), key=dist_sort_key):
             d = dists[did]
 
             # Compute partisan shift: compare earliest and most recent general election margin
@@ -565,6 +930,14 @@ def export_all_districts(dry_run=False, single_state=None):
                 'partisan_shift': partisan_shift,
                 'similar_districts': similar,
             }
+            # Add optional flags for old-era data
+            if d.get('eliminated'):
+                district_obj['eliminated'] = True
+                district_obj['redistricting_cycle'] = d.get('redistricting_cycle')
+            if d.get('old_era_seats'):
+                district_obj['old_era_seats'] = d['old_era_seats']
+            if d.get('is_new_district'):
+                district_obj['is_new_district'] = True
 
             # Count elections for stats
             for seat in d['seats']:

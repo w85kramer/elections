@@ -453,10 +453,10 @@
   }
 
   // --- Live data: fetch uncertified 2026 elections from Supabase ---
-  const seatIds = district.seats.map(s => s.seat_id);
+  const seatIds = district.seats.map(s => s.seat_id).filter(Boolean);
   let liveDataApplied = false;
 
-  if (needsLiveData(district)) {
+  if (!isEliminated && needsLiveData(district)) {
     try {
       let liveElections = getCachedLiveData(seatIds);
       if (!liveElections) {
@@ -581,12 +581,21 @@
   // ==========================
   // 1. HERO SECTION
   // ==========================
+  const isEliminated = district.eliminated || false;
+
   let heroHtml = `<div class="district-hero">
     <div class="district-title">${displayName}</div>
     <div class="district-subtitle">${fullLabel}</div>`;
 
-  // Current holders
-  if (isMultiSeat) {
+  if (isEliminated) {
+    heroHtml += `<div style="margin-top:10px;padding:8px 14px;background:var(--ms-bg-light);border-left:4px solid var(--ms-navy);color:var(--ms-text-light);font-size:14px;border-radius:4px">
+      This district was eliminated after ${district.redistricting_year || ''} redistricting.</div>`;
+  }
+
+  // Current holders (skip for eliminated districts)
+  if (isEliminated) {
+    // No current holder display for eliminated districts
+  } else if (isMultiSeat) {
     heroHtml += `<div class="holders-list">`;
     for (const s of district.seats) {
       const label = s.seat_designator ? `Seat ${s.seat_designator}` : s.seat_label;
@@ -615,7 +624,10 @@
     </div>`;
   }
 
-  // Quick stats
+  // Quick stats (skip for eliminated districts)
+  if (isEliminated) {
+    heroHtml += `</div>`;
+  } else {
   const termLen = primarySeat.term_length || '—';
   const nextElec = primarySeat.next_election || '—';
   const presMargin = district.pres_2024_margin;
@@ -638,6 +650,7 @@
     heroHtml += `<div class="qs-item"><span class="qs-label">Seats:</span> ${district.num_seats} (multi-member)</div>`;
   }
   heroHtml += `</div></div>`;
+  } // end if (!isEliminated) quick stats
 
   // ==========================
   // 2. PARTISAN TREND CHART
@@ -693,7 +706,7 @@
   // ==========================
   let elec2026Html = '';
   const races2026 = [];
-  for (const s of district.seats) {
+  if (!isEliminated) for (const s of district.seats) {
     if (s.next_election !== 2026) continue;
     const upcoming = s.elections.filter(e => e.year === 2026);
     const general = upcoming.find(e => e.type === 'General');
@@ -799,9 +812,18 @@
   }
 
   function renderRedistrictingCard(rd) {
-    const marginNote = rd.newMargin ? ` <span class="redistricting-detail">&middot; New lines: ${rd.newMargin}</span>` : '';
+    let detail = '';
+    if (rd.seatChange) {
+      detail = ` <span class="redistricting-detail">&middot; ${rd.seatChange}</span>`;
+    } else if (rd.newMargin) {
+      detail = ` <span class="redistricting-detail">&middot; New lines: ${rd.newMargin}</span>`;
+    }
+    const label = rd.eliminated ? 'District Eliminated' : rd.created ? 'District Created' : 'District Redrawn';
+    const desc = rd.eliminated ? 'District eliminated during redistricting'
+      : rd.created ? 'New district established during redistricting'
+      : 'New district lines took effect';
     return `<div class="timeline-event redistricting-event">
-      <span class="redistricting-label">District Redrawn</span> &middot; New district lines took effect${marginNote}
+      <span class="redistricting-label">${label}</span> &middot; ${desc}${detail}
     </div>`;
   }
 
@@ -988,6 +1010,8 @@
       const hasAfter = elecYears.some(y => y >= ry);
       if (hasBefore && hasAfter) {
         const marginStr = district.pres_2024_margin ? marginLabel(district.pres_2024_margin) : null;
+        const seatChange = district.old_era_seats && district.old_era_seats !== district.num_seats
+          ? `${district.old_era_seats} seats \u2192 ${district.num_seats} seats` : null;
         let redistrictDate = `${ry}-01-01`;
         const ryElecs = elections.filter(e => e.year === ry && e.date);
         const specialDates = ryElecs.filter(e => e.type.includes('Special')).map(e => e.date).sort();
@@ -1000,7 +1024,23 @@
           type: 'redistricting',
           year: ry,
           date: redistrictDate,
-          data: { year: ry, newMargin: marginStr }
+          data: { year: ry, newMargin: marginStr, seatChange }
+        });
+      } else if (district.eliminated && hasBefore) {
+        // Eliminated district: show terminal event
+        events.push({
+          type: 'redistricting',
+          year: ry,
+          date: `${ry}-01-01`,
+          data: { year: ry, eliminated: true }
+        });
+      } else if (district.is_new_district && hasAfter && !hasBefore) {
+        // New district with no old-era history
+        events.push({
+          type: 'redistricting',
+          year: ry,
+          date: `${ry}-01-01`,
+          data: { year: ry, created: true }
         });
       }
     }
@@ -1039,6 +1079,8 @@
       const hasAfter = elecYears.some(y => y >= ry);
       if (hasBefore && hasAfter) {
         const marginStr = district.pres_2024_margin ? marginLabel(district.pres_2024_margin) : null;
+        const seatChange = district.old_era_seats && district.old_era_seats !== district.num_seats
+          ? `${district.old_era_seats} seats \u2192 ${district.num_seats} seats` : null;
         let redistrictDate = `${ry}-01-01`;
         const ryElecs = events.filter(ev => ev.type === 'election' && ev.year === ry && ev.data.date);
         const specialDates = ryElecs.filter(ev => ev.data.type.includes('Special')).map(ev => ev.data.date).sort();
@@ -1051,7 +1093,21 @@
           type: 'redistricting',
           year: ry,
           date: redistrictDate,
-          data: { year: ry, newMargin: marginStr }
+          data: { year: ry, newMargin: marginStr, seatChange }
+        });
+      } else if (district.eliminated && hasBefore) {
+        events.push({
+          type: 'redistricting',
+          year: ry,
+          date: `${ry}-01-01`,
+          data: { year: ry, eliminated: true }
+        });
+      } else if (district.is_new_district && hasAfter && !hasBefore) {
+        events.push({
+          type: 'redistricting',
+          year: ry,
+          date: `${ry}-01-01`,
+          data: { year: ry, created: true }
         });
       }
     }
