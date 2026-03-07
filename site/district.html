@@ -453,6 +453,7 @@
   }
 
   // --- Live data: fetch uncertified 2026 elections from Supabase ---
+  const isEliminated = district.eliminated || false;
   const seatIds = district.seats.map(s => s.seat_id).filter(Boolean);
   let liveDataApplied = false;
 
@@ -581,8 +582,6 @@
   // ==========================
   // 1. HERO SECTION
   // ==========================
-  const isEliminated = district.eliminated || false;
-
   let heroHtml = `<div class="district-hero">
     <div class="district-title">${displayName}</div>
     <div class="district-subtitle">${fullLabel}</div>`;
