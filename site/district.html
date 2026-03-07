@@ -1352,6 +1352,19 @@
         return geoDist === '00' + distLetter || geoName.endsWith(' ' + distLetter);
       }
 
+      // Named districts (NH, VT, etc.): convert "Belknap-4" to match "Belknap 04"
+      // by splitting on dash, zero-padding the numeric suffix, and checking NAMELSAD
+      const dashIdx = distNum.lastIndexOf('-');
+      if (dashIdx > 0) {
+        const prefix = distNum.substring(0, dashIdx);
+        const suffix = distNum.substring(dashIdx + 1);
+        const paddedSuffix = suffix.padStart(2, '0');
+        const namedPattern = (prefix + ' ' + paddedSuffix).toLowerCase();
+        if (geoNameLower.includes(namedPattern)) return true;
+        // Also try unpadded
+        if (geoNameLower.includes((prefix + ' ' + suffix).toLowerCase())) return true;
+      }
+
       return geoDist === distNum
         || geoDist === distNum.padStart(3, '0')
         || geoDist === distNum.padStart(2, '0')

@@ -714,7 +714,11 @@ def export_all_districts(dry_run=False, single_state=None):
             continue  # No elections to show — skip
 
         rc = old_info['redistricting_cycle']
-        redistricting_year = int(rc) if rc else None
+        # redistricting_year = when this district was eliminated (the next cycle start),
+        # not when it was created. Any old-era district not in 2022 was eliminated by
+        # the 2022 redistricting. If future cycles are added, this should find the
+        # next cycle after rc instead of hardcoding.
+        redistricting_year = 2022
 
         if state not in districts_by_state:
             districts_by_state[state] = {}
