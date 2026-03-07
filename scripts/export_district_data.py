@@ -605,9 +605,14 @@ def export_all_districts(dry_run=False, single_state=None):
 
     # --- Helper: build election/term/switch objects from old-era seat data ---
     def build_old_era_elections(seat_ids, state):
-        """Build election list, term_events, and party_switches from old-era seat IDs."""
+        """Build election list, term_events, and party_switches from old-era seat IDs.
+
+        For bloc-voting multi-member districts, the same election (year/type/date)
+        appears on every seat. Deduplicate by merging candidates from all seats
+        into a single election object per (year, type, date).
+        """
         min_year = MIN_EXPORT_YEAR.get(state, 0)
-        elections = []
+        elections_map = {}  # (year, type, date) -> elec_obj
         term_events = []
         party_switches = []
         interesting_reasons = {'resigned', 'died', 'removed', 'appointed_elsewhere'}
@@ -616,6 +621,9 @@ def export_all_districts(dry_run=False, single_state=None):
             for e in old_elections_by_seat.get(sid, []):
                 if e['election_year'] < min_year:
                     continue
+                edate = str(e['election_date']) if e.get('election_date') else None
+                dedup_key = (e['election_year'], e['election_type'], edate)
+
                 cands = old_candidacies_by_election.get(e['election_id'], [])
                 candidate_list = []
                 for c in cands:
@@ -633,23 +641,36 @@ def export_all_districts(dry_run=False, single_state=None):
                         cand_obj['caucus'] = c['caucus']
                     candidate_list.append(cand_obj)
 
-                elec_obj = {
-                    'year': e['election_year'],
-                    'type': e['election_type'],
-                    'date': str(e['election_date']) if e.get('election_date') else None,
-                    'total_votes': e['total_votes_cast'],
-                    'is_open_seat': e['is_open_seat'],
-                    'result_status': e['result_status'],
-                    'filing_deadline': str(e['filing_deadline']) if e.get('filing_deadline') else None,
-                    'forecast_rating': e['forecast_rating'],
-                    'candidates': candidate_list,
-                    'old_era': True,
-                }
-                if e.get('precincts_reporting') is not None:
-                    elec_obj['precincts_reporting'] = e['precincts_reporting']
-                    elec_obj['precincts_total'] = e['precincts_total']
-                elections.append(elec_obj)
+                if dedup_key in elections_map:
+                    # Merge: add any candidates not already present (by candidate id)
+                    existing_ids = {c['id'] for c in elections_map[dedup_key]['candidates']}
+                    for c in candidate_list:
+                        if c['id'] not in existing_ids:
+                            elections_map[dedup_key]['candidates'].append(c)
+                            existing_ids.add(c['id'])
+                    # Use highest total_votes across seats
+                    if (e['total_votes_cast'] or 0) > (elections_map[dedup_key]['total_votes'] or 0):
+                        elections_map[dedup_key]['total_votes'] = e['total_votes_cast']
+                else:
+                    elections_map[dedup_key] = {
+                        'year': e['election_year'],
+                        'type': e['election_type'],
+                        'date': edate,
+                        'total_votes': e['total_votes_cast'],
+                        'is_open_seat': e['is_open_seat'],
+                        'result_status': e['result_status'],
+                        'filing_deadline': str(e['filing_deadline']) if e.get('filing_deadline') else None,
+                        'forecast_rating': e['forecast_rating'],
+                        'candidates': candidate_list,
+                        'old_era': True,
+                    }
+                    if e.get('precincts_reporting') is not None:
+                        elections_map[dedup_key]['precincts_reporting'] = e['precincts_reporting']
+                        elections_map[dedup_key]['precincts_total'] = e['precincts_total']
 
+        elections = list(elections_map.values())
+
+        for sid in seat_ids:
             for t in old_terms_by_seat.get(sid, []):
                 if t.get('end_reason') in interesting_reasons and t.get('end_date'):
                     end_date_str = str(t['end_date'])
