@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-06T21:24:16.565981Z",
+  "generated_at": "2026-03-08T22:21:53.815775Z",
   "state": {
     "name": "Maryland",
     "abbr": "MD",
@@ -87,15 +87,15 @@
   ],
   "chambers": {
     "House of Delegates": {
-      "total": 142,
+      "total": 141,
       "composition": {
         "D": 102,
-        "R": 40,
+        "R": 39,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 95,
-      "seats_up_2026": 142,
+      "supermajority": 94,
+      "seats_up_2026": 141,
       "members": [
         {
           "district": "3",
@@ -455,7 +455,7 @@
           "party": "D",
           "pres_margin": "+61.4",
           "next_election": 2026,
-          "candidate_id": 13654
+          "candidate_id": 66760
         },
         {
           "district": "19",
@@ -1095,16 +1095,6 @@
           "party": "R",
           "pres_margin": "-35.6",
           "next_election": 2026,
-          "candidate_id": 9956
-        },
-        {
-          "district": "29A",
-          "district_name": "HD-29A",
-          "seat_designator": null,
-          "name": "Matt Morgan",
-          "party": "R",
-          "pres_margin": "-35.6",
-          "next_election": 2026,
           "candidate_id": 12838
         },
         {
@@ -1315,7 +1305,7 @@
           "party": "R",
           "pres_margin": "-15.9",
           "next_election": 2026,
-          "candidate_id": 9947
+          "candidate_id": 66742
         },
         {
           "district": "38B",
@@ -1728,7 +1718,7 @@
           "party": "D",
           "pres_margin": "+70.4",
           "next_election": 2026,
-          "candidate_id": 9943
+          "candidate_id": 66741
         },
         {
           "district": "21",
@@ -2148,29 +2138,6 @@
         ]
       },
       {
-        "office": "Controller",
-        "candidates": [
-          {
-            "name": "Brooke Lierman",
-            "party": "D",
-            "is_incumbent": true,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Sindicat Dunn",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Sonya Dunn",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          }
-        ]
-      },
-      {
         "office": "Lt. Governor",
         "candidates": [
           {
@@ -2426,7 +2393,7 @@
         ]
       },
       {
-        "seat_label": "MD HoD 5 Seat B",
+        "seat_label": "MD HoD 5 Seat A",
         "chamber": "House of Delegates",
         "district": "5",
         "candidates": [
@@ -2602,7 +2569,7 @@
         ]
       },
       {
-        "seat_label": "MD HoD 8 Seat B",
+        "seat_label": "MD HoD 8 Seat A",
         "chamber": "House of Delegates",
         "district": "8",
         "candidates": [
@@ -2760,7 +2727,7 @@
         ]
       },
       {
-        "seat_label": "MD HoD 13 Seat C",
+        "seat_label": "MD HoD 13 Seat A",
         "chamber": "House of Delegates",
         "district": "13",
         "candidates": [
@@ -3177,7 +3144,7 @@
         ]
       },
       {
-        "seat_label": "MD HoD 22 Seat A",
+        "seat_label": "MD HoD 22 Seat B",
         "chamber": "House of Delegates",
         "district": "22",
         "candidates": [
@@ -3512,7 +3479,7 @@
         ]
       },
       {
-        "seat_label": "MD HoD 28 Seat A",
+        "seat_label": "MD HoD 28 Seat C",
         "chamber": "House of Delegates",
         "district": "28",
         "candidates": [
@@ -3731,7 +3698,7 @@
         ]
       },
       {
-        "seat_label": "MD HoD 36 Seat A",
+        "seat_label": "MD HoD 36 Seat C",
         "chamber": "House of Delegates",
         "district": "36",
         "candidates": [
