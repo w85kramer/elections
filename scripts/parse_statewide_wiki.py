@@ -202,6 +202,20 @@ def find_officeholder_table(soup, office):
     office_label = OFFICE_LABELS[office].lower()
     tables = soup.find_all('table', class_='wikitable')
 
+    # Also check tables without wikitable class (e.g., OR AG)
+    if not tables:
+        all_tables = soup.find_all('table')
+        for t in all_tables:
+            classes = t.get('class', [])
+            if any(c in classes for c in ['infobox', 'navbox-inner', 'sidebar', 'sidebar-subgroup']):
+                continue
+            rows = len(t.find_all('tr'))
+            if rows > 5:
+                headers = get_header_texts(t)
+                header_str = ' '.join(h.lower() for h in headers)
+                if any(kw in header_str for kw in ['name', 'party', 'term', 'took office', 'left office']):
+                    tables.append(t)
+
     if not tables:
         return None
 
@@ -221,7 +235,7 @@ def find_officeholder_table(soup, office):
             continue
 
         # Must have a name-like column
-        has_name = any(re.search(r'(?i)(name|attorney|lieutenant|secretary|treasurer|comptroller|auditor)',
+        has_name = any(re.search(r'(?i)(name|attorney|lieutenant|lt\.?\s*gov|secretary|treasurer|comptroller|auditor|officeholder|officer)',
                                  h) for h in headers)
         # Must have a term/date column
         has_term = any(re.search(r'(?i)(term|office|took|start|tenure|served|year)', h) for h in headers)
@@ -252,14 +266,22 @@ def find_officeholder_table(soup, office):
 
 
 def get_header_texts(table):
-    """Get header text from the first row of a table."""
-    first_row = table.find('tr')
-    if not first_row:
+    """Get header text from the header row of a table.
+    Handles tables with a title row (single merged cell) before the actual headers."""
+    rows = table.find_all('tr')
+    if not rows:
         return []
-    ths = first_row.find_all(['th'])
-    if not ths:
-        return []
-    return [clean_text(th) for th in ths]
+
+    for row in rows[:3]:  # Check first 3 rows for the actual header
+        ths = row.find_all(['th'])
+        if not ths:
+            continue
+        # If single header cell with large colspan, it's a title row — skip it
+        if len(ths) == 1 and int(ths[0].get('colspan', 1)) > 2:
+            continue
+        return [clean_text(th) for th in ths]
+
+    return []
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -317,10 +339,20 @@ def identify_columns(grid):
     if not grid or not grid[0]:
         return {}
 
+    # Find the actual header row (skip title rows with single merged cell)
+    header_row_idx = 0
+    for idx in range(min(3, len(grid))):
+        row = grid[idx]
+        header_cells = [(c, h) for c, h in enumerate(row) if h is not None and h[1]]  # is_header=True
+        unique_cells = set(id(entry[0]) for _, entry in header_cells if entry)
+        if len(unique_cells) >= 3:
+            header_row_idx = idx
+            break
+
     layout = {}
     seen_cells = set()
 
-    for col_idx, entry in enumerate(grid[0]):
+    for col_idx, entry in enumerate(grid[header_row_idx]):
         if entry is None:
             break
         cell, is_header = entry
@@ -340,7 +372,7 @@ def identify_columns(grid):
             layout['number'] = col_idx
         elif re.search(r'portrait|image|picture|photo', text):
             layout['image'] = col_idx
-        elif re.search(r'attorney|lieutenant|secretary|treasurer|comptroller|auditor|name', text):
+        elif re.search(r'attorney|lieutenant|lt\.?\s*gov|secretary|treasurer|comptroller|auditor|officeholder|officer|^name$', text):
             # Name column — if colspan > 1, the actual name text is in the last sub-col
             if colspan > 1:
                 layout['name'] = col_idx + colspan - 1  # Last sub-column has the text
@@ -354,22 +386,25 @@ def identify_columns(grid):
                 layout['party'] = col_idx + colspan - 1
             else:
                 layout['party'] = col_idx
-        elif re.search(r'took\s+office|start|assumed|began|^from$', text):
+        elif re.search(r'took\s+office|start|assumed|began|^from$|commission\s*date', text):
             layout['start'] = col_idx
         elif re.search(r'left\s+office|end(?:ed)?$|^to$', text):
             layout['end'] = col_idx
         elif re.search(r'term|office|served|tenure|in office', text):
             # Exclude "Years in office" (duration count, not date range)
-            if not re.search(r'years?\s+in', text):
-                if colspan > 1:
-                    # colspan=2 means separate start/end sub-columns (e.g., WA, WV)
-                    layout['start'] = col_idx
-                    layout['end'] = col_idx + colspan - 1
-                else:
-                    layout['term'] = col_idx
+            # Exclude "Governor(s) served under" — matches 'served' but isn't a term column
+            if not re.search(r'years?\s+in', text) and not re.search(r'governor|served\s+under', text):
+                if 'term' not in layout and 'start' not in layout:
+                    if colspan > 1:
+                        # colspan=2 means separate start/end sub-columns (e.g., WA, WV)
+                        layout['start'] = col_idx
+                        layout['end'] = col_idx + colspan - 1
+                    else:
+                        layout['term'] = col_idx
         elif re.search(r'note|comment|source|county|school|experience|governor', text):
             layout.setdefault('extra', []).append(col_idx)
 
+    layout['_header_row'] = header_row_idx
     return layout
 
 
@@ -388,11 +423,12 @@ def parse_officeholder_rows(grid, layout, state_abbr, cutoff_year):
     term_col = layout.get('term')
     start_col = layout.get('start')
     end_col = layout.get('end')
+    header_row = layout.get('_header_row', 0)
 
     records = []
     prev_name_cell = None
 
-    for row_idx in range(1, len(grid)):
+    for row_idx in range(header_row + 1, len(grid)):
         row = grid[row_idx]
 
         # Get cells
