@@ -372,11 +372,28 @@ def identify_columns(grid):
             layout['number'] = col_idx
         elif re.search(r'portrait|image|picture|photo', text):
             layout['image'] = col_idx
-        elif re.search(r'attorney|lieutenant|lt\.?\s*gov|secretary|treasurer|comptroller|auditor|officeholder|officer|^name$', text):
-            # Name column — if colspan > 1, the actual name text is in the last sub-col
+        elif re.search(r'attorney|lieutenant|lt\.?\s*gov|secretary|treasurer|receiver|comptroller|auditor|officeholder|officer|^name', text):
+            # Name column — if colspan > 1, check where the actual name data lands
             if colspan > 1:
-                layout['name'] = col_idx + colspan - 1  # Last sub-column has the text
-                layout['name_image'] = col_idx  # First sub-column might be an image
+                # Check first data rows to see which sub-column has the name text
+                # Skip vacancy rows (large colspan spanning all columns)
+                name_in_first = False
+                for check_row in range(header_row_idx + 1, min(header_row_idx + 10, len(grid))):
+                    entry = grid[check_row][col_idx]
+                    if entry is None:
+                        continue
+                    check_cell = entry[0]
+                    if int(check_cell.get('colspan', 1)) > 2:
+                        continue  # Skip vacancy/spanning rows
+                    if clean_text(check_cell).strip():
+                        name_in_first = True
+                        break
+                if name_in_first:
+                    layout['name'] = col_idx  # Name is in the first sub-column
+                    layout['name_image'] = col_idx + colspan - 1  # Image/empty in last
+                else:
+                    layout['name'] = col_idx + colspan - 1  # Name is in the last sub-column
+                    layout['name_image'] = col_idx  # First sub-column is image
             else:
                 layout['name'] = col_idx
         elif re.search(r'^party$|political\s*party', text):
@@ -390,7 +407,7 @@ def identify_columns(grid):
             layout['start'] = col_idx
         elif re.search(r'left\s+office|end(?:ed)?$|^to$', text):
             layout['end'] = col_idx
-        elif re.search(r'term|office|served|tenure|in office', text):
+        elif re.search(r'term|office|served|tenure|in office|^years$', text):
             # Exclude "Years in office" (duration count, not date range)
             # Exclude "Governor(s) served under" — matches 'served' but isn't a term column
             if not re.search(r'years?\s+in', text) and not re.search(r'governor|served\s+under', text):
