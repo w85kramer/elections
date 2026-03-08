@@ -811,9 +811,23 @@
       forecastHtml = ` <span class="forecast-tag ${forecastClass(off.forecast)}">${off.forecast}</span>`;
     }
     const sinceYear = off.start_year || '—';
+    // Build link to detail page for each officer
+    const officeLinks = {
+      'Governor': `governor.html?st=${stateAbbr}`,
+      'Attorney General': `statewide.html?st=${stateAbbr}&office=ag`,
+      'Secretary of State': `statewide.html?st=${stateAbbr}&office=sos`,
+      'Lt. Governor': `statewide.html?st=${stateAbbr}&office=ltgov`,
+    };
+    const detailUrl = officeLinks[off.office];
+    const nameHtml = off.name
+      ? (detailUrl ? `<a href="${detailUrl}" style="color:inherit;text-decoration:none;border-bottom:1px dotted #ccc">${off.name}</a>` : off.name)
+      : (off.method === 'Elected' ? '<em>Vacant</em>' : '—');
+    const officeHtml = detailUrl
+      ? `<a href="${detailUrl}" style="color:inherit;text-decoration:none"><strong>${off.office}</strong></a>`
+      : `<strong>${off.office}</strong>`;
     tr.innerHTML = `
-      <td${colorStyle}><strong>${off.office}</strong></td>
-      <td${colorStyle}>${off.name || (off.method === 'Elected' ? '<em>Vacant</em>' : '—')}</td>
+      <td${colorStyle}>${officeHtml}</td>
+      <td${colorStyle}>${nameHtml}</td>
       <td class="party-col"><span class="party-badge ${partyBadgeClass(off.party)}">${off.party || '—'}</span></td>
       <td>${sinceYear}</td>
       <td>${elecBadge}${forecastHtml}</td>

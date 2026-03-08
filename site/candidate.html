@@ -354,7 +354,19 @@
     return 'color:var(--ms-other)';
   }
 
-  function districtUrl(state, chamber, district) {
+  function districtUrl(state, chamber, district, officeType) {
+    // Statewide offices route to governor.html or statewide.html
+    if (chamber === 'Statewide' || (officeType && officeType !== 'State Representative' && officeType !== 'State Senator')) {
+      if (officeType === 'Governor') return `governor.html?st=${state}`;
+      const officeKeyMap = {
+        'Attorney General': 'ag',
+        'Lt. Governor': 'ltgov',
+        'Secretary of State': 'sos',
+        'Treasurer': 'sos',  // no separate page yet, link to statewide
+      };
+      const key = officeKeyMap[officeType] || 'ag';
+      return `statewide.html?st=${state}&office=${key}`;
+    }
     return `district.html?st=${state}&chamber=${encodeURIComponent(chamber)}&d=${encodeURIComponent(district)}`;
   }
 
@@ -429,8 +441,10 @@
 
   if (c.current_office) {
     const co = c.current_office;
-    const url = districtUrl(co.state, co.chamber, co.district);
-    const label = districtLabel(co.state, co.chamber, co.district, co.district_name);
+    const url = districtUrl(co.state, co.chamber, co.district, co.office_type);
+    const label = co.office_type && co.office_type !== 'State Representative' && co.office_type !== 'State Senator'
+      ? `${co.state} ${co.office_type}`
+      : districtLabel(co.state, co.chamber, co.district, co.district_name);
     const sinceStr = co.since ? `, since ${formatDate(co.since)}` : '';
     heroHtml += `<div class="candidate-office">
       <a href="${url}">${label}</a>${sinceStr}${caucusAnnotation()}
@@ -530,7 +544,7 @@
     // Show most recent first
     merged.reverse();
     for (const t of merged) {
-      const url = districtUrl(t.state, t.chamber, t.district);
+      const url = districtUrl(t.state, t.chamber, t.district, t.office_type);
       const label = shortDistrictLabel(t.state, t.chamber, t.district);
       const party = t.party || displayParty || '?';
       const startStr = t.start_date ? formatDate(t.start_date) : '?';
@@ -622,7 +636,7 @@
 
       const dateStr = cy.date ? formatDateShort(cy.date) : '';
       const typeLabel = cy.type.replace(/_/g, ' ');
-      const distUrl = districtUrl(cy.state, cy.chamber, cy.district);
+      const distUrl = districtUrl(cy.state, cy.chamber, cy.district, cy.office_type);
       const distLabel = shortDistrictLabel(cy.state, cy.chamber, cy.district);
 
       let forecastTag = '';
@@ -755,7 +769,9 @@
     <a href="state.html?st=${st}" style="color:var(--ms-dem-blue);text-decoration:none;font-weight:600">← Back to ${stateName}</a>`;
   if (c.current_office) {
     const co = c.current_office;
-    navHtml += ` &middot; <a href="${districtUrl(co.state, co.chamber, co.district)}" style="color:var(--ms-dem-blue);text-decoration:none;font-weight:600">View District</a>`;
+    const viewLabel = co.office_type && co.office_type !== 'State Representative' && co.office_type !== 'State Senator'
+      ? `View ${co.office_type}` : 'View District';
+    navHtml += ` &middot; <a href="${districtUrl(co.state, co.chamber, co.district, co.office_type)}" style="color:var(--ms-dem-blue);text-decoration:none;font-weight:600">${viewLabel}</a>`;
   }
   navHtml += `</div>`;
 

@@ -1,0 +1,788 @@
+{
+  "generated_at": "2026-03-08T18:33:38.972691Z",
+  "office_type": "Attorney General",
+  "office_key": "ag",
+  "total_races": 30,
+  "open_seats": 0,
+  "races": [
+    {
+      "state": "AL",
+      "state_name": "Alabama",
+      "incumbent": "Steve Marshall",
+      "incumbent_party": "R",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 4,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-01-23",
+      "primary_date": "2026-05-19",
+      "pres_margin_2024": "R+30.5",
+      "candidates": [
+        {
+          "name": "Jeffrey McLaughlin",
+          "party": "D",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_D"
+        },
+        {
+          "name": "Jay Mitchell",
+          "party": "R",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_R"
+        },
+        {
+          "name": "Katherine Robertson",
+          "party": "R",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_R"
+        },
+        {
+          "name": "Pamela Casey",
+          "party": "R",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_R"
+        }
+      ]
+    },
+    {
+      "state": "AR",
+      "state_name": "Arkansas",
+      "incumbent": "Tim Griffin",
+      "incumbent_party": "R",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 2,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2025-11-12",
+      "primary_date": "2026-03-03",
+      "pres_margin_2024": "R+30.6",
+      "candidates": [
+        {
+          "name": "Tim Griffin",
+          "party": "R",
+          "status": null,
+          "result": "Won",
+          "is_major": false,
+          "election_type": "Primary_R"
+        }
+      ]
+    },
+    {
+      "state": "AZ",
+      "state_name": "Arizona",
+      "incumbent": "Kris Mayes",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 2,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-03-23",
+      "primary_date": "2026-07-21",
+      "pres_margin_2024": "R+5.5",
+      "candidates": []
+    },
+    {
+      "state": "CA",
+      "state_name": "California",
+      "incumbent": "Rob Bonta",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 3,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-03-06",
+      "primary_date": "2026-06-02",
+      "pres_margin_2024": "D+20.1",
+      "candidates": []
+    },
+    {
+      "state": "CO",
+      "state_name": "Colorado",
+      "incumbent": "Phil Weiser",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 3,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-03-18",
+      "primary_date": "2026-06-30",
+      "pres_margin_2024": "D+11.0",
+      "candidates": []
+    },
+    {
+      "state": "CT",
+      "state_name": "Connecticut",
+      "incumbent": "William Tong",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 3,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-06-09",
+      "primary_date": "2026-08-11",
+      "pres_margin_2024": "D+14.5",
+      "candidates": []
+    },
+    {
+      "state": "FL",
+      "state_name": "Florida",
+      "incumbent": "James Uthmeier",
+      "incumbent_party": "R",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 2,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-06-12",
+      "primary_date": "2026-08-18",
+      "pres_margin_2024": "R+13.1",
+      "candidates": []
+    },
+    {
+      "state": "GA",
+      "state_name": "Georgia",
+      "incumbent": "Chris Carr",
+      "incumbent_party": "R",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 4,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-03-06",
+      "primary_date": "2026-05-19",
+      "pres_margin_2024": "R+2.2",
+      "candidates": []
+    },
+    {
+      "state": "IA",
+      "state_name": "Iowa",
+      "incumbent": "Brenna Bird",
+      "incumbent_party": "R",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 2,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-03-13",
+      "primary_date": "2026-06-02",
+      "pres_margin_2024": "R+13.2",
+      "candidates": []
+    },
+    {
+      "state": "ID",
+      "state_name": "Idaho",
+      "incumbent": "Raul Labrador",
+      "incumbent_party": "R",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 2,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-02-27",
+      "primary_date": "2026-05-19",
+      "pres_margin_2024": "R+36.5",
+      "candidates": [
+        {
+          "name": "Raul Labrador",
+          "party": "R",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_R"
+        }
+      ]
+    },
+    {
+      "state": "IL",
+      "state_name": "Illinois",
+      "incumbent": "Kwame Raoul",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 3,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2025-11-03",
+      "primary_date": "2026-03-17",
+      "pres_margin_2024": "D+10.9",
+      "candidates": [
+        {
+          "name": "Kwame Raoul",
+          "party": "D",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_D"
+        },
+        {
+          "name": "Andy Williams Jr.",
+          "party": "R",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_R"
+        },
+        {
+          "name": "Bob Fioretti",
+          "party": "R",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_R"
+        }
+      ]
+    },
+    {
+      "state": "KS",
+      "state_name": "Kansas",
+      "incumbent": "Kris Kobach",
+      "incumbent_party": "R",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 2,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-06-01",
+      "primary_date": "2026-08-04",
+      "pres_margin_2024": "R+16.1",
+      "candidates": []
+    },
+    {
+      "state": "MA",
+      "state_name": "Massachusetts",
+      "incumbent": "Andrea Campbell",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 2,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-06-02",
+      "primary_date": "2026-09-01",
+      "pres_margin_2024": "D+25.2",
+      "candidates": []
+    },
+    {
+      "state": "MD",
+      "state_name": "Maryland",
+      "incumbent": "Anthony Brown",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 2,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-02-24",
+      "primary_date": "2026-06-23",
+      "pres_margin_2024": "D+28.5",
+      "candidates": [
+        {
+          "name": "Anthony Brown",
+          "party": "D",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": true,
+          "election_type": "Primary_D"
+        }
+      ]
+    },
+    {
+      "state": "MI",
+      "state_name": "Michigan",
+      "incumbent": "Dana Nessel",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 3,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-04-21",
+      "primary_date": "2026-08-04",
+      "pres_margin_2024": "R+1.4",
+      "candidates": []
+    },
+    {
+      "state": "MN",
+      "state_name": "Minnesota",
+      "incumbent": "Keith Ellison",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 3,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-06-02",
+      "primary_date": "2026-08-11",
+      "pres_margin_2024": "D+4.2",
+      "candidates": []
+    },
+    {
+      "state": "NE",
+      "state_name": "Nebraska",
+      "incumbent": "Mike Hilgers",
+      "incumbent_party": "R",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 2,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-03-02",
+      "primary_date": "2026-05-12",
+      "pres_margin_2024": "R+20.7",
+      "candidates": []
+    },
+    {
+      "state": "NM",
+      "state_name": "New Mexico",
+      "incumbent": "Raul Torrez",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 2,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-02-03",
+      "primary_date": "2026-06-02",
+      "pres_margin_2024": "D+6.1",
+      "candidates": []
+    },
+    {
+      "state": "NV",
+      "state_name": "Nevada",
+      "incumbent": "Aaron Ford",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 3,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-03-13",
+      "primary_date": "2026-06-09",
+      "pres_margin_2024": "R+3.1",
+      "candidates": []
+    },
+    {
+      "state": "NY",
+      "state_name": "New York",
+      "incumbent": "Letitia James",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 3,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-04-06",
+      "primary_date": "2026-06-23",
+      "pres_margin_2024": "D+12.6",
+      "candidates": []
+    },
+    {
+      "state": "OH",
+      "state_name": "Ohio",
+      "incumbent": "Dave Yost",
+      "incumbent_party": "R",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 3,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-02-04",
+      "primary_date": "2026-05-05",
+      "pres_margin_2024": "R+11.2",
+      "candidates": [
+        {
+          "name": "Elliot Forhan",
+          "party": "D",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_D"
+        },
+        {
+          "name": "John Kulewicz",
+          "party": "D",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_D"
+        },
+        {
+          "name": "Keith Faber",
+          "party": "R",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_R"
+        }
+      ]
+    },
+    {
+      "state": "OK",
+      "state_name": "Oklahoma",
+      "incumbent": "Gentner Drummond",
+      "incumbent_party": "R",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 2,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-04-03",
+      "primary_date": "2026-06-16",
+      "pres_margin_2024": "R+34.3",
+      "candidates": []
+    },
+    {
+      "state": "OR",
+      "state_name": "Oregon",
+      "incumbent": "Dan Rayfield",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 2,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-03-10",
+      "primary_date": "2026-05-19",
+      "pres_margin_2024": "D+14.1",
+      "candidates": []
+    },
+    {
+      "state": "PA",
+      "state_name": "Pennsylvania",
+      "incumbent": "Dave Sunday",
+      "incumbent_party": "R",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 2,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-03-10",
+      "primary_date": "2026-05-19",
+      "pres_margin_2024": "R+1.7",
+      "candidates": []
+    },
+    {
+      "state": "RI",
+      "state_name": "Rhode Island",
+      "incumbent": "Peter Neronha",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 3,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-06-24",
+      "primary_date": "2026-09-08",
+      "pres_margin_2024": "D+13.6",
+      "candidates": []
+    },
+    {
+      "state": "SC",
+      "state_name": "South Carolina",
+      "incumbent": "Alan Wilson",
+      "incumbent_party": "R",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 5,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-03-30",
+      "primary_date": "2026-06-09",
+      "pres_margin_2024": "R+17.9",
+      "candidates": []
+    },
+    {
+      "state": "SD",
+      "state_name": "South Dakota",
+      "incumbent": "Marty Jackley",
+      "incumbent_party": "R",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 2,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-03-31",
+      "primary_date": "2026-06-02",
+      "pres_margin_2024": "R+29.3",
+      "candidates": []
+    },
+    {
+      "state": "TX",
+      "state_name": "Texas",
+      "incumbent": "Ken Paxton",
+      "incumbent_party": "R",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 4,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2025-12-08",
+      "primary_date": "2026-03-03",
+      "pres_margin_2024": "R+13.7",
+      "candidates": [
+        {
+          "name": "Joe Jaworski",
+          "party": "D",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_D"
+        },
+        {
+          "name": "Nathan Johnson",
+          "party": "D",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_D"
+        },
+        {
+          "name": "Tony Box",
+          "party": "D",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_D"
+        },
+        {
+          "name": "Aaron Reitz",
+          "party": "R",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_R"
+        },
+        {
+          "name": "Chip Roy",
+          "party": "R",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_R"
+        },
+        {
+          "name": "Joan Huffman",
+          "party": "R",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_R"
+        },
+        {
+          "name": "Mayes Middleton",
+          "party": "R",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_R"
+        }
+      ]
+    },
+    {
+      "state": "VT",
+      "state_name": "Vermont",
+      "incumbent": "Charity Clark",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 2,
+      "running_for_term": 3,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-05-28",
+      "primary_date": "2026-08-11",
+      "pres_margin_2024": "D+31.2",
+      "candidates": []
+    },
+    {
+      "state": "WI",
+      "state_name": "Wisconsin",
+      "incumbent": "Josh Kaul",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 3,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": "2026-11-03",
+      "filing_deadline": "2026-06-01",
+      "primary_date": "2026-08-11",
+      "pres_margin_2024": "R+0.9",
+      "candidates": []
+    }
+  ],
+  "no_race_states": [
+    {
+      "state": "AK",
+      "reason": "not_elected",
+      "method": "Appointed"
+    },
+    {
+      "state": "DE",
+      "reason": "no_race_2026",
+      "method": "Elected"
+    },
+    {
+      "state": "HI",
+      "reason": "not_elected",
+      "method": "Appointed"
+    },
+    {
+      "state": "IN",
+      "reason": "no_race_2026",
+      "method": "Elected"
+    },
+    {
+      "state": "KY",
+      "reason": "no_race_2026",
+      "method": "Elected"
+    },
+    {
+      "state": "LA",
+      "reason": "no_race_2026",
+      "method": "Elected"
+    },
+    {
+      "state": "ME",
+      "reason": "not_elected",
+      "method": "Appointed"
+    },
+    {
+      "state": "MO",
+      "reason": "no_race_2026",
+      "method": "Elected"
+    },
+    {
+      "state": "MS",
+      "reason": "no_race_2026",
+      "method": "Elected"
+    },
+    {
+      "state": "MT",
+      "reason": "no_race_2026",
+      "method": "Elected"
+    },
+    {
+      "state": "NC",
+      "reason": "no_race_2026",
+      "method": "Elected"
+    },
+    {
+      "state": "ND",
+      "reason": "no_race_2026",
+      "method": "Elected"
+    },
+    {
+      "state": "NH",
+      "reason": "not_elected",
+      "method": "Appointed"
+    },
+    {
+      "state": "NJ",
+      "reason": "not_elected",
+      "method": "Appointed"
+    },
+    {
+      "state": "TN",
+      "reason": "not_elected",
+      "method": "Appointed"
+    },
+    {
+      "state": "UT",
+      "reason": "no_race_2026",
+      "method": "Elected"
+    },
+    {
+      "state": "VA",
+      "reason": "no_race_2026",
+      "method": "Elected"
+    },
+    {
+      "state": "WA",
+      "reason": "no_race_2026",
+      "method": "Elected"
+    },
+    {
+      "state": "WV",
+      "reason": "no_race_2026",
+      "method": "Elected"
+    },
+    {
+      "state": "WY",
+      "reason": "not_elected",
+      "method": "Appointed"
+    }
+  ]
+}

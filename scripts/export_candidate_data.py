@@ -88,14 +88,15 @@ def export_candidates(dry_run=False, single_state=None):
             d.chamber,
             d.district_number,
             d.district_name,
-            s.office_level
+            s.office_level,
+            s.office_type
         FROM candidacies cy
         JOIN elections e ON cy.election_id = e.id
         JOIN seats s ON e.seat_id = s.id
         JOIN districts d ON s.district_id = d.id
         JOIN states st ON d.state_id = st.id
         JOIN candidates c ON cy.candidate_id = c.id
-        WHERE s.office_level = 'Legislative'
+        WHERE s.office_level IN ('Legislative', 'Statewide')
           {state_filter}
         ORDER BY st.abbreviation, cy.candidate_id, e.election_year DESC, e.election_type
     """
@@ -115,12 +116,13 @@ def export_candidates(dry_run=False, single_state=None):
             stm.notes,
             d.chamber,
             d.district_number,
-            d.district_name
+            d.district_name,
+            s.office_type
         FROM seat_terms stm
         JOIN seats s ON stm.seat_id = s.id
         JOIN districts d ON s.district_id = d.id
         JOIN states st ON d.state_id = st.id
-        WHERE s.office_level = 'Legislative'
+        WHERE s.office_level IN ('Legislative', 'Statewide')
           {state_filter}
         ORDER BY st.abbreviation, stm.candidate_id, stm.start_date
     """
@@ -163,7 +165,7 @@ def export_candidates(dry_run=False, single_state=None):
         JOIN districts d ON s.district_id = d.id
         JOIN states st ON d.state_id = st.id
         JOIN candidates c ON cy.candidate_id = c.id
-        WHERE s.office_level = 'Legislative'
+        WHERE s.office_level IN ('Legislative', 'Statewide')
           {state_filter}
         ORDER BY st.abbreviation, cy.election_id,
             CASE cy.result WHEN 'Won' THEN 0 WHEN 'Advanced' THEN 1 ELSE 2 END,
@@ -253,6 +255,7 @@ def export_candidates(dry_run=False, single_state=None):
             'chamber': r['chamber'],
             'district': r['district_number'],
             'district_name': r['district_name'],
+            'office_type': r.get('office_type'),
             'party': r['party'],
             'votes': r['votes'],
             'pct': float(r['pct']) if r['pct'] is not None else None,
@@ -289,6 +292,8 @@ def export_candidates(dry_run=False, single_state=None):
                 }
                 if t.get('caucus'):
                     term_obj['caucus'] = t['caucus']
+                if t.get('office_type'):
+                    term_obj['office_type'] = t['office_type']
                 cand['seat_terms'].append(term_obj)
 
     # Attach party switches
@@ -327,6 +332,8 @@ def export_candidates(dry_run=False, single_state=None):
                 }
                 if current_term.get('caucus'):
                     cand['current_office']['caucus'] = current_term['caucus']
+                if current_term.get('office_type'):
+                    cand['current_office']['office_type'] = current_term['office_type']
 
             # Determine most recent party for display.
             # Use actual registered party (not caucus). Caucus is stored
@@ -471,6 +478,11 @@ def export_candidates(dry_run=False, single_state=None):
                     latest = cand['candidacies'][0]
                     entry['ch'] = latest['chamber']
                     entry['d'] = latest['district']
+            # Include office_type for statewide candidates (Governor, AG, etc.)
+            if cand['candidacies']:
+                ot = cand['candidacies'][0].get('office_type')
+                if ot and ot != 'State Representative' and ot != 'State Senator':
+                    entry['ot'] = ot
             new_entries.append(entry)
 
     search_path = os.path.join(SITE_DATA_DIR, 'candidate_search.json')
