@@ -861,13 +861,13 @@ def create_runoff_elections(state, year, dry_run=True):
         WHERE st.abbreviation = '{state}'
         AND e.election_year = {year}
         AND e.election_type LIKE 'Primary%'
-        AND e.election_type != 'Primary_Runoff'
+        AND e.election_type NOT LIKE 'Primary_Runoff%'
         AND ca.result = 'Runoff'
         AND NOT EXISTS (
             SELECT 1 FROM elections e2
             WHERE e2.seat_id = e.seat_id
             AND e2.election_year = {year}
-            AND e2.election_type = 'Primary_Runoff'
+            AND e2.election_type LIKE 'Primary_Runoff%'
             AND e2.related_election_id = e.id
         )
         ORDER BY d.district_number
@@ -887,10 +887,20 @@ def create_runoff_elections(state, year, dry_run=True):
 
     created = 0
     for p in primaries:
+        # Derive partisan runoff type from parent primary type
+        # Primary_D → Primary_Runoff_D, Primary_R → Primary_Runoff_R
+        parent_type = p['election_type']
+        if parent_type.endswith('_D'):
+            runoff_type = 'Primary_Runoff_D'
+        elif parent_type.endswith('_R'):
+            runoff_type = 'Primary_Runoff_R'
+        else:
+            runoff_type = 'Primary_Runoff'
+
         # Create the runoff election
         result = run_sql(f"""
             INSERT INTO elections (seat_id, election_year, election_type, election_date, related_election_id)
-            VALUES ({p['seat_id']}, {year}, 'Primary_Runoff', '{runoff_date}', {p['primary_id']})
+            VALUES ({p['seat_id']}, {year}, '{runoff_type}', '{runoff_date}', {p['primary_id']})
             RETURNING id
         """)
         runoff_id = result[0]['id']
