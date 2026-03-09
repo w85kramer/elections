@@ -707,18 +707,38 @@ def export_all_districts(dry_run=False, single_state=None):
                 if inc_lost:
                     elec_obj['incumbent_defeated'] = True
 
-            # Check for party flip: winner's caucus/party differs from
-            # the losing incumbent's caucus/party in the same election
+            # Check for party flip (generals and specials only — primaries
+            # are intra-party and can't flip a seat)
+            is_flip_eligible = e['election_type'] in (
+                'General', 'Special', 'Special_General', 'General_Runoff')
             winner = next((c for c in candidate_list if c['result'] == 'Won'), None)
-            if winner:
+            if winner and is_flip_eligible:
+                winner_caucus = winner.get('caucus') or winner['party']
+                # Case 1: incumbent lost in this election (different party)
                 inc_loser = next((c for c in candidate_list
                                   if c.get('is_incumbent') and c['result'] == 'Lost'
                                   and c['party'] != winner['party']), None)
                 if inc_loser:
                     elec_obj['flipped_seat'] = {
                         'from': inc_loser.get('caucus') or inc_loser['party'],
-                        'to': winner.get('caucus') or winner['party'],
+                        'to': winner_caucus,
                     }
+                # Case 2: open seat (no incumbent running) — compare to
+                # the most recent ended term for this seat before election date
+                elif not any(c.get('is_incumbent') for c in candidate_list):
+                    elec_date = str(e.get('election_date', ''))
+                    prev_terms = [
+                        t for t in all_terms_by_seat.get(seat_id, [])
+                        if t.get('end_date') and str(t['end_date']) <= elec_date
+                    ]
+                    if prev_terms:
+                        prev = max(prev_terms, key=lambda t: str(t['end_date']))
+                        prev_caucus = prev.get('holder_caucus') or prev.get('holder_party')
+                        if prev_caucus and prev_caucus != winner_caucus:
+                            elec_obj['flipped_seat'] = {
+                                'from': prev_caucus,
+                                'to': winner_caucus,
+                            }
 
             seat_elections.append(elec_obj)
 

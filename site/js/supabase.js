@@ -215,14 +215,6 @@ function mergeLiveElections(district, liveElections, stateAbbr) {
       var incLost = transformed.candidates.some(function(c) { return c.is_incumbent && c.result === 'Lost'; });
       if (incLost) transformed.incumbent_defeated = true;
     }
-    // Party flip: winner's party differs from losing incumbent's party
-    var winner = transformed.candidates.find(function(c) { return c.result === 'Won'; });
-    if (winner) {
-      var incLoser = transformed.candidates.find(function(c) {
-        return c.is_incumbent && c.result === 'Lost' && c.party !== winner.party;
-      });
-      if (incLoser) transformed.flipped_seat = { from: incLoser.caucus || incLoser.party, to: winner.caucus || winner.party };
-    }
     bySeat[pg.seat_id].push(transformed);
   }
 
@@ -230,6 +222,29 @@ function mergeLiveElections(district, liveElections, stateAbbr) {
     var seat = district.seats[j];
     var liveForSeat = bySeat[seat.seat_id];
     if (!liveForSeat) continue;
+    // Compute flip badges (generals/specials only — primaries can't flip)
+    var flipTypes = ['General', 'Special', 'Special_General', 'General_Runoff'];
+    for (var k = 0; k < liveForSeat.length; k++) {
+      var el = liveForSeat[k];
+      if (flipTypes.indexOf(el.type) < 0) continue;
+      var winner = el.candidates.find(function(c) { return c.result === 'Won'; });
+      if (winner) {
+        var winnerCaucus = winner.caucus || winner.party;
+        // Case 1: incumbent lost (different party)
+        var incLoser = el.candidates.find(function(c) {
+          return c.is_incumbent && c.result === 'Lost' && c.party !== winner.party;
+        });
+        if (incLoser) {
+          el.flipped_seat = { from: incLoser.caucus || incLoser.party, to: winnerCaucus };
+        // Case 2: open seat — compare to seat's previous holder
+        } else if (!el.candidates.some(function(c) { return c.is_incumbent; })) {
+          var prevCaucus = seat.current_holder_caucus;
+          if (prevCaucus && prevCaucus !== winnerCaucus) {
+            el.flipped_seat = { from: prevCaucus, to: winnerCaucus };
+          }
+        }
+      }
+    }
     // Remove static 2026 elections, replace with live
     seat.elections = seat.elections
       .filter(function(e) { return e.year !== LIVE_ELECTION_YEAR; })
