@@ -534,57 +534,93 @@ def tx_download(election_date):
     return all_data
 
 
+TX_STATEWIDE_OFFICE_MAP = {
+    'GOVERNOR': 'Governor',
+    'LIEUTENANT GOVERNOR': 'Lt. Governor',
+    'ATTORNEY GENERAL': 'Attorney General',
+    'COMPTROLLER OF PUBLIC ACCOUNTS': 'Controller',
+    'COMMISSIONER OF AGRICULTURE': 'Agriculture Commissioner',
+}
+
+
+def tx_parse_candidates(race, party):
+    """Parse candidates from a TX Civix GoElect race dict."""
+    candidates = []
+    for cand in race.get('Candidates', []):
+        cand_name = cand.get('N', '').strip()
+        cand_name = re.sub(r'\s*\(I\)\s*$', '', cand_name)
+        votes = cand.get('V', 0)
+        pct = cand.get('PE', 0) / 100
+
+        candidates.append({
+            'name': cand_name,
+            'party': party,
+            'votes': votes,
+            'pct': pct,
+        })
+    candidates.sort(key=lambda c: c['votes'], reverse=True)
+    return candidates
+
+
 def tx_parse_results(data, chamber_filter=None):
     """Parse TX Civix GoElect data into standardized contest dicts."""
     contests = []
 
     for party_code, sections in data.items():
         party = party_code  # 'R' or 'D'
-        districted = sections.get('Districted', {})
-        races = districted.get('Races', [])
 
-        for race in races:
-            name = race.get('N', '')
+        # --- Districted (legislative) races ---
+        if not chamber_filter or chamber_filter.lower() != 'statewide':
+            districted = sections.get('Districted', {})
+            races = districted.get('Races', [])
 
-            # Parse: "STATE REPRESENTATIVE DISTRICT 1" or "STATE SENATOR, DISTRICT 9"
-            m = re.match(r'STATE (REPRESENTATIVE|SENATOR),?\s*DISTRICT\s*(\d+)', name)
-            if not m:
-                continue
+            for race in races:
+                name = race.get('N', '')
 
-            office = m.group(1)
-            district = int(m.group(2))
-            chamber = 'State House' if office == 'REPRESENTATIVE' else 'State Senate'
+                m = re.match(r'STATE (REPRESENTATIVE|SENATOR),?\s*DISTRICT\s*(\d+)', name)
+                if not m:
+                    continue
 
-            if chamber_filter and chamber_filter.lower() not in chamber.lower():
-                continue
+                office = m.group(1)
+                district = int(m.group(2))
+                chamber = 'State House' if office == 'REPRESENTATIVE' else 'State Senate'
 
-            candidates = []
-            total = race.get('T', 0)
+                if chamber_filter and chamber_filter.lower() not in chamber.lower():
+                    continue
 
-            for cand in race.get('Candidates', []):
-                cand_name = cand.get('N', '').strip()
-                # Remove incumbent marker
-                cand_name = re.sub(r'\s*\(I\)\s*$', '', cand_name)
-                votes = cand.get('V', 0)
-                pct = cand.get('PE', 0) / 100  # TX returns as percentage, normalize to decimal
+                candidates = tx_parse_candidates(race, party)
 
-                candidates.append({
-                    'name': cand_name,
-                    'party': party,
-                    'votes': votes,
-                    'pct': pct,
-                })
+                if len(candidates) > 1:
+                    contests.append({
+                        'state': 'TX',
+                        'chamber': chamber,
+                        'district': district,
+                        'party': party,
+                        'candidates': candidates,
+                    })
 
-            candidates.sort(key=lambda c: c['votes'], reverse=True)
+        # --- Statewide races ---
+        if not chamber_filter or chamber_filter.lower() in ('statewide', ''):
+            statewide = sections.get('StateWide', {})
+            sw_races = statewide.get('Races', [])
 
-            if len(candidates) > 1:  # Only contested races
-                contests.append({
-                    'state': 'TX',
-                    'chamber': chamber,
-                    'district': district,
-                    'party': party,
-                    'candidates': candidates,
-                })
+            for race in sw_races:
+                name = race.get('N', '').strip()
+                office_type = TX_STATEWIDE_OFFICE_MAP.get(name)
+                if not office_type:
+                    continue
+
+                candidates = tx_parse_candidates(race, party)
+
+                if len(candidates) > 1:
+                    contests.append({
+                        'state': 'TX',
+                        'chamber': 'Statewide',
+                        'district': office_type,  # Use office_type as district key
+                        'office_type': office_type,
+                        'party': party,
+                        'candidates': candidates,
+                    })
 
     return contests
 
@@ -593,8 +629,9 @@ def tx_parse_results(data, chamber_filter=None):
 # MATCHING + DB UPDATE (state-agnostic)
 # ══════════════════════════════════════════════════════════════════════
 
-def load_db_elections(state, year):
+def load_db_elections(state, year, include_statewide=False):
     """Load all primary elections + candidacies for a state/year from DB."""
+    level_filter = "d.office_level IN ('Legislative', 'Statewide')" if include_statewide else "d.office_level = 'Legislative'"
     query = f"""
     SELECT
         e.id AS election_id,
@@ -623,7 +660,7 @@ def load_db_elections(state, year):
     WHERE st.abbreviation = '{state}'
       AND e.election_year = {year}
       AND e.election_type IN ('Primary_D', 'Primary_R')
-      AND d.office_level = 'Legislative'
+      AND {level_filter}
     ORDER BY d.district_name, e.election_type, c2.votes_received DESC NULLS LAST
     """
     return run_sql(query)
@@ -646,12 +683,19 @@ def match_and_update(contests, db_elections, dry_run=True):
     }
 
     # Index DB elections by (chamber, district_number, election_type)
+    # For statewide races, key by (office_type, election_type)
     db_by_contest = {}
     for row in db_elections:
         chamber = row['chamber']
         dist_num = row['district_number']
         etype = row['election_type']
-        key = (chamber, str(dist_num), etype)
+        office_type = row['office_type']
+
+        if chamber == 'Statewide':
+            key = ('Statewide', office_type, etype)
+        else:
+            key = (chamber, str(dist_num), etype)
+
         if key not in db_by_contest:
             db_by_contest[key] = {
                 'election_id': row['election_id'],
@@ -667,14 +711,19 @@ def match_and_update(contests, db_elections, dry_run=True):
     for contest in contests:
         dist_num = contest['district']
         chamber = contest['chamber']
-        # Map SoS chamber names to DB chamber names
-        db_chamber = 'House' if 'House' in chamber else 'Senate'
-        dist_name = f'{db_chamber} District {dist_num}'
-
         party = contest['party']
         etype = f'Primary_{party}'
 
-        key = (db_chamber, str(dist_num), etype)
+        if chamber == 'Statewide':
+            office_type = contest.get('office_type', dist_num)
+            key = ('Statewide', office_type, etype)
+            dist_name = office_type
+        else:
+            # Map SoS chamber names to DB chamber names
+            db_chamber = 'House' if 'House' in chamber else 'Senate'
+            dist_name = f'{db_chamber} District {dist_num}'
+            key = (db_chamber, str(dist_num), etype)
+
         db_contest = db_by_contest.get(key)
 
         if not db_contest:
@@ -790,7 +839,9 @@ def main():
     parser.add_argument('--state', required=True, choices=sorted(STATE_HANDLERS.keys()),
                         help='State to import')
     parser.add_argument('--date', type=str, help='Election date (YYYY-MM-DD)')
-    parser.add_argument('--chamber', type=str, help='Filter by chamber (house/senate)')
+    parser.add_argument('--chamber', type=str, help='Filter by chamber (house/senate/statewide)')
+    parser.add_argument('--statewide', action='store_true',
+                        help='Include statewide races (governor, AG, etc.)')
     parser.add_argument('--year', type=int, default=2026, help='Election year (default: 2026)')
     parser.add_argument('--dry-run', action='store_true',
                         help='Preview changes without writing to DB')
@@ -816,12 +867,17 @@ def main():
 
     # Step 2: Parse into standardized format
     print('\nStep 2: Parsing results...', flush=True)
-    contests = handler['parse'](raw_data, chamber_filter=args.chamber)
+    chamber_filter = args.chamber or ('statewide' if args.statewide else None)
+    contests = handler['parse'](raw_data, chamber_filter=chamber_filter)
     print(f'  Found {len(contests)} contested primaries', flush=True)
 
     # Step 3: Load DB elections for matching
     print('\nStep 3: Loading DB elections...', flush=True)
-    db_elections = load_db_elections(state, year)
+    include_statewide = args.statewide or (args.chamber and args.chamber.lower() == 'statewide')
+    # If no filter specified, include statewide too
+    if not args.chamber and not args.statewide:
+        include_statewide = True
+    db_elections = load_db_elections(state, year, include_statewide=include_statewide)
     if db_elections is None:
         print('ERROR: Failed to load DB elections. Exiting.', flush=True)
         sys.exit(1)
