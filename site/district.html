@@ -490,7 +490,7 @@
         setCachedLiveData(seatIds, liveElections);
       }
       if (liveElections && liveElections.length > 0) {
-        mergeLiveElections(district, liveElections);
+        mergeLiveElections(district, liveElections, stateAbbr);
         liveDataApplied = true;
       }
     } catch (err) {

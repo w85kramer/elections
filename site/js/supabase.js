@@ -93,6 +93,44 @@ async function fetchLiveElections(seatIds) {
   }
 }
 
+// ── Recount thresholds (mirrors export_district_data.py) ──────────────
+const RECOUNT_THRESHOLDS = {
+  AL: {sw: 0.5, leg: 0.5}, AZ: {sw: 0.5, leg: 0.5}, CO: {sw: 0.5, leg: 0.5},
+  CT: {sw: 0.5, leg: 0.5}, DE: {sw: 0.5, leg: 0.5}, FL: {sw: 0.5, leg: 0.5},
+  GA: {sw: 0.5, leg: 0.5}, HI: {sw: 0.25, leg: 0.25}, ID: {sw: 0.5, leg: 0.5},
+  IA: {sw: 1.0, leg: 1.0}, KS: {sw: 0.5, leg: 0.5}, KY: {sw: 0.5, leg: 0.5},
+  MA: {sw: 0.5, leg: 0.5}, MD: {sw: 0.1, leg: 0.1}, MI: {sw: 0.1, leg: 0.1},
+  MN: {sw: 0.25, leg: 0.5}, MO: {sw: 0.5, leg: 1.0}, NC: {sw: 0.5, leg: 1.0},
+  ND: {sw: 0.5, leg: 0.5}, NE: {sw: 1.0, leg: 1.0}, NM: {sw: 0.25, leg: 1.0},
+  NY: {sw: 0.5, leg: 0.5}, OH: {sw: 0.25, leg: 0.5}, OR: {sw: 0.2, leg: 0.2},
+  PA: {sw: 0.5, leg: 0.5}, SC: {sw: 1.0, leg: 1.0}, VA: {sw: 1.0, leg: 1.0},
+  WA: {sw: 0.5, leg: 0.5}, WI: {sw: 0.25, leg: 0.25}, WY: {sw: 1.0, leg: 1.0},
+};
+const CLOSE_RACE_PCT = 1.0;
+
+function checkRecountEligible(stateAbbr, election) {
+  var tv = election.total_votes;
+  if (!tv || tv === 0) return null;
+  if (election.result_status !== 'Called' && election.result_status !== 'Unofficial') return null;
+  var voted = election.candidates.filter(function(c) { return c.votes && c.votes > 0; });
+  if (voted.length < 2) return null;
+  voted.sort(function(a, b) { return b.votes - a.votes; });
+  var margin = voted[0].votes - voted[1].votes;
+  var marginPct = (margin / tv) * 100;
+  var t = RECOUNT_THRESHOLDS[stateAbbr];
+  if (t) {
+    var threshold = t.leg; // district pages are always legislative
+    if (marginPct <= threshold) {
+      return { type: 'recount', margin: margin, margin_pct: Math.round(marginPct * 100) / 100, threshold_pct: threshold };
+    }
+  } else {
+    if (marginPct <= CLOSE_RACE_PCT) {
+      return { type: 'close_race', margin: margin, margin_pct: Math.round(marginPct * 100) / 100, threshold_pct: CLOSE_RACE_PCT };
+    }
+  }
+  return null;
+}
+
 /**
  * Transform a PostgREST election row into the static JSON shape the frontend expects.
  * Maps column names and sorts candidates (Won > Advanced > by votes desc).
@@ -144,14 +182,18 @@ function transformElection(pg) {
  * Merge live 2026 elections into the district's static data (mutates in place).
  * For each seat with live data, removes static 2026 elections and appends live ones.
  * Seats with no live results keep their static elections unchanged.
+ * Also computes recount_eligible on each live election.
  */
-function mergeLiveElections(district, liveElections) {
+function mergeLiveElections(district, liveElections, stateAbbr) {
   // Group live elections by seat_id
   var bySeat = {};
   for (var i = 0; i < liveElections.length; i++) {
     var pg = liveElections[i];
     if (!bySeat[pg.seat_id]) bySeat[pg.seat_id] = [];
-    bySeat[pg.seat_id].push(transformElection(pg));
+    var transformed = transformElection(pg);
+    var recount = checkRecountEligible(stateAbbr, transformed);
+    if (recount) transformed.recount_eligible = recount;
+    bySeat[pg.seat_id].push(transformed);
   }
 
   for (var j = 0; j < district.seats.length; j++) {

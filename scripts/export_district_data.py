@@ -33,20 +33,48 @@ MIN_EXPORT_YEAR = {
 }
 
 # ── Recount threshold rules by state ──────────────────────────────────
-# States with official margin-based recount thresholds.
-# Format: { state: { 'statewide': pct, 'legislative': pct } }
+# States with official margin-based recount thresholds (automatic or
+# mandatory-to-grant when requested). Researched from NCSL, Ballotpedia,
+# and state statutes. Format: { state: { 'statewide': pct, 'legislative': pct } }
+#
+# States NOT listed here use the CLOSE_RACE_PCT fallback (1%).
+# These include: states with no recount provision (IL, MS, TN), states
+# where recounts are purely candidate-requested with no margin limit
+# (AR, CA, IN, LA, NV, NH, NJ, OK, WV), and states with tie-only
+# automatic recounts (AK, ME, MT, SD, TX, UT, VT).
 RECOUNT_THRESHOLDS = {
-    'NC': {'statewide': 0.5, 'legislative': 1.0},
-    'TX': {'statewide': 0.5, 'legislative': 0.5},
-    'GA': {'statewide': 0.5, 'legislative': 1.0},
-    'SC': {'statewide': 1.0, 'legislative': 1.0},
-    'MS': {'statewide': 0.5, 'legislative': 1.0},
-    'FL': {'statewide': 0.5, 'legislative': 0.5},
+    # Automatic recount states
+    'AL': {'statewide': 0.5, 'legislative': 0.5},
+    'AZ': {'statewide': 0.5, 'legislative': 0.5},   # Changed from 0.1% to 0.5% in 2022
     'CO': {'statewide': 0.5, 'legislative': 0.5},
-    'AZ': {'statewide': 0.1, 'legislative': 0.1},
+    'CT': {'statewide': 0.5, 'legislative': 0.5},
+    'DE': {'statewide': 0.5, 'legislative': 0.5},
+    'FL': {'statewide': 0.5, 'legislative': 0.5},    # 0.5% machine, 0.25% manual
+    'HI': {'statewide': 0.25, 'legislative': 0.25},
+    'KY': {'statewide': 0.5, 'legislative': 0.5},
+    'MI': {'statewide': 0.1, 'legislative': 0.1},    # Fixed: 0.1% statewide; legislative uses fixed vote counts but ~0.1% equivalent
+    'NE': {'statewide': 1.0, 'legislative': 1.0},    # 1% for >500 votes; 2% for <=500
+    'NM': {'statewide': 0.25, 'legislative': 1.0},
+    'NY': {'statewide': 0.5, 'legislative': 0.5},
+    'ND': {'statewide': 0.5, 'legislative': 0.5},
+    'OH': {'statewide': 0.25, 'legislative': 0.5},
+    'OR': {'statewide': 0.2, 'legislative': 0.2},
+    'SC': {'statewide': 1.0, 'legislative': 1.0},
+    'WA': {'statewide': 0.5, 'legislative': 0.5},
+    'WY': {'statewide': 1.0, 'legislative': 1.0},
+    # Candidate-requested but mandatory to grant at threshold
+    'GA': {'statewide': 0.5, 'legislative': 0.5},    # Fixed: 0.5% all races (requested, not automatic)
+    'ID': {'statewide': 0.5, 'legislative': 0.5},
+    'IA': {'statewide': 1.0, 'legislative': 1.0},
+    'KS': {'statewide': 0.5, 'legislative': 0.5},    # State pays if <=0.5%
+    'MA': {'statewide': 0.5, 'legislative': 0.5},
+    'MD': {'statewide': 0.1, 'legislative': 0.1},    # Any candidate can request; state pays if <=0.1%
+    'MN': {'statewide': 0.25, 'legislative': 0.5},
+    'MO': {'statewide': 0.5, 'legislative': 1.0},
+    'NC': {'statewide': 0.5, 'legislative': 1.0},
     'PA': {'statewide': 0.5, 'legislative': 0.5},
-    'WI': {'statewide': 1.0, 'legislative': 1.0},
-    'MI': {'statewide': 0.5, 'legislative': 0.5},
+    'VA': {'statewide': 1.0, 'legislative': 1.0},
+    'WI': {'statewide': 0.25, 'legislative': 0.25},  # Fixed: state pays if <=0.25%
 }
 
 # Close-race threshold for states without a specific margin-based rule
