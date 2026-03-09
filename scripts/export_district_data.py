@@ -712,8 +712,9 @@ def export_all_districts(dry_run=False, single_state=None):
             FLIP_ELIGIBLE_TYPES = {
                 'General', 'General_Runoff',
                 'Special', 'Special_General',
-                'Special_Runoff', 'Special_Runoff_D', 'Special_Runoff_R',
+                'Special_Runoff',  # nonpartisan/general special runoff
                 'Recall',
+                # NOT Special_Runoff_D/R — those are partisan primary runoffs
             }
             is_flip_eligible = e['election_type'] in FLIP_ELIGIBLE_TYPES
             winner = next((c for c in candidate_list if c['result'] == 'Won'), None)
