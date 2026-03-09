@@ -109,6 +109,18 @@
     margin-left: 4px;
     cursor: help;
   }
+  .close-race-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    color: #6b21a8;
+    background: #f3e8ff;
+    border: 1px solid #a855f7;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 4px;
+    cursor: help;
+  }
   .forecast-tag {
     display: inline-block;
     font-size: 12px;
@@ -898,7 +910,11 @@
     let recountTag = '';
     if (e.recount_eligible) {
       const rc = e.recount_eligible;
-      recountTag = ` <span class="recount-badge" title="Margin: ${rc.margin.toLocaleString()} votes (${rc.margin_pct}%) — within ${rc.threshold_pct}% recount threshold">⚖ Potential Recount</span>`;
+      if (rc.type === 'recount') {
+        recountTag = ` <span class="recount-badge" title="Margin: ${rc.margin.toLocaleString()} votes (${rc.margin_pct}%) — within ${rc.threshold_pct}% recount threshold">Potential Recount</span>`;
+      } else {
+        recountTag = ` <span class="close-race-badge" title="Margin: ${rc.margin.toLocaleString()} votes (${rc.margin_pct}%)">Close Race</span>`;
+      }
     }
 
     // Upcoming with candidates but no results

@@ -306,7 +306,7 @@
       events.push({ date: filingSw, type: 'filing', subtype: 'statewide', state: abbr, name: st.name });
     } else {
       const filing = e26.filing_deadline;
-      if (filing) events.push({ date: filing, type: 'filing', subtype: null, state: abbr, name: st.name });
+      if (filing) events.push({ date: filing, type: 'filing', subtype: null, state: abbr, name: st.name, notes: e26.filing_notes || null });
     }
     if (primary) events.push({ date: primary, type: 'primary', subtype: null, state: abbr, name: st.name });
   }
@@ -397,6 +397,9 @@
     } else {
       html += '<span style="color:var(--ms-text-light)">No 2026 filing deadline (odd-year state)</span><br>';
     }
+    if (e26.filing_notes) {
+      html += `<span style="color:var(--ms-text-light);font-size:13px;font-style:italic">${e26.filing_notes}</span><br>`;
+    }
     if (primary) {
       html += `<span class="event-type primary" style="margin-top:6px;display:inline-block">Primary</span> `;
       html += `${formatDate(primary)}`;
@@ -478,11 +481,12 @@
       const typeLabel = type === 'filing' ? 'Filing Deadline' : type === 'special' ? 'Special Election' : 'Primary Election';
       const typeColor = type === 'filing' ? 'color:var(--ms-dem-blue)' : type === 'special' ? 'color:var(--ms-gold)' : 'color:var(--ms-rep-red)';
       const detailStr = evt.detail ? `<div style="font-size:12px;color:#666">${evt.detail}</div>` : '';
+      const notesStr = evt.notes ? `<div style="font-size:12px;color:#666;font-style:italic">${evt.notes}</div>` : '';
 
       dot.addEventListener('mouseenter', () => {
         tt.show(`<div class="tt-title">${evt.name} (${evt.state})</div>
           <div style="${typeColor};font-weight:600">${typeLabel}${subtypeStr}</div>
-          ${detailStr}
+          ${detailStr}${notesStr}
           <div>${formatDate(evt.date)}</div>`);
       });
       dot.addEventListener('mousemove', (e) => tt.move(e));
@@ -563,7 +567,8 @@
         let statesHtml = '';
         for (const evt of group.states) {
           const suffix = evt.detail ? ` — ${evt.detail}` : (evt.subtype && evt.subtype !== 'completed' ? ` (${evt.subtype})` : '');
-          statesHtml += `<a href="state.html?st=${evt.state}" class="event-state-tag ${group.type}" title="${evt.name}${suffix}">${evt.state}${evt.detail ? ': ' + evt.detail : ''}</a>`;
+          const notesSuffix = evt.notes ? `\n${evt.notes}` : '';
+          statesHtml += `<a href="state.html?st=${evt.state}" class="event-state-tag ${group.type}" title="${evt.name}${suffix}${notesSuffix}">${evt.state}${evt.detail ? ': ' + evt.detail : ''}</a>`;
         }
 
         row.innerHTML = `

@@ -399,11 +399,18 @@ def export_states_summary(dry_run=False):
         filing_sw = str(elec['filing_deadline_sw']) if elec.get('filing_deadline_sw') else None
         # Use earliest as the primary filing_deadline for backwards compat
         filing_min = min(filter(None, [filing_leg, filing_sw])) if (filing_leg or filing_sw) else None
+
+        # State-specific filing notes (e.g. extensions, special rules)
+        FILING_NOTES = {
+            'CA': 'Extension through Mar 11 for districts where incumbent did not file',
+        }
+
         st['elections_2026'] = {
             'total_general': elec.get('generals_2026', 0),
             'filing_deadline': filing_min,
             'filing_deadline_legislative': filing_leg,
             'filing_deadline_statewide': filing_sw,
+            'filing_notes': FILING_NOTES.get(abbr),
             'primary_date': str(elec['primary_date']) if elec.get('primary_date') else None,
         }
 

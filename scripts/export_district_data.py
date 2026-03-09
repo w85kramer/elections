@@ -33,41 +33,42 @@ MIN_EXPORT_YEAR = {
 }
 
 # ── Recount threshold rules by state ──────────────────────────────────
-# Format: { state: { 'statewide': threshold_pct, 'legislative': threshold_pct } }
-# None = no margin-based threshold (any candidate may request)
-# Only states with specific margin thresholds are listed;
-# unlisted states are not flagged.
+# States with official margin-based recount thresholds.
+# Format: { state: { 'statewide': pct, 'legislative': pct } }
 RECOUNT_THRESHOLDS = {
     'NC': {'statewide': 0.5, 'legislative': 1.0},
     'TX': {'statewide': 0.5, 'legislative': 0.5},
     'GA': {'statewide': 0.5, 'legislative': 1.0},
     'SC': {'statewide': 1.0, 'legislative': 1.0},
     'MS': {'statewide': 0.5, 'legislative': 1.0},
-    'FL': {'statewide_machine': 0.5, 'statewide_manual': 0.25,
-           'legislative_machine': 0.5, 'legislative_manual': 0.25},
+    'FL': {'statewide': 0.5, 'legislative': 0.5},
     'CO': {'statewide': 0.5, 'legislative': 0.5},
     'AZ': {'statewide': 0.1, 'legislative': 0.1},
     'PA': {'statewide': 0.5, 'legislative': 0.5},
     'WI': {'statewide': 1.0, 'legislative': 1.0},
-    'MI': {'statewide': 0.5, 'legislative': 0.5},  # estimated
+    'MI': {'statewide': 0.5, 'legislative': 0.5},
 }
+
+# Close-race threshold for states without a specific margin-based rule
+# (e.g. AR where any candidate can request a recount regardless of margin).
+# Flags races under 1% as "close" — not a legal threshold, just notable.
+CLOSE_RACE_PCT = 1.0
 
 
 def _check_recount_eligible(state_abbr, candidates, total_votes, election_type, result_status):
     """
     Check if an election result is within recount threshold.
 
+    Two tiers:
+    - States with official margin-based thresholds: flag as 'recount'
+    - All other states: flag races under CLOSE_RACE_PCT as 'close_race'
+
+    Only flags races with 'Called' or 'Unofficial' result_status (not Certified).
     Returns a dict with recount info if eligible, None otherwise.
-    Only flags races where results have been reported but the margin is tight.
     """
     if not total_votes or total_votes == 0:
         return None
-    # Only flag races with results (Called or Certified but not yet final-final)
     if result_status not in ('Called', 'Unofficial'):
-        return None
-
-    thresholds = RECOUNT_THRESHOLDS.get(state_abbr)
-    if not thresholds:
         return None
 
     # Get top 2 vote-getters
@@ -80,20 +81,30 @@ def _check_recount_eligible(state_abbr, candidates, total_votes, election_type, 
     margin = sorted_cands[0]['votes'] - sorted_cands[1]['votes']
     margin_pct = (margin / total_votes) * 100
 
-    # Determine which threshold applies
-    is_statewide = election_type in ('General',) and 'Statewide' in str(candidates)
-    # Simplified: use 'legislative' for all non-statewide
-    key = 'statewide' if is_statewide else 'legislative'
-    threshold = thresholds.get(key)
-    if threshold is None:
-        return None
+    thresholds = RECOUNT_THRESHOLDS.get(state_abbr)
 
-    if margin_pct <= threshold:
-        return {
-            'margin': margin,
-            'margin_pct': round(margin_pct, 2),
-            'threshold_pct': threshold,
-        }
+    if thresholds:
+        # Official threshold state
+        is_statewide = election_type in ('General',) and 'Statewide' in str(candidates)
+        key = 'statewide' if is_statewide else 'legislative'
+        threshold = thresholds.get(key)
+        if threshold is not None and margin_pct <= threshold:
+            return {
+                'type': 'recount',
+                'margin': margin,
+                'margin_pct': round(margin_pct, 2),
+                'threshold_pct': threshold,
+            }
+    else:
+        # No official threshold — use close-race fallback
+        if margin_pct <= CLOSE_RACE_PCT:
+            return {
+                'type': 'close_race',
+                'margin': margin,
+                'margin_pct': round(margin_pct, 2),
+                'threshold_pct': CLOSE_RACE_PCT,
+            }
+
     return None
 
 
