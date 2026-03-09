@@ -707,10 +707,15 @@ def export_all_districts(dry_run=False, single_state=None):
                 if inc_lost:
                     elec_obj['incumbent_defeated'] = True
 
-            # Check for party flip (generals and specials only — primaries
-            # are intra-party and can't flip a seat)
-            is_flip_eligible = e['election_type'] in (
-                'General', 'Special', 'Special_General', 'General_Runoff')
+            # Check for party flip — only election types that determine who
+            # holds office (not primaries, which are intra-party)
+            FLIP_ELIGIBLE_TYPES = {
+                'General', 'General_Runoff',
+                'Special', 'Special_General',
+                'Special_Runoff', 'Special_Runoff_D', 'Special_Runoff_R',
+                'Recall',
+            }
+            is_flip_eligible = e['election_type'] in FLIP_ELIGIBLE_TYPES
             winner = next((c for c in candidate_list if c['result'] == 'Won'), None)
             if winner and is_flip_eligible:
                 winner_caucus = winner.get('caucus') or winner['party']

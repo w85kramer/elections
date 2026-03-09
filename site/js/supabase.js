@@ -222,8 +222,9 @@ function mergeLiveElections(district, liveElections, stateAbbr) {
     var seat = district.seats[j];
     var liveForSeat = bySeat[seat.seat_id];
     if (!liveForSeat) continue;
-    // Compute flip badges (generals/specials only — primaries can't flip)
-    var flipTypes = ['General', 'Special', 'Special_General', 'General_Runoff'];
+    // Compute flip badges — only elections that determine who holds office
+    var flipTypes = ['General', 'General_Runoff', 'Special', 'Special_General',
+                     'Special_Runoff', 'Special_Runoff_D', 'Special_Runoff_R', 'Recall'];
     for (var k = 0; k < liveForSeat.length; k++) {
       var el = liveForSeat[k];
       if (flipTypes.indexOf(el.type) < 0) continue;
