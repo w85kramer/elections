@@ -776,19 +776,48 @@ def main():
     print(f"  Senate: D={party_s.get('D', 0)}, R={party_s.get('R', 0)}")
     print(f"  House:  D={party_h.get('D', 0)}, R={party_h.get('R', 0)}")
 
-    # ── Check existing candidacies ──
-    existing = run_sql("""
-        SELECT COUNT(*) as cnt FROM candidacies c
-        JOIN elections e ON c.election_id = e.id
-        JOIN seats s ON e.seat_id = s.id
-        JOIN districts d ON s.district_id = d.id
-        JOIN states st ON d.state_id = st.id
-        WHERE st.abbreviation = 'MD' AND e.election_year = 2026
-    """)
-    if existing[0]['cnt'] > 0:
-        print(f"\n  WARNING: MD already has {existing[0]['cnt']} candidacies!")
-        print(f"  Aborting to prevent duplicates.")
-        sys.exit(1)
+    # ── Check existing candidacies per office level ──
+    # Instead of a blanket abort, check each office level separately so we can
+    # skip already-loaded levels (e.g. Senate loaded, House not yet).
+    def count_existing_candidacies(office_filter):
+        """Count existing MD 2026 candidacies matching the office filter."""
+        result = run_sql(f"""
+            SELECT COUNT(*) as cnt FROM candidacies c
+            JOIN elections e ON c.election_id = e.id
+            JOIN seats s ON e.seat_id = s.id
+            JOIN districts d ON s.district_id = d.id
+            JOIN states st ON d.state_id = st.id
+            WHERE st.abbreviation = 'MD' AND e.election_year = 2026
+            AND {office_filter}
+        """)
+        return result[0]['cnt']
+
+    skip_senate = False
+    skip_house = False
+    skip_statewide = False
+
+    if do_legislative:
+        senate_cnt = count_existing_candidacies("s.office_type = 'State Senate'")
+        house_cnt = count_existing_candidacies("s.office_type = 'State House'")
+        if senate_cnt > 0:
+            print(f"\n  Senate already has {senate_cnt} candidacies — skipping Senate.")
+            skip_senate = True
+        if house_cnt > 0:
+            print(f"\n  House already has {house_cnt} candidacies — skipping House.")
+            skip_house = True
+        if skip_senate and skip_house:
+            print(f"  All legislative candidacies already loaded.")
+            if not do_statewide:
+                sys.exit(0)
+
+    if do_statewide:
+        sw_cnt = count_existing_candidacies("s.office_type NOT IN ('State Senate', 'State House')")
+        if sw_cnt > 0:
+            print(f"\n  Statewide already has {sw_cnt} candidacies — skipping statewide.")
+            skip_statewide = True
+            if not do_legislative or (skip_senate and skip_house):
+                print(f"  All candidacies already loaded.")
+                sys.exit(0)
 
     # ── Load all existing candidates for name matching ──
     print(f"\nLoading existing candidates for name matching...")
@@ -815,52 +844,58 @@ def main():
         print(f"  Incumbents: {len(incumbent_map)}")
 
         # Senate
-        print(f"\n  --- State Senate ---")
-        s_matched, s_unmatched = match_legislative_candidates(
-            senate, 'State Senate', single_seat_map, multi_seat_map,
-            election_map, incumbent_map, all_candidates
-        )
-        print(f"  Matched: {len(s_matched)}, Unmatched: {len(s_unmatched)}")
-        if s_unmatched:
-            for dist, name, party, reason in s_unmatched[:10]:
-                print(f"    District {dist}: {name} ({party}) — {reason}")
+        if skip_senate:
+            print(f"\n  --- State Senate --- (skipped, already loaded)")
+        else:
+            print(f"\n  --- State Senate ---")
+            s_matched, s_unmatched = match_legislative_candidates(
+                senate, 'State Senate', single_seat_map, multi_seat_map,
+                election_map, incumbent_map, all_candidates
+            )
+            print(f"  Matched: {len(s_matched)}, Unmatched: {len(s_unmatched)}")
+            if s_unmatched:
+                for dist, name, party, reason in s_unmatched[:10]:
+                    print(f"    District {dist}: {name} ({party}) — {reason}")
 
-        inc_count = sum(1 for m in s_matched if m['is_incumbent'])
-        reuse_count = sum(1 for m in s_matched if m['candidate_id'] is not None)
-        print(f"  Incumbents: {inc_count}, Existing candidates matched: {reuse_count}")
+            inc_count = sum(1 for m in s_matched if m['is_incumbent'])
+            reuse_count = sum(1 for m in s_matched if m['candidate_id'] is not None)
+            print(f"  Incumbents: {inc_count}, Existing candidates matched: {reuse_count}")
 
-        if s_matched:
-            new_c, cand_c = insert_candidacies(s_matched, all_candidates, dry_run=args.dry_run)
-            total_new_cands += new_c
-            total_candidacies += cand_c
+            if s_matched:
+                new_c, cand_c = insert_candidacies(s_matched, all_candidates, dry_run=args.dry_run)
+                total_new_cands += new_c
+                total_candidacies += cand_c
 
         # House
-        print(f"\n  --- House of Delegates ---")
-        h_matched, h_unmatched = match_legislative_candidates(
-            house, 'State House', single_seat_map, multi_seat_map,
-            election_map, incumbent_map, all_candidates
-        )
-        print(f"  Matched: {len(h_matched)}, Unmatched: {len(h_unmatched)}")
-        if h_unmatched:
-            reasons = Counter(u[3] for u in h_unmatched)
-            for reason, count in reasons.most_common():
-                print(f"    Unmatched ({reason}): {count}")
-            for dist, name, party, reason in h_unmatched[:10]:
-                print(f"    District {dist}: {name} ({party}) — {reason}")
+        if skip_house:
+            print(f"\n  --- House of Delegates --- (skipped, already loaded)")
+        else:
+            print(f"\n  --- House of Delegates ---")
+            h_matched, h_unmatched = match_legislative_candidates(
+                house, 'State House', single_seat_map, multi_seat_map,
+                election_map, incumbent_map, all_candidates
+            )
+            print(f"  Matched: {len(h_matched)}, Unmatched: {len(h_unmatched)}")
+            if h_unmatched:
+                reasons = Counter(u[3] for u in h_unmatched)
+                for reason, count in reasons.most_common():
+                    print(f"    Unmatched ({reason}): {count}")
+                for dist, name, party, reason in h_unmatched[:10]:
+                    print(f"    District {dist}: {name} ({party}) — {reason}")
 
-        inc_count = sum(1 for m in h_matched if m['is_incumbent'])
-        reuse_count = sum(1 for m in h_matched if m['candidate_id'] is not None)
-        print(f"  Incumbents: {inc_count}, Existing candidates matched: {reuse_count}")
+            inc_count = sum(1 for m in h_matched if m['is_incumbent'])
+            reuse_count = sum(1 for m in h_matched if m['candidate_id'] is not None)
+            print(f"  Incumbents: {inc_count}, Existing candidates matched: {reuse_count}")
 
-        if h_matched:
-            new_c, cand_c = insert_candidacies(h_matched, all_candidates, dry_run=args.dry_run)
-            total_new_cands += new_c
-            total_candidacies += cand_c
+            if h_matched:
+                new_c, cand_c = insert_candidacies(h_matched, all_candidates, dry_run=args.dry_run)
+                total_new_cands += new_c
+                total_candidacies += cand_c
 
     # ══════════════════════════════════════════════════════════════════════
     # Statewide
     # ══════════════════════════════════════════════════════════════════════
-    if do_statewide:
+    if do_statewide and not skip_statewide:
         print(f"\n{'=' * 60}")
         print("STATEWIDE RACES")
         print(f"{'=' * 60}")
