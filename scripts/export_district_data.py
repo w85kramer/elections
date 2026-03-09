@@ -32,6 +32,71 @@ MIN_EXPORT_YEAR = {
     'NE': 2014,  # 2010/2012 loser caucus data unverified (no Wikipedia source)
 }
 
+# ── Recount threshold rules by state ──────────────────────────────────
+# Format: { state: { 'statewide': threshold_pct, 'legislative': threshold_pct } }
+# None = no margin-based threshold (any candidate may request)
+# Only states with specific margin thresholds are listed;
+# unlisted states are not flagged.
+RECOUNT_THRESHOLDS = {
+    'NC': {'statewide': 0.5, 'legislative': 1.0},
+    'TX': {'statewide': 0.5, 'legislative': 0.5},
+    'GA': {'statewide': 0.5, 'legislative': 1.0},
+    'SC': {'statewide': 1.0, 'legislative': 1.0},
+    'MS': {'statewide': 0.5, 'legislative': 1.0},
+    'FL': {'statewide_machine': 0.5, 'statewide_manual': 0.25,
+           'legislative_machine': 0.5, 'legislative_manual': 0.25},
+    'CO': {'statewide': 0.5, 'legislative': 0.5},
+    'AZ': {'statewide': 0.1, 'legislative': 0.1},
+    'PA': {'statewide': 0.5, 'legislative': 0.5},
+    'WI': {'statewide': 1.0, 'legislative': 1.0},
+    'MI': {'statewide': 0.5, 'legislative': 0.5},  # estimated
+}
+
+
+def _check_recount_eligible(state_abbr, candidates, total_votes, election_type, result_status):
+    """
+    Check if an election result is within recount threshold.
+
+    Returns a dict with recount info if eligible, None otherwise.
+    Only flags races where results have been reported but the margin is tight.
+    """
+    if not total_votes or total_votes == 0:
+        return None
+    # Only flag races with results (Called or Certified but not yet final-final)
+    if result_status not in ('Called', 'Unofficial'):
+        return None
+
+    thresholds = RECOUNT_THRESHOLDS.get(state_abbr)
+    if not thresholds:
+        return None
+
+    # Get top 2 vote-getters
+    sorted_cands = sorted(
+        [c for c in candidates if c.get('votes') and c['votes'] > 0],
+        key=lambda c: c['votes'], reverse=True)
+    if len(sorted_cands) < 2:
+        return None
+
+    margin = sorted_cands[0]['votes'] - sorted_cands[1]['votes']
+    margin_pct = (margin / total_votes) * 100
+
+    # Determine which threshold applies
+    is_statewide = election_type in ('General',) and 'Statewide' in str(candidates)
+    # Simplified: use 'legislative' for all non-statewide
+    key = 'statewide' if is_statewide else 'legislative'
+    threshold = thresholds.get(key)
+    if threshold is None:
+        return None
+
+    if margin_pct <= threshold:
+        return {
+            'margin': margin,
+            'margin_pct': round(margin_pct, 2),
+            'threshold_pct': threshold,
+        }
+    return None
+
+
 def run_sql(query, retries=5):
     for attempt in range(retries):
         resp = httpx.post(
@@ -562,6 +627,14 @@ def export_all_districts(dry_run=False, single_state=None):
             if e.get('precincts_reporting') is not None:
                 elec_obj['precincts_reporting'] = e['precincts_reporting']
                 elec_obj['precincts_total'] = e['precincts_total']
+
+            # Check for potential recount eligibility
+            recount_flag = _check_recount_eligible(
+                state, candidate_list, e['total_votes_cast'],
+                e['election_type'], e.get('result_status'))
+            if recount_flag:
+                elec_obj['recount_eligible'] = recount_flag
+
             seat_elections.append(elec_obj)
 
         # Forecast info for this seat
