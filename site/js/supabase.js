@@ -210,6 +210,19 @@ function mergeLiveElections(district, liveElections, stateAbbr) {
     var transformed = transformElection(pg);
     var recount = checkRecountEligible(stateAbbr, transformed);
     if (recount) transformed.recount_eligible = recount;
+    // Incumbent defeated in primary
+    if (transformed.type && transformed.type.indexOf('Primary') >= 0) {
+      var incLost = transformed.candidates.some(function(c) { return c.is_incumbent && c.result === 'Lost'; });
+      if (incLost) transformed.incumbent_defeated = true;
+    }
+    // Party flip: winner's party differs from losing incumbent's party
+    var winner = transformed.candidates.find(function(c) { return c.result === 'Won'; });
+    if (winner) {
+      var incLoser = transformed.candidates.find(function(c) {
+        return c.is_incumbent && c.result === 'Lost' && c.party !== winner.party;
+      });
+      if (incLoser) transformed.flipped_seat = { from: incLoser.caucus || incLoser.party, to: winner.caucus || winner.party };
+    }
     bySeat[pg.seat_id].push(transformed);
   }
 

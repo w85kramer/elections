@@ -133,6 +133,30 @@
     margin-left: 4px;
     cursor: help;
   }
+  .flip-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    color: #065f46;
+    background: #ecfdf5;
+    border: 1px solid #34d399;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 4px;
+    cursor: help;
+  }
+  .incumbent-defeated-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    color: #991b1b;
+    background: #fef2f2;
+    border: 1px solid #f87171;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 4px;
+    cursor: help;
+  }
   .forecast-tag {
     display: inline-block;
     font-size: 12px;
@@ -934,6 +958,19 @@
       }
     }
 
+    // Incumbent defeated badge (primaries only)
+    let incDefeatTag = '';
+    if (e.incumbent_defeated) {
+      incDefeatTag = ` <span class="incumbent-defeated-badge" title="Incumbent lost in primary">Incumbent Defeated</span>`;
+    }
+
+    // Party flip badge
+    let flipTag = '';
+    if (e.flipped_seat) {
+      const f = e.flipped_seat;
+      flipTag = ` <span class="flip-badge" title="Seat flipped from ${f.from} to ${f.to}">Flipped ${f.from}→${f.to}</span>`;
+    }
+
     // Upcoming with candidates but no results
     const hasResults = hasWinner || e.result_status;
     let filedNote = '';
@@ -947,7 +984,7 @@
         <span>${dateStr}</span>
         <span class="separator">&middot;</span>
         <span class="entry-type">${typeLabel}</span>
-        ${forecastTag}${reportingTag}${recountTag}${uncontestedTag}${filedNote}
+        ${forecastTag}${reportingTag}${recountTag}${flipTag}${incDefeatTag}${uncontestedTag}${filedNote}
       </div>
       <div class="entry-candidates">`;
 

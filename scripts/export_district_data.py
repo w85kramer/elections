@@ -700,6 +700,26 @@ def export_all_districts(dry_run=False, single_state=None):
             if recount_flag:
                 elec_obj['recount_eligible'] = recount_flag
 
+            # Check for incumbent defeated in primary
+            if 'Primary' in e['election_type']:
+                inc_lost = [c for c in candidate_list
+                            if c.get('is_incumbent') and c['result'] == 'Lost']
+                if inc_lost:
+                    elec_obj['incumbent_defeated'] = True
+
+            # Check for party flip: winner's caucus/party differs from
+            # the losing incumbent's caucus/party in the same election
+            winner = next((c for c in candidate_list if c['result'] == 'Won'), None)
+            if winner:
+                inc_loser = next((c for c in candidate_list
+                                  if c.get('is_incumbent') and c['result'] == 'Lost'
+                                  and c['party'] != winner['party']), None)
+                if inc_loser:
+                    elec_obj['flipped_seat'] = {
+                        'from': inc_loser.get('caucus') or inc_loser['party'],
+                        'to': winner.get('caucus') or winner['party'],
+                    }
+
             seat_elections.append(elec_obj)
 
         # Forecast info for this seat
