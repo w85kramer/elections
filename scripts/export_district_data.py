@@ -85,27 +85,53 @@ CLOSE_RACE_PCT = 1.0
 
 def _check_recount_eligible(state_abbr, candidates, total_votes, election_type, result_status):
     """
-    Check if an election result is within recount threshold.
+    Check if an election result is within recount threshold or triggered a runoff.
 
-    Two tiers:
-    - States with official margin-based thresholds: flag as 'recount'
-    - All other states: flag races under CLOSE_RACE_PCT as 'close_race'
+    Three badge types:
+    - 'runoff_triggered': top candidates both advancing to runoff (margin irrelevant)
+    - 'recount': margin within official state threshold (advancing vs eliminated)
+    - 'close_race': margin within 1% fallback for states without thresholds
 
     Only flags races with 'Called' or 'Unofficial' result_status (not Certified).
-    Returns a dict with recount info if eligible, None otherwise.
+    Returns a dict with badge info if eligible, None otherwise.
     """
     if not total_votes or total_votes == 0:
         return None
     if result_status not in ('Called', 'Unofficial'):
         return None
 
-    # Get top 2 vote-getters
+    # Sort by votes descending
     sorted_cands = sorted(
         [c for c in candidates if c.get('votes') and c['votes'] > 0],
         key=lambda c: c['votes'], reverse=True)
     if len(sorted_cands) < 2:
         return None
 
+    # Check for runoff scenario: if top candidates both have result='Runoff',
+    # the margin between them doesn't affect who advances.
+    runoff_cands = [c for c in sorted_cands if c.get('result') == 'Runoff']
+    if len(runoff_cands) >= 2:
+        # Runoff triggered — show badge with margin between the runoff candidates
+        r_margin = runoff_cands[0]['votes'] - runoff_cands[-1]['votes']
+        r_margin_pct = (r_margin / total_votes) * 100
+        # Also check if there's a close margin between last advancing and first
+        # eliminated candidate (that's where a recount would actually matter)
+        eliminated = [c for c in sorted_cands if c.get('result') not in ('Runoff', 'Won', 'Advanced')]
+        if eliminated:
+            cutoff_margin = runoff_cands[-1]['votes'] - eliminated[0]['votes']
+            cutoff_pct = (cutoff_margin / total_votes) * 100
+        else:
+            cutoff_margin = None
+            cutoff_pct = None
+        return {
+            'type': 'runoff_triggered',
+            'margin': r_margin,
+            'margin_pct': round(r_margin_pct, 2),
+            'cutoff_margin': cutoff_margin,
+            'cutoff_margin_pct': round(cutoff_pct, 2) if cutoff_pct is not None else None,
+        }
+
+    # Standard recount/close-race check using top-2 margin
     margin = sorted_cands[0]['votes'] - sorted_cands[1]['votes']
     margin_pct = (margin / total_votes) * 100
 

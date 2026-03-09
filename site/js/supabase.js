@@ -115,11 +115,28 @@ function checkRecountEligible(stateAbbr, election) {
   var voted = election.candidates.filter(function(c) { return c.votes && c.votes > 0; });
   if (voted.length < 2) return null;
   voted.sort(function(a, b) { return b.votes - a.votes; });
+
+  // Runoff scenario: top candidates both advancing to runoff
+  var runoffCands = voted.filter(function(c) { return c.result === 'Runoff'; });
+  if (runoffCands.length >= 2) {
+    var rMargin = runoffCands[0].votes - runoffCands[runoffCands.length - 1].votes;
+    var rPct = (rMargin / tv) * 100;
+    var eliminated = voted.filter(function(c) { return c.result !== 'Runoff' && c.result !== 'Won' && c.result !== 'Advanced'; });
+    var cutoff = eliminated.length > 0 ? runoffCands[runoffCands.length - 1].votes - eliminated[0].votes : null;
+    var cutoffPct = cutoff != null ? (cutoff / tv) * 100 : null;
+    return {
+      type: 'runoff_triggered', margin: rMargin,
+      margin_pct: Math.round(rPct * 100) / 100,
+      cutoff_margin: cutoff,
+      cutoff_margin_pct: cutoffPct != null ? Math.round(cutoffPct * 100) / 100 : null
+    };
+  }
+
   var margin = voted[0].votes - voted[1].votes;
   var marginPct = (margin / tv) * 100;
   var t = RECOUNT_THRESHOLDS[stateAbbr];
   if (t) {
-    var threshold = t.leg; // district pages are always legislative
+    var threshold = t.leg;
     if (marginPct <= threshold) {
       return { type: 'recount', margin: margin, margin_pct: Math.round(marginPct * 100) / 100, threshold_pct: threshold };
     }
