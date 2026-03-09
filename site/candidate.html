@@ -357,15 +357,22 @@
 
   function districtUrl(state, chamber, district, officeType) {
     // Statewide offices route to governor.html or statewide.html
-    if (chamber === 'Statewide' || (officeType && officeType !== 'State Representative' && officeType !== 'State Senator')) {
+    const statewideOffices = {
+      'Governor': null,
+      'Lt. Governor': 'ltgov',
+      'Attorney General': 'ag',
+      'Secretary of State': 'sos',
+      'Treasurer': 'treasurer',
+      'Auditor': 'auditor',
+      'Controller': 'controller',
+      'Agriculture Commissioner': 'ag-commissioner',
+      'Insurance Commissioner': 'insurance-commissioner',
+      'Labor Commissioner': 'labor-commissioner',
+      'Superintendent of Public Instruction': 'superintendent',
+    };
+    if (officeType in statewideOffices || chamber === 'Statewide') {
       if (officeType === 'Governor') return `governor.html?st=${state}`;
-      const officeKeyMap = {
-        'Attorney General': 'ag',
-        'Lt. Governor': 'ltgov',
-        'Secretary of State': 'sos',
-        'Treasurer': 'sos',  // no separate page yet, link to statewide
-      };
-      const key = officeKeyMap[officeType] || 'ag';
+      const key = statewideOffices[officeType] || 'ag';
       return `statewide.html?st=${state}&office=${key}`;
     }
     return `district.html?st=${state}&chamber=${encodeURIComponent(chamber)}&d=${encodeURIComponent(district)}`;
