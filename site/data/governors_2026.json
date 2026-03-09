@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T20:44:18.349549",
+  "generated_at": "2026-03-08T21:24:09.412637",
   "total_races": 36,
   "open_seats": 24,
   "races": [
@@ -545,7 +545,7 @@
           "name": "Fredrick Love",
           "party": "D",
           "status": "Filed",
-          "result": "Pending",
+          "result": "Won",
           "is_major": false,
           "election_type": "Primary_D"
         },
@@ -553,9 +553,17 @@
           "name": "Supha Xayprasith-Mays",
           "party": "D",
           "status": "Filed",
-          "result": "Pending",
+          "result": "Lost",
           "is_major": false,
           "election_type": "Primary_D"
+        },
+        {
+          "name": "Sarah Huckabee Sanders",
+          "party": "R",
+          "status": null,
+          "result": "Won",
+          "is_major": false,
+          "election_type": "Primary_R"
         }
       ]
     },
