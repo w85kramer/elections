@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-09T19:12:54.669608Z",
+  "generated_at": "2026-03-09T21:14:52.376646Z",
   "state": {
     "name": "Texas",
     "abbr": "TX",
@@ -124,7 +124,7 @@
           "party": "R",
           "pres_margin": "-52.3",
           "next_election": 2026,
-          "candidate_id": 12757
+          "candidate_id": 53604
         },
         {
           "district": "4",
@@ -993,8 +993,7 @@
           "name": "Ramon Romero",
           "party": "D",
           "pres_margin": "+26.9",
-          "next_election": 2026,
-          "candidate_id": 12859
+          "next_election": 2026
         },
         {
           "district": "91",
@@ -1514,7 +1513,7 @@
           "party": "D",
           "pres_margin": "+37.7",
           "next_election": 2026,
-          "candidate_id": 12795
+          "candidate_id": 54526
         },
         {
           "district": "143",
@@ -1926,6 +1925,20 @@
       "forecast": "Solid R",
       "candidates": [
         {
+          "name": "Gina Hinojosa",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
+          "name": "Greg Abbott",
+          "party": "R",
+          "is_incumbent": true,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
           "name": "Andrew White",
           "party": "D",
           "is_incumbent": false,
@@ -2075,6 +2088,18 @@
             "name": "Clayton Tucker",
             "party": "D",
             "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Nate Sheets",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Clayton Tucker",
+            "party": "D",
+            "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
@@ -2142,6 +2167,18 @@
         "office": "Controller",
         "candidates": [
           {
+            "name": "Sarah Eckhardt",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Donald Huffines",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Michael Lange",
             "party": "D",
             "is_incumbent": false,
@@ -2188,6 +2225,12 @@
       {
         "office": "Lt. Governor",
         "candidates": [
+          {
+            "name": "Dan Patrick",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Courtney Head",
             "party": "D",
@@ -2242,6 +2285,12 @@
           {
             "name": "Sean Huffman",
             "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Chris Spencer",
+            "party": "R",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -2308,6 +2357,12 @@
             "election_type": "General"
           },
           {
+            "name": "Nicole King",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Kristen Plaisance",
             "party": "R",
             "is_incumbent": false,
@@ -2326,7 +2381,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Cecil Bell",
+            "name": "Cecil Bell, Jr.",
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
@@ -2573,6 +2628,12 @@
             "election_type": "General"
           },
           {
+            "name": "Michael Myers",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Brian Harrison",
             "party": "R",
             "is_incumbent": true,
@@ -2748,6 +2809,18 @@
           {
             "name": "Moniqua' Scott",
             "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Moniqua' Scott",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Brad Bailey",
+            "party": "R",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -3933,6 +4006,12 @@
         "district": "50",
         "candidates": [
           {
+            "name": "Samantha Lopez-Resendez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Howard Olsen IV",
             "party": "R",
             "is_incumbent": false,
@@ -4000,6 +4079,12 @@
             "election_type": "General"
           },
           {
+            "name": "Jessica Martinez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Lulu Flores",
             "party": "D",
             "is_incumbent": true,
@@ -4022,6 +4107,12 @@
             "name": "Chris Jimenez",
             "party": "D",
             "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Caroline Harris Davila",
+            "party": "R",
+            "is_incumbent": true,
             "election_type": "General"
           },
           {
@@ -4803,6 +4894,12 @@
             "election_type": "General"
           },
           {
+            "name": "Robert Garza",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Eddie Morales",
             "party": "D",
             "is_incumbent": true,
@@ -5113,6 +5210,12 @@
             "election_type": "General"
           },
           {
+            "name": "Margaret Durham",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Carl Tepper",
             "party": "R",
             "is_incumbent": true,
@@ -5140,6 +5243,12 @@
           {
             "name": "Lawrence Brandyburg",
             "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Dennis Geesaman",
+            "party": "R",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -5323,13 +5432,13 @@
         "district": "90",
         "candidates": [
           {
-            "name": "Ramon Romero",
+            "name": "Ramon Romero, Jr.",
             "party": "D",
             "is_incumbent": true,
             "election_type": "General"
           },
           {
-            "name": "Ramon Romero",
+            "name": "Ramon Romero, Jr.",
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
@@ -5455,6 +5564,12 @@
           {
             "name": "Katie O'Brien Duzan",
             "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Cheryl Bean",
+            "party": "R",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -5595,6 +5710,12 @@
             "election_type": "General"
           },
           {
+            "name": "Armin Mizani",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Aaron Hendley",
             "party": "D",
             "is_incumbent": false,
@@ -5699,6 +5820,12 @@
         "chamber": "House",
         "district": "101",
         "candidates": [
+          {
+            "name": "Junior Ezeonu",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
           {
             "name": "Chris Turner",
             "party": "D",
@@ -5930,6 +6057,12 @@
             "election_type": "General"
           },
           {
+            "name": "Will Campbell",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Aicha Davis",
             "party": "D",
             "is_incumbent": true,
@@ -6039,6 +6172,12 @@
             "name": "Rhetta Bowers",
             "party": "D",
             "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Stephen Stanley",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "General"
           },
           {
@@ -6205,6 +6344,12 @@
           {
             "name": "Kristian Carranza",
             "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jorge Borrego",
+            "party": "R",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -6444,6 +6589,12 @@
             "election_type": "General"
           },
           {
+            "name": "Ricardo Martinez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Adrian Reyna",
             "party": "D",
             "is_incumbent": false,
@@ -6569,6 +6720,12 @@
           {
             "name": "Desiree Klaus",
             "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Tom Butler",
+            "party": "R",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -6789,6 +6946,12 @@
             "election_type": "General"
           },
           {
+            "name": "Mike Michna",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Ann Johnson",
             "party": "D",
             "is_incumbent": true,
@@ -6882,6 +7045,12 @@
             "election_type": "General"
           },
           {
+            "name": "Helen Zhou",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Gene Wu",
             "party": "D",
             "is_incumbent": true,
@@ -6906,6 +7075,12 @@
         "chamber": "House",
         "district": "138",
         "candidates": [
+          {
+            "name": "Tyler Smith",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
           {
             "name": "Tyler Smith",
             "party": "D",
@@ -6949,6 +7124,12 @@
         "chamber": "House",
         "district": "139",
         "candidates": [
+          {
+            "name": "Charlene Ward Johnson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Kyle Harding",
             "party": "R",
@@ -7049,6 +7230,12 @@
         "district": "142",
         "candidates": [
           {
+            "name": "Harold Dutton, Jr.",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
             "name": "Heidi Hall",
             "party": "R",
             "is_incumbent": false,
@@ -7061,7 +7248,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Harold Dutton",
+            "name": "Harold Dutton, Jr.",
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
@@ -7327,6 +7514,12 @@
         "district": "150",
         "candidates": [
           {
+            "name": "A'Yonna Kellum",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Valoree Swanson",
             "party": "R",
             "is_incumbent": true,
@@ -7500,6 +7693,12 @@
         "district": "5",
         "candidates": [
           {
+            "name": "Paul Thomasson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Charles Schwertner",
             "party": "R",
             "is_incumbent": true,
@@ -7557,7 +7756,7 @@
           {
             "name": "Taylor Rehmet",
             "party": "D",
-            "is_incumbent": false,
+            "is_incumbent": true,
             "election_type": "Primary_D"
           },
           {
@@ -7737,6 +7936,12 @@
           {
             "name": "Amy Martinez-Salas",
             "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "David Cook",
+            "party": "R",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -8534,7 +8739,7 @@
       "seat_label": "TX House 90",
       "pres_margin": "+26.9",
       "holder_party": "D",
-      "candidate": "Ramon Romero",
+      "candidate": "Ramon Romero, Jr.",
       "is_open_seat": null
     },
     {

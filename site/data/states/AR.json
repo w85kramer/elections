@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-09T14:12:13.808018Z",
+  "generated_at": "2026-03-09T21:15:01.795247Z",
   "state": {
     "name": "Arkansas",
     "abbr": "AR",
@@ -1137,7 +1137,7 @@
           "party": "R",
           "pres_margin": "-52.0",
           "next_election": 2028,
-          "candidate_id": 7682
+          "candidate_id": 20560
         },
         {
           "district": "5",
@@ -1460,6 +1460,20 @@
           "name": "Fredrick Love",
           "party": "D",
           "is_incumbent": false,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
+          "name": "Sarah Huckabee Sanders",
+          "party": "R",
+          "is_incumbent": true,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
+          "name": "Fredrick Love",
+          "party": "D",
+          "is_incumbent": false,
           "election_type": "Primary_D",
           "status": "Filed"
         },
@@ -1487,6 +1501,12 @@
             "name": "Tim Griffin",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Tim Griffin",
+            "party": "R",
+            "is_incumbent": true,
             "election_type": "Primary_R"
           }
         ]
@@ -1498,6 +1518,12 @@
             "name": "Dennis Milligan",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Dennis Milligan",
+            "party": "R",
+            "is_incumbent": true,
             "election_type": "Primary_R"
           }
         ]
@@ -1505,6 +1531,12 @@
       {
         "office": "Lt. Governor",
         "candidates": [
+          {
+            "name": "Leslie Rutledge",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Leslie Rutledge",
             "party": "R",
@@ -1543,6 +1575,12 @@
             "name": "John Thurston",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "John Thurston",
+            "party": "R",
+            "is_incumbent": true,
             "election_type": "Primary_R"
           }
         ]
@@ -1554,6 +1592,12 @@
         "chamber": "House",
         "district": "1",
         "candidates": [
+          {
+            "name": "Mark Nichols",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
           {
             "name": "Mark Nichols",
             "party": "R",
@@ -1810,6 +1854,12 @@
         "chamber": "House",
         "district": "11",
         "candidates": [
+          {
+            "name": "Rey Hernandez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
           {
             "name": "Rey Hernandez",
             "party": "D",
@@ -3318,7 +3368,7 @@
           {
             "name": "Alex Holladay",
             "party": "D",
-            "is_incumbent": false,
+            "is_incumbent": true,
             "election_type": "General"
           },
           {
@@ -3330,7 +3380,7 @@
           {
             "name": "Alex Holladay",
             "party": "D",
-            "is_incumbent": false,
+            "is_incumbent": true,
             "election_type": "Primary_D"
           },
           {
@@ -3352,6 +3402,12 @@
         "chamber": "House",
         "district": "71",
         "candidates": [
+          {
+            "name": "Cassandra Green",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
           {
             "name": "Cassandra Green",
             "party": "D",
@@ -3830,6 +3886,12 @@
         "district": "92",
         "candidates": [
           {
+            "name": "Dawn Creekmore",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Casey Reed",
             "party": "R",
             "is_incumbent": false,
@@ -4227,6 +4289,12 @@
           {
             "name": "Joshua Irby",
             "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Rodney Wright",
+            "party": "R",
             "is_incumbent": false,
             "election_type": "General"
           },

@@ -666,12 +666,18 @@ def load_db_elections(state, year, include_statewide=False):
     return run_sql(query)
 
 
-def match_and_update(contests, db_elections, dry_run=True):
+def match_and_update(contests, db_elections, state='', dry_run=True):
     """
     Match SoS results to DB elections and update vote counts.
 
+    In states with runoff requirements (TX, AR, GA, MS, AL, SC, SD),
+    if the top vote-getter gets <50%, mark top-2 as 'Runoff' instead of 'Won'/'Lost'.
+
     Returns summary stats.
     """
+    # States that require a majority to win a primary (runoff if <50%)
+    RUNOFF_STATES = {'TX', 'AR', 'GA', 'MS', 'AL', 'SC', 'SD'}
+    requires_runoff = state in RUNOFF_STATES
     stats = {
         'matched': 0,
         'updated_votes': 0,
@@ -774,7 +780,16 @@ def match_and_update(contests, db_elections, dry_run=True):
 
             # Determine result
             is_winner = (sos_cand == contest['candidates'][0])  # Highest votes
-            new_result = 'Won' if is_winner else 'Lost'
+            is_runner_up = (len(contest['candidates']) > 1 and
+                            sos_cand == contest['candidates'][1])
+            winner_pct = contest['candidates'][0]['pct'] * 100
+
+            if requires_runoff and winner_pct < 50.0 and (is_winner or is_runner_up):
+                new_result = 'Runoff'
+            elif is_winner:
+                new_result = 'Won'
+            else:
+                new_result = 'Lost'
             old_result = matched_db['result']
 
             needs_update = (
@@ -805,6 +820,177 @@ def match_and_update(contests, db_elections, dry_run=True):
                     """)
 
     return stats
+
+
+def create_runoff_elections(state, year, dry_run=True):
+    """
+    Create Primary_Runoff elections for primaries where no candidate got a majority.
+
+    Finds primaries with result='Runoff' candidacies, creates a Primary_Runoff
+    election for that seat, and adds the two runoff candidates to it.
+
+    Returns count of runoff elections created.
+    """
+    # Runoff dates by state (updated each cycle)
+    RUNOFF_DATES = {
+        'TX': '2026-05-26',
+        'AR': '2026-03-31',
+        'GA': '2026-06-16',   # placeholder
+        'AL': '2026-04-07',   # placeholder
+        'MS': '2026-03-31',   # placeholder
+        'SC': '2026-04-07',   # placeholder
+        'SD': '2026-04-07',   # placeholder
+    }
+
+    runoff_date = RUNOFF_DATES.get(state)
+    if not runoff_date:
+        print(f'  No runoff date configured for {state}, skipping.', flush=True)
+        return 0
+
+    print(f'  Creating runoff elections (date: {runoff_date})...', flush=True)
+
+    # Find primaries that produced runoffs but don't yet have a Primary_Runoff election
+    sql = f"""
+        SELECT DISTINCT e.id as primary_id, e.seat_id, e.election_type,
+            d.district_number, s.office_type
+        FROM candidacies ca
+        JOIN elections e ON ca.election_id = e.id
+        JOIN seats s ON e.seat_id = s.id
+        JOIN districts d ON s.district_id = d.id
+        JOIN states st ON d.state_id = st.id
+        WHERE st.abbreviation = '{state}'
+        AND e.election_year = {year}
+        AND e.election_type LIKE 'Primary%'
+        AND e.election_type != 'Primary_Runoff'
+        AND ca.result = 'Runoff'
+        AND NOT EXISTS (
+            SELECT 1 FROM elections e2
+            WHERE e2.seat_id = e.seat_id
+            AND e2.election_year = {year}
+            AND e2.election_type = 'Primary_Runoff'
+            AND e2.related_election_id = e.id
+        )
+        ORDER BY d.district_number
+    """
+    primaries = run_sql(sql)
+    if not primaries:
+        print('  No new runoff elections needed.', flush=True)
+        return 0
+
+    print(f'  Found {len(primaries)} primaries needing runoff elections:', flush=True)
+    for p in primaries:
+        print(f'    {p["office_type"]} {p["district_number"]} ({p["election_type"]})', flush=True)
+
+    if dry_run:
+        print(f'  *** DRY RUN — would create {len(primaries)} runoff elections ***', flush=True)
+        return len(primaries)
+
+    created = 0
+    for p in primaries:
+        # Create the runoff election
+        result = run_sql(f"""
+            INSERT INTO elections (seat_id, election_year, election_type, election_date, related_election_id)
+            VALUES ({p['seat_id']}, {year}, 'Primary_Runoff', '{runoff_date}', {p['primary_id']})
+            RETURNING id
+        """)
+        runoff_id = result[0]['id']
+
+        # Add the two runoff candidates
+        run_sql(f"""
+            INSERT INTO candidacies (election_id, candidate_id, party, candidate_status, result)
+            SELECT {runoff_id}, ca.candidate_id, ca.party, 'Filed', 'Pending'
+            FROM candidacies ca
+            WHERE ca.election_id = {p['primary_id']} AND ca.result = 'Runoff'
+        """)
+        created += 1
+
+    print(f'  Created {created} runoff elections with candidates.', flush=True)
+    return created
+
+
+def promote_winners_to_general(state, year, dry_run=True):
+    """
+    After importing primary results, promote winners to their General elections.
+
+    For each primary winner, check if they already have a candidacy in the
+    corresponding General election for the same seat. If not, create one.
+
+    Returns count of candidacies created.
+    """
+    print(f'  Promoting primary winners to general elections...', flush=True)
+
+    # Find primary winners missing from their general election
+    sql = f"""
+        WITH primary_winners AS (
+            SELECT e.seat_id, ca.candidate_id, ca.party, ca.is_incumbent, c.full_name
+            FROM candidacies ca
+            JOIN candidates c ON ca.candidate_id = c.id
+            JOIN elections e ON ca.election_id = e.id
+            JOIN seats s ON e.seat_id = s.id
+            JOIN districts d ON s.district_id = d.id
+            JOIN states st ON d.state_id = st.id
+            WHERE st.abbreviation = '{state}'
+            AND e.election_year = {year}
+            AND e.election_type LIKE 'Primary%'
+            AND ca.result = 'Won'
+        ),
+        generals AS (
+            SELECT e.id as general_id, e.seat_id
+            FROM elections e
+            JOIN seats s ON e.seat_id = s.id
+            JOIN districts d ON s.district_id = d.id
+            JOIN states st ON d.state_id = st.id
+            WHERE st.abbreviation = '{state}'
+            AND e.election_year = {year}
+            AND e.election_type = 'General'
+        )
+        SELECT g.general_id, pw.candidate_id, pw.party, pw.is_incumbent, pw.full_name
+        FROM primary_winners pw
+        JOIN generals g ON g.seat_id = pw.seat_id
+        WHERE NOT EXISTS (
+            SELECT 1 FROM candidacies ca
+            WHERE ca.election_id = g.general_id AND ca.candidate_id = pw.candidate_id
+        )
+        ORDER BY pw.full_name
+    """
+    rows = run_sql(sql)
+    if not rows:
+        print('  No winners to promote (all already in generals).', flush=True)
+        return 0
+
+    print(f'  Found {len(rows)} primary winners missing from general elections:', flush=True)
+    for r in rows[:20]:
+        print(f'    {r["full_name"]} ({r["party"]})', flush=True)
+    if len(rows) > 20:
+        print(f'    ... and {len(rows) - 20} more', flush=True)
+
+    if dry_run:
+        print(f'  *** DRY RUN — would insert {len(rows)} general candidacies ***', flush=True)
+        return len(rows)
+
+    # Batch insert
+    values = []
+    for r in rows:
+        inc = 'true' if r['is_incumbent'] else 'false'
+        values.append(
+            f"({r['general_id']}, {r['candidate_id']}, '{r['party']}', "
+            f"'Filed', {inc}, 'Pending')"
+        )
+
+    # Insert in batches of 50
+    created = 0
+    for i in range(0, len(values), 50):
+        batch = values[i:i+50]
+        insert_sql = f"""
+            INSERT INTO candidacies
+                (election_id, candidate_id, party, candidate_status, is_incumbent, result)
+            VALUES {', '.join(batch)}
+        """
+        run_sql(insert_sql)
+        created += len(batch)
+
+    print(f'  Inserted {created} general election candidacies.', flush=True)
+    return created
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -885,15 +1071,23 @@ def main():
 
     # Step 4: Match and update
     print(f'\nStep 4: {"Previewing" if args.dry_run else "Applying"} updates...', flush=True)
-    stats = match_and_update(contests, db_elections, dry_run=args.dry_run)
+    stats = match_and_update(contests, db_elections, state=state, dry_run=args.dry_run)
 
-    # Step 5: Summary
+    # Step 5: Create runoff elections where needed
+    runoffs_created = create_runoff_elections(state, year, dry_run=args.dry_run)
+
+    # Step 6: Promote primary winners to general elections
+    promoted = promote_winners_to_general(state, year, dry_run=args.dry_run)
+
+    # Step 7: Summary
     print(f'\n{"=" * 60}')
     print(f'SUMMARY')
     print(f'{"=" * 60}')
     print(f'  Contests matched: {stats["matched"]}')
     print(f'  Candidacy votes updated: {stats["updated_votes"]}')
     print(f'  Election statuses updated: {stats["updated_status"]}')
+    print(f'  Runoff elections created: {runoffs_created}')
+    print(f'  Winners promoted to general: {promoted}')
 
     if stats['new_info']:
         print(f'\n  Vote changes ({len(stats["new_info"])}):')
