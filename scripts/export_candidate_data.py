@@ -478,11 +478,15 @@ def export_candidates(dry_run=False, single_state=None):
                     latest = cand['candidacies'][0]
                     entry['ch'] = latest['chamber']
                     entry['d'] = latest['district']
-            # Include office_type for statewide candidates (Governor, AG, etc.)
-            if cand['candidacies']:
+            # Include office_type — prefer current_office (actual role) over
+            # most recent candidacy (which may be a run for a different office)
+            ot = None
+            if current and current.get('office_type'):
+                ot = current['office_type']
+            elif cand['candidacies']:
                 ot = cand['candidacies'][0].get('office_type')
-                if ot and ot != 'State Representative' and ot != 'State Senator':
-                    entry['ot'] = ot
+            if ot and ot != 'State Representative' and ot != 'State Senator':
+                entry['ot'] = ot
             new_entries.append(entry)
 
     search_path = os.path.join(SITE_DATA_DIR, 'candidate_search.json')
