@@ -248,7 +248,7 @@
   <!-- Map -->
   <div class="section">
     <div style="font-family:'Work Sans',sans-serif;font-weight:800;font-size:22px;color:var(--ms-navy);text-align:center;margin-bottom:12px;line-height:1.1">State Legislatures <span style="color:#9bb5c4;font-weight:400;margin:0 6px">|</span> Partisan Breakdown</div>
-    <iframe class="map-embed" src="legislatures_partisan.html?embed" title="Legislative Partisan Map"></iframe>
+    <div id="page-map"></div>
   </div>
 
   <!-- Filters -->
@@ -288,6 +288,7 @@
 </div>
 <script src="js/nav.js"></script>
 <script src="js/common.js"></script>
+<script src="js/map-component.js"></script>
 <script>
 (async function() {
   const data = await loadJSON('data/legislatures_data.json');
@@ -303,6 +304,37 @@
   document.getElementById('stat-gop').textContent = summary.r_chambers;
   const closeMargins = chambers.filter(c => Math.abs(c.margin) <= 5 && c.control_status !== 'Nonpartisan').length;
   document.getElementById('stat-close').textContent = closeMargins;
+
+  // Inline map — determine overall legislature control per state
+  var stateControl = {};
+  for (var i = 0; i < chambers.length; i++) {
+    var ch = chambers[i];
+    if (!stateControl[ch.state]) stateControl[ch.state] = { d: 0, r: 0, other: 0, name: ch.state_name };
+    if (ch.control_status === 'D') stateControl[ch.state].d++;
+    else if (ch.control_status === 'R') stateControl[ch.state].r++;
+    else stateControl[ch.state].other++;
+  }
+  var mapData = {};
+  var mapColors = { 'D': '#6cb3d2', 'R': '#e50963', 'Split': '#8b567f' };
+  for (var st in stateControl) {
+    var sc = stateControl[st];
+    var cat = sc.d > sc.r ? 'D' : sc.r > sc.d ? 'R' : 'Split';
+    mapData[st] = { category: cat, info: sc };
+  }
+  new MapRenderer('#page-map', {
+    data: mapData,
+    colors: mapColors,
+    legend: [
+      { label: 'Democratic Control', color: '#6cb3d2' },
+      { label: 'Republican Control', color: '#e50963' },
+      { label: 'Split Legislature', color: '#8b567f' }
+    ],
+    tooltipFn: function(abbr, info) {
+      if (!info.name) return '';
+      var cat = info.d > info.r ? 'Democratic' : info.r > info.d ? 'Republican' : 'Split';
+      return '<strong>' + info.name + '</strong><br>Legislature: ' + cat + ' Control';
+    }
+  });
 
   // Ratings bar
   const RATING_COLORS = {

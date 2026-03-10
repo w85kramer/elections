@@ -261,7 +261,7 @@
   <!-- Map -->
   <div class="section">
     <div style="font-family:'Work Sans',sans-serif;font-weight:800;font-size:22px;color:var(--ms-navy);text-align:center;margin-bottom:12px;line-height:1.1">Governors <span style="color:#9bb5c4;font-weight:400;margin:0 6px">|</span> 2026 Elections &amp; Open Seats</div>
-    <iframe class="map-embed" src="governors_2026.html?embed" title="2026 Governor Elections Map"></iframe>
+    <div id="page-map"></div>
   </div>
 
   <!-- Filters -->
@@ -296,6 +296,7 @@
 </div>
 <script src="js/nav.js"></script>
 <script src="js/common.js"></script>
+<script src="js/map-component.js"></script>
 <script>
 (async function() {
   const data = await loadJSON('data/governors_2026.json');
@@ -312,6 +313,40 @@
   document.getElementById('stat-tossup').textContent = tossups;
   document.getElementById('stat-dem').textContent = demHeld;
   document.getElementById('stat-gop').textContent = gopHeld;
+
+  // Inline map
+  var mapData = {};
+  var mapColors = {
+    'dem_incumbent': '#6cb3d2', 'dem_open': '#b6e2f4',
+    'gop_incumbent': '#e50963', 'gop_open': '#e86987',
+    'no_election': '#e4e4e4'
+  };
+  for (var i = 0; i < races.length; i++) {
+    var r = races[i];
+    var cat = r.incumbent_party === 'D' ? (r.is_open_seat ? 'dem_open' : 'dem_incumbent') :
+              r.incumbent_party === 'R' ? (r.is_open_seat ? 'gop_open' : 'gop_incumbent') : 'no_election';
+    mapData[r.state] = { category: cat, info: r };
+  }
+  new MapRenderer('#page-map', {
+    data: mapData,
+    colors: mapColors,
+    defaultColor: '#e4e4e4',
+    legend: [
+      { label: 'Dem Incumbent', color: '#6cb3d2' },
+      { label: 'Dem Open Seat', color: '#b6e2f4' },
+      { label: 'GOP Incumbent', color: '#e50963' },
+      { label: 'GOP Open Seat', color: '#e86987' },
+      { label: 'No Election', color: '#e4e4e4' }
+    ],
+    tooltipFn: function(abbr, info) {
+      if (!info.state_name) return '';
+      var html = '<strong>' + info.state_name + '</strong><br>';
+      html += 'Incumbent: ' + (info.incumbent || 'N/A') + ' (' + info.incumbent_party + ')';
+      if (info.is_open_seat) html += '<br><em>Open Seat</em>';
+      if (info.forecast) html += '<br>Forecast: ' + info.forecast;
+      return html;
+    }
+  });
 
   // Ratings bar
   const RATING_COLORS = {

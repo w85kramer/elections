@@ -567,6 +567,72 @@ details .details-content {
 }
 .footer-cta a:hover { text-decoration: underline; }
 
+/* ============================================================
+   MapRenderer Component
+   ============================================================ */
+.map-renderer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.map-renderer-title {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--ms-navy);
+  text-align: center;
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+.map-renderer-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 24px;
+  margin-top: 16px;
+  margin-bottom: 0;
+  justify-content: center;
+}
+.map-renderer-legend .legend-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.map-renderer-legend .legend-label {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ms-navy);
+  white-space: nowrap;
+}
+.map-renderer-legend .legend-swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.map-renderer-svg {
+  width: 100%;
+  margin-top: -40px;
+}
+.map-renderer .us-map .state-group:hover .state-fill path {
+  filter: brightness(0.85);
+}
+.map-renderer .us-map .state-label {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  fill: white;
+  text-anchor: middle;
+  dominant-baseline: central;
+  pointer-events: none;
+}
+.map-renderer-source {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  color: var(--ms-text-light);
+  margin-top: 8px;
+}
+
 /* Inline tags */
 .tag {
   display: inline-block;

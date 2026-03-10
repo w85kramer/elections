@@ -185,7 +185,7 @@
   <!-- Map -->
   <div class="section">
     <div style="font-family:'Work Sans',sans-serif;font-weight:800;font-size:22px;color:var(--ms-navy);text-align:center;margin-bottom:12px;line-height:1.1">Trifectas <span style="color:#9bb5c4;font-weight:400;margin:0 6px">|</span> 2026 Partisan Breakdown</div>
-    <iframe class="map-embed" src="trifectas_partisan.html?embed" title="Trifectas Map"></iframe>
+    <div id="page-map"></div>
   </div>
 
   <!-- Filters -->
@@ -220,6 +220,7 @@
 </div>
 <script src="js/nav.js"></script>
 <script src="js/common.js"></script>
+<script src="js/map-component.js"></script>
 <script>
 (async function() {
   const data = await loadJSON('data/trifectas_data.json');
@@ -233,6 +234,31 @@
   document.getElementById('stat-rep').textContent = summary.r_trifectas;
   document.getElementById('stat-split').textContent = summary.split;
   document.getElementById('stat-competitive').textContent = summary.competitive;
+
+  // Inline map
+  var mapData = {};
+  var mapColors = { 'Democrat': '#6cb3d2', 'Republican': '#e50963', 'Split': '#8b567f' };
+  for (var i = 0; i < states.length; i++) {
+    var s = states[i];
+    mapData[s.state] = {
+      category: s.trifecta_status,
+      info: s
+    };
+  }
+  new MapRenderer('#page-map', {
+    data: mapData,
+    colors: mapColors,
+    legend: [
+      { label: 'Democratic Trifecta', color: '#6cb3d2' },
+      { label: 'Republican Trifecta', color: '#e50963' },
+      { label: 'Divided Government', color: '#8b567f' }
+    ],
+    tooltipFn: function(abbr, info) {
+      if (!info.state_name) return '';
+      return '<strong>' + info.state_name + '</strong><br>' +
+        info.trifecta_status + '<br>Gov: ' + info.governor_name + ' (' + info.governor_party + ')';
+    }
+  });
 
   function triBadge(status) {
     if (status === 'Democrat') return '<span class="tri-badge badge-dem-tri">Dem Trifecta</span>';

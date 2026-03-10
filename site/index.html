@@ -15,106 +15,165 @@
 <meta charset="UTF-8">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>State Elections Tracker | MultiState</title>
+<title>MultiState Elections | Comprehensive State Election Data</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/common.css">
 <style>
+  /* Hero */
   .hero {
+    background: var(--ms-navy);
+    color: white;
     text-align: center;
-    padding: 48px 0 32px;
+    padding: 48px 24px 40px;
+    margin: -24px -24px 32px;
   }
-  .hero img { width: 60px; margin-bottom: 16px; }
   .hero h1 {
-    font-weight: 800; font-size: 42px;
-    color: var(--ms-navy); line-height: 1.1;
+    font-weight: 800; font-size: 38px;
+    line-height: 1.1; margin-bottom: 12px;
   }
-  .hero .cycle {
-    font-weight: 400; font-size: 20px;
-    color: var(--ms-text-light); margin-top: 8px;
+  .hero .tagline {
+    font-size: 17px; font-weight: 400;
+    color: rgba(255,255,255,0.8); max-width: 600px;
+    margin: 0 auto 24px; line-height: 1.5;
   }
+  .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .hero-cta {
+    display: inline-block; padding: 12px 28px;
+    border-radius: var(--ms-radius); font-weight: 700;
+    font-size: 14px; text-decoration: none; transition: all 0.15s;
+  }
+  .hero-cta-primary { background: white; color: var(--ms-navy); }
+  .hero-cta-primary:hover { background: #e8edf1; }
+  .hero-cta-secondary { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.5); }
+  .hero-cta-secondary:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+  /* Stats */
   .stat-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-bottom: 48px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    margin-bottom: 40px;
   }
-  .explore-grid {
+
+  /* Three-view cards */
+  .view-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-bottom: 48px;
+    gap: 20px;
+    margin-bottom: 40px;
   }
-  .explore-grid .card { padding: 24px; }
-  .explore-grid .card h3 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
-  .explore-grid .card p { font-size: 13px; color: var(--ms-text-light); }
-  .explore-grid a.card { text-decoration: none; color: var(--ms-text); transition: transform 0.15s, box-shadow 0.15s; }
-  .explore-grid a.card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
-  .deadline-list {
-    list-style: none;
-    padding: 0;
+  .view-card {
+    background: white;
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    padding: 28px 24px;
+    text-decoration: none;
+    color: var(--ms-text);
+    transition: transform 0.15s, box-shadow 0.15s;
   }
-  .deadline-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-    display: flex;
+  .view-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+  .view-card h3 {
+    font-size: 20px; font-weight: 800;
+    color: var(--ms-navy); margin-bottom: 8px;
+  }
+  .view-card p { font-size: 14px; color: var(--ms-text-light); line-height: 1.5; margin-bottom: 16px; }
+  .view-card .view-links { display: flex; flex-wrap: wrap; gap: 6px; }
+  .view-card .view-link {
+    display: inline-block; padding: 4px 10px;
+    font-size: 12px; font-weight: 600;
+    border: 1px solid var(--ms-border); border-radius: 12px;
+    color: var(--ms-navy); text-decoration: none;
+  }
+  .view-card:hover .view-link { border-color: var(--ms-navy); }
+
+  /* Explore grid */
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 12px;
-    font-size: 14px;
+    margin-bottom: 40px;
   }
-  .deadline-list .dl-date {
-    font-weight: 700;
-    color: var(--ms-navy);
-    min-width: 100px;
+  .explore-grid a {
+    display: block; padding: 16px;
+    background: white; border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    text-decoration: none; color: var(--ms-text);
+    font-size: 13px; font-weight: 600;
+    transition: transform 0.15s, box-shadow 0.15s;
   }
+  .explore-grid a:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .explore-grid a span { display: block; font-weight: 400; font-size: 12px; color: var(--ms-text-light); margin-top: 2px; }
+
+  /* Races to watch */
+  .races-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .race-card {
+    display: flex; align-items: center; gap: 12px;
+    padding: 14px 16px;
+    background: white; border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    text-decoration: none; color: var(--ms-text);
+    transition: background 0.1s;
+  }
+  .race-card:hover { background: #f8f9fa; }
+  .race-card .race-party {
+    width: 6px; height: 36px; border-radius: 3px; flex-shrink: 0;
+  }
+  .race-card .race-info { flex: 1; min-width: 0; }
+  .race-card .race-state { font-weight: 700; font-size: 14px; color: var(--ms-navy); }
+  .race-card .race-detail { font-size: 12px; color: var(--ms-text-light); }
+  .race-card .race-rating {
+    font-size: 11px; font-weight: 700; padding: 3px 8px;
+    border-radius: 10px; white-space: nowrap;
+  }
+  .race-rating-tossup { background: #fef3cd; color: #856404; }
+  .race-rating-lean-d { background: #d4edfc; color: #1a6ba0; }
+  .race-rating-lean-r { background: #fcd4e0; color: #a01a4a; }
+
+  /* Deadlines */
+  .deadline-list { list-style: none; padding: 0; }
+  .deadline-list li {
+    padding: 10px 0; border-bottom: 1px solid #eee;
+    display: flex; gap: 12px; font-size: 14px;
+  }
+  .deadline-list .dl-date { font-weight: 700; color: var(--ms-navy); min-width: 100px; }
   .deadline-list .dl-text { color: var(--ms-text-light); }
   .deadline-list .dl-primary .dl-text { color: var(--ms-rep-red); font-weight: 600; }
   .deadline-list .dl-special .dl-text { color: var(--ms-gold); font-weight: 600; }
-  .deadline-list .dl-past { opacity: 0.5; }
-  .map-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
+
+  /* Map tabs */
+  .map-links { display: flex; flex-wrap: wrap; gap: 12px; }
   .map-link {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 2px solid var(--ms-navy);
-    border-radius: var(--ms-radius);
-    font-weight: 600;
-    font-size: 14px;
-    color: var(--ms-navy);
-    text-decoration: none;
-    transition: background 0.15s, color 0.15s;
+    display: inline-block; padding: 10px 20px;
+    border: 2px solid var(--ms-navy); border-radius: var(--ms-radius);
+    font-weight: 600; font-size: 14px; color: var(--ms-navy);
+    text-decoration: none; transition: background 0.15s, color 0.15s;
   }
   .map-link:hover { background: var(--ms-navy); color: white; }
   .map-link.active { background: var(--ms-navy); color: white; }
-  .state-list-grid {
-    columns: 5 180px;
-    column-gap: 8px;
-    margin-top: 16px;
-  }
+
+  /* State grid */
+  .state-list-grid { columns: 5 180px; column-gap: 8px; margin-top: 16px; }
   .state-list-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 12px;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    text-decoration: none;
-    color: var(--ms-text);
-    font-size: 14px;
-    transition: background 0.1s;
-    break-inside: avoid;
-    margin-bottom: 8px;
+    display: flex; align-items: center; gap: 8px;
+    padding: 8px 12px; border: 1px solid #eee; border-radius: 4px;
+    text-decoration: none; color: var(--ms-text); font-size: 14px;
+    transition: background 0.1s; break-inside: avoid; margin-bottom: 8px;
   }
   .state-list-item:hover { background: #f8f9fa; }
-  .state-list-item .party-dot {
-    width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
-  }
+  .state-list-item .party-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
   @media (max-width: 768px) {
-    .stat-row { grid-template-columns: repeat(2, 1fr); }
-    .explore-grid { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 30px; }
+    .hero { padding: 32px 16px; margin: -16px -16px 24px; }
+    .hero h1 { font-size: 28px; }
+    .stat-row { grid-template-columns: repeat(3, 1fr); }
+    .view-cards { grid-template-columns: 1fr; }
+    .explore-grid { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -122,58 +181,96 @@
 <div id="global-nav"></div>
 <div class="page-container">
 
-  <!-- Key Stats -->
-  <div class="stat-row" id="stats-row">
-    <div class="card stat-card"><div class="stat-number" id="stat-seats">—</div><div class="stat-label">Seats Up</div></div>
-    <div class="card stat-card"><div class="stat-number" id="stat-govs">—</div><div class="stat-label">Governor Races</div></div>
-    <div class="card stat-card"><div class="stat-number" id="stat-tossup">—</div><div class="stat-label">Toss-up Govs</div></div>
-    <div class="card stat-card"><div class="stat-number" id="stat-measures">—</div><div class="stat-label">Ballot Measures</div></div>
+  <!-- Hero -->
+  <div class="hero">
+    <h1>MultiState Elections</h1>
+    <p class="tagline">Comprehensive data on 7,900+ elected offices across all 50 states. Track trifectas, governor races, legislative control, and more for the 2026 cycle.</p>
+    <div class="hero-ctas">
+      <a class="hero-cta hero-cta-primary" href="trifectas-101.html">Explore Trifectas</a>
+      <a class="hero-cta hero-cta-secondary" href="#states">Browse All States</a>
+    </div>
   </div>
 
-  <!-- Explore -->
+  <!-- Key Stats -->
+  <div class="stat-row" id="stats-row">
+    <div class="card stat-card"><div class="stat-number" id="stat-seats">—</div><div class="stat-label">Seats Up in 2026</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-govs">—</div><div class="stat-label">Governor Races</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-tossup">—</div><div class="stat-label">Toss-up Govs</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-chambers">—</div><div class="stat-label">Chambers Up</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-measures">—</div><div class="stat-label">Ballot Measures</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-candidates">—</div><div class="stat-label">Candidates Filed</div></div>
+  </div>
+
+  <!-- Three-View Cards -->
+  <div class="view-cards">
+    <div class="view-card">
+      <h3>Who Holds Power</h3>
+      <p>Current trifectas, governor parties, legislative control, and statewide officeholders across all 50 states.</p>
+      <div class="view-links">
+        <a class="view-link" href="trifectas-101.html">Trifectas</a>
+        <a class="view-link" href="legislatures-101.html">Legislatures</a>
+        <a class="view-link" href="governors-101.html">Governors</a>
+        <a class="view-link" href="ag-101.html">AGs</a>
+      </div>
+    </div>
+    <div class="view-card">
+      <h3>2026 Races</h3>
+      <p>Governor elections, legislative seats up, forecast ratings, candidates, and open seats for the 2026 cycle.</p>
+      <div class="view-links">
+        <a class="view-link" href="governors.html">Governors</a>
+        <a class="view-link" href="legislatures.html">Legislatures</a>
+        <a class="view-link" href="ag.html">AGs</a>
+        <a class="view-link" href="candidates.html">Candidates</a>
+      </div>
+    </div>
+    <div class="view-card">
+      <h3>Trends & Analytics</h3>
+      <p>Historical trifecta shifts, margin trends, chamber control over time, and cycle-by-cycle comparisons.</p>
+      <div class="view-links">
+        <a class="view-link" href="trifectas-analytics.html">Trifectas</a>
+        <a class="view-link" href="legislatures-analytics.html">Legislatures</a>
+        <a class="view-link" href="governors-analytics.html">Governors</a>
+        <a class="view-link" href="ballot-measures-analytics.html">Measures</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Map -->
+  <div class="section">
+    <div class="section-title">Interactive Maps</div>
+    <div class="map-links" id="map-tabs">
+      <a class="map-link active" href="#" data-topic="trifectas">Trifectas</a>
+      <a class="map-link" href="#" data-topic="legislatures">Legislatures</a>
+      <a class="map-link" href="#" data-topic="governors">Governors</a>
+    </div>
+    <div id="home-map"></div>
+  </div>
+
+  <!-- Races to Watch -->
+  <div class="section">
+    <div class="section-title">Races to Watch</div>
+    <div class="races-grid" id="races-grid">
+      <!-- Populated by JS -->
+    </div>
+    <div style="text-align:center;margin-top:8px">
+      <a href="governors.html" style="font-size:13px;font-weight:600;color:var(--ms-navy)">View all governor races &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Quick Links -->
   <div class="section">
     <div class="section-title">Explore</div>
     <div class="explore-grid">
-      <a class="card" href="trifectas-101.html">
-        <h3>Trifectas</h3>
-        <p>Unified party control of state government</p>
-      </a>
-      <a class="card" href="legislatures-101.html">
-        <h3>Legislatures</h3>
-        <p>Chamber control &amp; the 2026 landscape</p>
-      </a>
-      <a class="card" href="governors-101.html">
-        <h3>Governors</h3>
-        <p>2026 races, incumbents &amp; partisan breakdown</p>
-      </a>
-      <a class="card" href="ag-101.html">
-        <h3>Attorneys General</h3>
-        <p>Partisan breakdown &amp; 2026 races</p>
-      </a>
-      <a class="card" href="ltgov-101.html">
-        <h3>Lt. Governors</h3>
-        <p>Selection methods &amp; partisan breakdown</p>
-      </a>
-      <a class="card" href="sos-101.html">
-        <h3>Secretaries of State</h3>
-        <p>Election administration &amp; partisan breakdown</p>
-      </a>
-      <a class="card" href="ballot-measures-101.html">
-        <h3>Ballot Measures</h3>
-        <p>2020&ndash;2026 propositions, trends &amp; analytics</p>
-      </a>
-      <a class="card" href="candidates.html">
-        <h3>Candidates</h3>
-        <p>Search 53,000+ state legislative candidates</p>
-      </a>
-      <a class="card" href="swing-calculator.html">
-        <h3>Swing Calculator</h3>
-        <p>National legislature forecast tool</p>
-      </a>
-      <a class="card" href="calendar.html">
-        <h3>Election Calendar</h3>
-        <p>Filing deadlines &amp; primary dates</p>
-      </a>
+      <a href="trifectas-101.html">Trifectas<span>Party control of government</span></a>
+      <a href="legislatures-101.html">Legislatures<span>Chamber control & seats</span></a>
+      <a href="governors-101.html">Governors<span>Incumbents & races</span></a>
+      <a href="ag-101.html">Attorneys General<span>Partisan breakdown</span></a>
+      <a href="ltgov-101.html">Lt. Governors<span>Selection & parties</span></a>
+      <a href="sos-101.html">Secretaries of State<span>Election administration</span></a>
+      <a href="ballot-measures-101.html">Ballot Measures<span>Propositions & trends</span></a>
+      <a href="candidates.html">Candidates<span>Search 53,000+ candidates</span></a>
+      <a href="swing-calculator.html">Swing Calculator<span>Legislature forecast tool</span></a>
+      <a href="calendar.html">Election Calendar<span>Deadlines & primaries</span></a>
     </div>
   </div>
 
@@ -193,25 +290,12 @@
     </div>
   </div>
 
-  <!-- Maps -->
-  <div class="section">
-    <div class="section-title">Interactive Maps</div>
-    <div class="map-links" id="map-tabs">
-      <a class="map-link active" href="#" data-src="trifectas_partisan.html?embed">Trifectas</a>
-      <a class="map-link" href="#" data-src="legislatures_partisan.html?embed">Legislatures</a>
-      <a class="map-link" href="#" data-src="governors_partisan.html?embed">Governors</a>
-      <a class="map-link" href="#" data-src="ltgov_partisan.html?embed">Lt. Governors</a>
-      <a class="map-link" href="#" data-src="ag_partisan.html?embed">Attorneys General</a>
-      <a class="map-link" href="#" data-src="sos_partisan.html?embed">Secretaries of State</a>
-    </div>
-    <iframe id="map-frame" src="trifectas_partisan.html?embed" style="width:100%;height:800px;border:1px solid var(--ms-border);border-radius:var(--ms-radius);margin-top:16px;"></iframe>
-  </div>
-
 <div id="global-footer"></div>
 </div>
 
 <script src="js/nav.js"></script>
 <script src="js/common.js"></script>
+<script src="js/map-component.js"></script>
 <script>
 (async function() {
   const data = await loadJSON('data/states_summary.json');
@@ -221,24 +305,28 @@
   if (genEl) genEl.textContent = formatDate(data.generated_at.split('T')[0]);
 
   // Compute stats
-  let totalSeats = 0, govRaces = 0, tossupGovs = 0, totalMeasures = 0;
+  let totalSeats = 0, govRaces = 0, tossupGovs = 0, totalMeasures = 0, chambersUp = 0, totalCandidates = 0;
   const deadlines = [];
+  const govWatchRaces = [];
 
   for (const [abbr, st] of Object.entries(states)) {
-    // Count seats up in 2026
     for (const [ch, cd] of Object.entries(st.chambers)) {
       totalSeats += cd.seats_up_2026;
+      if (cd.seats_up_2026 > 0) chambersUp++;
     }
 
-    // Governor races
     if (st.governor && st.governor.next_election === 2026) {
       govRaces++;
       if (st.governor.forecast && st.governor.forecast.toLowerCase().includes('toss')) {
         tossupGovs++;
+        govWatchRaces.push({ state: abbr, name: st.name, forecast: st.governor.forecast, governor: st.governor });
+      } else if (st.governor.forecast && (st.governor.forecast.toLowerCase().includes('lean') || st.governor.forecast.toLowerCase().includes('tilt'))) {
+        govWatchRaces.push({ state: abbr, name: st.name, forecast: st.governor.forecast, governor: st.governor });
       }
     }
 
     totalMeasures += st.ballot_measures_2026;
+    totalCandidates += st.elections_2026.total_general || 0;
 
     // Deadlines
     const filingLeg = st.elections_2026.filing_deadline_legislative;
@@ -256,7 +344,9 @@
   document.getElementById('stat-seats').textContent = numberWithCommas(totalSeats);
   document.getElementById('stat-govs').textContent = govRaces;
   document.getElementById('stat-tossup').textContent = tossupGovs;
+  document.getElementById('stat-chambers').textContent = chambersUp;
   document.getElementById('stat-measures').textContent = totalMeasures;
+  document.getElementById('stat-candidates').textContent = totalCandidates > 0 ? numberWithCommas(totalCandidates) : '—';
 
   // Add special elections
   if (data.special_elections) {
@@ -268,7 +358,36 @@
     }
   }
 
-  // Deadlines — sorted, show next 15 upcoming
+  // Races to Watch
+  var racesGrid = document.getElementById('races-grid');
+  govWatchRaces.sort(function(a, b) {
+    var order = { 'toss': 0, 'tilt': 1, 'lean': 2 };
+    var aKey = a.forecast.toLowerCase().includes('toss') ? 'toss' : a.forecast.toLowerCase().includes('tilt') ? 'tilt' : 'lean';
+    var bKey = b.forecast.toLowerCase().includes('toss') ? 'toss' : b.forecast.toLowerCase().includes('tilt') ? 'tilt' : 'lean';
+    return (order[aKey] || 3) - (order[bKey] || 3);
+  });
+  for (var i = 0; i < govWatchRaces.length; i++) {
+    var race = govWatchRaces[i];
+    var partyColor = race.governor.party === 'D' ? '#6cb3d2' : '#e50963';
+    var ratingClass = 'race-rating-tossup';
+    if (race.forecast.toLowerCase().includes('lean') && race.forecast.includes('D')) ratingClass = 'race-rating-lean-d';
+    else if (race.forecast.toLowerCase().includes('lean') && race.forecast.includes('R')) ratingClass = 'race-rating-lean-r';
+    else if (race.forecast.toLowerCase().includes('tilt') && race.forecast.includes('D')) ratingClass = 'race-rating-lean-d';
+    else if (race.forecast.toLowerCase().includes('tilt') && race.forecast.includes('R')) ratingClass = 'race-rating-lean-r';
+    var card = document.createElement('a');
+    card.className = 'race-card';
+    card.href = 'state.html?st=' + race.state;
+    card.innerHTML = '<div class="race-party" style="background:' + partyColor + '"></div>' +
+      '<div class="race-info"><div class="race-state">' + race.name + ' Governor</div>' +
+      '<div class="race-detail">' + race.governor.name + ' (' + race.governor.party + ')</div></div>' +
+      '<div class="race-rating ' + ratingClass + '">' + race.forecast + '</div>';
+    racesGrid.appendChild(card);
+  }
+  if (govWatchRaces.length === 0) {
+    racesGrid.innerHTML = '<div style="color:var(--ms-text-light);font-size:14px">No competitive governor races rated yet.</div>';
+  }
+
+  // Deadlines
   deadlines.sort((a, b) => a.date.localeCompare(b.date));
   const today = new Date().toISOString().split('T')[0];
   const upcomingDeadlines = deadlines.filter(d => d.date >= today).slice(0, 15);
@@ -299,14 +418,106 @@
     grid.appendChild(el);
   }
 
-  // Map tabs
+  // === Interactive Map ===
+  var COLORS = {
+    'Democratic Trifecta': '#6cb3d2',
+    'Republican Trifecta': '#e50963',
+    'Divided': '#8b567f',
+    'D': '#6cb3d2',
+    'R': '#e50963',
+    'Split': '#8b567f'
+  };
+
+  function buildTrifectaData() {
+    var mapData = {}, mapColors = COLORS;
+    var legend = [
+      { label: 'Democratic Trifecta', color: '#6cb3d2' },
+      { label: 'Republican Trifecta', color: '#e50963' },
+      { label: 'Divided Government', color: '#8b567f' }
+    ];
+    for (var abbr in states) {
+      var tri = states[abbr].trifecta;
+      mapData[abbr] = { category: tri, info: states[abbr] };
+    }
+    return { data: mapData, colors: mapColors, legend: legend };
+  }
+
+  function buildLegislaturesData() {
+    var mapData = {};
+    var legend = [
+      { label: 'Democratic Control', color: '#6cb3d2' },
+      { label: 'Republican Control', color: '#e50963' },
+      { label: 'Split Legislature', color: '#8b567f' }
+    ];
+    for (var abbr in states) {
+      var ch = states[abbr].chambers;
+      var keys = Object.keys(ch);
+      var dChambers = 0, rChambers = 0;
+      for (var i = 0; i < keys.length; i++) {
+        var c = ch[keys[i]];
+        if (c.d > c.r) dChambers++;
+        else if (c.r > c.d) rChambers++;
+      }
+      var cat;
+      if (dChambers === keys.length) cat = 'D';
+      else if (rChambers === keys.length) cat = 'R';
+      else cat = 'Split';
+      mapData[abbr] = { category: cat, info: states[abbr] };
+    }
+    return { data: mapData, colors: COLORS, legend: legend };
+  }
+
+  function buildGovernorsData() {
+    var mapData = {};
+    var legend = [
+      { label: 'Democratic Governor', color: '#6cb3d2' },
+      { label: 'Republican Governor', color: '#e50963' }
+    ];
+    for (var abbr in states) {
+      var gov = states[abbr].governor;
+      var cat = gov ? gov.party : '';
+      mapData[abbr] = { category: cat, info: states[abbr] };
+    }
+    return { data: mapData, colors: COLORS, legend: legend };
+  }
+
+  function mapTooltip(abbr, info) {
+    var st = states[abbr];
+    if (!st) return '';
+    var html = '<strong>' + st.name + '</strong><br>';
+    html += st.trifecta + '<br>';
+    if (st.governor) html += 'Governor: ' + st.governor.name + ' (' + st.governor.party + ')';
+    return html;
+  }
+
+  var topicBuilders = {
+    trifectas: buildTrifectaData,
+    legislatures: buildLegislaturesData,
+    governors: buildGovernorsData
+  };
+
+  var initial = buildTrifectaData();
+  var homeMap = new MapRenderer('#home-map', {
+    data: initial.data,
+    colors: initial.colors,
+    legend: initial.legend,
+    tooltipFn: mapTooltip,
+    onClickState: function(abbr) { window.location.href = 'state.html?st=' + abbr; }
+  });
+
   document.getElementById('map-tabs').addEventListener('click', function(e) {
-    const link = e.target.closest('.map-link');
+    var link = e.target.closest('.map-link');
     if (!link) return;
     e.preventDefault();
-    this.querySelectorAll('.map-link').forEach(l => l.classList.remove('active'));
+    this.querySelectorAll('.map-link').forEach(function(l) { l.classList.remove('active'); });
     link.classList.add('active');
-    document.getElementById('map-frame').src = link.dataset.src;
+    var topic = link.dataset.topic;
+    var builder = topicBuilders[topic];
+    if (builder) {
+      var result = builder();
+      homeMap.recolor(result.data, result.colors);
+      homeMap.updateLegend(result.legend);
+    }
   });
 
 })();

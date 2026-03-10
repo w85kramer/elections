@@ -261,7 +261,7 @@
   <!-- Map -->
   <div class="section">
     <div style="font-family:'Work Sans',sans-serif;font-weight:800;font-size:22px;color:var(--ms-navy);text-align:center;margin-bottom:12px;line-height:1.1">Attorneys General <span style="color:#9bb5c4;font-weight:400;margin:0 6px">|</span> 2026 Elections &amp; Open Seats</div>
-    <iframe class="map-embed" src="ag_partisan.html?embed" title="2026 AG Elections Map"></iframe>
+    <div id="page-map"></div>
   </div>
 
   <!-- Filters -->
@@ -296,6 +296,7 @@
 </div>
 <script src="js/nav.js"></script>
 <script src="js/common.js"></script>
+<script src="js/map-component.js"></script>
 <script>
 (async function() {
   const data = await loadJSON('data/ag_2026.json');
@@ -312,6 +313,28 @@
   document.getElementById('stat-tossup').textContent = tossups;
   document.getElementById('stat-dem').textContent = demHeld;
   document.getElementById('stat-gop').textContent = gopHeld;
+
+  // Inline map
+  var mapData = {};
+  var mapColors = { 'D': '#6cb3d2', 'R': '#e50963' };
+  for (var i = 0; i < races.length; i++) {
+    var r = races[i];
+    mapData[r.state] = { category: r.incumbent_party, info: r };
+  }
+  new MapRenderer('#page-map', {
+    data: mapData,
+    colors: mapColors,
+    defaultColor: '#e4e4e4',
+    legend: [
+      { label: 'Democratic AG', color: '#6cb3d2' },
+      { label: 'Republican AG', color: '#e50963' },
+      { label: 'No Elected AG', color: '#e4e4e4' }
+    ],
+    tooltipFn: function(abbr, info) {
+      if (!info.state_name) return abbr;
+      return '<strong>' + info.state_name + '</strong><br>AG: ' + (info.incumbent || 'N/A') + ' (' + info.incumbent_party + ')';
+    }
+  });
 
   // Ratings bar
   const RATING_COLORS = {
