@@ -265,12 +265,13 @@
   var _gd = document.getElementById('gen-date') || document.getElementById('gen-date-footer');
   if (_gd) _gd.textContent = formatDate(data.generated_at.split('T')[0]);
 
-  // Stats
+  // Stats (use caucus for partisan counts, party for display)
   var dems = 0, reps = 0, legislators = 0, govs = 0;
   for (var i = 0; i < all.length; i++) {
     var o = all[i];
-    if (o.party === 'D') dems++;
-    else if (o.party === 'R') reps++;
+    var c = o.caucus || o.party;
+    if (c === 'D') dems++;
+    else if (c === 'R') reps++;
     if (o.office === 'State House' || o.office === 'State Senate' || o.office === 'State Legislature') legislators++;
     if (o.office === 'Governor') govs++;
   }
@@ -299,9 +300,10 @@
 
     filtered = all.filter(function(o) {
       if (state && o.state !== state) return false;
-      if (party === 'D' && o.party !== 'D') return false;
-      if (party === 'R' && o.party !== 'R') return false;
-      if (party === 'other' && (o.party === 'D' || o.party === 'R')) return false;
+      var oc = o.caucus || o.party;
+      if (party === 'D' && oc !== 'D') return false;
+      if (party === 'R' && oc !== 'R') return false;
+      if (party === 'other' && (oc === 'D' || oc === 'R')) return false;
       if (office === 'statewide_other') {
         if (o.office === 'State House' || o.office === 'State Senate' || o.office === 'State Legislature' ||
             o.office === 'Governor' || o.office === 'Lt. Governor' || o.office === 'Attorney General' || o.office === 'Secretary of State') return false;
@@ -345,20 +347,22 @@
 
     for (var i = start; i < end; i++) {
       var o = filtered[i];
-      var partyClass = o.party === 'D' ? 'party-d' : o.party === 'R' ? 'party-r' : o.party === 'G' ? 'party-g' : 'party-other';
-      var partyLabel = o.party === 'D' ? 'Democrat' : o.party === 'R' ? 'Republican' : o.party || '—';
+      var caucus = o.caucus || o.party;
+      var partyClass = caucus === 'D' ? 'party-d' : caucus === 'R' ? 'party-r' : o.party === 'G' ? 'party-g' : 'party-other';
+      var partyLabel = o.party === 'D' ? 'Democrat' : o.party === 'R' ? 'Republican' : o.party === 'I' ? 'Independent' : o.party === 'G' ? 'Green' : o.party === 'L' ? 'Libertarian' : o.party === 'NP' ? 'Nonpartisan' : o.party || '—';
       var districtLabel = o.district === 'Statewide' ? '' : o.district;
-      var link = o.office === 'Governor' ? 'state.html?st=' + o.state :
-                 (o.office === 'State Senate' || o.office === 'State House' || o.office === 'State Legislature') ?
-                 'district.html?st=' + o.state + '&chamber=' + encodeURIComponent(o.chamber) + '&district=' + encodeURIComponent(o.district) :
-                 'state.html?st=' + o.state;
+      var isLeg = o.office === 'State Senate' || o.office === 'State House' || o.office === 'State Legislature';
+      var districtLink = isLeg ? 'district.html?st=' + o.state + '&chamber=' + encodeURIComponent(o.chamber) + '&d=' + encodeURIComponent(o.district) : '';
+      var nameLink = isLeg ? districtLink : 'state.html?st=' + o.state;
+      var stateLink = 'state.html?st=' + o.state;
+      var districtCell = districtLabel ? (isLeg ? '<a href="' + districtLink + '" style="color:var(--ms-navy);text-decoration:none">' + districtLabel + '</a>' : districtLabel) : '';
 
       html += '<tr>' +
-        '<td>' + o.state + '</td>' +
-        '<td class="name-cell"><a href="' + link + '">' + o.name + '</a></td>' +
+        '<td><a href="' + stateLink + '" style="color:var(--ms-navy);text-decoration:none;font-weight:600">' + o.state + '</a></td>' +
+        '<td class="name-cell"><a href="' + nameLink + '">' + o.name + '</a></td>' +
         '<td class="party-cell ' + partyClass + '"><span class="party-dot"></span><span class="party-label">' + partyLabel + '</span><span class="party-abbr">' + (o.party || '—') + '</span></td>' +
         '<td class="office-cell">' + o.office + '</td>' +
-        '<td>' + districtLabel + '</td>' +
+        '<td>' + districtCell + '</td>' +
         '</tr>';
     }
     tbody.innerHTML = html;
