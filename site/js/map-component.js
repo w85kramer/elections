@@ -99,6 +99,8 @@
     var svg = document.createElementNS(ns, 'svg');
     svg.setAttribute('viewBox', geo.viewBox);
     svg.setAttribute('class', 'us-map');
+    svg.setAttribute('role', 'img');
+    svg.setAttribute('aria-label', 'United States map showing state data');
     svg.style.width = '100%';
     svg.style.height = 'auto';
 
@@ -118,6 +120,9 @@
       var g = document.createElementNS(ns, 'g');
       g.setAttribute('class', 'state-group');
       g.setAttribute('data-state', abbr);
+      g.setAttribute('role', 'button');
+      g.setAttribute('aria-label', (st.name || abbr));
+      g.setAttribute('tabindex', '0');
       g.style.cursor = 'pointer';
 
       // Fill paths
@@ -210,6 +215,17 @@
     statesG.addEventListener('mousemove', handleMove, true);
     statesG.addEventListener('mouseleave', handleLeave, true);
     statesG.addEventListener('click', handleClick, true);
+
+    // Keyboard support: Enter/Space to activate state
+    statesG.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        var g = findStateGroup(e);
+        if (g) {
+          e.preventDefault();
+          self.onClickState(g.getAttribute('data-state'));
+        }
+      }
+    }, true);
 
     function findStateGroup(e) {
       var el = e.target;

@@ -31,6 +31,35 @@ body {
   line-height: 1.5;
 }
 
+/* Focus styles for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--ms-navy);
+  outline-offset: 2px;
+}
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible,
+details summary:focus-visible {
+  outline: 2px solid var(--ms-navy);
+  outline-offset: 2px;
+}
+
+/* Skip-to-content link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--ms-navy);
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 10000;
+  text-decoration: none;
+  border-radius: 0 0 6px 0;
+}
+.skip-link:focus {
+  top: 0;
+}
+
 /* Typography */
 .heading-xl {
   font-family: 'Work Sans', sans-serif;
@@ -94,6 +123,32 @@ body {
   margin-bottom: 16px;
   border-bottom: 2px solid var(--ms-navy);
   padding-bottom: 6px;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--ms-navy);
+}
+.section-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ms-navy);
+  margin: 0;
+}
+.section-header .section-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--ms-navy);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
 }
 
 /* Party Badges */

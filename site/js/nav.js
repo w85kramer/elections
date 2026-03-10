@@ -201,6 +201,23 @@
         for (var x = 0; x < open.length; x++) open[x].classList.remove('open');
       }
     });
+    // Close dropdowns on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        var open = nav.querySelectorAll('.nav-dropdown.open');
+        for (var x = 0; x < open.length; x++) open[x].classList.remove('open');
+        // Also close mobile menu
+        var menu = nav.querySelector('#nav-menu');
+        var hamburger = nav.querySelector('#nav-hamburger');
+        if (menu && menu.classList.contains('open')) {
+          menu.classList.remove('open');
+          if (hamburger) {
+            hamburger.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+          }
+        }
+      }
+    });
   }
 
   /** Main init */

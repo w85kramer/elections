@@ -15,12 +15,28 @@
 <meta charset="UTF-8">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>District | MultiState</title>
+<title>District Detail — MultiState Elections</title>
+<meta name="description" content="Comprehensive district-level election data including partisan trends, office history, and candidate information.">
+<meta property="og:title" content="District Detail — MultiState Elections">
+<meta property="og:description" content="Comprehensive district-level election data including partisan trends, office history, and candidate information.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.multistate.us/elections/district.html">
+<meta property="og:site_name" content="MultiState Elections">
+<meta property="og:image" content="https://www.multistate.us/elections/assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="District Detail — MultiState Elections">
+<meta name="twitter:description" content="Comprehensive district-level election data including partisan trends, office history, and candidate information.">
+<link rel="canonical" href="https://www.multistate.us/elections/district.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <style>
+  /* 2026 Election highlight */
+  .election-2026-card {
+    border-left: 4px solid var(--ms-navy) !important;
+    background: linear-gradient(135deg, #f8fbfd 0%, #fff 100%) !important;
+  }
   /* Hero */
   .district-hero { margin-bottom: 32px; }
   .district-title {
@@ -457,8 +473,9 @@
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <div id="global-nav"></div>
-<div class="page-container">
+<div class="page-container" id="main-content" role="main">
   <div id="topic-subnav"></div>
   <!-- Breadcrumb -->
   <div class="breadcrumb" id="breadcrumb">
@@ -538,7 +555,7 @@
   // Set page title
   const displayName = district.district_name || `${chamber} ${distNum}`;
   const fullLabel = `${stateName} ${getChamberLabel(stateAbbr, chamber)} District ${distNum}`;
-  document.title = `${displayName} — ${stateName} | State Elections Tracker`;
+  document.title = `${displayName} — ${stateName} | MultiState Elections`;
   var _gd = document.getElementById('gen-date') || document.getElementById('gen-date-footer'); if (_gd) _gd.textContent = formatDate(data.generated_at.split('T')[0]);
   if (liveDataApplied) {
     var _gd2 = document.getElementById('gen-date') || document.getElementById('gen-date-footer'); if (_gd2) _gd2.innerHTML =
@@ -757,7 +774,7 @@
 
   if (allGenerals.length >= 2) {
     trendHtml = `<div class="section">
-      <div class="section-title">Partisan Trend</div>
+      <div class="section-header"><div class="section-icon">&#9650;</div><h2>Partisan Trend</h2></div>
       <div class="trend-chart-wrap"><div id="trend-chart"></div></div>
     </div>`;
   }
@@ -776,7 +793,7 @@
   }
 
   if (races2026.length > 0) {
-    elec2026Html = `<div class="section"><div class="section-title">2026 Election</div>`;
+    elec2026Html = `<div class="section"><div class="section-header"><div class="section-icon" style="background:var(--ms-rep-red)">&#9745;</div><h2>2026 Election</h2></div>`;
     // For bloc voting, show one combined card using the first race's data
     const races2026Display = isBlocVoting ? [races2026[0]] : races2026;
     for (const race of races2026Display) {
@@ -1209,7 +1226,7 @@
     return renderTimelineEvents(events, 'unified');
   }
 
-  let historyHtml = `<div class="section"><div class="section-title">Office History</div>`;
+  let historyHtml = `<div class="section"><div class="section-header"><div class="section-icon">&#9201;</div><h2>Office History</h2></div>`;
 
   if (isMultiSeat && isBlocVoting) {
     // Bloc voting: single unified table, no seat tabs
@@ -1237,7 +1254,7 @@
   // 5. DISTRICT MAP
   // ==========================
   const mapHtml = `<div class="section">
-    <div class="section-title">District Map</div>
+    <div class="section-header"><div class="section-icon">&#9673;</div><h2>District Map</h2></div>
     <div id="district-map"></div>
   </div>`;
 
@@ -1246,7 +1263,7 @@
   // ==========================
   let similarHtml = '';
   if (district.similar_districts && district.similar_districts.length > 0) {
-    similarHtml = `<div class="section"><div class="section-title">Similar Districts</div>
+    similarHtml = `<div class="section"><div class="section-header"><div class="section-icon">&#9776;</div><h2>Similar Districts</h2></div>
       <p class="body-text mb-16">Districts from other states with a similar 2024 presidential margin (same chamber type).</p>
       <div class="similar-grid">`;
     for (const sim of district.similar_districts) {
@@ -1387,7 +1404,7 @@
         const barH = Math.max(barBot - barTop, 2);
 
         svg += `<rect x="${bx}" y="${barTop}" width="${barW}" height="${barH}" fill="${color}" rx="2" opacity="0.85">
-          <title>${e.year}: ${e.winner} (${e.party}) — ${margin > 0 ? 'D' : 'R'}+${Math.abs(margin).toFixed(1)}%${!isBlocVoting && e.seat ? ' [Seat ' + e.seat + ']' : ''}</title>
+          <title>${e.winner} (${e.party}) ${e.margin > 0 ? 'D' : 'R'}+${Math.abs(e.margin).toFixed(1)}</title>
         </rect>`;
       });
 

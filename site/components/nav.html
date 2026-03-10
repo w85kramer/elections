@@ -1,5 +1,5 @@
 <!-- Corporate Utility Bar -->
-<div class="utility-bar">
+<div class="utility-bar" role="banner">
   <div class="utility-inner">
     <a href="https://www.multistate.us" class="utility-brand">MultiState.us</a>
     <div class="utility-links">
@@ -12,48 +12,49 @@
 </div>
 
 <!-- Main Elections Nav -->
-<nav class="elections-nav" id="elections-nav">
+<nav class="elections-nav" id="elections-nav" aria-label="Main navigation">
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">
       <img src="assets/multistate-logomark.png" alt="MultiState">
       <span>MultiState Elections</span>
     </a>
 
-    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
       <span></span><span></span><span></span>
     </button>
 
-    <div class="nav-menu" id="nav-menu">
-      <a class="nav-item" href="trifectas-101.html" data-topic="trifectas">Trifectas</a>
-      <a class="nav-item" href="legislatures-101.html" data-topic="legislatures">Legislatures</a>
-      <a class="nav-item" href="governors-101.html" data-topic="governors">Governors</a>
+    <div class="nav-menu" id="nav-menu" role="menubar">
+      <a class="nav-item" href="trifectas-101.html" data-topic="trifectas" role="menuitem">Trifectas</a>
+      <a class="nav-item" href="legislatures-101.html" data-topic="legislatures" role="menuitem">Legislatures</a>
+      <a class="nav-item" href="governors-101.html" data-topic="governors" role="menuitem">Governors</a>
 
-      <div class="nav-dropdown" data-topic="statewide">
-        <button class="nav-item nav-dropdown-btn">Statewide Offices <span class="nav-caret">&#9662;</span></button>
-        <div class="nav-dropdown-menu">
-          <a href="ag-101.html" data-topic="ag">Attorneys General</a>
-          <a href="ltgov-101.html" data-topic="ltgov">Lt. Governors</a>
-          <a href="sos-101.html" data-topic="sos">Secretaries of State</a>
+      <div class="nav-dropdown" data-topic="statewide" role="none">
+        <button class="nav-item nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">Statewide Offices <span class="nav-caret" aria-hidden="true">&#9662;</span></button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="ag-101.html" data-topic="ag" role="menuitem">Attorneys General</a>
+          <a href="ltgov-101.html" data-topic="ltgov" role="menuitem">Lt. Governors</a>
+          <a href="sos-101.html" data-topic="sos" role="menuitem">Secretaries of State</a>
         </div>
       </div>
 
-      <a class="nav-item" href="ballot-measures-101.html" data-topic="ballot-measures">Ballot Measures</a>
+      <a class="nav-item" href="ballot-measures-101.html" data-topic="ballot-measures" role="menuitem">Ballot Measures</a>
 
-      <div class="nav-dropdown" data-topic="tools">
-        <button class="nav-item nav-dropdown-btn">Tools <span class="nav-caret">&#9662;</span></button>
-        <div class="nav-dropdown-menu">
-          <a href="officeholders.html" data-topic="officeholders">Current Officeholders</a>
-          <a href="flips.html" data-topic="flips">Flips &amp; Upsets</a>
-          <a href="candidates.html" data-topic="candidates">Candidate Search</a>
-          <a href="timeline.html" data-topic="timeline">Election Timeline</a>
-          <a href="calendar.html" data-topic="calendar">Election Calendar</a>
-          <a href="swing-calculator.html" data-topic="swing-calculator">Swing Calculator</a>
+      <div class="nav-dropdown" data-topic="tools" role="none">
+        <button class="nav-item nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">Tools <span class="nav-caret" aria-hidden="true">&#9662;</span></button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="officeholders.html" data-topic="officeholders" role="menuitem">Current Officeholders</a>
+          <a href="flips.html" data-topic="flips" role="menuitem">Flips &amp; Upsets</a>
+          <a href="candidates.html" data-topic="candidates" role="menuitem">Candidate Search</a>
+          <a href="timeline.html" data-topic="timeline" role="menuitem">Election Timeline</a>
+          <a href="calendar.html" data-topic="calendar" role="menuitem">Election Calendar</a>
+          <a href="swing-calculator.html" data-topic="swing-calculator" role="menuitem">Swing Calculator</a>
+          <a href="control-timeline.html" data-topic="control-timeline" role="menuitem">Control Over Time</a>
         </div>
       </div>
 
-      <div class="nav-dropdown nav-state-picker" data-topic="state">
-        <button class="nav-item nav-dropdown-btn">States <span class="nav-caret">&#9662;</span></button>
-        <div class="nav-dropdown-menu nav-state-grid" id="nav-state-grid">
+      <div class="nav-dropdown nav-state-picker" data-topic="state" role="none">
+        <button class="nav-item nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">States <span class="nav-caret" aria-hidden="true">&#9662;</span></button>
+        <div class="nav-dropdown-menu nav-state-grid" id="nav-state-grid" role="menu">
           <!-- Populated by nav.js -->
         </div>
       </div>

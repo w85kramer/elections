@@ -15,7 +15,18 @@
 <meta charset="UTF-8">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>State Elections Tracker | MultiState</title>
+<title>State Elections — MultiState Elections</title>
+<meta name="description" content="Detailed state election data including legislature composition, statewide officers, 2026 races, and member rosters.">
+<meta property="og:title" content="State Elections — MultiState Elections">
+<meta property="og:description" content="Detailed state election data including legislature composition, statewide officers, 2026 races, and member rosters.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.multistate.us/elections/state.html">
+<meta property="og:site_name" content="MultiState Elections">
+<meta property="og:image" content="https://www.multistate.us/elections/assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="State Elections — MultiState Elections">
+<meta name="twitter:description" content="Detailed state election data including legislature composition, statewide officers, 2026 races, and member rosters.">
+<link rel="canonical" href="https://www.multistate.us/elections/state.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/common.css">
@@ -124,6 +135,80 @@
   .pres-legend .dot-d { width: 10px; height: 10px; background: var(--ms-dem-blue); border-radius: 2px; }
   .pres-legend .dot-r { width: 10px; height: 10px; background: var(--ms-rep-red); border-radius: 2px; }
   .pres-legend .dot-o { width: 10px; height: 10px; background: var(--ms-other); border-radius: 2px; }
+  /* View tabs */
+  .state-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 24px;
+  }
+  .state-tab {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ms-text-light);
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .state-tab:hover { color: var(--ms-navy); }
+  .state-tab.active {
+    color: var(--ms-navy);
+    border-bottom-color: var(--ms-navy);
+  }
+  .state-tab .tab-count {
+    font-size: 11px;
+    font-weight: 700;
+    background: #e8eef3;
+    color: var(--ms-text-light);
+    border-radius: 10px;
+    padding: 1px 7px;
+    margin-left: 6px;
+  }
+  .state-tab.active .tab-count {
+    background: var(--ms-navy);
+    color: #fff;
+  }
+  .state-view { display: none; }
+  .state-view.active { display: block; }
+
+  /* CTA banner */
+  .state-cta {
+    background: linear-gradient(135deg, #f0f7fc 0%, #e8f4f8 100%);
+    border: 1px solid #c5dce8;
+    border-left: 4px solid var(--ms-navy);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .state-cta p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  .state-cta p strong { color: var(--ms-navy); }
+  .state-cta a {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--ms-navy);
+    color: #fff;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+  .state-cta a:hover { background: #0a4d7a; }
+
   .state-nav {
     display: flex;
     justify-content: space-between;
@@ -238,8 +323,9 @@
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <div id="global-nav"></div>
-<div class="page-container">
+<div class="page-container" id="main-content" role="main">
   <div id="topic-subnav"></div>
   <!-- Content populated by JS -->
   <div id="page-content">
@@ -250,53 +336,99 @@
     <div class="state-meta" id="state-meta"></div>
   </div>
 
-  <!-- Legislature Section -->
-  <div class="section">
-    <div class="section-title">Legislature</div>
-    <div class="chamber-bars" id="chamber-bars"></div>
+  <!-- View Tabs -->
+  <div class="state-tabs" id="state-tabs">
+    <button class="state-tab active" data-view="overview">Overview</button>
+    <button class="state-tab" data-view="elections">2026 Elections</button>
+    <button class="state-tab" data-view="members">Members</button>
   </div>
 
-  <!-- Member Rosters -->
-  <div class="section" id="rosters-section">
-    <div class="section-title">Member Roster</div>
-    <div id="roster-tables"></div>
-  </div>
+  <!-- === OVERVIEW VIEW === -->
+  <div class="state-view active" id="view-overview">
 
-  <!-- Statewide Officers -->
-  <div class="section">
-    <div class="section-title">Statewide Officers</div>
-    <table class="data-table" id="officers-table">
-      <thead>
-        <tr>
-          <th>Office</th>
-          <th>Name</th>
-          <th class="party-col">Party</th>
-          <th>In Office Since</th>
-          <th>Next Election</th>
-        </tr>
-      </thead>
-      <tbody id="officers-body"></tbody>
-    </table>
-  </div>
+    <!-- Legislature Section -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#9878;</div>
+        <h2>Legislature</h2>
+      </div>
+      <div class="chamber-bars" id="chamber-bars"></div>
+    </div>
 
-  <!-- 2026 Races -->
-  <div class="section">
-    <div class="section-title">2026 Races</div>
-    <div id="races-section"></div>
-  </div>
+    <!-- Statewide Officers -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#9733;</div>
+        <h2>Statewide Officers</h2>
+      </div>
+      <table class="data-table" id="officers-table">
+        <thead>
+          <tr>
+            <th>Office</th>
+            <th>Name</th>
+            <th class="party-col">Party</th>
+            <th>In Office Since</th>
+            <th>Next Election</th>
+          </tr>
+        </thead>
+        <tbody id="officers-body"></tbody>
+      </table>
+    </div>
 
-  <!-- Ballot Measures -->
-  <div class="section" id="measures-section" style="display:none">
-    <div class="section-title">Ballot Measures</div>
-    <div id="measures-list"></div>
-  </div>
+    <!-- Presidential Overlay -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#9635;</div>
+        <h2>Presidential Overlay</h2>
+      </div>
+      <p class="body-text mb-8">Each mark represents a legislative district, positioned by 2024 presidential margin. Color = current holder's party.</p>
+      <div id="pres-chambers"></div>
+    </div>
 
-  <!-- Presidential Overlay -->
-  <div class="section">
-    <div class="section-title">Presidential Overlay</div>
-    <p class="body-text mb-8">Each mark represents a legislative district, positioned by 2024 presidential margin. Color = current holder's party.</p>
-    <div id="pres-chambers"></div>
-  </div>
+  </div><!-- /view-overview -->
+
+  <!-- === 2026 ELECTIONS VIEW === -->
+  <div class="state-view" id="view-elections">
+
+    <!-- 2026 Races -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#9745;</div>
+        <h2>2026 Races</h2>
+      </div>
+      <div id="races-section"></div>
+    </div>
+
+    <!-- Ballot Measures -->
+    <div class="section" id="measures-section" style="display:none">
+      <div class="section-header">
+        <div class="section-icon">&#9998;</div>
+        <h2>Ballot Measures</h2>
+      </div>
+      <div id="measures-list"></div>
+    </div>
+
+    <!-- CTA -->
+    <div class="state-cta" id="state-cta">
+      <p><strong>Need help tracking legislation?</strong> MultiState provides legislative tracking, compliance monitoring, and government affairs consulting across all 50 states.</p>
+      <a href="https://www.multistate.us/services">Explore Services &rarr;</a>
+    </div>
+
+  </div><!-- /view-elections -->
+
+  <!-- === MEMBERS VIEW === -->
+  <div class="state-view" id="view-members">
+
+    <!-- Member Rosters -->
+    <div class="section" id="rosters-section">
+      <div class="section-header">
+        <div class="section-icon">&#9823;</div>
+        <h2>Member Roster</h2>
+      </div>
+      <div id="roster-tables"></div>
+    </div>
+
+  </div><!-- /view-members -->
 
   <!-- Prev/Next state navigation -->
   <div class="state-nav" id="state-nav"></div>
@@ -321,13 +453,31 @@
         <h2>State Not Found</h2>
         <p>Please select a state from the <a href="index.html#states">homepage</a>.</p>
       </div>`;
-    document.title = 'State Not Found | State Elections Tracker';
+    document.title = 'State Not Found | MultiState Elections';
     return;
   }
 
   const stateName = STATE_NAMES[stateAbbr];
-  document.title = `${stateName} | State Elections Tracker`;
+  document.title = `${stateName} — MultiState Elections`;
   document.getElementById('state-title').textContent = stateName;
+
+  // Tab switching
+  const tabBtns = document.querySelectorAll('.state-tab');
+  const views = document.querySelectorAll('.state-view');
+  function switchView(viewName) {
+    tabBtns.forEach(b => b.classList.toggle('active', b.dataset.view === viewName));
+    views.forEach(v => v.classList.toggle('active', v.id === 'view-' + viewName));
+    // Update URL hash without scroll
+    history.replaceState(null, '', `?st=${stateAbbr}&view=${viewName}`);
+  }
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => switchView(btn.dataset.view));
+  });
+  // Restore view from URL
+  const initialView = params.get('view');
+  if (initialView && ['overview', 'elections', 'members'].includes(initialView)) {
+    switchView(initialView);
+  }
 
   let stateData;
   try {
@@ -1004,6 +1154,25 @@
     <a href="index.html#states">All States</a>
     <span>${nextAbbr ? `<a href="state.html?st=${nextAbbr}">${STATE_NAMES[nextAbbr]} &rarr;</a>` : ''}</span>
   `;
+
+  // Update tab badges with counts
+  const totalMembers = sortedChambers.reduce((sum, ch) => sum + (chambers[ch].members || []).length, 0);
+  const raceCount = (stateData.elections_2026.governor ? 1 : 0)
+    + stateData.elections_2026.statewide.length
+    + stateData.elections_2026.legislative.length;
+  const measureCount = stateData.ballot_measures.length;
+  const electionsLabel = raceCount + (measureCount > 0 ? ' + ' + measureCount + ' measures' : '');
+
+  document.querySelector('[data-view="elections"]').innerHTML =
+    `2026 Elections <span class="tab-count">${electionsLabel}</span>`;
+  document.querySelector('[data-view="members"]').innerHTML =
+    `Members <span class="tab-count">${totalMembers.toLocaleString()}</span>`;
+
+  // Personalize CTA
+  const ctaEl = document.getElementById('state-cta');
+  if (ctaEl) {
+    ctaEl.querySelector('p').innerHTML = `<strong>Need help tracking legislation in ${stateName}?</strong> MultiState provides legislative tracking, compliance monitoring, and government affairs consulting across all 50 states.`;
+  }
 
   function forecastClass(rating) {
     if (!rating) return '';

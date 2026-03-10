@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics (multistate.us) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V5WR874G5K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V5WR874G5K', {
+    cookie_domain: 'multistate.us',
+    cookie_flags: 'SameSite=None;Secure'
+  });
+</script>
+<meta charset="UTF-8">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology — MultiState Elections</title>
+<meta name="description" content="Data sources, methodology, and coverage for MultiState Elections. Learn how we compile and maintain election data for all 50 states.">
+<meta property="og:title" content="Methodology — MultiState Elections">
+<meta property="og:description" content="Data sources, methodology, and coverage for MultiState Elections.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.multistate.us/elections/methodology.html">
+<meta property="og:site_name" content="MultiState Elections">
+<meta property="og:image" content="https://www.multistate.us/elections/assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Methodology — MultiState Elections">
+<meta name="twitter:description" content="Data sources, methodology, and coverage for MultiState Elections.">
+<link rel="canonical" href="https://www.multistate.us/elections/methodology.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<style>
+  .method-hero {
+    background: linear-gradient(135deg, var(--ms-navy) 0%, #0a5a8a 100%);
+    color: #fff;
+    padding: 56px 24px 48px;
+    text-align: center;
+  }
+  .method-hero h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    margin: 0 0 12px;
+  }
+  .method-hero p {
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-size: 17px;
+    opacity: 0.9;
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .method-body {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  .method-body h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    color: var(--ms-navy);
+    margin-top: 48px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--ms-navy);
+  }
+  .method-body h2:first-child {
+    margin-top: 0;
+  }
+  .method-body h3 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--ms-navy);
+    margin-top: 32px;
+    margin-bottom: 10px;
+  }
+  .method-body p, .method-body li {
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--ms-text);
+  }
+  .method-body p {
+    margin-bottom: 18px;
+  }
+  .method-body ul, .method-body ol {
+    margin-bottom: 18px;
+    padding-left: 28px;
+  }
+  .method-body li {
+    margin-bottom: 8px;
+  }
+  .coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 24px 0 32px;
+  }
+  .coverage-card {
+    background: #f7f9fb;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 4px solid var(--ms-navy);
+  }
+  .coverage-card .cc-number {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    color: var(--ms-navy);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .coverage-card .cc-label {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .source-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 32px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+  }
+  .source-table th {
+    text-align: left;
+    padding: 10px 14px;
+    background: var(--ms-navy);
+    color: #fff;
+    font-weight: 600;
+  }
+  .source-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e5e7eb;
+    color: var(--ms-text);
+  }
+  .source-table tr:nth-child(even) td {
+    background: #f9fafb;
+  }
+  .update-timeline {
+    border-left: 3px solid var(--ms-navy);
+    padding-left: 24px;
+    margin: 24px 0 32px;
+  }
+  .update-timeline .ut-item {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .update-timeline .ut-item::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    background: var(--ms-navy);
+    border-radius: 50%;
+  }
+  .update-timeline .ut-period {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ms-navy);
+    margin-bottom: 4px;
+  }
+  .update-timeline .ut-desc {
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ms-text);
+  }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div id="global-nav"></div>
+
+<div class="method-hero" id="main-content" role="main">
+  <h1>Methodology</h1>
+  <p>How we compile and maintain comprehensive election data for all 50 states, covering nearly 8,000 elected offices.</p>
+</div>
+
+<div class="method-body">
+
+  <h2>Coverage</h2>
+  <p>MultiState Elections tracks state-level elected offices across all 50 states. Our database is focused on the 2026 election cycle but includes historical data back to 2010 for trend analysis.</p>
+
+  <div class="coverage-grid">
+    <div class="coverage-card">
+      <div class="cc-number">50</div>
+      <div class="cc-label">States Covered</div>
+    </div>
+    <div class="coverage-card">
+      <div class="cc-number">~7,900</div>
+      <div class="cc-label">Elected Offices</div>
+    </div>
+    <div class="coverage-card">
+      <div class="cc-number">~20,000</div>
+      <div class="cc-label">Elections Tracked</div>
+    </div>
+    <div class="coverage-card">
+      <div class="cc-number">~11,400</div>
+      <div class="cc-label">Candidates</div>
+    </div>
+  </div>
+
+  <h3>Offices Tracked</h3>
+  <ul>
+    <li><strong>State Legislatures</strong> — All ~7,400 state house and state senate seats across 99 legislative chambers (Nebraska's unicameral legislature is a single chamber)</li>
+    <li><strong>Governors</strong> — All 50 state governors, including off-cycle elections in Virginia, New Jersey, and Louisiana</li>
+    <li><strong>Attorneys General</strong> — 43 elected attorneys general (7 states use appointment)</li>
+    <li><strong>Lieutenant Governors</strong> — 45 states with lieutenant governors, most elected</li>
+    <li><strong>Secretaries of State</strong> — 35 elected secretaries of state</li>
+    <li><strong>Ballot Measures</strong> — Statewide ballot initiatives, referendums, and constitutional amendments</li>
+  </ul>
+
+  <h3>Election Types</h3>
+  <ul>
+    <li><strong>General elections</strong> — Regularly scheduled November elections</li>
+    <li><strong>Primary elections</strong> — Party nominating contests (varies by state: open, closed, semi-closed, top-two/jungle)</li>
+    <li><strong>Special elections</strong> — To fill vacancies caused by resignations, deaths, or removals</li>
+    <li><strong>Runoff elections</strong> — Required in some states when no candidate meets a vote threshold</li>
+  </ul>
+
+  <h2>Data Sources</h2>
+  <p>We compile data from a combination of official government sources and established reference databases.</p>
+
+  <table class="source-table">
+    <thead>
+      <tr>
+        <th>Source</th>
+        <th>Data Used</th>
+        <th>Priority</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Official State Records</td>
+        <td>Candidate filings, election results, certified outcomes</td>
+        <td>Primary (always preferred)</td>
+      </tr>
+      <tr>
+        <td>Ballotpedia</td>
+        <td>Candidate information, office details, historical elections, biographical data</td>
+        <td>Secondary reference</td>
+      </tr>
+      <tr>
+        <td>Secretaries of State</td>
+        <td>Filing deadlines, candidate lists, ballot measure text</td>
+        <td>Official source</td>
+      </tr>
+      <tr>
+        <td>State Legislature Websites</td>
+        <td>Current member rosters, district information, term data</td>
+        <td>Official source</td>
+      </tr>
+      <tr>
+        <td>Sabato's Crystal Ball</td>
+        <td>Forecast ratings (Solid, Likely, Lean, Toss-Up)</td>
+        <td>Forecasts</td>
+      </tr>
+      <tr>
+        <td>Cook Political Report</td>
+        <td>Forecast ratings for competitive races</td>
+        <td>Forecasts</td>
+      </tr>
+      <tr>
+        <td>StateNavigate</td>
+        <td>State-level election forecasts and competitive race analysis</td>
+        <td>Forecasts</td>
+      </tr>
+      <tr>
+        <td>National Conference of State Legislatures</td>
+        <td>Chamber control history, legislative structure</td>
+        <td>Historical reference</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Source Priority</h3>
+  <p>When sources conflict, we follow a strict hierarchy: official state government records (.gov) are always preferred over third-party compilations. For candidate filing data specifically, we rely exclusively on official Secretary of State or equivalent agency filings — never on news articles, party websites, or other secondary sources that may contain errors or outdated information.</p>
+
+  <h2>Partisan Classification</h2>
+  <p>Correctly categorizing officeholders by party affiliation requires distinguishing between two concepts:</p>
+  <ul>
+    <li><strong>Party</strong> — The official party registration of a candidate or officeholder (e.g., Republican, Democrat, Independent, Nonpartisan).</li>
+    <li><strong>Caucus</strong> — Which party's legislative caucus the member aligns with for governance purposes. This is the more meaningful metric for understanding partisan control.</li>
+  </ul>
+  <p>For maps, charts, and partisan counts, we always use <strong>caucus affiliation</strong> rather than official party registration. This distinction matters for states like:</p>
+  <ul>
+    <li><strong>Nebraska</strong> — All 49 legislators are officially nonpartisan, but caucus with the Republican or Democratic parties.</li>
+    <li><strong>Alaska</strong> — Some members join bipartisan coalition caucuses that cross party lines.</li>
+    <li><strong>Independent members</strong> — Independents who caucus with one party are counted with that party for control purposes.</li>
+  </ul>
+
+  <h2>Trifecta Determination</h2>
+  <p>A <strong>government trifecta</strong> exists when one party controls the governorship and both chambers of the state legislature. We classify each state as:</p>
+  <ul>
+    <li><strong>Democratic Trifecta</strong> — Democratic governor + Democratic majority in both chambers</li>
+    <li><strong>Republican Trifecta</strong> — Republican governor + Republican majority in both chambers</li>
+    <li><strong>Divided Government</strong> — Any combination where no single party controls all three</li>
+  </ul>
+  <p>Chamber control is determined by the majority caucus, accounting for vacancies, tied chambers, and power-sharing arrangements on a case-by-case basis.</p>
+
+  <h2>Forecast Ratings</h2>
+  <p>Election forecast ratings on this site are sourced from <strong>Sabato's Crystal Ball</strong> (University of Virginia Center for Politics), the <strong>Cook Political Report</strong>, and <strong>StateNavigate</strong>. Ratings use a seven-point scale:</p>
+  <ol>
+    <li><strong>Safe D / Safe R</strong> — Virtually certain to be won by the indicated party</li>
+    <li><strong>Likely D / Likely R</strong> — Expected to be won, but competitive enough to watch</li>
+    <li><strong>Lean D / Lean R</strong> — Competitive race with a slight advantage for one party</li>
+    <li><strong>Toss-Up</strong> — Genuinely competitive with no clear advantage</li>
+  </ol>
+  <p>Forecast ratings are updated periodically as new information becomes available. They are not predictions of outcomes — they reflect the competitive landscape at the time of rating.</p>
+
+  <h2>Update Cadence</h2>
+  <p>Election data follows a seasonal rhythm. Our update schedule matches the electoral calendar:</p>
+
+  <div class="update-timeline">
+    <div class="ut-item">
+      <div class="ut-period">Winter (Jan–Feb)</div>
+      <div class="ut-desc">Low activity. Special election filings and results. Newly sworn-in officeholders from November elections. Legislative session updates to chamber control.</div>
+    </div>
+    <div class="ut-item">
+      <div class="ut-period">Spring (Mar–May)</div>
+      <div class="ut-desc">Filing deadlines open across states. Candidate lists expand rapidly. Early primary elections in some states. Ballot measure qualification activity.</div>
+    </div>
+    <div class="ut-item">
+      <div class="ut-period">Summer (Jun–Aug)</div>
+      <div class="ut-desc">Peak primary season. Results processed as states certify. General election matchups take shape. Forecast ratings intensify.</div>
+    </div>
+    <div class="ut-item">
+      <div class="ut-period">Fall (Sep–Oct)</div>
+      <div class="ut-desc">Final forecast updates. Late-breaking candidate changes. Comprehensive pre-election data review across all states.</div>
+    </div>
+    <div class="ut-item">
+      <div class="ut-period">Election Night & After (Nov–Dec)</div>
+      <div class="ut-desc">Real-time results processing. Runoff tracking. Certification monitoring. Recounts and contested races. Transition to next cycle.</div>
+    </div>
+  </div>
+
+  <h2>Special Cases</h2>
+  <h3>Multi-Member Districts</h3>
+  <p>Some states (notably New Hampshire, Vermont, and West Virginia) use multi-member districts where multiple representatives are elected from the same district. In these cases, voters may cast multiple votes, and the top vote-getters win. Our database tracks each seat individually within multi-member districts.</p>
+
+  <h3>Nonpartisan Elections</h3>
+  <p>Nebraska's unicameral legislature holds officially nonpartisan elections — candidates do not appear with party labels on the ballot. However, legislators' partisan leanings are well-known, and we track their caucus affiliations for analytical purposes.</p>
+
+  <h3>Ranked-Choice Voting</h3>
+  <p>Alaska and Maine use ranked-choice voting for certain elections. In Alaska, a top-four open primary feeds into a ranked-choice general election. Our data reflects final certified results after all rounds of tabulation.</p>
+
+  <h2>Limitations</h2>
+  <ul>
+    <li><strong>Scope</strong> — This site covers state-level offices only. Local and municipal elections, federal congressional races, and presidential elections are not included.</li>
+    <li><strong>Historical data</strong> — Comprehensive seat-level historical data is available from 2020 forward. Earlier years have aggregate chamber control and trifecta status but limited seat-level detail.</li>
+    <li><strong>Timeliness</strong> — Data reflects the most recent export. During active filing or election periods, there may be a brief lag between real-world changes and site updates.</li>
+    <li><strong>Forecasts</strong> — Forecast ratings are editorial assessments from Sabato's Crystal Ball, not statistical models. They should be interpreted as expert judgment, not probability estimates.</li>
+  </ul>
+
+  <h2>About MultiState</h2>
+  <p><a href="https://www.multistate.us">MultiState</a> is the leading state and local government relations firm. We help organizations navigate the complex landscape of state policy through legislative tracking, regulatory compliance, and strategic consulting across all 50 states.</p>
+  <p>MultiState Elections is a public resource that reflects our deep expertise in state government. For organizations that need to go beyond tracking elections to tracking legislation, regulations, and policy, <a href="https://www.multistate.us/services">explore our full range of services</a>.</p>
+
+</div>
+
+<div id="global-footer"></div>
+<script src="js/nav.js"></script>
+</body>
+</html>

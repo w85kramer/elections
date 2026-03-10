@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control Over Time — MultiState Elections</title>
+<meta name="description" content="Watch how partisan control of state governments has shifted from 1992 to today. Animated trifecta, governor, and legislature maps.">
+<meta property="og:title" content="Control Over Time — MultiState Elections">
+<meta property="og:description" content="Watch how partisan control of state governments has shifted from 1992 to today. Animated trifecta, governor, and legislature maps.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.multistate.us/elections/control-timeline.html">
+<meta property="og:site_name" content="MultiState Elections">
+<meta property="og:image" content="https://www.multistate.us/elections/assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Control Over Time — MultiState Elections">
+<meta name="twitter:description" content="Watch how partisan control of state governments has shifted from 1992 to today. Animated trifecta, governor, and legislature maps.">
+<link rel="canonical" href="https://www.multistate.us/elections/control-timeline.html">
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    .ct-hero {
+      background: linear-gradient(135deg, var(--ms-navy) 0%, #0a4d7a 100%);
+      color: #fff;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+    .ct-hero h1 { font-size: 2rem; margin: 0 0 0.5rem; }
+    .ct-hero p { color: rgba(255,255,255,0.8); max-width: 640px; margin: 0 auto; font-size: 1.05rem; }
+
+    .ct-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    /* View toggle */
+    .ct-views {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 1.5rem 0 1rem;
+    }
+    .ct-view-btn {
+      padding: 0.5rem 1.25rem;
+      border: 2px solid var(--ms-navy);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--ms-navy);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .ct-view-btn.active {
+      background: var(--ms-navy);
+      color: #fff;
+    }
+    .ct-view-btn:hover:not(.active) {
+      background: #f0f4f8;
+    }
+
+    /* Year controls */
+    .ct-year-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 1rem 0;
+      padding: 1rem 1.5rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+    }
+    .ct-play-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 2px solid var(--ms-navy);
+      background: #fff;
+      color: var(--ms-navy);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+    .ct-play-btn:hover { background: var(--ms-navy); color: #fff; }
+    .ct-play-btn.playing { background: var(--ms-navy); color: #fff; }
+
+    .ct-slider-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .ct-year-display {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--ms-navy);
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .ct-slider {
+      width: 100%;
+      height: 8px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: #d0d7de;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+    }
+    .ct-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--ms-navy);
+      border: 3px solid #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+    .ct-slider::-moz-range-thumb {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--ms-navy);
+      border: 3px solid #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+    .ct-year-ticks {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.25rem 0 0;
+      font-size: 0.7rem;
+      color: #8c959f;
+    }
+
+    .ct-speed-btn {
+      padding: 0.25rem 0.5rem;
+      border: 1px solid #d0d7de;
+      border-radius: 4px;
+      background: #fff;
+      color: #666;
+      font-size: 0.75rem;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .ct-speed-btn:hover { background: #f0f4f8; }
+
+    /* Main layout: map + stats */
+    .ct-main {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    /* Stats panel */
+    .ct-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .ct-stat-card {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 1rem;
+      border-left: 4px solid var(--ms-navy);
+    }
+    .ct-stat-card h3 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #666;
+      margin: 0 0 0.5rem;
+    }
+    .ct-stat-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+    }
+    .ct-stat-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .ct-stat-label {
+      font-size: 0.85rem;
+      color: #444;
+      flex: 1;
+    }
+    .ct-stat-val {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ms-navy);
+    }
+
+    /* Bar chart in stats */
+    .ct-bar-wrap {
+      margin-top: 0.5rem;
+      display: flex;
+      height: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .ct-bar-d { background: var(--ms-dem-blue); transition: width 0.3s; }
+    .ct-bar-r { background: var(--ms-rep-red); transition: width 0.3s; }
+    .ct-bar-s { background: #8b567f; transition: width 0.3s; }
+
+    /* Change indicator */
+    .ct-change {
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid #e5e7eb;
+    }
+    .ct-change .up { color: #16a34a; }
+    .ct-change .down { color: #dc2626; }
+
+    /* Map container */
+    .ct-map-wrap {
+      position: relative;
+    }
+    .ct-map-wrap .map-renderer { padding: 0; }
+    .ct-map-wrap .map-renderer-legend { display: none; }
+    .ct-map-wrap .map-renderer-svg { max-width: 100%; }
+
+    /* Data note */
+    .ct-data-note {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #999;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .ct-main {
+        grid-template-columns: 1fr;
+      }
+      .ct-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .ct-stat-card {
+        flex: 1;
+        min-width: 200px;
+      }
+    }
+    @media (max-width: 600px) {
+      .ct-hero h1 { font-size: 1.5rem; }
+      .ct-views { flex-wrap: wrap; }
+      .ct-year-controls { flex-wrap: wrap; }
+      .ct-year-display { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="global-nav"></div>
+
+  <div class="ct-hero" id="main-content">
+    <h1>Control Over Time</h1>
+    <p>See how partisan control of state governments has shifted from 1992 to today. Slide through the years to watch the map transform.</p>
+  </div>
+
+  <div class="ct-container">
+    <!-- View toggle -->
+    <div class="ct-views">
+      <button class="ct-view-btn active" data-view="trifectas">Trifectas</button>
+      <button class="ct-view-btn" data-view="governors">Governors</button>
+      <button class="ct-view-btn" data-view="legislatures">Legislatures</button>
+    </div>
+
+    <!-- Year controls -->
+    <div class="ct-year-controls">
+      <button class="ct-play-btn" id="ct-play" title="Play animation">&#9654;</button>
+      <div class="ct-slider-wrap">
+        <div class="ct-year-display" id="ct-year-display">2025</div>
+        <input type="range" class="ct-slider" id="ct-slider" min="1992" max="2025" value="2025" step="1">
+        <div class="ct-year-ticks" id="ct-year-ticks"></div>
+      </div>
+      <button class="ct-speed-btn" id="ct-speed" title="Playback speed">1x</button>
+    </div>
+
+    <!-- Legend (changes by view) -->
+    <div id="ct-legend" style="display:flex; justify-content:center; gap:1.5rem; margin:0.5rem 0; font-size:0.85rem; flex-wrap:wrap;"></div>
+
+    <!-- Main content -->
+    <div class="ct-main">
+      <div class="ct-map-wrap">
+        <div id="ct-map"></div>
+        <div class="ct-data-note" id="ct-data-note"></div>
+      </div>
+      <div class="ct-stats" id="ct-stats"></div>
+    </div>
+  </div>
+
+  <div id="global-footer"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/map-component.js"></script>
+  <script>
+  (function() {
+    'use strict';
+
+    var DEM_BLUE = '#6cb3d2';
+    var REP_RED = '#e50963';
+    var SPLIT_PURPLE = '#8b567f';
+    var NEUTRAL = '#d9d9d9';
+
+    var data = null;
+    var map = null;
+    var currentView = 'trifectas';
+    var currentYear = 2025;
+    var playing = false;
+    var playTimer = null;
+    var playSpeed = 800; // ms per year
+    var speeds = [800, 400, 200];
+    var speedIdx = 0;
+
+    var slider = document.getElementById('ct-slider');
+    var yearDisplay = document.getElementById('ct-year-display');
+    var playBtn = document.getElementById('ct-play');
+    var speedBtn = document.getElementById('ct-speed');
+    var legendEl = document.getElementById('ct-legend');
+    var statsEl = document.getElementById('ct-stats');
+    var noteEl = document.getElementById('ct-data-note');
+
+    // --- Initialize ---
+    function init() {
+      loadJSON('data/control_history.json').then(function(d) {
+        data = d;
+        buildTicks();
+        initMap();
+      });
+    }
+
+    function buildTicks() {
+      var ticks = document.getElementById('ct-year-ticks');
+      var years = [1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2025];
+      ticks.innerHTML = years.map(function(y) {
+        return '<span>' + y + '</span>';
+      }).join('');
+    }
+
+    function initMap() {
+      // Build initial data for trifectas 2025
+      var mapData = buildMapData(currentView, currentYear);
+
+      map = new MapRenderer('#ct-map', {
+        data: mapData.states,
+        colors: mapData.colors,
+        tooltipFn: tooltipFn,
+        legend: [], // we manage legend externally
+        onClickState: function(abbr) {
+          window.location.href = 'state.html?st=' + abbr;
+        }
+      });
+
+      updateLegend();
+      updateStats();
+    }
+
+    function buildMapData(view, year) {
+      var yr = String(year);
+      var states = {};
+      var colors = {};
+
+      if (view === 'trifectas') {
+        colors = { 'D': DEM_BLUE, 'R': REP_RED, 'Split': SPLIT_PURPLE };
+        data.states.forEach(function(st) {
+          var status = data.trifectas[st] ? data.trifectas[st][yr] : null;
+          states[st] = { category: status || 'Split', info: { status: status } };
+        });
+      } else if (view === 'governors') {
+        colors = { 'D': DEM_BLUE, 'R': REP_RED, 'I': SPLIT_PURPLE, 'AIP': SPLIT_PURPLE, 'Unknown': NEUTRAL };
+        data.states.forEach(function(st) {
+          var party = data.governors[st] ? data.governors[st][yr] : null;
+          states[st] = { category: party || 'Unknown', info: { party: party } };
+        });
+      } else if (view === 'legislatures') {
+        colors = { 'D': DEM_BLUE, 'R': REP_RED, 'Split': SPLIT_PURPLE, 'Unknown': NEUTRAL };
+        data.states.forEach(function(st) {
+          var control = data.legislatures[st] ? data.legislatures[st][yr] : null;
+          states[st] = { category: control || 'Unknown', info: { control: control } };
+        });
+      }
+
+      return { states: states, colors: colors };
+    }
+
+    function tooltipFn(abbr, info) {
+      var stName = abbr; // We'll use abbreviation since we don't have full names in this data
+      var yr = currentYear;
+
+      if (currentView === 'trifectas') {
+        var status = info.status || 'Unknown';
+        var label = status === 'D' ? 'Democratic Trifecta' :
+                    status === 'R' ? 'Republican Trifecta' : 'Split Government';
+        return '<strong>' + abbr + '</strong> (' + yr + ')<br>' + label;
+      } else if (currentView === 'governors') {
+        var party = info.party || 'Unknown';
+        var pLabel = party === 'D' ? 'Democrat' : party === 'R' ? 'Republican' :
+                     party === 'I' ? 'Independent' : party;
+        return '<strong>' + abbr + '</strong> (' + yr + ')<br>Governor: ' + pLabel;
+      } else {
+        var ctrl = info.control || 'Unknown';
+        var cLabel = ctrl === 'D' ? 'Democratic Control' :
+                     ctrl === 'R' ? 'Republican Control' :
+                     ctrl === 'Split' ? 'Split Control' : 'No data';
+        return '<strong>' + abbr + '</strong> (' + yr + ')<br>Legislature: ' + cLabel;
+      }
+    }
+
+    function updateMap() {
+      if (!map || !data) return;
+      var mapData = buildMapData(currentView, currentYear);
+      map.recolor(mapData.states, mapData.colors);
+      updateLegend();
+      updateStats();
+    }
+
+    // --- Legend ---
+    function updateLegend() {
+      if (currentView === 'trifectas') {
+        legendEl.innerHTML =
+          '<span><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:' + DEM_BLUE + ';vertical-align:middle;margin-right:4px"></span> Democratic Trifecta</span>' +
+          '<span><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:' + REP_RED + ';vertical-align:middle;margin-right:4px"></span> Republican Trifecta</span>' +
+          '<span><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:' + SPLIT_PURPLE + ';vertical-align:middle;margin-right:4px"></span> Split Government</span>';
+      } else if (currentView === 'governors') {
+        legendEl.innerHTML =
+          '<span><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:' + DEM_BLUE + ';vertical-align:middle;margin-right:4px"></span> Democratic Governor</span>' +
+          '<span><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:' + REP_RED + ';vertical-align:middle;margin-right:4px"></span> Republican Governor</span>' +
+          '<span><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:' + SPLIT_PURPLE + ';vertical-align:middle;margin-right:4px"></span> Independent</span>';
+      } else {
+        legendEl.innerHTML =
+          '<span><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:' + DEM_BLUE + ';vertical-align:middle;margin-right:4px"></span> Democratic Control</span>' +
+          '<span><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:' + REP_RED + ';vertical-align:middle;margin-right:4px"></span> Republican Control</span>' +
+          '<span><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:' + SPLIT_PURPLE + ';vertical-align:middle;margin-right:4px"></span> Split Control</span>';
+      }
+    }
+
+    // --- Stats panel ---
+    function updateStats() {
+      if (!data) return;
+      var yr = String(currentYear);
+      var nat = data.national[yr];
+      var html = '';
+
+      if (currentView === 'trifectas') {
+        var t = nat ? nat.trifecta : { d: 0, r: 0, split: 0 };
+        var total = t.d + t.r + t.split;
+        html += statCard('Trifecta Control', [
+          { color: DEM_BLUE, label: 'Democratic', val: t.d },
+          { color: REP_RED, label: 'Republican', val: t.r },
+          { color: SPLIT_PURPLE, label: 'Split', val: t.split }
+        ], t.d, t.r, t.split, total);
+
+        // Change from previous year
+        if (currentYear > 1992) {
+          var prev = data.national[String(currentYear - 1)];
+          if (prev) {
+            var pt = prev.trifecta;
+            var dDiff = t.d - pt.d;
+            var rDiff = t.r - pt.r;
+            html += changeNote(dDiff, rDiff, 'vs. ' + (currentYear - 1));
+          }
+        }
+      } else if (currentView === 'governors') {
+        var g = nat ? nat.governor : { d: 0, r: 0, other: 0 };
+        var gTotal = g.d + g.r + g.other;
+        html += statCard('Governor Parties', [
+          { color: DEM_BLUE, label: 'Democratic', val: g.d },
+          { color: REP_RED, label: 'Republican', val: g.r },
+          { color: SPLIT_PURPLE, label: 'Independent', val: g.other }
+        ], g.d, g.r, g.other, gTotal);
+
+        if (currentYear > 1992) {
+          var prevG = data.national[String(currentYear - 1)];
+          if (prevG) {
+            var pg = prevG.governor;
+            html += changeNote(g.d - pg.d, g.r - pg.r, 'vs. ' + (currentYear - 1));
+          }
+        }
+      } else {
+        var l = nat ? nat.legislature : { d: 0, r: 0, split: 0 };
+        var lTotal = l.d + l.r + l.split;
+        html += statCard('Legislature Control', [
+          { color: DEM_BLUE, label: 'Democratic', val: l.d },
+          { color: REP_RED, label: 'Republican', val: l.r },
+          { color: SPLIT_PURPLE, label: 'Split', val: l.split }
+        ], l.d, l.r, l.split, lTotal);
+
+        if (currentYear > 1992) {
+          var prevL = data.national[String(currentYear - 1)];
+          if (prevL) {
+            var pl = prevL.legislature;
+            html += changeNote(l.d - pl.d, l.r - pl.r, 'vs. ' + (currentYear - 1));
+          }
+        }
+      }
+
+      noteEl.textContent = '';
+      statsEl.innerHTML = html;
+    }
+
+    function statCard(title, items, d, r, s, total) {
+      var html = '<div class="ct-stat-card">' +
+        '<h3>' + title + '</h3>';
+      items.forEach(function(item) {
+        html += '<div class="ct-stat-row">' +
+          '<div class="ct-stat-dot" style="background:' + item.color + '"></div>' +
+          '<span class="ct-stat-label">' + item.label + '</span>' +
+          '<span class="ct-stat-val">' + item.val + '</span></div>';
+      });
+      if (total > 0) {
+        html += '<div class="ct-bar-wrap">' +
+          '<div class="ct-bar-d" style="width:' + (d / total * 100) + '%"></div>' +
+          '<div class="ct-bar-r" style="width:' + (r / total * 100) + '%"></div>' +
+          '<div class="ct-bar-s" style="width:' + (s / total * 100) + '%"></div>' +
+          '</div>';
+      }
+      html += '</div>';
+      return html;
+    }
+
+    function changeNote(dDiff, rDiff, label) {
+      if (dDiff === 0 && rDiff === 0) return '<div class="ct-change">' + label + ': No change</div>';
+      var parts = [];
+      if (dDiff !== 0) {
+        var cls = dDiff > 0 ? 'up' : 'down';
+        parts.push('<span class="' + cls + '" style="color:' + DEM_BLUE + '">D ' + (dDiff > 0 ? '+' : '') + dDiff + '</span>');
+      }
+      if (rDiff !== 0) {
+        var cls2 = rDiff > 0 ? 'up' : 'down';
+        parts.push('<span class="' + cls2 + '" style="color:' + REP_RED + '">R ' + (rDiff > 0 ? '+' : '') + rDiff + '</span>');
+      }
+      return '<div class="ct-change">' + label + ': ' + parts.join(' &nbsp; ') + '</div>';
+    }
+
+    // --- Controls ---
+    slider.addEventListener('input', function() {
+      currentYear = parseInt(this.value);
+      yearDisplay.textContent = currentYear;
+      updateMap();
+    });
+
+    document.querySelectorAll('.ct-view-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelector('.ct-view-btn.active').classList.remove('active');
+        this.classList.add('active');
+        currentView = this.getAttribute('data-view');
+        updateMap();
+      });
+    });
+
+    playBtn.addEventListener('click', function() {
+      if (playing) {
+        stopPlay();
+      } else {
+        startPlay();
+      }
+    });
+
+    speedBtn.addEventListener('click', function() {
+      speedIdx = (speedIdx + 1) % speeds.length;
+      playSpeed = speeds[speedIdx];
+      this.textContent = ['1x', '2x', '4x'][speedIdx];
+      if (playing) {
+        clearInterval(playTimer);
+        playTimer = setInterval(advanceYear, playSpeed);
+      }
+    });
+
+    function startPlay() {
+      playing = true;
+      playBtn.classList.add('playing');
+      playBtn.innerHTML = '&#9646;&#9646;'; // pause icon
+      if (currentYear >= 2025) {
+        currentYear = 1992;
+        slider.value = currentYear;
+        yearDisplay.textContent = currentYear;
+        updateMap();
+      }
+      playTimer = setInterval(advanceYear, playSpeed);
+    }
+
+    function stopPlay() {
+      playing = false;
+      playBtn.classList.remove('playing');
+      playBtn.innerHTML = '&#9654;'; // play icon
+      clearInterval(playTimer);
+    }
+
+    function advanceYear() {
+      currentYear++;
+      if (currentYear > 2025) {
+        stopPlay();
+        currentYear = 2025;
+        return;
+      }
+      slider.value = currentYear;
+      yearDisplay.textContent = currentYear;
+      updateMap();
+    }
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+      if (e.target.tagName === 'INPUT' && e.target.type !== 'range') return;
+      if (e.key === 'ArrowLeft' && currentYear > 1992) {
+        currentYear--;
+        slider.value = currentYear;
+        yearDisplay.textContent = currentYear;
+        updateMap();
+      } else if (e.key === 'ArrowRight' && currentYear < 2025) {
+        currentYear++;
+        slider.value = currentYear;
+        yearDisplay.textContent = currentYear;
+        updateMap();
+      } else if (e.key === ' ') {
+        e.preventDefault();
+        if (playing) stopPlay(); else startPlay();
+      }
+    });
+
+    init();
+  })();
+  </script>
+</body>
+</html>
