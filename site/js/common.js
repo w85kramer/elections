@@ -48,9 +48,10 @@ function formatDateShort(dateStr) {
 function partyColor(party) {
   if (party === 'D') return '#6cb3d2';
   if (party === 'R') return '#e50963';
-  if (party === 'I') return '#8b567f';
+  if (party === 'G') return '#2e8b57';
   if (party === 'NP') return '#d0ac60';
-  return '#ccc';
+  if (!party || party === 'V') return '#ccc';
+  return '#8b567f';
 }
 
 function partyLabel(party) {
@@ -65,6 +66,7 @@ function partyLabel(party) {
 function partyBadgeClass(party) {
   if (party === 'D') return 'party-d';
   if (party === 'R') return 'party-r';
+  if (party === 'G') return 'party-g';
   if (party === 'NP') return 'party-np';
   return 'party-i';
 }
@@ -184,7 +186,7 @@ function buildChamberBar(container, data, label) {
 
   const segments = [
     { count: leadCount, color: leadColor, label: leadLabel },
-    { count: data.other || 0, color: '#888', label: data.other ? `O: ${data.other}` : '' },
+    { count: data.other || 0, color: '#8b567f', label: data.other ? `O: ${data.other}` : '' },
     { count: data.vacant || 0, color: '#ccc', label: data.vacant ? `V: ${data.vacant}` : '' },
     { count: trailCount, color: trailColor, label: trailLabel },
   ];

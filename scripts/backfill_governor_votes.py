@@ -44,21 +44,103 @@ STATE_NAMES = {
 }
 
 PARTY_MAP = {
+    # Major parties
     'Republican Party (United States)': 'R',
     'Democratic Party (United States)': 'D',
+    'Independent (politician)': 'I',
+    'Independent (United States)': 'I',
+    # State-specific Democratic/Republican affiliates
+    'Minnesota Democratic–Farmer–Labor Party': 'D',
+    'Minnesota Democratic-Farmer-Labor Party': 'D',
+    'North Dakota Democratic–Nonpartisan League Party': 'D',
+    'North Dakota Democratic-Nonpartisan League Party': 'D',
+    'Democratic-Farmer-Labor Party': 'D',
+    'Democratic–Farmer–Labor Party': 'D',
+    # State-named party Wikipedia pages
+    'Michigan Democratic Party': 'D',
+    'California Democratic Party': 'D',
+    'Mississippi Democratic Party': 'D',
+    'Mississippi Republican Party': 'R',
+    'Iowa Democratic Party': 'D',
+    'West Virginia Democratic Party': 'D',
+    'West Virginia Republican Party': 'R',
+    'Wisconsin Democratic Party': 'D',
+    'Vermont Democratic Party': 'D',
+    'Washington Democratic Party': 'D',
+    'North Dakota Republican Party': 'R',
+    'Alabama Democratic Party': 'D',
+    'Louisiana Democratic Party': 'D',
+    'Louisiana Republican Party': 'R',
+    'Arizona Libertarian Party': 'L',
+    # Third parties
     'Libertarian Party (United States)': 'L',
     'Green Party (United States)': 'G',
     'Green Party of the United States': 'G',
-    'Independent (politician)': 'I',
     'Reform Party of the United States of America': 'Reform',
-    'Constitution Party (United States)': 'Constitution',
+    'Constitution Party (United States)': 'Con',
     'American Independent Party': 'AIP',
     'Natural Law Party (United States)': 'NLP',
     'Working Families Party': 'WFP',
     'Conservative Party of New York State': 'Conservative',
     'Progressive Party (Vermont)': 'Progressive',
     'Alaska Independence Party': 'AIP',
+    'Mountain Party (United States)': 'Mtn',
+    'Mountain Party': 'Mtn',
+    'Peace and Freedom Party': 'PFP',
+    'Raza Unida Party': 'RU',
+    'Socialist Labor Party of America': 'SL',
+    'Socialist Workers Party (United States)': 'SW',
+    'Prohibition Party': 'Pro',
+    'United Independent Party': 'UIP',
+    'A Connecticut Party': 'I',
+    'Grassroots–Legalize Cannabis Party': 'GLC',
+    'Grassroots-Legalize Cannabis Party': 'GLC',
+    'National Democratic Party of Alabama': 'D',
+    'Human Rights Party': 'HRP',
+    'New Alliance Party': 'NAP',
+    'Moderate Party of Rhode Island': 'Mod',
+    'Compassion Party': 'Comp',
+    'None of these candidates': 'NOTA',
 }
+
+def normalize_wiki_party(party_raw):
+    """Normalize a Wikipedia party template name to a short code."""
+    if not party_raw:
+        return ''
+    # Direct lookup
+    if party_raw in PARTY_MAP:
+        return PARTY_MAP[party_raw]
+    # Substring matching for state-named parties
+    lower = party_raw.lower()
+    if 'democratic' in lower or 'democrat' in lower:
+        return 'D'
+    if 'republican' in lower:
+        return 'R'
+    if 'libertarian' in lower:
+        return 'L'
+    if 'green' in lower:
+        return 'G'
+    if 'independent' in lower:
+        return 'I'
+    if 'constitution' in lower:
+        return 'Con'
+    if 'reform' in lower:
+        return 'Reform'
+    if 'socialist' in lower:
+        return 'Soc'
+    if 'prohibition' in lower:
+        return 'Pro'
+    if 'write-in' in lower or 'write in' in lower:
+        return 'W/I'
+    if 'none of these' in lower:
+        return 'NOTA'
+    if 'nonpartisan' in lower:
+        return 'NP'
+    # Log unknown party for debugging, use abbreviated form
+    print(f'    WARNING: Unknown party template: "{party_raw}"')
+    # Use up to 10 chars rather than 3 to be more identifiable
+    return party_raw[:10].strip()
+
 
 WP_API = 'https://en.wikipedia.org/api/rest_v1/page/html/'
 WP_HEADERS = {'User-Agent': 'ElectionsBot/1.0 (https://github.com/w85kramer/elections; w85kramer@gmail.com)'}
@@ -159,7 +241,7 @@ def parse_election_box_templates(html):
                 votes = parse_votes(params.get('votes', {}).get('wt', ''))
                 pct = parse_pct(params.get('percentage', {}).get('wt', ''))
                 is_winner = 'winning' in target.lower()
-                party = PARTY_MAP.get(party_raw, party_raw[:3] if party_raw else '')
+                party = normalize_wiki_party(party_raw)
 
                 if candidate and votes is not None:
                     current_section['candidates'].append({
