@@ -100,11 +100,22 @@
   }
   .oh-table tr:hover td { background: #f8f9fa; }
   .oh-table .party-cell {
-    font-weight: 700;
+    font-weight: 600;
+    color: var(--ms-text);
   }
-  .oh-table .party-d { color: var(--ms-dem-blue); }
-  .oh-table .party-r { color: var(--ms-rep-red); }
-  .oh-table .party-other { color: #888; }
+  .oh-table .party-cell .party-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .oh-table .party-d .party-dot { background: var(--ms-dem-blue); }
+  .oh-table .party-r .party-dot { background: var(--ms-rep-red); }
+  .oh-table .party-other .party-dot { background: #888; }
   .oh-table .name-cell a {
     color: var(--ms-navy); text-decoration: none; font-weight: 600;
   }
@@ -134,6 +145,11 @@
   @media (max-width: 768px) {
     .oh-stats { grid-template-columns: repeat(3, 1fr); }
     .oh-table td, .oh-table th { padding: 6px 8px; font-size: 12px; }
+    .oh-table .party-cell .party-label { display: none; }
+    .oh-table .party-cell .party-abbr { display: inline; }
+  }
+  @media (min-width: 769px) {
+    .oh-table .party-cell .party-abbr { display: none; }
   }
 </style>
 </head>
@@ -328,7 +344,7 @@
     for (var i = start; i < end; i++) {
       var o = filtered[i];
       var partyClass = o.party === 'D' ? 'party-d' : o.party === 'R' ? 'party-r' : 'party-other';
-      var partyLabel = o.party === 'D' ? 'D' : o.party === 'R' ? 'R' : o.party || '—';
+      var partyLabel = o.party === 'D' ? 'Democrat' : o.party === 'R' ? 'Republican' : o.party || '—';
       var districtLabel = o.district === 'Statewide' ? '' : o.district;
       var link = o.office === 'Governor' ? 'state.html?st=' + o.state :
                  (o.office === 'State Senate' || o.office === 'State House' || o.office === 'State Legislature') ?
@@ -338,7 +354,7 @@
       html += '<tr>' +
         '<td>' + o.state + '</td>' +
         '<td class="name-cell"><a href="' + link + '">' + o.name + '</a></td>' +
-        '<td class="party-cell ' + partyClass + '">' + partyLabel + '</td>' +
+        '<td class="party-cell ' + partyClass + '"><span class="party-dot"></span><span class="party-label">' + partyLabel + '</span><span class="party-abbr">' + (o.party || '—') + '</span></td>' +
         '<td class="office-cell">' + o.office + '</td>' +
         '<td>' + districtLabel + '</td>' +
         '</tr>';
