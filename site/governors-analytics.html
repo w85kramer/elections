@@ -134,23 +134,9 @@
 </style>
 </head>
 <body>
+<div id="global-nav"></div>
 <div class="page-container">
-
-  <div class="site-header">
-    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
-    <a href="index.html" class="site-title">State Elections Tracker</a>
-  </div>
-
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> &rsaquo; <a href="governors-101.html">Governors</a> &rsaquo; Trends &amp; Analytics
-  </div>
-
-  <div class="subnav">
-    <a href="governors-101.html">Overview</a>
-    <a href="governors.html">2026 Elections</a>
-    <a href="governors-analytics.html" class="active">Trends & Analytics</a>
-  </div>
-
+  <div id="topic-subnav"></div>
   <h1 class="heading-xl" style="margin-bottom: 8px">Governor Trends & Analytics</h1>
   <p class="subtitle mb-16">Historical partisan balance, party flips, and gubernatorial trends since 1960</p>
 
@@ -205,20 +191,16 @@
     </div>
   </div>
 
-  <div class="site-footer" style="margin-top:32px">
-    <img src="assets/multistate-logomark.png" alt="MultiState">
-    <span class="footer-text">Source: MultiState (historical governor data via Wikipedia, Ballotpedia). Data generated <span id="gen-date"></span>.</span>
-  </div>
-
+<div id="global-footer"></div>
 </div>
-
+<script src="js/nav.js"></script>
 <script src="js/common.js"></script>
 <script>
 (async function() {
   const data = await loadJSON('data/governor_history.json');
   const { yearly_balance, flips, terms } = data;
 
-  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+  var _gd = document.getElementById('gen-date') || document.getElementById('gen-date-footer'); if (_gd) _gd.textContent = formatDate(data.generated_at.split('T')[0]);
 
   // Stats
   document.getElementById('stat-terms').textContent = data.total_terms;

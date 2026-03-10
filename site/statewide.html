@@ -314,14 +314,9 @@
 </style>
 </head>
 <body>
+<div id="global-nav"></div>
 <div class="page-container">
-
-  <!-- Header -->
-  <div class="site-header">
-    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
-    <a href="index.html" class="site-title">State Elections Tracker</a>
-  </div>
-
+  <div id="topic-subnav"></div>
   <!-- Breadcrumb -->
   <div class="breadcrumb" id="breadcrumb">
     <a href="index.html">Home</a> &rsaquo; <span>Loading...</span>
@@ -329,17 +324,12 @@
 
   <!-- Content -->
   <div id="page-content"></div>
-
-  <!-- Footer -->
-  <div class="site-footer">
-    <img src="assets/multistate-logomark.png" alt="MultiState">
-    <span class="footer-text">Source: MultiState. Data generated <span id="gen-date"></span>.</span>
-  </div>
-
 </div>
 
 <div class="gov-tooltip" id="gov-tooltip"></div>
 
+<div id="global-footer"></div>
+<script src="js/nav.js"></script>
 <script src="js/common.js"></script>
 <script>
 (async function() {
@@ -380,7 +370,7 @@
 
   // Set page title and generated date
   document.title = `${stateName} ${officeInfo.label} | State Elections Tracker`;
-  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+  var _gd = document.getElementById('gen-date') || document.getElementById('gen-date-footer'); if (_gd) _gd.textContent = formatDate(data.generated_at.split('T')[0]);
 
   // Breadcrumb
   document.getElementById('breadcrumb').innerHTML = `

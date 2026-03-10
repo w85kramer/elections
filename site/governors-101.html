@@ -242,23 +242,9 @@
 </style>
 </head>
 <body>
+<div id="global-nav"></div>
 <div class="page-container">
-
-  <div class="site-header">
-    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
-    <a href="index.html" class="site-title">State Elections Tracker</a>
-  </div>
-
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> &rsaquo; Governors
-  </div>
-
-  <div class="subnav">
-    <a href="governors-101.html" class="active">Overview</a>
-    <a href="governors.html">2026 Elections</a>
-    <a href="governors-analytics.html">Trends & Analytics</a>
-  </div>
-
+  <div id="topic-subnav"></div>
   <h1 class="heading-xl" style="margin-bottom: 8px">Governors 101</h1>
   <p class="subtitle mb-16">A Guide to Gubernatorial Power in the American States</p>
 
@@ -608,6 +594,7 @@
     </div>
     <div class="inline-tooltip" id="inline-tooltip"></div>
 
+<div id="global-footer"></div>
     <script>
     (function() {
       const PARTISAN = {
@@ -772,13 +759,9 @@
 
   </div>
 
-  <div class="site-footer">
-    <img src="assets/multistate-logomark.png" alt="MultiState">
-    <div class="footer-text">State Elections Tracker &mdash; Data compiled by MultiState</div>
-  </div>
-
 </div>
 
+<script src="js/nav.js"></script>
 <script src="js/common.js"></script>
 <script>
 (async function() {

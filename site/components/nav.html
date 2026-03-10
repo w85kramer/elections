@@ -1,0 +1,59 @@
+<!-- Corporate Utility Bar -->
+<div class="utility-bar">
+  <div class="utility-inner">
+    <a href="https://www.multistate.us" class="utility-brand">MultiState.us</a>
+    <div class="utility-links">
+      <a href="https://www.multistate.us/services">Services</a>
+      <a href="https://www.multistate.us/resources">Resources</a>
+      <a href="https://www.multistate.us/blogs">Blog</a>
+      <a href="https://www.multistate.us/contact">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Main Elections Nav -->
+<nav class="elections-nav" id="elections-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">
+      <img src="assets/multistate-logomark.png" alt="MultiState">
+      <span>MultiState Elections</span>
+    </a>
+
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-menu" id="nav-menu">
+      <a class="nav-item" href="trifectas-101.html" data-topic="trifectas">Trifectas</a>
+      <a class="nav-item" href="legislatures-101.html" data-topic="legislatures">Legislatures</a>
+      <a class="nav-item" href="governors-101.html" data-topic="governors">Governors</a>
+
+      <div class="nav-dropdown" data-topic="statewide">
+        <button class="nav-item nav-dropdown-btn">Statewide Offices <span class="nav-caret">&#9662;</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="ag-101.html" data-topic="ag">Attorneys General</a>
+          <a href="ltgov-101.html" data-topic="ltgov">Lt. Governors</a>
+          <a href="sos-101.html" data-topic="sos">Secretaries of State</a>
+        </div>
+      </div>
+
+      <a class="nav-item" href="ballot-measures-101.html" data-topic="ballot-measures">Ballot Measures</a>
+
+      <div class="nav-dropdown" data-topic="tools">
+        <button class="nav-item nav-dropdown-btn">Tools <span class="nav-caret">&#9662;</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="candidates.html" data-topic="candidates">Candidate Search</a>
+          <a href="calendar.html" data-topic="calendar">Election Calendar</a>
+          <a href="swing-calculator.html" data-topic="swing-calculator">Swing Calculator</a>
+        </div>
+      </div>
+
+      <div class="nav-dropdown nav-state-picker" data-topic="state">
+        <button class="nav-item nav-dropdown-btn">States <span class="nav-caret">&#9662;</span></button>
+        <div class="nav-dropdown-menu nav-state-grid" id="nav-state-grid">
+          <!-- Populated by nav.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

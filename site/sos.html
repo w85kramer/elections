@@ -91,7 +91,7 @@
   /* Map embed */
   .map-embed {
     width: 100%;
-    height: 680px;
+    height: 800px;
     border: 1px solid var(--ms-border);
     border-radius: var(--ms-radius);
     margin-bottom: 32px;
@@ -231,28 +231,14 @@
   @media (max-width: 768px) {
     .gov-stats { grid-template-columns: repeat(2, 1fr); }
     .race-details { grid-template-columns: 1fr; }
-    .map-embed { height: 400px; }
+    .map-embed { height: 500px; }
   }
 </style>
 </head>
 <body>
+<div id="global-nav"></div>
 <div class="page-container">
-
-  <div class="site-header">
-    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
-    <a href="index.html" class="site-title">State Elections Tracker</a>
-  </div>
-
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> &rsaquo; <a href="sos-101.html">Secretaries of State</a> &rsaquo; 2026 Elections
-  </div>
-
-  <div class="subnav">
-    <a href="sos-101.html">Overview</a>
-    <a href="sos.html" class="active">2026 Elections</a>
-    <a href="sos-analytics.html">Trends & Analytics</a>
-  </div>
-
+  <div id="topic-subnav"></div>
   <h1 class="heading-xl" style="margin-bottom: 8px">2026 Secretary of State Elections</h1>
   <p class="subtitle mb-16">Race ratings, candidates, and key contests for secretary of state races</p>
 
@@ -306,20 +292,16 @@
   <!-- Race cards -->
   <div id="races-list"></div>
 
-  <div class="site-footer" style="margin-top:32px">
-    <img src="assets/multistate-logomark.png" alt="MultiState">
-    <span class="footer-text">Source: MultiState, Cook Political Report, Sabato's Crystal Ball. Data generated <span id="gen-date"></span>.</span>
-  </div>
-
+<div id="global-footer"></div>
 </div>
-
+<script src="js/nav.js"></script>
 <script src="js/common.js"></script>
 <script>
 (async function() {
   const data = await loadJSON('data/sos_2026.json');
   const races = data.races;
 
-  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+  var _gd = document.getElementById('gen-date') || document.getElementById('gen-date-footer'); if (_gd) _gd.textContent = formatDate(data.generated_at.split('T')[0]);
 
   // Stats
   const demHeld = races.filter(r => r.incumbent_party === 'D').length;

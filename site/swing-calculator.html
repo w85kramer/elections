@@ -173,18 +173,9 @@
 </style>
 </head>
 <body>
+<div id="global-nav"></div>
 <div class="page-container">
-
-  <!-- Header -->
-  <div class="site-header">
-    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
-    <a href="index.html" class="site-title">State Elections Tracker</a>
-  </div>
-
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> &rsaquo; Swing Calculator
-  </div>
-
+  <div id="topic-subnav"></div>
   <h1 class="heading-xl" style="margin-bottom: 8px">Swing Calculator</h1>
   <p class="subtitle mb-16">National Legislature Forecast Tool</p>
 
@@ -229,20 +220,17 @@
   </div>
 
   <!-- Footer -->
-  <div class="site-footer" style="margin-top: 32px">
-    <img src="assets/multistate-logomark.png" alt="MultiState">
-    <span class="footer-text">Source: MultiState. Data generated <span id="gen-date"></span>.</span>
-  </div>
-
 </div>
 
+<div id="global-footer"></div>
+<script src="js/nav.js"></script>
 <script src="js/common.js"></script>
 <script>
 (async function() {
   const marginsData = await loadJSON('data/pres_margins.json');
   const summaryData = await loadJSON('data/states_summary.json');
 
-  document.getElementById('gen-date').textContent = formatDate(marginsData.generated_at.split('T')[0]);
+  var _gd = document.getElementById('gen-date') || document.getElementById('gen-date-footer'); if (_gd) _gd.textContent = formatDate(marginsData.generated_at.split('T')[0]);
 
   // Color gradient stops for D seat percentage
   const COLOR_STOPS = [

@@ -259,18 +259,9 @@
 </style>
 </head>
 <body>
+<div id="global-nav"></div>
 <div class="page-container">
-
-  <!-- Header -->
-  <div class="site-header">
-    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
-    <a href="index.html" class="site-title">State Elections Tracker</a>
-  </div>
-
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> &rsaquo; <a href="ballot-measures-101.html">Ballot Measures</a> &rsaquo; 2026 Measures
-  </div>
-
+  <div id="topic-subnav"></div>
   <!-- Sub-navigation -->
   <div style="display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap">
     <a href="ballot-measures-101.html" style="display:inline-block;padding:8px 18px;border:2px solid var(--ms-border);border-radius:var(--ms-radius);font-family:'Work Sans',sans-serif;font-weight:600;font-size:13px;text-decoration:none;color:var(--ms-text-light);transition:all 0.15s" onmouseover="this.style.borderColor='var(--ms-navy)';this.style.color='var(--ms-navy)'" onmouseout="this.style.borderColor='var(--ms-border)';this.style.color='var(--ms-text-light)'">Overview</a>
@@ -670,20 +661,17 @@
   <div id="measures-list"></div>
 
   <!-- Footer -->
-  <div class="site-footer" style="margin-top: 32px">
-    <img src="assets/multistate-logomark.png" alt="MultiState">
-    <span class="footer-text">Source: MultiState &amp; Ballotpedia. Data generated <span id="gen-date"></span>.</span>
-  </div>
-
 </div>
 
+<div id="global-footer"></div>
+<script src="js/nav.js"></script>
 <script src="js/common.js"></script>
 <script>
 (async function() {
   const data = await loadJSON('data/ballot_measures.json');
   const measures = data.measures;
 
-  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+  var _gd = document.getElementById('gen-date') || document.getElementById('gen-date-footer'); if (_gd) _gd.textContent = formatDate(data.generated_at.split('T')[0]);
 
   // Populate year tabs
   const years = [...new Set(measures.map(m => m.year))].sort((a, b) => b - a);

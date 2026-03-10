@@ -91,7 +91,7 @@
   /* Map embed */
   .map-embed {
     width: 100%;
-    height: 680px;
+    height: 800px;
     border: 1px solid var(--ms-border);
     border-radius: var(--ms-radius);
     margin-bottom: 32px;
@@ -218,28 +218,14 @@
   @media (max-width: 768px) {
     .leg-stats { grid-template-columns: repeat(2, 1fr); }
     .chamber-details { grid-template-columns: 1fr; }
-    .map-embed { height: 400px; }
+    .map-embed { height: 500px; }
   }
 </style>
 </head>
 <body>
+<div id="global-nav"></div>
 <div class="page-container">
-
-  <div class="site-header">
-    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
-    <a href="index.html" class="site-title">State Elections Tracker</a>
-  </div>
-
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> &rsaquo; <a href="legislatures-101.html">Legislatures</a> &rsaquo; 2026 Elections
-  </div>
-
-  <div class="subnav">
-    <a href="legislatures-101.html">Overview</a>
-    <a href="legislatures.html" class="active">2026 Elections</a>
-    <a href="legislatures-analytics.html">Trends & Analytics</a>
-  </div>
-
+  <div id="topic-subnav"></div>
   <h1 class="heading-xl" style="margin-bottom: 8px">2026 State Legislature Elections</h1>
   <p class="subtitle mb-16">Chamber control, seat counts, and the 2026 legislative landscape</p>
 
@@ -298,13 +284,9 @@
   <!-- Chamber cards -->
   <div id="chambers-list"></div>
 
-  <div class="site-footer" style="margin-top:32px">
-    <img src="assets/multistate-logomark.png" alt="MultiState">
-    <span class="footer-text">Source: MultiState, StateNavigate. Data generated <span id="gen-date"></span>.</span>
-  </div>
-
+<div id="global-footer"></div>
 </div>
-
+<script src="js/nav.js"></script>
 <script src="js/common.js"></script>
 <script>
 (async function() {
@@ -312,7 +294,7 @@
   const chambers = data.chambers;
   const summary = data.summary;
 
-  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+  var _gd = document.getElementById('gen-date') || document.getElementById('gen-date-footer'); if (_gd) _gd.textContent = formatDate(data.generated_at.split('T')[0]);
 
   // Stats
   document.getElementById('stat-chambers').textContent = summary.chambers_with_elections_2026;

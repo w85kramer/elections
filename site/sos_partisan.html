@@ -18,6 +18,7 @@
 <title>Secretaries of State | Partisan Breakdown | MultiState</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Work Sans', sans-serif; background: #ffffff; color: #043858; }
@@ -104,6 +105,7 @@
   /* Embed mode */
   body.embed .site-nav { display: none; }
   body.embed .map-title { display: none; }
+  body.embed #global-nav { display: none; }
   body.embed .map-page { padding: 16px 16px 10px; }
   body.embed .map-main { margin-top: -10px; }
   body.embed .logo-area { display: none; }
@@ -114,25 +116,8 @@
 </head>
 <body>
 <script>if (window.location.search.includes('embed')) document.body.classList.add('embed');</script>
+<div id="global-nav"></div>
 <div class="map-page">
-  <div class="site-nav">
-    <a class="nav-home" href="index.html"><img src="assets/multistate-logomark.png" alt="">Elections Tracker</a>
-    <span class="nav-sep">|</span>
-    <a class="nav-link" href="trifectas_partisan.html">Trifectas</a>
-    <a class="nav-link" href="legislatures_partisan.html">Legislatures</a>
-    <a class="nav-link" href="governors_2026.html">2026 Governors</a>
-    <a class="nav-link" href="governors_partisan.html">Governors</a>
-    <a class="nav-link" href="ltgov_partisan.html">Lt. Governors</a>
-    <a class="nav-link" href="ag_partisan.html">Attorneys General</a>
-    <a class="nav-link active" href="sos_partisan.html">Secretaries of State</a>
-    <span class="nav-sep">|</span>
-    <a class="nav-link" href="swing-calculator.html">Swing Calc</a>
-    <span class="nav-sep">|</span>
-    <a class="nav-link" href="ballot-measures-initiative-map.html">Initiative Auth.</a>
-    <a class="nav-link" href="ballot-measures-referendum-map.html">Referendum Auth.</a>
-    <span class="nav-sep">|</span>
-    <a class="nav-link" href="ballot-measures-101.html">101 Guide</a>
-  </div>
   <h1 class="map-title">Secretaries of State <span class="separator">|</span> Partisan Breakdown</h1>
   <div class="map-layout">
     <div class="map-legend">
@@ -518,5 +503,6 @@ Source: MultiState. Data as of <span id="data-date"></span>.
     const dateEl = document.getElementById('data-date');
     if (dateEl) dateEl.textContent = months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
 </script>
+<script src="js/nav.js"></script>
 </body>
 </html>

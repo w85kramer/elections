@@ -159,19 +159,9 @@
 </style>
 </head>
 <body>
+<div id="global-nav"></div>
 <div class="page-container">
-
-  <!-- Header -->
-  <div class="site-header">
-    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
-    <a href="index.html" class="site-title">State Elections Tracker</a>
-  </div>
-
-  <!-- Breadcrumb -->
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> &rsaquo; <span>Candidates</span>
-  </div>
-
+  <div id="topic-subnav"></div>
   <h1 class="page-title" style="font-weight:800;font-size:32px;color:var(--ms-navy);margin-bottom:24px">Candidates</h1>
 
   <!-- Search + Filters -->
@@ -205,14 +195,9 @@
     <div class="load-msg" id="load-msg">Loading candidates...</div>
   </div>
 
-  <!-- Footer -->
-  <div class="site-footer">
-    <img src="assets/multistate-logomark.png" alt="MultiState">
-    <span class="footer-text">Source: MultiState. Data generated <span id="gen-date"></span>.</span>
-  </div>
-
+<div id="global-footer"></div>
 </div>
-
+<script src="js/nav.js"></script>
 <script src="js/common.js"></script>
 <script>
 (async function() {
@@ -227,7 +212,7 @@
   try {
     const data = await loadJSON('data/candidate_search.json');
     allCandidates = data.candidates;
-    document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+    var _gd = document.getElementById('gen-date') || document.getElementById('gen-date-footer'); if (_gd) _gd.textContent = formatDate(data.generated_at.split('T')[0]);
   } catch(e) {
     document.getElementById('load-msg').textContent = 'Failed to load candidate data.';
     return;

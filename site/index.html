@@ -119,14 +119,8 @@
 </style>
 </head>
 <body>
+<div id="global-nav"></div>
 <div class="page-container">
-
-  <!-- Hero -->
-  <div class="hero">
-    <img src="assets/multistate-logomark.png" alt="MultiState">
-    <h1>State Elections Tracker</h1>
-    <div class="cycle">2026 Election Cycle</div>
-  </div>
 
   <!-- Key Stats -->
   <div class="stat-row" id="stats-row">
@@ -210,24 +204,21 @@
       <a class="map-link" href="#" data-src="ag_partisan.html?embed">Attorneys General</a>
       <a class="map-link" href="#" data-src="sos_partisan.html?embed">Secretaries of State</a>
     </div>
-    <iframe id="map-frame" src="trifectas_partisan.html?embed" style="width:100%;height:700px;border:1px solid var(--ms-border);border-radius:var(--ms-radius);margin-top:16px;"></iframe>
+    <iframe id="map-frame" src="trifectas_partisan.html?embed" style="width:100%;height:800px;border:1px solid var(--ms-border);border-radius:var(--ms-radius);margin-top:16px;"></iframe>
   </div>
 
-  <!-- Footer -->
-  <div class="site-footer">
-    <img src="assets/multistate-logomark.png" alt="MultiState">
-    <span class="footer-text">Source: MultiState. Data generated <span id="gen-date"></span>.</span>
-  </div>
-
+<div id="global-footer"></div>
 </div>
 
+<script src="js/nav.js"></script>
 <script src="js/common.js"></script>
 <script>
 (async function() {
   const data = await loadJSON('data/states_summary.json');
   const states = data.states;
 
-  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+  var genEl = document.getElementById('gen-date') || document.getElementById('gen-date-footer');
+  if (genEl) genEl.textContent = formatDate(data.generated_at.split('T')[0]);
 
   // Compute stats
   let totalSeats = 0, govRaces = 0, tossupGovs = 0, totalMeasures = 0;

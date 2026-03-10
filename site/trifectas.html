@@ -51,7 +51,7 @@
   /* Map embed */
   .map-embed {
     width: 100%;
-    height: 680px;
+    height: 800px;
     border: 1px solid var(--ms-border);
     border-radius: var(--ms-radius);
     margin-bottom: 32px;
@@ -163,28 +163,14 @@
   @media (max-width: 768px) {
     .tri-stats { grid-template-columns: repeat(2, 1fr); }
     .state-row { grid-template-columns: 1fr; }
-    .map-embed { height: 400px; }
+    .map-embed { height: 500px; }
   }
 </style>
 </head>
 <body>
+<div id="global-nav"></div>
 <div class="page-container">
-
-  <div class="site-header">
-    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
-    <a href="index.html" class="site-title">State Elections Tracker</a>
-  </div>
-
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> &rsaquo; <a href="trifectas-101.html">Trifectas</a> &rsaquo; Current Status
-  </div>
-
-  <div class="subnav">
-    <a href="trifectas-101.html">Overview</a>
-    <a href="trifectas.html" class="active">Current Status</a>
-    <a href="trifectas-analytics.html">Trends & Analytics</a>
-  </div>
-
+  <div id="topic-subnav"></div>
   <h1 class="heading-xl" style="margin-bottom: 8px">State Trifectas</h1>
   <p class="subtitle mb-16">Unified party control of state government across all 50 states</p>
 
@@ -230,13 +216,9 @@
   <!-- State cards -->
   <div id="states-list"></div>
 
-  <div class="site-footer" style="margin-top:32px">
-    <img src="assets/multistate-logomark.png" alt="MultiState">
-    <span class="footer-text">Source: MultiState. Data generated <span id="gen-date"></span>.</span>
-  </div>
-
+<div id="global-footer"></div>
 </div>
-
+<script src="js/nav.js"></script>
 <script src="js/common.js"></script>
 <script>
 (async function() {
@@ -244,7 +226,7 @@
   const states = data.states;
   const summary = data.summary;
 
-  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+  var _gd = document.getElementById('gen-date') || document.getElementById('gen-date-footer'); if (_gd) _gd.textContent = formatDate(data.generated_at.split('T')[0]);
 
   // Stats
   document.getElementById('stat-dem').textContent = summary.d_trifectas;

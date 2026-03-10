@@ -101,23 +101,9 @@
 </style>
 </head>
 <body>
+<div id="global-nav"></div>
 <div class="page-container">
-
-  <div class="site-header">
-    <a href="index.html"><img src="assets/multistate-logomark.png" alt="MultiState"></a>
-    <a href="index.html" class="site-title">State Elections Tracker</a>
-  </div>
-
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> &rsaquo; <a href="legislatures-101.html">Legislatures</a> &rsaquo; Trends &amp; Analytics
-  </div>
-
-  <div class="subnav">
-    <a href="legislatures-101.html">Overview</a>
-    <a href="legislatures.html">2026 Elections</a>
-    <a href="legislatures-analytics.html" class="active">Trends & Analytics</a>
-  </div>
-
+  <div id="topic-subnav"></div>
   <h1 class="heading-xl" style="margin-bottom: 8px">Legislature Trends & Analytics</h1>
   <p class="subtitle mb-16">Historical chamber control, seat trends, and supermajority analysis</p>
 
@@ -186,13 +172,9 @@
     </div>
   </div>
 
-  <div class="site-footer" style="margin-top:32px">
-    <img src="assets/multistate-logomark.png" alt="MultiState">
-    <span class="footer-text">Source: MultiState. Data generated <span id="gen-date"></span>.</span>
-  </div>
-
+<div id="global-footer"></div>
 </div>
-
+<script src="js/nav.js"></script>
 <script src="js/common.js"></script>
 <script>
 (async function() {
@@ -200,7 +182,7 @@
   const { summary, chambers, history } = data;
   const { snapshots, chamber_flips } = history;
 
-  document.getElementById('gen-date').textContent = formatDate(data.generated_at.split('T')[0]);
+  var _gd = document.getElementById('gen-date') || document.getElementById('gen-date-footer'); if (_gd) _gd.textContent = formatDate(data.generated_at.split('T')[0]);
 
   // Stats
   document.getElementById('stat-d-chambers').textContent = summary.d_chambers;
