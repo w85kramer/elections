@@ -1110,18 +1110,29 @@
     for (const te of (seat.term_events || [])) {
       events.push({ type: 'term_event', year: te.year, date: te.date || '', data: te });
     }
-    // Inject redistricting event
+    // Inject redistricting events
+    // Known census redistricting years for legislative districts
+    const redistrictYears = [];
     const ry = district.redistricting_year;
-    if (ry) {
-      const elecYears = elections.map(e => e.year);
-      const hasBefore = elecYears.some(y => y < ry);
-      const hasAfter = elecYears.some(y => y >= ry);
+    if (ry) redistrictYears.push(ry);
+    // Also inject 2012 redistricting (post-2010 census) if we have elections spanning it
+    // and it's not already the primary redistricting year
+    if (ry !== 2012 && (chamber === 'House' || chamber === 'Senate')) {
+      redistrictYears.push(2012);
+    }
+
+    const elecYears = elections.map(e => e.year);
+    for (const rYear of redistrictYears) {
+      // Elections in redistricting year itself are under OLD maps
+      const hasBefore = elecYears.some(y => y <= rYear);
+      const hasAfter = elecYears.some(y => y > rYear);
       if (hasBefore && hasAfter) {
-        const marginStr = district.pres_2024_margin ? marginLabel(district.pres_2024_margin) : null;
-        const seatChange = district.old_era_seats && district.old_era_seats !== district.num_seats
+        const isPrimary = rYear === ry;
+        const marginStr = isPrimary && district.pres_2024_margin ? marginLabel(district.pres_2024_margin) : null;
+        const seatChange = isPrimary && district.old_era_seats && district.old_era_seats !== district.num_seats
           ? `${district.old_era_seats} seats \u2192 ${district.num_seats} seats` : null;
-        let redistrictDate = `${ry}-01-01`;
-        const ryElecs = elections.filter(e => e.year === ry && e.date);
+        let redistrictDate = `${rYear}-01-01`;
+        const ryElecs = elections.filter(e => e.year === rYear && e.date);
         const specialDates = ryElecs.filter(e => e.type.includes('Special')).map(e => e.date).sort();
         if (specialDates.length > 0) {
           const d = new Date(specialDates[specialDates.length - 1] + 'T00:00:00');
@@ -1130,25 +1141,23 @@
         }
         events.push({
           type: 'redistricting',
-          year: ry,
+          year: rYear,
           date: redistrictDate,
-          data: { year: ry, newMargin: marginStr, seatChange }
+          data: { year: rYear, newMargin: marginStr, seatChange }
         });
-      } else if (district.eliminated && hasBefore) {
-        // Eliminated district: show terminal event
+      } else if (rYear === ry && district.eliminated && hasBefore) {
         events.push({
           type: 'redistricting',
-          year: ry,
-          date: `${ry}-01-01`,
-          data: { year: ry, eliminated: true }
+          year: rYear,
+          date: `${rYear}-01-01`,
+          data: { year: rYear, eliminated: true }
         });
-      } else if (district.is_new_district && hasAfter && !hasBefore) {
-        // New district with no old-era history
+      } else if (rYear === ry && district.is_new_district && hasAfter && !hasBefore) {
         events.push({
           type: 'redistricting',
-          year: ry,
-          date: `${ry}-01-01`,
-          data: { year: ry, created: true }
+          year: rYear,
+          date: `${rYear}-01-01`,
+          data: { year: rYear, created: true }
         });
       }
     }
@@ -1179,18 +1188,26 @@
       }
     }
 
-    // Inject redistricting event
-    const ry = district.redistricting_year;
-    if (ry) {
-      const elecYears = events.filter(ev => ev.type === 'election').map(ev => ev.year);
-      const hasBefore = elecYears.some(y => y < ry);
-      const hasAfter = elecYears.some(y => y >= ry);
+    // Inject redistricting events
+    const redistrictYears2 = [];
+    const ry2 = district.redistricting_year;
+    if (ry2) redistrictYears2.push(ry2);
+    if (ry2 !== 2012 && (chamber === 'House' || chamber === 'Senate')) {
+      redistrictYears2.push(2012);
+    }
+
+    const elecYears2 = events.filter(ev => ev.type === 'election').map(ev => ev.year);
+    for (const rYear of redistrictYears2) {
+      // Elections in redistricting year itself are under OLD maps
+      const hasBefore = elecYears2.some(y => y <= rYear);
+      const hasAfter = elecYears2.some(y => y > rYear);
       if (hasBefore && hasAfter) {
-        const marginStr = district.pres_2024_margin ? marginLabel(district.pres_2024_margin) : null;
-        const seatChange = district.old_era_seats && district.old_era_seats !== district.num_seats
+        const isPrimary = rYear === ry2;
+        const marginStr = isPrimary && district.pres_2024_margin ? marginLabel(district.pres_2024_margin) : null;
+        const seatChange = isPrimary && district.old_era_seats && district.old_era_seats !== district.num_seats
           ? `${district.old_era_seats} seats \u2192 ${district.num_seats} seats` : null;
-        let redistrictDate = `${ry}-01-01`;
-        const ryElecs = events.filter(ev => ev.type === 'election' && ev.year === ry && ev.data.date);
+        let redistrictDate = `${rYear}-01-01`;
+        const ryElecs = events.filter(ev => ev.type === 'election' && ev.year === rYear && ev.data.date);
         const specialDates = ryElecs.filter(ev => ev.data.type.includes('Special')).map(ev => ev.data.date).sort();
         if (specialDates.length > 0) {
           const d = new Date(specialDates[specialDates.length - 1] + 'T00:00:00');
@@ -1199,23 +1216,23 @@
         }
         events.push({
           type: 'redistricting',
-          year: ry,
+          year: rYear,
           date: redistrictDate,
-          data: { year: ry, newMargin: marginStr, seatChange }
+          data: { year: rYear, newMargin: marginStr, seatChange }
         });
-      } else if (district.eliminated && hasBefore) {
+      } else if (rYear === ry2 && district.eliminated && hasBefore) {
         events.push({
           type: 'redistricting',
-          year: ry,
-          date: `${ry}-01-01`,
-          data: { year: ry, eliminated: true }
+          year: rYear,
+          date: `${rYear}-01-01`,
+          data: { year: rYear, eliminated: true }
         });
-      } else if (district.is_new_district && hasAfter && !hasBefore) {
+      } else if (rYear === ry2 && district.is_new_district && hasAfter && !hasBefore) {
         events.push({
           type: 'redistricting',
-          year: ry,
-          date: `${ry}-01-01`,
-          data: { year: ry, created: true }
+          year: rYear,
+          date: `${rYear}-01-01`,
+          data: { year: rYear, created: true }
         });
       }
     }
@@ -1375,12 +1392,19 @@
       svg += `<text x="${W - PAD_R + 4}" y="${pmY + 4}" font-size="10" fill="var(--ms-other)" font-family="Work Sans,sans-serif">2024 Pres</text>`;
     }
 
-    // Redistricting vertical line
-    if (district.redistricting_year && district.redistricting_year > minYear && district.redistricting_year <= maxYear) {
-      const ry = district.redistricting_year;
-      const rx = xPos(ry) - perYear * 0.35;
-      svg += `<line x1="${rx}" y1="${PAD_T}" x2="${rx}" y2="${H - PAD_B}" stroke="var(--ms-navy)" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.5"/>`;
-      svg += `<text x="${rx}" y="${PAD_T - 4}" text-anchor="middle" font-size="9" fill="var(--ms-navy)" font-family="Work Sans,sans-serif" opacity="0.7">Redistricted</text>`;
+    // Redistricting vertical lines
+    const chartRedistrictYears = [district.redistricting_year, 2012].filter(Boolean);
+    for (const ry of [...new Set(chartRedistrictYears)]) {
+      // Show if there are elections on both sides of this redistricting year
+      const hasElecBefore = years.some(y => y <= ry);
+      const hasElecAfter = years.some(y => y > ry);
+      if (hasElecBefore && hasElecAfter && ry >= minYear && ry <= maxYear) {
+        // Position line between the redistricting year and next election
+        const nextYear = years.filter(y => y > ry).sort((a,b) => a-b)[0];
+        const rx = nextYear ? (xPos(ry) + xPos(nextYear)) / 2 : xPos(ry) + perYear * 0.5;
+        svg += `<line x1="${rx}" y1="${PAD_T}" x2="${rx}" y2="${H - PAD_B}" stroke="var(--ms-navy)" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.5"/>`;
+        svg += `<text x="${rx}" y="${PAD_T - 4}" text-anchor="middle" font-size="9" fill="var(--ms-navy)" font-family="Work Sans,sans-serif" opacity="0.7">Redistricted</text>`;
+      }
     }
 
     // Bars — group by year (multi-member can have multiple elections same year)
