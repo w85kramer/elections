@@ -321,14 +321,12 @@
         <h2>State Not Found</h2>
         <p>Please select a state from the <a href="index.html#states">homepage</a>.</p>
       </div>`;
-    document.getElementById('state-name-crumb').textContent = 'Unknown';
     document.title = 'State Not Found | State Elections Tracker';
     return;
   }
 
   const stateName = STATE_NAMES[stateAbbr];
   document.title = `${stateName} | State Elections Tracker`;
-  document.getElementById('state-name-crumb').textContent = stateName;
   document.getElementById('state-title').textContent = stateName;
 
   let stateData;

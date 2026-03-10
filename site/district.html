@@ -547,7 +547,7 @@
   }
 
   // Breadcrumb
-  document.getElementById('breadcrumb').innerHTML = `
+  var _bc = document.getElementById('breadcrumb'); if (_bc) _bc.innerHTML = `
     <a href="index.html">Home</a> &rsaquo;
     <a href="state.html?st=${stateAbbr}">${stateName}</a> &rsaquo;
     <a href="state.html?st=${stateAbbr}">${getChamberLabel(stateAbbr, chamber)}</a> &rsaquo;
