@@ -123,6 +123,7 @@
   }
   .oh-table .name-cell a:hover { text-decoration: underline; }
   .oh-table .office-cell { color: var(--ms-text-light); }
+  .oh-table .office-cell a:hover { text-decoration: underline; }
   .table-footer {
     display: flex; justify-content: space-between; align-items: center;
     padding: 12px 0; font-size: 13px; color: var(--ms-text-light);
@@ -353,15 +354,24 @@
       var districtLabel = o.district === 'Statewide' ? '' : o.district;
       var isLeg = o.office === 'State Senate' || o.office === 'State House' || o.office === 'State Legislature';
       var districtLink = isLeg ? 'district.html?st=' + o.state + '&chamber=' + encodeURIComponent(o.chamber) + '&d=' + encodeURIComponent(o.district) : '';
-      var nameLink = isLeg ? districtLink : 'state.html?st=' + o.state;
+      var nameLink = o.id ? 'candidate.html?id=' + o.id + '&st=' + o.state : (isLeg ? districtLink : 'state.html?st=' + o.state);
       var stateLink = 'state.html?st=' + o.state;
       var districtCell = districtLabel ? (isLeg ? '<a href="' + districtLink + '" style="color:var(--ms-navy);text-decoration:none">' + districtLabel + '</a>' : districtLabel) : '';
+
+      // Office link: route to the relevant topic page for this state
+      var officeLink = '';
+      if (o.office === 'Governor') officeLink = 'governor.html?st=' + o.state;
+      else if (o.office === 'Attorney General') officeLink = 'statewide.html?st=' + o.state + '&office=ag';
+      else if (o.office === 'Lt. Governor') officeLink = 'statewide.html?st=' + o.state + '&office=ltgov';
+      else if (o.office === 'Secretary of State') officeLink = 'statewide.html?st=' + o.state + '&office=sos';
+      else if (isLeg) officeLink = 'state.html?st=' + o.state + '&view=members';
+      var officeCell = officeLink ? '<a href="' + officeLink + '" style="color:var(--ms-text-light);text-decoration:none">' + o.office + '</a>' : o.office;
 
       html += '<tr>' +
         '<td><a href="' + stateLink + '" style="color:var(--ms-navy);text-decoration:none;font-weight:600">' + o.state + '</a></td>' +
         '<td class="name-cell"><a href="' + nameLink + '">' + o.name + '</a></td>' +
         '<td class="party-cell ' + partyClass + '"><span class="party-dot"></span><span class="party-label">' + partyLabel + '</span><span class="party-abbr">' + (o.party || '—') + '</span></td>' +
-        '<td class="office-cell">' + o.office + '</td>' +
+        '<td class="office-cell">' + officeCell + '</td>' +
         '<td>' + districtCell + '</td>' +
         '</tr>';
     }

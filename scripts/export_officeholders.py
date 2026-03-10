@@ -43,6 +43,7 @@ for fp in sorted(glob.glob(os.path.join(data_dir, '*.json'))):
         caucus = co.get('caucus') or cand.get('caucus') or party
 
         officeholders.append({
+            'id': cand.get('id', 0),
             'name': cand['full_name'],
             'state': st,
             'party': party,
