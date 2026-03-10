@@ -116,7 +116,8 @@
   }
   .oh-table .party-d .party-dot { background: var(--ms-dem-blue); }
   .oh-table .party-r .party-dot { background: var(--ms-rep-red); }
-  .oh-table .party-other .party-dot { background: #888; }
+  .oh-table .party-g .party-dot { background: #2e8b57; }
+  .oh-table .party-other .party-dot { background: var(--ms-purple); }
   .oh-table .name-cell a {
     color: var(--ms-navy); text-decoration: none; font-weight: 600;
   }
@@ -344,7 +345,7 @@
 
     for (var i = start; i < end; i++) {
       var o = filtered[i];
-      var partyClass = o.party === 'D' ? 'party-d' : o.party === 'R' ? 'party-r' : 'party-other';
+      var partyClass = o.party === 'D' ? 'party-d' : o.party === 'R' ? 'party-r' : o.party === 'G' ? 'party-g' : 'party-other';
       var partyLabel = o.party === 'D' ? 'Democrat' : o.party === 'R' ? 'Republican' : o.party || '—';
       var districtLabel = o.district === 'Statewide' ? '' : o.district;
       var link = o.office === 'Governor' ? 'state.html?st=' + o.state :

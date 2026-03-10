@@ -384,7 +384,7 @@
   });
   for (var i = 0; i < govWatchRaces.length; i++) {
     var race = govWatchRaces[i];
-    var partyColor = race.governor.party === 'D' ? '#6cb3d2' : '#e50963';
+    var partyColor = race.governor.party === 'D' ? '#6cb3d2' : race.governor.party === 'R' ? '#e50963' : race.governor.party === 'G' ? '#2e8b57' : race.governor.party ? '#8b567f' : '#ccc';
     var ratingClass = 'race-rating-tossup';
     if (race.forecast.toLowerCase().includes('lean') && race.forecast.includes('D')) ratingClass = 'race-rating-lean-d';
     else if (race.forecast.toLowerCase().includes('lean') && race.forecast.includes('R')) ratingClass = 'race-rating-lean-r';

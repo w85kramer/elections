@@ -693,7 +693,13 @@
     let sortAsc = true;
 
     function getPartyColor(party) {
-      return party === 'D' ? 'var(--ms-dem-blue)' : party === 'R' ? 'var(--ms-rep-red)' : party === 'I' ? 'var(--ms-purple)' : party === 'split' ? 'var(--ms-purple)' : party === 'NP' ? 'var(--ms-gold)' : '';
+      if (party === 'D') return 'var(--ms-dem-blue)';
+      if (party === 'R') return 'var(--ms-rep-red)';
+      if (party === 'G') return '#2e8b57';
+      if (party === 'NP') return 'var(--ms-gold)';
+      if (party === 'split') return 'var(--ms-purple)';
+      if (!party) return '';
+      return 'var(--ms-purple)';
     }
 
     function renderRows() {

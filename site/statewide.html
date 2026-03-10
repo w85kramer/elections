@@ -397,8 +397,9 @@
   function partyColorStyle(p) {
     if (p === 'D') return 'color:var(--ms-dem-blue)';
     if (p === 'R') return 'color:var(--ms-rep-red)';
-    if (p === 'I') return 'color:var(--ms-purple)';
-    return 'color:var(--ms-other)';
+    if (p === 'G') return 'color:#2e8b57';
+    if (!p) return 'color:var(--ms-other)';
+    return 'color:var(--ms-purple)';
   }
 
   function forecastClass(rating) {
@@ -862,8 +863,9 @@
     function svgPartyColor(party) {
       if (party === 'D') return '#6cb3d2';
       if (party === 'R') return '#e50963';
-      if (party === 'I') return '#8b567f';
-      return '#aaa';
+      if (party === 'G') return '#2e8b57';
+      if (!party) return '#ccc';
+      return '#8b567f';
     }
 
     let svg = `<svg width="100%" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="max-width:${W}px">`;
