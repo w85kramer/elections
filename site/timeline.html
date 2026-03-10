@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics (multistate.us) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V5WR874G5K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V5WR874G5K', {
+    cookie_domain: 'multistate.us',
+    cookie_flags: 'SameSite=None;Secure'
+  });
+</script>
+<meta charset="UTF-8">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 Election Timeline | MultiState Elections</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<style>
+  .page-header { margin-bottom: 24px; }
+  .page-header h1 { font-weight: 800; font-size: 32px; color: var(--ms-navy); margin-bottom: 4px; }
+  .page-header .subtitle { font-size: 15px; color: var(--ms-text-light); }
+
+  /* Filter pills */
+  .tl-filters {
+    display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;
+  }
+  .tl-filter {
+    padding: 6px 14px; border: 2px solid var(--ms-border);
+    border-radius: 20px; background: white; font-family: 'Work Sans', sans-serif;
+    font-weight: 600; font-size: 13px; cursor: pointer; color: var(--ms-text);
+    transition: all 0.15s;
+  }
+  .tl-filter:hover { border-color: var(--ms-navy); }
+  .tl-filter.active { background: var(--ms-navy); color: white; border-color: var(--ms-navy); }
+  .tl-filter[data-f="filing"].active { background: var(--ms-dem-blue); border-color: var(--ms-dem-blue); }
+  .tl-filter[data-f="primary"].active { background: var(--ms-rep-red); border-color: var(--ms-rep-red); }
+  .tl-filter[data-f="special"].active { background: #b8860b; border-color: #b8860b; }
+  .tl-filter[data-f="general"].active { background: var(--ms-navy); border-color: var(--ms-navy); }
+
+  /* Upcoming callout */
+  .upcoming-box {
+    background: linear-gradient(135deg, #043858, #0a5a8a);
+    color: white; border-radius: var(--ms-radius);
+    padding: 16px 20px; margin-bottom: 28px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .upcoming-days {
+    font-size: 36px; font-weight: 800; line-height: 1;
+    min-width: 60px; text-align: center;
+  }
+  .upcoming-detail { font-size: 14px; line-height: 1.5; }
+  .upcoming-detail strong { font-size: 15px; }
+
+  /* Timeline */
+  .timeline {
+    position: relative; padding-left: 32px;
+  }
+  .timeline::before {
+    content: ''; position: absolute; left: 11px; top: 0; bottom: 0;
+    width: 2px; background: var(--ms-border);
+  }
+
+  /* Month header */
+  .tl-month {
+    position: relative; margin-bottom: 8px; margin-top: 28px;
+  }
+  .tl-month:first-child { margin-top: 0; }
+  .tl-month-label {
+    font-weight: 800; font-size: 16px; color: var(--ms-navy);
+    padding: 4px 0; position: relative;
+  }
+  .tl-month-dot {
+    position: absolute; left: -32px; top: 50%; transform: translateY(-50%);
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--ms-navy); border: 2px solid white;
+    box-shadow: 0 0 0 2px var(--ms-navy);
+  }
+
+  /* Today marker */
+  .tl-today-marker {
+    position: relative; margin: 12px 0;
+  }
+  .tl-today-line {
+    position: absolute; left: -32px; width: calc(100% + 32px);
+    border-top: 2px dashed var(--ms-rep-red); opacity: 0.6;
+  }
+  .tl-today-label {
+    display: inline-block; background: var(--ms-rep-red); color: white;
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; padding: 2px 8px; border-radius: 3px;
+    position: relative; top: -8px;
+  }
+
+  /* Event card */
+  .tl-event {
+    position: relative; margin-bottom: 6px;
+    padding: 8px 12px; border-radius: var(--ms-radius);
+    border: 1px solid var(--ms-border); background: white;
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+  .tl-event:hover { transform: translateX(2px); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .tl-event.past { opacity: 0.5; }
+  .tl-event.past:hover { opacity: 0.8; }
+
+  /* Dot on timeline */
+  .tl-event::before {
+    content: ''; position: absolute; left: -27px; top: 14px;
+    width: 8px; height: 8px; border-radius: 50%;
+    border: 2px solid white;
+  }
+  .tl-event.filing::before { background: var(--ms-dem-blue); box-shadow: 0 0 0 1px var(--ms-dem-blue); }
+  .tl-event.primary::before { background: var(--ms-rep-red); box-shadow: 0 0 0 1px var(--ms-rep-red); }
+  .tl-event.special::before { background: #b8860b; box-shadow: 0 0 0 1px #b8860b; }
+  .tl-event.general::before { background: var(--ms-navy); box-shadow: 0 0 0 1px var(--ms-navy); }
+
+  .tl-event-header {
+    display: flex; align-items: center; gap: 8px; margin-bottom: 4px;
+  }
+  .tl-date {
+    font-weight: 700; font-size: 13px; color: var(--ms-navy);
+    min-width: 70px;
+  }
+  .tl-type {
+    display: inline-block; padding: 1px 8px; border-radius: 10px;
+    font-weight: 600; font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .tl-type.filing { background: rgba(39,97,129,0.12); color: var(--ms-dem-blue); }
+  .tl-type.primary { background: rgba(229,9,99,0.12); color: var(--ms-rep-red); }
+  .tl-type.special { background: rgba(184,134,11,0.15); color: #8a7000; }
+  .tl-type.general { background: rgba(4,56,88,0.1); color: var(--ms-navy); }
+
+  .tl-count {
+    font-size: 12px; color: var(--ms-text-light); font-weight: 600;
+    margin-left: auto;
+  }
+  .tl-states {
+    display: flex; flex-wrap: wrap; gap: 4px;
+  }
+  .tl-state {
+    display: inline-block; padding: 2px 7px; border-radius: 4px;
+    font-weight: 600; font-size: 12px; text-decoration: none;
+    transition: transform 0.1s;
+  }
+  .tl-state:hover { transform: scale(1.05); }
+  .tl-state.filing { background: rgba(39,97,129,0.08); color: var(--ms-dem-blue); }
+  .tl-state.primary { background: rgba(229,9,99,0.08); color: var(--ms-rep-red); }
+  .tl-state.special { background: rgba(184,134,11,0.1); color: #8a7000; }
+  .tl-state.general { background: rgba(4,56,88,0.08); color: var(--ms-navy); }
+
+  /* Status badges */
+  .tl-status {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px; padding: 1px 6px; border-radius: 8px;
+  }
+  .tl-status.done { background: #dcfce7; color: #166534; }
+  .tl-status.upcoming { background: #dbeafe; color: #1e40af; }
+
+  /* General election callout */
+  .tl-general-card {
+    background: linear-gradient(135deg, #043858, #0a5a8a);
+    color: white; border-color: var(--ms-navy);
+  }
+  .tl-general-card .tl-date { color: white; }
+  .tl-general-card .tl-type { background: rgba(255,255,255,0.2); color: white; }
+  .tl-general-card .tl-count { color: rgba(255,255,255,0.7); }
+
+  /* Legend */
+  .tl-legend {
+    display: flex; gap: 16px; margin-bottom: 20px;
+    font-size: 12px; color: var(--ms-text-light);
+  }
+  .tl-legend-dot {
+    display: inline-block; width: 10px; height: 10px;
+    border-radius: 50%; margin-right: 4px; vertical-align: middle;
+  }
+
+  @media (max-width: 768px) {
+    .upcoming-box { flex-direction: column; text-align: center; }
+    .tl-event-header { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+<div id="global-nav"></div>
+<div class="page-container">
+
+  <div class="page-header">
+    <h1>2026 Election Timeline</h1>
+    <p class="subtitle">Every filing deadline, primary, special election, and the general — month by month</p>
+  </div>
+
+  <!-- Upcoming callout -->
+  <div class="upcoming-box" id="upcoming-box" style="display:none"></div>
+
+  <!-- Legend -->
+  <div class="tl-legend">
+    <span><span class="tl-legend-dot" style="background:var(--ms-dem-blue)"></span> Filing Deadline</span>
+    <span><span class="tl-legend-dot" style="background:var(--ms-rep-red)"></span> Primary</span>
+    <span><span class="tl-legend-dot" style="background:#b8860b"></span> Special Election</span>
+    <span><span class="tl-legend-dot" style="background:var(--ms-navy)"></span> General Election</span>
+  </div>
+
+  <!-- Filters -->
+  <div class="tl-filters">
+    <button class="tl-filter active" data-f="all">All Events</button>
+    <button class="tl-filter" data-f="filing">Filing Deadlines</button>
+    <button class="tl-filter" data-f="primary">Primaries</button>
+    <button class="tl-filter" data-f="special">Specials</button>
+    <button class="tl-filter" data-f="general">General</button>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline" id="timeline"></div>
+
+</div>
+
+<div id="global-footer"></div>
+
+<script src="js/nav.js"></script>
+<script src="js/common.js"></script>
+<script>
+(async function() {
+  var data = await loadJSON('data/states_summary.json');
+  var states = data.states;
+  var today = new Date().toISOString().split('T')[0];
+  var activeFilter = 'all';
+
+  // Collect all events
+  var events = [];
+  var stateList = Object.keys(states).sort();
+
+  for (var i = 0; i < stateList.length; i++) {
+    var abbr = stateList[i];
+    var st = states[abbr];
+    var e26 = st.elections_2026;
+    var filingLeg = e26.filing_deadline_legislative;
+    var filingSw = e26.filing_deadline_statewide;
+    var filing = e26.filing_deadline;
+    var primary = e26.primary_date;
+
+    if (filingLeg && filingSw && filingLeg !== filingSw) {
+      events.push({ date: filingLeg, type: 'filing', state: abbr, name: st.name, detail: 'Legislative' });
+      events.push({ date: filingSw, type: 'filing', state: abbr, name: st.name, detail: 'Statewide' });
+    } else if (filing) {
+      events.push({ date: filing, type: 'filing', state: abbr, name: st.name, notes: e26.filing_notes || null });
+    }
+    if (primary) {
+      events.push({ date: primary, type: 'primary', state: abbr, name: st.name });
+    }
+  }
+
+  // Special elections
+  if (data.special_elections) {
+    for (var j = 0; j < data.special_elections.length; j++) {
+      var sp = data.special_elections[j];
+      if (sp.date) {
+        var done = sp.result_status === 'Called' || sp.result_status === 'Certified';
+        events.push({
+          date: sp.date, type: 'special', state: sp.state, name: sp.state_name,
+          detail: sp.seat_label + ' ' + sp.type.replace(/_/g, ' '),
+          chamber: sp.chamber, district: sp.district, done: done,
+        });
+      }
+    }
+  }
+
+  // General election
+  events.push({ date: '2026-11-03', type: 'general', state: 'ALL', name: 'General Election',
+    detail: 'All 50 states — Governors, Legislatures, Statewide Offices, Ballot Measures' });
+
+  events.sort(function(a, b) { return a.date.localeCompare(b.date) || a.type.localeCompare(b.type); });
+
+  // Upcoming callout
+  var nextEvent = null;
+  for (var k = 0; k < events.length; k++) {
+    if (events[k].date >= today) { nextEvent = events[k]; break; }
+  }
+  if (nextEvent) {
+    var daysUntil = Math.ceil((new Date(nextEvent.date + 'T00:00:00') - new Date(today + 'T00:00:00')) / 86400000);
+    var box = document.getElementById('upcoming-box');
+    var typeLabel = nextEvent.type === 'filing' ? 'filing deadline' :
+                    nextEvent.type === 'primary' ? 'primary election' :
+                    nextEvent.type === 'special' ? 'special election' : 'general election';
+    box.style.display = 'flex';
+    box.innerHTML = '<div class="upcoming-days">' + (daysUntil === 0 ? 'Today' : daysUntil) + '</div>' +
+      '<div class="upcoming-detail"><strong>' + (daysUntil === 0 ? "Today's event" : 'day' + (daysUntil !== 1 ? 's' : '') + ' until next ' + typeLabel) + '</strong><br>' +
+      formatDate(nextEvent.date) + (nextEvent.state !== 'ALL' ? ' — ' + nextEvent.name + ' (' + nextEvent.state + ')' : '') + '</div>';
+  }
+
+  var MONTH_NAMES = {
+    '01': 'January', '02': 'February', '03': 'March', '04': 'April',
+    '05': 'May', '06': 'June', '07': 'July', '08': 'August',
+    '09': 'September', '10': 'October', '11': 'November', '12': 'December'
+  };
+
+  function render() {
+    var container = document.getElementById('timeline');
+    container.innerHTML = '';
+
+    var filtered = events.filter(function(e) {
+      return activeFilter === 'all' || e.type === activeFilter;
+    });
+
+    // Group by date+type
+    var groups = [];
+    var groupMap = {};
+    for (var i = 0; i < filtered.length; i++) {
+      var e = filtered[i];
+      var key = e.date + '_' + e.type + '_' + (e.detail && e.type === 'filing' ? e.detail : '');
+      if (!groupMap[key]) {
+        groupMap[key] = { date: e.date, type: e.type, items: [], detail: e.type === 'filing' ? e.detail : null };
+        groups.push(groupMap[key]);
+      }
+      groupMap[key].items.push(e);
+    }
+
+    var lastMonth = '';
+    var todayInserted = false;
+
+    for (var g = 0; g < groups.length; g++) {
+      var group = groups[g];
+      var monthKey = group.date.substring(0, 7);
+      var isPast = group.date < today;
+
+      // Insert today marker
+      if (!todayInserted && group.date >= today) {
+        todayInserted = true;
+        var marker = document.createElement('div');
+        marker.className = 'tl-today-marker';
+        marker.innerHTML = '<div class="tl-today-line"></div><span class="tl-today-label">Today — ' + formatDate(today) + '</span>';
+        container.appendChild(marker);
+      }
+
+      // Month header
+      if (monthKey !== lastMonth) {
+        lastMonth = monthKey;
+        var mDiv = document.createElement('div');
+        mDiv.className = 'tl-month';
+        var yr = monthKey.split('-')[0];
+        var mo = monthKey.split('-')[1];
+        mDiv.innerHTML = '<div class="tl-month-dot"></div><div class="tl-month-label">' + MONTH_NAMES[mo] + ' ' + yr + '</div>';
+        container.appendChild(mDiv);
+      }
+
+      // Event card
+      var card = document.createElement('div');
+      var isGeneral = group.type === 'general';
+      card.className = 'tl-event ' + group.type + (isPast ? ' past' : '') + (isGeneral ? ' tl-general-card' : '');
+
+      var typeLabel = group.type === 'filing' ? 'Filing' :
+                      group.type === 'primary' ? 'Primary' :
+                      group.type === 'special' ? 'Special' : 'General Election';
+      if (group.detail === 'Statewide') typeLabel = 'Filing (SW)';
+      if (group.detail === 'Legislative') typeLabel = 'Filing (Leg)';
+
+      var countText = isGeneral ? '' : group.items.length + ' state' + (group.items.length !== 1 ? 's' : '');
+      var statusHtml = '';
+      if (isPast && !isGeneral) statusHtml = '<span class="tl-status done">Passed</span>';
+      else if (!isPast && !isGeneral) statusHtml = '<span class="tl-status upcoming">Upcoming</span>';
+
+      var header = '<div class="tl-event-header">' +
+        '<span class="tl-date">' + formatDateShort(group.date) + '</span>' +
+        '<span class="tl-type ' + group.type + '">' + typeLabel + '</span>' +
+        statusHtml +
+        '<span class="tl-count">' + countText + '</span>' +
+        '</div>';
+
+      var statesHtml = '<div class="tl-states">';
+      if (isGeneral) {
+        statesHtml += '<span style="font-size:13px;opacity:0.85">' + group.items[0].detail + '</span>';
+      } else {
+        for (var s = 0; s < group.items.length; s++) {
+          var item = group.items[s];
+          var link = item.type === 'special' && item.chamber ?
+            'district.html?st=' + item.state + '&chamber=' + encodeURIComponent(item.chamber) + '&district=' + encodeURIComponent(item.district) :
+            'state.html?st=' + item.state;
+          var label = item.type === 'special' && item.detail ? item.state + ': ' + item.detail : item.state;
+          statesHtml += '<a href="' + link + '" class="tl-state ' + group.type + '">' + label + '</a>';
+        }
+      }
+      statesHtml += '</div>';
+
+      card.innerHTML = header + statesHtml;
+      container.appendChild(card);
+    }
+
+    // Insert today marker at end if all events are past
+    if (!todayInserted) {
+      var marker2 = document.createElement('div');
+      marker2.className = 'tl-today-marker';
+      marker2.innerHTML = '<div class="tl-today-line"></div><span class="tl-today-label">Today — ' + formatDate(today) + '</span>';
+      container.appendChild(marker2);
+    }
+
+    if (filtered.length === 0) {
+      container.innerHTML = '<p style="color:var(--ms-text-light);padding:20px 0">No events match this filter.</p>';
+    }
+  }
+
+  render();
+
+  // Filter clicks
+  document.querySelector('.tl-filters').addEventListener('click', function(ev) {
+    var btn = ev.target.closest('.tl-filter');
+    if (!btn) return;
+    document.querySelectorAll('.tl-filter').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    activeFilter = btn.dataset.f;
+    render();
+  });
+
+})();
+</script>
+</body>
+</html>
