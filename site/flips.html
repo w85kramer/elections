@@ -159,8 +159,47 @@
     color: var(--ms-text-light); font-size: 14px;
   }
 
+  /* Net shift panel */
+  .net-shift {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 12px; margin-bottom: 24px;
+  }
+  .net-shift-card {
+    background: #f8fafc; border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius); padding: 12px 14px;
+  }
+  .net-shift-title {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px; color: var(--ms-text-light); margin-bottom: 6px;
+  }
+  .shift-row {
+    display: flex; align-items: center; gap: 8px; margin-bottom: 4px;
+  }
+  .shift-label {
+    font-size: 11px; font-weight: 600; width: 18px; text-align: right;
+  }
+  .shift-bar-wrap {
+    flex: 1; height: 16px; background: #e5e7eb; border-radius: 8px;
+    overflow: hidden;
+  }
+  .shift-bar {
+    height: 100%; border-radius: 8px; transition: width 0.4s ease;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 700; color: white; min-width: 22px;
+  }
+  .shift-bar-d { background: var(--ms-dem-blue); }
+  .shift-bar-r { background: var(--ms-rep-red); }
+  .net-result {
+    font-size: 13px; font-weight: 700; margin-top: 4px;
+    padding-top: 4px; border-top: 1px solid var(--ms-border);
+  }
+  .net-d { color: var(--ms-dem-blue); }
+  .net-r { color: var(--ms-rep-red); }
+  .net-even { color: var(--ms-text-light); }
+
   @media (max-width: 768px) {
     .flip-stats { grid-template-columns: repeat(2, 1fr); }
+    .net-shift { grid-template-columns: 1fr; }
     .data-table td, .data-table th { padding: 6px 8px; font-size: 12px; }
     .tab-btn { padding: 8px 12px; font-size: 13px; }
   }
@@ -182,6 +221,9 @@
     <div class="card stat-card"><div class="stat-number" id="stat-switches" style="color:#5b21b6">—</div><div class="stat-label">Party Switches</div></div>
     <div class="card stat-card"><div class="stat-number" id="stat-close" style="color:#b45309">—</div><div class="stat-label">Close Races</div></div>
   </div>
+
+  <!-- Net shift summary -->
+  <div class="net-shift" id="net-shift"></div>
 
   <!-- Cycle selector -->
   <div class="cycle-bar" id="cycle-bar"></div>
@@ -426,6 +468,111 @@
     document.getElementById('count-defeats').textContent = numberWithCommas(defeatsF.length);
     document.getElementById('count-switches').textContent = numberWithCommas(switchesF.length);
     document.getElementById('count-close').textContent = numberWithCommas(closeF.length);
+
+    updateNetShift(flipsF, defeatsF, switchesF, closeF);
+  }
+
+  function updateNetShift(flipsF, defeatsF, switchesF, closeF) {
+    var panel = document.getElementById('net-shift');
+    var cycleLabel = activeCycle === 'all' ? 'All Years' : activeCycle;
+    var html = '';
+
+    // --- Seat Flips breakdown ---
+    var toD = 0, toR = 0, toOther = 0;
+    flipsF.forEach(function(f) {
+      if (f.to_party === 'D') toD++;
+      else if (f.to_party === 'R') toR++;
+      else toOther++;
+    });
+    var flipTotal = toD + toR + toOther;
+    if (flipTotal > 0) {
+      var net = toD - toR;
+      var netText, netClass;
+      if (net > 0) { netText = 'Net D +' + net; netClass = 'net-d'; }
+      else if (net < 0) { netText = 'Net R +' + Math.abs(net); netClass = 'net-r'; }
+      else { netText = 'Even'; netClass = 'net-even'; }
+
+      html += '<div class="net-shift-card">';
+      html += '<div class="net-shift-title">Seat Flips</div>';
+      html += buildShiftBars(toD, toR, toOther, flipTotal);
+      html += '<div class="net-result ' + netClass + '">' + netText + '</div>';
+      html += '</div>';
+    }
+
+    // --- Incumbent Defeats breakdown ---
+    var defD = 0, defR = 0, defOther = 0;
+    defeatsF.forEach(function(d) {
+      if (d.inc_party === 'D') defD++;
+      else if (d.inc_party === 'R') defR++;
+      else defOther++;
+    });
+    var defTotal = defD + defR + defOther;
+    if (defTotal > 0) {
+      var moreR = defR > defD;
+      html += '<div class="net-shift-card">';
+      html += '<div class="net-shift-title">Incumbent Defeats</div>';
+      html += buildShiftBars(defD, defR, defOther, defTotal);
+      html += '<div class="net-result ' + (defD === defR ? 'net-even' : moreR ? 'net-r' : 'net-d') + '">';
+      html += defD + ' D, ' + defR + ' R lost';
+      if (defOther > 0) html += ', ' + defOther + ' other';
+      html += '</div>';
+      html += '</div>';
+    }
+
+    // --- Party Switches breakdown ---
+    var swToD = 0, swToR = 0, swToOther = 0;
+    switchesF.forEach(function(s) {
+      if (s.to_party === 'D') swToD++;
+      else if (s.to_party === 'R') swToR++;
+      else swToOther++;
+    });
+    var swTotal = swToD + swToR + swToOther;
+    if (swTotal > 0) {
+      var swNet = swToD - swToR;
+      var swNetText, swNetClass;
+      if (swNet > 0) { swNetText = 'Net D +' + swNet; swNetClass = 'net-d'; }
+      else if (swNet < 0) { swNetText = 'Net R +' + Math.abs(swNet); swNetClass = 'net-r'; }
+      else { swNetText = 'Even'; swNetClass = 'net-even'; }
+
+      html += '<div class="net-shift-card">';
+      html += '<div class="net-shift-title">Party Switches</div>';
+      html += buildShiftBars(swToD, swToR, swToOther, swTotal);
+      html += '<div class="net-result ' + swNetClass + '">' + swNetText + '</div>';
+      html += '</div>';
+    }
+
+    if (!html) {
+      panel.style.display = 'none';
+    } else {
+      panel.style.display = '';
+      panel.innerHTML = html;
+    }
+  }
+
+  function buildShiftBars(countD, countR, countOther, total) {
+    var pctD = Math.round(countD / total * 100);
+    var pctR = Math.round(countR / total * 100);
+    var pctO = 100 - pctD - pctR;
+    var html = '';
+
+    html += '<div class="shift-row">';
+    html += '<div class="shift-label" style="color:var(--ms-dem-blue)">D</div>';
+    html += '<div class="shift-bar-wrap"><div class="shift-bar shift-bar-d" style="width:' + Math.max(pctD, 4) + '%">' + countD + '</div></div>';
+    html += '</div>';
+
+    html += '<div class="shift-row">';
+    html += '<div class="shift-label" style="color:var(--ms-rep-red)">R</div>';
+    html += '<div class="shift-bar-wrap"><div class="shift-bar shift-bar-r" style="width:' + Math.max(pctR, 4) + '%">' + countR + '</div></div>';
+    html += '</div>';
+
+    if (countOther > 0) {
+      html += '<div class="shift-row">';
+      html += '<div class="shift-label" style="color:#6b7280">O</div>';
+      html += '<div class="shift-bar-wrap"><div class="shift-bar" style="width:' + Math.max(pctO, 4) + '%;background:#6b7280">' + countOther + '</div></div>';
+      html += '</div>';
+    }
+
+    return html;
   }
 
   function cycleFilter(item) {
