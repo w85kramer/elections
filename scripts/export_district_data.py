@@ -501,38 +501,60 @@ def export_all_districts(dry_run=False, single_state=None):
         ORDER BY st.abbreviation, ps.seat_id, ps.switch_year
     """
 
+    # Query 13: State redistricting cycles
+    q_redistricting = f"""
+        SELECT
+            st.abbreviation as state,
+            sr.chamber,
+            sr.effective_year
+        FROM state_redistricting sr
+        JOIN states st ON sr.state_id = st.id
+        WHERE 1=1
+          {state_filter}
+        ORDER BY st.abbreviation, sr.chamber, sr.effective_year
+    """
+
     if dry_run:
-        print('  Would run 12 queries and write district JSON files')
+        print('  Would run 13 queries and write district JSON files')
         print(f'\n  Sample query (districts):\n{q_districts[:300]}...')
         return
 
-    print('  Running 12 bulk queries...')
+    print('  Running 13 bulk queries...')
     districts_data = run_sql(q_districts)
-    print(f'    1/12 districts+seats: {len(districts_data)} rows')
+    print(f'    1/13 districts+seats: {len(districts_data)} rows')
     elections_data = run_sql(q_elections)
-    print(f'    2/12 elections: {len(elections_data)} rows')
+    print(f'    2/13 elections: {len(elections_data)} rows')
     candidacies_data = run_sql(q_candidacies)
-    print(f'    3/12 candidacies: {len(candidacies_data)} rows')
+    print(f'    3/13 candidacies: {len(candidacies_data)} rows')
     terms_data = run_sql(q_terms)
-    print(f'    4/12 seat_terms: {len(terms_data)} rows')
+    print(f'    4/13 seat_terms: {len(terms_data)} rows')
     states_data = run_sql(q_states)
-    print(f'    5/12 states: {len(states_data)} rows')
+    print(f'    5/13 states: {len(states_data)} rows')
     forecasts_data = run_sql(q_forecasts)
-    print(f'    6/12 forecasts: {len(forecasts_data)} rows')
+    print(f'    6/13 forecasts: {len(forecasts_data)} rows')
     switches_data = run_sql(q_switches)
-    print(f'    7/12 party_switches: {len(switches_data)} rows')
+    print(f'    7/13 party_switches: {len(switches_data)} rows')
     old_districts_data = run_sql(q_old_districts)
-    print(f'    8/12 old-era districts: {len(old_districts_data)} rows')
+    print(f'    8/13 old-era districts: {len(old_districts_data)} rows')
     old_elections_data = run_sql(q_old_elections)
-    print(f'    9/12 old-era elections: {len(old_elections_data)} rows')
+    print(f'    9/13 old-era elections: {len(old_elections_data)} rows')
     old_candidacies_data = run_sql(q_old_candidacies)
-    print(f'    10/12 old-era candidacies: {len(old_candidacies_data)} rows')
+    print(f'    10/13 old-era candidacies: {len(old_candidacies_data)} rows')
     old_terms_data = run_sql(q_old_terms)
-    print(f'    11/12 old-era seat_terms: {len(old_terms_data)} rows')
+    print(f'    11/13 old-era seat_terms: {len(old_terms_data)} rows')
     old_switches_data = run_sql(q_old_switches)
-    print(f'    12/12 old-era party_switches: {len(old_switches_data)} rows')
+    print(f'    12/13 old-era party_switches: {len(old_switches_data)} rows')
+    redistricting_data = run_sql(q_redistricting)
+    print(f'    13/13 redistricting cycles: {len(redistricting_data)} rows')
 
     # --- Index data ---
+
+    # Redistricting cycles indexed by state → {chamber: [years]}
+    redistricting_by_state = {}
+    for r in redistricting_data:
+        state = r['state']
+        redistricting_by_state.setdefault(state, {})
+        redistricting_by_state[state].setdefault(r['chamber'], []).append(r['effective_year'])
 
     # State info lookup
     states_info = {r['abbreviation']: r for r in states_data}
@@ -1164,6 +1186,7 @@ def export_all_districts(dry_run=False, single_state=None):
             'has_runoffs': si.get('has_runoffs', False),
             'senate_term_years': si.get('senate_term_years'),
             'house_term_years': si.get('house_term_years'),
+            'redistricting_cycles': redistricting_by_state.get(state, {}),
             'districts': district_list,
         }
 

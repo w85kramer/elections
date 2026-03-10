@@ -1110,16 +1110,9 @@
     for (const te of (seat.term_events || [])) {
       events.push({ type: 'term_event', year: te.year, date: te.date || '', data: te });
     }
-    // Inject redistricting events
-    // Known census redistricting years for legislative districts
-    const redistrictYears = [];
+    // Inject redistricting events from state-level redistricting data
+    const redistrictYears = (data.redistricting_cycles || {})[chamber] || [];
     const ry = district.redistricting_year;
-    if (ry) redistrictYears.push(ry);
-    // Also inject 2012 redistricting (post-2010 census) if we have elections spanning it
-    // and it's not already the primary redistricting year
-    if (ry !== 2012 && (chamber === 'House' || chamber === 'Senate')) {
-      redistrictYears.push(2012);
-    }
 
     const elecYears = elections.map(e => e.year);
     for (const rYear of redistrictYears) {
@@ -1188,13 +1181,9 @@
       }
     }
 
-    // Inject redistricting events
-    const redistrictYears2 = [];
+    // Inject redistricting events from state-level redistricting data
+    const redistrictYears2 = (data.redistricting_cycles || {})[chamber] || [];
     const ry2 = district.redistricting_year;
-    if (ry2) redistrictYears2.push(ry2);
-    if (ry2 !== 2012 && (chamber === 'House' || chamber === 'Senate')) {
-      redistrictYears2.push(2012);
-    }
 
     const elecYears2 = events.filter(ev => ev.type === 'election').map(ev => ev.year);
     for (const rYear of redistrictYears2) {
@@ -1393,8 +1382,8 @@
     }
 
     // Redistricting vertical lines
-    const chartRedistrictYears = [district.redistricting_year, 2012].filter(Boolean);
-    for (const ry of [...new Set(chartRedistrictYears)]) {
+    const chartRedistrictYears = (data.redistricting_cycles || {})[district.chamber] || [];
+    for (const ry of chartRedistrictYears) {
       // Show if there are elections on both sides of this redistricting year
       const hasElecBefore = years.some(y => y <= ry);
       const hasElecAfter = years.some(y => y > ry);

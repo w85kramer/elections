@@ -383,7 +383,23 @@ CREATE INDEX idx_trifectas_state_year ON trifectas(state_id, year);
 CREATE INDEX idx_trifectas_year ON trifectas(year);
 
 -- ============================================================
--- 12. DASHBOARD VIEW (auto-generated, read-only)
+-- 13. STATE REDISTRICTING (per-state, per-chamber redistricting history)
+-- ============================================================
+CREATE TABLE state_redistricting (
+    id              SERIAL PRIMARY KEY,
+    state_id        INTEGER NOT NULL REFERENCES states(id) ON DELETE CASCADE,
+    chamber         TEXT NOT NULL,
+    effective_year  INTEGER NOT NULL,
+    census_year     INTEGER,
+    is_mid_decade   BOOLEAN DEFAULT FALSE,
+    notes           TEXT,
+    UNIQUE(state_id, chamber, effective_year)
+);
+
+CREATE INDEX idx_state_redistricting_state ON state_redistricting(state_id);
+
+-- ============================================================
+-- 14. DASHBOARD VIEW (auto-generated, read-only)
 -- ============================================================
 CREATE OR REPLACE VIEW dashboard_view AS
 
@@ -467,6 +483,7 @@ ALTER TABLE forecasts ENABLE ROW LEVEL SECURITY;
 ALTER TABLE seat_terms ENABLE ROW LEVEL SECURITY;
 ALTER TABLE chamber_control ENABLE ROW LEVEL SECURITY;
 ALTER TABLE party_switches ENABLE ROW LEVEL SECURITY;
+ALTER TABLE state_redistricting ENABLE ROW LEVEL SECURITY;
 
 -- Create permissive policies for authenticated access
 -- (adjust these based on your actual auth needs)
@@ -481,6 +498,7 @@ CREATE POLICY "Allow full access" ON forecasts FOR ALL USING (true) WITH CHECK (
 CREATE POLICY "Allow full access" ON seat_terms FOR ALL USING (true) WITH CHECK (true);
 CREATE POLICY "Allow full access" ON chamber_control FOR ALL USING (true) WITH CHECK (true);
 CREATE POLICY "Allow full access" ON party_switches FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Allow full access" ON state_redistricting FOR ALL USING (true) WITH CHECK (true);
 
 -- ============================================================
 -- TRIGGERS
