@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics (multistate.us) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V5WR874G5K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V5WR874G5K', {
+    cookie_domain: 'multistate.us',
+    cookie_flags: 'SameSite=None;Secure'
+  });
+</script>
+<meta charset="UTF-8">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flips &amp; Upsets | MultiState Elections</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<style>
+  .page-header { margin-bottom: 24px; }
+  .page-header h1 { font-weight: 800; font-size: 32px; color: var(--ms-navy); margin-bottom: 4px; }
+  .page-header .subtitle { font-size: 15px; color: var(--ms-text-light); }
+
+  /* Stat cards row */
+  .flip-stats {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 12px; margin-bottom: 28px;
+  }
+
+  /* Cycle comparison bar */
+  .cycle-bar {
+    display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;
+  }
+  .cycle-btn {
+    padding: 6px 14px; border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius); background: white;
+    font-size: 13px; font-weight: 600; cursor: pointer;
+    color: var(--ms-navy); font-family: 'Work Sans', sans-serif;
+    transition: all 0.15s;
+  }
+  .cycle-btn:hover { background: #f0f0f0; }
+  .cycle-btn.active { background: var(--ms-navy); color: white; border-color: var(--ms-navy); }
+
+  /* Tab navigation */
+  .tab-nav {
+    display: flex; gap: 0; border-bottom: 2px solid var(--ms-border);
+    margin-bottom: 20px;
+  }
+  .tab-btn {
+    padding: 10px 20px; border: none; background: none;
+    font-size: 14px; font-weight: 600; cursor: pointer;
+    color: var(--ms-text-light); font-family: 'Work Sans', sans-serif;
+    border-bottom: 2px solid transparent; margin-bottom: -2px;
+    transition: all 0.15s;
+  }
+  .tab-btn:hover { color: var(--ms-navy); }
+  .tab-btn.active { color: var(--ms-navy); border-bottom-color: var(--ms-navy); }
+  .tab-count {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    background: #e5e7eb; color: #374151; border-radius: 10px;
+    padding: 1px 7px; margin-left: 5px;
+  }
+
+  /* Filters row */
+  .filters-bar {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    align-items: flex-end; margin-bottom: 16px;
+  }
+  .filter-group label {
+    display: block; font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--ms-text-light); margin-bottom: 4px;
+  }
+  .filter-group select, .filter-group input {
+    padding: 8px 12px; border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius); font-size: 14px;
+    font-family: 'Work Sans', sans-serif; color: var(--ms-text);
+  }
+
+  /* Data table */
+  .data-table {
+    width: 100%; border-collapse: collapse; font-size: 13px;
+  }
+  .data-table th {
+    text-align: left; padding: 10px 12px;
+    background: var(--ms-navy); color: white;
+    font-weight: 700; font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.5px; cursor: pointer; user-select: none;
+    white-space: nowrap;
+  }
+  .data-table th:hover { background: #0a4d78; }
+  .data-table td {
+    padding: 8px 12px; border-bottom: 1px solid var(--ms-border);
+  }
+  .data-table tr:hover { background: #f8fafc; }
+
+  /* Party badges */
+  .party-pill {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; text-align: center; min-width: 20px;
+  }
+  .pill-d { background: var(--ms-dem-blue); color: white; }
+  .pill-r { background: var(--ms-rep-red); color: white; }
+  .pill-other { background: #6b7280; color: white; }
+
+  /* Flip arrow */
+  .flip-arrow {
+    font-size: 14px; font-weight: 700; margin: 0 4px;
+    color: var(--ms-text-light);
+  }
+
+  /* Badge styles (matching district.html) */
+  .flip-badge {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600;
+    background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;
+  }
+  .upset-badge {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600;
+    background: #fef2f2; color: #991b1b; border: 1px solid #fecaca;
+  }
+  .close-badge {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600;
+    background: #fff7ed; color: #b45309; border: 1px solid #fed7aa;
+  }
+  .switch-badge {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600;
+    background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd;
+  }
+
+  /* Results count + pagination */
+  .results-info {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px; color: var(--ms-text-light); margin-bottom: 8px;
+  }
+  .table-footer {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 0; font-size: 13px; color: var(--ms-text-light);
+  }
+  .page-btn {
+    padding: 6px 14px; border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius); background: white;
+    font-size: 13px; font-weight: 600; cursor: pointer;
+    color: var(--ms-navy); font-family: 'Work Sans', sans-serif;
+  }
+  .page-btn:hover { background: #f0f0f0; }
+  .page-btn:disabled { opacity: 0.4; cursor: default; }
+  .page-btns { display: flex; gap: 6px; }
+
+  /* Empty state */
+  .empty-state {
+    text-align: center; padding: 40px 20px;
+    color: var(--ms-text-light); font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .flip-stats { grid-template-columns: repeat(2, 1fr); }
+    .data-table td, .data-table th { padding: 6px 8px; font-size: 12px; }
+    .tab-btn { padding: 8px 12px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div id="global-nav"></div>
+<div class="page-container">
+
+  <div class="page-header">
+    <h1>Flips &amp; Upsets</h1>
+    <p class="subtitle">Party flips, incumbent defeats, party switches, and close races across all 50 states</p>
+  </div>
+
+  <!-- Stat cards -->
+  <div class="flip-stats">
+    <div class="card stat-card"><div class="stat-number" id="stat-flips" style="color:#065f46">—</div><div class="stat-label">Seat Flips</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-defeats" style="color:#991b1b">—</div><div class="stat-label">Incumbent Defeats</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-switches" style="color:#5b21b6">—</div><div class="stat-label">Party Switches</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-close" style="color:#b45309">—</div><div class="stat-label">Close Races</div></div>
+  </div>
+
+  <!-- Cycle selector -->
+  <div class="cycle-bar" id="cycle-bar"></div>
+
+  <!-- Tab nav -->
+  <div class="tab-nav" id="tab-nav">
+    <button class="tab-btn active" data-tab="flips">Seat Flips <span class="tab-count" id="count-flips"></span></button>
+    <button class="tab-btn" data-tab="defeats">Incumbent Defeats <span class="tab-count" id="count-defeats"></span></button>
+    <button class="tab-btn" data-tab="switches">Party Switches <span class="tab-count" id="count-switches"></span></button>
+    <button class="tab-btn" data-tab="close">Close Races <span class="tab-count" id="count-close"></span></button>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters-bar">
+    <div class="filter-group">
+      <label>State</label>
+      <select id="filter-state"><option value="">All States</option></select>
+    </div>
+    <div class="filter-group">
+      <label>Chamber</label>
+      <select id="filter-chamber">
+        <option value="">All Chambers</option>
+        <option value="House">House</option>
+        <option value="Senate">Senate</option>
+        <option value="Statewide">Statewide</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Direction</label>
+      <select id="filter-direction">
+        <option value="">All</option>
+        <option value="D→R">D → R</option>
+        <option value="R→D">R → D</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Results info -->
+  <div class="results-info"><span id="results-count"></span></div>
+
+  <!-- Table -->
+  <div id="table-wrap">
+    <table class="data-table" id="data-table">
+      <thead id="table-head"></thead>
+      <tbody id="table-body"></tbody>
+    </table>
+    <div class="empty-state" id="empty-state" style="display:none">No results found for this filter combination.</div>
+  </div>
+
+  <div class="table-footer">
+    <div id="page-info"></div>
+    <div class="page-btns">
+      <button class="page-btn" id="btn-prev" disabled>&larr; Previous</button>
+      <button class="page-btn" id="btn-next">Next &rarr;</button>
+    </div>
+  </div>
+
+</div>
+
+<div id="global-footer"></div>
+
+<script src="js/nav.js"></script>
+<script src="js/common.js"></script>
+<script>
+(async function() {
+  var data = await loadJSON('data/flips_summary.json');
+  var activeTab = 'flips';
+  var activeCycle = 'all';
+  var PAGE_SIZE = 50;
+  var currentPage = 0;
+
+  // Available cycles (election years)
+  var cycleYears = {};
+  data.flips.forEach(function(f) { cycleYears[f.year] = true; });
+  data.incumbent_defeats.forEach(function(d) { cycleYears[d.year] = true; });
+  data.close_races.forEach(function(c) { cycleYears[c.year] = true; });
+  data.party_switches.forEach(function(p) { if (p.year) cycleYears[p.year] = true; });
+
+  var years = Object.keys(cycleYears).map(Number).sort().reverse();
+  // Group into major election cycles
+  var majorCycles = years.filter(function(y) { return y >= 2010 && y % 2 === 0; });
+
+  // Build cycle buttons
+  var cycleBar = document.getElementById('cycle-bar');
+  var allBtn = document.createElement('button');
+  allBtn.className = 'cycle-btn active';
+  allBtn.textContent = 'All Years';
+  allBtn.dataset.cycle = 'all';
+  cycleBar.appendChild(allBtn);
+  majorCycles.forEach(function(y) {
+    var btn = document.createElement('button');
+    btn.className = 'cycle-btn';
+    btn.textContent = y;
+    btn.dataset.cycle = y;
+    cycleBar.appendChild(btn);
+  });
+
+  // Populate state filter
+  var allStates = {};
+  data.flips.forEach(function(f) { allStates[f.state] = true; });
+  data.incumbent_defeats.forEach(function(d) { allStates[d.state] = true; });
+  data.party_switches.forEach(function(p) { allStates[p.state] = true; });
+  data.close_races.forEach(function(c) { allStates[c.state] = true; });
+  var stateSelect = document.getElementById('filter-state');
+  Object.keys(allStates).sort().forEach(function(st) {
+    var opt = document.createElement('option');
+    opt.value = st; opt.textContent = st;
+    stateSelect.appendChild(opt);
+  });
+
+  function partyPill(p) {
+    var cls = p === 'D' ? 'pill-d' : p === 'R' ? 'pill-r' : 'pill-other';
+    return '<span class="party-pill ' + cls + '">' + (p || '?') + '</span>';
+  }
+
+  function getFiltered() {
+    var state = document.getElementById('filter-state').value;
+    var chamber = document.getElementById('filter-chamber').value;
+    var direction = document.getElementById('filter-direction').value;
+
+    var list;
+    if (activeTab === 'flips') list = data.flips;
+    else if (activeTab === 'defeats') list = data.incumbent_defeats;
+    else if (activeTab === 'switches') list = data.party_switches;
+    else list = data.close_races;
+
+    return list.filter(function(item) {
+      // Cycle filter
+      if (activeCycle !== 'all') {
+        var cy = parseInt(activeCycle);
+        // Include the cycle year and the odd year before it (special elections)
+        if (item.year !== cy && item.year !== cy - 1) return false;
+      }
+      if (state && item.state !== state) return false;
+      if (chamber && item.chamber !== chamber) return false;
+      if (direction) {
+        var dir = (item.from_party || item.from) + '→' + (item.to_party || item.to);
+        if (dir !== direction) return false;
+      }
+      return true;
+    });
+  }
+
+  function renderHeaders() {
+    var head = document.getElementById('table-head');
+    var html = '<tr>';
+    if (activeTab === 'flips') {
+      html += '<th>Year</th><th>State</th><th>Chamber</th><th>District</th><th>Flip</th><th>Winner</th><th>Type</th><th>Margin</th>';
+    } else if (activeTab === 'defeats') {
+      html += '<th>Year</th><th>State</th><th>Chamber</th><th>District</th><th>Incumbent</th><th>Defeated By</th><th>Primary</th>';
+    } else if (activeTab === 'switches') {
+      html += '<th>Year</th><th>State</th><th>Chamber</th><th>District</th><th>Name</th><th>Switch</th>';
+    } else {
+      html += '<th>Year</th><th>State</th><th>Chamber</th><th>District</th><th>Winner</th><th>Runner-up</th><th>Margin</th><th>Votes</th>';
+    }
+    html += '</tr>';
+    head.innerHTML = html;
+  }
+
+  function renderTable() {
+    var filtered = getFiltered();
+    var start = currentPage * PAGE_SIZE;
+    var end = Math.min(start + PAGE_SIZE, filtered.length);
+    var tbody = document.getElementById('table-body');
+    var html = '';
+
+    document.getElementById('empty-state').style.display = filtered.length === 0 ? 'block' : 'none';
+    document.getElementById('data-table').style.display = filtered.length === 0 ? 'none' : '';
+
+    for (var i = start; i < end; i++) {
+      var item = filtered[i];
+      html += '<tr>';
+
+      if (activeTab === 'flips') {
+        var distLink = item.chamber === 'Statewide' ?
+          'state.html?st=' + item.state :
+          'district.html?st=' + item.state + '&chamber=' + encodeURIComponent(item.chamber) + '&district=' + encodeURIComponent(item.district);
+        html += '<td>' + item.year + '</td>';
+        html += '<td>' + item.state + '</td>';
+        html += '<td>' + item.chamber + '</td>';
+        html += '<td><a href="' + distLink + '">' + (item.district || '—') + '</a></td>';
+        html += '<td>' + partyPill(item.from_party) + '<span class="flip-arrow">→</span>' + partyPill(item.to_party) + '</td>';
+        html += '<td>' + item.winner + '</td>';
+        html += '<td>' + (item.is_open ? '<span class="flip-badge">Open Seat</span>' : 'Incumbent Lost') + '</td>';
+        html += '<td>' + (item.margin_pct != null ? item.margin_pct + '%' : '—') + '</td>';
+      } else if (activeTab === 'defeats') {
+        var distLink2 = item.chamber === 'Statewide' ?
+          'state.html?st=' + item.state :
+          'district.html?st=' + item.state + '&chamber=' + encodeURIComponent(item.chamber) + '&district=' + encodeURIComponent(item.district);
+        html += '<td>' + item.year + '</td>';
+        html += '<td>' + item.state + '</td>';
+        html += '<td>' + item.chamber + '</td>';
+        html += '<td><a href="' + distLink2 + '">' + (item.district || '—') + '</a></td>';
+        html += '<td>' + partyPill(item.inc_party) + ' ' + item.incumbent + '</td>';
+        html += '<td>' + item.challenger + '</td>';
+        html += '<td>' + item.type.replace('Primary_', '').replace('Primary', 'Open') + '</td>';
+      } else if (activeTab === 'switches') {
+        html += '<td>' + (item.year || '—') + '</td>';
+        html += '<td>' + item.state + '</td>';
+        html += '<td>' + (item.chamber || '—') + '</td>';
+        html += '<td>' + (item.district || '—') + '</td>';
+        html += '<td>' + item.name + '</td>';
+        html += '<td>' + partyPill(item.from_party) + '<span class="flip-arrow">→</span>' + partyPill(item.to_party) + '</td>';
+      } else {
+        var distLink3 = item.chamber === 'Statewide' ?
+          'state.html?st=' + item.state :
+          'district.html?st=' + item.state + '&chamber=' + encodeURIComponent(item.chamber) + '&district=' + encodeURIComponent(item.district);
+        html += '<td>' + item.year + '</td>';
+        html += '<td>' + item.state + '</td>';
+        html += '<td>' + item.chamber + '</td>';
+        html += '<td><a href="' + distLink3 + '">' + (item.district || '—') + '</a></td>';
+        html += '<td>' + partyPill(item.winner_party) + ' ' + item.winner + '</td>';
+        html += '<td>' + partyPill(item.runner_up_party) + ' ' + item.runner_up + '</td>';
+        html += '<td>' + item.margin_pct + '% <span style="color:var(--ms-text-light);font-size:11px">(' + numberWithCommas(item.margin) + ' votes)</span></td>';
+        html += '<td>' + numberWithCommas(item.total_votes) + '</td>';
+      }
+      html += '</tr>';
+    }
+    tbody.innerHTML = html;
+
+    document.getElementById('results-count').textContent =
+      numberWithCommas(filtered.length) + ' result' + (filtered.length !== 1 ? 's' : '');
+    document.getElementById('page-info').textContent =
+      filtered.length > 0 ? 'Showing ' + (start + 1) + '–' + end + ' of ' + numberWithCommas(filtered.length) : '';
+    document.getElementById('btn-prev').disabled = currentPage === 0;
+    document.getElementById('btn-next').disabled = end >= filtered.length;
+  }
+
+  function updateStats() {
+    // Stats reflect active cycle
+    var flipsF = data.flips.filter(cycleFilter);
+    var defeatsF = data.incumbent_defeats.filter(cycleFilter);
+    var switchesF = data.party_switches.filter(cycleFilter);
+    var closeF = data.close_races.filter(cycleFilter);
+
+    document.getElementById('stat-flips').textContent = numberWithCommas(flipsF.length);
+    document.getElementById('stat-defeats').textContent = numberWithCommas(defeatsF.length);
+    document.getElementById('stat-switches').textContent = numberWithCommas(switchesF.length);
+    document.getElementById('stat-close').textContent = numberWithCommas(closeF.length);
+
+    document.getElementById('count-flips').textContent = numberWithCommas(flipsF.length);
+    document.getElementById('count-defeats').textContent = numberWithCommas(defeatsF.length);
+    document.getElementById('count-switches').textContent = numberWithCommas(switchesF.length);
+    document.getElementById('count-close').textContent = numberWithCommas(closeF.length);
+  }
+
+  function cycleFilter(item) {
+    if (activeCycle === 'all') return true;
+    var cy = parseInt(activeCycle);
+    return item.year === cy || item.year === cy - 1;
+  }
+
+  function refresh() {
+    currentPage = 0;
+    updateStats();
+    renderHeaders();
+    renderTable();
+  }
+
+  // Tab clicks
+  document.getElementById('tab-nav').addEventListener('click', function(ev) {
+    var btn = ev.target.closest('.tab-btn');
+    if (!btn) return;
+    document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    activeTab = btn.dataset.tab;
+    // Show/hide direction filter (only relevant for flips)
+    document.getElementById('filter-direction').parentElement.style.display =
+      activeTab === 'flips' ? '' : 'none';
+    refresh();
+  });
+
+  // Cycle clicks
+  cycleBar.addEventListener('click', function(ev) {
+    var btn = ev.target.closest('.cycle-btn');
+    if (!btn) return;
+    document.querySelectorAll('.cycle-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    activeCycle = btn.dataset.cycle;
+    refresh();
+  });
+
+  // Filter events
+  document.getElementById('filter-state').addEventListener('change', function() { currentPage = 0; renderTable(); });
+  document.getElementById('filter-chamber').addEventListener('change', function() { currentPage = 0; renderTable(); });
+  document.getElementById('filter-direction').addEventListener('change', function() { currentPage = 0; renderTable(); });
+
+  // Pagination
+  document.getElementById('btn-prev').addEventListener('click', function() {
+    if (currentPage > 0) { currentPage--; renderTable(); window.scrollTo(0, 0); }
+  });
+  document.getElementById('btn-next').addEventListener('click', function() {
+    var filtered = getFiltered();
+    if ((currentPage + 1) * PAGE_SIZE < filtered.length) { currentPage++; renderTable(); window.scrollTo(0, 0); }
+  });
+
+  // Initial render
+  refresh();
+})();
+</script>
+</body>
+</html>
