@@ -42,6 +42,10 @@ for fp in sorted(glob.glob(os.path.join(data_dir, '*.json'))):
         # Caucus: who they govern with (for coloring/filtering)
         caucus = co.get('caucus') or cand.get('caucus') or party
 
+        # NE legislators are officially nonpartisan regardless of source data
+        if st == 'NE' and office == 'State Legislature':
+            party = 'NP'
+
         officeholders.append({
             'id': cand.get('id', 0),
             'name': cand['full_name'],
