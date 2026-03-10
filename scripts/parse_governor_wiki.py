@@ -42,25 +42,39 @@ ELECTORAL_HISTORY_STATES = {'AK', 'HI', 'ID', 'MT', 'NV', 'ND', 'OR', 'SD', 'WA'
 PARTY_MAP = {
     'democratic': 'D', 'democrat': 'D',
     'republican': 'R',
-    'independent': 'I',
+    'independent': 'I', 'ind': 'I', 'ind.': 'I',
     'democratic-farmer-labor': 'D', 'democratic–farmer–labor': 'D',
     'democratic- farmer-labor': 'D',  # with line break artifact
+    'dfl': 'D', 'democratic (dfl)': 'D',
     'independent-republican': 'R', 'independent- republican': 'R',
     'reform/ independence': 'Reform', 'reform/independence': 'Reform',
-    'independence': 'Reform',
-    'alaskan independence': 'AIP',
+    'independence': 'Reform', 'reform': 'Reform',
+    'alaskan independence': 'AIP', 'alaska independence': 'AIP',
     'libertarian': 'L',
     'green': 'G', 'pacific green': 'G',
     'nonpartisan': 'NP',
     'whig': 'Whig', 'know nothing': 'KN',
     'union': 'Union', 'progressive': 'Prog',
     'constitution': 'Con',
-    'socialist labor': 'SL', 'socialist workers': 'SW',
+    'socialist labor': 'SL', 'socialist workers': 'SW', 'socialist': 'Soc',
     'independent american': 'IA',
     'none of these candidates': 'NOTA',
     'democratic-npl': 'D', 'democratic–npl': 'D',
     'other': 'Other',
     'a connecticut party': 'I',
+    'mountain': 'Mtn',
+    'prohibition': 'Pro',
+    'peace and freedom': 'PFP',
+    'raza unida': 'RU',
+    'write-in': 'W/I', 'write in': 'W/I',
+    'grassroots–legalize cannabis': 'GLC', 'grassroots-legalize cannabis': 'GLC',
+    'united independent': 'UIP',
+    'compassion': 'Comp',
+    'moderate': 'Mod',
+    'natural law': 'NLP',
+    'working families': 'WFP',
+    'new alliance': 'NAP',
+    'human rights': 'HRP',
 }
 
 CAUCUS_MAP = {
@@ -133,6 +147,17 @@ def normalize_party(party_text):
     for k, v in PARTY_MAP.items():
         if k in key:
             return v
+    # Fallback substring matching for state-named parties
+    if 'democrat' in key:
+        return 'D'
+    if 'republican' in key:
+        return 'R'
+    if 'libertarian' in key:
+        return 'L'
+    if 'green' in key:
+        return 'G'
+    if 'independent' in key:
+        return 'I'
     debug(f'Unknown party: "{party_text}" (key="{key}")')
     return party_text[:10]
 
