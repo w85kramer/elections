@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-08T22:21:53.815775Z",
+  "generated_at": "2026-03-11T02:08:21.163983Z",
   "state": {
     "name": "Georgia",
     "abbr": "GA",
@@ -858,7 +858,7 @@
           "party": "D",
           "pres_margin": "+54.3",
           "next_election": 2026,
-          "candidate_id": 8571
+          "candidate_id": 74001
         },
         {
           "district": "75",
@@ -2108,7 +2108,7 @@
           "party": "R",
           "pres_margin": "-22.6",
           "next_election": 2026,
-          "candidate_id": 16830
+          "candidate_id": 16826
         },
         {
           "district": "19",
@@ -2188,7 +2188,7 @@
           "party": "D",
           "pres_margin": "+25.0",
           "next_election": 2026,
-          "candidate_id": 8435
+          "candidate_id": 25888
         },
         {
           "district": "27",
@@ -2495,15 +2495,371 @@
   "elections_2026": {
     "governor": {
       "forecast": "Tilt R",
-      "candidates": []
+      "candidates": [
+        {
+          "name": "Amanda Duffy",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Derrick L Jackson",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Geoffrey Lynn Duncan Jr",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Jason Fernando Esteves",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Keisha R Lance Bottoms",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Michael \"Mike\" Thurmond",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Olu Brown",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Brad Raffensperger",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Burt Jones",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Christopher Michael Carr",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Clark Headrick Dean",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Gregg Rodne Kirkpatrick",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Ken Yasger",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Rick Jackson",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Thomas E Williams",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        }
+      ]
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Bob Trammell, Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Herbert Adams Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tanya Miller",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert Brian Strickland",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "William Stone Cowsert",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Lt. Governor",
+        "candidates": [
+          {
+            "name": "Josh Mclaurin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nabilah Parkes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Richard N. Wright",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brenda Lynn Nelson-Porter",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "David Timothy Clark",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Gregory Robert Dolezal",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "John Flanders Kennedy",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Michael Blake Tillery",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Steve Gooch",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Takosha Misheal Swan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Adrian Consonery Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cam Thi Ashling",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dana Barrett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Penny Brown Reynolds",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Edward Tecumseh Metz",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kelvin D. King",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Robert Gabriel Sterling",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Timothy Kyle Fleming",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Vernon Jones",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Superintendent of Public Instruction",
+        "candidates": [
+          {
+            "name": "Anton Anthony",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lydia Catalina Powell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Otha Thornton",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Fred Jackson Longgrear",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Mesha Mainor",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Nelva Melissa Lee",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Randell Eugene Trammell",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Richard Lee Woods",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ],
     "legislative": [
+      {
+        "seat_label": "GA House 1",
+        "chamber": "House",
+        "district": "1",
+        "candidates": [
+          {
+            "name": "Steven Willard Disbrow",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael David Cameron",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Neal Oreum Howell",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
       {
         "seat_label": "GA House 2",
         "chamber": "House",
         "district": "2",
         "candidates": [
+          {
+            "name": "Whitney Echenique",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Christian Michael Hurd",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
           {
             "name": "Steve Tarvin",
             "party": "R",
@@ -2513,10 +2869,47 @@
         ]
       },
       {
+        "seat_label": "GA House 3",
+        "chamber": "House",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Margaret Spear",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Edward Mitchell Horner",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Nick Millwood",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "GA House 4",
         "chamber": "House",
         "district": "4",
         "candidates": [
+          {
+            "name": "Quentin Lemont Postell Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cleve Jasper Manis",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
           {
             "name": "Kasey Carpenter",
             "party": "R",
@@ -2531,6 +2924,12 @@
         "district": "5",
         "candidates": [
           {
+            "name": "Rasmus Jensen",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Matt Barton",
             "party": "R",
             "is_incumbent": true,
@@ -2543,6 +2942,12 @@
         "chamber": "House",
         "district": "6",
         "candidates": [
+          {
+            "name": "Cathy Kott",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Derrian Smith",
             "party": "D",
@@ -2558,10 +2963,29 @@
         ]
       },
       {
+        "seat_label": "GA House 7",
+        "chamber": "House",
+        "district": "7",
+        "candidates": [
+          {
+            "name": "John Wayne Chastain Jr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "GA House 8",
         "chamber": "House",
         "district": "8",
         "candidates": [
+          {
+            "name": "Nick Mitchell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Stan Gunter",
             "party": "R",
@@ -2576,7 +3000,19 @@
         "district": "9",
         "candidates": [
           {
+            "name": "Roger L Smith",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Chris Dockery",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Doug Sherrill",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2595,6 +3031,12 @@
         "district": "10",
         "candidates": [
           {
+            "name": "John Brown",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Victor Anderson",
             "party": "R",
             "is_incumbent": true,
@@ -2607,6 +3049,12 @@
         "chamber": "House",
         "district": "11",
         "candidates": [
+          {
+            "name": "Ryan Fountain",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Rick Jasperse",
             "party": "R",
@@ -2621,6 +3069,12 @@
         "district": "12",
         "candidates": [
           {
+            "name": "Holly Chaney",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Eddie Lumsden",
             "party": "R",
             "is_incumbent": true,
@@ -2634,9 +3088,21 @@
         "district": "13",
         "candidates": [
           {
+            "name": "Vincent Mendes Iii",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Katie Dempsey",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kristie Lynne Miner",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -2646,6 +3112,12 @@
         "chamber": "House",
         "district": "14",
         "candidates": [
+          {
+            "name": "Bella Bautista",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Mitchell Scoggins",
             "party": "R",
@@ -2660,6 +3132,12 @@
         "district": "15",
         "candidates": [
           {
+            "name": "Lauren Jones",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Matthew Gambill",
             "party": "R",
             "is_incumbent": true,
@@ -2673,9 +3151,84 @@
         "district": "16",
         "candidates": [
           {
+            "name": "Diana Spangler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Othel Doyle Kelley Iii",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Trey Kelley",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 17",
+        "chamber": "House",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Tamyko Green",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Martin A. Momtahan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 18",
+        "chamber": "House",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Pat Rhudy",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Frank Douglas Phillips",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tyler Paul Smith",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 19",
+        "chamber": "House",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Cynthia Starke-Jones",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph Brian Gullett",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -2686,9 +3239,153 @@
         "district": "20",
         "candidates": [
           {
+            "name": "Erik Zeil",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jason D. Tanner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Charlice Byrd",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Mark Angel Fernandez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 21",
+        "chamber": "House",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Anthony Lewis Aragues Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brad David Thomas",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 22",
+        "chamber": "House",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "James Shade",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jordan Ridley",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 23",
+        "chamber": "House",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "Rob Epstein",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "William Wesley Fincher Iii",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 24",
+        "chamber": "House",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Maureen Gault",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Carter Barrett",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 25",
+        "chamber": "House",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "Elaine Padgett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Muhammed Metin Vargonen",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mathew Philip",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Todd Jones",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 26",
+        "chamber": "House",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Meredith Greene",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lauren Wylie Mcdonald Iii",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -2698,6 +3395,18 @@
         "chamber": "House",
         "district": "27",
         "candidates": [
+          {
+            "name": "Joseph Ivey Kirkland Iv",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "B Lee Hawkins Jr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
           {
             "name": "Lee Hawkins",
             "party": "R",
@@ -2731,9 +3440,53 @@
         "district": "29",
         "candidates": [
           {
+            "name": "Scott Richard Soracco",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cody Scott Ewing",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Matt Dubnik",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 30",
+        "chamber": "House",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Braden Michael Doxey",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Derrick William Mccollum",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 31",
+        "chamber": "House",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "Chad Winfield Bingham",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -2743,6 +3496,12 @@
         "chamber": "House",
         "district": "32",
         "candidates": [
+          {
+            "name": "Rebecca Sims",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Chris Erwin",
             "party": "R",
@@ -2776,6 +3535,12 @@
         "district": "34",
         "candidates": [
           {
+            "name": "Titus Nichols",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Devan Seabaugh",
             "party": "R",
             "is_incumbent": true,
@@ -2793,6 +3558,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Elvis Julian Casely",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2802,10 +3573,35 @@
         "district": "36",
         "candidates": [
           {
+            "name": "Luc \"Luke\" Noiset",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Ginny Ehrhart",
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 37",
+        "chamber": "House",
+        "district": "37",
+        "candidates": [
+          {
+            "name": "Graham Salter Bowers",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mary Frances Williams",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
           }
         ]
       },
@@ -2841,9 +3637,53 @@
         "district": "40",
         "candidates": [
           {
+            "name": "Elisa Yvette Lassiter",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Kimberly New",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 41",
+        "chamber": "House",
+        "district": "41",
+        "candidates": [
+          {
+            "name": "Michael Smith",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 42",
+        "chamber": "House",
+        "district": "42",
+        "candidates": [
+          {
+            "name": "Carlos Vilela",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gabriel Sanchez",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Andre' Lamar Stafford",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -2862,10 +3702,35 @@
         ]
       },
       {
+        "seat_label": "GA House 44",
+        "chamber": "House",
+        "district": "44",
+        "candidates": [
+          {
+            "name": "Danielle Lyn Bell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Donald Lee Parsons",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "GA House 45",
         "chamber": "House",
         "district": "45",
         "candidates": [
+          {
+            "name": "Michelle Schreiner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Sharon Cooper",
             "party": "R",
@@ -2899,9 +3764,33 @@
         "district": "47",
         "candidates": [
           {
+            "name": "Lindsay Defranco",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brian Matthew Cochran",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jack Miller",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Jan Jones",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Pamela B Eckhardt",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -2911,6 +3800,12 @@
         "chamber": "House",
         "district": "48",
         "candidates": [
+          {
+            "name": "Adam Cleveland",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Scott Hilton",
             "party": "R",
@@ -2925,9 +3820,40 @@
         "district": "49",
         "candidates": [
           {
+            "name": "Teresa Diane Lin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Charles E Martin Jr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Chuck Martin",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 50",
+        "chamber": "House",
+        "district": "50",
+        "candidates": [
+          {
+            "name": "Michelle Hsiao Au",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Azure Duan",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -2942,6 +3868,18 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Esther Panitch",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Derek Keith Gettmann",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2970,6 +3908,12 @@
             "election_type": "Primary_D"
           },
           {
+            "name": "Tim Dorr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Deborah Silcox",
             "party": "R",
             "is_incumbent": true,
@@ -2987,6 +3931,18 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Derrick Tuff Ii",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gregory Thomas Miller",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2999,6 +3955,19 @@
             "name": "Inga Willis",
             "party": "D",
             "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 56",
+        "chamber": "House",
+        "district": "56",
+        "candidates": [
+          {
+            "name": "Bryce V Berry",
+            "party": "D",
+            "is_incumbent": false,
             "election_type": "Primary_D"
           }
         ]
@@ -3019,6 +3988,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Helmut Lucero-Domagalski Love",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3028,7 +4003,69 @@
         "district": "58",
         "candidates": [
           {
+            "name": "Demetria Henderson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Edith M. Ladipo",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kyle Lamont",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mathewos Samson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Park Cannon",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Torrey D Balam",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 59",
+        "chamber": "House",
+        "district": "59",
+        "candidates": [
+          {
+            "name": "Phillip Adeniyi Olaleye",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sully Sullivan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 60",
+        "chamber": "House",
+        "district": "60",
+        "candidates": [
+          {
+            "name": "Sheila Jones",
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
@@ -3041,10 +4078,22 @@
         "district": "61",
         "candidates": [
           {
+            "name": "Grace Mcclain",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Mekyah McQueen",
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Damita Jean Bishop",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3054,7 +4103,25 @@
         "district": "62",
         "candidates": [
           {
+            "name": "Kavon Arnold",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kenn Collier",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Matthew Rinker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Willie Horace Roseberry",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3071,6 +4138,44 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 64",
+        "chamber": "House",
+        "district": "64",
+        "candidates": [
+          {
+            "name": "Sylvia Wayfer Baker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lydia Parchue",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 65",
+        "chamber": "House",
+        "district": "65",
+        "candidates": [
+          {
+            "name": "Robert Dawson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gordon Washington Rolle Jr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3097,6 +4202,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Daniel Kelly Cook",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3105,6 +4216,12 @@
         "chamber": "House",
         "district": "68",
         "candidates": [
+          {
+            "name": "Courtney Heard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Derrick Jackson",
             "party": "D",
@@ -3119,6 +4236,12 @@
           },
           {
             "name": "Jonathan Bonner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mark Baker",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3143,9 +4266,21 @@
         "district": "69",
         "candidates": [
           {
+            "name": "Cobie Lyrix Brown",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Debra Bazemore",
             "party": "D",
             "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "September R Cooper",
+            "party": "D",
+            "is_incumbent": false,
             "election_type": "Primary_D"
           }
         ]
@@ -3155,6 +4290,18 @@
         "chamber": "House",
         "district": "70",
         "candidates": [
+          {
+            "name": "Diane Boulai",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Pierre Whatley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Melissa Stuckey",
             "party": "R",
@@ -3168,6 +4315,18 @@
         "chamber": "House",
         "district": "71",
         "candidates": [
+          {
+            "name": "Anna Higgins",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brandolynn Yarbrough",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Jutt Howard",
             "party": "R",
@@ -3201,6 +4360,12 @@
         "district": "73",
         "candidates": [
           {
+            "name": "Timothy C Wilkinson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Josh Bonner",
             "party": "R",
             "is_incumbent": true,
@@ -3214,7 +4379,26 @@
         "district": "74",
         "candidates": [
           {
+            "name": "Robert Flournoy Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Yasmin Neal",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 75",
+        "chamber": "House",
+        "district": "75",
+        "candidates": [
+          {
+            "name": "Eric Wyatt Bell Ii",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3235,6 +4419,19 @@
         ]
       },
       {
+        "seat_label": "GA House 77",
+        "chamber": "House",
+        "district": "77",
+        "candidates": [
+          {
+            "name": "Rhonda Burnough",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "GA House 78",
         "chamber": "House",
         "district": "78",
@@ -3248,10 +4445,54 @@
         ]
       },
       {
+        "seat_label": "GA House 79",
+        "chamber": "House",
+        "district": "79",
+        "candidates": [
+          {
+            "name": "Yasmin Neal",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Allen Hamrick",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 80",
+        "chamber": "House",
+        "district": "80",
+        "candidates": [
+          {
+            "name": "Long Xuan Tran",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brian Anderson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "GA House 81",
         "chamber": "House",
         "district": "81",
         "candidates": [
+          {
+            "name": "Mishael Joseph A White",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Noelle Kahaian",
             "party": "R",
@@ -3265,6 +4506,18 @@
         "chamber": "House",
         "district": "82",
         "candidates": [
+          {
+            "name": "Anthony Dickson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "William Howard Harris",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Karen Mathiak",
             "party": "R",
@@ -3283,6 +4536,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "James Trip Smith",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3291,6 +4550,12 @@
         "chamber": "House",
         "district": "84",
         "candidates": [
+          {
+            "name": "Mary Margaret Oliver",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Omari Crawford",
             "party": "D",
@@ -3309,6 +4574,25 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Tyion Annette Fields",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 86",
+        "chamber": "House",
+        "district": "86",
+        "candidates": [
+          {
+            "name": "Imani Barnes",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
           }
         ]
       },
@@ -3322,6 +4606,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Timothy J Burson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3335,6 +4625,25 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "William Park Freeman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 89",
+        "chamber": "House",
+        "district": "89",
+        "candidates": [
+          {
+            "name": "Omari Crawford",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
           }
         ]
       },
@@ -3344,9 +4653,64 @@
         "district": "90",
         "candidates": [
           {
+            "name": "Bentley Hudgins",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Howard Alan Mosby",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Leisa Stafford",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Matthew Nursey",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nicole Horn",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Saira Draper",
             "party": "D",
             "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Samantha Nicole Boston",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 91",
+        "chamber": "House",
+        "district": "91",
+        "candidates": [
+          {
+            "name": "Angela Moore",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Stacey Garel",
+            "party": "D",
+            "is_incumbent": false,
             "election_type": "Primary_D"
           }
         ]
@@ -3357,9 +4721,21 @@
         "district": "92",
         "candidates": [
           {
+            "name": "Arthur Demoine Kinney",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Rhonda Taylor",
             "party": "D",
             "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shawn Brown",
+            "party": "D",
+            "is_incumbent": false,
             "election_type": "Primary_D"
           }
         ]
@@ -3378,14 +4754,132 @@
         ]
       },
       {
+        "seat_label": "GA House 94",
+        "chamber": "House",
+        "district": "94",
+        "candidates": [
+          {
+            "name": "Audrey Taylor Lux",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Elmore D Alexander",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ikenna Emmanuel Ugwumadu",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kelly Kautz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Venola Lucrecia Mason",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "GA House 95",
         "chamber": "House",
         "district": "95",
         "candidates": [
           {
+            "name": "Darshun Nicole Kendrick",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Stacy Marie Johnson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Zae Brewer",
             "party": "D",
             "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Reggie Tyrell Hall",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 96",
+        "chamber": "House",
+        "district": "96",
+        "candidates": [
+          {
+            "name": "Arlene Patricia Beckles",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tanjina Islam",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 97",
+        "chamber": "House",
+        "district": "97",
+        "candidates": [
+          {
+            "name": "Jacques Laurent",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jyot Singh",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Yassin Mohamed Moghazy",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 98",
+        "chamber": "House",
+        "district": "98",
+        "candidates": [
+          {
+            "name": "Brenda Lopez Romero",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marvin Lim",
+            "party": "D",
+            "is_incumbent": true,
             "election_type": "Primary_D"
           }
         ]
@@ -3395,6 +4889,12 @@
         "chamber": "House",
         "district": "99",
         "candidates": [
+          {
+            "name": "Michelle Kang",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Shelly Abraham",
             "party": "D",
@@ -3415,13 +4915,25 @@
         "district": "100",
         "candidates": [
           {
+            "name": "Jennifer Ingrid Ambler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Denise Rumbaugh",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
           },
           {
-            "name": "Edwin Duncan",
+            "name": "Edwin Duncan Sr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Edwin Duncan Sr",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3444,6 +4956,25 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Jennifer Bowers Hutchison",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 102",
+        "chamber": "House",
+        "district": "102",
+        "candidates": [
+          {
+            "name": "Gabe Okoye",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
           }
         ]
       },
@@ -3452,6 +4983,12 @@
         "chamber": "House",
         "district": "103",
         "candidates": [
+          {
+            "name": "Chris Luchey",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Soo Hong",
             "party": "R",
@@ -3466,6 +5003,12 @@
         "district": "104",
         "candidates": [
           {
+            "name": "Charles Paul Efstration Iii",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Chuck Efstration",
             "party": "R",
             "is_incumbent": true,
@@ -3479,10 +5022,29 @@
         "district": "105",
         "candidates": [
           {
+            "name": "Farooq Mughal",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Sandy Donatucci",
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 106",
+        "chamber": "House",
+        "district": "106",
+        "candidates": [
+          {
+            "name": "Akbar Ali",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
           }
         ]
       },
@@ -3496,6 +5058,37 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Murray R. Berkowitz",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 108",
+        "chamber": "House",
+        "district": "108",
+        "candidates": [
+          {
+            "name": "Joshua Cartie Pressley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rahim Asani",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Elvia Davila-Pelayo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3509,6 +5102,62 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Don Mahmood Shaikh",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Juan Estrada",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nico Parra",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 110",
+        "chamber": "House",
+        "district": "110",
+        "candidates": [
+          {
+            "name": "Segun Adeyina",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Charles Lollar",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 111",
+        "chamber": "House",
+        "district": "111",
+        "candidates": [
+          {
+            "name": "Scott T. Jackson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Reynaldo Martinez",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3517,6 +5166,12 @@
         "chamber": "House",
         "district": "112",
         "candidates": [
+          {
+            "name": "Lisa Maria",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Bruce Williamson",
             "party": "R",
@@ -3547,6 +5202,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Don Scarbrough",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3556,7 +5217,19 @@
         "district": "114",
         "candidates": [
           {
+            "name": "Michael Caw",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Brett Mauldin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Wendell Delano Mcneal",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3573,6 +5246,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Darius L Francis",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3585,6 +5264,49 @@
             "name": "El-Mahdi Holly",
             "party": "D",
             "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Samie Lee Conyers",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 117",
+        "chamber": "House",
+        "district": "117",
+        "candidates": [
+          {
+            "name": "James Venson Williams",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kim Thomas Smith",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mary Ann Santos",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tiffany N Walker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tony Michael Brown",
+            "party": "D",
+            "is_incumbent": false,
             "election_type": "Primary_D"
           }
         ]
@@ -3601,9 +5323,34 @@
             "election_type": "Primary_D"
           },
           {
+            "name": "Sharonda Wanta Bell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Clint Crowe",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 119",
+        "chamber": "House",
+        "district": "119",
+        "candidates": [
+          {
+            "name": "Catherine Morris",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Howard Holt Persinger Iii",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -3626,6 +5373,12 @@
             "election_type": "Primary_R"
           },
           {
+            "name": "Gary Ward Black Jr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Kris Kendrick",
             "party": "R",
             "is_incumbent": false,
@@ -3633,6 +5386,25 @@
           },
           {
             "name": "Ward Black",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 121",
+        "chamber": "House",
+        "district": "121",
+        "candidates": [
+          {
+            "name": "Eric Martin Gisler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mack \"Dutch\" Guest Iv",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3649,6 +5421,94 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Spencer Robert Frye Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Carol Bennett Hubbard",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 123",
+        "chamber": "House",
+        "district": "123",
+        "candidates": [
+          {
+            "name": "Hope S. Beard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert Freeman Leverett",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 124",
+        "chamber": "House",
+        "district": "124",
+        "candidates": [
+          {
+            "name": "Melanie Michele Miller",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ralph Lanier Rhodes Iii",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 125",
+        "chamber": "House",
+        "district": "125",
+        "candidates": [
+          {
+            "name": "Leonard Warren Hennessy Iii",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gary Lee Richardson Sr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 126",
+        "chamber": "House",
+        "district": "126",
+        "candidates": [
+          {
+            "name": "L C Myles Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "William C Harris",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3681,6 +5541,43 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Rameriz Lewis",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tyrone A Evans",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Trey Sheppard",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 129",
+        "chamber": "House",
+        "district": "129",
+        "candidates": [
+          {
+            "name": "Karlton Leander Howard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Scott Cambers",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
           }
         ]
       },
@@ -3696,10 +5593,34 @@
             "election_type": "Primary_D"
           },
           {
+            "name": "Lafawn Pinkney-Mealing",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sha'Qunta \"Q\" Calles",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Sheila Clark Nelson",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "David Anthony Carson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Thomas Duffy Mcadams",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3709,10 +5630,29 @@
         "district": "131",
         "candidates": [
           {
+            "name": "Jenny E Eppard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Rob Clifton",
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 132",
+        "chamber": "House",
+        "district": "132",
+        "candidates": [
+          {
+            "name": "Brian Lamar Prince",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
           }
         ]
       },
@@ -3725,6 +5665,12 @@
             "name": "Danny Mathis",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Robert Wayne Pruitt",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -3756,6 +5702,19 @@
         ]
       },
       {
+        "seat_label": "GA House 136",
+        "chamber": "House",
+        "district": "136",
+        "candidates": [
+          {
+            "name": "David Glenn Jenkins",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "GA House 137",
         "chamber": "House",
         "district": "137",
@@ -3774,6 +5733,18 @@
         "district": "138",
         "candidates": [
           {
+            "name": "Cyndie Hutchings",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Vance C Smith Jr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Vance Smith",
             "party": "R",
             "is_incumbent": true,
@@ -3786,6 +5757,12 @@
         "chamber": "House",
         "district": "139",
         "candidates": [
+          {
+            "name": "Elliot Andrew Valdez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Carmen Rice",
             "party": "R",
@@ -3800,10 +5777,22 @@
         "district": "140",
         "candidates": [
           {
+            "name": "Marquese K Averett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Teddy Reese",
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Edward Kvietkus Jr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3817,6 +5806,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Regina Liparoto",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3825,6 +5820,12 @@
         "chamber": "House",
         "district": "142",
         "candidates": [
+          {
+            "name": "George Elton Thomas Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "George Thomas",
             "party": "D",
@@ -3836,6 +5837,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Calvin Dennis Palmer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3862,6 +5869,12 @@
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
+          },
+          {
+            "name": "Roy Dale Washburn Jr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3875,6 +5888,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Eric Shannon Wilson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3888,6 +5907,62 @@
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
+          },
+          {
+            "name": "Zell Shaw Blackmon Iii",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 147",
+        "chamber": "House",
+        "district": "147",
+        "candidates": [
+          {
+            "name": "Renita A Duncan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tim Riley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bethany Ballard",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 148",
+        "chamber": "House",
+        "district": "148",
+        "candidates": [
+          {
+            "name": "Cynthia Brooks Johnson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lillie Bryant",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Noel Warren Williams Jr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3897,10 +5972,111 @@
         "district": "149",
         "candidates": [
           {
+            "name": "Floyd L Griffin Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Ross Sheppard",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Randy Keith Peters",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 150",
+        "chamber": "House",
+        "district": "150",
+        "candidates": [
+          {
+            "name": "Patty Bentley Stinson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cary Lee Moore",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 151",
+        "chamber": "House",
+        "district": "151",
+        "candidates": [
+          {
+            "name": "James E. Wolfe",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael A Cheokas",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 152",
+        "chamber": "House",
+        "district": "152",
+        "candidates": [
+          {
+            "name": "Mitchell Rosa",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "William Joseph Yearta",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 153",
+        "chamber": "House",
+        "district": "153",
+        "candidates": [
+          {
+            "name": "David Lee Sampson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 154",
+        "chamber": "House",
+        "district": "154",
+        "candidates": [
+          {
+            "name": "Harry James",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gerald E Greene",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3910,7 +6086,32 @@
         "district": "155",
         "candidates": [
           {
+            "name": "Joe Powers",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Charles C Cook",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Matt Hatchett",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 156",
+        "chamber": "House",
+        "district": "156",
+        "candidates": [
+          {
+            "name": "Leesa Hagan",
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
@@ -3965,6 +6166,12 @@
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
+          },
+          {
+            "name": "Nathan Ross Hooks",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3973,6 +6180,12 @@
         "chamber": "House",
         "district": "160",
         "candidates": [
+          {
+            "name": "Herbert Lehman Franklin Iii",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
           {
             "name": "Lehman Franklin",
             "party": "R",
@@ -3987,9 +6200,21 @@
         "district": "161",
         "candidates": [
           {
+            "name": "David Dillie",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Bill Hitchens",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "William W Hitchens Jr",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -4004,6 +6229,25 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Orlando Scott",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 163",
+        "chamber": "House",
+        "district": "163",
+        "candidates": [
+          {
+            "name": "Anne Allen Westbrook",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
           }
         ]
       },
@@ -4012,6 +6256,12 @@
         "chamber": "House",
         "district": "164",
         "candidates": [
+          {
+            "name": "Stephanie Omega Burgess",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Ron Stephens",
             "party": "R",
@@ -4030,6 +6280,37 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Kendra Leigh Clark",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Miquan Green",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 166",
+        "chamber": "House",
+        "district": "166",
+        "candidates": [
+          {
+            "name": "Pat Daley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jesse Petrea",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4043,6 +6324,18 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Nathaniel Hicks Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Homer M Deloach",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4062,6 +6355,25 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Kevin Lee Remillard",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 169",
+        "chamber": "House",
+        "district": "169",
+        "candidates": [
+          {
+            "name": "Angela Butler Osteen",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4097,6 +6409,12 @@
         "district": "172",
         "candidates": [
           {
+            "name": "Charles H. \"Chas\" Cannon Iv",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Chas Cannon",
             "party": "R",
             "is_incumbent": true,
@@ -4109,6 +6427,18 @@
         "chamber": "House",
         "district": "173",
         "candidates": [
+          {
+            "name": "Adam Chitwood",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Theresa Thomas",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Darlene Taylor",
             "party": "R",
@@ -4123,9 +6453,34 @@
         "district": "174",
         "candidates": [
           {
+            "name": "David Hall",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "John Corbett",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 175",
+        "chamber": "House",
+        "district": "175",
+        "candidates": [
+          {
+            "name": "Anissa Knight Wiseman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "George John Lahood Iv",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -4135,6 +6490,18 @@
         "chamber": "House",
         "district": "176",
         "candidates": [
+          {
+            "name": "Marcus Tyrone Ryan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "James D Burchett",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
           {
             "name": "Michael Dockery",
             "party": "R",
@@ -4149,9 +6516,39 @@
         "district": "177",
         "candidates": [
           {
+            "name": "Alvin Payton Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Blake Alexander Robinson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Dexter Sharper",
             "party": "D",
             "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Elsie Cason Napier",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Eric G Howard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kristina Cheek Mcbride",
+            "party": "D",
+            "is_incumbent": false,
             "election_type": "Primary_D"
           }
         ]
@@ -4161,6 +6558,12 @@
         "chamber": "House",
         "district": "178",
         "candidates": [
+          {
+            "name": "Barry Dunham",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Steven Meeks",
             "party": "R",
@@ -4175,7 +6578,26 @@
         "district": "179",
         "candidates": [
           {
+            "name": "Holle Weiss-Friedman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Rick Townsend",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA House 180",
+        "chamber": "House",
+        "district": "180",
+        "candidates": [
+          {
+            "name": "Steban Steven Sainz",
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
@@ -4198,6 +6620,12 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Benjamin Luther Watson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4237,6 +6665,12 @@
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
+          },
+          {
+            "name": "William Rhett Hickman Jr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4250,6 +6684,31 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Sheikh Rahman",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA Senate 6",
+        "chamber": "Senate",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Jermarkus A Jacobs",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Matthew Freeman Brass",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4296,9 +6755,71 @@
         "district": "8",
         "candidates": [
           {
+            "name": "Ralph Gregory Tyre",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Russ Goodman",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA Senate 9",
+        "chamber": "Senate",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Nikki A Merritt",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael Johnson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA Senate 10",
+        "chamber": "Senate",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Gabrielle Rogers",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kate Denny",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Larry Johnson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sylvester Smith Iii",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Furquan Rahman Stafford",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -4322,13 +6843,43 @@
         "district": "12",
         "candidates": [
           {
+            "name": "Corey B Morgan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Edward Brown",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Freddie Powell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Freddie Sims",
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
           },
           {
+            "name": "Tracy Taylor",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Terence Fowler",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Terence Leon Fowler Sr",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4354,10 +6905,40 @@
         "district": "14",
         "candidates": [
           {
+            "name": "Kay Howell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Kevin Abel",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Nathalie J Kanani",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mckenzie Carson Mcqueen",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Michael Dwight Dvorscak",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tamara Johnson-Shealey",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4367,10 +6948,28 @@
         "district": "15",
         "candidates": [
           {
+            "name": "Alyssa Williams",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Ed Harbison",
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Tremaine \"Teddy\" Reese",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Charles Herbert Hand Iii",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4386,6 +6985,18 @@
             "election_type": "Primary_D"
           },
           {
+            "name": "Sonya Wimberly Hawkins",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marty H Harbin Jr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Marty Harbin",
             "party": "R",
             "is_incumbent": true,
@@ -4398,6 +7009,12 @@
         "chamber": "Senate",
         "district": "17",
         "candidates": [
+          {
+            "name": "Duro Haynes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Gail Davenport",
             "party": "D",
@@ -4422,6 +7039,12 @@
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
+          },
+          {
+            "name": "Steven Royce Mcneel",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4431,7 +7054,31 @@
         "district": "19",
         "candidates": [
           {
+            "name": "Eduardo Noel Delgado",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joshua C Wilkerson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Sikes",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Dwayne H. Gillis",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Travis Hodges",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4448,6 +7095,31 @@
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
+          },
+          {
+            "name": "Lawrence Cohen Walker Iii",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA Senate 21",
+        "chamber": "Senate",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Kori Simmons",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jason T. Dickerson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4461,6 +7133,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Harold Vernon Jones Ii",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
           }
         ]
       },
@@ -4469,6 +7147,18 @@
         "chamber": "Senate",
         "district": "23",
         "candidates": [
+          {
+            "name": "Satoria \"Tony\" Ragin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shayna Boston",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Max Burns",
             "party": "R",
@@ -4483,9 +7173,34 @@
         "district": "24",
         "candidates": [
           {
+            "name": "Catie Young",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lorraine Violet Thomas",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Lee Anderson",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA Senate 25",
+        "chamber": "Senate",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "Ricky Alvin Williams",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -4496,10 +7211,22 @@
         "district": "26",
         "candidates": [
           {
-            "name": "David Lucas",
+            "name": "David Lucas, Sr.",
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Nancy Hicks",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tracy Conkle Wheeler",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4508,6 +7235,30 @@
         "chamber": "Senate",
         "district": "27",
         "candidates": [
+          {
+            "name": "Jessica Roper",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Carter Patterson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Klaus Stefan Buck",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Marc Martinelli",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
           {
             "name": "Mike Dudgeon",
             "party": "R",
@@ -4522,6 +7273,18 @@
         "district": "28",
         "candidates": [
           {
+            "name": "Donzella Johnson James",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mel Keyton",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Matt Brass",
             "party": "R",
             "is_incumbent": false,
@@ -4534,6 +7297,12 @@
         "chamber": "Senate",
         "district": "29",
         "candidates": [
+          {
+            "name": "Jeff Lowe",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Randy Robertson",
             "party": "R",
@@ -4548,9 +7317,46 @@
         "district": "30",
         "candidates": [
           {
+            "name": "Wanda Cooper",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Tim Bearden",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA Senate 31",
+        "chamber": "Senate",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "Alec Miller",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Josh Plancher",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Daniel Davenport",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jason R. Anavitarte",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -4575,6 +7381,44 @@
         ]
       },
       {
+        "seat_label": "GA Senate 33",
+        "chamber": "Senate",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Lisa J Anderson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael Anthony Rhett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA Senate 34",
+        "chamber": "Senate",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Gabriel Martin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kenya Wicks",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "GA Senate 35",
         "chamber": "Senate",
         "district": "35",
@@ -4584,6 +7428,43 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Elfreda Desvignes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Erica Denise Solomon",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jaha V. Howard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA Senate 36",
+        "chamber": "Senate",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Nan Grogan Orrock",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Katie Corkren",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4592,6 +7473,18 @@
         "chamber": "Senate",
         "district": "37",
         "candidates": [
+          {
+            "name": "Darcy Castro",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Zachary Neville",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Ed Setzler",
             "party": "R",
@@ -4610,6 +7503,37 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Eric Jamal Helvy",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Gregory Pop Thomas",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA Senate 39",
+        "chamber": "Senate",
+        "district": "39",
+        "candidates": [
+          {
+            "name": "Sonya Mclaughlin Halpern",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Franklin Guest Jr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4623,6 +7547,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Melina Renee Mast",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4635,6 +7565,62 @@
             "name": "Kim Jackson",
             "party": "D",
             "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shenika Lavern Maddox",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jeffery Eugene Newlin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA Senate 42",
+        "chamber": "Senate",
+        "district": "42",
+        "candidates": [
+          {
+            "name": "Eric W. Lee Sr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bret Austin Dunn",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA Senate 43",
+        "chamber": "Senate",
+        "district": "43",
+        "candidates": [
+          {
+            "name": "Donald Ferguson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sharon Henderson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tonya Peterson Anderson",
+            "party": "D",
+            "is_incumbent": false,
             "election_type": "Primary_D"
           }
         ]
@@ -4649,6 +7635,24 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Nadine Thomas",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Saira Draper",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ngozi Orabueze",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4657,6 +7661,12 @@
         "chamber": "Senate",
         "district": "45",
         "candidates": [
+          {
+            "name": "Anthony Scott Tippetts",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Clint Dixon",
             "party": "R",
@@ -4672,6 +7682,12 @@
         "candidates": [
           {
             "name": "Ray Smith",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "William C Gaulden Jr",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -4714,6 +7730,12 @@
         "district": "47",
         "candidates": [
           {
+            "name": "Justin Grant Gillespie",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Frank Ginn",
             "party": "R",
             "is_incumbent": true,
@@ -4733,6 +7755,18 @@
         "district": "48",
         "candidates": [
           {
+            "name": "Laura Murvartian",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nathan Hombroek",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Shawn Still",
             "party": "R",
             "is_incumbent": true,
@@ -4746,6 +7780,12 @@
         "district": "49",
         "candidates": [
           {
+            "name": "William Wallace",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Drew Echols",
             "party": "R",
             "is_incumbent": true,
@@ -4758,6 +7798,12 @@
         "chamber": "Senate",
         "district": "50",
         "candidates": [
+          {
+            "name": "Dave Cooper",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Bo Hatchett",
             "party": "R",
@@ -4778,7 +7824,32 @@
             "election_type": "Primary_D"
           },
           {
+            "name": "John Philip Milam",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Steve Shaw",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Will Wade",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA Senate 52",
+        "chamber": "Senate",
+        "district": "52",
+        "candidates": [
+          {
+            "name": "Charles Edward Hufstetler",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4795,6 +7866,24 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Blake Allan Elsberry",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Denise Pierce Burns",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Lanny Elwyn Thomas",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4808,6 +7897,37 @@
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
+          },
+          {
+            "name": "Eddie Travis Hall",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "James Martin Brown",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "GA Senate 55",
+        "chamber": "Senate",
+        "district": "55",
+        "candidates": [
+          {
+            "name": "Randal Mangham",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mary Williams Benefield",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -4816,6 +7936,12 @@
         "chamber": "Senate",
         "district": "56",
         "candidates": [
+          {
+            "name": "Patrick Thompson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "John Albers",
             "party": "R",
@@ -4836,11 +7962,241 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "1",
+      "seat_label": "GA House 1",
+      "pres_margin": "-57.3",
+      "holder_party": "R",
+      "candidate": "Steven Willard Disbrow",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "2",
+      "seat_label": "GA House 2",
+      "pres_margin": "-62.4",
+      "holder_party": "R",
+      "candidate": "Whitney Echenique",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "3",
+      "seat_label": "GA House 3",
+      "pres_margin": "-53.9",
+      "holder_party": "R",
+      "candidate": "Margaret Spear",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "4",
+      "seat_label": "GA House 4",
+      "pres_margin": "-28.6",
+      "holder_party": "R",
+      "candidate": "Quentin Lemont Postell Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "5",
+      "seat_label": "GA House 5",
+      "pres_margin": "-63.0",
+      "holder_party": "R",
+      "candidate": "Rasmus Jensen",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "6",
       "seat_label": "GA House 6",
       "pres_margin": "-69.0",
       "holder_party": "R",
-      "candidate": "Derrian Smith",
+      "candidate": "Cathy Kott",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "8",
+      "seat_label": "GA House 8",
+      "pres_margin": "-64.2",
+      "holder_party": "R",
+      "candidate": "Nick Mitchell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "9",
+      "seat_label": "GA House 9",
+      "pres_margin": "-64.2",
+      "holder_party": "R",
+      "candidate": "Roger L Smith",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "10",
+      "seat_label": "GA House 10",
+      "pres_margin": "-62.6",
+      "holder_party": "R",
+      "candidate": "John Brown",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "11",
+      "seat_label": "GA House 11",
+      "pres_margin": "-61.4",
+      "holder_party": "R",
+      "candidate": "Ryan Fountain",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "12",
+      "seat_label": "GA House 12",
+      "pres_margin": "-57.9",
+      "holder_party": "R",
+      "candidate": "Holly Chaney",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "13",
+      "seat_label": "GA House 13",
+      "pres_margin": "-31.6",
+      "holder_party": "R",
+      "candidate": "Vincent Mendes Iii",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "14",
+      "seat_label": "GA House 14",
+      "pres_margin": "-60.8",
+      "holder_party": "R",
+      "candidate": "Bella Bautista",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "15",
+      "seat_label": "GA House 15",
+      "pres_margin": "-42.4",
+      "holder_party": "R",
+      "candidate": "Lauren Jones",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "16",
+      "seat_label": "GA House 16",
+      "pres_margin": "-55.6",
+      "holder_party": "R",
+      "candidate": "Diana Spangler",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "17",
+      "seat_label": "GA House 17",
+      "pres_margin": "-25.3",
+      "holder_party": "R",
+      "candidate": "Tamyko Green",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "18",
+      "seat_label": "GA House 18",
+      "pres_margin": "-66.3",
+      "holder_party": "R",
+      "candidate": "Pat Rhudy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "19",
+      "seat_label": "GA House 19",
+      "pres_margin": "-10.1",
+      "holder_party": "R",
+      "candidate": "Cynthia Starke-Jones",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "21",
+      "seat_label": "GA House 21",
+      "pres_margin": "-42.7",
+      "holder_party": "R",
+      "candidate": "Anthony Lewis Aragues Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "22",
+      "seat_label": "GA House 22",
+      "pres_margin": "-16.1",
+      "holder_party": "R",
+      "candidate": "James Shade",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "23",
+      "seat_label": "GA House 23",
+      "pres_margin": "-46.8",
+      "holder_party": "R",
+      "candidate": "Rob Epstein",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "24",
+      "seat_label": "GA House 24",
+      "pres_margin": "-28.6",
+      "holder_party": "R",
+      "candidate": "Maureen Gault",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "26",
+      "seat_label": "GA House 26",
+      "pres_margin": "-30.9",
+      "holder_party": "R",
+      "candidate": "Meredith Greene",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "27",
+      "seat_label": "GA House 27",
+      "pres_margin": "-62.5",
+      "holder_party": "R",
+      "candidate": "Joseph Ivey Kirkland Iv",
       "is_open_seat": null
     },
     {
@@ -4856,11 +8212,61 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "29",
+      "seat_label": "GA House 29",
+      "pres_margin": "-17.6",
+      "holder_party": "R",
+      "candidate": "Scott Richard Soracco",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "30",
+      "seat_label": "GA House 30",
+      "pres_margin": "-41.3",
+      "holder_party": "R",
+      "candidate": "Braden Michael Doxey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "32",
+      "seat_label": "GA House 32",
+      "pres_margin": "-67.5",
+      "holder_party": "R",
+      "candidate": "Rebecca Sims",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "34",
+      "seat_label": "GA House 34",
+      "pres_margin": "-8.7",
+      "holder_party": "R",
+      "candidate": "Titus Nichols",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "35",
       "seat_label": "GA House 35",
       "pres_margin": "+19.9",
       "holder_party": "D",
       "candidate": "Lisa Campbell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "36",
+      "seat_label": "GA House 36",
+      "pres_margin": "-18.6",
+      "holder_party": "R",
+      "candidate": "Luc \"Luke\" Noiset",
       "is_open_seat": null
     },
     {
@@ -4886,11 +8292,51 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "40",
+      "seat_label": "GA House 40",
+      "pres_margin": "-15.7",
+      "holder_party": "R",
+      "candidate": "Elisa Yvette Lassiter",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "41",
+      "seat_label": "GA House 41",
+      "pres_margin": "+40.4",
+      "holder_party": "D",
+      "candidate": "Michael Smith",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "43",
       "seat_label": "GA House 43",
       "pres_margin": "+24.4",
       "holder_party": "D",
       "candidate": "Solomon Adesanya",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "44",
+      "seat_label": "GA House 44",
+      "pres_margin": "-8.8",
+      "holder_party": "R",
+      "candidate": "Danielle Lyn Bell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "45",
+      "seat_label": "GA House 45",
+      "pres_margin": "-2.7",
+      "holder_party": "R",
+      "candidate": "Michelle Schreiner",
       "is_open_seat": null
     },
     {
@@ -4906,11 +8352,41 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "51",
-      "seat_label": "GA House 51",
-      "pres_margin": "+18.8",
+      "district": "47",
+      "seat_label": "GA House 47",
+      "pres_margin": "-14.7",
+      "holder_party": "R",
+      "candidate": "Lindsay Defranco",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "48",
+      "seat_label": "GA House 48",
+      "pres_margin": "+1.1",
+      "holder_party": "R",
+      "candidate": "Adam Cleveland",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "49",
+      "seat_label": "GA House 49",
+      "pres_margin": "-6.3",
+      "holder_party": "R",
+      "candidate": "Teresa Diane Lin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "50",
+      "seat_label": "GA House 50",
+      "pres_margin": "+13.0",
       "holder_party": "D",
-      "candidate": "Aaron Baker",
+      "candidate": "Michelle Hsiao Au",
       "is_open_seat": null
     },
     {
@@ -4926,26 +8402,6 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "53",
-      "seat_label": "GA House 53",
-      "pres_margin": "+6.9",
-      "holder_party": "R",
-      "candidate": "Beth Fuller",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House",
-      "district": "54",
-      "seat_label": "GA House 54",
-      "pres_margin": "+23.8",
-      "holder_party": "D",
-      "candidate": "Betsy Holland",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House",
       "district": "55",
       "seat_label": "GA House 55",
       "pres_margin": "+60.5",
@@ -4956,31 +8412,31 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "58",
-      "seat_label": "GA House 58",
-      "pres_margin": "+77.7",
+      "district": "56",
+      "seat_label": "GA House 56",
+      "pres_margin": "+77.4",
       "holder_party": "D",
-      "candidate": "Park Cannon",
+      "candidate": "Bryce V Berry",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "61",
-      "seat_label": "GA House 61",
-      "pres_margin": "+58.1",
+      "district": "59",
+      "seat_label": "GA House 59",
+      "pres_margin": "+83.7",
       "holder_party": "D",
-      "candidate": "Mekyah McQueen",
+      "candidate": "Phillip Adeniyi Olaleye",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "62",
-      "seat_label": "GA House 62",
-      "pres_margin": "+82.5",
+      "district": "60",
+      "seat_label": "GA House 60",
+      "pres_margin": "+48.5",
       "holder_party": "D",
-      "candidate": "Matthew Rinker",
+      "candidate": "Sheila Jones",
       "is_open_seat": null
     },
     {
@@ -4991,6 +8447,26 @@
       "pres_margin": "+78.9",
       "holder_party": "D",
       "candidate": "Kim Schofield",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "64",
+      "seat_label": "GA House 64",
+      "pres_margin": "+39.6",
+      "holder_party": "D",
+      "candidate": "Sylvia Wayfer Baker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "65",
+      "seat_label": "GA House 65",
+      "pres_margin": "+50.6",
+      "holder_party": "D",
+      "candidate": "Robert Dawson",
       "is_open_seat": null
     },
     {
@@ -5016,21 +8492,21 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "69",
-      "seat_label": "GA House 69",
-      "pres_margin": "+50.1",
-      "holder_party": "D",
-      "candidate": "Debra Bazemore",
+      "district": "72",
+      "seat_label": "GA House 72",
+      "pres_margin": "-47.0",
+      "holder_party": "R",
+      "candidate": null,
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "72",
-      "seat_label": "GA House 72",
-      "pres_margin": "-47.0",
+      "district": "73",
+      "seat_label": "GA House 73",
+      "pres_margin": "-24.7",
       "holder_party": "R",
-      "candidate": "Scott Hamby",
+      "candidate": "Timothy C Wilkinson",
       "is_open_seat": null
     },
     {
@@ -5040,7 +8516,17 @@
       "seat_label": "GA House 74",
       "pres_margin": "+54.3",
       "holder_party": "D",
-      "candidate": "Yasmin Neal",
+      "candidate": "Robert Flournoy Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "75",
+      "seat_label": "GA House 75",
+      "pres_margin": "+71.0",
+      "holder_party": "D",
+      "candidate": "Eric Wyatt Bell Ii",
       "is_open_seat": null
     },
     {
@@ -5056,11 +8542,51 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "77",
+      "seat_label": "GA House 77",
+      "pres_margin": "+74.4",
+      "holder_party": "D",
+      "candidate": "Rhonda Burnough",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "78",
       "seat_label": "GA House 78",
       "pres_margin": "+49.8",
       "holder_party": "D",
       "candidate": "Demetrius Douglas",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "79",
+      "seat_label": "GA House 79",
+      "pres_margin": "+71.1",
+      "holder_party": "D",
+      "candidate": "Yasmin Neal",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "80",
+      "seat_label": "GA House 80",
+      "pres_margin": "+21.3",
+      "holder_party": "D",
+      "candidate": "Long Xuan Tran",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "81",
+      "seat_label": "GA House 81",
+      "pres_margin": "-12.2",
+      "holder_party": "R",
+      "candidate": "Mishael Joseph A White",
       "is_open_seat": null
     },
     {
@@ -5080,7 +8606,7 @@
       "seat_label": "GA House 84",
       "pres_margin": "+80.6",
       "holder_party": "D",
-      "candidate": "Omari Crawford",
+      "candidate": "Mary Margaret Oliver",
       "is_open_seat": null
     },
     {
@@ -5091,6 +8617,16 @@
       "pres_margin": "+69.0",
       "holder_party": "D",
       "candidate": "Karla Drenner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "86",
+      "seat_label": "GA House 86",
+      "pres_margin": "+61.7",
+      "holder_party": "D",
+      "candidate": "Imani Barnes",
       "is_open_seat": null
     },
     {
@@ -5116,21 +8652,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "90",
-      "seat_label": "GA House 90",
-      "pres_margin": "+80.8",
+      "district": "89",
+      "seat_label": "GA House 89",
+      "pres_margin": "+82.2",
       "holder_party": "D",
-      "candidate": "Saira Draper",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House",
-      "district": "92",
-      "seat_label": "GA House 92",
-      "pres_margin": "+58.9",
-      "holder_party": "D",
-      "candidate": "Rhonda Taylor",
+      "candidate": "Omari Crawford",
       "is_open_seat": null
     },
     {
@@ -5146,21 +8672,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "95",
-      "seat_label": "GA House 95",
-      "pres_margin": "+59.5",
-      "holder_party": "D",
-      "candidate": "Zae Brewer",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House",
-      "district": "99",
-      "seat_label": "GA House 99",
-      "pres_margin": "+5.8",
+      "district": "100",
+      "seat_label": "GA House 100",
+      "pres_margin": "-19.2",
       "holder_party": "R",
-      "candidate": "Shelly Abraham",
+      "candidate": "Jennifer Ingrid Ambler",
       "is_open_seat": null
     },
     {
@@ -5176,6 +8692,46 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "102",
+      "seat_label": "GA House 102",
+      "pres_margin": "+31.1",
+      "holder_party": "D",
+      "candidate": "Gabe Okoye",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "103",
+      "seat_label": "GA House 103",
+      "pres_margin": "-13.2",
+      "holder_party": "R",
+      "candidate": "Chris Luchey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "105",
+      "seat_label": "GA House 105",
+      "pres_margin": "+2.7",
+      "holder_party": "R",
+      "candidate": "Farooq Mughal",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "106",
+      "seat_label": "GA House 106",
+      "pres_margin": "+19.7",
+      "holder_party": "D",
+      "candidate": "Akbar Ali",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "107",
       "seat_label": "GA House 107",
       "pres_margin": "+17.3",
@@ -5186,11 +8742,41 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "109",
-      "seat_label": "GA House 109",
-      "pres_margin": "+35.6",
+      "district": "110",
+      "seat_label": "GA House 110",
+      "pres_margin": "+31.1",
       "holder_party": "D",
-      "candidate": "Dewey McClain",
+      "candidate": "Segun Adeyina",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "111",
+      "seat_label": "GA House 111",
+      "pres_margin": "-19.3",
+      "holder_party": "R",
+      "candidate": "Scott T. Jackson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "112",
+      "seat_label": "GA House 112",
+      "pres_margin": "-38.0",
+      "holder_party": "R",
+      "candidate": "Lisa Maria",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "114",
+      "seat_label": "GA House 114",
+      "pres_margin": "-37.7",
+      "holder_party": "R",
+      "candidate": "Michael Caw",
       "is_open_seat": null
     },
     {
@@ -5216,11 +8802,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "118",
-      "seat_label": "GA House 118",
-      "pres_margin": "-30.7",
+      "district": "119",
+      "seat_label": "GA House 119",
+      "pres_margin": "-42.2",
       "holder_party": "R",
-      "candidate": "Jodi Lewis",
+      "candidate": "Catherine Morris",
       "is_open_seat": null
     },
     {
@@ -5236,11 +8822,61 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "121",
+      "seat_label": "GA House 121",
+      "pres_margin": "-12.3",
+      "holder_party": "D",
+      "candidate": "Eric Martin Gisler",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "122",
       "seat_label": "GA House 122",
       "pres_margin": "+49.7",
       "holder_party": "D",
-      "candidate": "Spencer Frye",
+      "candidate": "Spencer Robert Frye Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "123",
+      "seat_label": "GA House 123",
+      "pres_margin": "-40.5",
+      "holder_party": "R",
+      "candidate": "Hope S. Beard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "124",
+      "seat_label": "GA House 124",
+      "pres_margin": "-22.5",
+      "holder_party": "R",
+      "candidate": "Melanie Michele Miller",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "125",
+      "seat_label": "GA House 125",
+      "pres_margin": "-24.0",
+      "holder_party": "R",
+      "candidate": "Leonard Warren Hennessy Iii",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "126",
+      "seat_label": "GA House 126",
+      "pres_margin": "+18.9",
+      "holder_party": "D",
+      "candidate": "L C Myles Jr",
       "is_open_seat": null
     },
     {
@@ -5256,11 +8892,21 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "128",
-      "seat_label": "GA House 128",
-      "pres_margin": "-4.4",
+      "district": "131",
+      "seat_label": "GA House 131",
+      "pres_margin": "-25.6",
+      "holder_party": "R",
+      "candidate": "Jenny E Eppard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "132",
+      "seat_label": "GA House 132",
+      "pres_margin": "+37.5",
       "holder_party": "D",
-      "candidate": "Mack Jackson",
+      "candidate": "Brian Lamar Prince",
       "is_open_seat": null
     },
     {
@@ -5276,11 +8922,31 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "138",
+      "seat_label": "GA House 138",
+      "pres_margin": "-40.6",
+      "holder_party": "R",
+      "candidate": "Cyndie Hutchings",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "139",
+      "seat_label": "GA House 139",
+      "pres_margin": "-19.6",
+      "holder_party": "R",
+      "candidate": "Elliot Andrew Valdez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "140",
       "seat_label": "GA House 140",
       "pres_margin": "+46.8",
       "holder_party": "D",
-      "candidate": "Teddy Reese",
+      "candidate": "Marquese K Averett",
       "is_open_seat": null
     },
     {
@@ -5316,11 +8982,61 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "149",
-      "seat_label": "GA House 149",
-      "pres_margin": "+11.8",
+      "district": "150",
+      "seat_label": "GA House 150",
+      "pres_margin": "+5.8",
       "holder_party": "D",
-      "candidate": "Ross Sheppard",
+      "candidate": "Patty Bentley Stinson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "151",
+      "seat_label": "GA House 151",
+      "pres_margin": "-8.1",
+      "holder_party": "R",
+      "candidate": "James E. Wolfe",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "152",
+      "seat_label": "GA House 152",
+      "pres_margin": "-39.8",
+      "holder_party": "R",
+      "candidate": "Mitchell Rosa",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "153",
+      "seat_label": "GA House 153",
+      "pres_margin": "+39.2",
+      "holder_party": "D",
+      "candidate": "David Lee Sampson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "154",
+      "seat_label": "GA House 154",
+      "pres_margin": "+2.6",
+      "holder_party": "R",
+      "candidate": "Harry James",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "155",
+      "seat_label": "GA House 155",
+      "pres_margin": "-34.7",
+      "holder_party": "R",
+      "candidate": "Joe Powers",
       "is_open_seat": null
     },
     {
@@ -5336,41 +9052,101 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "161",
+      "seat_label": "GA House 161",
+      "pres_margin": "-15.8",
+      "holder_party": "R",
+      "candidate": "David Dillie",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "162",
       "seat_label": "GA House 162",
       "pres_margin": "+29.6",
       "holder_party": "D",
-      "candidate": "Carl Gilliard",
+      "candidate": "Orlando Scott",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "165",
-      "seat_label": "GA House 165",
-      "pres_margin": "+52.7",
+      "district": "163",
+      "seat_label": "GA House 163",
+      "pres_margin": "+44.5",
       "holder_party": "D",
-      "candidate": "Jay Morris",
+      "candidate": "Anne Allen Westbrook",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "167",
-      "seat_label": "GA House 167",
-      "pres_margin": "-36.6",
+      "district": "164",
+      "seat_label": "GA House 164",
+      "pres_margin": "-10.4",
       "holder_party": "R",
-      "candidate": "Laurie Thompson",
+      "candidate": "Stephanie Omega Burgess",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "177",
-      "seat_label": "GA House 177",
-      "pres_margin": "+7.3",
-      "holder_party": "D",
-      "candidate": "Dexter Sharper",
+      "district": "166",
+      "seat_label": "GA House 166",
+      "pres_margin": "-31.0",
+      "holder_party": "R",
+      "candidate": "Pat Daley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "174",
+      "seat_label": "GA House 174",
+      "pres_margin": "-57.0",
+      "holder_party": "R",
+      "candidate": "David Hall",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "175",
+      "seat_label": "GA House 175",
+      "pres_margin": "-33.1",
+      "holder_party": "R",
+      "candidate": "Anissa Knight Wiseman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "176",
+      "seat_label": "GA House 176",
+      "pres_margin": "-46.1",
+      "holder_party": "R",
+      "candidate": "Marcus Tyrone Ryan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "178",
+      "seat_label": "GA House 178",
+      "pres_margin": "-69.9",
+      "holder_party": "R",
+      "candidate": "Barry Dunham",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "179",
+      "seat_label": "GA House 179",
+      "pres_margin": "-18.7",
+      "holder_party": "R",
+      "candidate": "Holle Weiss-Friedman",
       "is_open_seat": null
     },
     {
@@ -5386,61 +9162,31 @@
     {
       "election_type": "Primary_D",
       "chamber": "Senate",
-      "district": "5",
-      "seat_label": "GA Senate 5",
-      "pres_margin": "+33.7",
-      "holder_party": "D",
-      "candidate": "Robin McCoy",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "Senate",
-      "district": "12",
-      "seat_label": "GA Senate 12",
-      "pres_margin": "+14.1",
-      "holder_party": "D",
-      "candidate": "Freddie Sims",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "Senate",
-      "district": "14",
-      "seat_label": "GA Senate 14",
-      "pres_margin": "+18.1",
-      "holder_party": "D",
-      "candidate": "Kevin Abel",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "Senate",
-      "district": "15",
-      "seat_label": "GA Senate 15",
-      "pres_margin": "+29.9",
-      "holder_party": "D",
-      "candidate": "Ed Harbison",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "Senate",
-      "district": "16",
-      "seat_label": "GA Senate 16",
-      "pres_margin": "-26.0",
+      "district": "6",
+      "seat_label": "GA Senate 6",
+      "pres_margin": "-40.3",
       "holder_party": "R",
-      "candidate": "Pauline Henley",
+      "candidate": "Jermarkus A Jacobs",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "Senate",
-      "district": "17",
-      "seat_label": "GA Senate 17",
-      "pres_margin": "+53.0",
+      "district": "9",
+      "seat_label": "GA Senate 9",
+      "pres_margin": "+20.6",
       "holder_party": "D",
-      "candidate": "Gail Davenport",
+      "candidate": "Nikki A Merritt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "21",
+      "seat_label": "GA Senate 21",
+      "pres_margin": "-34.0",
+      "holder_party": "R",
+      "candidate": "Kori Simmons",
       "is_open_seat": null
     },
     {
@@ -5450,7 +9196,7 @@
       "seat_label": "GA Senate 22",
       "pres_margin": "+40.9",
       "holder_party": "D",
-      "candidate": "Harold Jones",
+      "candidate": "Harold Vernon Jones Ii",
       "is_open_seat": null
     },
     {
@@ -5460,7 +9206,37 @@
       "seat_label": "GA Senate 26",
       "pres_margin": "+25.0",
       "holder_party": "D",
-      "candidate": "David Lucas",
+      "candidate": "David Lucas, Sr.",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "27",
+      "seat_label": "GA Senate 27",
+      "pres_margin": "-38.1",
+      "holder_party": "R",
+      "candidate": "Jessica Roper",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "29",
+      "seat_label": "GA Senate 29",
+      "pres_margin": "-25.4",
+      "holder_party": "R",
+      "candidate": "Jeff Lowe",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "30",
+      "seat_label": "GA Senate 30",
+      "pres_margin": "-27.9",
+      "holder_party": "R",
+      "candidate": "Wanda Cooper",
       "is_open_seat": null
     },
     {
@@ -5476,11 +9252,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "Senate",
-      "district": "35",
-      "seat_label": "GA Senate 35",
-      "pres_margin": "+56.0",
+      "district": "36",
+      "seat_label": "GA Senate 36",
+      "pres_margin": "+76.9",
       "holder_party": "D",
-      "candidate": "Donzella James",
+      "candidate": "Nan Grogan Orrock",
       "is_open_seat": null
     },
     {
@@ -5496,6 +9272,16 @@
     {
       "election_type": "Primary_D",
       "chamber": "Senate",
+      "district": "39",
+      "seat_label": "GA Senate 39",
+      "pres_margin": "+69.9",
+      "holder_party": "D",
+      "candidate": "Sonya Mclaughlin Halpern",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
       "district": "40",
       "seat_label": "GA Senate 40",
       "pres_margin": "+27.9",
@@ -5506,21 +9292,51 @@
     {
       "election_type": "Primary_D",
       "chamber": "Senate",
-      "district": "41",
-      "seat_label": "GA Senate 41",
-      "pres_margin": "+62.9",
-      "holder_party": "D",
-      "candidate": "Kim Jackson",
+      "district": "42",
+      "seat_label": "GA Senate 42",
+      "pres_margin": "-11.8",
+      "holder_party": "R",
+      "candidate": "Eric W. Lee Sr",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "Senate",
-      "district": "44",
-      "seat_label": "GA Senate 44",
-      "pres_margin": "+77.5",
-      "holder_party": "D",
-      "candidate": "Elena Parent",
+      "district": "45",
+      "seat_label": "GA Senate 45",
+      "pres_margin": "-14.3",
+      "holder_party": "R",
+      "candidate": "Anthony Scott Tippetts",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "47",
+      "seat_label": "GA Senate 47",
+      "pres_margin": "-22.1",
+      "holder_party": "R",
+      "candidate": "Justin Grant Gillespie",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "49",
+      "seat_label": "GA Senate 49",
+      "pres_margin": "-44.4",
+      "holder_party": "R",
+      "candidate": "William Wallace",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "50",
+      "seat_label": "GA Senate 50",
+      "pres_margin": "-64.1",
+      "holder_party": "R",
+      "candidate": "Dave Cooper",
       "is_open_seat": null
     },
     {
@@ -5544,23 +9360,23 @@
       "is_open_seat": null
     },
     {
-      "election_type": "Primary_R",
-      "chamber": "House",
-      "district": "2",
-      "seat_label": "GA House 2",
-      "pres_margin": "-62.4",
-      "holder_party": "R",
-      "candidate": "Steve Tarvin",
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "55",
+      "seat_label": "GA Senate 55",
+      "pres_margin": "+54.4",
+      "holder_party": "D",
+      "candidate": "Randal Mangham",
       "is_open_seat": null
     },
     {
-      "election_type": "Primary_R",
-      "chamber": "House",
-      "district": "4",
-      "seat_label": "GA House 4",
-      "pres_margin": "-28.6",
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "56",
+      "seat_label": "GA Senate 56",
+      "pres_margin": "-12.4",
       "holder_party": "R",
-      "candidate": "Kasey Carpenter",
+      "candidate": "Patrick Thompson",
       "is_open_seat": null
     },
     {
@@ -5581,6 +9397,16 @@
       "pres_margin": "-69.0",
       "holder_party": "R",
       "candidate": "Jason Ridley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "7",
+      "seat_label": "GA House 7",
+      "pres_margin": "-63.8",
+      "holder_party": "R",
+      "candidate": "John Wayne Chastain Jr",
       "is_open_seat": null
     },
     {
@@ -5626,16 +9452,6 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "13",
-      "seat_label": "GA House 13",
-      "pres_margin": "-31.6",
-      "holder_party": "R",
-      "candidate": "Katie Dempsey",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_R",
-      "chamber": "House",
       "district": "14",
       "seat_label": "GA House 14",
       "pres_margin": "-60.8",
@@ -5660,17 +9476,77 @@
       "seat_label": "GA House 16",
       "pres_margin": "-55.6",
       "holder_party": "R",
-      "candidate": "Trey Kelley",
+      "candidate": "Othel Doyle Kelley Iii",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "20",
-      "seat_label": "GA House 20",
-      "pres_margin": "-32.2",
+      "district": "17",
+      "seat_label": "GA House 17",
+      "pres_margin": "-25.3",
       "holder_party": "R",
-      "candidate": "Charlice Byrd",
+      "candidate": "Martin A. Momtahan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "19",
+      "seat_label": "GA House 19",
+      "pres_margin": "-10.1",
+      "holder_party": "R",
+      "candidate": "Joseph Brian Gullett",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "21",
+      "seat_label": "GA House 21",
+      "pres_margin": "-42.7",
+      "holder_party": "R",
+      "candidate": "Brad David Thomas",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "22",
+      "seat_label": "GA House 22",
+      "pres_margin": "-16.1",
+      "holder_party": "R",
+      "candidate": "Jordan Ridley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "23",
+      "seat_label": "GA House 23",
+      "pres_margin": "-46.8",
+      "holder_party": "R",
+      "candidate": "William Wesley Fincher Iii",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "24",
+      "seat_label": "GA House 24",
+      "pres_margin": "-28.6",
+      "holder_party": "R",
+      "candidate": "John Carter Barrett",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "26",
+      "seat_label": "GA House 26",
+      "pres_margin": "-30.9",
+      "holder_party": "R",
+      "candidate": "Lauren Wylie Mcdonald Iii",
       "is_open_seat": null
     },
     {
@@ -5680,7 +9556,7 @@
       "seat_label": "GA House 27",
       "pres_margin": "-62.5",
       "holder_party": "R",
-      "candidate": "Lee Hawkins",
+      "candidate": "B Lee Hawkins Jr",
       "is_open_seat": null
     },
     {
@@ -5696,11 +9572,21 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "29",
-      "seat_label": "GA House 29",
-      "pres_margin": "-17.6",
+      "district": "30",
+      "seat_label": "GA House 30",
+      "pres_margin": "-41.3",
       "holder_party": "R",
-      "candidate": "Matt Dubnik",
+      "candidate": "Derrick William Mccollum",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "31",
+      "seat_label": "GA House 31",
+      "pres_margin": "-49.9",
+      "holder_party": "R",
+      "candidate": "Chad Winfield Bingham",
       "is_open_seat": null
     },
     {
@@ -5716,11 +9602,31 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "33",
+      "seat_label": "GA House 33",
+      "pres_margin": "-64.6",
+      "holder_party": "R",
+      "candidate": "Alan Powell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "34",
       "seat_label": "GA House 34",
       "pres_margin": "-8.7",
       "holder_party": "R",
       "candidate": "Devan Seabaugh",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "35",
+      "seat_label": "GA House 35",
+      "pres_margin": "+19.9",
+      "holder_party": "D",
+      "candidate": "Elvis Julian Casely",
       "is_open_seat": null
     },
     {
@@ -5746,6 +9652,26 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "42",
+      "seat_label": "GA House 42",
+      "pres_margin": "+34.1",
+      "holder_party": "D",
+      "candidate": "Andre' Lamar Stafford",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "44",
+      "seat_label": "GA House 44",
+      "pres_margin": "-8.8",
+      "holder_party": "R",
+      "candidate": "Donald Lee Parsons",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "45",
       "seat_label": "GA House 45",
       "pres_margin": "-2.7",
@@ -5766,16 +9692,6 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "47",
-      "seat_label": "GA House 47",
-      "pres_margin": "-14.7",
-      "holder_party": "R",
-      "candidate": "Jan Jones",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_R",
-      "chamber": "House",
       "district": "48",
       "seat_label": "GA House 48",
       "pres_margin": "+1.1",
@@ -5790,7 +9706,27 @@
       "seat_label": "GA House 49",
       "pres_margin": "-6.3",
       "holder_party": "R",
-      "candidate": "Chuck Martin",
+      "candidate": "Charles E Martin Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "50",
+      "seat_label": "GA House 50",
+      "pres_margin": "+13.0",
+      "holder_party": "D",
+      "candidate": "Azure Duan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "51",
+      "seat_label": "GA House 51",
+      "pres_margin": "+18.8",
+      "holder_party": "D",
+      "candidate": "Derek Keith Gettmann",
       "is_open_seat": null
     },
     {
@@ -5801,6 +9737,86 @@
       "pres_margin": "+6.9",
       "holder_party": "R",
       "candidate": "Deborah Silcox",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "54",
+      "seat_label": "GA House 54",
+      "pres_margin": "+23.8",
+      "holder_party": "D",
+      "candidate": "Gregory Thomas Miller",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "57",
+      "seat_label": "GA House 57",
+      "pres_margin": "+61.2",
+      "holder_party": "D",
+      "candidate": "Helmut Lucero-Domagalski Love",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "58",
+      "seat_label": "GA House 58",
+      "pres_margin": "+77.7",
+      "holder_party": "D",
+      "candidate": "Torrey D Balam",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "59",
+      "seat_label": "GA House 59",
+      "pres_margin": "+83.7",
+      "holder_party": "D",
+      "candidate": "Sully Sullivan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "61",
+      "seat_label": "GA House 61",
+      "pres_margin": "+58.1",
+      "holder_party": "D",
+      "candidate": "Damita Jean Bishop",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "64",
+      "seat_label": "GA House 64",
+      "pres_margin": "+39.6",
+      "holder_party": "D",
+      "candidate": "Lydia Parchue",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "65",
+      "seat_label": "GA House 65",
+      "pres_margin": "+50.6",
+      "holder_party": "D",
+      "candidate": "Gordon Washington Rolle Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "67",
+      "seat_label": "GA House 67",
+      "pres_margin": "+33.6",
+      "holder_party": "D",
+      "candidate": "Daniel Kelly Cook",
       "is_open_seat": null
     },
     {
@@ -5846,6 +9862,26 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "79",
+      "seat_label": "GA House 79",
+      "pres_margin": "+71.1",
+      "holder_party": "D",
+      "candidate": "David Allen Hamrick",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "80",
+      "seat_label": "GA House 80",
+      "pres_margin": "+21.3",
+      "holder_party": "D",
+      "candidate": "Brian Anderson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "81",
       "seat_label": "GA House 81",
       "pres_margin": "-12.2",
@@ -5866,11 +9902,91 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "83",
+      "seat_label": "GA House 83",
+      "pres_margin": "+31.2",
+      "holder_party": "D",
+      "candidate": "James Trip Smith",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "85",
+      "seat_label": "GA House 85",
+      "pres_margin": "+69.0",
+      "holder_party": "D",
+      "candidate": "Tyion Annette Fields",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "87",
+      "seat_label": "GA House 87",
+      "pres_margin": "+54.2",
+      "holder_party": "D",
+      "candidate": "Timothy J Burson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "88",
+      "seat_label": "GA House 88",
+      "pres_margin": "+59.6",
+      "holder_party": "D",
+      "candidate": "William Park Freeman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "90",
+      "seat_label": "GA House 90",
+      "pres_margin": "+80.8",
+      "holder_party": "D",
+      "candidate": "Samantha Nicole Boston",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "95",
+      "seat_label": "GA House 95",
+      "pres_margin": "+59.5",
+      "holder_party": "D",
+      "candidate": "Reggie Tyrell Hall",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "97",
+      "seat_label": "GA House 97",
+      "pres_margin": "+22.8",
+      "holder_party": "D",
+      "candidate": "Yassin Mohamed Moghazy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "99",
       "seat_label": "GA House 99",
       "pres_margin": "+5.8",
       "holder_party": "R",
       "candidate": "Matt Reeves",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "101",
+      "seat_label": "GA House 101",
+      "pres_margin": "+46.3",
+      "holder_party": "D",
+      "candidate": "Jennifer Bowers Hutchison",
       "is_open_seat": null
     },
     {
@@ -5890,7 +10006,7 @@
       "seat_label": "GA House 104",
       "pres_margin": "-22.5",
       "holder_party": "R",
-      "candidate": "Chuck Efstration",
+      "candidate": "Charles Paul Efstration Iii",
       "is_open_seat": null
     },
     {
@@ -5906,6 +10022,46 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "107",
+      "seat_label": "GA House 107",
+      "pres_margin": "+17.3",
+      "holder_party": "D",
+      "candidate": "Murray R. Berkowitz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "108",
+      "seat_label": "GA House 108",
+      "pres_margin": "+8.7",
+      "holder_party": "D",
+      "candidate": "Elvia Davila-Pelayo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "110",
+      "seat_label": "GA House 110",
+      "pres_margin": "+31.1",
+      "holder_party": "D",
+      "candidate": "Charles Lollar",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "111",
+      "seat_label": "GA House 111",
+      "pres_margin": "-19.3",
+      "holder_party": "R",
+      "candidate": "Reynaldo Martinez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "112",
       "seat_label": "GA House 112",
       "pres_margin": "-38.0",
@@ -5916,11 +10072,31 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "114",
-      "seat_label": "GA House 114",
-      "pres_margin": "-37.7",
-      "holder_party": "R",
-      "candidate": "Brett Mauldin",
+      "district": "113",
+      "seat_label": "GA House 113",
+      "pres_margin": "+45.1",
+      "holder_party": "D",
+      "candidate": "Don Scarbrough",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "115",
+      "seat_label": "GA House 115",
+      "pres_margin": "+64.8",
+      "holder_party": "D",
+      "candidate": "Darius L Francis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "116",
+      "seat_label": "GA House 116",
+      "pres_margin": "+64.7",
+      "holder_party": "D",
+      "candidate": "Samie Lee Conyers",
       "is_open_seat": null
     },
     {
@@ -5936,6 +10112,76 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "119",
+      "seat_label": "GA House 119",
+      "pres_margin": "-42.2",
+      "holder_party": "R",
+      "candidate": "Howard Holt Persinger Iii",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "121",
+      "seat_label": "GA House 121",
+      "pres_margin": "-12.3",
+      "holder_party": "D",
+      "candidate": "Mack \"Dutch\" Guest Iv",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "122",
+      "seat_label": "GA House 122",
+      "pres_margin": "+49.7",
+      "holder_party": "D",
+      "candidate": "Carol Bennett Hubbard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "123",
+      "seat_label": "GA House 123",
+      "pres_margin": "-40.5",
+      "holder_party": "R",
+      "candidate": "Robert Freeman Leverett",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "124",
+      "seat_label": "GA House 124",
+      "pres_margin": "-22.5",
+      "holder_party": "R",
+      "candidate": "Ralph Lanier Rhodes Iii",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "125",
+      "seat_label": "GA House 125",
+      "pres_margin": "-24.0",
+      "holder_party": "R",
+      "candidate": "Gary Lee Richardson Sr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "126",
+      "seat_label": "GA House 126",
+      "pres_margin": "+18.9",
+      "holder_party": "D",
+      "candidate": "William C Harris",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "127",
       "seat_label": "GA House 127",
       "pres_margin": "-25.5",
@@ -5946,21 +10192,21 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "131",
-      "seat_label": "GA House 131",
-      "pres_margin": "-25.6",
-      "holder_party": "R",
-      "candidate": "Rob Clifton",
+      "district": "128",
+      "seat_label": "GA House 128",
+      "pres_margin": "-4.4",
+      "holder_party": "D",
+      "candidate": "Trey Sheppard",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "133",
-      "seat_label": "GA House 133",
-      "pres_margin": "-37.7",
+      "district": "131",
+      "seat_label": "GA House 131",
+      "pres_margin": "-25.6",
       "holder_party": "R",
-      "candidate": "Danny Mathis",
+      "candidate": "Rob Clifton",
       "is_open_seat": null
     },
     {
@@ -5986,11 +10232,21 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "136",
+      "seat_label": "GA House 136",
+      "pres_margin": "-35.9",
+      "holder_party": "R",
+      "candidate": "David Glenn Jenkins",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "138",
       "seat_label": "GA House 138",
       "pres_margin": "-40.6",
       "holder_party": "R",
-      "candidate": "Vance Smith",
+      "candidate": "Vance C Smith Jr",
       "is_open_seat": null
     },
     {
@@ -6006,11 +10262,51 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "140",
+      "seat_label": "GA House 140",
+      "pres_margin": "+46.8",
+      "holder_party": "D",
+      "candidate": "Edward Kvietkus Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "141",
+      "seat_label": "GA House 141",
+      "pres_margin": "+47.5",
+      "holder_party": "D",
+      "candidate": "Regina Liparoto",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "142",
+      "seat_label": "GA House 142",
+      "pres_margin": "+18.7",
+      "holder_party": "D",
+      "candidate": "Calvin Dennis Palmer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "144",
       "seat_label": "GA House 144",
       "pres_margin": "-41.2",
       "holder_party": "R",
-      "candidate": "Dale Washburn",
+      "candidate": "Roy Dale Washburn Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "145",
+      "seat_label": "GA House 145",
+      "pres_margin": "+5.8",
+      "holder_party": "D",
+      "candidate": "Eric Shannon Wilson",
       "is_open_seat": null
     },
     {
@@ -6020,17 +10316,87 @@
       "seat_label": "GA House 146",
       "pres_margin": "-20.0",
       "holder_party": "R",
-      "candidate": "Shaw Blackmon",
+      "candidate": "Zell Shaw Blackmon Iii",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "155",
-      "seat_label": "GA House 155",
-      "pres_margin": "-34.7",
+      "district": "147",
+      "seat_label": "GA House 147",
+      "pres_margin": "-7.7",
       "holder_party": "R",
-      "candidate": "Matt Hatchett",
+      "candidate": "Bethany Ballard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "148",
+      "seat_label": "GA House 148",
+      "pres_margin": "-36.0",
+      "holder_party": "R",
+      "candidate": "Noel Warren Williams Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "149",
+      "seat_label": "GA House 149",
+      "pres_margin": "+11.8",
+      "holder_party": "D",
+      "candidate": "Randy Keith Peters",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "150",
+      "seat_label": "GA House 150",
+      "pres_margin": "+5.8",
+      "holder_party": "D",
+      "candidate": "Cary Lee Moore",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "151",
+      "seat_label": "GA House 151",
+      "pres_margin": "-8.1",
+      "holder_party": "R",
+      "candidate": "Michael A Cheokas",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "152",
+      "seat_label": "GA House 152",
+      "pres_margin": "-39.8",
+      "holder_party": "R",
+      "candidate": "William Joseph Yearta",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "154",
+      "seat_label": "GA House 154",
+      "pres_margin": "+2.6",
+      "holder_party": "R",
+      "candidate": "Gerald E Greene",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "156",
+      "seat_label": "GA House 156",
+      "pres_margin": "-47.2",
+      "holder_party": "R",
+      "candidate": "Leesa Hagan",
       "is_open_seat": null
     },
     {
@@ -6046,21 +10412,11 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "159",
-      "seat_label": "GA House 159",
-      "pres_margin": "-43.5",
-      "holder_party": "R",
-      "candidate": "Jon Burns",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_R",
-      "chamber": "House",
       "district": "160",
       "seat_label": "GA House 160",
       "pres_margin": "-40.1",
       "holder_party": "R",
-      "candidate": "Lehman Franklin",
+      "candidate": "Herbert Lehman Franklin Iii",
       "is_open_seat": null
     },
     {
@@ -6070,7 +10426,7 @@
       "seat_label": "GA House 161",
       "pres_margin": "-15.8",
       "holder_party": "R",
-      "candidate": "Bill Hitchens",
+      "candidate": "William W Hitchens Jr",
       "is_open_seat": null
     },
     {
@@ -6081,6 +10437,46 @@
       "pres_margin": "-10.4",
       "holder_party": "R",
       "candidate": "Ron Stephens",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "166",
+      "seat_label": "GA House 166",
+      "pres_margin": "-31.0",
+      "holder_party": "R",
+      "candidate": "Jesse Petrea",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "167",
+      "seat_label": "GA House 167",
+      "pres_margin": "-36.6",
+      "holder_party": "R",
+      "candidate": "Homer M Deloach",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "168",
+      "seat_label": "GA House 168",
+      "pres_margin": "+17.4",
+      "holder_party": "D",
+      "candidate": "Kevin Lee Remillard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "169",
+      "seat_label": "GA House 169",
+      "pres_margin": "-48.5",
+      "holder_party": "R",
+      "candidate": "Angela Butler Osteen",
       "is_open_seat": null
     },
     {
@@ -6110,7 +10506,7 @@
       "seat_label": "GA House 172",
       "pres_margin": "-49.0",
       "holder_party": "R",
-      "candidate": "Chas Cannon",
+      "candidate": "Charles H. \"Chas\" Cannon Iv",
       "is_open_seat": null
     },
     {
@@ -6136,11 +10532,11 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "176",
-      "seat_label": "GA House 176",
-      "pres_margin": "-46.1",
+      "district": "175",
+      "seat_label": "GA House 175",
+      "pres_margin": "-33.1",
       "holder_party": "R",
-      "candidate": "Michael Dockery",
+      "candidate": "George John Lahood Iv",
       "is_open_seat": null
     },
     {
@@ -6165,6 +10561,26 @@
     },
     {
       "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "180",
+      "seat_label": "GA House 180",
+      "pres_margin": "-35.9",
+      "holder_party": "R",
+      "candidate": "Steban Steven Sainz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "1",
+      "seat_label": "GA Senate 1",
+      "pres_margin": "-13.6",
+      "holder_party": "R",
+      "candidate": "Benjamin Luther Watson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
       "chamber": "Senate",
       "district": "3",
       "seat_label": "GA Senate 3",
@@ -6180,7 +10596,17 @@
       "seat_label": "GA Senate 4",
       "pres_margin": "-35.1",
       "holder_party": "R",
-      "candidate": "Billy Hickman",
+      "candidate": "William Rhett Hickman Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "6",
+      "seat_label": "GA Senate 6",
+      "pres_margin": "-40.3",
+      "holder_party": "R",
+      "candidate": "Matthew Freeman Brass",
       "is_open_seat": null
     },
     {
@@ -6196,11 +10622,21 @@
     {
       "election_type": "Primary_R",
       "chamber": "Senate",
-      "district": "8",
-      "seat_label": "GA Senate 8",
-      "pres_margin": "-34.5",
-      "holder_party": "R",
-      "candidate": "Russ Goodman",
+      "district": "9",
+      "seat_label": "GA Senate 9",
+      "pres_margin": "+20.6",
+      "holder_party": "D",
+      "candidate": "Michael Johnson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "10",
+      "seat_label": "GA Senate 10",
+      "pres_margin": "+69.7",
+      "holder_party": "D",
+      "candidate": "Furquan Rahman Stafford",
       "is_open_seat": null
     },
     {
@@ -6220,7 +10656,7 @@
       "seat_label": "GA Senate 12",
       "pres_margin": "+14.1",
       "holder_party": "D",
-      "candidate": "Terence Fowler",
+      "candidate": "Terence Leon Fowler Sr",
       "is_open_seat": null
     },
     {
@@ -6236,21 +10672,21 @@
     {
       "election_type": "Primary_R",
       "chamber": "Senate",
-      "district": "16",
-      "seat_label": "GA Senate 16",
-      "pres_margin": "-26.0",
-      "holder_party": "R",
-      "candidate": "Marty Harbin",
+      "district": "15",
+      "seat_label": "GA Senate 15",
+      "pres_margin": "+29.9",
+      "holder_party": "D",
+      "candidate": "Charles Herbert Hand Iii",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "Senate",
-      "district": "19",
-      "seat_label": "GA Senate 19",
-      "pres_margin": "-53.4",
+      "district": "16",
+      "seat_label": "GA Senate 16",
+      "pres_margin": "-26.0",
       "holder_party": "R",
-      "candidate": "Dwayne H. Gillis",
+      "candidate": "Marty H Harbin Jr",
       "is_open_seat": null
     },
     {
@@ -6260,7 +10696,17 @@
       "seat_label": "GA Senate 20",
       "pres_margin": "-32.4",
       "holder_party": "R",
-      "candidate": "Larry Walker",
+      "candidate": "Lawrence Cohen Walker Iii",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "21",
+      "seat_label": "GA Senate 21",
+      "pres_margin": "-34.0",
+      "holder_party": "R",
+      "candidate": "Jason T. Dickerson",
       "is_open_seat": null
     },
     {
@@ -6286,11 +10732,11 @@
     {
       "election_type": "Primary_R",
       "chamber": "Senate",
-      "district": "27",
-      "seat_label": "GA Senate 27",
-      "pres_margin": "-38.1",
+      "district": "25",
+      "seat_label": "GA Senate 25",
+      "pres_margin": "-23.5",
       "holder_party": "R",
-      "candidate": "Mike Dudgeon",
+      "candidate": "Ricky Alvin Williams",
       "is_open_seat": null
     },
     {
@@ -6300,7 +10746,7 @@
       "seat_label": "GA Senate 28",
       "pres_margin": "+51.4",
       "holder_party": "D",
-      "candidate": "Matt Brass",
+      "candidate": null,
       "is_open_seat": null
     },
     {
@@ -6336,11 +10782,71 @@
     {
       "election_type": "Primary_R",
       "chamber": "Senate",
+      "district": "36",
+      "seat_label": "GA Senate 36",
+      "pres_margin": "+76.9",
+      "holder_party": "D",
+      "candidate": "Katie Corkren",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
       "district": "37",
       "seat_label": "GA Senate 37",
       "pres_margin": "-8.5",
       "holder_party": "R",
       "candidate": "Ed Setzler",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "39",
+      "seat_label": "GA Senate 39",
+      "pres_margin": "+69.9",
+      "holder_party": "D",
+      "candidate": "John Franklin Guest Jr.",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "40",
+      "seat_label": "GA Senate 40",
+      "pres_margin": "+27.9",
+      "holder_party": "D",
+      "candidate": "Melina Renee Mast",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "41",
+      "seat_label": "GA Senate 41",
+      "pres_margin": "+62.9",
+      "holder_party": "D",
+      "candidate": "Jeffery Eugene Newlin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "42",
+      "seat_label": "GA Senate 42",
+      "pres_margin": "-11.8",
+      "holder_party": "R",
+      "candidate": "Bret Austin Dunn",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "44",
+      "seat_label": "GA Senate 44",
+      "pres_margin": "+77.5",
+      "holder_party": "D",
+      "candidate": "Ngozi Orabueze",
       "is_open_seat": null
     },
     {
@@ -6386,21 +10892,31 @@
     {
       "election_type": "Primary_R",
       "chamber": "Senate",
-      "district": "51",
-      "seat_label": "GA Senate 51",
-      "pres_margin": "-64.2",
+      "district": "52",
+      "seat_label": "GA Senate 52",
+      "pres_margin": "-48.1",
       "holder_party": "R",
-      "candidate": "Will Wade",
+      "candidate": "Charles Edward Hufstetler",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "Senate",
-      "district": "54",
-      "seat_label": "GA Senate 54",
-      "pres_margin": "-55.4",
+      "district": "55",
+      "seat_label": "GA Senate 55",
+      "pres_margin": "+54.4",
+      "holder_party": "D",
+      "candidate": "Mary Williams Benefield",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "56",
+      "seat_label": "GA Senate 56",
+      "pres_margin": "-12.4",
       "holder_party": "R",
-      "candidate": "Chuck Payne",
+      "candidate": "John Albers",
       "is_open_seat": null
     }
   ],
