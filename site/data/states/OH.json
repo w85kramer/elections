@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-08T22:21:53.815775Z",
+  "generated_at": "2026-03-11T13:01:39.706718Z",
   "state": {
     "name": "Ohio",
     "abbr": "OH",
@@ -1452,7 +1452,7 @@
           "party": "R",
           "is_incumbent": false,
           "election_type": "Primary_R",
-          "status": "Filed"
+          "status": "Withdrawn_Pre_Ballot"
         },
         {
           "name": "Vivek Ramaswamy",
@@ -1468,7 +1468,7 @@
         "office": "Attorney General",
         "candidates": [
           {
-            "name": "Elliot Forhan",
+            "name": "Elliott Forhan",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -1884,7 +1884,7 @@
         "candidates": [
           {
             "name": "Ryan McClain",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -2140,7 +2140,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Tom Brinkman Jr.",
+            "name": "Tom Brinkman, Jr.",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2230,7 +2230,7 @@
         "candidates": [
           {
             "name": "Julie Miller",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -2349,7 +2349,7 @@
         "candidates": [
           {
             "name": "Chuck Horn",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -2437,7 +2437,7 @@
         "candidates": [
           {
             "name": "Joshua Umbaugh",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -2506,7 +2506,7 @@
         "candidates": [
           {
             "name": "Zach Hall",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -2606,7 +2606,7 @@
         "candidates": [
           {
             "name": "Jason Purviance",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -2806,7 +2806,7 @@
         "candidates": [
           {
             "name": "Philip L. Pirdy",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -2975,7 +2975,7 @@
         "candidates": [
           {
             "name": "Ron Grethel",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -3057,7 +3057,7 @@
         "candidates": [
           {
             "name": "Justin Peroli",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -3189,7 +3189,7 @@
         "candidates": [
           {
             "name": "Michael Fricke",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -3409,7 +3409,7 @@
         "candidates": [
           {
             "name": "Christopher Elder",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -3433,34 +3433,10 @@
         "district": "83",
         "candidates": [
           {
-            "name": "John Clayton Newlin II",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Pamela Grogean",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
             "name": "Sheila Coressel",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
-          },
-          {
-            "name": "Victoria Maddox",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Tim Barhorst",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
           },
           {
             "name": "Ty Mathews",
@@ -3766,7 +3742,7 @@
         "candidates": [
           {
             "name": "Tim Godwin",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -3936,7 +3912,7 @@
         "candidates": [
           {
             "name": "Kenneth Sharp",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -4823,6 +4799,16 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "83",
+      "seat_label": "OH House 83",
+      "pres_margin": "-45.2",
+      "holder_party": "R",
+      "candidate": "Sheila Coressel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "84",
       "seat_label": "OH House 84",
       "pres_margin": "-64.5",
@@ -5217,7 +5203,7 @@
       "seat_label": "OH House 26",
       "pres_margin": "+41.2",
       "holder_party": "D",
-      "candidate": "Tom Brinkman Jr.",
+      "candidate": "Tom Brinkman, Jr.",
       "is_open_seat": null
     },
     {
@@ -5638,6 +5624,16 @@
       "pres_margin": "-55.8",
       "holder_party": "R",
       "candidate": "Roy Klopfenstein",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "83",
+      "seat_label": "OH House 83",
+      "pres_margin": "-45.2",
+      "holder_party": "R",
+      "candidate": "Ty Mathews",
       "is_open_seat": null
     },
     {

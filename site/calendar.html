@@ -334,6 +334,8 @@
           state: sp.state,
           name: sp.state_name,
           detail: `${sp.seat_label} ${typeLabel}`,
+          chamber: sp.chamber,
+          district: sp.district,
         });
       }
     }
@@ -579,7 +581,10 @@
         for (const evt of group.states) {
           const suffix = evt.detail ? ` — ${evt.detail}` : (evt.subtype && evt.subtype !== 'completed' ? ` (${evt.subtype})` : '');
           const notesSuffix = evt.notes ? `\n${evt.notes}` : '';
-          statesHtml += `<a href="state.html?st=${evt.state}" class="event-state-tag ${group.type}" title="${evt.name}${suffix}${notesSuffix}">${evt.state}${evt.detail ? ': ' + evt.detail : ''}</a>`;
+          const evtHref = (group.type === 'special' && evt.chamber && evt.district != null)
+            ? `district.html?st=${evt.state}&chamber=${encodeURIComponent(evt.chamber)}&d=${encodeURIComponent(evt.district)}`
+            : `state.html?st=${evt.state}`;
+          statesHtml += `<a href="${evtHref}" class="event-state-tag ${group.type}" title="${evt.name}${suffix}${notesSuffix}">${evt.state}${evt.detail ? ': ' + evt.detail : ''}</a>`;
         }
 
         row.innerHTML = `

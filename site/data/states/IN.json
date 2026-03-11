@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-08T22:21:53.815775Z",
+  "generated_at": "2026-03-11T13:01:39.706718Z",
   "state": {
     "name": "Indiana",
     "abbr": "IN",
@@ -93,7 +93,7 @@
           "party": "D",
           "pres_margin": "+57.8",
           "next_election": 2026,
-          "candidate_id": 9014
+          "candidate_id": 28891
         },
         {
           "district": "3",
@@ -1616,7 +1616,7 @@
           {
             "name": "Earl Harris, Jr.",
             "party": "D",
-            "is_incumbent": false,
+            "is_incumbent": true,
             "election_type": "Primary_D"
           }
         ]
@@ -2291,12 +2291,6 @@
           },
           {
             "name": "Nouhad Melki II",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Novhad Melki II",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -4842,6 +4836,16 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "64",
+      "seat_label": "IN House 64",
+      "pres_margin": "-47.3",
+      "holder_party": "R",
+      "candidate": "Candace Greer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "66",
       "seat_label": "IN House 66",
       "pres_margin": "-40.0",
@@ -5036,7 +5040,7 @@
       "seat_label": "IN House 90",
       "pres_margin": "-20.2",
       "holder_party": "R",
-      "candidate": "Kuren Singh Sikand",
+      "candidate": null,
       "is_open_seat": null
     },
     {
@@ -5356,7 +5360,7 @@
       "seat_label": "IN House 12",
       "pres_margin": "+3.9",
       "holder_party": "D",
-      "candidate": "Chris Nelson",
+      "candidate": null,
       "is_open_seat": null
     },
     {
@@ -5527,6 +5531,16 @@
       "pres_margin": "-11.7",
       "holder_party": "R",
       "candidate": "Todd Huston",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "39",
+      "seat_label": "IN House 39",
+      "pres_margin": "-0.4",
+      "holder_party": "R",
+      "candidate": "Danny Lopez",
       "is_open_seat": null
     },
     {

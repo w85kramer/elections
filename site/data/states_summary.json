@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-08T22:21:50.507854Z",
+  "generated_at": "2026-03-11T13:01:35.892290Z",
   "states": {
     "AK": {
       "name": "Alaska",
@@ -48,6 +48,7 @@
         "filing_deadline": "2026-06-01",
         "filing_deadline_legislative": "2026-06-01",
         "filing_deadline_statewide": "2026-06-01",
+        "filing_notes": null,
         "primary_date": "2026-08-18",
         "uncontested": {
           "data_available": false,
@@ -135,13 +136,14 @@
         "filing_deadline": "2026-01-23",
         "filing_deadline_legislative": "2026-01-23",
         "filing_deadline_statewide": "2026-01-23",
+        "filing_notes": null,
         "primary_date": "2026-05-19",
         "uncontested": {
           "data_available": true,
           "primaries_d": {
             "House": {
               "total": 54,
-              "uncontested": 37
+              "uncontested": 38
             },
             "Senate": {
               "total": 22,
@@ -151,7 +153,7 @@
           "primaries_r": {
             "House": {
               "total": 85,
-              "uncontested": 66
+              "uncontested": 68
             },
             "Senate": {
               "total": 31,
@@ -234,6 +236,7 @@
         "filing_deadline": "2025-11-12",
         "filing_deadline_legislative": "2025-11-12",
         "filing_deadline_statewide": "2025-11-12",
+        "filing_notes": null,
         "primary_date": "2026-03-03",
         "uncontested": {
           "data_available": true,
@@ -333,6 +336,7 @@
         "filing_deadline": "2026-03-23",
         "filing_deadline_legislative": "2026-03-23",
         "filing_deadline_statewide": "2026-03-23",
+        "filing_notes": null,
         "primary_date": "2026-07-21",
         "uncontested": {
           "data_available": true,
@@ -444,14 +448,14 @@
         "filing_deadline": "2026-03-06",
         "filing_deadline_legislative": "2026-03-06",
         "filing_deadline_statewide": "2026-03-06",
+        "filing_notes": "Extension through Mar 11 for districts where incumbent did not file",
         "primary_date": "2026-06-02",
         "uncontested": {
           "data_available": false,
           "primaries_d": {},
           "primaries_r": {},
           "general": null
-        },
-        "filing_notes": "Extension through Mar 11 for districts where incumbent did not file"
+        }
       },
       "ballot_measures_2026": 3
     },
@@ -520,6 +524,7 @@
         "filing_deadline": "2026-03-18",
         "filing_deadline_legislative": "2026-03-18",
         "filing_deadline_statewide": "2026-03-18",
+        "filing_notes": null,
         "primary_date": "2026-06-30",
         "uncontested": {
           "data_available": true,
@@ -546,7 +551,7 @@
           "general": null
         }
       },
-      "ballot_measures_2026": 2
+      "ballot_measures_2026": 3
     },
     "CT": {
       "name": "Connecticut",
@@ -619,6 +624,7 @@
         "filing_deadline": "2026-06-09",
         "filing_deadline_legislative": "2026-06-09",
         "filing_deadline_statewide": "2026-06-09",
+        "filing_notes": null,
         "primary_date": "2026-08-11",
         "uncontested": {
           "data_available": true,
@@ -718,6 +724,7 @@
         "filing_deadline": "2026-07-14",
         "filing_deadline_legislative": "2026-07-14",
         "filing_deadline_statewide": null,
+        "filing_notes": null,
         "primary_date": "2026-09-15",
         "uncontested": {
           "data_available": true,
@@ -807,6 +814,7 @@
         "filing_deadline": "2026-06-12",
         "filing_deadline_legislative": "2026-06-12",
         "filing_deadline_statewide": "2026-06-12",
+        "filing_notes": null,
         "primary_date": "2026-08-18",
         "uncontested": {
           "data_available": true,
@@ -918,27 +926,28 @@
         "filing_deadline": "2026-03-06",
         "filing_deadline_legislative": "2026-03-06",
         "filing_deadline_statewide": "2026-03-06",
+        "filing_notes": null,
         "primary_date": "2026-05-19",
         "uncontested": {
           "data_available": true,
           "primaries_d": {
             "House": {
-              "total": 60,
-              "uncontested": 54
+              "total": 161,
+              "uncontested": 119
             },
             "Senate": {
-              "total": 20,
-              "uncontested": 17
+              "total": 46,
+              "uncontested": 23
             }
           },
           "primaries_r": {
             "House": {
-              "total": 67,
-              "uncontested": 62
+              "total": 139,
+              "uncontested": 119
             },
             "Senate": {
-              "total": 28,
-              "uncontested": 24
+              "total": 48,
+              "uncontested": 35
             }
           },
           "general": null
@@ -993,6 +1002,7 @@
         "filing_deadline": "2026-06-02",
         "filing_deadline_legislative": "2026-06-02",
         "filing_deadline_statewide": "2026-06-02",
+        "filing_notes": null,
         "primary_date": "2026-08-08",
         "uncontested": {
           "data_available": true,
@@ -1085,6 +1095,7 @@
         "filing_deadline": "2026-03-13",
         "filing_deadline_legislative": "2026-03-13",
         "filing_deadline_statewide": "2026-03-13",
+        "filing_notes": null,
         "primary_date": "2026-06-02",
         "uncontested": {
           "data_available": true,
@@ -1190,27 +1201,28 @@
         "filing_deadline": "2026-02-27",
         "filing_deadline_legislative": "2026-02-27",
         "filing_deadline_statewide": "2026-02-27",
+        "filing_notes": null,
         "primary_date": "2026-05-19",
         "uncontested": {
           "data_available": true,
           "primaries_d": {
             "House": {
-              "total": 29,
-              "uncontested": 24
+              "total": 59,
+              "uncontested": 55
             },
             "Senate": {
-              "total": 15,
-              "uncontested": 14
+              "total": 34,
+              "uncontested": 32
             }
           },
           "primaries_r": {
             "House": {
-              "total": 64,
-              "uncontested": 38
+              "total": 68,
+              "uncontested": 36
             },
             "Senate": {
-              "total": 33,
-              "uncontested": 20
+              "total": 35,
+              "uncontested": 21
             }
           },
           "general": null
@@ -1289,13 +1301,14 @@
         "filing_deadline": "2025-11-03",
         "filing_deadline_legislative": "2025-11-03",
         "filing_deadline_statewide": "2025-11-03",
+        "filing_notes": null,
         "primary_date": "2026-03-17",
         "uncontested": {
           "data_available": true,
           "primaries_d": {
             "House": {
-              "total": 96,
-              "uncontested": 83
+              "total": 95,
+              "uncontested": 84
             },
             "Senate": {
               "total": 32,
@@ -1308,8 +1321,8 @@
               "uncontested": 69
             },
             "Senate": {
-              "total": 30,
-              "uncontested": 27
+              "total": 29,
+              "uncontested": 26
             }
           },
           "general": null
@@ -1388,13 +1401,14 @@
         "filing_deadline": "2026-02-06",
         "filing_deadline_legislative": "2026-02-06",
         "filing_deadline_statewide": null,
+        "filing_notes": null,
         "primary_date": "2026-05-05",
         "uncontested": {
           "data_available": true,
           "primaries_d": {
             "House": {
               "total": 91,
-              "uncontested": 74
+              "uncontested": 75
             },
             "Senate": {
               "total": 25,
@@ -1404,7 +1418,7 @@
           "primaries_r": {
             "House": {
               "total": 79,
-              "uncontested": 55
+              "uncontested": 56
             },
             "Senate": {
               "total": 24,
@@ -1487,6 +1501,7 @@
         "filing_deadline": "2026-06-01",
         "filing_deadline_legislative": "2026-06-01",
         "filing_deadline_statewide": "2026-06-01",
+        "filing_notes": null,
         "primary_date": "2026-08-04",
         "uncontested": {
           "data_available": true,
@@ -1584,6 +1599,7 @@
         "filing_deadline": "2026-01-09",
         "filing_deadline_legislative": "2026-01-09",
         "filing_deadline_statewide": null,
+        "filing_notes": null,
         "primary_date": "2026-05-19",
         "uncontested": {
           "data_available": true,
@@ -1594,7 +1610,7 @@
             },
             "Senate": {
               "total": 10,
-              "uncontested": 6
+              "uncontested": 7
             }
           },
           "primaries_r": {
@@ -1604,7 +1620,7 @@
             },
             "Senate": {
               "total": 19,
-              "uncontested": 13
+              "uncontested": 14
             }
           },
           "general": null
@@ -1689,6 +1705,7 @@
         "filing_deadline": null,
         "filing_deadline_legislative": null,
         "filing_deadline_statewide": null,
+        "filing_notes": null,
         "primary_date": null,
         "uncontested": {
           "data_available": false,
@@ -1770,6 +1787,7 @@
         "filing_deadline": "2026-05-26",
         "filing_deadline_legislative": "2026-05-26",
         "filing_deadline_statewide": "2026-06-02",
+        "filing_notes": null,
         "primary_date": "2026-09-01",
         "uncontested": {
           "data_available": false,
@@ -1839,27 +1857,28 @@
         "filing_deadline": "2026-02-24",
         "filing_deadline_legislative": "2026-02-24",
         "filing_deadline_statewide": "2026-02-24",
+        "filing_notes": null,
         "primary_date": "2026-06-23",
         "uncontested": {
           "data_available": true,
           "primaries_d": {
             "House of Delegates": {
-              "total": 126,
-              "uncontested": 73
+              "total": 68,
+              "uncontested": 16
             },
             "Senate": {
-              "total": 44,
-              "uncontested": 26
+              "total": 47,
+              "uncontested": 31
             }
           },
           "primaries_r": {
             "House of Delegates": {
-              "total": 63,
-              "uncontested": 39
+              "total": 47,
+              "uncontested": 24
             },
             "Senate": {
-              "total": 25,
-              "uncontested": 17
+              "total": 26,
+              "uncontested": 20
             }
           },
           "general": null
@@ -1908,6 +1927,7 @@
         "filing_deadline": "2026-03-16",
         "filing_deadline_legislative": "2026-03-16",
         "filing_deadline_statewide": "2026-03-16",
+        "filing_notes": null,
         "primary_date": "2026-06-09",
         "uncontested": {
           "data_available": true,
@@ -1995,6 +2015,7 @@
         "filing_deadline": "2026-04-21",
         "filing_deadline_legislative": "2026-04-21",
         "filing_deadline_statewide": "2026-04-21",
+        "filing_notes": null,
         "primary_date": "2026-08-04",
         "uncontested": {
           "data_available": true,
@@ -2088,6 +2109,7 @@
         "filing_deadline": "2026-06-02",
         "filing_deadline_legislative": "2026-06-02",
         "filing_deadline_statewide": "2026-06-02",
+        "filing_notes": null,
         "primary_date": "2026-08-11",
         "uncontested": {
           "data_available": true,
@@ -2187,6 +2209,7 @@
         "filing_deadline": "2026-03-31",
         "filing_deadline_legislative": "2026-03-31",
         "filing_deadline_statewide": null,
+        "filing_notes": null,
         "primary_date": "2026-08-04",
         "uncontested": {
           "data_available": true,
@@ -2298,6 +2321,7 @@
         "filing_deadline": null,
         "filing_deadline_legislative": null,
         "filing_deadline_statewide": null,
+        "filing_notes": null,
         "primary_date": null,
         "uncontested": {
           "data_available": false,
@@ -2385,27 +2409,28 @@
         "filing_deadline": "2026-03-04",
         "filing_deadline_legislative": "2026-03-04",
         "filing_deadline_statewide": null,
+        "filing_notes": null,
         "primary_date": "2026-06-02",
         "uncontested": {
           "data_available": true,
           "primaries_d": {
             "House": {
-              "total": 32,
-              "uncontested": 26
+              "total": 93,
+              "uncontested": 78
             },
             "Senate": {
-              "total": 6,
-              "uncontested": 5
+              "total": 25,
+              "uncontested": 19
             }
           },
           "primaries_r": {
             "House": {
-              "total": 52,
-              "uncontested": 42
+              "total": 92,
+              "uncontested": 59
             },
             "Senate": {
-              "total": 16,
-              "uncontested": 13
+              "total": 22,
+              "uncontested": 10
             }
           },
           "general": null
@@ -2508,6 +2533,7 @@
         "filing_deadline": "2025-12-19",
         "filing_deadline_legislative": "2025-12-19",
         "filing_deadline_statewide": null,
+        "filing_notes": null,
         "primary_date": "2026-03-03",
         "uncontested": {
           "data_available": true,
@@ -2625,6 +2651,7 @@
         "filing_deadline": "2026-04-06",
         "filing_deadline_legislative": "2026-04-06",
         "filing_deadline_statewide": null,
+        "filing_notes": null,
         "primary_date": "2026-06-09",
         "uncontested": {
           "data_available": true,
@@ -2712,6 +2739,7 @@
         "filing_deadline": "2026-03-02",
         "filing_deadline_legislative": "2026-03-02",
         "filing_deadline_statewide": "2026-03-02",
+        "filing_notes": null,
         "primary_date": "2026-05-12",
         "uncontested": {
           "data_available": false,
@@ -2734,10 +2762,10 @@
       "chambers": {
         "House": {
           "total": 400,
-          "d": 178,
+          "d": 179,
           "r": 218,
           "other": 0,
-          "vacant": 8,
+          "vacant": 7,
           "seats_up_2026": 400
         },
         "Senate": {
@@ -2763,6 +2791,7 @@
         "filing_deadline": "2026-06-12",
         "filing_deadline_legislative": "2026-06-12",
         "filing_deadline_statewide": "2026-06-12",
+        "filing_notes": null,
         "primary_date": "2026-09-08",
         "uncontested": {
           "data_available": false,
@@ -2820,6 +2849,7 @@
         "filing_deadline": null,
         "filing_deadline_legislative": null,
         "filing_deadline_statewide": null,
+        "filing_notes": null,
         "primary_date": null,
         "uncontested": {
           "data_available": false,
@@ -2901,6 +2931,7 @@
         "filing_deadline": "2026-02-03",
         "filing_deadline_legislative": "2026-03-10",
         "filing_deadline_statewide": "2026-02-03",
+        "filing_notes": null,
         "primary_date": "2026-06-02",
         "uncontested": {
           "data_available": true,
@@ -2992,6 +3023,7 @@
         "filing_deadline": "2026-03-13",
         "filing_deadline_legislative": "2026-03-13",
         "filing_deadline_statewide": "2026-03-13",
+        "filing_notes": null,
         "primary_date": "2026-06-09",
         "uncontested": {
           "data_available": true,
@@ -3075,6 +3107,7 @@
         "filing_deadline": "2026-04-06",
         "filing_deadline_legislative": "2026-04-06",
         "filing_deadline_statewide": "2026-04-06",
+        "filing_notes": null,
         "primary_date": "2026-06-23",
         "uncontested": {
           "data_available": true,
@@ -3174,13 +3207,14 @@
         "filing_deadline": "2026-02-04",
         "filing_deadline_legislative": "2026-02-04",
         "filing_deadline_statewide": "2026-02-04",
+        "filing_notes": null,
         "primary_date": "2026-05-05",
         "uncontested": {
           "data_available": true,
           "primaries_d": {
             "House": {
               "total": 96,
-              "uncontested": 74
+              "uncontested": 75
             },
             "Senate": {
               "total": 15,
@@ -3190,7 +3224,7 @@
           "primaries_r": {
             "House": {
               "total": 89,
-              "uncontested": 71
+              "uncontested": 72
             },
             "Senate": {
               "total": 16,
@@ -3285,6 +3319,7 @@
         "filing_deadline": "2026-04-03",
         "filing_deadline_legislative": "2026-04-03",
         "filing_deadline_statewide": "2026-04-03",
+        "filing_notes": null,
         "primary_date": "2026-06-16",
         "uncontested": {
           "data_available": true,
@@ -3384,6 +3419,7 @@
         "filing_deadline": "2026-03-10",
         "filing_deadline_legislative": "2026-03-10",
         "filing_deadline_statewide": "2026-03-10",
+        "filing_notes": null,
         "primary_date": "2026-05-19",
         "uncontested": {
           "data_available": true,
@@ -3477,6 +3513,7 @@
         "filing_deadline": "2026-03-10",
         "filing_deadline_legislative": "2026-03-10",
         "filing_deadline_statewide": "2026-03-10",
+        "filing_notes": null,
         "primary_date": "2026-05-19",
         "uncontested": {
           "data_available": true,
@@ -3566,6 +3603,7 @@
         "filing_deadline": "2026-06-24",
         "filing_deadline_legislative": "2026-06-24",
         "filing_deadline_statewide": "2026-06-24",
+        "filing_notes": null,
         "primary_date": "2026-09-08",
         "uncontested": {
           "data_available": true,
@@ -3668,6 +3706,7 @@
         "filing_deadline": "2026-03-30",
         "filing_deadline_legislative": "2026-03-30",
         "filing_deadline_statewide": "2026-03-30",
+        "filing_notes": null,
         "primary_date": "2026-06-09",
         "uncontested": {
           "data_available": true,
@@ -3754,6 +3793,7 @@
         "filing_deadline": "2026-03-31",
         "filing_deadline_legislative": "2026-03-31",
         "filing_deadline_statewide": "2026-03-31",
+        "filing_notes": null,
         "primary_date": "2026-06-02",
         "uncontested": {
           "data_available": true,
@@ -3819,6 +3859,7 @@
         "filing_deadline": "2026-03-10",
         "filing_deadline_legislative": "2026-03-10",
         "filing_deadline_statewide": "2026-03-10",
+        "filing_notes": null,
         "primary_date": "2026-08-06",
         "uncontested": {
           "data_available": true,
@@ -3912,6 +3953,7 @@
         "filing_deadline": "2025-12-08",
         "filing_deadline_legislative": "2025-12-08",
         "filing_deadline_statewide": "2025-12-08",
+        "filing_notes": null,
         "primary_date": "2026-03-03",
         "uncontested": {
           "data_available": true,
@@ -4005,13 +4047,14 @@
         "filing_deadline": "2026-01-08",
         "filing_deadline_legislative": "2026-01-08",
         "filing_deadline_statewide": null,
+        "filing_notes": null,
         "primary_date": "2026-06-23",
         "uncontested": {
           "data_available": true,
           "primaries_d": {
             "House": {
-              "total": 64,
-              "uncontested": 48
+              "total": 65,
+              "uncontested": 49
             },
             "Senate": {
               "total": 14,
@@ -4086,6 +4129,7 @@
         "filing_deadline": null,
         "filing_deadline_legislative": null,
         "filing_deadline_statewide": null,
+        "filing_notes": null,
         "primary_date": null,
         "uncontested": {
           "data_available": false,
@@ -4167,6 +4211,7 @@
         "filing_deadline": "2026-05-28",
         "filing_deadline_legislative": "2026-05-28",
         "filing_deadline_statewide": "2026-05-28",
+        "filing_notes": null,
         "primary_date": "2026-08-11",
         "uncontested": {
           "data_available": false,
@@ -4260,6 +4305,7 @@
         "filing_deadline": "2026-05-08",
         "filing_deadline_legislative": "2026-05-08",
         "filing_deadline_statewide": null,
+        "filing_notes": null,
         "primary_date": "2026-08-04",
         "uncontested": {
           "data_available": false,
@@ -4341,6 +4387,7 @@
         "filing_deadline": "2026-06-01",
         "filing_deadline_legislative": "2026-06-01",
         "filing_deadline_statewide": "2026-06-01",
+        "filing_notes": null,
         "primary_date": "2026-08-11",
         "uncontested": {
           "data_available": true,
@@ -4440,13 +4487,14 @@
         "filing_deadline": "2026-01-31",
         "filing_deadline_legislative": "2026-01-31",
         "filing_deadline_statewide": null,
+        "filing_notes": null,
         "primary_date": "2026-05-12",
         "uncontested": {
           "data_available": true,
           "primaries_d": {
             "House of Delegates": {
-              "total": 90,
-              "uncontested": 68
+              "total": 91,
+              "uncontested": 72
             },
             "Senate": {
               "total": 16,
@@ -4456,7 +4504,7 @@
           "primaries_r": {
             "House of Delegates": {
               "total": 94,
-              "uncontested": 42
+              "uncontested": 48
             },
             "Senate": {
               "total": 17,
@@ -4527,6 +4575,7 @@
         "filing_deadline": "2026-05-29",
         "filing_deadline_legislative": "2026-05-29",
         "filing_deadline_statewide": "2026-05-29",
+        "filing_notes": null,
         "primary_date": "2026-08-18",
         "uncontested": {
           "data_available": true,
@@ -5268,7 +5317,17 @@
       "state": "NH",
       "state_name": "New Hampshire",
       "date": "2026-01-20",
-      "type": "Special_Primary",
+      "type": "Special_Primary_R",
+      "seat_label": "NH House Carroll-7",
+      "chamber": "House",
+      "district": "Carroll-7",
+      "result_status": "Certified"
+    },
+    {
+      "state": "NH",
+      "state_name": "New Hampshire",
+      "date": "2026-01-20",
+      "type": "Special_Primary_D",
       "seat_label": "NH House Carroll-7",
       "chamber": "House",
       "district": "Carroll-7",
@@ -5542,7 +5601,7 @@
       "seat_label": "GA House 130",
       "chamber": "House",
       "district": "130",
-      "result_status": null
+      "result_status": "Called"
     },
     {
       "state": "GA",
@@ -5552,7 +5611,7 @@
       "seat_label": "GA House 94",
       "chamber": "House",
       "district": "94",
-      "result_status": null
+      "result_status": "Called"
     },
     {
       "state": "GA",
@@ -5562,7 +5621,7 @@
       "seat_label": "GA Senate 53",
       "chamber": "Senate",
       "district": "53",
-      "result_status": null
+      "result_status": "Called"
     },
     {
       "state": "NH",
@@ -5572,7 +5631,7 @@
       "seat_label": "NH House Carroll-7",
       "chamber": "House",
       "district": "Carroll-7",
-      "result_status": null
+      "result_status": "Called"
     },
     {
       "state": "LA",
@@ -5732,6 +5791,26 @@
       "seat_label": "NE Legislature 41",
       "chamber": "Legislature",
       "district": "41",
+      "result_status": null
+    },
+    {
+      "state": "WV",
+      "state_name": "West Virginia",
+      "date": "2026-05-12",
+      "type": "Special_Primary_R",
+      "seat_label": "WV Senate 17 Seat B",
+      "chamber": "Senate",
+      "district": "17",
+      "result_status": null
+    },
+    {
+      "state": "WV",
+      "state_name": "West Virginia",
+      "date": "2026-05-12",
+      "type": "Special_Primary_D",
+      "seat_label": "WV Senate 17 Seat B",
+      "chamber": "Senate",
+      "district": "17",
       "result_status": null
     },
     {
@@ -5900,6 +5979,16 @@
       "date": "2026-11-03",
       "type": "Special",
       "seat_label": "OK Senate 17",
+      "chamber": "Senate",
+      "district": "17",
+      "result_status": null
+    },
+    {
+      "state": "WV",
+      "state_name": "West Virginia",
+      "date": "2026-11-03",
+      "type": "Special",
+      "seat_label": "WV Senate 17 Seat B",
       "chamber": "Senate",
       "district": "17",
       "result_status": null

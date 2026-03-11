@@ -369,7 +369,7 @@
     for (const sp of data.special_elections) {
       if (sp.date && sp.result_status !== 'Certified' && sp.result_status !== 'Called') {
         const typeLabel = sp.type.replace(/_/g, ' ');
-        deadlines.push({ date: sp.date, text: `${sp.state_name} ${sp.seat_label} ${typeLabel}`, state: sp.state, type: 'special' });
+        deadlines.push({ date: sp.date, text: `${sp.state_name} ${sp.seat_label} ${typeLabel}`, state: sp.state, type: 'special', chamber: sp.chamber, district: sp.district });
       }
     }
   }
@@ -412,7 +412,11 @@
     const li = document.createElement('li');
     if (d.type === 'primary') li.className = 'dl-primary';
     else if (d.type === 'special') li.className = 'dl-special';
-    li.innerHTML = `<span class="dl-date">${formatDateShort(d.date)}</span><span class="dl-text">${d.text}</span>`;
+    const dlLink = (d.type === 'special' && d.chamber && d.district != null)
+      ? `district.html?st=${d.state}&chamber=${encodeURIComponent(d.chamber)}&d=${encodeURIComponent(d.district)}`
+      : (d.state ? `state.html?st=${d.state}` : null);
+    const dlTextHtml = dlLink ? `<a href="${dlLink}" style="color:inherit;text-decoration:none">${d.text}</a>` : d.text;
+    li.innerHTML = `<span class="dl-date">${formatDateShort(d.date)}</span><span class="dl-text">${dlTextHtml}</span>`;
     dl.appendChild(li);
   }
   if (upcomingDeadlines.length === 0) {

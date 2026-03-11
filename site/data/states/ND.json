@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-08T22:21:53.815775Z",
+  "generated_at": "2026-03-11T13:01:39.706718Z",
   "state": {
     "name": "North Dakota",
     "abbr": "ND",
@@ -922,8 +922,7 @@
           "name": "Dustin McNally",
           "party": "R",
           "pres_margin": "-18.7",
-          "next_election": 2028,
-          "candidate_id": 14140
+          "next_election": 2028
         },
         {
           "district": "42",
@@ -1695,16 +1694,6 @@
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "13",
-      "seat_label": "ND House 13 Seat A",
-      "pres_margin": "-11.4",
-      "holder_party": "R",
-      "candidate": "Jim Jonas",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_R",
-      "chamber": "House",
-      "district": "13",
       "seat_label": "ND House 13 Seat B",
       "pres_margin": "-11.4",
       "holder_party": "R",
@@ -1714,11 +1703,11 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "27",
-      "seat_label": "ND House 27 Seat A",
-      "pres_margin": "-21.1",
+      "district": "13",
+      "seat_label": "ND House 13 Seat A",
+      "pres_margin": "-11.4",
       "holder_party": "R",
-      "candidate": "Shawn Kessel",
+      "candidate": "Jim Jonas",
       "is_open_seat": null
     },
     {
@@ -1729,6 +1718,16 @@
       "pres_margin": "-21.1",
       "holder_party": "R",
       "candidate": "Greg Stemen",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "27",
+      "seat_label": "ND House 27 Seat A",
+      "pres_margin": "-21.1",
+      "holder_party": "R",
+      "candidate": "Shawn Kessel",
       "is_open_seat": null
     },
     {
@@ -1816,20 +1815,20 @@
     {
       "number": "Constitutional Measure 1",
       "title": "Constitutional Measure 1",
-      "description": "Create a single-subject requirement for initiated and legislatively referred constitutional amendments",
-      "type": "Legislative Constitutional Amendment",
-      "status": "On Ballot",
-      "result": "Pending",
-      "date": "2026-06-09"
-    },
-    {
-      "number": "Constitutional Measure 1",
-      "title": "Constitutional Measure 1",
       "description": "Establish term limits for state legislators of four complete four-year terms regardless of chamber; repeal provisions from Constitutional Measure 1 of 2022",
       "type": "Legislative Constitutional Amendment",
       "status": "On Ballot",
       "result": "Pending",
       "date": "2026-11-03"
+    },
+    {
+      "number": "Constitutional Measure 1",
+      "title": "Constitutional Measure 1",
+      "description": "Create a single-subject requirement for initiated and legislatively referred constitutional amendments",
+      "type": "Legislative Constitutional Amendment",
+      "status": "On Ballot",
+      "result": "Pending",
+      "date": "2026-06-09"
     },
     {
       "number": "Constitutional Measure 2",

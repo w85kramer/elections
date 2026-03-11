@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-08T22:21:53.815775Z",
+  "generated_at": "2026-03-11T13:01:39.706718Z",
   "state": {
     "name": "Alabama",
     "abbr": "AL",
@@ -2714,12 +2714,6 @@
           {
             "name": "Kristin Nelson",
             "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Kristin Nelson",
-            "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
           },
@@ -5287,6 +5281,16 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "21",
+      "seat_label": "AL House 21",
+      "pres_margin": "-19.2",
+      "holder_party": "R",
+      "candidate": "Forrest Satterfield",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "28",
       "seat_label": "AL House 28",
       "pres_margin": "-26.8",
@@ -5521,7 +5525,7 @@
       "seat_label": "AL House 93",
       "pres_margin": "-49.8",
       "holder_party": "R",
-      "candidate": "Klenton Smith",
+      "candidate": null,
       "is_open_seat": null
     },
     {
@@ -5681,7 +5685,7 @@
       "seat_label": "AL Senate 21",
       "pres_margin": "-31.1",
       "holder_party": "R",
-      "candidate": "Jodie Minor",
+      "candidate": null,
       "is_open_seat": null
     },
     {
@@ -5812,6 +5816,16 @@
       "pres_margin": "-29.8",
       "holder_party": "R",
       "candidate": "Andy Whitt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "7",
+      "seat_label": "AL House 7",
+      "pres_margin": "-57.0",
+      "holder_party": "R",
+      "candidate": "Ernie Yarbrough",
       "is_open_seat": null
     },
     {
@@ -6062,6 +6076,16 @@
       "pres_margin": "-48.1",
       "holder_party": "R",
       "candidate": "Randy Wood",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "38",
+      "seat_label": "AL House 38",
+      "pres_margin": "-43.1",
+      "holder_party": "R",
+      "candidate": "Kristin Nelson",
       "is_open_seat": null
     },
     {
@@ -6571,7 +6595,7 @@
       "seat_label": "AL Senate 24",
       "pres_margin": "+17.1",
       "holder_party": "D",
-      "candidate": "Richard Benderson",
+      "candidate": null,
       "is_open_seat": null
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-08T22:21:53.815775Z",
+  "generated_at": "2026-03-11T13:01:39.706718Z",
   "state": {
     "name": "Kentucky",
     "abbr": "KY",
@@ -1752,13 +1752,13 @@
         "district": "12",
         "candidates": [
           {
-            "name": "Jim Gooch",
+            "name": "Jim Gooch Jr.",
             "party": "R",
             "is_incumbent": true,
             "election_type": "General"
           },
           {
-            "name": "Jim Gooch",
+            "name": "Jim Gooch Jr.",
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
@@ -3400,7 +3400,7 @@
           },
           {
             "name": "Geoff M. Young",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -3461,7 +3461,7 @@
         "district": "77",
         "candidates": [
           {
-            "name": "George Brown",
+            "name": "George Brown Jr.",
             "party": "D",
             "is_incumbent": true,
             "election_type": "General"
@@ -3473,7 +3473,7 @@
             "election_type": "General"
           },
           {
-            "name": "George Brown",
+            "name": "George Brown Jr.",
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
@@ -3893,7 +3893,7 @@
             "election_type": "Primary_R"
           },
           {
-            "name": "Willie Crase",
+            "name": "Willie Crase Jr.",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4904,7 +4904,7 @@
       "seat_label": "KY House 77",
       "pres_margin": "+44.4",
       "holder_party": "D",
-      "candidate": "George Brown",
+      "candidate": "George Brown Jr.",
       "is_open_seat": null
     },
     {
@@ -5025,6 +5025,16 @@
       "pres_margin": "-29.5",
       "holder_party": "R",
       "candidate": "Christopher Gatrost",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "12",
+      "seat_label": "KY Senate 12",
+      "pres_margin": "-17.7",
+      "holder_party": "R",
+      "candidate": "Tyler Dean",
       "is_open_seat": null
     },
     {
@@ -5164,7 +5174,7 @@
       "seat_label": "KY House 12",
       "pres_margin": "-59.5",
       "holder_party": "R",
-      "candidate": "Jim Gooch",
+      "candidate": "Jim Gooch Jr.",
       "is_open_seat": null
     },
     {
@@ -5905,6 +5915,16 @@
       "pres_margin": "-20.8",
       "holder_party": "R",
       "candidate": "Jared Carpenter",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "38",
+      "seat_label": "KY Senate 38",
+      "pres_margin": "-40.7",
+      "holder_party": "R",
+      "candidate": "Mike Nemes",
       "is_open_seat": null
     }
   ],

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-08T22:21:53.815775Z",
+  "generated_at": "2026-03-11T13:01:39.706718Z",
   "state": {
     "name": "New Mexico",
     "abbr": "NM",
@@ -1036,7 +1036,7 @@
           "party": "D",
           "pres_margin": "+11.2",
           "next_election": 2028,
-          "candidate_id": 11153
+          "candidate_id": 18954
         },
         {
           "district": "24",
@@ -1247,7 +1247,7 @@
           "party": "D",
           "is_incumbent": false,
           "election_type": "Primary_D",
-          "status": "Filed"
+          "status": "Withdrawn_Pre_Ballot"
         },
         {
           "name": "Sam Bregman",
@@ -1295,6 +1295,34 @@
     },
     "statewide": [
       {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Raul Torrez",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Samuel Isaiah Kane Sr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Auditor",
+        "candidates": [
+          {
+            "name": "Joseph M. Maestas",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "office": "Lt. Governor",
         "candidates": [
           {
@@ -1326,6 +1354,46 @@
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Amanda L\u00f3pez Askin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Katharine E. Clark",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sonya Lee Smith",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ramona L. Goolsby",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Laura M. Montoya",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
           }
         ]
       }

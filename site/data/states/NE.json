@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-08T22:21:53.815775Z",
+  "generated_at": "2026-03-11T13:01:39.706718Z",
   "state": {
     "name": "Nebraska",
     "abbr": "NE",
@@ -582,10 +582,659 @@
   "elections_2026": {
     "governor": {
       "forecast": "Solid R",
-      "candidates": []
+      "candidates": [
+        {
+          "name": "Larry Marvin",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Lynne Walz",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Gary L. Rogge",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Jacy Todd",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Jim Pillen",
+          "party": "R",
+          "is_incumbent": true,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "John Walz",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Sal Holguin",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Sheila J. Korth-Focken",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        }
+      ]
     },
-    "statewide": [],
-    "legislative": []
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Jocelyn Brasher",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mike Hilgers",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Auditor",
+        "candidates": [
+          {
+            "name": "Mike Foley",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Lee M. Cimfel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sarah Slattery",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bob Evnen",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Scott Petersen",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Daniel Ebers",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joey Spellerberg",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      }
+    ],
+    "legislative": [
+      {
+        "seat_label": "NE Legislature 2",
+        "chamber": "Legislature",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Caitlin Knutson",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Dean Helmick",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Jayden L. Speed",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 4",
+        "chamber": "Legislature",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Cindy Maxwell-Ostdiek",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "R. Brad von Gillern",
+            "party": "NP",
+            "is_incumbent": true,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 6",
+        "chamber": "Legislature",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Nate Ostdiek",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Patrick Leahy",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 8",
+        "chamber": "Legislature",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Erin Feichtinger",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Josh Livingston",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Terry Brewer",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 10",
+        "chamber": "Legislature",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Cindy Johnson",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Rebecca Rens",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 12",
+        "chamber": "Legislature",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Christy Knorr",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Merv Riepe",
+            "party": "NP",
+            "is_incumbent": true,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Thomas Kastrup",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 14",
+        "chamber": "Legislature",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Bill Bowes",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Jay Jackson",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "SuAnn Witt",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 16",
+        "chamber": "Legislature",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Cindy Chatt",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Ted Japp",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 18",
+        "chamber": "Legislature",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Derek Schwartz",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Jess Goldoni",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Taylor Royal",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 20",
+        "chamber": "Legislature",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Chris Anderson",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Dan Witt",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "John Fredrickson",
+            "party": "NP",
+            "is_incumbent": true,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 22",
+        "chamber": "Legislature",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "Dawson Brunswick",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 24",
+        "chamber": "Legislature",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Dan Winter",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Jana Hughes",
+            "party": "NP",
+            "is_incumbent": true,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 26",
+        "chamber": "Legislature",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "George Dungan",
+            "party": "NP",
+            "is_incumbent": true,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Tobias Howard",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 28",
+        "chamber": "Legislature",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Chad Kulig",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Colby L. Woodson",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Patty Pansing Brooks",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 30",
+        "chamber": "Legislature",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Cally Ideus",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Janet M. Bock",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Timothy Gary Bentzinger",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 32",
+        "chamber": "Legislature",
+        "district": "32",
+        "candidates": [
+          {
+            "name": "Mark Schoenrock",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Shay Smith",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 34",
+        "chamber": "Legislature",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Arron Kowalski",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Ben Blodgett",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Loren Lippincott",
+            "party": "NP",
+            "is_incumbent": true,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 36",
+        "chamber": "Legislature",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Darin Tompkins",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Rick Holdcroft",
+            "party": "NP",
+            "is_incumbent": true,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 38",
+        "chamber": "Legislature",
+        "district": "38",
+        "candidates": [
+          {
+            "name": "Janell Anderson Ehrke",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Jon Capps",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Melanie Knight",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Tim Anderson",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Wes Wilmot",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 40",
+        "chamber": "Legislature",
+        "district": "40",
+        "candidates": [
+          {
+            "name": "Barry DeKay",
+            "party": "NP",
+            "is_incumbent": true,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 42",
+        "chamber": "Legislature",
+        "district": "42",
+        "candidates": [
+          {
+            "name": "Mike Jacobson",
+            "party": "NP",
+            "is_incumbent": true,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Shaylee S. Scranton",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 44",
+        "chamber": "Legislature",
+        "district": "44",
+        "candidates": [
+          {
+            "name": "Teresa Ibach",
+            "party": "NP",
+            "is_incumbent": true,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 46",
+        "chamber": "Legislature",
+        "district": "46",
+        "candidates": [
+          {
+            "name": "Danielle Conrad",
+            "party": "NP",
+            "is_incumbent": true,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      },
+      {
+        "seat_label": "NE Legislature 48",
+        "chamber": "Legislature",
+        "district": "48",
+        "candidates": [
+          {
+            "name": "Brian Hardin",
+            "party": "NP",
+            "is_incumbent": true,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Jessica M. Landers",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Kurt Zadina",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          },
+          {
+            "name": "Samuel C. Landers",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "Primary_Nonpartisan"
+          }
+        ]
+      }
+    ]
   },
   "uncontested_primaries": [],
   "ballot_measures": [

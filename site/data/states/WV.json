@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-08T22:21:53.815775Z",
+  "generated_at": "2026-03-11T13:01:39.706718Z",
   "state": {
     "name": "West Virginia",
     "abbr": "WV",
@@ -1430,8 +1430,7 @@
           "name": "Tom Takubo",
           "party": "R",
           "pres_margin": "-21.3",
-          "next_election": 2028,
-          "candidate_id": 14461
+          "next_election": 2028
         }
       ]
     }
@@ -1497,7 +1496,7 @@
         "candidates": [
           {
             "name": "David Cantrell",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -1875,6 +1874,12 @@
         "chamber": "House of Delegates",
         "district": "17",
         "candidates": [
+          {
+            "name": "Kathryn Weiland",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Jonathan Pinson",
             "party": "R",
@@ -2728,7 +2733,7 @@
         "candidates": [
           {
             "name": "Michael Sigmon",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -2796,7 +2801,7 @@
         "candidates": [
           {
             "name": "Tara Martinez",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -2916,7 +2921,7 @@
         "candidates": [
           {
             "name": "Christopher Balladares",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -3285,7 +3290,7 @@
           {
             "name": "Guy Ward",
             "party": "R",
-            "is_incumbent": false,
+            "is_incumbent": true,
             "election_type": "Primary_R"
           },
           {
@@ -3648,7 +3653,7 @@
         "candidates": [
           {
             "name": "Joshua Nuckolls",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -4104,7 +4109,7 @@
         "candidates": [
           {
             "name": "Chase Linko-Looper",
-            "party": "Other",
+            "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -4393,6 +4398,16 @@
     {
       "election_type": "Primary_D",
       "chamber": "House of Delegates",
+      "district": "2",
+      "seat_label": "WV HoD 2",
+      "pres_margin": "-38.6",
+      "holder_party": "R",
+      "candidate": "Daniel Day",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
       "district": "3",
       "seat_label": "WV HoD 3",
       "pres_margin": "-43.6",
@@ -4487,7 +4502,7 @@
       "seat_label": "WV HoD 15",
       "pres_margin": "-57.2",
       "holder_party": "R",
-      "candidate": "Brandi Hall",
+      "candidate": null,
       "is_open_seat": null
     },
     {
@@ -4498,6 +4513,16 @@
       "pres_margin": "-61.0",
       "holder_party": "R",
       "candidate": "Jason Barr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "17",
+      "seat_label": "WV HoD 17",
+      "pres_margin": "-53.0",
+      "holder_party": "R",
+      "candidate": "Kathryn Weiland",
       "is_open_seat": null
     },
     {
@@ -4577,7 +4602,7 @@
       "seat_label": "WV HoD 26",
       "pres_margin": "-14.7",
       "holder_party": "R",
-      "candidate": "Bryan Adams",
+      "candidate": null,
       "is_open_seat": null
     },
     {
@@ -4708,6 +4733,16 @@
       "pres_margin": "-67.0",
       "holder_party": "R",
       "candidate": "Courtney Vandall",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "45",
+      "seat_label": "WV HoD 45",
+      "pres_margin": "-52.2",
+      "holder_party": "R",
+      "candidate": "Joseph Golden",
       "is_open_seat": null
     },
     {
@@ -4878,6 +4913,16 @@
       "pres_margin": "-41.1",
       "holder_party": "R",
       "candidate": "Frankie Delapas",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House of Delegates",
+      "district": "75",
+      "seat_label": "WV HoD 75",
+      "pres_margin": "-30.2",
+      "holder_party": "R",
+      "candidate": "Linda Longstreth",
       "is_open_seat": null
     },
     {
@@ -5213,6 +5258,16 @@
     {
       "election_type": "Primary_R",
       "chamber": "House of Delegates",
+      "district": "7",
+      "seat_label": "WV HoD 7",
+      "pres_margin": "-58.5",
+      "holder_party": "R",
+      "candidate": "Chuck Sheedy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
       "district": "15",
       "seat_label": "WV HoD 15",
       "pres_margin": "-57.2",
@@ -5343,11 +5398,31 @@
     {
       "election_type": "Primary_R",
       "chamber": "House of Delegates",
+      "district": "44",
+      "seat_label": "WV HoD 44",
+      "pres_margin": "-18.1",
+      "holder_party": "R",
+      "candidate": "Bill Roop",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
       "district": "45",
       "seat_label": "WV HoD 45",
       "pres_margin": "-52.2",
       "holder_party": "R",
       "candidate": "Eric Brooks",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "50",
+      "seat_label": "WV HoD 50",
+      "pres_margin": "-39.3",
+      "holder_party": "R",
+      "candidate": "Elliott Pritt",
       "is_open_seat": null
     },
     {
@@ -5367,7 +5442,7 @@
       "seat_label": "WV HoD 54",
       "pres_margin": "+39.1",
       "holder_party": "D",
-      "candidate": "Julien Aklei",
+      "candidate": null,
       "is_open_seat": null
     },
     {
@@ -5398,6 +5473,16 @@
       "pres_margin": "-26.1",
       "holder_party": "R",
       "candidate": "Andy Shamblin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "60",
+      "seat_label": "WV HoD 60",
+      "pres_margin": "-44.8",
+      "holder_party": "R",
+      "candidate": "Dana Ferrell",
       "is_open_seat": null
     },
     {
@@ -5513,6 +5598,16 @@
     {
       "election_type": "Primary_R",
       "chamber": "House of Delegates",
+      "district": "86",
+      "seat_label": "WV HoD 86",
+      "pres_margin": "-57.4",
+      "holder_party": "R",
+      "candidate": "Steven Schetrom",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
       "district": "88",
       "seat_label": "WV HoD 88",
       "pres_margin": "-66.0",
@@ -5578,6 +5673,16 @@
       "pres_margin": "-35.8",
       "holder_party": "R",
       "candidate": "Chuck Horst",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House of Delegates",
+      "district": "96",
+      "seat_label": "WV HoD 96",
+      "pres_margin": "-37.9",
+      "holder_party": "R",
+      "candidate": "Katie Rose",
       "is_open_seat": null
     },
     {
