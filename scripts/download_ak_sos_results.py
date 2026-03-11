@@ -36,6 +36,9 @@ OUTPUT_PATH = '/tmp/ak_sos_results.json'
 ELECTIONS = [
     # (year, type_code, full_url, election_type_db)
     # Generals
+    (1998, 'general', 'https://www.elections.alaska.gov/results/98GENR/results.htm', 'General'),
+    (2000, 'general', 'https://www.elections.alaska.gov/Core/Archive/00GENR/data/results.htm', 'General'),
+    (2002, 'general', 'https://www.elections.alaska.gov/Core/Archive/02GENR/data/results.htm', 'General'),
     (2004, 'general', 'https://www.elections.alaska.gov/results/04GENR/data/results.htm', 'General'),
     (2006, 'general', 'https://www.elections.alaska.gov/results/06GENR/data/results.htm', 'General'),
     (2008, 'general', 'https://www.elections.alaska.gov/results/08GENR/data/results.htm', 'General'),
@@ -45,6 +48,9 @@ ELECTIONS = [
     (2016, 'general', 'https://www.elections.alaska.gov/results/16GENR/data/results.htm', 'General'),
     (2018, 'general', 'https://www.elections.alaska.gov/results/18GENR/data/results.htm', 'General'),
     # Primaries
+    (1998, 'primary', 'https://www.elections.alaska.gov/results/98PRIM/results.htm', 'Primary'),
+    (2000, 'primary', 'https://www.elections.alaska.gov/Core/Archive/00PRIM/results.htm', 'Primary'),
+    (2002, 'primary', 'https://www.elections.alaska.gov/Core/Archive/02PRIM/data/results.htm', 'Primary'),
     (2004, 'primary', 'https://www.elections.alaska.gov/results/04PRIM/data/results.htm', 'Primary'),
     (2006, 'primary', 'https://www.elections.alaska.gov/results/06PRIM/data/results.htm', 'Primary'),
     (2008, 'primary', 'https://www.elections.alaska.gov/Core/Archive/08PRIM/data/results.html', 'Primary'),
@@ -58,11 +64,19 @@ ELECTIONS = [
 # Map SoS primary party codes to DB election types
 # (R) → Primary_R
 # (ADL), (D-C), (C) → Primary (the non-R primary ballot)
-NON_R_CODES = {'ADL', 'D-C', 'C', 'DC'}
+NON_R_CODES = {'ADL', 'D-C', 'C', 'DC', 'O'}
 
 # AK election dates (general = first Tuesday after first Monday in November,
 # primary varied — looked up from SoS headers)
 ELECTION_DATES = {
+    (1998, 'General'): '1998-11-03',
+    (1998, 'Primary'): '1998-08-25',
+    (2000, 'General'): '2000-11-07',
+    (2000, 'Primary'): '2000-08-22',
+    (2000, 'Primary_R'): '2000-08-22',
+    (2002, 'General'): '2002-11-05',
+    (2002, 'Primary'): '2002-08-27',
+    (2002, 'Primary_R'): '2002-08-27',
     (2004, 'General'): '2004-11-02',
     (2006, 'General'): '2006-11-07',
     (2008, 'General'): '2008-11-04',
@@ -121,17 +135,26 @@ def parse_races(html):
         title = th_match.group(1).strip()
 
         # Filter for state legislative races only
+        # Handles multiple naming conventions across years:
+        #   2002+: SENATE DISTRICT A, HOUSE DISTRICT 1
+        #   1998:  SENATE DIST. A, STATE REP. DIST. 1 (or STATE REP.  DIST. 1)
         leg_match = re.match(
-            r'(SENATE|HOUSE) DISTRICT (\w+)(?:\s*\(([^)]+)\))?$', title
+            r'(?:SENATE DIST(?:RICT|\.)\s+(\w+)|(?:HOUSE DISTRICT|STATE REP\.\s+DIST\.)\s+(\w+))(?:\s*\(([^)]+)\))?$',
+            title
         )
         if not leg_match:
             continue
 
-        chamber_raw = leg_match.group(1)
-        district_id = leg_match.group(2)
+        senate_dist = leg_match.group(1)   # set if Senate match
+        house_dist = leg_match.group(2)    # set if House/State Rep match
         primary_code = leg_match.group(3)  # None for generals
 
-        chamber = 'Senate' if chamber_raw == 'SENATE' else 'House'
+        if senate_dist:
+            chamber = 'Senate'
+            district_id = senate_dist
+        else:
+            chamber = 'House'
+            district_id = house_dist
 
         # Parse metadata rows
         num_precincts = None
