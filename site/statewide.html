@@ -725,8 +725,8 @@
 
       const candParty = cand.party || '?';
       const badge = `<span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty}</span>`;
-      const incStr = cand.is_incumbent ? ' <span class="incumbent-marker">(i)</span>' : '';
-      const wi = cand.is_write_in ? ' <em>W/I</em>' : '';
+      const incStr = cand.is_incumbent ? ' <span class="incumbent-marker" title="incumbent">(i)</span>' : '';
+      const wi = cand.is_write_in ? ' <span class="incumbent-marker" title="write-in candidate">(w/i)</span>' : '';
       const candLink = cand.candidate_id ? `<a href="candidate.html?id=${cand.candidate_id}&st=${stateAbbr}" style="${partyColorStyle(candParty)};text-decoration:none">${cand.name}</a>` : `<span style="${partyColorStyle(candParty)}">${cand.name}</span>`;
       const nameHtml = `<span class="cand-name">${candLink}${incStr}${wi}</span>`;
 
