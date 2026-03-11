@@ -59,6 +59,8 @@ function partyLabel(party) {
     D: 'Democrat', R: 'Republican', I: 'Independent', NP: 'Nonpartisan',
     L: 'Libertarian', G: 'Green', F: 'Forward Party', C: 'Coalition',
     W: 'Working Families Party', WF: 'Working Families Party',
+    AIP: 'Alaskan Independence Party', CP: 'Constitution Party',
+    MOD: 'Moderate Party', PF: 'Peace & Freedom Party',
   };
   return PARTY_NAMES[party] || party || 'Vacant';
 }
