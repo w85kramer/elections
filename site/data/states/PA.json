@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T13:01:39.706718Z",
+  "generated_at": "2026-03-11T23:41:40.385210Z",
   "state": {
     "name": "Pennsylvania",
     "abbr": "PA",
@@ -24,11 +24,11 @@
       "forecast": "Likely D",
       "forecast_details": [
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Likely D"
         },
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Likely D"
         }
       ]
@@ -2638,12 +2638,177 @@
     "statewide": [],
     "legislative": [
       {
+        "seat_label": "PA House 1",
+        "chamber": "House",
+        "district": "1",
+        "candidates": [
+          {
+            "name": "Patrick J Harkins",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 2",
+        "chamber": "House",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Robert E Merski",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 3",
+        "chamber": "House",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Ryan A Bizzarro",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Donna Rae Reese",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 4",
+        "chamber": "House",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Kathryn A Divittorio",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jacob Banta",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 5",
+        "chamber": "House",
+        "district": "5",
+        "candidates": [
+          {
+            "name": "Andres Ruben Flammer Santiago",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Eric J. Weaknecht",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 6",
+        "chamber": "House",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Michael C Walker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bradley T Roae",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 7",
+        "chamber": "House",
+        "district": "7",
+        "candidates": [
+          {
+            "name": "Parke H Wentling",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 8",
+        "chamber": "House",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Richard E Telesz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Aaron Joseph Bernstine",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "PA House 9",
         "chamber": "House",
         "district": "9",
         "candidates": [
           {
             "name": "Justin Byers",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shay Micco",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marla Ann Brown",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 10",
+        "chamber": "House",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Amen Brown",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marcus Roberts-Deloach",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2664,6 +2829,198 @@
         ]
       },
       {
+        "seat_label": "PA House 12",
+        "chamber": "House",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Brandon Michael Dukes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ethan E Nicholas",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Scott R Timko",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 13",
+        "chamber": "House",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Madelyn G Alvarino",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Adda Lawrence",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 14",
+        "chamber": "House",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Roman Kozak Jr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 15",
+        "chamber": "House",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Sydney Louise Speicher",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joshua Daniel Kail",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 16",
+        "chamber": "House",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Robert F. Matzie",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John C. Costanza",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 17",
+        "chamber": "House",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Timothy R. Bonner",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 18",
+        "chamber": "House",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Bryan F Allen Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kathleen C Tomlinson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 19",
+        "chamber": "House",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Aerion Andrew Abney",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 20",
+        "chamber": "House",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Emily Kinkead",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 21",
+        "chamber": "House",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Lindsay Alexandra Powell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 22",
+        "chamber": "House",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "Cecilia Gerlach",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 23",
+        "chamber": "House",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "Dan Bernard Frankel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "PA House 24",
         "chamber": "House",
         "district": "24",
@@ -2672,6 +3029,1465 @@
             "name": "La'Tasha Mayes",
             "party": "D",
             "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "William Anderson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 25",
+        "chamber": "House",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "Brandon Joseph Markosek",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Amy Noone",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 26",
+        "chamber": "House",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Paul Franklin Friel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 27",
+        "chamber": "House",
+        "district": "27",
+        "candidates": [
+          {
+            "name": "Daniel J Deasy",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 28",
+        "chamber": "House",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Jeremy Ferderber",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert A Bertha",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jeremy K Shaffer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 29",
+        "chamber": "House",
+        "district": "29",
+        "candidates": [
+          {
+            "name": "Timothy Patrick Brennan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sean Patrick Duffy",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 30",
+        "chamber": "House",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Arvind Venkat",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ehab Akkary",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 31",
+        "chamber": "House",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "Perry Sinclair Warren Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 32",
+        "chamber": "House",
+        "district": "32",
+        "candidates": [
+          {
+            "name": "Joseph M Mcandrew",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 33",
+        "chamber": "House",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Mandy Julia Steele",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael F. Hammill",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 34",
+        "chamber": "House",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Abigail Marie Salisbury",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Todd Elliott Koger Sr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 35",
+        "chamber": "House",
+        "district": "35",
+        "candidates": [
+          {
+            "name": "Daniel Goughnour",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "James N. Edwards",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 36",
+        "chamber": "House",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Jessica Lynn Benham",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Timothy Matthew Mccune",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 37",
+        "chamber": "House",
+        "district": "37",
+        "candidates": [
+          {
+            "name": "Chad William Gleissl",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Melinda S Fee",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 38",
+        "chamber": "House",
+        "district": "38",
+        "candidates": [
+          {
+            "name": "John C Inglis Iii",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 39",
+        "chamber": "House",
+        "district": "39",
+        "candidates": [
+          {
+            "name": "Dylan Anthony Altemara",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kellianne Alnice Frketic",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Andrew M Kuzma",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 40",
+        "chamber": "House",
+        "district": "40",
+        "candidates": [
+          {
+            "name": "Jonathan C Lloyd",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Natalie Nicole Stuck",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 41",
+        "chamber": "House",
+        "district": "41",
+        "candidates": [
+          {
+            "name": "Bradford T Chambers",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brett R. Miller",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 43",
+        "chamber": "House",
+        "district": "43",
+        "candidates": [
+          {
+            "name": "Bryan K Peirson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Keith James Greiner",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 44",
+        "chamber": "House",
+        "district": "44",
+        "candidates": [
+          {
+            "name": "Hadley B Haas",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Valerie S. Gaydos",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 45",
+        "chamber": "House",
+        "district": "45",
+        "candidates": [
+          {
+            "name": "Brittany Marie Bloam",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cameron M Grosh",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Frederick Halladay Coleman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Patrick J Catena Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "James M. Julius",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Rocco Cozza",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 46",
+        "chamber": "House",
+        "district": "46",
+        "candidates": [
+          {
+            "name": "Michael Crossey",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jason A. Ortitay",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 47",
+        "chamber": "House",
+        "district": "47",
+        "candidates": [
+          {
+            "name": "Edward Lee Ritter",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph Frank D'Orsie",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 48",
+        "chamber": "House",
+        "district": "48",
+        "candidates": [
+          {
+            "name": "Rebecca Mactaggart",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Timothy Jon Oneal",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 49",
+        "chamber": "House",
+        "district": "49",
+        "candidates": [
+          {
+            "name": "Ismail Smith-Wade-El",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Vanessa Acosta",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 50",
+        "chamber": "House",
+        "district": "50",
+        "candidates": [
+          {
+            "name": "Lois Bower-Bjornson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Benjamin D Humble",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Donald Cook",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 51",
+        "chamber": "House",
+        "district": "51",
+        "candidates": [
+          {
+            "name": "Charity Grimm Krupa",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 52",
+        "chamber": "House",
+        "district": "52",
+        "candidates": [
+          {
+            "name": "Ryan James Warner",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 53",
+        "chamber": "House",
+        "district": "53",
+        "candidates": [
+          {
+            "name": "Steven R Malagari",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 54",
+        "chamber": "House",
+        "district": "54",
+        "candidates": [
+          {
+            "name": "Gregory Scott",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 55",
+        "chamber": "House",
+        "district": "55",
+        "candidates": [
+          {
+            "name": "Davon Tyrone Magwood",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jill Nixon Cooper",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 56",
+        "chamber": "House",
+        "district": "56",
+        "candidates": [
+          {
+            "name": "Brian Casey Allen Rasel",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 57",
+        "chamber": "House",
+        "district": "57",
+        "candidates": [
+          {
+            "name": "Robert B Francis",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Eric R Nelson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 58",
+        "chamber": "House",
+        "district": "58",
+        "candidates": [
+          {
+            "name": "Cherri Rogers",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Eric M. Davanzo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 59",
+        "chamber": "House",
+        "district": "59",
+        "candidates": [
+          {
+            "name": "Jordan R Omlor",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lisa Ellen Gephart",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Leslie Rossi",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 60",
+        "chamber": "House",
+        "district": "60",
+        "candidates": [
+          {
+            "name": "Dustyn A Dorn",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Abigail E. Major",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 61",
+        "chamber": "House",
+        "district": "61",
+        "candidates": [
+          {
+            "name": "Laura Elizabeth Frances Hanbidge",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 62",
+        "chamber": "House",
+        "district": "62",
+        "candidates": [
+          {
+            "name": "Trajan William Jones",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "James B. Struzzi Ii",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 63",
+        "chamber": "House",
+        "district": "63",
+        "candidates": [
+          {
+            "name": "Andrew L Harbaugh",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joshua Bashline",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 64",
+        "chamber": "House",
+        "district": "64",
+        "candidates": [
+          {
+            "name": "Amanda Shaffer",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert Lee James",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 65",
+        "chamber": "House",
+        "district": "65",
+        "candidates": [
+          {
+            "name": "Destiny Kay Patricia Howard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kathy L. Rapp",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 66",
+        "chamber": "House",
+        "district": "66",
+        "candidates": [
+          {
+            "name": "Lisa M Gourley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brian A. Smith",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 67",
+        "chamber": "House",
+        "district": "67",
+        "candidates": [
+          {
+            "name": "Zachary R Ware",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Martin T. Causer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 68",
+        "chamber": "House",
+        "district": "68",
+        "candidates": [
+          {
+            "name": "Quentin Joseph Gee",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Clinton D Owlett",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 69",
+        "chamber": "House",
+        "district": "69",
+        "candidates": [
+          {
+            "name": "Carl Walker Metzgar",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 70",
+        "chamber": "House",
+        "district": "70",
+        "candidates": [
+          {
+            "name": "Matthew D. Bradford",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 71",
+        "chamber": "House",
+        "district": "71",
+        "candidates": [
+          {
+            "name": "James Patrick Rigby",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 72",
+        "chamber": "House",
+        "district": "72",
+        "candidates": [
+          {
+            "name": "Frank Burns",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Philip D Rice",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 73",
+        "chamber": "House",
+        "district": "73",
+        "candidates": [
+          {
+            "name": "Dallas Paul Kephart",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 74",
+        "chamber": "House",
+        "district": "74",
+        "candidates": [
+          {
+            "name": "Dan K Williams",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lorenzo Kelley",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 75",
+        "chamber": "House",
+        "district": "75",
+        "candidates": [
+          {
+            "name": "Kimberly Kohlhepp",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael J. Armanini",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 76",
+        "chamber": "House",
+        "district": "76",
+        "candidates": [
+          {
+            "name": "Sara Elizabeth Eggler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Stephanie Paige Borowicz",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 77",
+        "chamber": "House",
+        "district": "77",
+        "candidates": [
+          {
+            "name": "Harry Scott Conklin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michelle Marie Schellberg",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 78",
+        "chamber": "House",
+        "district": "78",
+        "candidates": [
+          {
+            "name": "Jesse W Topper",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 80",
+        "chamber": "House",
+        "district": "80",
+        "candidates": [
+          {
+            "name": "Sarah Holland",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Scott D Barger",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 81",
+        "chamber": "House",
+        "district": "81",
+        "candidates": [
+          {
+            "name": "Caleb Joshua Donahue",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Richard S Irvin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 82",
+        "chamber": "House",
+        "district": "82",
+        "candidates": [
+          {
+            "name": "Paul R Takac Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kirsten Lee Mcternan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Matthew R. Hilbert",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 83",
+        "chamber": "House",
+        "district": "83",
+        "candidates": [
+          {
+            "name": "Jamie Lee Flick",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 84",
+        "chamber": "House",
+        "district": "84",
+        "candidates": [
+          {
+            "name": "Joseph D Hamm",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 85",
+        "chamber": "House",
+        "district": "85",
+        "candidates": [
+          {
+            "name": "David Hummer Rowe",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 86",
+        "chamber": "House",
+        "district": "86",
+        "candidates": [
+          {
+            "name": "Wendy Morgan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Perry A Stambaugh",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 87",
+        "chamber": "House",
+        "district": "87",
+        "candidates": [
+          {
+            "name": "Jessica Lynne St Clair",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Thomas Kutz",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 88",
+        "chamber": "House",
+        "district": "88",
+        "candidates": [
+          {
+            "name": "Adam Michael Trone",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sara M Agerton",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jeffrey H Clark",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Savannah J. Beeler",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 89",
+        "chamber": "House",
+        "district": "89",
+        "candidates": [
+          {
+            "name": "Shannon Michael Jackson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert W. Kauffman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 90",
+        "chamber": "House",
+        "district": "90",
+        "candidates": [
+          {
+            "name": "Chad G. Reichard",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 91",
+        "chamber": "House",
+        "district": "91",
+        "candidates": [
+          {
+            "name": "Darian Sundberg",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jose Antonio Nunez-Guzman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kathleen Adams Pratt",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Daniel P. Moul",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Lindsay Krug",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Nickolas Joseph David Lovell",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 92",
+        "chamber": "House",
+        "district": "92",
+        "candidates": [
+          {
+            "name": "Krista Jean Anderson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marc S. Anderson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 93",
+        "chamber": "House",
+        "district": "93",
+        "candidates": [
+          {
+            "name": "Melissa Ann Barnes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Paul Michael Jones",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 94",
+        "chamber": "House",
+        "district": "94",
+        "candidates": [
+          {
+            "name": "Konnor John-Richard Grimek",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Wendy Fink",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 95",
+        "chamber": "House",
+        "district": "95",
+        "candidates": [
+          {
+            "name": "Carol D Hill-Evans",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jasmine Rivera",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 96",
+        "chamber": "House",
+        "district": "96",
+        "candidates": [
+          {
+            "name": "Stephanie Nichole Rivera",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Babita L Rusyn",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 97",
+        "chamber": "House",
+        "district": "97",
+        "candidates": [
+          {
+            "name": "Jessica Lee Branas",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Steven Curtis Mentzer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 98",
+        "chamber": "House",
+        "district": "98",
+        "candidates": [
+          {
+            "name": "Hugh Stockton Hyder-Darlington",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Danielle D. Lindemuth",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Nicole Lin Woods",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 99",
+        "chamber": "House",
+        "district": "99",
+        "candidates": [
+          {
+            "name": "Ethan Gabrick",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David H. Zimmerman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 100",
+        "chamber": "House",
+        "district": "100",
+        "candidates": [
+          {
+            "name": "David L Nissley",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kelly Osborne",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 101",
+        "chamber": "House",
+        "district": "101",
+        "candidates": [
+          {
+            "name": "John A Schlegel",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 102",
+        "chamber": "House",
+        "district": "102",
+        "candidates": [
+          {
+            "name": "Russell H Diamond",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 103",
+        "chamber": "House",
+        "district": "103",
+        "candidates": [
+          {
+            "name": "Nathan William Davidson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 104",
+        "chamber": "House",
+        "district": "104",
+        "candidates": [
+          {
+            "name": "David Adam Madsen",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shane A Steele",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 105",
+        "chamber": "House",
+        "district": "105",
+        "candidates": [
+          {
+            "name": "Justin Curtis Fleming",
+            "party": "D",
+            "is_incumbent": false,
             "election_type": "Primary_D"
           }
         ]
@@ -2682,9 +4498,280 @@
         "district": "106",
         "candidates": [
           {
+            "name": "Anju Singh",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ryan M Hazel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Tom Mehaffie",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 107",
+        "chamber": "House",
+        "district": "107",
+        "candidates": [
+          {
+            "name": "Ryan T Coleman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joanne C. Stehr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 108",
+        "chamber": "House",
+        "district": "108",
+        "candidates": [
+          {
+            "name": "Amber L. Neidig",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael A.K. Stender Jr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 109",
+        "chamber": "House",
+        "district": "109",
+        "candidates": [
+          {
+            "name": "Justin Hummel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert Medin Leadbeter Ii",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 110",
+        "chamber": "House",
+        "district": "110",
+        "candidates": [
+          {
+            "name": "Pamela J Hemann",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tina Pickett",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 111",
+        "chamber": "House",
+        "district": "111",
+        "candidates": [
+          {
+            "name": "Kyle T Devlin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jonathan A Fritz",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 112",
+        "chamber": "House",
+        "district": "112",
+        "candidates": [
+          {
+            "name": "Kyle James Mullins",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph J Sabia Jr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 113",
+        "chamber": "House",
+        "district": "113",
+        "candidates": [
+          {
+            "name": "Kyle T Donahue",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lucas O'Brien",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 114",
+        "chamber": "House",
+        "district": "114",
+        "candidates": [
+          {
+            "name": "Bridget Malloy Kosierowski",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Andrew Burgerhoff",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Logan Robert Lombardo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 115",
+        "chamber": "House",
+        "district": "115",
+        "candidates": [
+          {
+            "name": "Anna Lopez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Maureen Madden",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Richard W. Szabo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 116",
+        "chamber": "House",
+        "district": "116",
+        "candidates": [
+          {
+            "name": "Dane Jeffrey Watro Jr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 117",
+        "chamber": "House",
+        "district": "117",
+        "candidates": [
+          {
+            "name": "Jeremy Benscoter",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "James Patrick Walsh",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "William M Jones",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 118",
+        "chamber": "House",
+        "district": "118",
+        "candidates": [
+          {
+            "name": "James L. Haddock",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John F Lombardo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 119",
+        "chamber": "House",
+        "district": "119",
+        "candidates": [
+          {
+            "name": "Lauren Elizabeth Mccurdy",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Alec Joseph Ryncavage",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -2695,9 +4782,363 @@
         "district": "120",
         "candidates": [
           {
+            "name": "Fern Leard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joanna Bryn Smith",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Brenda Pugh",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 121",
+        "chamber": "House",
+        "district": "121",
+        "candidates": [
+          {
+            "name": "Jessica Mcclay",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael J Stadulis",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael D. Harostock Iii",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 122",
+        "chamber": "House",
+        "district": "122",
+        "candidates": [
+          {
+            "name": "Doyle Heffley",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 123",
+        "chamber": "House",
+        "district": "123",
+        "candidates": [
+          {
+            "name": "John A Deatrich Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Timothy F. Twardzik",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 124",
+        "chamber": "House",
+        "district": "124",
+        "candidates": [
+          {
+            "name": "Tina M Burns",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "James A. Barton",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 125",
+        "chamber": "House",
+        "district": "125",
+        "candidates": [
+          {
+            "name": "Kathryn L Waters",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph P Kerwin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 126",
+        "chamber": "House",
+        "district": "126",
+        "candidates": [
+          {
+            "name": "Jacklyn H Rusnock",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joshua Michael Caltagirone",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Miguel A. Vasquez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 127",
+        "chamber": "House",
+        "district": "127",
+        "candidates": [
+          {
+            "name": "Manuel Guzman Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 128",
+        "chamber": "House",
+        "district": "128",
+        "candidates": [
+          {
+            "name": "Andrew Wagner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David H Hughes",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Mark M Gillen",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 129",
+        "chamber": "House",
+        "district": "129",
+        "candidates": [
+          {
+            "name": "Johanny Cepeda-Freytiz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 130",
+        "chamber": "House",
+        "district": "130",
+        "candidates": [
+          {
+            "name": "Erik Bonnett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Melissa G. Brewer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Mitchell Micale",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 131",
+        "chamber": "House",
+        "district": "131",
+        "candidates": [
+          {
+            "name": "Meriam H Sabih",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "V. Milou Mackenzie",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 132",
+        "chamber": "House",
+        "district": "132",
+        "candidates": [
+          {
+            "name": "Michael Harry Schlossberg",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Caren Lowrey",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 133",
+        "chamber": "House",
+        "district": "133",
+        "candidates": [
+          {
+            "name": "Jeanne Mcneill",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 134",
+        "chamber": "House",
+        "district": "134",
+        "candidates": [
+          {
+            "name": "Peter Schweyer",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Miriam Alicia Maldonado",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 135",
+        "chamber": "House",
+        "district": "135",
+        "candidates": [
+          {
+            "name": "Stephen P Samuelson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph F Poplawski",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 136",
+        "chamber": "House",
+        "district": "136",
+        "candidates": [
+          {
+            "name": "Robert Freeman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Pilar M Campisi",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 137",
+        "chamber": "House",
+        "district": "137",
+        "candidates": [
+          {
+            "name": "Jeffrey M Warren",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph T Emrick",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 138",
+        "chamber": "House",
+        "district": "138",
+        "candidates": [
+          {
+            "name": "Jared Bitting",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ann L Flood",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -2712,6 +5153,1277 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Jeffrey H Olsommer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 140",
+        "chamber": "House",
+        "district": "140",
+        "candidates": [
+          {
+            "name": "James George Prokopiak",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael J. Gettis",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 141",
+        "chamber": "House",
+        "district": "141",
+        "candidates": [
+          {
+            "name": "Tina Marie Davis",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kenneth James Velez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 142",
+        "chamber": "House",
+        "district": "142",
+        "candidates": [
+          {
+            "name": "Kristin Egan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph F Hogan Iv",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 143",
+        "chamber": "House",
+        "district": "143",
+        "candidates": [
+          {
+            "name": "Timothy J Hayes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shelby E. Labs",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 144",
+        "chamber": "House",
+        "district": "144",
+        "candidates": [
+          {
+            "name": "Brian Munroe",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael J. Murphy",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 145",
+        "chamber": "House",
+        "district": "145",
+        "candidates": [
+          {
+            "name": "Les Mavus",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Craig T Staats",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 146",
+        "chamber": "House",
+        "district": "146",
+        "candidates": [
+          {
+            "name": "Joseph Ciresi",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 147",
+        "chamber": "House",
+        "district": "147",
+        "candidates": [
+          {
+            "name": "Margaret Burke",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Donna Marie Scheuren",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 148",
+        "chamber": "House",
+        "district": "148",
+        "candidates": [
+          {
+            "name": "Andrea Deutsch",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jason Landau Goodman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Leo Francis Solga",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Megan Griffin-Shelley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 149",
+        "chamber": "House",
+        "district": "149",
+        "candidates": [
+          {
+            "name": "Timothy Patrick Briggs",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 150",
+        "chamber": "House",
+        "district": "150",
+        "candidates": [
+          {
+            "name": "Joseph G Webster",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 151",
+        "chamber": "House",
+        "district": "151",
+        "candidates": [
+          {
+            "name": "Melissa Anne Cerrato",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 152",
+        "chamber": "House",
+        "district": "152",
+        "candidates": [
+          {
+            "name": "Nancy Guenst",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 153",
+        "chamber": "House",
+        "district": "153",
+        "candidates": [
+          {
+            "name": "Benjamin V. Sanchez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cory L Toner",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 154",
+        "chamber": "House",
+        "district": "154",
+        "candidates": [
+          {
+            "name": "Napoleon J Nelson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 155",
+        "chamber": "House",
+        "district": "155",
+        "candidates": [
+          {
+            "name": "Danielle Friel Otten",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 156",
+        "chamber": "House",
+        "district": "156",
+        "candidates": [
+          {
+            "name": "Christopher Pielli",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kris R Vollrath",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 157",
+        "chamber": "House",
+        "district": "157",
+        "candidates": [
+          {
+            "name": "Melissa Lynn Shusterman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Justin J. Pak",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 158",
+        "chamber": "House",
+        "district": "158",
+        "candidates": [
+          {
+            "name": "Christina D Sappey",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 159",
+        "chamber": "House",
+        "district": "159",
+        "candidates": [
+          {
+            "name": "Brian Kirkland",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Carol Kazeem",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 160",
+        "chamber": "House",
+        "district": "160",
+        "candidates": [
+          {
+            "name": "Elizabeth Rhein Moro",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Wendell Craig Williams",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 161",
+        "chamber": "House",
+        "district": "161",
+        "candidates": [
+          {
+            "name": "Leanne Theresa Krueger",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 162",
+        "chamber": "House",
+        "district": "162",
+        "candidates": [
+          {
+            "name": "David M Delloso",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael E. Murphy",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 163",
+        "chamber": "House",
+        "district": "163",
+        "candidates": [
+          {
+            "name": "Heather Boyd",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 164",
+        "chamber": "House",
+        "district": "164",
+        "candidates": [
+          {
+            "name": "Gina H Curry",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 165",
+        "chamber": "House",
+        "district": "165",
+        "candidates": [
+          {
+            "name": "Jennifer O'Mara",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Deirdre D. Mccleary",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 166",
+        "chamber": "House",
+        "district": "166",
+        "candidates": [
+          {
+            "name": "Gregory Stephen Vitali",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Judith Trombetta",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph William Walker",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 167",
+        "chamber": "House",
+        "district": "167",
+        "candidates": [
+          {
+            "name": "Kristine C. Howard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph M. Lewis",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 168",
+        "chamber": "House",
+        "district": "168",
+        "candidates": [
+          {
+            "name": "Lisa Anne Borowski",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kathryn M.L. Buckley",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 169",
+        "chamber": "House",
+        "district": "169",
+        "candidates": [
+          {
+            "name": "Austin L Graham",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kate Anne Klunk",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 170",
+        "chamber": "House",
+        "district": "170",
+        "candidates": [
+          {
+            "name": "Robert N Gurtcheff Ii",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Martina A. White",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 171",
+        "chamber": "House",
+        "district": "171",
+        "candidates": [
+          {
+            "name": "John R Zangari",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kerry A Benninghoff",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 172",
+        "chamber": "House",
+        "district": "172",
+        "candidates": [
+          {
+            "name": "Sean Michael Dougherty",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Wallace J Quinlan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 173",
+        "chamber": "House",
+        "district": "173",
+        "candidates": [
+          {
+            "name": "Patrick Gallagher",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "William J Griffin Jr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 174",
+        "chamber": "House",
+        "district": "174",
+        "candidates": [
+          {
+            "name": "Ed Neilson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 175",
+        "chamber": "House",
+        "district": "175",
+        "candidates": [
+          {
+            "name": "Marylouise Isaacson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 176",
+        "chamber": "House",
+        "district": "176",
+        "candidates": [
+          {
+            "name": "Jack B Rader Jr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 177",
+        "chamber": "House",
+        "district": "177",
+        "candidates": [
+          {
+            "name": "Joseph C Hohenstein",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mark Joseph Lavelle",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robyn L Bird",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 178",
+        "chamber": "House",
+        "district": "178",
+        "candidates": [
+          {
+            "name": "Monica J Weninger",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kristin Marcell",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 179",
+        "chamber": "House",
+        "district": "179",
+        "candidates": [
+          {
+            "name": "Jason Dawkins",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 180",
+        "chamber": "House",
+        "district": "180",
+        "candidates": [
+          {
+            "name": "Jose A Giral",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 181",
+        "chamber": "House",
+        "district": "181",
+        "candidates": [
+          {
+            "name": "Jamillah Naderah Griffin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Malcolm Kenyatta",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 182",
+        "chamber": "House",
+        "district": "182",
+        "candidates": [
+          {
+            "name": "Benjamin R Waxman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 183",
+        "chamber": "House",
+        "district": "183",
+        "candidates": [
+          {
+            "name": "Deirdre J Kamber",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Zachary Allen Mako",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 184",
+        "chamber": "House",
+        "district": "184",
+        "candidates": [
+          {
+            "name": "Elizabeth Fiedler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 185",
+        "chamber": "House",
+        "district": "185",
+        "candidates": [
+          {
+            "name": "Joseph L Sackor",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Regina G Young",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 186",
+        "chamber": "House",
+        "district": "186",
+        "candidates": [
+          {
+            "name": "Jordan Alexander Harris",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 187",
+        "chamber": "House",
+        "district": "187",
+        "candidates": [
+          {
+            "name": "Geoffrey S. Whitcomb",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rachel Marie Guynn-Cuevas",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gary W Day",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 188",
+        "chamber": "House",
+        "district": "188",
+        "candidates": [
+          {
+            "name": "Rick C Krajewski",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tony Dphax King",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 189",
+        "chamber": "House",
+        "district": "189",
+        "candidates": [
+          {
+            "name": "Tarah Probst",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Danica L. Hartenfels",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 190",
+        "chamber": "House",
+        "district": "190",
+        "candidates": [
+          {
+            "name": "Gwendolyn Green",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 191",
+        "chamber": "House",
+        "district": "191",
+        "candidates": [
+          {
+            "name": "Joanna Elizabeth Mcclinton",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 192",
+        "chamber": "House",
+        "district": "192",
+        "candidates": [
+          {
+            "name": "D'Angelo Lee Virgo",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Morgan Cephas",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tiffany Brown",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 194",
+        "chamber": "House",
+        "district": "194",
+        "candidates": [
+          {
+            "name": "Tarik Sharif Khan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 195",
+        "chamber": "House",
+        "district": "195",
+        "candidates": [
+          {
+            "name": "Keith S. Harris",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kenneth T Walker Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sierra Denise Mcneil",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 196",
+        "chamber": "House",
+        "district": "196",
+        "candidates": [
+          {
+            "name": "Ronald G Ruman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "George Margetas",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 197",
+        "chamber": "House",
+        "district": "197",
+        "candidates": [
+          {
+            "name": "Danilo R Burgos",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 198",
+        "chamber": "House",
+        "district": "198",
+        "candidates": [
+          {
+            "name": "Darisha K Parker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 199",
+        "chamber": "House",
+        "district": "199",
+        "candidates": [
+          {
+            "name": "Richard E Christie Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tawanda Lynne Hunter Stallworth",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Barbara Gleim",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 200",
+        "chamber": "House",
+        "district": "200",
+        "candidates": [
+          {
+            "name": "Christopher Johnson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Deshawnda Williams",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Qasim Rashad",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 201",
+        "chamber": "House",
+        "district": "201",
+        "candidates": [
+          {
+            "name": "Andre Donte Carroll",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jasmine Brown",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 202",
+        "chamber": "House",
+        "district": "202",
+        "candidates": [
+          {
+            "name": "Jared G Solomon",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert B Rudnitsky",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA House 203",
+        "chamber": "House",
+        "district": "203",
+        "candidates": [
+          {
+            "name": "Anthony A. Bellmon",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 2",
+        "chamber": "Senate",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Christine M Tartaglione",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 4",
+        "chamber": "Senate",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Arthur Haywood",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael Cogbill",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Todd Johnson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 6",
+        "chamber": "Senate",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Eileen T Hartnett Albillar",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Frank Farry",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 8",
+        "chamber": "Senate",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Anthony Hardy Williams",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David S Goldsmith Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 10",
+        "chamber": "Senate",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Steven J Santarsiero",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gregory J Bankos Jr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 12",
+        "chamber": "Senate",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Maria Collett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert F Costello Iii",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 14",
+        "chamber": "Senate",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Nicholas Miller",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Omy Juriel Maldonado",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 16",
+        "chamber": "Senate",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Bradley Douglas Merkl-Gump",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mark E Pinsley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Wayne Codner",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jarrett Charles Coleman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2721,7 +6433,220 @@
         "district": "18",
         "candidates": [
           {
+            "name": "Lisa M Boscola",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Taiba Sultana",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Scott Janney",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 20",
+        "chamber": "Senate",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Jaclyn Estelle Baker",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Elisabeth J. Baker",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tyler James Meyers",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 22",
+        "chamber": "Senate",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "Jeffrey Lake",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Martin B Flynn",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sharon Soltis",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 24",
+        "chamber": "Senate",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Christopher David Thomas",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tracy E. Pennycuick",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 26",
+        "chamber": "Senate",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Timothy Patrick Kearney",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Alfeia Devaughn-Goodwin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 28",
+        "chamber": "Senate",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Thomas S Johnson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kristin Lee Phillips-Hill",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 30",
+        "chamber": "Senate",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Sean C Steeg",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Judith F. Ward",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 32",
+        "chamber": "Senate",
+        "district": "32",
+        "candidates": [
+          {
+            "name": "Jacob H Cecil",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Harry Young Cochran",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Patrick J. Stefano",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 34",
+        "chamber": "Senate",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Nathan Wood",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Richard J Forsman Ii",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "William Gregory Rothman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 36",
+        "chamber": "Senate",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "James Andrew Malone",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jere Swarr",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Thomas Matthew Jones",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2734,7 +6659,127 @@
         "district": "38",
         "candidates": [
           {
+            "name": "Lindsey M Williams",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Thomas West",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 40",
+        "chamber": "Senate",
+        "district": "40",
+        "candidates": [
+          {
+            "name": "Brian A Wrightson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rosemary Maula Brown",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 42",
+        "chamber": "Senate",
+        "district": "42",
+        "candidates": [
+          {
+            "name": "Paul Steenkiste",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Wayne D Fontana",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 44",
+        "chamber": "Senate",
+        "district": "44",
+        "candidates": [
+          {
+            "name": "Katie J Muth",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Melissa C. Dicranian",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 46",
+        "chamber": "Senate",
+        "district": "46",
+        "candidates": [
+          {
+            "name": "Evan James Snyder",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Albert Michael Buchtan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Camera Bartolotta",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 48",
+        "chamber": "Senate",
+        "district": "48",
+        "candidates": [
+          {
+            "name": "Christopher Gebhard",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Clovis Crane",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "PA Senate 50",
+        "chamber": "Senate",
+        "district": "50",
+        "candidates": [
+          {
+            "name": "Michele Brooks",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2747,21 +6792,1011 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "9",
-      "seat_label": "PA House 9",
-      "pres_margin": "-29.7",
-      "holder_party": "R",
-      "candidate": "Justin Byers",
+      "district": "1",
+      "seat_label": "PA House 1",
+      "pres_margin": "+24.1",
+      "holder_party": "D",
+      "candidate": "Patrick J Harkins",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "24",
-      "seat_label": "PA House 24",
-      "pres_margin": "+77.1",
+      "district": "2",
+      "seat_label": "PA House 2",
+      "pres_margin": "+6.5",
       "holder_party": "D",
-      "candidate": "La'Tasha Mayes",
+      "candidate": "Robert E Merski",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "3",
+      "seat_label": "PA House 3",
+      "pres_margin": "+2.0",
+      "holder_party": "D",
+      "candidate": "Ryan A Bizzarro",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "4",
+      "seat_label": "PA House 4",
+      "pres_margin": "-25.8",
+      "holder_party": "R",
+      "candidate": "Kathryn A Divittorio",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "5",
+      "seat_label": "PA House 5",
+      "pres_margin": "-27.2",
+      "holder_party": "R",
+      "candidate": "Andres Ruben Flammer Santiago",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "6",
+      "seat_label": "PA House 6",
+      "pres_margin": "-34.6",
+      "holder_party": "R",
+      "candidate": "Michael C Walker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "8",
+      "seat_label": "PA House 8",
+      "pres_margin": "-41.8",
+      "holder_party": "R",
+      "candidate": "Richard E Telesz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "9",
+      "seat_label": "PA House 9",
+      "pres_margin": "-29.7",
+      "holder_party": "R",
+      "candidate": "Shay Micco",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "12",
+      "seat_label": "PA House 12",
+      "pres_margin": "-18.3",
+      "holder_party": "R",
+      "candidate": "Brandon Michael Dukes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "13",
+      "seat_label": "PA House 13",
+      "pres_margin": "-4.7",
+      "holder_party": "R",
+      "candidate": "Madelyn G Alvarino",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "15",
+      "seat_label": "PA House 15",
+      "pres_margin": "-34.6",
+      "holder_party": "R",
+      "candidate": "Sydney Louise Speicher",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "16",
+      "seat_label": "PA House 16",
+      "pres_margin": "-7.5",
+      "holder_party": "D",
+      "candidate": "Robert F. Matzie",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "18",
+      "seat_label": "PA House 18",
+      "pres_margin": "-3.3",
+      "holder_party": "R",
+      "candidate": "Bryan F Allen Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "19",
+      "seat_label": "PA House 19",
+      "pres_margin": "+62.1",
+      "holder_party": "D",
+      "candidate": "Aerion Andrew Abney",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "20",
+      "seat_label": "PA House 20",
+      "pres_margin": "+17.6",
+      "holder_party": "D",
+      "candidate": "Emily Kinkead",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "21",
+      "seat_label": "PA House 21",
+      "pres_margin": "+23.2",
+      "holder_party": "D",
+      "candidate": "Lindsay Alexandra Powell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "22",
+      "seat_label": "PA House 22",
+      "pres_margin": "+17.5",
+      "holder_party": "D",
+      "candidate": "Cecilia Gerlach",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "23",
+      "seat_label": "PA House 23",
+      "pres_margin": "+63.5",
+      "holder_party": "D",
+      "candidate": "Dan Bernard Frankel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "25",
+      "seat_label": "PA House 25",
+      "pres_margin": "+10.1",
+      "holder_party": "D",
+      "candidate": "Brandon Joseph Markosek",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "26",
+      "seat_label": "PA House 26",
+      "pres_margin": "+11.0",
+      "holder_party": "D",
+      "candidate": "Paul Franklin Friel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "27",
+      "seat_label": "PA House 27",
+      "pres_margin": "+20.7",
+      "holder_party": "D",
+      "candidate": "Daniel J Deasy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "29",
+      "seat_label": "PA House 29",
+      "pres_margin": "+14.9",
+      "holder_party": "D",
+      "candidate": "Timothy Patrick Brennan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "30",
+      "seat_label": "PA House 30",
+      "pres_margin": "+7.7",
+      "holder_party": "D",
+      "candidate": "Arvind Venkat",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "31",
+      "seat_label": "PA House 31",
+      "pres_margin": "+15.2",
+      "holder_party": "D",
+      "candidate": "Perry Sinclair Warren Jr.",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "32",
+      "seat_label": "PA House 32",
+      "pres_margin": "+27.1",
+      "holder_party": "D",
+      "candidate": "Joseph M Mcandrew",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "33",
+      "seat_label": "PA House 33",
+      "pres_margin": "+4.3",
+      "holder_party": "D",
+      "candidate": "Mandy Julia Steele",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "35",
+      "seat_label": "PA House 35",
+      "pres_margin": "+15.8",
+      "holder_party": "D",
+      "candidate": "Daniel Goughnour",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "36",
+      "seat_label": "PA House 36",
+      "pres_margin": "+28.4",
+      "holder_party": "D",
+      "candidate": "Jessica Lynn Benham",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "37",
+      "seat_label": "PA House 37",
+      "pres_margin": "-25.2",
+      "holder_party": "R",
+      "candidate": "Chad William Gleissl",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "38",
+      "seat_label": "PA House 38",
+      "pres_margin": "+3.3",
+      "holder_party": "D",
+      "candidate": "John C Inglis Iii",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "40",
+      "seat_label": "PA House 40",
+      "pres_margin": "-5.8",
+      "holder_party": "R",
+      "candidate": "Jonathan C Lloyd",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "41",
+      "seat_label": "PA House 41",
+      "pres_margin": "-4.9",
+      "holder_party": "R",
+      "candidate": "Bradford T Chambers",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "43",
+      "seat_label": "PA House 43",
+      "pres_margin": "-32.7",
+      "holder_party": "R",
+      "candidate": "Bryan K Peirson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "44",
+      "seat_label": "PA House 44",
+      "pres_margin": "-3.8",
+      "holder_party": "R",
+      "candidate": "Hadley B Haas",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "46",
+      "seat_label": "PA House 46",
+      "pres_margin": "-14.6",
+      "holder_party": "R",
+      "candidate": "Michael Crossey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "47",
+      "seat_label": "PA House 47",
+      "pres_margin": "-20.2",
+      "holder_party": "R",
+      "candidate": "Edward Lee Ritter",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "48",
+      "seat_label": "PA House 48",
+      "pres_margin": "-24.6",
+      "holder_party": "R",
+      "candidate": "Rebecca Mactaggart",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "49",
+      "seat_label": "PA House 49",
+      "pres_margin": "+29.7",
+      "holder_party": "D",
+      "candidate": "Ismail Smith-Wade-El",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "50",
+      "seat_label": "PA House 50",
+      "pres_margin": "-36.8",
+      "holder_party": "R",
+      "candidate": "Lois Bower-Bjornson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "53",
+      "seat_label": "PA House 53",
+      "pres_margin": "+10.8",
+      "holder_party": "D",
+      "candidate": "Steven R Malagari",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "54",
+      "seat_label": "PA House 54",
+      "pres_margin": "+35.8",
+      "holder_party": "D",
+      "candidate": "Gregory Scott",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "55",
+      "seat_label": "PA House 55",
+      "pres_margin": "-22.5",
+      "holder_party": "R",
+      "candidate": "Davon Tyrone Magwood",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "57",
+      "seat_label": "PA House 57",
+      "pres_margin": "-22.4",
+      "holder_party": "R",
+      "candidate": "Robert B Francis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "58",
+      "seat_label": "PA House 58",
+      "pres_margin": "-34.0",
+      "holder_party": "R",
+      "candidate": "Cherri Rogers",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "60",
+      "seat_label": "PA House 60",
+      "pres_margin": "-38.8",
+      "holder_party": "R",
+      "candidate": "Dustyn A Dorn",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "61",
+      "seat_label": "PA House 61",
+      "pres_margin": "+22.1",
+      "holder_party": "D",
+      "candidate": "Laura Elizabeth Frances Hanbidge",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "62",
+      "seat_label": "PA House 62",
+      "pres_margin": "-32.8",
+      "holder_party": "R",
+      "candidate": "Trajan William Jones",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "63",
+      "seat_label": "PA House 63",
+      "pres_margin": "-56.8",
+      "holder_party": "R",
+      "candidate": "Andrew L Harbaugh",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "64",
+      "seat_label": "PA House 64",
+      "pres_margin": "-42.8",
+      "holder_party": "R",
+      "candidate": "Amanda Shaffer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "65",
+      "seat_label": "PA House 65",
+      "pres_margin": "-41.8",
+      "holder_party": "R",
+      "candidate": "Destiny Kay Patricia Howard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "66",
+      "seat_label": "PA House 66",
+      "pres_margin": "-59.6",
+      "holder_party": "R",
+      "candidate": "Lisa M Gourley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "67",
+      "seat_label": "PA House 67",
+      "pres_margin": "-51.7",
+      "holder_party": "R",
+      "candidate": "Zachary R Ware",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "68",
+      "seat_label": "PA House 68",
+      "pres_margin": "-53.2",
+      "holder_party": "R",
+      "candidate": "Quentin Joseph Gee",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "70",
+      "seat_label": "PA House 70",
+      "pres_margin": "+14.3",
+      "holder_party": "D",
+      "candidate": "Matthew D. Bradford",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "72",
+      "seat_label": "PA House 72",
+      "pres_margin": "-31.2",
+      "holder_party": "D",
+      "candidate": "Frank Burns",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "74",
+      "seat_label": "PA House 74",
+      "pres_margin": "+8.9",
+      "holder_party": "D",
+      "candidate": "Dan K Williams",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "75",
+      "seat_label": "PA House 75",
+      "pres_margin": "-48.3",
+      "holder_party": "R",
+      "candidate": "Kimberly Kohlhepp",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "76",
+      "seat_label": "PA House 76",
+      "pres_margin": "-36.4",
+      "holder_party": "R",
+      "candidate": "Sara Elizabeth Eggler",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "77",
+      "seat_label": "PA House 77",
+      "pres_margin": "+16.0",
+      "holder_party": "D",
+      "candidate": "Harry Scott Conklin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "80",
+      "seat_label": "PA House 80",
+      "pres_margin": "-53.0",
+      "holder_party": "R",
+      "candidate": "Sarah Holland",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "81",
+      "seat_label": "PA House 81",
+      "pres_margin": "-54.3",
+      "holder_party": "R",
+      "candidate": "Caleb Joshua Donahue",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "82",
+      "seat_label": "PA House 82",
+      "pres_margin": "+4.3",
+      "holder_party": "D",
+      "candidate": "Paul R Takac Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "86",
+      "seat_label": "PA House 86",
+      "pres_margin": "-51.6",
+      "holder_party": "R",
+      "candidate": "Wendy Morgan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "87",
+      "seat_label": "PA House 87",
+      "pres_margin": "-11.3",
+      "holder_party": "R",
+      "candidate": "Jessica Lynne St Clair",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "89",
+      "seat_label": "PA House 89",
+      "pres_margin": "-31.6",
+      "holder_party": "R",
+      "candidate": "Shannon Michael Jackson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "92",
+      "seat_label": "PA House 92",
+      "pres_margin": "-34.1",
+      "holder_party": "R",
+      "candidate": "Krista Jean Anderson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "93",
+      "seat_label": "PA House 93",
+      "pres_margin": "-26.0",
+      "holder_party": "R",
+      "candidate": "Melissa Ann Barnes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "94",
+      "seat_label": "PA House 94",
+      "pres_margin": "-34.3",
+      "holder_party": "R",
+      "candidate": "Konnor John-Richard Grimek",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "95",
+      "seat_label": "PA House 95",
+      "pres_margin": "+23.7",
+      "holder_party": "D",
+      "candidate": "Carol D Hill-Evans",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "96",
+      "seat_label": "PA House 96",
+      "pres_margin": "+21.0",
+      "holder_party": "D",
+      "candidate": "Stephanie Nichole Rivera",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "97",
+      "seat_label": "PA House 97",
+      "pres_margin": "-15.4",
+      "holder_party": "R",
+      "candidate": "Jessica Lee Branas",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "98",
+      "seat_label": "PA House 98",
+      "pres_margin": "-23.9",
+      "holder_party": "R",
+      "candidate": "Hugh Stockton Hyder-Darlington",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "99",
+      "seat_label": "PA House 99",
+      "pres_margin": "-42.3",
+      "holder_party": "R",
+      "candidate": "Ethan Gabrick",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "103",
+      "seat_label": "PA House 103",
+      "pres_margin": "+24.2",
+      "holder_party": "D",
+      "candidate": "Nathan William Davidson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "105",
+      "seat_label": "PA House 105",
+      "pres_margin": "+22.9",
+      "holder_party": "D",
+      "candidate": "Justin Curtis Fleming",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "107",
+      "seat_label": "PA House 107",
+      "pres_margin": "-48.5",
+      "holder_party": "R",
+      "candidate": "Ryan T Coleman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "108",
+      "seat_label": "PA House 108",
+      "pres_margin": "-32.5",
+      "holder_party": "R",
+      "candidate": "Amber L. Neidig",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "109",
+      "seat_label": "PA House 109",
+      "pres_margin": "-30.9",
+      "holder_party": "R",
+      "candidate": "Justin Hummel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "110",
+      "seat_label": "PA House 110",
+      "pres_margin": "-40.1",
+      "holder_party": "R",
+      "candidate": "Pamela J Hemann",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "111",
+      "seat_label": "PA House 111",
+      "pres_margin": "-42.0",
+      "holder_party": "R",
+      "candidate": "Kyle T Devlin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "112",
+      "seat_label": "PA House 112",
+      "pres_margin": "+1.1",
+      "holder_party": "D",
+      "candidate": "Kyle James Mullins",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "113",
+      "seat_label": "PA House 113",
+      "pres_margin": "+6.4",
+      "holder_party": "D",
+      "candidate": "Kyle T Donahue",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "114",
+      "seat_label": "PA House 114",
+      "pres_margin": "+6.6",
+      "holder_party": "D",
+      "candidate": "Bridget Malloy Kosierowski",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "117",
+      "seat_label": "PA House 117",
+      "pres_margin": "-41.4",
+      "holder_party": "R",
+      "candidate": "Jeremy Benscoter",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "118",
+      "seat_label": "PA House 118",
+      "pres_margin": "-7.4",
+      "holder_party": "D",
+      "candidate": "James L. Haddock",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "119",
+      "seat_label": "PA House 119",
+      "pres_margin": "-17.0",
+      "holder_party": "R",
+      "candidate": "Lauren Elizabeth Mccurdy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "123",
+      "seat_label": "PA House 123",
+      "pres_margin": "-33.7",
+      "holder_party": "R",
+      "candidate": "John A Deatrich Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "124",
+      "seat_label": "PA House 124",
+      "pres_margin": "-38.5",
+      "holder_party": "R",
+      "candidate": "Tina M Burns",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "125",
+      "seat_label": "PA House 125",
+      "pres_margin": "-25.1",
+      "holder_party": "R",
+      "candidate": "Kathryn L Waters",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "127",
+      "seat_label": "PA House 127",
+      "pres_margin": "+20.7",
+      "holder_party": "D",
+      "candidate": "Manuel Guzman Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "128",
+      "seat_label": "PA House 128",
+      "pres_margin": "-17.2",
+      "holder_party": "R",
+      "candidate": "Andrew Wagner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "129",
+      "seat_label": "PA House 129",
+      "pres_margin": "+12.9",
+      "holder_party": "D",
+      "candidate": "Johanny Cepeda-Freytiz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "130",
+      "seat_label": "PA House 130",
+      "pres_margin": "-27.4",
+      "holder_party": "R",
+      "candidate": "Erik Bonnett",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "131",
+      "seat_label": "PA House 131",
+      "pres_margin": "-10.2",
+      "holder_party": "R",
+      "candidate": "Meriam H Sabih",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "132",
+      "seat_label": "PA House 132",
+      "pres_margin": "+11.9",
+      "holder_party": "D",
+      "candidate": "Michael Harry Schlossberg",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "133",
+      "seat_label": "PA House 133",
+      "pres_margin": "+7.5",
+      "holder_party": "D",
+      "candidate": "Jeanne Mcneill",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "134",
+      "seat_label": "PA House 134",
+      "pres_margin": "+12.9",
+      "holder_party": "D",
+      "candidate": "Peter Schweyer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "135",
+      "seat_label": "PA House 135",
+      "pres_margin": "+25.7",
+      "holder_party": "D",
+      "candidate": "Stephen P Samuelson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "136",
+      "seat_label": "PA House 136",
+      "pres_margin": "+11.4",
+      "holder_party": "D",
+      "candidate": "Robert Freeman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "137",
+      "seat_label": "PA House 137",
+      "pres_margin": "-0.9",
+      "holder_party": "R",
+      "candidate": "Jeffrey M Warren",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "138",
+      "seat_label": "PA House 138",
+      "pres_margin": "-22.1",
+      "holder_party": "R",
+      "candidate": "Jared Bitting",
       "is_open_seat": null
     },
     {
@@ -2772,6 +7807,716 @@
       "pres_margin": "-31.7",
       "holder_party": "R",
       "candidate": "Dominique Azzollini",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "140",
+      "seat_label": "PA House 140",
+      "pres_margin": "+3.4",
+      "holder_party": "D",
+      "candidate": "James George Prokopiak",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "141",
+      "seat_label": "PA House 141",
+      "pres_margin": "+3.3",
+      "holder_party": "D",
+      "candidate": "Tina Marie Davis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "142",
+      "seat_label": "PA House 142",
+      "pres_margin": "-3.3",
+      "holder_party": "R",
+      "candidate": "Kristin Egan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "143",
+      "seat_label": "PA House 143",
+      "pres_margin": "-5.5",
+      "holder_party": "R",
+      "candidate": "Timothy J Hayes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "144",
+      "seat_label": "PA House 144",
+      "pres_margin": "-0.3",
+      "holder_party": "D",
+      "candidate": "Brian Munroe",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "145",
+      "seat_label": "PA House 145",
+      "pres_margin": "-15.5",
+      "holder_party": "R",
+      "candidate": "Les Mavus",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "146",
+      "seat_label": "PA House 146",
+      "pres_margin": "+10.0",
+      "holder_party": "D",
+      "candidate": "Joseph Ciresi",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "147",
+      "seat_label": "PA House 147",
+      "pres_margin": "-9.7",
+      "holder_party": "R",
+      "candidate": "Margaret Burke",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "149",
+      "seat_label": "PA House 149",
+      "pres_margin": "+37.8",
+      "holder_party": "D",
+      "candidate": "Timothy Patrick Briggs",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "150",
+      "seat_label": "PA House 150",
+      "pres_margin": "+15.9",
+      "holder_party": "D",
+      "candidate": "Joseph G Webster",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "151",
+      "seat_label": "PA House 151",
+      "pres_margin": "+21.4",
+      "holder_party": "D",
+      "candidate": "Melissa Anne Cerrato",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "152",
+      "seat_label": "PA House 152",
+      "pres_margin": "+17.1",
+      "holder_party": "D",
+      "candidate": "Nancy Guenst",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "153",
+      "seat_label": "PA House 153",
+      "pres_margin": "+31.3",
+      "holder_party": "D",
+      "candidate": "Benjamin V. Sanchez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "154",
+      "seat_label": "PA House 154",
+      "pres_margin": "+59.4",
+      "holder_party": "D",
+      "candidate": "Napoleon J Nelson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "155",
+      "seat_label": "PA House 155",
+      "pres_margin": "+15.7",
+      "holder_party": "D",
+      "candidate": "Danielle Friel Otten",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "156",
+      "seat_label": "PA House 156",
+      "pres_margin": "+18.7",
+      "holder_party": "D",
+      "candidate": "Christopher Pielli",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "157",
+      "seat_label": "PA House 157",
+      "pres_margin": "+24.7",
+      "holder_party": "D",
+      "candidate": "Melissa Lynn Shusterman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "158",
+      "seat_label": "PA House 158",
+      "pres_margin": "+17.5",
+      "holder_party": "D",
+      "candidate": "Christina D Sappey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "160",
+      "seat_label": "PA House 160",
+      "pres_margin": "+5.4",
+      "holder_party": "R",
+      "candidate": "Elizabeth Rhein Moro",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "161",
+      "seat_label": "PA House 161",
+      "pres_margin": "+12.8",
+      "holder_party": "D",
+      "candidate": "Leanne Theresa Krueger",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "162",
+      "seat_label": "PA House 162",
+      "pres_margin": "+11.0",
+      "holder_party": "D",
+      "candidate": "David M Delloso",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "163",
+      "seat_label": "PA House 163",
+      "pres_margin": "+27.6",
+      "holder_party": "D",
+      "candidate": "Heather Boyd",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "164",
+      "seat_label": "PA House 164",
+      "pres_margin": "+55.4",
+      "holder_party": "D",
+      "candidate": "Gina H Curry",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "165",
+      "seat_label": "PA House 165",
+      "pres_margin": "+17.2",
+      "holder_party": "D",
+      "candidate": "Jennifer O'Mara",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "167",
+      "seat_label": "PA House 167",
+      "pres_margin": "+21.2",
+      "holder_party": "D",
+      "candidate": "Kristine C. Howard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "168",
+      "seat_label": "PA House 168",
+      "pres_margin": "+20.2",
+      "holder_party": "D",
+      "candidate": "Lisa Anne Borowski",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "169",
+      "seat_label": "PA House 169",
+      "pres_margin": "-32.2",
+      "holder_party": "R",
+      "candidate": "Austin L Graham",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "170",
+      "seat_label": "PA House 170",
+      "pres_margin": "-14.5",
+      "holder_party": "R",
+      "candidate": "Robert N Gurtcheff Ii",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "171",
+      "seat_label": "PA House 171",
+      "pres_margin": "-37.7",
+      "holder_party": "R",
+      "candidate": "John R Zangari",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "172",
+      "seat_label": "PA House 172",
+      "pres_margin": "-0.8",
+      "holder_party": "D",
+      "candidate": "Sean Michael Dougherty",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "173",
+      "seat_label": "PA House 173",
+      "pres_margin": "+5.0",
+      "holder_party": "D",
+      "candidate": "Patrick Gallagher",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "174",
+      "seat_label": "PA House 174",
+      "pres_margin": "+3.1",
+      "holder_party": "D",
+      "candidate": "Ed Neilson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "175",
+      "seat_label": "PA House 175",
+      "pres_margin": "+67.1",
+      "holder_party": "D",
+      "candidate": "Marylouise Isaacson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "178",
+      "seat_label": "PA House 178",
+      "pres_margin": "-12.8",
+      "holder_party": "R",
+      "candidate": "Monica J Weninger",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "179",
+      "seat_label": "PA House 179",
+      "pres_margin": "+59.3",
+      "holder_party": "D",
+      "candidate": "Jason Dawkins",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "180",
+      "seat_label": "PA House 180",
+      "pres_margin": "+46.6",
+      "holder_party": "D",
+      "candidate": "Jose A Giral",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "182",
+      "seat_label": "PA House 182",
+      "pres_margin": "+74.4",
+      "holder_party": "D",
+      "candidate": "Benjamin R Waxman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "183",
+      "seat_label": "PA House 183",
+      "pres_margin": "-21.6",
+      "holder_party": "R",
+      "candidate": "Deirdre J Kamber",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "184",
+      "seat_label": "PA House 184",
+      "pres_margin": "+33.0",
+      "holder_party": "D",
+      "candidate": "Elizabeth Fiedler",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "186",
+      "seat_label": "PA House 186",
+      "pres_margin": "+76.0",
+      "holder_party": "D",
+      "candidate": "Jordan Alexander Harris",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "189",
+      "seat_label": "PA House 189",
+      "pres_margin": "+8.0",
+      "holder_party": "D",
+      "candidate": "Tarah Probst",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "190",
+      "seat_label": "PA House 190",
+      "pres_margin": "+87.7",
+      "holder_party": "D",
+      "candidate": "Gwendolyn Green",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "191",
+      "seat_label": "PA House 191",
+      "pres_margin": "+85.6",
+      "holder_party": "D",
+      "candidate": "Joanna Elizabeth Mcclinton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "194",
+      "seat_label": "PA House 194",
+      "pres_margin": "+55.3",
+      "holder_party": "D",
+      "candidate": "Tarik Sharif Khan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "196",
+      "seat_label": "PA House 196",
+      "pres_margin": "-33.4",
+      "holder_party": null,
+      "candidate": "Ronald G Ruman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "197",
+      "seat_label": "PA House 197",
+      "pres_margin": "+65.3",
+      "holder_party": "D",
+      "candidate": "Danilo R Burgos",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "198",
+      "seat_label": "PA House 198",
+      "pres_margin": "+84.7",
+      "holder_party": "D",
+      "candidate": "Darisha K Parker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "203",
+      "seat_label": "PA House 203",
+      "pres_margin": "+54.5",
+      "holder_party": "D",
+      "candidate": "Anthony A. Bellmon",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "2",
+      "seat_label": "PA Senate 2",
+      "pres_margin": "+38.8",
+      "holder_party": "D",
+      "candidate": "Christine M Tartaglione",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "6",
+      "seat_label": "PA Senate 6",
+      "pres_margin": "-5.5",
+      "holder_party": "R",
+      "candidate": "Eileen T Hartnett Albillar",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "10",
+      "seat_label": "PA Senate 10",
+      "pres_margin": "+10.1",
+      "holder_party": "D",
+      "candidate": "Steven J Santarsiero",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "12",
+      "seat_label": "PA Senate 12",
+      "pres_margin": "+15.9",
+      "holder_party": "D",
+      "candidate": "Maria Collett",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "14",
+      "seat_label": "PA Senate 14",
+      "pres_margin": "-2.7",
+      "holder_party": "D",
+      "candidate": "Nicholas Miller",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "20",
+      "seat_label": "PA Senate 20",
+      "pres_margin": "-27.0",
+      "holder_party": "R",
+      "candidate": "Jaclyn Estelle Baker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "24",
+      "seat_label": "PA Senate 24",
+      "pres_margin": "-2.2",
+      "holder_party": "R",
+      "candidate": "Christopher David Thomas",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "26",
+      "seat_label": "PA Senate 26",
+      "pres_margin": "+19.4",
+      "holder_party": "D",
+      "candidate": "Timothy Patrick Kearney",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "28",
+      "seat_label": "PA Senate 28",
+      "pres_margin": "-28.8",
+      "holder_party": "R",
+      "candidate": "Thomas S Johnson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "30",
+      "seat_label": "PA Senate 30",
+      "pres_margin": "-50.7",
+      "holder_party": "R",
+      "candidate": "Sean C Steeg",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "32",
+      "seat_label": "PA Senate 32",
+      "pres_margin": "-50.0",
+      "holder_party": "R",
+      "candidate": "Jacob H Cecil",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "36",
+      "seat_label": "PA Senate 36",
+      "pres_margin": "-15.2",
+      "holder_party": "D",
+      "candidate": "James Andrew Malone",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "38",
+      "seat_label": "PA Senate 38",
+      "pres_margin": "+10.2",
+      "holder_party": "D",
+      "candidate": "Lindsey M Williams",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "40",
+      "seat_label": "PA Senate 40",
+      "pres_margin": "-6.5",
+      "holder_party": "R",
+      "candidate": "Brian A Wrightson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "44",
+      "seat_label": "PA Senate 44",
+      "pres_margin": "+10.5",
+      "holder_party": "D",
+      "candidate": "Katie J Muth",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "46",
+      "seat_label": "PA Senate 46",
+      "pres_margin": "-28.4",
+      "holder_party": "R",
+      "candidate": "Evan James Snyder",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "3",
+      "seat_label": "PA House 3",
+      "pres_margin": "+2.0",
+      "holder_party": "D",
+      "candidate": "Donna Rae Reese",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "4",
+      "seat_label": "PA House 4",
+      "pres_margin": "-25.8",
+      "holder_party": "R",
+      "candidate": "Jacob Banta",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "5",
+      "seat_label": "PA House 5",
+      "pres_margin": "-27.2",
+      "holder_party": "R",
+      "candidate": "Eric J. Weaknecht",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "6",
+      "seat_label": "PA House 6",
+      "pres_margin": "-34.6",
+      "holder_party": "R",
+      "candidate": "Bradley T Roae",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "7",
+      "seat_label": "PA House 7",
+      "pres_margin": "-17.6",
+      "holder_party": "R",
+      "candidate": "Parke H Wentling",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "8",
+      "seat_label": "PA House 8",
+      "pres_margin": "-41.8",
+      "holder_party": "R",
+      "candidate": "Aaron Joseph Bernstine",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "9",
+      "seat_label": "PA House 9",
+      "pres_margin": "-29.7",
+      "holder_party": "R",
+      "candidate": "Marla Ann Brown",
       "is_open_seat": null
     },
     {
@@ -2787,6 +8532,656 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "13",
+      "seat_label": "PA House 13",
+      "pres_margin": "-4.7",
+      "holder_party": "R",
+      "candidate": "John Adda Lawrence",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "14",
+      "seat_label": "PA House 14",
+      "pres_margin": "-27.1",
+      "holder_party": "R",
+      "candidate": "Roman Kozak Jr.",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "15",
+      "seat_label": "PA House 15",
+      "pres_margin": "-34.6",
+      "holder_party": "R",
+      "candidate": "Joshua Daniel Kail",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "16",
+      "seat_label": "PA House 16",
+      "pres_margin": "-7.5",
+      "holder_party": "D",
+      "candidate": "John C. Costanza",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "17",
+      "seat_label": "PA House 17",
+      "pres_margin": "-47.0",
+      "holder_party": "R",
+      "candidate": "Timothy R. Bonner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "18",
+      "seat_label": "PA House 18",
+      "pres_margin": "-3.3",
+      "holder_party": "R",
+      "candidate": "Kathleen C Tomlinson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "25",
+      "seat_label": "PA House 25",
+      "pres_margin": "+10.1",
+      "holder_party": "D",
+      "candidate": "Amy Noone",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "28",
+      "seat_label": "PA House 28",
+      "pres_margin": "-7.4",
+      "holder_party": "R",
+      "candidate": "Jeremy K Shaffer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "29",
+      "seat_label": "PA House 29",
+      "pres_margin": "+14.9",
+      "holder_party": "D",
+      "candidate": "Sean Patrick Duffy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "30",
+      "seat_label": "PA House 30",
+      "pres_margin": "+7.7",
+      "holder_party": "D",
+      "candidate": "Ehab Akkary",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "33",
+      "seat_label": "PA House 33",
+      "pres_margin": "+4.3",
+      "holder_party": "D",
+      "candidate": "Michael F. Hammill",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "35",
+      "seat_label": "PA House 35",
+      "pres_margin": "+15.8",
+      "holder_party": "D",
+      "candidate": "James N. Edwards",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "36",
+      "seat_label": "PA House 36",
+      "pres_margin": "+28.4",
+      "holder_party": "D",
+      "candidate": "Timothy Matthew Mccune",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "37",
+      "seat_label": "PA House 37",
+      "pres_margin": "-25.2",
+      "holder_party": "R",
+      "candidate": "Melinda S Fee",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "39",
+      "seat_label": "PA House 39",
+      "pres_margin": "-19.0",
+      "holder_party": "R",
+      "candidate": "Andrew M Kuzma",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "40",
+      "seat_label": "PA House 40",
+      "pres_margin": "-5.8",
+      "holder_party": "R",
+      "candidate": "Natalie Nicole Stuck",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "41",
+      "seat_label": "PA House 41",
+      "pres_margin": "-4.9",
+      "holder_party": "R",
+      "candidate": "Brett R. Miller",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "43",
+      "seat_label": "PA House 43",
+      "pres_margin": "-32.7",
+      "holder_party": "R",
+      "candidate": "Keith James Greiner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "44",
+      "seat_label": "PA House 44",
+      "pres_margin": "-3.8",
+      "holder_party": "R",
+      "candidate": "Valerie S. Gaydos",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "46",
+      "seat_label": "PA House 46",
+      "pres_margin": "-14.6",
+      "holder_party": "R",
+      "candidate": "Jason A. Ortitay",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "47",
+      "seat_label": "PA House 47",
+      "pres_margin": "-20.2",
+      "holder_party": "R",
+      "candidate": "Joseph Frank D'Orsie",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "48",
+      "seat_label": "PA House 48",
+      "pres_margin": "-24.6",
+      "holder_party": "R",
+      "candidate": "Timothy Jon Oneal",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "49",
+      "seat_label": "PA House 49",
+      "pres_margin": "+29.7",
+      "holder_party": "D",
+      "candidate": "Vanessa Acosta",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "51",
+      "seat_label": "PA House 51",
+      "pres_margin": "-33.2",
+      "holder_party": "R",
+      "candidate": "Charity Grimm Krupa",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "52",
+      "seat_label": "PA House 52",
+      "pres_margin": "-42.4",
+      "holder_party": "R",
+      "candidate": "Ryan James Warner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "55",
+      "seat_label": "PA House 55",
+      "pres_margin": "-22.5",
+      "holder_party": "R",
+      "candidate": "Jill Nixon Cooper",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "56",
+      "seat_label": "PA House 56",
+      "pres_margin": "-27.6",
+      "holder_party": "R",
+      "candidate": "Brian Casey Allen Rasel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "57",
+      "seat_label": "PA House 57",
+      "pres_margin": "-22.4",
+      "holder_party": "R",
+      "candidate": "Eric R Nelson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "58",
+      "seat_label": "PA House 58",
+      "pres_margin": "-34.0",
+      "holder_party": "R",
+      "candidate": "Eric M. Davanzo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "59",
+      "seat_label": "PA House 59",
+      "pres_margin": "-36.0",
+      "holder_party": "R",
+      "candidate": "Leslie Rossi",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "60",
+      "seat_label": "PA House 60",
+      "pres_margin": "-38.8",
+      "holder_party": "R",
+      "candidate": "Abigail E. Major",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "62",
+      "seat_label": "PA House 62",
+      "pres_margin": "-32.8",
+      "holder_party": "R",
+      "candidate": "James B. Struzzi Ii",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "63",
+      "seat_label": "PA House 63",
+      "pres_margin": "-56.8",
+      "holder_party": "R",
+      "candidate": "Joshua Bashline",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "64",
+      "seat_label": "PA House 64",
+      "pres_margin": "-42.8",
+      "holder_party": "R",
+      "candidate": "Robert Lee James",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "65",
+      "seat_label": "PA House 65",
+      "pres_margin": "-41.8",
+      "holder_party": "R",
+      "candidate": "Kathy L. Rapp",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "66",
+      "seat_label": "PA House 66",
+      "pres_margin": "-59.6",
+      "holder_party": "R",
+      "candidate": "Brian A. Smith",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "67",
+      "seat_label": "PA House 67",
+      "pres_margin": "-51.7",
+      "holder_party": "R",
+      "candidate": "Martin T. Causer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "68",
+      "seat_label": "PA House 68",
+      "pres_margin": "-53.2",
+      "holder_party": "R",
+      "candidate": "Clinton D Owlett",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "69",
+      "seat_label": "PA House 69",
+      "pres_margin": "-58.9",
+      "holder_party": "R",
+      "candidate": "Carl Walker Metzgar",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "71",
+      "seat_label": "PA House 71",
+      "pres_margin": "-44.9",
+      "holder_party": "R",
+      "candidate": "James Patrick Rigby",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "72",
+      "seat_label": "PA House 72",
+      "pres_margin": "-31.2",
+      "holder_party": "D",
+      "candidate": "Philip D Rice",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "73",
+      "seat_label": "PA House 73",
+      "pres_margin": "-52.6",
+      "holder_party": "R",
+      "candidate": "Dallas Paul Kephart",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "74",
+      "seat_label": "PA House 74",
+      "pres_margin": "+8.9",
+      "holder_party": "D",
+      "candidate": "Lorenzo Kelley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "75",
+      "seat_label": "PA House 75",
+      "pres_margin": "-48.3",
+      "holder_party": "R",
+      "candidate": "Michael J. Armanini",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "76",
+      "seat_label": "PA House 76",
+      "pres_margin": "-36.4",
+      "holder_party": "R",
+      "candidate": "Stephanie Paige Borowicz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "77",
+      "seat_label": "PA House 77",
+      "pres_margin": "+16.0",
+      "holder_party": "D",
+      "candidate": "Michelle Marie Schellberg",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "78",
+      "seat_label": "PA House 78",
+      "pres_margin": "-69.4",
+      "holder_party": "R",
+      "candidate": "Jesse W Topper",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "80",
+      "seat_label": "PA House 80",
+      "pres_margin": "-53.0",
+      "holder_party": "R",
+      "candidate": "Scott D Barger",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "81",
+      "seat_label": "PA House 81",
+      "pres_margin": "-54.3",
+      "holder_party": "R",
+      "candidate": "Richard S Irvin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "83",
+      "seat_label": "PA House 83",
+      "pres_margin": "-26.8",
+      "holder_party": "R",
+      "candidate": "Jamie Lee Flick",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "84",
+      "seat_label": "PA House 84",
+      "pres_margin": "-54.0",
+      "holder_party": "R",
+      "candidate": "Joseph D Hamm",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "85",
+      "seat_label": "PA House 85",
+      "pres_margin": "-41.5",
+      "holder_party": "R",
+      "candidate": "David Hummer Rowe",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "86",
+      "seat_label": "PA House 86",
+      "pres_margin": "-51.6",
+      "holder_party": "R",
+      "candidate": "Perry A Stambaugh",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "87",
+      "seat_label": "PA House 87",
+      "pres_margin": "-11.3",
+      "holder_party": "R",
+      "candidate": "Thomas Kutz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "89",
+      "seat_label": "PA House 89",
+      "pres_margin": "-31.6",
+      "holder_party": "R",
+      "candidate": "Robert W. Kauffman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "90",
+      "seat_label": "PA House 90",
+      "pres_margin": "-48.7",
+      "holder_party": "R",
+      "candidate": "Chad G. Reichard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "92",
+      "seat_label": "PA House 92",
+      "pres_margin": "-34.1",
+      "holder_party": "R",
+      "candidate": "Marc S. Anderson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "93",
+      "seat_label": "PA House 93",
+      "pres_margin": "-26.0",
+      "holder_party": "R",
+      "candidate": "Paul Michael Jones",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "94",
+      "seat_label": "PA House 94",
+      "pres_margin": "-34.3",
+      "holder_party": "R",
+      "candidate": "Wendy Fink",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "95",
+      "seat_label": "PA House 95",
+      "pres_margin": "+23.7",
+      "holder_party": "D",
+      "candidate": "Jasmine Rivera",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "96",
+      "seat_label": "PA House 96",
+      "pres_margin": "+21.0",
+      "holder_party": "D",
+      "candidate": "Babita L Rusyn",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "97",
+      "seat_label": "PA House 97",
+      "pres_margin": "-15.4",
+      "holder_party": "R",
+      "candidate": "Steven Curtis Mentzer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "99",
+      "seat_label": "PA House 99",
+      "pres_margin": "-42.3",
+      "holder_party": "R",
+      "candidate": "David H. Zimmerman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "101",
+      "seat_label": "PA House 101",
+      "pres_margin": "-22.8",
+      "holder_party": "R",
+      "candidate": "John A Schlegel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "102",
+      "seat_label": "PA House 102",
+      "pres_margin": "-41.4",
+      "holder_party": "R",
+      "candidate": "Russell H Diamond",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "106",
       "seat_label": "PA House 106",
       "pres_margin": "-9.8",
@@ -2797,11 +9192,621 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "107",
+      "seat_label": "PA House 107",
+      "pres_margin": "-48.5",
+      "holder_party": "R",
+      "candidate": "Joanne C. Stehr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "108",
+      "seat_label": "PA House 108",
+      "pres_margin": "-32.5",
+      "holder_party": "R",
+      "candidate": "Michael A.K. Stender Jr.",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "109",
+      "seat_label": "PA House 109",
+      "pres_margin": "-30.9",
+      "holder_party": "R",
+      "candidate": "Robert Medin Leadbeter Ii",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "110",
+      "seat_label": "PA House 110",
+      "pres_margin": "-40.1",
+      "holder_party": "R",
+      "candidate": "Tina Pickett",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "111",
+      "seat_label": "PA House 111",
+      "pres_margin": "-42.0",
+      "holder_party": "R",
+      "candidate": "Jonathan A Fritz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "112",
+      "seat_label": "PA House 112",
+      "pres_margin": "+1.1",
+      "holder_party": "D",
+      "candidate": "Joseph J Sabia Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "113",
+      "seat_label": "PA House 113",
+      "pres_margin": "+6.4",
+      "holder_party": "D",
+      "candidate": "Lucas O'Brien",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "115",
+      "seat_label": "PA House 115",
+      "pres_margin": "+7.2",
+      "holder_party": "D",
+      "candidate": "Richard W. Szabo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "116",
+      "seat_label": "PA House 116",
+      "pres_margin": "-34.6",
+      "holder_party": "R",
+      "candidate": "Dane Jeffrey Watro Jr.",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "118",
+      "seat_label": "PA House 118",
+      "pres_margin": "-7.4",
+      "holder_party": "D",
+      "candidate": "John F Lombardo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "119",
+      "seat_label": "PA House 119",
+      "pres_margin": "-17.0",
+      "holder_party": "R",
+      "candidate": "Alec Joseph Ryncavage",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "120",
       "seat_label": "PA House 120",
       "pres_margin": "-11.7",
       "holder_party": "R",
       "candidate": "Brenda Pugh",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "121",
+      "seat_label": "PA House 121",
+      "pres_margin": "-1.7",
+      "holder_party": "D",
+      "candidate": "Michael D. Harostock Iii",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "122",
+      "seat_label": "PA House 122",
+      "pres_margin": "-34.7",
+      "holder_party": "R",
+      "candidate": "Doyle Heffley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "123",
+      "seat_label": "PA House 123",
+      "pres_margin": "-33.7",
+      "holder_party": "R",
+      "candidate": "Timothy F. Twardzik",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "124",
+      "seat_label": "PA House 124",
+      "pres_margin": "-38.5",
+      "holder_party": "R",
+      "candidate": "James A. Barton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "125",
+      "seat_label": "PA House 125",
+      "pres_margin": "-25.1",
+      "holder_party": "R",
+      "candidate": "Joseph P Kerwin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "126",
+      "seat_label": "PA House 126",
+      "pres_margin": "+4.5",
+      "holder_party": "D",
+      "candidate": "Miguel A. Vasquez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "131",
+      "seat_label": "PA House 131",
+      "pres_margin": "-10.2",
+      "holder_party": "R",
+      "candidate": "V. Milou Mackenzie",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "132",
+      "seat_label": "PA House 132",
+      "pres_margin": "+11.9",
+      "holder_party": "D",
+      "candidate": "Caren Lowrey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "134",
+      "seat_label": "PA House 134",
+      "pres_margin": "+12.9",
+      "holder_party": "D",
+      "candidate": "Miriam Alicia Maldonado",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "135",
+      "seat_label": "PA House 135",
+      "pres_margin": "+25.7",
+      "holder_party": "D",
+      "candidate": "Joseph F Poplawski",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "136",
+      "seat_label": "PA House 136",
+      "pres_margin": "+11.4",
+      "holder_party": "D",
+      "candidate": "Pilar M Campisi",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "137",
+      "seat_label": "PA House 137",
+      "pres_margin": "-0.9",
+      "holder_party": "R",
+      "candidate": "Joseph T Emrick",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "138",
+      "seat_label": "PA House 138",
+      "pres_margin": "-22.1",
+      "holder_party": "R",
+      "candidate": "Ann L Flood",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "139",
+      "seat_label": "PA House 139",
+      "pres_margin": "-31.7",
+      "holder_party": "R",
+      "candidate": "Jeffrey H Olsommer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "140",
+      "seat_label": "PA House 140",
+      "pres_margin": "+3.4",
+      "holder_party": "D",
+      "candidate": "Michael J. Gettis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "141",
+      "seat_label": "PA House 141",
+      "pres_margin": "+3.3",
+      "holder_party": "D",
+      "candidate": "Kenneth James Velez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "142",
+      "seat_label": "PA House 142",
+      "pres_margin": "-3.3",
+      "holder_party": "R",
+      "candidate": "Joseph F Hogan Iv",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "143",
+      "seat_label": "PA House 143",
+      "pres_margin": "-5.5",
+      "holder_party": "R",
+      "candidate": "Shelby E. Labs",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "144",
+      "seat_label": "PA House 144",
+      "pres_margin": "-0.3",
+      "holder_party": "D",
+      "candidate": "Michael J. Murphy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "145",
+      "seat_label": "PA House 145",
+      "pres_margin": "-15.5",
+      "holder_party": "R",
+      "candidate": "Craig T Staats",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "147",
+      "seat_label": "PA House 147",
+      "pres_margin": "-9.7",
+      "holder_party": "R",
+      "candidate": "Donna Marie Scheuren",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "153",
+      "seat_label": "PA House 153",
+      "pres_margin": "+31.3",
+      "holder_party": "D",
+      "candidate": "Cory L Toner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "156",
+      "seat_label": "PA House 156",
+      "pres_margin": "+18.7",
+      "holder_party": "D",
+      "candidate": "Kris R Vollrath",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "157",
+      "seat_label": "PA House 157",
+      "pres_margin": "+24.7",
+      "holder_party": "D",
+      "candidate": "Justin J. Pak",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "160",
+      "seat_label": "PA House 160",
+      "pres_margin": "+5.4",
+      "holder_party": "R",
+      "candidate": "Wendell Craig Williams",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "162",
+      "seat_label": "PA House 162",
+      "pres_margin": "+11.0",
+      "holder_party": "D",
+      "candidate": "Michael E. Murphy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "165",
+      "seat_label": "PA House 165",
+      "pres_margin": "+17.2",
+      "holder_party": "D",
+      "candidate": "Deirdre D. Mccleary",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "166",
+      "seat_label": "PA House 166",
+      "pres_margin": "+23.9",
+      "holder_party": "D",
+      "candidate": "Joseph William Walker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "167",
+      "seat_label": "PA House 167",
+      "pres_margin": "+21.2",
+      "holder_party": "D",
+      "candidate": "Joseph M. Lewis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "168",
+      "seat_label": "PA House 168",
+      "pres_margin": "+20.2",
+      "holder_party": "D",
+      "candidate": "Kathryn M.L. Buckley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "169",
+      "seat_label": "PA House 169",
+      "pres_margin": "-32.2",
+      "holder_party": "R",
+      "candidate": "Kate Anne Klunk",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "170",
+      "seat_label": "PA House 170",
+      "pres_margin": "-14.5",
+      "holder_party": "R",
+      "candidate": "Martina A. White",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "171",
+      "seat_label": "PA House 171",
+      "pres_margin": "-37.7",
+      "holder_party": "R",
+      "candidate": "Kerry A Benninghoff",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "172",
+      "seat_label": "PA House 172",
+      "pres_margin": "-0.8",
+      "holder_party": "D",
+      "candidate": "Wallace J Quinlan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "173",
+      "seat_label": "PA House 173",
+      "pres_margin": "+5.0",
+      "holder_party": "D",
+      "candidate": "William J Griffin Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "176",
+      "seat_label": "PA House 176",
+      "pres_margin": "-18.2",
+      "holder_party": "R",
+      "candidate": "Jack B Rader Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "177",
+      "seat_label": "PA House 177",
+      "pres_margin": "+23.5",
+      "holder_party": "D",
+      "candidate": "Robyn L Bird",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "178",
+      "seat_label": "PA House 178",
+      "pres_margin": "-12.8",
+      "holder_party": "R",
+      "candidate": "Kristin Marcell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "183",
+      "seat_label": "PA House 183",
+      "pres_margin": "-21.6",
+      "holder_party": "R",
+      "candidate": "Zachary Allen Mako",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "187",
+      "seat_label": "PA House 187",
+      "pres_margin": "-9.4",
+      "holder_party": "R",
+      "candidate": "Gary W Day",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "189",
+      "seat_label": "PA House 189",
+      "pres_margin": "+8.0",
+      "holder_party": "D",
+      "candidate": "Danica L. Hartenfels",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "192",
+      "seat_label": "PA House 192",
+      "pres_margin": "+85.2",
+      "holder_party": "D",
+      "candidate": "Tiffany Brown",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "196",
+      "seat_label": "PA House 196",
+      "pres_margin": "-33.4",
+      "holder_party": null,
+      "candidate": "George Margetas",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "199",
+      "seat_label": "PA House 199",
+      "pres_margin": "-15.4",
+      "holder_party": "R",
+      "candidate": "Barbara Gleim",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "4",
+      "seat_label": "PA Senate 4",
+      "pres_margin": "+67.3",
+      "holder_party": "D",
+      "candidate": "Todd Johnson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "6",
+      "seat_label": "PA Senate 6",
+      "pres_margin": "-5.5",
+      "holder_party": "R",
+      "candidate": "Frank Farry",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "10",
+      "seat_label": "PA Senate 10",
+      "pres_margin": "+10.1",
+      "holder_party": "D",
+      "candidate": "Gregory J Bankos Jr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "12",
+      "seat_label": "PA Senate 12",
+      "pres_margin": "+15.9",
+      "holder_party": "D",
+      "candidate": "Robert F Costello Iii",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "14",
+      "seat_label": "PA Senate 14",
+      "pres_margin": "-2.7",
+      "holder_party": "D",
+      "candidate": "Omy Juriel Maldonado",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "16",
+      "seat_label": "PA Senate 16",
+      "pres_margin": "-8.9",
+      "holder_party": "R",
+      "candidate": "Jarrett Charles Coleman",
       "is_open_seat": null
     },
     {
@@ -2817,11 +9822,101 @@
     {
       "election_type": "Primary_R",
       "chamber": "Senate",
+      "district": "22",
+      "seat_label": "PA Senate 22",
+      "pres_margin": "+3.9",
+      "holder_party": "D",
+      "candidate": "Sharon Soltis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "24",
+      "seat_label": "PA Senate 24",
+      "pres_margin": "-2.2",
+      "holder_party": "R",
+      "candidate": "Tracy E. Pennycuick",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "26",
+      "seat_label": "PA Senate 26",
+      "pres_margin": "+19.4",
+      "holder_party": "D",
+      "candidate": "Alfeia Devaughn-Goodwin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "28",
+      "seat_label": "PA Senate 28",
+      "pres_margin": "-28.8",
+      "holder_party": "R",
+      "candidate": "Kristin Lee Phillips-Hill",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "30",
+      "seat_label": "PA Senate 30",
+      "pres_margin": "-50.7",
+      "holder_party": "R",
+      "candidate": "Judith F. Ward",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "34",
+      "seat_label": "PA Senate 34",
+      "pres_margin": "-22.2",
+      "holder_party": "R",
+      "candidate": "William Gregory Rothman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
       "district": "38",
       "seat_label": "PA Senate 38",
       "pres_margin": "+10.2",
       "holder_party": "D",
       "candidate": "Thomas West",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "40",
+      "seat_label": "PA Senate 40",
+      "pres_margin": "-6.5",
+      "holder_party": "R",
+      "candidate": "Rosemary Maula Brown",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "44",
+      "seat_label": "PA Senate 44",
+      "pres_margin": "+10.5",
+      "holder_party": "D",
+      "candidate": "Melissa C. Dicranian",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "50",
+      "seat_label": "PA Senate 50",
+      "pres_margin": "-33.6",
+      "holder_party": "R",
+      "candidate": "Michele Brooks",
       "is_open_seat": null
     }
   ],

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T13:01:39.706718Z",
+  "generated_at": "2026-03-11T23:41:43.009902Z",
   "state": {
     "name": "New Mexico",
     "abbr": "NM",
@@ -24,11 +24,11 @@
       "forecast": "Likely D",
       "forecast_details": [
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Likely D"
         },
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Likely D"
         }
       ]
@@ -1400,6 +1400,70 @@
     ],
     "legislative": [
       {
+        "seat_label": "NM House 1",
+        "chamber": "House",
+        "district": "1",
+        "candidates": [
+          {
+            "name": "Rod Montoya",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 2",
+        "chamber": "House",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "P Mark Duncan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 4",
+        "chamber": "House",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Christina J Aspaas",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph Franklin Hernandez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Heather Scott Ellison",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 5",
+        "chamber": "House",
+        "district": "5",
+        "candidates": [
+          {
+            "name": "Doreen Wonda Johnson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
         "seat_label": "NM House 6",
         "chamber": "House",
         "district": "6",
@@ -1411,9 +1475,263 @@
             "election_type": "Primary_D"
           },
           {
+            "name": "Johnny Valdez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Leonardo J Torrez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Martha Garcia",
             "party": "D",
             "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Priscilla Benally",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Paul L Spencer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 7",
+        "chamber": "House",
+        "district": "7",
+        "candidates": [
+          {
+            "name": "Tanya R Mirabal Moya",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 8",
+        "chamber": "House",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Katherine Joanna Gauer",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brian G Baca",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 9",
+        "chamber": "House",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Brandy N Laughter",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Patricia 'Patty' A Lundstrom",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 10",
+        "chamber": "House",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "G Andres Romero",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Christopher P Crane",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 11",
+        "chamber": "House",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Javier I Martinez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 12",
+        "chamber": "House",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Art De La Cruz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Steven E Tafoya",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 13",
+        "chamber": "House",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Matthew E Archuleta",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Patricia A Roybal Caballero",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 14",
+        "chamber": "House",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Joseph M Romero",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Miguel P Garcia",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 15",
+        "chamber": "House",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Dayan \"Day\" Mercedes Hochman-Vigil",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 16",
+        "chamber": "House",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Marsella Duarte Serna",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Yanira Gurrola Valenzuela",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 17",
+        "chamber": "House",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Cynthia D Borrego",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Stacey Deanne Rich",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 18",
+        "chamber": "House",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Marianna A Anaya",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 19",
+        "chamber": "House",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Janelle I Anyanonu",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 20",
+        "chamber": "House",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Meredith A Dixon",
+            "party": "D",
+            "is_incumbent": false,
             "election_type": "Primary_D"
           }
         ]
@@ -1424,7 +1742,158 @@
         "district": "21",
         "candidates": [
           {
+            "name": "Debra Marie Sarinana",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Robert Mason",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 22",
+        "chamber": "House",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "William (Bill) Scott",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Stefani Lord",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 23",
+        "chamber": "House",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "Elise Falanga Taylor",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Alan T Martinez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 24",
+        "chamber": "House",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Elizabeth L Thomson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Frankie Byron Santos Mcquerry",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 25",
+        "chamber": "House",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "Cristina S Parajon",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Denis Litvinenko",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 26",
+        "chamber": "House",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Eleanor Chavez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Corey Rubin Zimmerman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 27",
+        "chamber": "House",
+        "district": "27",
+        "candidates": [
+          {
+            "name": "Abby Christine Foster",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marian Matthews",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jahnelle Louise Garcia",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Robert S Godshall",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 28",
+        "chamber": "House",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Pamelya Paulette Herndon",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brenda J Olson",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -1441,6 +1910,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Carolyn Stith",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1450,7 +1925,164 @@
         "district": "30",
         "candidates": [
           {
+            "name": "Elizabeth Diane Torres-Velasquez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Veronica Nadine Mireles",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Corrine Teller Barraza",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jerry L Trujillo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 31",
+        "chamber": "House",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "Ryan Anselm Braid",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nicole Chavez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 32",
+        "chamber": "House",
+        "district": "32",
+        "candidates": [
+          {
+            "name": "Laura Mairel Parra",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jenifer Marie Jones",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 33",
+        "chamber": "House",
+        "district": "33",
+        "candidates": [
+          {
+            "name": "Micaela Lara Cadena",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ramona J Martinez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Enrique Kiki Vigil",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 34",
+        "chamber": "House",
+        "district": "34",
+        "candidates": [
+          {
+            "name": "Juan A Fuentes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Raymundo Lara",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 35",
+        "chamber": "House",
+        "district": "35",
+        "candidates": [
+          {
+            "name": "Angelica Rubio",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 36",
+        "chamber": "House",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Nathan P Small",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Julia E Ruiz",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 37",
+        "chamber": "House",
+        "district": "37",
+        "candidates": [
+          {
+            "name": "Lori A Martinez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Matilda Mccarthy Villalobos",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Isabella Solis",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -1471,15 +2103,181 @@
         ]
       },
       {
+        "seat_label": "NM House 39",
+        "chamber": "House",
+        "district": "39",
+        "candidates": [
+          {
+            "name": "Raul S Turrieta",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Luis M Terrazas",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "NM House 40",
         "chamber": "House",
         "district": "40",
         "candidates": [
           {
+            "name": "Joseph L Sanchez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Nancy Jane Wright",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Landon Mcguire Dooley",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 41",
+        "chamber": "House",
+        "district": "41",
+        "candidates": [
+          {
+            "name": "Debbie A. Rodella",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Yolanda R Jaramillo",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 42",
+        "chamber": "House",
+        "district": "42",
+        "candidates": [
+          {
+            "name": "Kristina Ortez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 43",
+        "chamber": "House",
+        "district": "43",
+        "candidates": [
+          {
+            "name": "Christine Chandler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 44",
+        "chamber": "House",
+        "district": "44",
+        "candidates": [
+          {
+            "name": "Kathleen M Cates",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Raul R Vigil",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 45",
+        "chamber": "House",
+        "district": "45",
+        "candidates": [
+          {
+            "name": "Linda Michelle Serrato",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 46",
+        "chamber": "House",
+        "district": "46",
+        "candidates": [
+          {
+            "name": "Andrea D Romero",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 47",
+        "chamber": "House",
+        "district": "47",
+        "candidates": [
+          {
+            "name": "Reena C Szczepanski",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 48",
+        "chamber": "House",
+        "district": "48",
+        "candidates": [
+          {
+            "name": "Tara L Lujan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Victoria May Garcia",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 49",
+        "chamber": "House",
+        "district": "49",
+        "candidates": [
+          {
+            "name": "Gail Missy Armstrong",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1493,6 +2291,38 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Kenneth Donald Brennan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 51",
+        "chamber": "House",
+        "district": "51",
+        "candidates": [
+          {
+            "name": "John Block",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 52",
+        "chamber": "House",
+        "district": "52",
+        "candidates": [
+          {
+            "name": "Doreen Yvonne Gallegos",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
           }
         ]
       },
@@ -1502,7 +2332,84 @@
         "district": "53",
         "candidates": [
           {
+            "name": "Sarah Angelina Silva",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Benjamin Luna",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 54",
+        "chamber": "House",
+        "district": "54",
+        "candidates": [
+          {
+            "name": "Jonathan Allen Henry",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 55",
+        "chamber": "House",
+        "district": "55",
+        "candidates": [
+          {
+            "name": "Cathrynn N Brown",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 56",
+        "chamber": "House",
+        "district": "56",
+        "candidates": [
+          {
+            "name": "Harlan H Vincent",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 57",
+        "chamber": "House",
+        "district": "57",
+        "candidates": [
+          {
+            "name": "Chriselle Verene Martinez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Catherine Jeanette Cullen",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 58",
+        "chamber": "House",
+        "district": "58",
+        "candidates": [
+          {
+            "name": "Angelita Mejia",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -1519,6 +2426,12 @@
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
+          },
+          {
+            "name": "Stephen Ryan Dodson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1528,16 +2441,354 @@
         "district": "60",
         "candidates": [
           {
+            "name": "Luke Nicholas Jungmann",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joshua N. Hernandez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Zachary Anaya",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
+      },
+      {
+        "seat_label": "NM House 61",
+        "chamber": "House",
+        "district": "61",
+        "candidates": [
+          {
+            "name": "Randall Thomas Pettigrew",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 62",
+        "chamber": "House",
+        "district": "62",
+        "candidates": [
+          {
+            "name": "Elaine Sena Cortez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 63",
+        "chamber": "House",
+        "district": "63",
+        "candidates": [
+          {
+            "name": "Seth H Martin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 64",
+        "chamber": "House",
+        "district": "64",
+        "candidates": [
+          {
+            "name": "Andrea R Reeb",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 65",
+        "chamber": "House",
+        "district": "65",
+        "candidates": [
+          {
+            "name": "Derrick J Lente",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 66",
+        "chamber": "House",
+        "district": "66",
+        "candidates": [
+          {
+            "name": "Dan S Lewis",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Leanne Gandy",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Trinidad Malone",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 67",
+        "chamber": "House",
+        "district": "67",
+        "candidates": [
+          {
+            "name": "Vincent M Soule",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jackey O Chatfield",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 68",
+        "chamber": "House",
+        "district": "68",
+        "candidates": [
+          {
+            "name": "Charlotte L Little",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David E Adkins",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 69",
+        "chamber": "House",
+        "district": "69",
+        "candidates": [
+          {
+            "name": "Harry Garcia",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michelle Paulene Abeyta",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NM House 70",
+        "chamber": "House",
+        "district": "70",
+        "candidates": [
+          {
+            "name": "Ambrose M Castellano",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Anita Amalia Gonzales",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
       }
     ]
   },
   "uncontested_primaries": [
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "5",
+      "seat_label": "NM House 5",
+      "pres_margin": "+30.8",
+      "holder_party": "D",
+      "candidate": "Doreen Wonda Johnson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "8",
+      "seat_label": "NM House 8",
+      "pres_margin": "-19.4",
+      "holder_party": "R",
+      "candidate": "Katherine Joanna Gauer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "10",
+      "seat_label": "NM House 10",
+      "pres_margin": "+13.2",
+      "holder_party": "D",
+      "candidate": "G Andres Romero",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "11",
+      "seat_label": "NM House 11",
+      "pres_margin": "+49.4",
+      "holder_party": "D",
+      "candidate": "Javier I Martinez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "12",
+      "seat_label": "NM House 12",
+      "pres_margin": "+18.2",
+      "holder_party": "D",
+      "candidate": "Art De La Cruz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "15",
+      "seat_label": "NM House 15",
+      "pres_margin": "+28.0",
+      "holder_party": "D",
+      "candidate": "Dayan \"Day\" Mercedes Hochman-Vigil",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "17",
+      "seat_label": "NM House 17",
+      "pres_margin": "+11.3",
+      "holder_party": "D",
+      "candidate": "Cynthia D Borrego",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "18",
+      "seat_label": "NM House 18",
+      "pres_margin": "+66.2",
+      "holder_party": "D",
+      "candidate": "Marianna A Anaya",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "19",
+      "seat_label": "NM House 19",
+      "pres_margin": "+44.0",
+      "holder_party": "D",
+      "candidate": "Janelle I Anyanonu",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "20",
+      "seat_label": "NM House 20",
+      "pres_margin": "+16.4",
+      "holder_party": "D",
+      "candidate": "Meredith A Dixon",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "21",
+      "seat_label": "NM House 21",
+      "pres_margin": "+19.1",
+      "holder_party": "D",
+      "candidate": "Debra Marie Sarinana",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "22",
+      "seat_label": "NM House 22",
+      "pres_margin": "-10.4",
+      "holder_party": "R",
+      "candidate": "William (Bill) Scott",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "23",
+      "seat_label": "NM House 23",
+      "pres_margin": "-2.8",
+      "holder_party": "R",
+      "candidate": "Elise Falanga Taylor",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "25",
+      "seat_label": "NM House 25",
+      "pres_margin": "+39.1",
+      "holder_party": "D",
+      "candidate": "Cristina S Parajon",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "26",
+      "seat_label": "NM House 26",
+      "pres_margin": "+14.4",
+      "holder_party": "D",
+      "candidate": "Eleanor Chavez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "28",
+      "seat_label": "NM House 28",
+      "pres_margin": "+16.0",
+      "holder_party": "D",
+      "candidate": "Pamelya Paulette Herndon",
+      "is_open_seat": null
+    },
     {
       "election_type": "Primary_D",
       "chamber": "House",
@@ -1551,11 +2802,121 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "40",
-      "seat_label": "NM House 40",
-      "pres_margin": "+11.1",
+      "district": "31",
+      "seat_label": "NM House 31",
+      "pres_margin": "+9.0",
+      "holder_party": "R",
+      "candidate": "Ryan Anselm Braid",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "32",
+      "seat_label": "NM House 32",
+      "pres_margin": "-19.3",
+      "holder_party": "R",
+      "candidate": "Laura Mairel Parra",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "35",
+      "seat_label": "NM House 35",
+      "pres_margin": "+16.4",
       "holder_party": "D",
-      "candidate": "Nancy Jane Wright",
+      "candidate": "Angelica Rubio",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "36",
+      "seat_label": "NM House 36",
+      "pres_margin": "+3.3",
+      "holder_party": "D",
+      "candidate": "Nathan P Small",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "39",
+      "seat_label": "NM House 39",
+      "pres_margin": "+3.3",
+      "holder_party": "R",
+      "candidate": "Raul S Turrieta",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "42",
+      "seat_label": "NM House 42",
+      "pres_margin": "+47.4",
+      "holder_party": "D",
+      "candidate": "Kristina Ortez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "43",
+      "seat_label": "NM House 43",
+      "pres_margin": "+28.9",
+      "holder_party": "D",
+      "candidate": "Christine Chandler",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "44",
+      "seat_label": "NM House 44",
+      "pres_margin": "+8.7",
+      "holder_party": "D",
+      "candidate": "Kathleen M Cates",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "45",
+      "seat_label": "NM House 45",
+      "pres_margin": "+50.0",
+      "holder_party": "D",
+      "candidate": "Linda Michelle Serrato",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "46",
+      "seat_label": "NM House 46",
+      "pres_margin": "+52.5",
+      "holder_party": "D",
+      "candidate": "Andrea D Romero",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "47",
+      "seat_label": "NM House 47",
+      "pres_margin": "+64.2",
+      "holder_party": "D",
+      "candidate": "Reena C Szczepanski",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "48",
+      "seat_label": "NM House 48",
+      "pres_margin": "+56.0",
+      "holder_party": "D",
+      "candidate": "Tara L Lujan",
       "is_open_seat": null
     },
     {
@@ -1566,6 +2927,166 @@
       "pres_margin": "+25.0",
       "holder_party": "D",
       "candidate": "Sarah Boses",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "52",
+      "seat_label": "NM House 52",
+      "pres_margin": "+17.1",
+      "holder_party": "D",
+      "candidate": "Doreen Yvonne Gallegos",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "53",
+      "seat_label": "NM House 53",
+      "pres_margin": "+1.6",
+      "holder_party": "D",
+      "candidate": "Sarah Angelina Silva",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "57",
+      "seat_label": "NM House 57",
+      "pres_margin": "-0.5",
+      "holder_party": "R",
+      "candidate": "Chriselle Verene Martinez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "60",
+      "seat_label": "NM House 60",
+      "pres_margin": "-6.4",
+      "holder_party": "R",
+      "candidate": "Luke Nicholas Jungmann",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "65",
+      "seat_label": "NM House 65",
+      "pres_margin": "+37.2",
+      "holder_party": "D",
+      "candidate": "Derrick J Lente",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "67",
+      "seat_label": "NM House 67",
+      "pres_margin": "-40.9",
+      "holder_party": "R",
+      "candidate": "Vincent M Soule",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "68",
+      "seat_label": "NM House 68",
+      "pres_margin": "+4.7",
+      "holder_party": "D",
+      "candidate": "Charlotte L Little",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "1",
+      "seat_label": "NM House 1",
+      "pres_margin": "-50.3",
+      "holder_party": "R",
+      "candidate": "Rod Montoya",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "2",
+      "seat_label": "NM House 2",
+      "pres_margin": "-39.0",
+      "holder_party": "R",
+      "candidate": "P Mark Duncan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "4",
+      "seat_label": "NM House 4",
+      "pres_margin": "+4.0",
+      "holder_party": "D",
+      "candidate": "Heather Scott Ellison",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "6",
+      "seat_label": "NM House 6",
+      "pres_margin": "+14.6",
+      "holder_party": "D",
+      "candidate": "Paul L Spencer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "7",
+      "seat_label": "NM House 7",
+      "pres_margin": "-14.3",
+      "holder_party": "R",
+      "candidate": "Tanya R Mirabal Moya",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "8",
+      "seat_label": "NM House 8",
+      "pres_margin": "-19.4",
+      "holder_party": "R",
+      "candidate": "Brian G Baca",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "10",
+      "seat_label": "NM House 10",
+      "pres_margin": "+13.2",
+      "holder_party": "D",
+      "candidate": "Christopher P Crane",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "12",
+      "seat_label": "NM House 12",
+      "pres_margin": "+18.2",
+      "holder_party": "D",
+      "candidate": "Steven E Tafoya",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "17",
+      "seat_label": "NM House 17",
+      "pres_margin": "+11.3",
+      "holder_party": "D",
+      "candidate": "Stacey Deanne Rich",
       "is_open_seat": null
     },
     {
@@ -1581,11 +3102,121 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "22",
+      "seat_label": "NM House 22",
+      "pres_margin": "-10.4",
+      "holder_party": "R",
+      "candidate": "Stefani Lord",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "23",
+      "seat_label": "NM House 23",
+      "pres_margin": "-2.8",
+      "holder_party": "R",
+      "candidate": "Alan T Martinez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "25",
+      "seat_label": "NM House 25",
+      "pres_margin": "+39.1",
+      "holder_party": "D",
+      "candidate": "Denis Litvinenko",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "26",
+      "seat_label": "NM House 26",
+      "pres_margin": "+14.4",
+      "holder_party": "D",
+      "candidate": "Corey Rubin Zimmerman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "28",
+      "seat_label": "NM House 28",
+      "pres_margin": "+16.0",
+      "holder_party": "D",
+      "candidate": "Brenda J Olson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "29",
+      "seat_label": "NM House 29",
+      "pres_margin": "+12.0",
+      "holder_party": "D",
+      "candidate": "Carolyn Stith",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "30",
       "seat_label": "NM House 30",
       "pres_margin": "+16.0",
       "holder_party": "D",
-      "candidate": "Corrine Teller Barraza",
+      "candidate": "Jerry L Trujillo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "31",
+      "seat_label": "NM House 31",
+      "pres_margin": "+9.0",
+      "holder_party": "R",
+      "candidate": "Nicole Chavez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "32",
+      "seat_label": "NM House 32",
+      "pres_margin": "-19.3",
+      "holder_party": "R",
+      "candidate": "Jenifer Marie Jones",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "33",
+      "seat_label": "NM House 33",
+      "pres_margin": "+16.9",
+      "holder_party": "D",
+      "candidate": "Enrique Kiki Vigil",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "36",
+      "seat_label": "NM House 36",
+      "pres_margin": "+3.3",
+      "holder_party": "D",
+      "candidate": "Julia E Ruiz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "37",
+      "seat_label": "NM House 37",
+      "pres_margin": "+14.0",
+      "holder_party": "D",
+      "candidate": "Isabella Solis",
       "is_open_seat": null
     },
     {
@@ -1601,31 +3232,191 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "39",
+      "seat_label": "NM House 39",
+      "pres_margin": "+3.3",
+      "holder_party": "R",
+      "candidate": "Luis M Terrazas",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "40",
+      "seat_label": "NM House 40",
+      "pres_margin": "+11.1",
+      "holder_party": "D",
+      "candidate": "Landon Mcguire Dooley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "44",
+      "seat_label": "NM House 44",
+      "pres_margin": "+8.7",
+      "holder_party": "D",
+      "candidate": "Raul R Vigil",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "48",
+      "seat_label": "NM House 48",
+      "pres_margin": "+56.0",
+      "holder_party": "D",
+      "candidate": "Victoria May Garcia",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "49",
+      "seat_label": "NM House 49",
+      "pres_margin": "-23.3",
+      "holder_party": "R",
+      "candidate": "Gail Missy Armstrong",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "50",
+      "seat_label": "NM House 50",
+      "pres_margin": "+25.0",
+      "holder_party": "D",
+      "candidate": "Kenneth Donald Brennan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "51",
+      "seat_label": "NM House 51",
+      "pres_margin": "-22.8",
+      "holder_party": "R",
+      "candidate": "John Block",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "53",
       "seat_label": "NM House 53",
       "pres_margin": "+1.6",
       "holder_party": "D",
-      "candidate": "Benjamin Luna",
+      "candidate": null,
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "59",
-      "seat_label": "NM House 59",
-      "pres_margin": "-46.2",
+      "district": "54",
+      "seat_label": "NM House 54",
+      "pres_margin": "-56.0",
       "holder_party": "R",
-      "candidate": "Mark Murphy",
+      "candidate": "Jonathan Allen Henry",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "60",
-      "seat_label": "NM House 60",
-      "pres_margin": "-6.4",
+      "district": "55",
+      "seat_label": "NM House 55",
+      "pres_margin": "-56.8",
       "holder_party": "R",
-      "candidate": "Zachary Anaya",
+      "candidate": "Cathrynn N Brown",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "56",
+      "seat_label": "NM House 56",
+      "pres_margin": "-37.8",
+      "holder_party": "R",
+      "candidate": "Harlan H Vincent",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "57",
+      "seat_label": "NM House 57",
+      "pres_margin": "-0.5",
+      "holder_party": "R",
+      "candidate": "Catherine Jeanette Cullen",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "58",
+      "seat_label": "NM House 58",
+      "pres_margin": "-38.8",
+      "holder_party": "R",
+      "candidate": "Angelita Mejia",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "61",
+      "seat_label": "NM House 61",
+      "pres_margin": "-49.3",
+      "holder_party": "R",
+      "candidate": "Randall Thomas Pettigrew",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "62",
+      "seat_label": "NM House 62",
+      "pres_margin": "-66.0",
+      "holder_party": "R",
+      "candidate": "Elaine Sena Cortez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "63",
+      "seat_label": "NM House 63",
+      "pres_margin": "-26.3",
+      "holder_party": "R",
+      "candidate": "Seth H Martin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "64",
+      "seat_label": "NM House 64",
+      "pres_margin": "-52.0",
+      "holder_party": "R",
+      "candidate": "Andrea R Reeb",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "67",
+      "seat_label": "NM House 67",
+      "pres_margin": "-40.9",
+      "holder_party": "R",
+      "candidate": "Jackey O Chatfield",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "68",
+      "seat_label": "NM House 68",
+      "pres_margin": "+4.7",
+      "holder_party": "D",
+      "candidate": "David E Adkins",
       "is_open_seat": null
     }
   ],
