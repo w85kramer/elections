@@ -139,6 +139,9 @@ def main():
         # AL House + Senate → effective 2018 (federal court, racial gerrymander)
         ('AL', 'House', 2018, None, True, 'Federal court — 12 districts redrawn (racial gerrymander)'),
         ('AL', 'Senate', 2018, None, True, 'Federal court — racial gerrymander'),
+        # MS House + Senate → effective 2025 (federal court VRA order, new majority-Black districts)
+        ('MS', 'House', 2025, None, True, 'Federal court VRA order — new majority-Black districts required'),
+        ('MS', 'Senate', 2025, None, True, 'Federal court VRA order — 2 new majority-Black Senate districts required'),
     ]
 
     # Look up state_ids for mid-decade entries
