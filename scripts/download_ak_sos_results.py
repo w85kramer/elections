@@ -29,28 +29,30 @@ from html.parser import HTMLParser
 
 import httpx
 
-BASE_URL = 'https://www.elections.alaska.gov/results'
 OUTPUT_PATH = '/tmp/ak_sos_results.json'
 
 # All available election pages (verified via HTTP probes)
+# Most use BASE_URL pattern; 2008 primary and 2010 general are in /Core/Archive/
 ELECTIONS = [
-    # (year, type_code, url_code, election_type_db)
+    # (year, type_code, full_url, election_type_db)
     # Generals
-    (2004, 'general', '04GENR', 'General'),
-    (2006, 'general', '06GENR', 'General'),
-    (2008, 'general', '08GENR', 'General'),
-    (2012, 'general', '12GENR', 'General'),
-    (2014, 'general', '14GENR', 'General'),
-    (2016, 'general', '16GENR', 'General'),
-    (2018, 'general', '18GENR', 'General'),
+    (2004, 'general', 'https://www.elections.alaska.gov/results/04GENR/data/results.htm', 'General'),
+    (2006, 'general', 'https://www.elections.alaska.gov/results/06GENR/data/results.htm', 'General'),
+    (2008, 'general', 'https://www.elections.alaska.gov/results/08GENR/data/results.htm', 'General'),
+    (2010, 'general', 'https://www.elections.alaska.gov/Core/Archive/10GENR/data/resultsOF.htm', 'General'),
+    (2012, 'general', 'https://www.elections.alaska.gov/results/12GENR/data/results.htm', 'General'),
+    (2014, 'general', 'https://www.elections.alaska.gov/results/14GENR/data/results.htm', 'General'),
+    (2016, 'general', 'https://www.elections.alaska.gov/results/16GENR/data/results.htm', 'General'),
+    (2018, 'general', 'https://www.elections.alaska.gov/results/18GENR/data/results.htm', 'General'),
     # Primaries
-    (2004, 'primary', '04PRIM', 'Primary'),
-    (2006, 'primary', '06PRIM', 'Primary'),
-    (2010, 'primary', '10PRIM', 'Primary'),
-    (2012, 'primary', '12PRIM', 'Primary'),
-    (2014, 'primary', '14PRIM', 'Primary'),
-    (2016, 'primary', '16PRIM', 'Primary'),
-    (2018, 'primary', '18PRIM', 'Primary'),
+    (2004, 'primary', 'https://www.elections.alaska.gov/results/04PRIM/data/results.htm', 'Primary'),
+    (2006, 'primary', 'https://www.elections.alaska.gov/results/06PRIM/data/results.htm', 'Primary'),
+    (2008, 'primary', 'https://www.elections.alaska.gov/Core/Archive/08PRIM/data/results.html', 'Primary'),
+    (2010, 'primary', 'https://www.elections.alaska.gov/results/10PRIM/data/results.htm', 'Primary'),
+    (2012, 'primary', 'https://www.elections.alaska.gov/results/12PRIM/data/results.htm', 'Primary'),
+    (2014, 'primary', 'https://www.elections.alaska.gov/results/14PRIM/data/results.htm', 'Primary'),
+    (2016, 'primary', 'https://www.elections.alaska.gov/results/16PRIM/data/results.htm', 'Primary'),
+    (2018, 'primary', 'https://www.elections.alaska.gov/results/18PRIM/data/results.htm', 'Primary'),
 ]
 
 # Map SoS primary party codes to DB election types
@@ -64,6 +66,9 @@ ELECTION_DATES = {
     (2004, 'General'): '2004-11-02',
     (2006, 'General'): '2006-11-07',
     (2008, 'General'): '2008-11-04',
+    (2008, 'Primary'): '2008-08-26',
+    (2008, 'Primary_R'): '2008-08-26',
+    (2010, 'General'): '2010-11-02',
     (2012, 'General'): '2012-11-06',
     (2014, 'General'): '2014-11-04',
     (2016, 'General'): '2016-11-08',
@@ -218,14 +223,12 @@ def main():
             sys.exit(1)
 
     if args.dry_run:
-        for year, etype, code, _ in elections:
-            url = f'{BASE_URL}/{code}/data/results.htm'
+        for year, etype, url, _ in elections:
             print(f'  {year} {etype:8s} → {url}')
         return
 
     all_results = []
-    for year, etype, code, _ in elections:
-        url = f'{BASE_URL}/{code}/data/results.htm'
+    for year, etype, url, _ in elections:
         is_primary = etype == 'primary'
         print(f'Fetching {year} {etype}... ', end='', flush=True)
 
