@@ -36,6 +36,8 @@ OUTPUT_PATH = '/tmp/ak_sos_results.json'
 ELECTIONS = [
     # (year, type_code, full_url, election_type_db)
     # Generals
+    (1994, 'general', 'https://www.elections.alaska.gov/results/94GENR/result94.php', 'General'),
+    (1996, 'general', 'https://www.elections.alaska.gov/results/96PRIM96GENR/summary.txt', 'General'),
     (1998, 'general', 'https://www.elections.alaska.gov/results/98GENR/results.htm', 'General'),
     (2000, 'general', 'https://www.elections.alaska.gov/Core/Archive/00GENR/data/results.htm', 'General'),
     (2002, 'general', 'https://www.elections.alaska.gov/Core/Archive/02GENR/data/results.htm', 'General'),
@@ -48,6 +50,7 @@ ELECTIONS = [
     (2016, 'general', 'https://www.elections.alaska.gov/results/16GENR/data/results.htm', 'General'),
     (2018, 'general', 'https://www.elections.alaska.gov/results/18GENR/data/results.htm', 'General'),
     # Primaries
+    (1996, 'primary', 'https://www.elections.alaska.gov/results/96PRIM96GENR/psummary.txt', 'Primary'),
     (1998, 'primary', 'https://www.elections.alaska.gov/results/98PRIM/results.htm', 'Primary'),
     (2000, 'primary', 'https://www.elections.alaska.gov/Core/Archive/00PRIM/results.htm', 'Primary'),
     (2002, 'primary', 'https://www.elections.alaska.gov/Core/Archive/02PRIM/data/results.htm', 'Primary'),
@@ -69,6 +72,10 @@ NON_R_CODES = {'ADL', 'D-C', 'C', 'DC', 'O'}
 # AK election dates (general = first Tuesday after first Monday in November,
 # primary varied — looked up from SoS headers)
 ELECTION_DATES = {
+    (1994, 'General'): '1994-11-08',
+    (1994, 'Primary'): '1994-08-23',
+    (1996, 'General'): '1996-11-05',
+    (1996, 'Primary'): '1996-08-27',
     (1998, 'General'): '1998-11-03',
     (1998, 'Primary'): '1998-08-25',
     (2000, 'General'): '2000-11-07',
@@ -222,6 +229,189 @@ def parse_races(html):
     return races
 
 
+def parse_1994_html(html):
+    """Parse 1994 general election PHP/HTML format.
+
+    Race headers: <a name="dist1"><b>State Representative District 1:</b></a>
+    or: <a name="senb"><b>State Senator District B:</b></a>
+    Candidate rows: <tr><td>Name</td><td>PARTY</td><td>VOTES</td><td>PCT%</td></tr>
+    """
+    races = []
+
+    # Split by race headers
+    race_pattern = re.compile(
+        r'<b>State (?:Representative|Senator) District (\w+):</b>',
+        re.IGNORECASE
+    )
+
+    parts = race_pattern.split(html)
+    # parts: [preamble, dist_id_1, content_1, dist_id_2, content_2, ...]
+
+    for i in range(1, len(parts), 2):
+        district_id = parts[i].strip()
+        block = parts[i + 1] if i + 1 < len(parts) else ''
+
+        # Determine chamber from the preceding header text
+        # Look back in the original text to find which section we're in
+        preceding = html[:html.find(f'District {district_id}:')]
+        if 'Senator' in preceding[max(0, len(preceding)-200):]:
+            chamber = 'Senate'
+        else:
+            chamber = 'House'
+
+        # Parse candidates
+        candidates = []
+        cand_pattern = re.compile(
+            r'<tr><td>([^<]+)</td>\s*<td[^>]*>\s*([^<]*)</td>\s*<td[^>]*>\s*([^<]*)</td>\s*<td[^>]*>\s*([^<]*)</td></tr>',
+            re.DOTALL
+        )
+
+        for m in cand_pattern.finditer(block):
+            name = m.group(1).strip()
+            party = m.group(2).strip().strip('-').strip()
+            votes_str = m.group(3).strip().replace(',', '')
+            pct_str = m.group(4).strip().rstrip('%').strip()
+
+            if not votes_str or name.lower() == 'candidate':
+                continue
+
+            try:
+                votes = int(votes_str)
+            except ValueError:
+                continue
+
+            try:
+                pct = float(pct_str) if pct_str else None
+            except ValueError:
+                pct = None
+
+            is_write_in = 'write-in' in name.lower()
+
+            candidates.append({
+                'name': name,
+                'party': party if party else None,
+                'votes': votes,
+                'pct': pct,
+                'is_write_in': is_write_in,
+            })
+
+        if candidates:
+            races.append({
+                'race_title': f'{"SENATE" if chamber == "Senate" else "HOUSE"} DISTRICT {district_id}',
+                'chamber': chamber,
+                'district': district_id,
+                'primary_party_code': None,
+                'num_precincts': None,
+                'precincts_reporting': None,
+                'total_votes': sum(c['votes'] for c in candidates),
+                'candidates': candidates,
+            })
+
+    return races
+
+
+def parse_1996_text(text):
+    """Parse 1996 fixed-width text format (single or multi-column).
+
+    Races separated by ======= lines. Columns separated by |.
+    Race header: STATE SENATOR DIST.A   31/  31
+    or: STATE REP. DIST. 1   17/  17
+    Candidate: MIDDAG, GREG C.   D   5908  44.5
+    """
+    races = []
+
+    # First, split multi-column format into individual columns
+    lines = text.split('\n')
+    columns = []
+
+    for line in lines:
+        # Skip page headers
+        if line.startswith('OFFICIAL') or line.startswith('AUGUST') or line.startswith('NOVEMBER') or '** Summary' in line or 'Printed on' in line:
+            continue
+
+        parts = line.split('|')
+        # Ensure we have enough column slots
+        while len(columns) < len(parts):
+            columns.append([])
+        for j, part in enumerate(parts):
+            columns[j].append(part)
+
+    # Process each column independently
+    all_column_text = []
+    for col in columns:
+        col_text = '\n'.join(col)
+        if 'DIST' in col_text:
+            all_column_text.append(col_text)
+
+    # Join all columns into one stream, separated by ===
+    combined = '\n=======================================\n'.join(all_column_text)
+
+    # Now parse races from the combined text
+    race_blocks = re.split(r'={5,}', combined)
+
+    for block in race_blocks:
+        block = block.strip()
+        if not block:
+            continue
+
+        # Match race header
+        header_match = re.match(
+            r'(?:STATE SENATOR DIST\.?\s*(\w+)|STATE REP\.?\s+DIST\.?\s*(\d+))',
+            block
+        )
+        if not header_match:
+            continue
+
+        senate_dist = header_match.group(1)
+        house_dist = header_match.group(2)
+
+        if senate_dist:
+            chamber = 'Senate'
+            district_id = senate_dist
+        else:
+            chamber = 'House'
+            district_id = house_dist
+
+        # Parse candidate lines
+        # Format: NAME   PARTY   VOTES   PCT
+        # The line starts with the candidate name, then party (1-3 chars), votes, percentage
+        candidates = []
+        cand_pattern = re.compile(
+            r'^\s*([A-Za-z][A-Za-z\s,.\'-]+?)\s{2,}(\w{1,3})?\s+(\d+)\s+([\d.]+)?\s*$',
+            re.MULTILINE
+        )
+
+        for m in cand_pattern.finditer(block):
+            name = m.group(1).strip()
+            party = m.group(2).strip() if m.group(2) else None
+            votes = int(m.group(3))
+            pct = float(m.group(4)) if m.group(4) else None
+
+            is_write_in = 'writein' in name.lower().replace(' ', '').replace('-', '')
+
+            candidates.append({
+                'name': name,
+                'party': party,
+                'votes': votes,
+                'pct': pct,
+                'is_write_in': is_write_in,
+            })
+
+        if candidates:
+            races.append({
+                'race_title': f'{"SENATE" if chamber == "Senate" else "HOUSE"} DISTRICT {district_id}',
+                'chamber': chamber,
+                'district': district_id,
+                'primary_party_code': None,
+                'num_precincts': None,
+                'precincts_reporting': None,
+                'total_votes': sum(c['votes'] for c in candidates),
+                'candidates': candidates,
+            })
+
+    return races
+
+
 def determine_election_type(is_primary, primary_code):
     """Map SoS primary party code to DB election_type."""
     if not is_primary:
@@ -261,7 +451,13 @@ def main():
             print(f'ERROR: {e}')
             continue
 
-        races = parse_races(html)
+        # Route to appropriate parser based on format
+        if year == 1994:
+            races = parse_1994_html(html)
+        elif year == 1996:
+            races = parse_1996_text(html)
+        else:
+            races = parse_races(html)
         print(f'{len(races)} state legislative races')
 
         for race in races:
