@@ -58,9 +58,19 @@ function partyLabel(party) {
   const PARTY_NAMES = {
     D: 'Democrat', R: 'Republican', I: 'Independent', NP: 'Nonpartisan',
     L: 'Libertarian', G: 'Green', F: 'Forward Party', C: 'Coalition',
-    W: 'Working Families Party', WF: 'Working Families Party',
+    W: 'Write-in', WF: 'Working Families Party',
     AIP: 'Alaskan Independence Party', CP: 'Constitution Party',
     MOD: 'Moderate Party', PF: 'Peace & Freedom Party',
+    REF: 'Reform Party', IAP: 'Independent American Party',
+    MTP: 'Mountain Party', AMP: 'American Party',
+    PRO: 'Prohibition Party', NL: 'Natural Law Party',
+    UIP: 'United Independent Party', ACP: 'A Connecticut Party',
+    SOC: 'Socialist Party', SL: 'Socialist Labor Party',
+    SW: 'Socialist Workers Party', GRP: 'Grassroots Party',
+    HRP: 'Human Rights Party', RU: 'Raza Unida Party',
+    COM: 'Communist Party', NOTA: 'None of These Candidates',
+    OTH: 'Other', VET: 'Veterans Party', EAR: 'Earth Party',
+    IG: 'Independent Green', NAP: 'New Alliance Party',
   };
   return PARTY_NAMES[party] || party || 'Vacant';
 }

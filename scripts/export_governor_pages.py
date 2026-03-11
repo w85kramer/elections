@@ -25,6 +25,66 @@ from db_config import TOKEN, PROJECT_REF, API_URL
 
 SITE_DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'site', 'data')
 
+# Import recount thresholds and close-race constant from district export
+from export_district_data import RECOUNT_THRESHOLDS, CLOSE_RACE_PCT
+
+
+def _check_recount_eligible(state_abbr, candidates, total_votes, election_type, result_status):
+    """Check if a governor election is within recount threshold or triggered a runoff."""
+    if not total_votes or total_votes == 0:
+        return None
+    if result_status not in ('Called', 'Unofficial'):
+        return None
+
+    sorted_cands = sorted(
+        [c for c in candidates if c.get('votes') and c['votes'] > 0],
+        key=lambda c: c['votes'], reverse=True)
+    if len(sorted_cands) < 2:
+        return None
+
+    # Runoff scenario
+    runoff_cands = [c for c in sorted_cands if c.get('result') == 'Runoff']
+    if len(runoff_cands) >= 2:
+        r_margin = runoff_cands[0]['votes'] - runoff_cands[-1]['votes']
+        r_margin_pct = (r_margin / total_votes) * 100
+        eliminated = [c for c in sorted_cands if c.get('result') not in ('Runoff', 'Won', 'Advanced')]
+        cutoff_margin = cutoff_pct = None
+        if eliminated:
+            cutoff_margin = runoff_cands[-1]['votes'] - eliminated[0]['votes']
+            cutoff_pct = (cutoff_margin / total_votes) * 100
+        return {
+            'type': 'runoff_triggered',
+            'margin': r_margin,
+            'margin_pct': round(r_margin_pct, 2),
+            'cutoff_margin': cutoff_margin,
+            'cutoff_margin_pct': round(cutoff_pct, 2) if cutoff_pct is not None else None,
+        }
+
+    # Standard recount/close-race check
+    margin = sorted_cands[0]['votes'] - sorted_cands[1]['votes']
+    margin_pct = (margin / total_votes) * 100
+
+    thresholds = RECOUNT_THRESHOLDS.get(state_abbr)
+    if thresholds:
+        threshold = thresholds.get('statewide')  # Governor is statewide
+        if threshold is not None and margin_pct <= threshold:
+            return {
+                'type': 'recount',
+                'margin': margin,
+                'margin_pct': round(margin_pct, 2),
+                'threshold_pct': threshold,
+            }
+    else:
+        if margin_pct <= CLOSE_RACE_PCT:
+            return {
+                'type': 'close_race',
+                'margin': margin,
+                'margin_pct': round(margin_pct, 2),
+                'threshold_pct': CLOSE_RACE_PCT,
+            }
+
+    return None
+
 
 def run_sql(query, retries=5):
     for attempt in range(retries):
@@ -331,6 +391,56 @@ def export_governor_pages(dry_run=False, single_state=None):
             if e.get('precincts_reporting') is not None:
                 elec_obj['precincts_reporting'] = e['precincts_reporting']
                 elec_obj['precincts_total'] = e['precincts_total']
+
+            # --- Badge computations ---
+
+            # Recount / close-race / runoff-triggered
+            recount_flag = _check_recount_eligible(
+                state, candidate_list, e['total_votes_cast'],
+                e['election_type'], e.get('result_status'))
+            if recount_flag:
+                elec_obj['recount_eligible'] = recount_flag
+
+            # Incumbent defeated in primary
+            if 'Primary' in e['election_type']:
+                inc_lost = [c for c in candidate_list
+                            if c.get('is_incumbent') and c['result'] == 'Lost']
+                if inc_lost:
+                    elec_obj['incumbent_defeated'] = True
+
+            # Party flip — only for general/special elections that determine the officeholder
+            FLIP_ELIGIBLE_TYPES = {
+                'General', 'General_Runoff',
+                'Special', 'Special_General', 'Special_Runoff', 'Recall',
+            }
+            winner = next((c for c in candidate_list if c['result'] == 'Won'), None)
+            if winner and e['election_type'] in FLIP_ELIGIBLE_TYPES:
+                winner_party = winner['party']
+                # Case 1: incumbent lost in this election
+                inc_loser = next((c for c in candidate_list
+                                  if c.get('is_incumbent') and c['result'] == 'Lost'
+                                  and c['party'] != winner_party), None)
+                if inc_loser:
+                    elec_obj['flipped_seat'] = {
+                        'from': inc_loser['party'],
+                        'to': winner_party,
+                    }
+                # Case 2: open seat — compare to most recent prior governor term
+                elif not any(c.get('is_incumbent') for c in candidate_list):
+                    elec_date = str(e.get('election_date', ''))
+                    prev_terms = [
+                        t for t in terms
+                        if t.get('end_date') and str(t['end_date']) <= elec_date
+                    ]
+                    if prev_terms:
+                        prev = max(prev_terms, key=lambda t: str(t['end_date']))
+                        prev_party = prev.get('party')
+                        if prev_party and prev_party != winner_party:
+                            elec_obj['flipped_seat'] = {
+                                'from': prev_party,
+                                'to': winner_party,
+                            }
+
             elections_list.append(elec_obj)
 
         # Current governor (first term with no end_date)
