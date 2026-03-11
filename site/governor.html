@@ -560,7 +560,7 @@
           ? `<span class="text-muted text-sm">${c.election_type.replace('_', ' ')}</span>` : '';
         candsHtml += `<li>
           <span class="party-badge ${partyBadgeClass(c.party)}" style="font-size:11px;padding:1px 6px">${c.party || '?'}</span>
-          <span style="${partyColorStyle(c.party)}">${c.name}</span>
+          ${c.candidate_id ? `<a href="candidate.html?id=${c.candidate_id}&st=${stateAbbr}" style="${partyColorStyle(c.party)};text-decoration:none">${c.name}</a>` : `<span style="${partyColorStyle(c.party)}">${c.name}</span>`}
           ${typeLabel}
         </li>`;
       }
@@ -716,7 +716,8 @@
       const badge = `<span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty}</span>`;
       const incStr = cand.is_incumbent ? ' <span class="incumbent-marker">(i)</span>' : '';
       const wi = cand.is_write_in ? ' <em>W/I</em>' : '';
-      const nameHtml = `<span class="cand-name" style="${partyColorStyle(candParty)}">${cand.name}${incStr}${wi}</span>`;
+      const candLink = cand.candidate_id ? `<a href="candidate.html?id=${cand.candidate_id}&st=${stateAbbr}" style="${partyColorStyle(candParty)};text-decoration:none">${cand.name}</a>` : `<span style="${partyColorStyle(candParty)}">${cand.name}</span>`;
+      const nameHtml = `<span class="cand-name">${candLink}${incStr}${wi}</span>`;
 
       const pctStr = cand.pct != null ? `${cand.pct.toFixed(1)}%` : '';
       const votesStr = cand.votes != null ? numberWithCommas(cand.votes) : '';

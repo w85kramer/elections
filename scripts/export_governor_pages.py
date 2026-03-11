@@ -183,6 +183,7 @@ def export_governor_pages(dry_run=False, single_state=None):
         SELECT
             st.abbreviation as state,
             cy.election_id,
+            c.id as candidate_id,
             c.full_name as name,
             cy.party,
             cy.votes_received as votes,
@@ -365,6 +366,7 @@ def export_governor_pages(dry_run=False, single_state=None):
             candidate_list = []
             for c in cands:
                 candidate_list.append({
+                    'candidate_id': c['candidate_id'],
                     'name': c['name'],
                     'party': c['party'],
                     'votes': c['votes'],
@@ -471,6 +473,7 @@ def export_governor_pages(dry_run=False, single_state=None):
                         if not any(x['name'] == c['name'] and x['party'] == c['party']
                                    for x in cands_2026):
                             cands_2026.append({
+                                'candidate_id': c['candidate_id'],
                                 'name': c['name'],
                                 'party': c['party'],
                                 'status': c['candidate_status'],

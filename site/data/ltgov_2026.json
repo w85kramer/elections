@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-08T22:20:58.640395Z",
+  "generated_at": "2026-03-11T12:21:05.528117Z",
   "office_type": "Lt. Governor",
   "office_key": "ltgov",
   "total_races": 31,
@@ -139,6 +139,14 @@
         {
           "name": "Leslie Rutledge",
           "party": "R",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "General"
+        },
+        {
+          "name": "Leslie Rutledge",
+          "party": "R",
           "status": null,
           "result": "Won",
           "is_major": false,
@@ -246,7 +254,88 @@
       "filing_deadline": "2026-03-06",
       "primary_date": "2026-05-19",
       "pres_margin_2024": "R+2.2",
-      "candidates": []
+      "candidates": [
+        {
+          "name": "Josh Mclaurin",
+          "party": "D",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_D"
+        },
+        {
+          "name": "Nabilah Parkes",
+          "party": "D",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_D"
+        },
+        {
+          "name": "Richard N. Wright",
+          "party": "D",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_D"
+        },
+        {
+          "name": "Brenda Lynn Nelson-Porter",
+          "party": "R",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_R"
+        },
+        {
+          "name": "David Timothy Clark",
+          "party": "R",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_R"
+        },
+        {
+          "name": "Gregory Robert Dolezal",
+          "party": "R",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_R"
+        },
+        {
+          "name": "John Flanders Kennedy",
+          "party": "R",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_R"
+        },
+        {
+          "name": "Michael Blake Tillery",
+          "party": "R",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_R"
+        },
+        {
+          "name": "Steve Gooch",
+          "party": "R",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_R"
+        },
+        {
+          "name": "Takosha Misheal Swan",
+          "party": "R",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_R"
+        }
+      ]
     },
     {
       "state": "HI",
@@ -748,7 +837,7 @@
         {
           "name": "Jalen Turner",
           "party": "R",
-          "status": "Filed",
+          "status": "Withdrawn_Pre_Ballot",
           "result": "Pending",
           "is_major": false,
           "election_type": "Primary_R"
@@ -881,10 +970,18 @@
       "pres_margin_2024": "R+13.7",
       "candidates": [
         {
+          "name": "Dan Patrick",
+          "party": "R",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "General"
+        },
+        {
           "name": "Courtney Head",
           "party": "D",
           "status": "Filed",
-          "result": "Pending",
+          "result": "Lost",
           "is_major": false,
           "election_type": "Primary_D"
         },
@@ -892,7 +989,7 @@
           "name": "Marcos Velez",
           "party": "D",
           "status": "Filed",
-          "result": "Pending",
+          "result": "Runoff",
           "is_major": false,
           "election_type": "Primary_D"
         },
@@ -900,7 +997,7 @@
           "name": "Vikki Goodwin",
           "party": "D",
           "status": "Filed",
-          "result": "Pending",
+          "result": "Runoff",
           "is_major": false,
           "election_type": "Primary_D"
         },
@@ -908,7 +1005,7 @@
           "name": "Dan Patrick",
           "party": "R",
           "status": "Filed",
-          "result": "Pending",
+          "result": "Won",
           "is_major": false,
           "election_type": "Primary_R"
         },
@@ -916,7 +1013,7 @@
           "name": "Esala Wueschner",
           "party": "R",
           "status": "Filed",
-          "result": "Pending",
+          "result": "Lost",
           "is_major": false,
           "election_type": "Primary_R"
         },
@@ -924,7 +1021,7 @@
           "name": "Perla Hopkins",
           "party": "R",
           "status": "Filed",
-          "result": "Pending",
+          "result": "Lost",
           "is_major": false,
           "election_type": "Primary_R"
         },
@@ -932,9 +1029,25 @@
           "name": "Timothy Mabry",
           "party": "R",
           "status": "Filed",
-          "result": "Pending",
+          "result": "Lost",
           "is_major": false,
           "election_type": "Primary_R"
+        },
+        {
+          "name": "Marcos Velez",
+          "party": "D",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_Runoff_D"
+        },
+        {
+          "name": "Vikki Goodwin",
+          "party": "D",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_Runoff_D"
         }
       ]
     },

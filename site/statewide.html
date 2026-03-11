@@ -156,6 +156,33 @@
   .forecast-solid-d { background: var(--ms-dem-blue); color: white; }
   .forecast-solid-r { background: var(--ms-rep-red); color: white; }
 
+  /* Election result badges */
+  .recount-badge {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    color: #b45309; background: #fef3c7; border: 1px solid #f59e0b;
+    border-radius: 4px; padding: 1px 6px; margin-left: 4px; cursor: help;
+  }
+  .close-race-badge {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    color: #6b21a8; background: #f3e8ff; border: 1px solid #a855f7;
+    border-radius: 4px; padding: 1px 6px; margin-left: 4px; cursor: help;
+  }
+  .runoff-badge {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    color: #9a3412; background: #fff7ed; border: 1px solid #fb923c;
+    border-radius: 4px; padding: 1px 6px; margin-left: 4px; cursor: help;
+  }
+  .flip-badge {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    color: #065f46; background: #ecfdf5; border: 1px solid #34d399;
+    border-radius: 4px; padding: 1px 6px; margin-left: 4px; cursor: help;
+  }
+  .incumbent-defeated-badge {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    color: #991b1b; background: #fef2f2; border: 1px solid #f87171;
+    border-radius: 4px; padding: 1px 6px; margin-left: 4px; cursor: help;
+  }
+
   /* Election history timeline */
   .timeline { position: relative; padding-left: 24px; }
   .timeline::before {
@@ -546,7 +573,7 @@
           ? `<span class="text-muted text-sm">${c.election_type.replace('_', ' ')}</span>` : '';
         candsHtml += `<li>
           <span class="party-badge ${partyBadgeClass(c.party)}" style="font-size:11px;padding:1px 6px">${c.party || '?'}</span>
-          <span style="${partyColorStyle(c.party)}">${c.name}</span>
+          ${c.candidate_id ? `<a href="candidate.html?id=${c.candidate_id}&st=${stateAbbr}" style="${partyColorStyle(c.party)};text-decoration:none">${c.name}</a>` : `<span style="${partyColorStyle(c.party)}">${c.name}</span>`}
           ${typeLabel}
         </li>`;
       }
@@ -614,6 +641,33 @@
     const isUncontested = hasWinner && e.candidates.length === 1;
     const uncontestedTag = isUncontested ? ' <span class="incumbent-marker">(uncontested)</span>' : '';
 
+    // Recount / close-race / runoff-triggered badge
+    let recountTag = '';
+    if (e.recount_eligible) {
+      const rc = e.recount_eligible;
+      if (rc.type === 'runoff_triggered') {
+        const cutoffNote = rc.cutoff_margin != null
+          ? ` | Advance margin: ${rc.cutoff_margin.toLocaleString()} votes (${rc.cutoff_margin_pct}%)`
+          : '';
+        recountTag = ` <span class="runoff-badge" title="Top candidates separated by ${rc.margin.toLocaleString()} votes (${rc.margin_pct}%)${cutoffNote}">Runoff Triggered</span>`;
+      } else if (rc.type === 'recount') {
+        recountTag = ` <span class="recount-badge" title="Margin: ${rc.margin.toLocaleString()} votes (${rc.margin_pct}%) — within ${rc.threshold_pct}% recount threshold">Potential Recount</span>`;
+      } else {
+        recountTag = ` <span class="close-race-badge" title="Margin: ${rc.margin.toLocaleString()} votes (${rc.margin_pct}%)">Close Race</span>`;
+      }
+    }
+
+    let incDefeatTag = '';
+    if (e.incumbent_defeated) {
+      incDefeatTag = ` <span class="incumbent-defeated-badge" title="Incumbent lost in primary">Incumbent Defeated</span>`;
+    }
+
+    let flipTag = '';
+    if (e.flipped_seat) {
+      const f = e.flipped_seat;
+      flipTag = ` <span class="flip-badge" title="Seat flipped from ${f.from} to ${f.to}">Flipped ${f.from}\u2192${f.to}</span>`;
+    }
+
     const hasResults = hasWinner || e.result_status;
     let filedNote = '';
     if (!hasResults && e.candidates.length > 0) {
@@ -626,7 +680,7 @@
         <span>${dateStr}</span>
         <span class="separator">&middot;</span>
         <span class="entry-type">${typeLabel}</span>
-        ${forecastTag}${reportingTag}${uncontestedTag}${filedNote}
+        ${forecastTag}${reportingTag}${recountTag}${flipTag}${incDefeatTag}${uncontestedTag}${filedNote}
       </div>
       <div class="entry-candidates">`;
 
@@ -673,7 +727,8 @@
       const badge = `<span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty}</span>`;
       const incStr = cand.is_incumbent ? ' <span class="incumbent-marker">(i)</span>' : '';
       const wi = cand.is_write_in ? ' <em>W/I</em>' : '';
-      const nameHtml = `<span class="cand-name" style="${partyColorStyle(candParty)}">${cand.name}${incStr}${wi}</span>`;
+      const candLink = cand.candidate_id ? `<a href="candidate.html?id=${cand.candidate_id}&st=${stateAbbr}" style="${partyColorStyle(candParty)};text-decoration:none">${cand.name}</a>` : `<span style="${partyColorStyle(candParty)}">${cand.name}</span>`;
+      const nameHtml = `<span class="cand-name">${candLink}${incStr}${wi}</span>`;
 
       const pctStr = cand.pct != null ? `${cand.pct.toFixed(1)}%` : '';
       const votesStr = cand.votes != null ? numberWithCommas(cand.votes) : '';

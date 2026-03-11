@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-08T22:21:05.527930Z",
+  "generated_at": "2026-03-11T12:20:58.662097Z",
   "office_type": "Attorney General",
   "office_key": "ag",
   "total_races": 30,
@@ -71,6 +71,14 @@
       "primary_date": "2026-03-03",
       "pres_margin_2024": "R+30.6",
       "candidates": [
+        {
+          "name": "Tim Griffin",
+          "party": "R",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "General"
+        },
         {
           "name": "Tim Griffin",
           "party": "R",
@@ -181,7 +189,48 @@
       "filing_deadline": "2026-03-06",
       "primary_date": "2026-05-19",
       "pres_margin_2024": "R+2.2",
-      "candidates": []
+      "candidates": [
+        {
+          "name": "Bob Trammell, Jr.",
+          "party": "D",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_D"
+        },
+        {
+          "name": "Herbert Adams Jr",
+          "party": "D",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_D"
+        },
+        {
+          "name": "Tanya Miller",
+          "party": "D",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_D"
+        },
+        {
+          "name": "Robert Brian Strickland",
+          "party": "R",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_R"
+        },
+        {
+          "name": "William Stone Cowsert",
+          "party": "R",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_R"
+        }
+      ]
     },
     {
       "state": "IA",
@@ -249,14 +298,6 @@
           "result": "Pending",
           "is_major": false,
           "election_type": "Primary_D"
-        },
-        {
-          "name": "Andy Williams Jr.",
-          "party": "R",
-          "status": "Filed",
-          "result": "Pending",
-          "is_major": false,
-          "election_type": "Primary_R"
         },
         {
           "name": "Bob Fioretti",
@@ -377,7 +418,24 @@
       "filing_deadline": "2026-03-02",
       "primary_date": "2026-05-12",
       "pres_margin_2024": "R+20.7",
-      "candidates": []
+      "candidates": [
+        {
+          "name": "Jocelyn Brasher",
+          "party": "D",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_D"
+        },
+        {
+          "name": "Mike Hilgers",
+          "party": "R",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_R"
+        }
+      ]
     },
     {
       "state": "NM",
@@ -394,7 +452,24 @@
       "filing_deadline": "2026-02-03",
       "primary_date": "2026-06-02",
       "pres_margin_2024": "D+6.1",
-      "candidates": []
+      "candidates": [
+        {
+          "name": "Raul Torrez",
+          "party": "D",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_D"
+        },
+        {
+          "name": "Samuel Isaiah Kane Sr.",
+          "party": "R",
+          "status": "Filed",
+          "result": null,
+          "is_major": false,
+          "election_type": "Primary_R"
+        }
+      ]
     },
     {
       "state": "NV",
@@ -447,7 +522,7 @@
       "pres_margin_2024": "R+11.2",
       "candidates": [
         {
-          "name": "Elliot Forhan",
+          "name": "Elliott Forhan",
           "party": "D",
           "status": "Filed",
           "result": "Pending",
@@ -594,7 +669,7 @@
           "name": "Joe Jaworski",
           "party": "D",
           "status": "Filed",
-          "result": "Pending",
+          "result": "Runoff",
           "is_major": false,
           "election_type": "Primary_D"
         },
@@ -602,7 +677,7 @@
           "name": "Nathan Johnson",
           "party": "D",
           "status": "Filed",
-          "result": "Pending",
+          "result": "Runoff",
           "is_major": false,
           "election_type": "Primary_D"
         },
@@ -610,7 +685,7 @@
           "name": "Tony Box",
           "party": "D",
           "status": "Filed",
-          "result": "Pending",
+          "result": "Lost",
           "is_major": false,
           "election_type": "Primary_D"
         },
@@ -618,7 +693,7 @@
           "name": "Aaron Reitz",
           "party": "R",
           "status": "Filed",
-          "result": "Pending",
+          "result": "Lost",
           "is_major": false,
           "election_type": "Primary_R"
         },
@@ -626,7 +701,7 @@
           "name": "Chip Roy",
           "party": "R",
           "status": "Filed",
-          "result": "Pending",
+          "result": "Runoff",
           "is_major": false,
           "election_type": "Primary_R"
         },
@@ -634,7 +709,7 @@
           "name": "Joan Huffman",
           "party": "R",
           "status": "Filed",
-          "result": "Pending",
+          "result": "Lost",
           "is_major": false,
           "election_type": "Primary_R"
         },
@@ -642,9 +717,41 @@
           "name": "Mayes Middleton",
           "party": "R",
           "status": "Filed",
-          "result": "Pending",
+          "result": "Runoff",
           "is_major": false,
           "election_type": "Primary_R"
+        },
+        {
+          "name": "Joe Jaworski",
+          "party": "D",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_Runoff_D"
+        },
+        {
+          "name": "Nathan Johnson",
+          "party": "D",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_Runoff_D"
+        },
+        {
+          "name": "Chip Roy",
+          "party": "R",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_Runoff_R"
+        },
+        {
+          "name": "Mayes Middleton",
+          "party": "R",
+          "status": "Filed",
+          "result": "Pending",
+          "is_major": false,
+          "election_type": "Primary_Runoff_R"
         }
       ]
     },
