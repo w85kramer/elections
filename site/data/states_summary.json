@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T13:01:35.892290Z",
+  "generated_at": "2026-03-11T23:52:05.024707Z",
   "states": {
     "AK": {
       "name": "Alaska",
@@ -2937,14 +2937,14 @@
           "data_available": true,
           "primaries_d": {
             "House": {
-              "total": 4,
-              "uncontested": 3
+              "total": 53,
+              "uncontested": 37
             }
           },
           "primaries_r": {
             "House": {
-              "total": 6,
-              "uncontested": 6
+              "total": 46,
+              "uncontested": 42
             }
           },
           "general": null
@@ -3425,22 +3425,22 @@
           "data_available": true,
           "primaries_d": {
             "House": {
-              "total": 46,
-              "uncontested": 33
+              "total": 57,
+              "uncontested": 40
             },
             "Senate": {
-              "total": 9,
-              "uncontested": 8
+              "total": 15,
+              "uncontested": 9
             }
           },
           "primaries_r": {
             "House": {
-              "total": 38,
-              "uncontested": 26
+              "total": 54,
+              "uncontested": 42
             },
             "Senate": {
-              "total": 9,
-              "uncontested": 7
+              "total": 13,
+              "uncontested": 11
             }
           },
           "general": null
@@ -3519,18 +3519,22 @@
           "data_available": true,
           "primaries_d": {
             "House": {
-              "total": 3,
-              "uncontested": 3
+              "total": 179,
+              "uncontested": 150
+            },
+            "Senate": {
+              "total": 23,
+              "uncontested": 16
             }
           },
           "primaries_r": {
             "House": {
-              "total": 3,
-              "uncontested": 3
+              "total": 142,
+              "uncontested": 130
             },
             "Senate": {
-              "total": 2,
-              "uncontested": 2
+              "total": 22,
+              "uncontested": 17
             }
           },
           "general": null
@@ -3865,22 +3869,22 @@
           "data_available": true,
           "primaries_d": {
             "House": {
-              "total": 27,
-              "uncontested": 25
+              "total": 77,
+              "uncontested": 61
             },
             "Senate": {
-              "total": 4,
-              "uncontested": 4
+              "total": 11,
+              "uncontested": 8
             }
           },
           "primaries_r": {
             "House": {
-              "total": 70,
-              "uncontested": 67
+              "total": 82,
+              "uncontested": 60
             },
             "Senate": {
               "total": 13,
-              "uncontested": 12
+              "uncontested": 7
             }
           },
           "general": null
@@ -5837,7 +5841,17 @@
       "state": "NM",
       "state_name": "New Mexico",
       "date": "2026-06-02",
-      "type": "Special_Primary",
+      "type": "Special_Primary_D",
+      "seat_label": "NM Senate 33",
+      "chamber": "Senate",
+      "district": "33",
+      "result_status": null
+    },
+    {
+      "state": "NM",
+      "state_name": "New Mexico",
+      "date": "2026-06-02",
+      "type": "Special_Primary_R",
       "seat_label": "NM Senate 33",
       "chamber": "Senate",
       "district": "33",
