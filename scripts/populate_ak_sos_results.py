@@ -227,18 +227,18 @@ def main():
 
     # Map SoS party codes to standard party abbreviations
     PARTY_MAP = {
-        'REP': 'Republican',
-        'DEM': 'Democrat',
-        'LIB': 'Libertarian',
-        'GRE': 'Green',
-        'AI': 'Alaskan Independence',
-        'AKI': 'Alaskan Independence',
-        'NP': 'Nonpartisan',
-        'NA': 'Nonpartisan',
-        'IND': 'Independent',
-        'MOD': 'Moderate',
-        'VET': 'Veterans',
-        'UND': 'Undeclared',
+        'REP': 'R',
+        'DEM': 'D',
+        'LIB': 'L',
+        'GRE': 'G',
+        'AI': 'AIP',
+        'AKI': 'AIP',
+        'NP': 'NP',
+        'NA': 'NP',
+        'IND': 'I',
+        'MOD': 'MOD',
+        'VET': 'VET',
+        'UND': 'NP',
     }
 
     elections_to_create = []   # (seat_id, year, type, date, total_votes, precincts_reporting, precincts_total)
