@@ -344,6 +344,11 @@
     color: #555;
   }
   .timeline-event.term-event::before { background: #f5a623; }
+  .timeline-event.departure-event {
+    background: #fce4ec;
+    border-left: 3px solid #c62828;
+  }
+  .timeline-event.departure-event::before { background: #c62828; }
 
   /* Prev/Next nav */
   .gov-nav {
@@ -471,6 +476,9 @@
       'died': 'Died in office',
       'removed': 'Removed from office',
       'impeached': 'Impeached',
+      'appointed_elsewhere': 'Left office',
+      'lost_election': 'Lost election',
+      'party_switch': 'Switched parties',
     };
     return map[reason] || reason.replace(/_/g, ' ');
   }
@@ -755,6 +763,17 @@
     </div>`;
   }
 
+  function renderDepartureCard(t) {
+    const dateStr = t.end
+      ? new Date(t.end + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+      : '';
+    const badge = `<span class="party-badge ${partyBadgeClass(t.party)}" style="font-size:10px;padding:1px 5px">${t.party}</span>`;
+    const detail = t.notes ? ` — ${t.notes}` : '';
+    return `<div class="timeline-event term-event departure-event">
+      ${dateStr ? dateStr + ' &middot; ' : ''}${reasonLabel(t.end_reason)}: ${badge} <span style="${partyColorStyle(t.party)}">${t.name}</span>${detail}
+    </div>`;
+  }
+
   function buildHistoryTimeline() {
     const events = [];
 
@@ -771,11 +790,23 @@
           data: t
         });
       }
+      // Add departure events for mid-term exits
+      if (t.end_reason && !['term_expired', 'lost_election'].includes(t.end_reason)) {
+        events.push({
+          type: 'departure',
+          year: t.end ? parseInt(t.end.substring(0, 4)) : 0,
+          sort_date: t.end || '0000-01-01',
+          data: t
+        });
+      }
     }
 
     events.sort((a, b) => {
       if (b.year !== a.year) return b.year - a.year;
       if (b.sort_date !== a.sort_date) return b.sort_date.localeCompare(a.sort_date);
+      // Departure before succession on same date
+      if (a.type === 'departure' && b.type === 'succession') return 1;
+      if (a.type === 'succession' && b.type === 'departure') return -1;
       return a.type === 'succession' ? -1 : 1;
     });
 
@@ -791,7 +822,9 @@
         lastYear = ev.year;
       }
 
-      if (ev.type === 'succession') {
+      if (ev.type === 'departure') {
+        html += renderDepartureCard(ev.data);
+      } else if (ev.type === 'succession') {
         html += renderTermEventCard(ev.data);
       } else {
         html += renderElectionCard(ev.data, rowIdx);
@@ -1042,14 +1075,15 @@
         const startStr = t.start ? formatDate(t.start) : '?';
         const endStr = t.end ? formatDate(t.end) : 'Present';
         const reasonStr = t.start_reason ? reasonLabel(t.start_reason) : '';
-        const endReasonStr = t.end_reason ? `Left office: ${reasonLabel(t.end_reason)}` : '';
+        const endReasonStr = t.end_reason && t.end_reason !== 'term_expired' ? `Left office: ${reasonLabel(t.end_reason)}` : '';
+        const notesStr = t.notes || '';
 
         let ttHtml = `<div class="tt-name" style="${partyColorStyle(t.party)}">${t.name}
           <span class="tt-party">${partyLabel(t.party)}</span></div>
           <div class="tt-dates">${startStr} &mdash; ${endStr}</div>`;
         if (reasonStr) ttHtml += `<div class="tt-reason">${reasonStr}</div>`;
         if (t._electedYear) ttHtml += `<div class="tt-reason">Won election in ${t._electedYear}</div>`;
-        if (endReasonStr) ttHtml += `<div class="tt-reason">${endReasonStr}</div>`;
+        if (endReasonStr) ttHtml += `<div class="tt-reason">${endReasonStr}${notesStr ? ' — ' + notesStr : ''}</div>`;
 
         // Show election history for this governor's term
         const elecs = t._termElections || [];

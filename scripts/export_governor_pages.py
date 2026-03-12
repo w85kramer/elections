@@ -142,7 +142,8 @@ def export_governor_pages(dry_run=False, single_state=None):
             stm.start_date,
             stm.end_date,
             stm.start_reason,
-            stm.end_reason
+            stm.end_reason,
+            stm.notes
         FROM seat_terms stm
         JOIN seats se ON stm.seat_id = se.id
         JOIN districts d ON se.district_id = d.id
@@ -346,7 +347,7 @@ def export_governor_pages(dry_run=False, single_state=None):
                         margin = ge['margin']
                         break
 
-            timeline.append({
+            entry = {
                 'name': t['name'],
                 'party': t['party'],
                 'start': t['start_date'],
@@ -355,7 +356,10 @@ def export_governor_pages(dry_run=False, single_state=None):
                 'end_reason': t['end_reason'],
                 'election_year': election_year,
                 'margin': margin,
-            })
+            }
+            if t.get('notes'):
+                entry['notes'] = t['notes']
+            timeline.append(entry)
         # Reverse so most recent first
         timeline.reverse()
 
