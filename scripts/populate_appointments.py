@@ -193,7 +193,7 @@ def get_db_chamber(state, research_chamber):
     """Map research chamber name to DB chamber name."""
     if state in ASSEMBLY_STATES and research_chamber == 'Assembly':
         return 'Assembly'
-    if state == 'WV':
+    if state in ('WV', 'MD'):
         if research_chamber == 'House':
             return 'House of Delegates'
     if state == 'NE':
@@ -201,14 +201,22 @@ def get_db_chamber(state, research_chamber):
     return research_chamber
 
 
-def normalize_district(district):
+# States where research district "2B" means district "2" + seat designator "B"
+# (strip the letter suffix to find the district)
+SEAT_DESIGNATOR_STATES = {'ID'}
+
+
+def normalize_district(district, state=None):
     """Normalize district identifier for DB matching."""
     d = district.strip()
     # Remove position info for WA (e.g., "40" from "40-Pos 1")
-    # Actually WA districts are just numbers, position is seat_designator
-    # Keep the base district number
     d = re.sub(r'-Pos \d+', '', d)
     d = re.sub(r'\s+', ' ', d).strip()
+    # For states with seat designators (e.g., ID "2B" → "2"), strip trailing letter
+    if state in SEAT_DESIGNATOR_STATES:
+        m = re.match(r'^(\d+)[A-Z]$', d)
+        if m:
+            d = m.group(1)
     return d
 
 
@@ -247,7 +255,7 @@ def process_state(state_abbr, appointments, seat_cache, candidate_cache):
 
     for appt in appointments:
         db_chamber = get_db_chamber(state_abbr, appt['chamber'])
-        district = normalize_district(appt['district'])
+        district = normalize_district(appt['district'], state_abbr)
 
         # Find seat
         seat_key = (state_abbr, db_chamber, district)
