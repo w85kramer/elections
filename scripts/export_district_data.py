@@ -661,11 +661,12 @@ def export_all_districts(dry_run=False, single_state=None):
         if term and term.get('start_date'):
             since_year = int(str(term['start_date'])[:4])
 
-        # Build term_events: resignations, deaths, removals for timeline display
-        interesting_reasons = {'resigned', 'died', 'removed', 'appointed_elsewhere'}
+        # Build term_events: resignations, deaths, removals, appointments for timeline display
+        interesting_end_reasons = {'resigned', 'died', 'removed', 'appointed_elsewhere'}
+        interesting_start_reasons = {'appointed', 'succeeded'}
         term_events = []
         for t in all_terms_by_seat.get(seat_id, []):
-            if t.get('end_reason') in interesting_reasons and t.get('end_date'):
+            if t.get('end_reason') in interesting_end_reasons and t.get('end_date'):
                 end_date_str = str(t['end_date'])
                 term_events.append({
                     'name': t['holder_name'],
@@ -673,6 +674,16 @@ def export_all_districts(dry_run=False, single_state=None):
                     'year': int(end_date_str[:4]),
                     'date': end_date_str,
                     'reason': t['end_reason'],
+                    'notes': t.get('notes'),
+                })
+            if t.get('start_reason') in interesting_start_reasons and t.get('start_date'):
+                start_date_str = str(t['start_date'])
+                term_events.append({
+                    'name': t['holder_name'],
+                    'party': t['holder_party'],
+                    'year': int(start_date_str[:4]),
+                    'date': start_date_str,
+                    'reason': t['start_reason'],
                     'notes': t.get('notes'),
                 })
 
@@ -821,7 +832,8 @@ def export_all_districts(dry_run=False, single_state=None):
         elections_map = {}  # (year, type, date) -> elec_obj
         term_events = []
         party_switches = []
-        interesting_reasons = {'resigned', 'died', 'removed', 'appointed_elsewhere'}
+        interesting_end_reasons = {'resigned', 'died', 'removed', 'appointed_elsewhere'}
+        interesting_start_reasons = {'appointed', 'succeeded'}
 
         for sid in seat_ids:
             for e in old_elections_by_seat.get(sid, []):
@@ -878,7 +890,7 @@ def export_all_districts(dry_run=False, single_state=None):
 
         for sid in seat_ids:
             for t in old_terms_by_seat.get(sid, []):
-                if t.get('end_reason') in interesting_reasons and t.get('end_date'):
+                if t.get('end_reason') in interesting_end_reasons and t.get('end_date'):
                     end_date_str = str(t['end_date'])
                     term_events.append({
                         'name': t['holder_name'],
@@ -886,6 +898,16 @@ def export_all_districts(dry_run=False, single_state=None):
                         'year': int(end_date_str[:4]),
                         'date': end_date_str,
                         'reason': t['end_reason'],
+                        'notes': t.get('notes'),
+                    })
+                if t.get('start_reason') in interesting_start_reasons and t.get('start_date'):
+                    start_date_str = str(t['start_date'])
+                    term_events.append({
+                        'name': t['holder_name'],
+                        'party': t['holder_party'],
+                        'year': int(start_date_str[:4]),
+                        'date': start_date_str,
+                        'reason': t['start_reason'],
                         'notes': t.get('notes'),
                     })
 

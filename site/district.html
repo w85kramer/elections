@@ -349,6 +349,12 @@
     color: #555;
   }
   .timeline-event.term-event::before { background: #999; }
+  .timeline-event.term-arrival {
+    background: #e8f4e8;
+    border-left: 3px solid #5a9e5a;
+    color: #444;
+  }
+  .timeline-event.term-arrival::before { background: #5a9e5a; }
   .term-event-reason {
     font-weight: 600;
     color: #666;
@@ -869,11 +875,14 @@
       'died': 'Died in Office',
       'removed': 'Removed',
       'appointed_elsewhere': 'Appointed Elsewhere',
+      'appointed': 'Appointed',
+      'succeeded': 'Succeeded to Office',
     };
+    const isArrival = te.reason === 'appointed' || te.reason === 'succeeded';
     const reasonLabel = reasonLabels[te.reason] || te.reason;
     const notesLabel = te.notes ? ` <span class="term-event-notes">${te.notes}</span>` : '';
     const badge = `<span class="party-badge ${partyBadgeClass(te.party)}" style="font-size:10px;padding:1px 5px">${te.party || '?'}</span>`;
-    return `<div class="timeline-event term-event">
+    return `<div class="timeline-event term-event${isArrival ? ' term-arrival' : ''}">
       ${dateStr ? dateStr + ' &middot; ' : ''}<span class="term-event-reason">${reasonLabel}</span>
       &middot; ${badge} <span style="${partyColorStyle(te.party)}">${te.name}</span>${notesLabel}
     </div>`;
