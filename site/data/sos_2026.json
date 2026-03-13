@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-03-13T15:21:00.184075Z",
+  "generated_at": "2026-03-13T15:55:48.376769Z",
   "office_type": "Secretary of State",
   "office_key": "sos",
-  "total_races": 25,
+  "total_races": 24,
   "open_seats": 0,
   "races": [
     {
@@ -312,23 +312,6 @@
       "candidates": []
     },
     {
-      "state": "OR",
-      "state_name": "Oregon",
-      "incumbent": "Tobias Read",
-      "incumbent_party": "D",
-      "is_open_seat": false,
-      "term_years": 4,
-      "running_for_term": 2,
-      "forecast": null,
-      "forecast_cook": null,
-      "forecast_sabato": null,
-      "election_date": null,
-      "filing_deadline": null,
-      "primary_date": null,
-      "pres_margin_2024": null,
-      "candidates": []
-    },
-    {
       "state": "RI",
       "state_name": "Rhode Island",
       "incumbent": "Gregg Amore",
@@ -521,6 +504,11 @@
       "state": "OK",
       "reason": "not_elected",
       "method": "Appointed"
+    },
+    {
+      "state": "OR",
+      "reason": "no_race_2026",
+      "method": "Elected"
     },
     {
       "state": "PA",

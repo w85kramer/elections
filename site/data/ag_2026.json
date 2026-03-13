@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-03-13T15:20:57.388679Z",
+  "generated_at": "2026-03-13T15:55:44.938576Z",
   "office_type": "Attorney General",
   "office_key": "ag",
-  "total_races": 30,
+  "total_races": 29,
   "open_seats": 0,
   "races": [
     {
@@ -94,6 +94,23 @@
       "state": "CT",
       "state_name": "Connecticut",
       "incumbent": "William Tong",
+      "incumbent_party": "D",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 3,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": null,
+      "filing_deadline": null,
+      "primary_date": null,
+      "pres_margin_2024": null,
+      "candidates": []
+    },
+    {
+      "state": "DE",
+      "state_name": "Delaware",
+      "incumbent": "Kathy Jennings",
       "incumbent_party": "D",
       "is_open_seat": false,
       "term_years": 4,
@@ -380,40 +397,6 @@
       "candidates": []
     },
     {
-      "state": "OR",
-      "state_name": "Oregon",
-      "incumbent": "Dan Rayfield",
-      "incumbent_party": "D",
-      "is_open_seat": false,
-      "term_years": 4,
-      "running_for_term": 2,
-      "forecast": null,
-      "forecast_cook": null,
-      "forecast_sabato": null,
-      "election_date": null,
-      "filing_deadline": null,
-      "primary_date": null,
-      "pres_margin_2024": null,
-      "candidates": []
-    },
-    {
-      "state": "PA",
-      "state_name": "Pennsylvania",
-      "incumbent": "Dave Sunday",
-      "incumbent_party": "R",
-      "is_open_seat": false,
-      "term_years": 4,
-      "running_for_term": 2,
-      "forecast": null,
-      "forecast_cook": null,
-      "forecast_sabato": null,
-      "election_date": null,
-      "filing_deadline": null,
-      "primary_date": null,
-      "pres_margin_2024": null,
-      "candidates": []
-    },
-    {
       "state": "RI",
       "state_name": "Rhode Island",
       "incumbent": "Peter Neronha",
@@ -523,11 +506,6 @@
       "method": "Appointed"
     },
     {
-      "state": "DE",
-      "reason": "no_race_2026",
-      "method": "Elected"
-    },
-    {
       "state": "HI",
       "reason": "not_elected",
       "method": "Appointed"
@@ -586,6 +564,16 @@
       "state": "NJ",
       "reason": "not_elected",
       "method": "Appointed"
+    },
+    {
+      "state": "OR",
+      "reason": "no_race_2026",
+      "method": "Elected"
+    },
+    {
+      "state": "PA",
+      "reason": "no_race_2026",
+      "method": "Elected"
     },
     {
       "state": "TN",
