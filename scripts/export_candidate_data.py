@@ -84,6 +84,7 @@ def export_candidates(dry_run=False, single_state=None):
             e.total_votes_cast,
             e.result_status,
             e.forecast_rating,
+            e.linked_election_id,
             e.seat_id,
             d.chamber,
             d.district_number,
@@ -204,6 +205,15 @@ def export_candidates(dry_run=False, single_state=None):
     for r in switches_data:
         switches_by_candidate[(r['state'], r['candidate_id'])].append(r)
 
+    # Build lookup: election_id -> winner name+id (for joint ticket display)
+    winner_by_election = {}
+    for r in candidacies_data:
+        if r['result'] == 'Won':
+            winner_by_election[r['election_id']] = {
+                'name': r['full_name'],
+                'id': r['candidate_id'],
+            }
+
     # --- Build candidate records, grouped by state ---
     # A candidate belongs to the state of their most recent candidacy
     candidates_by_state = defaultdict(dict)  # state -> {candidate_id -> candidate_obj}
@@ -271,6 +281,14 @@ def export_candidates(dry_run=False, single_state=None):
             candidacy_obj['caucus'] = r['caucus']
         if r.get('candidate_status'):
             candidacy_obj['candidate_status'] = r['candidate_status']
+        # Joint ticket: link to running mate on paired election
+        linked_id = r.get('linked_election_id')
+        if linked_id and linked_id in winner_by_election:
+            mate = winner_by_election[linked_id]
+            candidacy_obj['joint_ticket'] = {
+                'name': mate['name'],
+                'id': mate['id'],
+            }
 
         cand['candidacies'].append(candidacy_obj)
 

@@ -116,6 +116,7 @@ CREATE TABLE elections (
     precincts_reporting INTEGER,         -- number of precincts that have reported results
     precincts_total     INTEGER,         -- total number of precincts in the race
     is_open_seat        BOOLEAN,         -- TRUE if no incumbent running, NULL=unknown
+    linked_election_id  INTEGER REFERENCES elections(id),  -- joint ticket pair (e.g., Gov↔Lt Gov)
     notes           TEXT
 );
 

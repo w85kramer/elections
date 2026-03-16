@@ -242,6 +242,20 @@
   }
   .timeline-event.succession-event::before { background: #43a047; }
 
+  .joint-ticket-note {
+    font-size: 12px;
+    color: var(--ms-text-light);
+    margin-top: 4px;
+    padding-left: 2px;
+  }
+  .joint-ticket-note a { color: var(--ms-dem-blue); text-decoration: none; }
+  .joint-ticket-note a:hover { text-decoration: underline; }
+  .jt-label {
+    font-weight: 600;
+    cursor: help;
+    border-bottom: 1px dotted var(--ms-text-light);
+  }
+
   .primary-muted { opacity: 0.7; }
   .primary-muted .entry-header { color: #999; }
   .primary-muted .entry-type { color: #888; font-weight: 600; }
@@ -779,6 +793,13 @@
           <span class="cand-votes">${votesStr}</span>
           <span class="cand-result">${resultStr}</span>
         </div>`;
+      }
+
+      // Joint ticket note
+      if (cy.joint_ticket) {
+        const jt = cy.joint_ticket;
+        const jtLink = `<a href="candidate.html?id=${jt.id}&st=${cy.state}">${jt.name}</a>`;
+        timelineHtml += `<div class="joint-ticket-note" title="Joint Ticket"><span class="jt-label">j/t</span> with ${jtLink}</div>`;
       }
 
       timelineHtml += `</div></div>`;
