@@ -433,13 +433,15 @@ def export_governor_pages(dry_run=False, single_state=None):
                     }
                 # Case 2: open seat — compare to most recent prior governor term
                 elif not any(c.get('is_incumbent') for c in candidate_list):
-                    elec_date = str(e.get('election_date', ''))
+                    elec_year = e.get('election_year')
+                    # Find the term that was active just before or during this election
+                    # (term end_date can be after election date since governors serve until inauguration)
                     prev_terms = [
                         t for t in terms
-                        if t.get('end_date') and str(t['end_date']) <= elec_date
+                        if t.get('start_date') and int(str(t['start_date'])[:4]) < elec_year
                     ]
                     if prev_terms:
-                        prev = max(prev_terms, key=lambda t: str(t['end_date']))
+                        prev = max(prev_terms, key=lambda t: str(t['start_date']))
                         prev_party = prev.get('party')
                         if prev_party and prev_party != winner_party:
                             elec_obj['flipped_seat'] = {

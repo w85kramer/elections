@@ -410,10 +410,10 @@ def export_statewide_pages(office_key, dry_run=False, single_state=None):
                 if inc_loser:
                     elec_obj['flipped_seat'] = {'from': inc_loser['party'], 'to': winner_party}
                 elif not any(c.get('is_incumbent') for c in candidate_list):
-                    elec_date = str(e.get('election_date', ''))
-                    prev_terms = [t for t in terms if t.get('end_date') and str(t['end_date']) <= elec_date]
+                    elec_year = e.get('election_year')
+                    prev_terms = [t for t in terms if t.get('start_date') and int(str(t['start_date'])[:4]) < elec_year]
                     if prev_terms:
-                        prev = max(prev_terms, key=lambda t: str(t['end_date']))
+                        prev = max(prev_terms, key=lambda t: str(t['start_date']))
                         prev_party = prev.get('party')
                         if prev_party and prev_party != winner_party:
                             elec_obj['flipped_seat'] = {'from': prev_party, 'to': winner_party}
