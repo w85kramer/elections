@@ -78,8 +78,8 @@ CREATE TABLE seats (
     current_holder_party TEXT,
     current_holder_caucus TEXT,          -- effective partisan alignment (may differ from party)
     selection_method TEXT CHECK (selection_method IN (
-                        'Elected', 'Appointed', 'Ex_Officio', 'Not_Applicable'
-                    )),                 -- how this seat is filled
+                        'Elected', 'Appointed', 'Ex_Officio', 'Not_Applicable', 'Joint_Ticket'
+                    )),                 -- how this seat is filled (Joint_Ticket = Lt Gov on Governor's ticket)
     notes           TEXT
 );
 
