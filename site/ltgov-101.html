@@ -331,18 +331,15 @@
 
     <p>The 2024 presidential race put this in sharp relief. When Vice President Harris was selecting a running mate, several sitting governors were on her shortlist. If North Carolina's Gov. Cooper (D) had been chosen, it would have placed Lt. Gov. Mark Robinson (R), from the opposing party, in charge whenever Cooper campaigned outside the state. Harris ultimately chose Minnesota Governor Tim Walz (DFL), whose lieutenant governor, Peggy Flanagan (DFL), had been elected alongside him on a joint ticket. Had Harris won, the governorship would have passed smoothly to Flanagan. The contrast with the Cooper scenario was stark: joint-ticket states provide a clear, same-party successor, while independently elected states risk handing the governorship to the opposing party.</p>
 
-    <div class="img-placeholder">
-      <p>Map: 2024 Lt. Governor Election Results</p>
-      <p class="img-caption">Placeholder for map showing party control shifts in 2024 Lt. Gov races</p>
-    </div>
-
     <p>Succession happens for many reasons beyond elections. When President-elect Trump nominated South Dakota Governor Kristi Noem (R) as Secretary of Homeland Security, Lt. Gov. Larry Rhoden (R) became governor to complete her term. Because Rhoden had run on a joint ticket with Noem in 2022, the transition was orderly and kept the office in the same party.</p>
 
     <p>Delaware saw an unusual transition in early 2025. Term-limited Gov. John Carney (D) won election as Mayor of Wilmington, but his new term as mayor began on January 7, two weeks before Governor-elect Matt Meyer (D) would be sworn in. Carney had to resign early, and Lieutenant Governor Bethany Hall-Long became Delaware's 75th governor for that brief gap, despite having lost her own bid to succeed Carney in the gubernatorial primary. It was actually the third time since 1960 that a Delaware lieutenant governor stepped in because the outgoing governor left early for another office, following David Buckson in 1960, Dale Wolf in 1992, and Ruth Ann Minner in 2001.</p>
 
     <h2>The 2026 Elections</h2>
 
-    <p>In 2026, voters in 30 states will elect lieutenant governors alongside the 36 gubernatorial races on the ballot. This is one more than usual: Arizona will elect its first lieutenant governor after voters approved the 2022 constitutional amendment establishing the office.</p>
+    <p>In 2026, voters in 31 states will elect lieutenant governors alongside the 36 gubernatorial races on the ballot. This is one more than usual: Arizona will elect its first lieutenant governor after voters approved the 2022 constitutional amendment establishing the office.</p>
+
+    <div id="races-map" style="margin:32px 0"></div>
 
     <p>Among the states with independently elected lieutenant governors, watch for races where the governor's race and lieutenant governor's race could produce a split outcome. In states with open-seat gubernatorial races, the lieutenant governor contest can also become a launching pad for the next generation of statewide candidates.</p>
 
@@ -449,6 +446,73 @@
       return '<strong>' + abbr + '</strong><br>' + label;
     },
     onClickState: function() {} // no navigation for this map
+  });
+
+  // 2026 races map — color by incumbent party (matches 2024 map format)
+  var govData = await loadJSON('data/governors_2026.json');
+  var govStates = {};
+  for (var g = 0; g < govData.races.length; g++) govStates[govData.races[g].state] = true;
+
+  var racesData = {};
+  var demRaces = 0, repRaces = 0;
+  var noLtGov = ['ME','NH','OR','WY'];
+
+  // States with separate 2026 Lt Gov races
+  for (var k = 0; k < ltgovData.races.length; k++) {
+    var race = ltgovData.races[k];
+    if (race.state === 'AZ') continue; // handle AZ below as joint ticket
+    if (race.incumbent_party === 'D') { racesData[race.state] = { category: 'dem_race', info: race }; demRaces++; }
+    else if (race.incumbent_party === 'R') { racesData[race.state] = { category: 'rep_race', info: race }; repRaces++; }
+  }
+
+  // Joint ticket states with 2026 governor races (Lt Gov elected on the ticket)
+  if (ltgovData.no_race_states) {
+    for (var k2 = 0; k2 < ltgovData.no_race_states.length; k2++) {
+      var nr2 = ltgovData.no_race_states[k2];
+      if (noLtGov.indexOf(nr2.state) !== -1) {
+        racesData[nr2.state] = { category: 'no_position' };
+      } else if (nr2.method === 'Joint_Ticket' && govStates[nr2.state]) {
+        if (nr2.incumbent_party === 'D') { racesData[nr2.state] = { category: 'dem_race', info: nr2 }; demRaces++; }
+        else if (nr2.incumbent_party === 'R') { racesData[nr2.state] = { category: 'rep_race', info: nr2 }; repRaces++; }
+      } else {
+        racesData[nr2.state] = { category: 'no_race', info: nr2 };
+      }
+    }
+  }
+
+  // AZ: new joint ticket office, first election 2026
+  racesData['AZ'] = { category: 'new_race' };
+
+  new MapRenderer('#races-map', {
+    data: racesData,
+    colors: {
+      'dem_race': '#6cb3d2',
+      'rep_race': '#e50963',
+      'new_race': '#189d91',
+      'no_race': '#c3c3c3',
+      'no_position': '#d9d9d9'
+    },
+    defaultColor: '#d9d9d9',
+    title: 'Lt. Governors | States with Elections in 2026',
+    legend: [
+      { label: 'Democratic Incumbent (' + demRaces + ')', color: '#6cb3d2' },
+      { label: 'Republican Incumbent (' + repRaces + ')', color: '#e50963' },
+      { label: 'New Office — AZ (1)', color: '#189d91' },
+      { label: 'No Lt. Gov. Election in 2026', color: '#c3c3c3' },
+      { label: 'No Lt. Gov. Position', color: '#d9d9d9' }
+    ],
+    sourceText: 'Source: MultiState. Includes both separate races and joint-ticket elections.',
+    tooltipFn: function(abbr, d) {
+      if (!d) return abbr;
+      if (d.category === 'no_position') return '<strong>' + abbr + '</strong><br>No Lt. Governor position';
+      if (d.category === 'no_race') return '<strong>' + abbr + '</strong><br>No Lt. Gov. election in 2026' +
+        (d.info && d.info.incumbent ? '<br>Current: ' + d.info.incumbent + ' (' + d.info.incumbent_party + ')' : '');
+      if (d.category === 'new_race') return '<strong>' + abbr + '</strong><br>New office — first election in 2026';
+      var method = d.info && d.info.method === 'Joint_Ticket' ? ' (joint ticket)' : '';
+      return '<strong>' + (d.info.state_name || abbr) + '</strong><br>2026 Lt. Gov. Election' + method +
+        '<br>Incumbent: ' + (d.info.incumbent || 'N/A') + ' (' + d.info.incumbent_party + ')';
+    },
+    onClickState: function() {}
   });
 })();
 </script>
