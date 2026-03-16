@@ -284,10 +284,7 @@
 
     <p>Lieutenant governor is a statewide elected position in 43 states. But how these states fill the office varies considerably. In 26 states, the lieutenant governor runs on the same ticket as the governor &mdash; similar to how a U.S. Presidential and Vice Presidential candidate run together &mdash; ensuring that the two positions are from the same political party. Another 17 states elect a lieutenant governor independently.</p>
 
-    <div class="img-placeholder">
-      <p>Map: Joint Ticket vs. Separately Elected Lt. Governors</p>
-      <p class="img-caption">Placeholder &mdash; interactive map showing selection method by state</p>
-    </div>
+    <div id="selection-map" style="margin:32px 0"></div>
 
     <h3>Why It Matters</h3>
 
@@ -382,6 +379,7 @@
     data: mapData,
     colors: mapColors,
     defaultColor: '#e4e4e4',
+    title: 'Current Lt. Governors by Party',
     legend: [
       { label: 'Democratic Lt. Gov', color: '#6cb3d2' },
       { label: 'Republican Lt. Gov', color: '#e50963' },
@@ -391,6 +389,58 @@
       if (!info.state_name) return abbr;
       return '<strong>' + info.state_name + '</strong><br>Lt. Gov: ' + (info.incumbent || 'N/A') + ' (' + info.incumbent_party + ')';
     }
+  });
+
+  // Selection method map
+  var selectionData = {
+    // Independently elected (17)
+    AL:{category:'independent'}, AR:{category:'independent'}, CA:{category:'independent'},
+    DE:{category:'independent'}, GA:{category:'independent'}, ID:{category:'independent'},
+    LA:{category:'independent'}, MS:{category:'independent'}, MO:{category:'independent'},
+    NV:{category:'independent'}, NC:{category:'independent'}, OK:{category:'independent'},
+    RI:{category:'independent'}, TX:{category:'independent'}, VT:{category:'independent'},
+    VA:{category:'independent'}, WA:{category:'independent'},
+    // Joint ticket (26 + AZ in 2026)
+    AK:{category:'joint'}, AZ:{category:'joint'}, CO:{category:'joint'},
+    CT:{category:'joint'}, FL:{category:'joint'}, HI:{category:'joint'},
+    IA:{category:'joint'}, IL:{category:'joint'}, IN:{category:'joint'},
+    KS:{category:'joint'}, KY:{category:'joint'}, MA:{category:'joint'},
+    MD:{category:'joint'}, MI:{category:'joint'}, MN:{category:'joint'},
+    MT:{category:'joint'}, ND:{category:'joint'}, NE:{category:'joint'},
+    NJ:{category:'joint'}, NM:{category:'joint'}, NY:{category:'joint'},
+    OH:{category:'joint'}, PA:{category:'joint'}, SC:{category:'joint'},
+    SD:{category:'joint'}, UT:{category:'joint'}, WI:{category:'joint'},
+    // Senate president holds title (2)
+    TN:{category:'senate'}, WV:{category:'senate'},
+    // No Lt. Gov (5) — left as default color
+  };
+  var selColors = {
+    'independent': '#043858',
+    'joint': '#3a9a7e',
+    'senate': '#8b567f'
+  };
+  var selLabels = {
+    'independent': 'Independently Elected (17)',
+    'joint': 'Elected on Joint Ticket (27)',
+    'senate': 'Senate President Holds Title (2)'
+  };
+  new MapRenderer('#selection-map', {
+    data: selectionData,
+    colors: selColors,
+    defaultColor: '#d9d9d9',
+    title: 'Lt. Governor | Mode of Selection',
+    legend: [
+      { label: 'Independently Elected (17)', color: '#043858' },
+      { label: 'Elected on Joint Ticket (27)', color: '#3a9a7e' },
+      { label: 'Senate President Holds Title (2)', color: '#8b567f' },
+      { label: 'No Lt. Governor Position (4)', color: '#d9d9d9' }
+    ],
+    sourceText: 'Arizona voters will elect the state\'s first Lt. Governor in 2026.',
+    tooltipFn: function(abbr, d) {
+      var label = selLabels[d.category] || 'No Lt. Governor';
+      return '<strong>' + abbr + '</strong><br>' + label;
+    },
+    onClickState: function() {} // no navigation for this map
   });
 })();
 </script>
