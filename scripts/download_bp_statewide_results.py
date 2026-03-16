@@ -52,13 +52,18 @@ BP_SLUGS = {
 BP_ALT_SLUGS = {
     'Treasurer': [
         '{state}_Treasurer_election,_{year}',
+        '{state}_Chief_Financial_Officer_election,_{year}',  # FL
     ],
     'Auditor': [
         '{state}_Auditor_election,_{year}',
+        '{state}_Auditor_General_election,_{year}',  # PA
+        '{state}_Comptroller_election,_{year}',  # IN (renamed)
+        '{state}_Auditor_of_Accounts_election,_{year}',  # DE historical
     ],
     'Controller': [
         '{state}_Controller_election,_{year}',
         '{state}_State_Controller_election,_{year}',
+        '{state}_Comptroller_election,_{year}',
     ],
     'Agriculture Commissioner': [
         '{state}_Agriculture_Commissioner_election,_{year}',
@@ -66,9 +71,14 @@ BP_ALT_SLUGS = {
     ],
     'Insurance Commissioner': [
         '{state}_Commissioner_of_Insurance_election,_{year}',
+        '{state}_Commissioner_of_Securities_and_Insurance,_Auditor_election,_{year}',  # MT
+        '{state}_Auditor_election,_{year}',  # MT (BP calls it State Auditor)
     ],
     'Labor Commissioner': [
         '{state}_Labor_Commissioner_election,_{year}',
+    ],
+    'Superintendent of Public Instruction': [
+        '{state}_Superintendent_of_Education_election,_{year}',  # SC
     ],
 }
 
@@ -363,7 +373,7 @@ def main():
     where_clauses = [
         "d.office_level = 'Statewide'",
         "e.election_type = 'General'",
-        "e.election_year IN (2022, 2024)",
+        "e.election_year >= 2010",
         "s.office_type != 'Governor'",
     ]
     if year_filter:

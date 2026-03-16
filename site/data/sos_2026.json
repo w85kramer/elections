@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-03-16T13:55:41.017503Z",
+  "generated_at": "2026-03-16T17:30:40.097709Z",
   "office_type": "Secretary of State",
   "office_key": "sos",
-  "total_races": 24,
+  "total_races": 26,
   "open_seats": 0,
   "races": [
     {
@@ -176,6 +176,23 @@
       "candidates": []
     },
     {
+      "state": "IN",
+      "state_name": "Indiana",
+      "incumbent": "Diego Morales",
+      "incumbent_party": "R",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 2,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": null,
+      "filing_deadline": null,
+      "primary_date": null,
+      "pres_margin_2024": null,
+      "candidates": []
+    },
+    {
       "state": "KS",
       "state_name": "Kansas",
       "incumbent": "Scott Schwab",
@@ -234,6 +251,23 @@
       "is_open_seat": false,
       "term_years": 4,
       "running_for_term": 4,
+      "forecast": null,
+      "forecast_cook": null,
+      "forecast_sabato": null,
+      "election_date": null,
+      "filing_deadline": null,
+      "primary_date": null,
+      "pres_margin_2024": null,
+      "candidates": []
+    },
+    {
+      "state": "ND",
+      "state_name": "North Dakota",
+      "incumbent": "Michael Howe",
+      "incumbent_party": "R",
+      "is_open_seat": false,
+      "term_years": 4,
+      "running_for_term": 2,
       "forecast": null,
       "forecast_cook": null,
       "forecast_sabato": null,
@@ -436,11 +470,6 @@
       "method": "Not_Applicable"
     },
     {
-      "state": "IN",
-      "reason": "no_race_2026",
-      "method": "Elected"
-    },
-    {
       "state": "KY",
       "reason": "no_race_2026",
       "method": "Elected"
@@ -477,11 +506,6 @@
     },
     {
       "state": "NC",
-      "reason": "no_race_2026",
-      "method": "Elected"
-    },
-    {
-      "state": "ND",
       "reason": "no_race_2026",
       "method": "Elected"
     },
