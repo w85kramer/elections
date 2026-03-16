@@ -274,10 +274,11 @@ def export_candidates(dry_run=False, single_state=None):
 
         cand['candidacies'].append(candidacy_obj)
 
-    # Attach seat terms
+    # Attach seat terms (deduplicate by key fields)
     for (state, cid), terms in terms_by_candidate.items():
         if state in candidates_by_state and cid in candidates_by_state[state]:
             cand = candidates_by_state[state][cid]
+            seen_terms = set()
             for t in terms:
                 term_obj = {
                     'state': state,
@@ -294,6 +295,12 @@ def export_candidates(dry_run=False, single_state=None):
                     term_obj['caucus'] = t['caucus']
                 if t.get('office_type'):
                     term_obj['office_type'] = t['office_type']
+                # Deduplicate: skip if we've seen identical term
+                dedup_key = (term_obj['state'], term_obj['chamber'], term_obj['district'],
+                             term_obj.get('office_type'), term_obj['start_date'], term_obj['end_date'])
+                if dedup_key in seen_terms:
+                    continue
+                seen_terms.add(dedup_key)
                 cand['seat_terms'].append(term_obj)
 
     # Attach party switches

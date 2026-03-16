@@ -236,6 +236,11 @@
     border-left: 3px solid #f5a623;
   }
   .timeline-event.party-switch-event::before { background: #f5a623; }
+  .timeline-event.succession-event {
+    background: #e8f5e9;
+    border-left: 3px solid #43a047;
+  }
+  .timeline-event.succession-event::before { background: #43a047; }
 
   .primary-muted { opacity: 0.7; }
   .primary-muted .entry-header { color: #999; }
@@ -399,7 +404,10 @@
     return `${state} ${chamberLabel} District ${district}`;
   }
 
-  function shortDistrictLabel(state, chamber, district) {
+  function shortDistrictLabel(state, chamber, district, officeType) {
+    if (chamber === 'Statewide' || district === 'Statewide') {
+      return `${state} ${officeType || 'Statewide'}`;
+    }
     const chamberShort = chamber === 'Senate' ? 'SD' : (chamber === 'Legislature' ? 'LD' : 'HD');
     return `${state} ${chamberShort}-${district}`;
   }
@@ -552,7 +560,7 @@
     const sortedTerms = terms.slice().sort((a, b) => (a.start_date || '').localeCompare(b.start_date || ''));
     const merged = [];
     for (const t of sortedTerms) {
-      const key = `${t.state}|${t.chamber}|${t.district}`;
+      const key = `${t.state}|${t.chamber}|${t.district}|${t.office_type || ''}`;
       const prev = merged.length > 0 ? merged[merged.length - 1] : null;
       if (prev && prev._key === key && prev.end_date && prev.end_date === t.start_date) {
         prev.end_date = t.end_date;
@@ -566,7 +574,7 @@
     merged.reverse();
     for (const t of merged) {
       const url = districtUrl(t.state, t.chamber, t.district, t.office_type);
-      const label = shortDistrictLabel(t.state, t.chamber, t.district);
+      const label = shortDistrictLabel(t.state, t.chamber, t.district, t.office_type);
       const party = t.party || displayParty || '?';
       const startStr = t.start_date ? formatDate(t.start_date) : '?';
       const endStr = t.end_date ? formatDate(t.end_date) : 'present';
@@ -611,6 +619,22 @@
     });
   }
 
+  // Add noteworthy seat_term events (successions, appointments) to the timeline
+  for (const t of terms) {
+    if (t.start_reason && t.start_reason !== 'elected') {
+      const date = t.start_date || null;
+      const year = date ? parseInt(date.substring(0, 4)) : null;
+      if (year) {
+        events.push({
+          type: 'succession',
+          year,
+          date,
+          data: t,
+        });
+      }
+    }
+  }
+
   // Sort descending by year, then by date
   events.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
 
@@ -638,6 +662,19 @@
         continue;
       }
 
+      if (ev.type === 'succession') {
+        const t = ev.data;
+        const dateStr = t.start_date ? formatDateShort(t.start_date) : '';
+        const reasonLabel = capitalize(t.start_reason.replace(/_/g, ' '));
+        const officeLabel = shortDistrictLabel(t.state, t.chamber, t.district, t.office_type);
+        const url = districtUrl(t.state, t.chamber, t.district, t.office_type);
+        const partyBadge = t.party ? `<span class="party-badge ${partyBadgeClass(t.party)}" style="font-size:10px;padding:1px 5px">${t.party}</span> ` : '';
+        timelineHtml += `<div class="timeline-event succession-event">
+          ${dateStr ? dateStr + ' &middot; ' : ''}${partyBadge}${reasonLabel} to <a href="${url}">${officeLabel}</a>
+        </div>`;
+        continue;
+      }
+
       const cy = ev.data;
       const isPrimary = cy.type.includes('Primary') || cy.type.endsWith('_D') || cy.type.endsWith('_R');
       const isSpecial = cy.type.includes('Special');
@@ -658,7 +695,7 @@
       const dateStr = cy.date ? formatDateShort(cy.date) : '';
       const typeLabel = cy.type.replace(/_/g, ' ');
       const distUrl = districtUrl(cy.state, cy.chamber, cy.district, cy.office_type);
-      const distLabel = shortDistrictLabel(cy.state, cy.chamber, cy.district);
+      const distLabel = shortDistrictLabel(cy.state, cy.chamber, cy.district, cy.office_type);
 
       let forecastTag = '';
       if (cy.forecast_rating) {
