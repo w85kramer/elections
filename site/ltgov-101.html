@@ -397,8 +397,8 @@
     NV:{category:'independent'}, NC:{category:'independent'}, OK:{category:'independent'},
     RI:{category:'independent'}, TX:{category:'independent'}, VT:{category:'independent'},
     VA:{category:'independent'}, WA:{category:'independent'},
-    // Joint ticket (26 + AZ in 2026)
-    AK:{category:'joint'}, AZ:{category:'joint'}, CO:{category:'joint'},
+    // Joint ticket (26; AZ will join after 2026 election)
+    AK:{category:'joint'}, CO:{category:'joint'},
     CT:{category:'joint'}, FL:{category:'joint'}, HI:{category:'joint'},
     IA:{category:'joint'}, IL:{category:'joint'}, IN:{category:'joint'},
     KS:{category:'joint'}, KY:{category:'joint'}, MA:{category:'joint'},
@@ -413,12 +413,12 @@
   };
   var selColors = {
     'independent': '#043858',
-    'joint': '#3a9a7e',
+    'joint': '#d0ac60',
     'senate': '#8b567f'
   };
   var selLabels = {
     'independent': 'Independently Elected (17)',
-    'joint': 'Elected on Joint Ticket (27)',
+    'joint': 'Elected on Joint Ticket (26)',
     'senate': 'Senate President Holds Title (2)'
   };
   new MapRenderer('#selection-map', {
@@ -428,9 +428,9 @@
     title: 'Lt. Governor | Mode of Selection',
     legend: [
       { label: 'Independently Elected (17)', color: '#043858' },
-      { label: 'Elected on Joint Ticket (27)', color: '#3a9a7e' },
+      { label: 'Elected on Joint Ticket (26)', color: '#d0ac60' },
       { label: 'Senate President Holds Title (2)', color: '#8b567f' },
-      { label: 'No Lt. Governor Position (4)', color: '#d9d9d9' }
+      { label: 'No Lt. Governor Position (5)', color: '#d9d9d9' }
     ],
     sourceText: 'Arizona voters will elect the state\'s first Lt. Governor in 2026.',
     tooltipFn: function(abbr, d) {
