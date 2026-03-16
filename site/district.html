@@ -1125,10 +1125,10 @@
 
     const elecYears = elections.map(e => e.year);
     for (const rYear of redistrictYears) {
-      // Elections in redistricting year itself are under OLD maps
-      const hasBefore = elecYears.some(y => y <= rYear);
-      const hasAfter = elecYears.some(y => y > rYear);
-      if (hasBefore && hasAfter) {
+      // effective_year = first election using NEW maps; line goes before that year
+      const hasBefore = elecYears.some(y => y < rYear);
+      const hasOnOrAfter = elecYears.some(y => y >= rYear);
+      if (hasBefore && hasOnOrAfter) {
         const isPrimary = rYear === ry;
         const marginStr = isPrimary && district.pres_2024_margin ? marginLabel(district.pres_2024_margin) : null;
         const seatChange = isPrimary && district.old_era_seats && district.old_era_seats !== district.num_seats
@@ -1196,10 +1196,10 @@
 
     const elecYears2 = events.filter(ev => ev.type === 'election').map(ev => ev.year);
     for (const rYear of redistrictYears2) {
-      // Elections in redistricting year itself are under OLD maps
-      const hasBefore = elecYears2.some(y => y <= rYear);
-      const hasAfter = elecYears2.some(y => y > rYear);
-      if (hasBefore && hasAfter) {
+      // effective_year = first election using NEW maps; line goes before that year
+      const hasBefore = elecYears2.some(y => y < rYear);
+      const hasOnOrAfter = elecYears2.some(y => y >= rYear);
+      if (hasBefore && hasOnOrAfter) {
         const isPrimary = rYear === ry2;
         const marginStr = isPrimary && district.pres_2024_margin ? marginLabel(district.pres_2024_margin) : null;
         const seatChange = isPrimary && district.old_era_seats && district.old_era_seats !== district.num_seats
@@ -1393,13 +1393,13 @@
     // Redistricting vertical lines
     const chartRedistrictYears = (data.redistricting_cycles || {})[district.chamber] || [];
     for (const ry of chartRedistrictYears) {
-      // Show if there are elections on both sides of this redistricting year
-      const hasElecBefore = years.some(y => y <= ry);
-      const hasElecAfter = years.some(y => y > ry);
-      if (hasElecBefore && hasElecAfter && ry >= minYear && ry <= maxYear) {
-        // Position line between the redistricting year and next election
-        const nextYear = years.filter(y => y > ry).sort((a,b) => a-b)[0];
-        const rx = nextYear ? (xPos(ry) + xPos(nextYear)) / 2 : xPos(ry) + perYear * 0.5;
+      // effective_year = first election using new maps, so line goes BEFORE that election
+      const hasElecBefore = years.some(y => y < ry);
+      const hasElecOnOrAfter = years.some(y => y >= ry);
+      if (hasElecBefore && hasElecOnOrAfter && ry >= minYear && ry <= maxYear) {
+        // Position line between the last pre-redistricting election and the redistricting year
+        const prevYear = years.filter(y => y < ry).sort((a,b) => b-a)[0];
+        const rx = prevYear ? (xPos(prevYear) + xPos(ry)) / 2 : xPos(ry) - perYear * 0.5;
         svg += `<line x1="${rx}" y1="${PAD_T}" x2="${rx}" y2="${H - PAD_B}" stroke="var(--ms-navy)" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.5"/>`;
         svg += `<text x="${rx}" y="${PAD_T - 4}" text-anchor="middle" font-size="9" fill="var(--ms-navy)" font-family="Work Sans,sans-serif" opacity="0.7">Redistricted</text>`;
       }
