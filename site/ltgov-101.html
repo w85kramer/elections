@@ -15,23 +15,24 @@
 <meta charset="UTF-8">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lt. Governors Overview — MultiState Elections</title>
-<meta name="description" content="Current lieutenant governors by party. Selection methods, joint tickets, and partisan breakdown.">
-<meta property="og:title" content="Lt. Governors Overview — MultiState Elections">
-<meta property="og:description" content="Current lieutenant governors by party. Selection methods, joint tickets, and partisan breakdown.">
+<title>Lt. Governors 101 — MultiState Elections</title>
+<meta name="description" content="A guide to the role of lieutenant governors: selection methods, joint tickets, gubernatorial succession, and why the office matters.">
+<meta property="og:title" content="Lt. Governors 101 — MultiState Elections">
+<meta property="og:description" content="A guide to the role of lieutenant governors: selection methods, joint tickets, gubernatorial succession, and why the office matters.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.multistate.us/elections/ltgov-101.html">
 <meta property="og:site_name" content="MultiState Elections">
 <meta property="og:image" content="https://www.multistate.us/elections/assets/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Lt. Governors Overview — MultiState Elections">
-<meta name="twitter:description" content="Current lieutenant governors by party. Selection methods, joint tickets, and partisan breakdown.">
+<meta name="twitter:title" content="Lt. Governors 101 — MultiState Elections">
+<meta name="twitter:description" content="A guide to the role of lieutenant governors: selection methods, joint tickets, gubernatorial succession, and why the office matters.">
 <link rel="canonical" href="https://www.multistate.us/elections/ltgov-101.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/common.css">
 <style>
   .article-body {
+    max-width: 780px;
   }
   .article-body p {
     font-family: 'Merriweather', serif;
@@ -82,26 +83,6 @@
     line-height: 1.7 !important;
     margin-bottom: 32px !important;
   }
-  .subnav {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 32px;
-    flex-wrap: wrap;
-  }
-  .subnav a {
-    display: inline-block;
-    padding: 8px 18px;
-    border: 2px solid var(--ms-border);
-    border-radius: var(--ms-radius);
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 600;
-    font-size: 13px;
-    text-decoration: none;
-    color: var(--ms-text-light);
-    transition: all 0.15s;
-  }
-  .subnav a:hover { border-color: var(--ms-navy); color: var(--ms-navy); }
-  .subnav a.active { background: var(--ms-navy); border-color: var(--ms-navy); color: white; }
 
   .inline-map-section { width: 100%; }
   .inline-map-title {
@@ -175,28 +156,91 @@
   .inline-tt-state { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
   .inline-tt-type { font-weight: 400; opacity: 0.9; }
 
-  .placeholder-notice {
-    background: #fff8e1;
-    border: 2px dashed #d0ac60;
+  .img-placeholder {
+    background: #f4f6f8;
+    border: 2px dashed var(--ms-border);
     border-radius: var(--ms-radius);
-    padding: 24px;
+    padding: 40px 24px;
     margin: 32px 0;
     text-align: center;
   }
-  .placeholder-notice p {
+  .img-placeholder p {
     font-family: 'Work Sans', sans-serif !important;
     font-weight: 600 !important;
     font-size: 14px !important;
-    color: #856404 !important;
+    color: var(--ms-text-light) !important;
+    margin-bottom: 4px !important;
+  }
+  .img-placeholder .img-caption {
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    color: #999 !important;
+    margin-bottom: 0 !important;
+  }
+  .pullquote {
+    border-left: 4px solid var(--ms-gold);
+    padding: 16px 24px;
+    margin: 32px 0;
+    background: #faf8f4;
+    border-radius: 0 var(--ms-radius) var(--ms-radius) 0;
+  }
+  .pullquote p {
+    font-style: italic !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
     margin-bottom: 8px !important;
   }
-  .placeholder-notice p:last-child { margin-bottom: 0 !important; }
+  .pullquote .attribution {
+    font-family: 'Work Sans', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    color: var(--ms-text-light) !important;
+    margin-bottom: 0 !important;
+  }
+  .selection-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+  }
+  .selection-table th {
+    background: var(--ms-navy);
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .selection-table td {
+    padding: 8px 14px;
+    border-bottom: 1px solid var(--ms-border);
+    color: var(--ms-text);
+  }
+  .selection-table tr:nth-child(even) td { background: #f8f9fa; }
+  .selection-table .state-list {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .mm-source {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+    color: var(--ms-text-light);
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid var(--ms-border);
+  }
+  .mm-source a { color: var(--ms-dem-blue); text-decoration: none; }
+  .mm-source a:hover { text-decoration: underline; }
 
   @media (max-width: 768px) {
     .article-body h2 { font-size: 22px; margin-top: 36px; }
     .lead { font-size: 15px !important; }
     .inline-map-section { width: 100%; }
     .inline-legend-label { font-size: 12px; }
+    .selection-table { font-size: 12px; }
+    .selection-table th, .selection-table td { padding: 6px 10px; }
   }
 </style>
 </head>
@@ -206,18 +250,114 @@
 <div class="page-container" id="main-content" role="main">
   <div id="topic-subnav"></div>
   <h1 class="heading-xl" style="margin-bottom: 8px">Lt. Governors 101</h1>
-  <p class="subtitle mb-16">A Guide to the Role of Lieutenant Governors</p>
+  <p class="subtitle mb-16">Why the Office Matters and How It Varies Across the States</p>
 
   <div class="article-body">
 
-    <!-- Inline Lt. Governors Map -->
-        <div id="page-map" style="margin:28px 0"></div>
+    <p class="lead">The lieutenant governor's office was modeled after the U.S. Vice Presidency, which the country's first VP, John Adams, famously described as "the most insignificant office that ever the invention of man contrived." Former Arkansas Lieutenant Governor Win Rockefeller took it a step further, describing his position as the state government's spare tire: kept in the dark, pumped up, and hopefully never used. But the office is more consequential than its reputation suggests &mdash; and how a state chooses to fill it can have real political implications.</p>
 
+    <!-- Current Lt. Governors Map -->
+    <div id="page-map" style="margin:28px 0"></div>
 
+    <h2>What Do Lieutenant Governors Do?</h2>
 
-    <div class="placeholder-notice">
-      <p>Detailed guide content coming soon.</p>
-      <p style="font-weight:400 !important;font-size:13px !important;color:#666 !important">This guide will cover the role of the lieutenant governor, selection methods, powers and duties, and how the office varies across states.</p>
+    <p>As the National Lieutenant Governors Association will tell you, lieutenant governors play several important roles in state governments. Depending on the state, the lieutenant governor's office may head state commissions, take on major projects, and lead economic development efforts. Similar to our federal system, many lieutenant governors play a hybrid role between the executive and legislative branches and may preside over and cast a tie-breaking vote in a split senate.</p>
+
+    <p>One notable exception to the largely ceremonial role is in Texas. The lieutenant governor in the Lone Star state has enormous legislative control over the state senate. The Texas Lt. Governor appoints all the senate's committee chairs, chooses which committee will hear each bill, and decides when a bill is sent to the floor for a vote. This immense power is derived not from the Texas Constitution but is written into the rules of the Texas Senate. So while most lieutenant governors are fighting to overcome the futility of their office, the lieutenant governor is quietly the most powerful political office in Texas.</p>
+
+    <p>The lieutenant governor position is also an important political stepping stone on the way to a gubernatorial bid. Nearly half of the current lieutenant governors are women, which has helped lead to the current high mark of twelve women governors. In many states, the office serves as a launching pad &mdash; or at least an audition &mdash; for the top job.</p>
+
+    <h2>States Without a Lieutenant Governor</h2>
+
+    <p>Five states don't even bother to have a lieutenant governor. In 2015, when Oregon Governor Kitzhaber resigned, Secretary of State Kate Brown stepped in to take his place. Arizona and Wyoming use the secretary of state as the next in line as well. In New Hampshire and Maine, the senate president is the gubernatorial successor. Tennessee and West Virginia essentially have the same rule, except those states bestow the lieutenant governor title on the senate president.</p>
+
+    <p>By simply setting a line of succession and forgetting about it, these seven states avoid spending public dollars to support the office of a largely ceremonial position. However, as New Jersey learned in 2001, the line of succession is not always as straightforward as it appears on paper.</p>
+
+    <div class="pullquote">
+      <p>When New Jersey Governor Whitman resigned to head President Bush's EPA, a 20&ndash;20 split in the state senate set off a constitutional crisis resulting in five governors in eight days.</p>
+      <p class="attribution">Morning MultiState Vol. 28 (April 2022)</p>
+    </div>
+
+    <p>Subsequently, voters approved a constitutional amendment in 2005 to establish the office of the New Jersey Lt. Governor. And in 2022, Arizona voters approved a constitutional amendment creating a brand-new lieutenant governor's office, with the first election scheduled for 2026. This will bring the total number of states with a lieutenant governor to 46 in 2027.</p>
+
+    <h2>Joint Ticket vs. Separate Election</h2>
+
+    <p>Lieutenant governor is a statewide elected position in 43 states. But how these states fill the office varies considerably. In 26 states, the lieutenant governor runs on the same ticket as the governor &mdash; similar to how a U.S. Presidential and Vice Presidential candidate run together &mdash; ensuring that the two positions are from the same political party. Another 17 states elect a lieutenant governor independently.</p>
+
+    <div class="img-placeholder">
+      <p>Map: Joint Ticket vs. Separately Elected Lt. Governors</p>
+      <p class="img-caption">Placeholder &mdash; interactive map showing selection method by state</p>
+    </div>
+
+    <h3>Why It Matters</h3>
+
+    <p>States that elect lieutenant governors independently &mdash; including Virginia, North Carolina, and Idaho &mdash; risk the kind of intra-party or inter-party conflicts that joint-ticket states typically avoid. From 2021 through 2024, North Carolina's Gov. Roy Cooper (D) had a lieutenant governor, Mark Robinson (R), who was frequently at odds with much of his political agenda. It was the rare case where the highest and second-highest offices in the executive branch of a state were held by members of different political parties.</p>
+
+    <p>But even when parties align, a governor and lieutenant governor that are elected independently can have unaligned priorities. During the pandemic, Idaho Governor Brad Little (R) had to leave the state for official business. In Idaho, when the governor leaves the state, the lieutenant governor takes on the duties of governor. Lt. Gov. Janice McGeachin (R) then issued her own executive order to ban COVID-19 vaccine or testing mandates for state agencies and public schools. Gov. Little immediately responded, calling it political grandstanding and reversing the order. The incident triggered a broader debate over whether the lieutenant governor can serve as acting governor when the governor is "effectively" or "physically" absent from the state.</p>
+
+    <h3>Three Types of Joint Tickets</h3>
+
+    <p>Even among joint-ticket states, the specific mechanism varies:</p>
+
+    <table class="selection-table">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>How It Works</th>
+          <th>States</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Post-Primary Selection</strong></td>
+          <td>Governor nominee selects running mate after winning the primary</td>
+          <td class="state-list">IL, IN, KS, MD, MN, MT, ND, OH</td>
+        </tr>
+        <tr>
+          <td><strong>Pre-Primary Slate</strong></td>
+          <td>Candidates form a ticket before the primary and run as a slate</td>
+          <td class="state-list">AK, AZ*, CO, FL, IA, KY, MI, NE, NJ, NY**, SC, UT</td>
+        </tr>
+        <tr>
+          <td><strong>Separate Primaries</strong></td>
+          <td>Gov and Lt. Gov have independent primaries, then run as joint ticket in the general</td>
+          <td class="state-list">CT, HI, MA, NM, PA, SD, WI</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#999;margin-top:-12px">* Arizona's first joint-ticket election will be in 2026. ** New York switched from separate primaries to pre-primary slate in 2025.</p>
+
+    <h3>New York's Lesson</h3>
+
+    <p>New York provides a compelling case study for why joint-ticket structure matters. Governor Kathy Hochul (D) herself succeeded to the governorship after the resignation of Gov. Cuomo (D) in 2021 before securing election for a full term in 2022. During her tenure as governor, her first lieutenant governor, Brian Benjamin, resigned from office after a federal indictment. In 2025, Gov. Hochul signed a law to shift New York from nominating lieutenant governors in separate primaries to the joint-ticket model found in 25 other states. Starting in 2026, New York governor candidates will form a ticket before the primary election.</p>
+
+    <h2>Gubernatorial Succession</h2>
+
+    <p>The 2024 election cycle illustrated how succession questions can suddenly become urgent. When Vice President Harris was selecting a running mate, several sitting governors were on her shortlist. If North Carolina's Gov. Cooper (D) had been selected, it would have placed Lt. Gov. Mark Robinson (R) &mdash; from the opposing party &mdash; in charge whenever Cooper hit the campaign trail outside North Carolina. Harris ultimately chose Minnesota Governor Tim Walz (D), and when the Harris-Walz ticket prevailed, the governorship passed to Lt. Gov. Peggy Flanagan (D), who had won on a joint ticket with Walz in 2022.</p>
+
+    <div class="img-placeholder">
+      <p>Map: 2024 Lt. Governor Election Results</p>
+      <p class="img-caption">Placeholder &mdash; map showing party control shifts in 2024 Lt. Gov races</p>
+    </div>
+
+    <p>Gubernatorial succession can happen for many reasons. President-elect Trump nominated South Dakota Governor Kristi Noem (R) as his Secretary of Homeland Security. Gov. Noem's departure triggered the constitutional provision for Lt. Gov. Larry Rhoden (R) &mdash; who had run on a joint ticket with Noem in 2022 &mdash; to become governor and complete her term. Notably, Rhoden was no stranger to filling in for vacant statewide offices: in 2020, while still serving as lieutenant governor, he served as interim Secretary of Agriculture after the resignation of the current officeholder.</p>
+
+    <p>A particularly quirky transition took place in Delaware, where term-limited Gov. John Carney (D) was elected Mayor of Wilmington. Since he would become mayor on January 7 &mdash; two weeks before Governor-elect Matt Meyer (D) would be sworn in &mdash; Gov. Carney had to resign early. Under the state constitution, Lt. Gov. Bethany Hall-Long became the 75th Governor of Delaware for that two-week gap, despite having lost her own bid to replace Carney in the Democratic primary. This was the second time since 1993 that a lieutenant governor had to briefly serve as governor in Delaware because the outgoing governor resigned to take up another office.</p>
+
+    <h2>Looking Ahead: 2026</h2>
+
+    <p>Next year, in addition to the 36 gubernatorial elections, we'll see elections in 30 states for lieutenant governors. This is actually one additional election than usual because Arizona will elect its first lieutenant governor after voters approved a constitutional amendment in 2022 establishing the office.</p>
+
+    <p>The lieutenant governor's office may not carry the prestige of a governorship, but as these examples demonstrate, how a state fills it &mdash; and who fills it &mdash; can have significant political consequences.</p>
+
+    <div class="mm-source">
+      <strong>Sources:</strong> This guide synthesizes analysis from
+      <a href="https://mailchi.mp/multistate/morning-multistate-vol-28">Morning MultiState Vol. 28</a> (April 2022),
+      <a href="https://mailchi.mp/3227defbea49/morning-multistate-vol-131">Vol. 131</a> (August 2024),
+      <a href="https://mailchi.mp/multistate/morning-multistate-vol-144">Vol. 144</a> (December 2024), and
+      <a href="https://mailchi.mp/multistate/morning-multistate-vol-185">Vol. 185</a> (November 2025)
+      by Bill Kramer.
+      Morning MultiState is a weekly newsletter on state government and policy from <a href="https://www.multistate.us">MultiState</a>.
     </div>
 
   </div>
