@@ -747,18 +747,18 @@
     for (const e of s.elections) {
       if (e.type === 'General' && e.candidates && e.candidates.length > 0) {
         const winner = e.candidates.find(c => c.result === 'Won');
-        if (winner && winner.pct != null) {
-          const rawMargin = (winner.pct - 50) * 2;
-          // Cap at ±40 to avoid absurd bars from uncontested races
-          const winMargin = Math.max(-40, Math.min(40, rawMargin));
+        if (winner) {
           const ep = effectiveParty(winner);
           const sign = ep === 'D' ? 1 : ep === 'R' ? -1 : 0;
+          const uncontested = e.candidates.length === 1 || winner.pct == null;
+          const rawMargin = winner.pct != null ? (winner.pct - 50) * 2 : 0;
           allGenerals.push({
             year: e.year,
-            margin: winMargin * sign,
+            margin: uncontested ? 60 * sign : rawMargin * sign,
             party: ep,
             winner: winner.name,
             seat: s.seat_designator || '',
+            uncontested,
           });
         }
       }
@@ -1364,6 +1364,22 @@
 
     let svg = `<svg width="100%" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="max-width:${W}px;overflow:hidden">`;
 
+    // Stripe pattern for uncontested bars
+    svg += `<defs>
+      <pattern id="uc-stripes-d" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+        <rect width="6" height="6" fill="var(--ms-dem-blue)" opacity="0.25"/>
+        <line x1="0" y1="0" x2="0" y2="6" stroke="var(--ms-dem-blue)" stroke-width="2" opacity="0.5"/>
+      </pattern>
+      <pattern id="uc-stripes-r" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+        <rect width="6" height="6" fill="var(--ms-rep-red)" opacity="0.25"/>
+        <line x1="0" y1="0" x2="0" y2="6" stroke="var(--ms-rep-red)" stroke-width="2" opacity="0.5"/>
+      </pattern>
+      <pattern id="uc-stripes-o" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+        <rect width="6" height="6" fill="var(--ms-other)" opacity="0.25"/>
+        <line x1="0" y1="0" x2="0" y2="6" stroke="var(--ms-other)" stroke-width="2" opacity="0.5"/>
+      </pattern>
+    </defs>`;
+
     // Grid lines
     const zeroY = yPos(0);
     svg += `<line x1="${PAD_L}" y1="${zeroY}" x2="${W - PAD_R}" y2="${zeroY}" stroke="#ccc" stroke-width="1"/>`;
@@ -1421,14 +1437,25 @@
       entries.forEach((e, i) => {
         const bx = startX + i * (barW + 3);
         const margin = e.margin;
-        const color = e.party === 'D' ? 'var(--ms-dem-blue)' : e.party === 'R' ? 'var(--ms-rep-red)' : 'var(--ms-other)';
         const barTop = Math.min(yPos(margin), zeroY);
         const barBot = Math.max(yPos(margin), zeroY);
         const barH = Math.max(barBot - barTop, 2);
 
-        svg += `<rect x="${bx}" y="${barTop}" width="${barW}" height="${barH}" fill="${color}" rx="2" opacity="0.85">
-          <title>${e.winner} (${e.party}) ${e.margin > 0 ? 'D' : 'R'}+${Math.abs(e.margin).toFixed(1)}</title>
-        </rect>`;
+        if (e.uncontested) {
+          // Uncontested: striped bar with lower opacity
+          const patternId = e.party === 'D' ? 'uc-stripes-d' : e.party === 'R' ? 'uc-stripes-r' : 'uc-stripes-o';
+          svg += `<rect x="${bx}" y="${barTop}" width="${barW}" height="${barH}" fill="url(#${patternId})" rx="2">
+            <title>${e.winner} (${e.party}) — Uncontested</title>
+          </rect>`;
+          // "UC" label above/below bar
+          const ucY = e.margin > 0 ? barTop - 4 : barBot + 11;
+          svg += `<text x="${bx + barW / 2}" y="${ucY}" text-anchor="middle" font-size="8" fill="#999" font-family="Work Sans,sans-serif">UC</text>`;
+        } else {
+          const color = e.party === 'D' ? 'var(--ms-dem-blue)' : e.party === 'R' ? 'var(--ms-rep-red)' : 'var(--ms-other)';
+          svg += `<rect x="${bx}" y="${barTop}" width="${barW}" height="${barH}" fill="${color}" rx="2" opacity="0.85">
+            <title>${e.winner} (${e.party}) ${e.margin > 0 ? 'D' : 'R'}+${Math.abs(e.margin).toFixed(1)}</title>
+          </rect>`;
+        }
       });
 
       // Year label
