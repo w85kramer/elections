@@ -675,7 +675,14 @@ def export_statewide_dashboard(office_key, dry_run=False):
         # States without a 2026 election or non-elected offices go to no_race
         if row['next_regular_election_year'] != 2026 or method != 'Elected':
             reason = 'not_elected' if method != 'Elected' else 'no_race_2026'
-            no_race.append({'state': st, 'reason': reason, 'method': method})
+            no_race.append({
+                'state': st,
+                'state_name': row['state_name'],
+                'reason': reason,
+                'method': method,
+                'incumbent': row.get('holder_name') or row['current_holder'],
+                'incumbent_party': row.get('holder_party') or row['current_holder_party'],
+            })
             continue
 
         elec = elections_by_state.get(st, {})

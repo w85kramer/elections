@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-16T20:10:20.931077Z",
+  "generated_at": "2026-03-16T23:36:33.922172Z",
   "office_type": "Lt. Governor",
   "office_key": "ltgov",
   "total_races": 16,
@@ -281,173 +281,275 @@
   "no_race_states": [
     {
       "state": "CO",
+      "state_name": "Colorado",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Dianne Primavera",
+      "incumbent_party": "D"
     },
     {
       "state": "CT",
+      "state_name": "Connecticut",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Susan Bysiewicz",
+      "incumbent_party": "D"
     },
     {
       "state": "DE",
+      "state_name": "Delaware",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "Kyle Evans Gay",
+      "incumbent_party": "D"
     },
     {
       "state": "FL",
+      "state_name": "Florida",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Jay Collins",
+      "incumbent_party": "R"
     },
     {
       "state": "HI",
+      "state_name": "Hawaii",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Sylvia Luke",
+      "incumbent_party": "D"
     },
     {
       "state": "IL",
+      "state_name": "Illinois",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Juliana Stratton",
+      "incumbent_party": "D"
     },
     {
       "state": "IN",
+      "state_name": "Indiana",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Micah Beckwith",
+      "incumbent_party": "R"
     },
     {
       "state": "KS",
+      "state_name": "Kansas",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "David Toland",
+      "incumbent_party": "D"
     },
     {
       "state": "KY",
+      "state_name": "Kentucky",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Jacqueline Coleman",
+      "incumbent_party": "D"
     },
     {
       "state": "LA",
+      "state_name": "Louisiana",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "Billy Nungesser",
+      "incumbent_party": "R"
     },
     {
       "state": "MA",
+      "state_name": "Massachusetts",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Kim Driscoll",
+      "incumbent_party": "D"
     },
     {
       "state": "MD",
+      "state_name": "Maryland",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Aruna Miller",
+      "incumbent_party": "D"
     },
     {
       "state": "ME",
+      "state_name": "Maine",
       "reason": "not_elected",
-      "method": "Not_Applicable"
+      "method": "Not_Applicable",
+      "incumbent": null,
+      "incumbent_party": null
     },
     {
       "state": "MI",
+      "state_name": "Michigan",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Garlin Gilchrist",
+      "incumbent_party": "D"
     },
     {
       "state": "MN",
+      "state_name": "Minnesota",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Peggy Flanagan",
+      "incumbent_party": "D"
     },
     {
       "state": "MO",
+      "state_name": "Missouri",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "David Wasinger",
+      "incumbent_party": "R"
     },
     {
       "state": "MS",
+      "state_name": "Mississippi",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "Delbert Hosemann",
+      "incumbent_party": "R"
     },
     {
       "state": "MT",
+      "state_name": "Montana",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Kristen Juras",
+      "incumbent_party": "R"
     },
     {
       "state": "NC",
+      "state_name": "North Carolina",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "Rachel Hunt",
+      "incumbent_party": "D"
     },
     {
       "state": "ND",
+      "state_name": "North Dakota",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Michelle Strinden",
+      "incumbent_party": "R"
     },
     {
       "state": "NE",
+      "state_name": "Nebraska",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Joe Kelly",
+      "incumbent_party": "R"
     },
     {
       "state": "NH",
+      "state_name": "New Hampshire",
       "reason": "not_elected",
-      "method": "Not_Applicable"
+      "method": "Not_Applicable",
+      "incumbent": null,
+      "incumbent_party": null
     },
     {
       "state": "NJ",
+      "state_name": "New Jersey",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "Dale Caldwell",
+      "incumbent_party": "D"
     },
     {
       "state": "NY",
+      "state_name": "New York",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Antonio Delgado",
+      "incumbent_party": "D"
     },
     {
       "state": "OH",
+      "state_name": "Ohio",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Jim Tressel",
+      "incumbent_party": "R"
     },
     {
       "state": "OR",
+      "state_name": "Oregon",
       "reason": "not_elected",
-      "method": "Not_Applicable"
+      "method": "Not_Applicable",
+      "incumbent": null,
+      "incumbent_party": null
     },
     {
       "state": "PA",
+      "state_name": "Pennsylvania",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Austin Davis",
+      "incumbent_party": "D"
     },
     {
       "state": "SD",
+      "state_name": "South Dakota",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Tony Venhuizen",
+      "incumbent_party": "R"
     },
     {
       "state": "TN",
+      "state_name": "Tennessee",
       "reason": "not_elected",
-      "method": "Ex_Officio"
+      "method": "Ex_Officio",
+      "incumbent": "Randy McNally",
+      "incumbent_party": "R"
     },
     {
       "state": "UT",
+      "state_name": "Utah",
       "reason": "not_elected",
-      "method": "Joint_Ticket"
+      "method": "Joint_Ticket",
+      "incumbent": "Deidre Henderson",
+      "incumbent_party": "R"
     },
     {
       "state": "VA",
+      "state_name": "Virginia",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "Ghazala Hashmi",
+      "incumbent_party": "D"
     },
     {
       "state": "WA",
+      "state_name": "Washington",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "Denny Heck",
+      "incumbent_party": "D"
     },
     {
       "state": "WV",
+      "state_name": "West Virginia",
       "reason": "not_elected",
-      "method": "Ex_Officio"
+      "method": "Ex_Officio",
+      "incumbent": "Randy E. Smith",
+      "incumbent_party": "R"
     },
     {
       "state": "WY",
+      "state_name": "Wyoming",
       "reason": "not_elected",
-      "method": "Not_Applicable"
+      "method": "Not_Applicable",
+      "incumbent": null,
+      "incumbent_party": null
     }
   ]
 }

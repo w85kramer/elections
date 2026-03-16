@@ -372,18 +372,25 @@
     var r = ltgovData.races[i];
     if (r.incumbent_party) mapData[r.state] = { category: r.incumbent_party, info: r };
   }
+  // Also include states without 2026 races (joint ticket, off-cycle, etc.)
+  if (ltgovData.no_race_states) {
+    for (var j = 0; j < ltgovData.no_race_states.length; j++) {
+      var nr = ltgovData.no_race_states[j];
+      if (nr.incumbent_party) mapData[nr.state] = { category: nr.incumbent_party, info: nr };
+    }
+  }
   new MapRenderer('#page-map', {
     data: mapData,
     colors: mapColors,
     defaultColor: '#e4e4e4',
-    title: 'Current Lt. Governors by Party',
+    title: 'Lt. Governors | Partisan Breakdown',
     legend: [
-      { label: 'Democratic Lt. Gov', color: '#6cb3d2' },
-      { label: 'Republican Lt. Gov', color: '#e50963' },
-      { label: 'No Lt. Gov / Vacant', color: '#e4e4e4' }
+      { label: 'Democratic (21)', color: '#6cb3d2' },
+      { label: 'Republican (24)', color: '#e50963' },
+      { label: 'No Lt. Governor (5)', color: '#e4e4e4' }
     ],
     tooltipFn: function(abbr, info) {
-      if (!info.state_name) return abbr;
+      if (!info || !info.state_name) return abbr;
       return '<strong>' + info.state_name + '</strong><br>Lt. Gov: ' + (info.incumbent || 'N/A') + ' (' + info.incumbent_party + ')';
     }
   });
