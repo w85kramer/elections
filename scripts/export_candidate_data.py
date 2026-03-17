@@ -205,11 +205,12 @@ def export_candidates(dry_run=False, single_state=None):
     for r in switches_data:
         switches_by_candidate[(r['state'], r['candidate_id'])].append(r)
 
-    # Build lookup: election_id -> winner name+id (for joint ticket display)
-    winner_by_election = {}
+    # Build lookup: election_id -> {party -> candidate} (for joint ticket display)
+    # Maps each candidate in a linked election by party so we can match running mates
+    candidates_by_election_party = defaultdict(dict)
     for r in candidacies_data:
-        if r['result'] == 'Won':
-            winner_by_election[r['election_id']] = {
+        if r.get('linked_election_id') and r.get('party'):
+            candidates_by_election_party[r['election_id']][r['party']] = {
                 'name': r['full_name'],
                 'id': r['candidate_id'],
             }
@@ -241,6 +242,7 @@ def export_candidates(dry_run=False, single_state=None):
         cand = candidates_by_state[state][cid]
 
         # Build opponent list for this election
+        linked_id = r.get('linked_election_id')
         opp_list = []
         for opp in opponents_by_election.get(r['election_id'], []):
             if opp['candidate_id'] == cid:
@@ -255,6 +257,14 @@ def export_candidates(dry_run=False, single_state=None):
             }
             if opp.get('caucus'):
                 opp_obj['caucus'] = opp['caucus']
+            # Add running mate info for opponents in joint ticket elections
+            if linked_id and linked_id in candidates_by_election_party:
+                opp_mate = candidates_by_election_party[linked_id].get(opp['party'])
+                if opp_mate:
+                    opp_obj['joint_ticket'] = {
+                        'name': opp_mate['name'],
+                        'id': opp_mate['id'],
+                    }
             opp_list.append(opp_obj)
 
         candidacy_obj = {
@@ -281,14 +291,15 @@ def export_candidates(dry_run=False, single_state=None):
             candidacy_obj['caucus'] = r['caucus']
         if r.get('candidate_status'):
             candidacy_obj['candidate_status'] = r['candidate_status']
-        # Joint ticket: link to running mate on paired election
+        # Joint ticket: link to running mate on paired election (match by party)
         linked_id = r.get('linked_election_id')
-        if linked_id and linked_id in winner_by_election:
-            mate = winner_by_election[linked_id]
-            candidacy_obj['joint_ticket'] = {
-                'name': mate['name'],
-                'id': mate['id'],
-            }
+        if linked_id and linked_id in candidates_by_election_party:
+            mate = candidates_by_election_party[linked_id].get(r['party'])
+            if mate:
+                candidacy_obj['joint_ticket'] = {
+                    'name': mate['name'],
+                    'id': mate['id'],
+                }
 
         cand['candidacies'].append(candidacy_obj)
 

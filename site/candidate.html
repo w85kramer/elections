@@ -243,12 +243,12 @@
   .timeline-event.succession-event::before { background: #43a047; }
 
   .joint-ticket-note {
-    font-size: 12px;
+    font-size: 11px;
     color: var(--ms-text-light);
-    margin-top: 4px;
-    padding-left: 2px;
+    margin-left: 4px;
+    display: inline;
   }
-  .joint-ticket-note a { color: var(--ms-dem-blue); text-decoration: none; }
+  .joint-ticket-note a { text-decoration: none; }
   .joint-ticket-note a:hover { text-decoration: underline; }
   .jt-label {
     font-weight: 600;
@@ -740,6 +740,7 @@
         result: cy.result,
         is_incumbent: cy.is_incumbent,
         is_subject: true,
+        joint_ticket: cy.joint_ticket,
       });
       // Opponents
       for (const opp of (cy.opponents || [])) {
@@ -752,6 +753,7 @@
           votes: opp.votes,
           result: opp.result,
           is_subject: false,
+          joint_ticket: opp.joint_ticket,
         });
       }
 
@@ -771,11 +773,17 @@
         const badge = `<span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:10px;padding:1px 5px">${candParty}</span>`;
 
         const incStr = cand.is_incumbent ? ' <span class="incumbent-marker" title="incumbent">(i)</span>' : '';
+        let jtStr = '';
+        if (cand.joint_ticket) {
+          const jt = cand.joint_ticket;
+          const jtLink = `<a href="candidate.html?id=${jt.id}&st=${cy.state}" style="color:var(--ms-text-light)">${jt.name}</a>`;
+          jtStr = ` <span class="joint-ticket-note" title="Joint Ticket"><span class="jt-label">j/t</span> ${jtLink}</span>`;
+        }
         let nameHtml;
         if (cand.is_subject) {
-          nameHtml = `<span class="cand-name"><span style="${partyColorStyle(ep)}">${cand.name}</span>${incStr}</span>`;
+          nameHtml = `<span class="cand-name"><span style="${partyColorStyle(ep)}">${cand.name}</span>${incStr}${jtStr}</span>`;
         } else {
-          nameHtml = `<span class="cand-name"><a href="candidate.html?id=${cand.id}&st=${cy.state}" style="${partyColorStyle(ep)}">${cand.name}</a>${incStr}</span>`;
+          nameHtml = `<span class="cand-name"><a href="candidate.html?id=${cand.id}&st=${cy.state}" style="${partyColorStyle(ep)}">${cand.name}</a>${incStr}${jtStr}</span>`;
         }
 
         const pctStr = cand.pct != null ? `${cand.pct.toFixed(1)}%` : '';
@@ -793,13 +801,6 @@
           <span class="cand-votes">${votesStr}</span>
           <span class="cand-result">${resultStr}</span>
         </div>`;
-      }
-
-      // Joint ticket note
-      if (cy.joint_ticket) {
-        const jt = cy.joint_ticket;
-        const jtLink = `<a href="candidate.html?id=${jt.id}&st=${cy.state}">${jt.name}</a>`;
-        timelineHtml += `<div class="joint-ticket-note" title="Joint Ticket"><span class="jt-label">j/t</span> with ${jtLink}</div>`;
       }
 
       timelineHtml += `</div></div>`;
