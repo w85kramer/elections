@@ -51,7 +51,7 @@ ELECTIONS = [
     (2012, 'general', 'https://www.elections.alaska.gov/results/12GENR/data/results.htm', 'General'),
     (2014, 'general', 'https://www.elections.alaska.gov/results/14GENR/data/results.htm', 'General'),
     (2016, 'general', 'https://www.elections.alaska.gov/results/16GENR/data/results.htm', 'General'),
-    (2018, 'general', 'https://www.elections.alaska.gov/results/18GENR/data/results.htm', 'General'),
+    (2018, 'general', 'https://www.elections.alaska.gov/results/18GENR/data/results18.htm', 'General'),
     # Primaries
     (1996, 'primary', 'https://www.elections.alaska.gov/results/96PRIM96GENR/psummary.txt', 'Primary'),
     (1998, 'primary', 'https://www.elections.alaska.gov/results/98PRIM/results.htm', 'Primary'),
@@ -223,7 +223,7 @@ def parse_races(html):
         candidates = []
         # Candidate rows: <tr><td align=left>Name</td><td align=left>PARTY</td><td align=right>VOTES</td><td align=right>PCT%</td></tr>
         cand_pattern = re.compile(
-            r'<tr>\s*<td align=left>([^<]+)</td>\s*'
+            r'<tr>\s*<td align=left>(?:<b>)?([^<]+)(?:</b>)?</td>\s*'
             r'<td[^>]*>([^<]*)</td>\s*'
             r'<td align=right>(\d+)</td>\s*'
             r'<td align=right[^>]*>([^<]*)</td>',
