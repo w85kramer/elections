@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-17T13:16:12.205418Z",
   "state": {
     "name": "Nevada",
     "abbr": "NV",
@@ -85,15 +85,15 @@
   ],
   "chambers": {
     "Assembly": {
-      "total": 42,
+      "total": 43,
       "composition": {
         "D": 27,
-        "R": 15,
+        "R": 16,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 28,
-      "seats_up_2026": 42,
+      "supermajority": 29,
+      "seats_up_2026": 43,
       "members": [
         {
           "district": "1",
@@ -274,6 +274,16 @@
           "pres_margin": "+14.9",
           "next_election": 2026,
           "candidate_id": 10949
+        },
+        {
+          "district": "19",
+          "district_name": "AD-19",
+          "seat_designator": null,
+          "name": "Jason Patchett",
+          "party": "R",
+          "pres_margin": "-29.5",
+          "next_election": 2026,
+          "candidate_id": 10915
         },
         {
           "district": "19",
@@ -743,17 +753,713 @@
   "elections_2026": {
     "governor": {
       "forecast": "Tilt R",
-      "candidates": []
+      "candidates": [
+        {
+          "name": "Allen Anderson Rheinhart",
+          "party": "NP",
+          "is_incumbent": false,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
+          "name": "Christopher Battenberg",
+          "party": "NP",
+          "is_incumbent": false,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
+          "name": "Danielle Ford",
+          "party": "NP",
+          "is_incumbent": false,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
+          "name": "Emilio Ray Rodriguez",
+          "party": "NP",
+          "is_incumbent": false,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
+          "name": "John T. Scott",
+          "party": "NP",
+          "is_incumbent": false,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
+          "name": "Jordan Koteras",
+          "party": "NP",
+          "is_incumbent": false,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
+          "name": "Max Beck",
+          "party": "NP",
+          "is_incumbent": false,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
+          "name": "Aaron Darnell Ford",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Alexis Hill",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Emile Bouari",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "James Cooper",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Miqehl Bayfield",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Sunshine  Arterburn",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Barak Zilberberg",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Donald J. Beaudry Jr.",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Irina Hansen",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Jose M. Zelaya",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Joseph Lombardo",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Matthew Rian Winterhawk",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Michael Kameron Hawkins",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        }
+      ]
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Aaron Ford",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Sigal Chattah",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Controller",
+        "candidates": [
+          {
+            "name": "Ellen Spiegel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jed Profeta",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Andy Matthews",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Michael MacDougall",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert K B Blackstock",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert Tolle",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Cisco Aguilar",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Janine Hansen",
+            "party": "I",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Ross Crane",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jim Marchant",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Zach Conine",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Bryan Elliott",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Michele Fiore",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": [
+      {
+        "seat_label": "NV Assembly 1",
+        "chamber": "Assembly",
+        "district": "1",
+        "candidates": [
+          {
+            "name": "Tarik Alan Barnes",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Alexis Esparza",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "James Fennell Jr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jo Cato",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Louis DeSalvio",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Millan Gledhill",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
       {
         "seat_label": "NV Assembly 2",
         "chamber": "Assembly",
         "district": "2",
         "candidates": [
           {
+            "name": "Kamilah Bywaters",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mike Kung",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Drew Teitelbaum",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 3",
+        "chamber": "Assembly",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Selena Torres-Fossett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Charles Harold Erbacher",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Joseph Philip Silvestri",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 4",
+        "chamber": "Assembly",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Eileen Eady",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lisa Cole",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 5",
+        "chamber": "Assembly",
+        "district": "5",
+        "candidates": [
+          {
+            "name": "Brittney M. Miller",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joshua Dowden",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kelly Quinn",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 6",
+        "chamber": "Assembly",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Katherine Duncan",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Douglas B. Candido, Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jovan Alexander Jackson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 7",
+        "chamber": "Assembly",
+        "district": "7",
+        "candidates": [
+          {
+            "name": "Anthony Scott Willett",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Michael D. Musick",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Cameron Homer Miller",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 8",
+        "chamber": "Assembly",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Ngoc Duy Vu Nguyen",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Paul John L. Cook, Sr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Farrakhan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Joseph Charafi",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 9",
+        "chamber": "Assembly",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Maria Teresa Hank",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ryan Hampton",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cristhian Orozco",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Erica Alejandra Neely",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 10",
+        "chamber": "Assembly",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Valerie Thomason",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Venise Lynn Karris",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 11",
+        "chamber": "Assembly",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Cinthia Moore",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 12",
+        "chamber": "Assembly",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Max Carter II",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nancy Roecker",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 13",
+        "chamber": "Assembly",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Gage Beck",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Daniel Andrews",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brian Hibbetts",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 14",
+        "chamber": "Assembly",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Erica Mosca",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 15",
+        "chamber": "Assembly",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Howard Watts III",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Miguel Angel Davila Uzcategui",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 16",
+        "chamber": "Assembly",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Jasmine Kurys",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Cecelia Gonzalez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Eva O. Chase",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Carlo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 17",
+        "chamber": "Assembly",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Linda Hunt",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert Clarence Smith Jr.",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 18",
+        "chamber": "Assembly",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Santiel Brown",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Venicia Considine",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Crystal Newton",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 19",
+        "chamber": "Assembly",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Zackaraih Lysaght",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Amy Groves",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jason Patchett",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -766,7 +1472,195 @@
         "district": "20",
         "candidates": [
           {
+            "name": "Stan Vaughan",
+            "party": "IAP",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "David Orentlicher",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Tony Smith",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 21",
+        "chamber": "Assembly",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Tighe Galvin",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Elaine H Marzola",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Patsy Ann Carvalho",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 22",
+        "chamber": "Assembly",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "Dionisio C. Hernandez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shenea Booth",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tamara Nicole Taylor",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Melissa Hardy",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 23",
+        "chamber": "Assembly",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "Jan Allen Aspelund",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Denise Daniels Fanning",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kathy Ochs",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 24",
+        "chamber": "Assembly",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Andrew Schaefer",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Erica Roth",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 25",
+        "chamber": "Assembly",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "Selena La Rue Hatch",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael Allen Ginsburg",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Noah Richard Bachman Dodge",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 26",
+        "chamber": "Assembly",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Sam Baugh",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Richard DeLong",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 27",
+        "chamber": "Assembly",
+        "district": "27",
+        "candidates": [
+          {
+            "name": "Heather Goulding",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Veronica Cortes",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 28",
+        "chamber": "Assembly",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Reuben D'Silva",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -779,7 +1673,25 @@
         "district": "29",
         "candidates": [
           {
+            "name": "Kathryn Nix",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Alex Pereszlenyi",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ashley Delobel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bradley Combs",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -789,6 +1701,50 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph Thomas Ludwig",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 30",
+        "chamber": "Assembly",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Natha Clyde Anderson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Trista Gomez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 31",
+        "chamber": "Assembly",
+        "district": "31",
+        "candidates": [
+          {
+            "name": "Neal Schwartz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jill Dickman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -824,7 +1780,200 @@
         "district": "34",
         "candidates": [
           {
+            "name": "Hanadi Nadeem",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shaun R. Navarro",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Brandon Davis",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 35",
+        "chamber": "Assembly",
+        "district": "35",
+        "candidates": [
+          {
+            "name": "Joseph Spica",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rebecca Edgeworth",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 36",
+        "chamber": "Assembly",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Jon Penn Junejo",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gregory Tim Hafen II",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 37",
+        "chamber": "Assembly",
+        "district": "37",
+        "candidates": [
+          {
+            "name": "Shea M. Backus",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jill M Douglass",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 38",
+        "chamber": "Assembly",
+        "district": "38",
+        "candidates": [
+          {
+            "name": "Gregory Scott Koenig",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 39",
+        "chamber": "Assembly",
+        "district": "39",
+        "candidates": [
+          {
+            "name": "Erich Obermayr",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Blayne Osborn",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Brianna Cowan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Bridget Peterson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Ken Gray",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 40",
+        "chamber": "Assembly",
+        "district": "40",
+        "candidates": [
+          {
+            "name": "Oscar Fuentes",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Drew Ribar",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Julie Ann Butler",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Rich Harvey",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Stacy Woodbury",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Assembly 41",
+        "chamber": "Assembly",
+        "district": "41",
+        "candidates": [
+          {
+            "name": "Carl Vincent Spotleson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gabriela Wyett",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Spencer Lloyd Ridenour",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kelly Chapman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tofuola Alofipo",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -841,6 +1990,162 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Tracy Brown-May",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Christopher Brandlin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Katrin Ivanoff",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Senate 2",
+        "chamber": "Senate",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Edgar R. Flores",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Isaac Barron",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Senate 8",
+        "chamber": "Senate",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Jamie S. Miller",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Robert Morris",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Steven Samuel Cohen",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Marilyn Dondero Loop",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "George Eldridge Harris",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Lazaro Chavez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Senate 9",
+        "chamber": "Senate",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Melanie Scheible",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Maria Thompson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Senate 10",
+        "chamber": "Senate",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Fabian Donate",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Senate 12",
+        "chamber": "Senate",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Julie Pazina",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rafael Arroyo-Montalvo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Senate 13",
+        "chamber": "Senate",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Charlene Young",
+            "party": "IAP",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Richard Daly",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Matthew Robert Buehler",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -863,9 +2168,84 @@
         "district": "16",
         "candidates": [
           {
+            "name": "Chrystal Roll",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Lisa Krasner",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Monica J Stabbert",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Senate 17",
+        "chamber": "Senate",
+        "district": "17",
+        "candidates": [
+          {
+            "name": "Lynne Ballatore",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robin L. Titus",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Senate 20",
+        "chamber": "Senate",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Calvin Sandoval",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Danielle Gallant",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "NV Senate 21",
+        "chamber": "Senate",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "James Ohrenschall",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Junior Romero",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Alejandro Rojas",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -876,21 +2256,301 @@
     {
       "election_type": "Primary_D",
       "chamber": "Assembly",
-      "district": "20",
-      "seat_label": "NV Assembly 20",
-      "pres_margin": "+15.3",
+      "district": "3",
+      "seat_label": "NV Assembly 3",
+      "pres_margin": "+8.7",
       "holder_party": "D",
-      "candidate": "Tony Smith",
+      "candidate": "Selena Torres-Fossett",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "Assembly",
-      "district": "42",
-      "seat_label": "NV Assembly 42",
-      "pres_margin": "+5.1",
+      "district": "4",
+      "seat_label": "NV Assembly 4",
+      "pres_margin": "-8.6",
+      "holder_party": "R",
+      "candidate": "Eileen Eady",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "5",
+      "seat_label": "NV Assembly 5",
+      "pres_margin": "+2.1",
       "holder_party": "D",
-      "candidate": "Dayton Vasquez",
+      "candidate": "Brittney M. Miller",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "7",
+      "seat_label": "NV Assembly 7",
+      "pres_margin": "+23.6",
+      "holder_party": "D",
+      "candidate": "Cameron Homer Miller",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "11",
+      "seat_label": "NV Assembly 11",
+      "pres_margin": "+34.6",
+      "holder_party": "D",
+      "candidate": "Cinthia Moore",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "12",
+      "seat_label": "NV Assembly 12",
+      "pres_margin": "+0.9",
+      "holder_party": "D",
+      "candidate": "Max Carter II",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "13",
+      "seat_label": "NV Assembly 13",
+      "pres_margin": "-8.5",
+      "holder_party": "R",
+      "candidate": "Daniel Andrews",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "14",
+      "seat_label": "NV Assembly 14",
+      "pres_margin": "+21.3",
+      "holder_party": "D",
+      "candidate": "Erica Mosca",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "21",
+      "seat_label": "NV Assembly 21",
+      "pres_margin": "+1.7",
+      "holder_party": "D",
+      "candidate": "Elaine H Marzola",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "23",
+      "seat_label": "NV Assembly 23",
+      "pres_margin": "-16.7",
+      "holder_party": "R",
+      "candidate": "Jan Allen Aspelund",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "24",
+      "seat_label": "NV Assembly 24",
+      "pres_margin": "+27.4",
+      "holder_party": "D",
+      "candidate": "Erica Roth",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "25",
+      "seat_label": "NV Assembly 25",
+      "pres_margin": "+12.5",
+      "holder_party": "D",
+      "candidate": "Selena La Rue Hatch",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "26",
+      "seat_label": "NV Assembly 26",
+      "pres_margin": "-6.7",
+      "holder_party": "R",
+      "candidate": "Sam Baugh",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "27",
+      "seat_label": "NV Assembly 27",
+      "pres_margin": "+11.9",
+      "holder_party": "D",
+      "candidate": "Heather Goulding",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "28",
+      "seat_label": "NV Assembly 28",
+      "pres_margin": "+26.8",
+      "holder_party": "D",
+      "candidate": "Reuben D'Silva",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "30",
+      "seat_label": "NV Assembly 30",
+      "pres_margin": "+10.6",
+      "holder_party": "D",
+      "candidate": "Natha Clyde Anderson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "31",
+      "seat_label": "NV Assembly 31",
+      "pres_margin": "-15.8",
+      "holder_party": "R",
+      "candidate": "Neal Schwartz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "35",
+      "seat_label": "NV Assembly 35",
+      "pres_margin": "-3.1",
+      "holder_party": "R",
+      "candidate": "Joseph Spica",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "36",
+      "seat_label": "NV Assembly 36",
+      "pres_margin": "-23.7",
+      "holder_party": "R",
+      "candidate": "Jon Penn Junejo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "37",
+      "seat_label": "NV Assembly 37",
+      "pres_margin": "+0.1",
+      "holder_party": "D",
+      "candidate": "Shea M. Backus",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "39",
+      "seat_label": "NV Assembly 39",
+      "pres_margin": "-36.0",
+      "holder_party": "R",
+      "candidate": "Erich Obermayr",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Assembly",
+      "district": "40",
+      "seat_label": "NV Assembly 40",
+      "pres_margin": "-14.9",
+      "holder_party": "R",
+      "candidate": "Oscar Fuentes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "8",
+      "seat_label": "NV Senate 8",
+      "pres_margin": "-2.2",
+      "holder_party": "D",
+      "candidate": "Marilyn Dondero Loop",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "9",
+      "seat_label": "NV Senate 9",
+      "pres_margin": "+2.6",
+      "holder_party": "D",
+      "candidate": "Melanie Scheible",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "10",
+      "seat_label": "NV Senate 10",
+      "pres_margin": "+10.1",
+      "holder_party": "D",
+      "candidate": "Fabian Donate",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "12",
+      "seat_label": "NV Senate 12",
+      "pres_margin": "+0.6",
+      "holder_party": "D",
+      "candidate": "Julie Pazina",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "13",
+      "seat_label": "NV Senate 13",
+      "pres_margin": "+18.9",
+      "holder_party": "D",
+      "candidate": "Richard Daly",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "16",
+      "seat_label": "NV Senate 16",
+      "pres_margin": "-10.4",
+      "holder_party": "R",
+      "candidate": "Chrystal Roll",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "17",
+      "seat_label": "NV Senate 17",
+      "pres_margin": "-40.9",
+      "holder_party": "R",
+      "candidate": "Lynne Ballatore",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "20",
+      "seat_label": "NV Senate 20",
+      "pres_margin": "-22.7",
+      "holder_party": "R",
+      "candidate": "Calvin Sandoval",
       "is_open_seat": null
     },
     {
@@ -901,6 +2561,126 @@
       "pres_margin": "-5.6",
       "holder_party": "R",
       "candidate": "Drew Teitelbaum",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "4",
+      "seat_label": "NV Assembly 4",
+      "pres_margin": "-8.6",
+      "holder_party": "R",
+      "candidate": "Lisa Cole",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "12",
+      "seat_label": "NV Assembly 12",
+      "pres_margin": "+0.9",
+      "holder_party": "D",
+      "candidate": "Nancy Roecker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "13",
+      "seat_label": "NV Assembly 13",
+      "pres_margin": "-8.5",
+      "holder_party": "R",
+      "candidate": "Brian Hibbetts",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "16",
+      "seat_label": "NV Assembly 16",
+      "pres_margin": "+3.7",
+      "holder_party": "D",
+      "candidate": "John Carlo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "18",
+      "seat_label": "NV Assembly 18",
+      "pres_margin": "+14.9",
+      "holder_party": "D",
+      "candidate": "Crystal Newton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "21",
+      "seat_label": "NV Assembly 21",
+      "pres_margin": "+1.7",
+      "holder_party": "D",
+      "candidate": "Patsy Ann Carvalho",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "22",
+      "seat_label": "NV Assembly 22",
+      "pres_margin": "-11.1",
+      "holder_party": "R",
+      "candidate": "Melissa Hardy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "26",
+      "seat_label": "NV Assembly 26",
+      "pres_margin": "-6.7",
+      "holder_party": "R",
+      "candidate": "Richard DeLong",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "27",
+      "seat_label": "NV Assembly 27",
+      "pres_margin": "+11.9",
+      "holder_party": "D",
+      "candidate": "Veronica Cortes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "29",
+      "seat_label": "NV Assembly 29",
+      "pres_margin": "+3.3",
+      "holder_party": "D",
+      "candidate": "Joseph Thomas Ludwig",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "30",
+      "seat_label": "NV Assembly 30",
+      "pres_margin": "+10.6",
+      "holder_party": "D",
+      "candidate": "Trista Gomez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "31",
+      "seat_label": "NV Assembly 31",
+      "pres_margin": "-15.8",
+      "holder_party": "R",
+      "candidate": "Jill Dickman",
       "is_open_seat": null
     },
     {
@@ -935,6 +2715,76 @@
     },
     {
       "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "35",
+      "seat_label": "NV Assembly 35",
+      "pres_margin": "-3.1",
+      "holder_party": "R",
+      "candidate": "Rebecca Edgeworth",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "36",
+      "seat_label": "NV Assembly 36",
+      "pres_margin": "-23.7",
+      "holder_party": "R",
+      "candidate": "Gregory Tim Hafen II",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "37",
+      "seat_label": "NV Assembly 37",
+      "pres_margin": "+0.1",
+      "holder_party": "D",
+      "candidate": "Jill M Douglass",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Assembly",
+      "district": "38",
+      "seat_label": "NV Assembly 38",
+      "pres_margin": "-47.5",
+      "holder_party": "R",
+      "candidate": "Gregory Scott Koenig",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "9",
+      "seat_label": "NV Senate 9",
+      "pres_margin": "+2.6",
+      "holder_party": "D",
+      "candidate": "Maria Thompson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "12",
+      "seat_label": "NV Senate 12",
+      "pres_margin": "+0.6",
+      "holder_party": "D",
+      "candidate": "Rafael Arroyo-Montalvo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "13",
+      "seat_label": "NV Senate 13",
+      "pres_margin": "+18.9",
+      "holder_party": "D",
+      "candidate": "Matthew Robert Buehler",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
       "chamber": "Senate",
       "district": "14",
       "seat_label": "NV Senate 14",
@@ -946,11 +2796,31 @@
     {
       "election_type": "Primary_R",
       "chamber": "Senate",
-      "district": "16",
-      "seat_label": "NV Senate 16",
-      "pres_margin": "-10.4",
+      "district": "17",
+      "seat_label": "NV Senate 17",
+      "pres_margin": "-40.9",
       "holder_party": "R",
-      "candidate": "Lisa Krasner",
+      "candidate": "Robin L. Titus",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "20",
+      "seat_label": "NV Senate 20",
+      "pres_margin": "-22.7",
+      "holder_party": "R",
+      "candidate": "Danielle Gallant",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "21",
+      "seat_label": "NV Senate 21",
+      "pres_margin": "+8.9",
+      "holder_party": "D",
+      "candidate": "Alejandro Rojas",
       "is_open_seat": null
     }
   ],
