@@ -629,7 +629,7 @@
     });
   }
 
-  // Add noteworthy seat_term events (successions, appointments) to the timeline
+  // Add noteworthy seat_term events (successions, appointments, departures) to the timeline
   for (const t of terms) {
     if (t.start_reason && t.start_reason !== 'elected') {
       const date = t.start_date || null;
@@ -643,10 +643,28 @@
         });
       }
     }
+    if (t.end_reason && !['term_expired', 'lost_election'].includes(t.end_reason)) {
+      const date = t.end_date || null;
+      const year = date ? parseInt(date.substring(0, 4)) : null;
+      if (year) {
+        events.push({
+          type: 'departure',
+          year,
+          date,
+          data: t,
+        });
+      }
+    }
   }
 
-  // Sort descending by year, then by date
-  events.sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
+  // Sort descending by year, then by date, with departure before succession in same year
+  events.sort((a, b) => {
+    if (b.year !== a.year) return b.year - a.year;
+    if (b.date !== a.date) return b.date.localeCompare(a.date);
+    if (a.type === 'departure' && b.type === 'succession') return 1;
+    if (a.type === 'succession' && b.type === 'departure') return -1;
+    return 0;
+  });
 
   let timelineHtml = '';
   if (events.length > 0) {
@@ -681,6 +699,19 @@
         const partyBadge = t.party ? `<span class="party-badge ${partyBadgeClass(t.party)}" style="font-size:10px;padding:1px 5px">${t.party}</span> ` : '';
         timelineHtml += `<div class="timeline-event succession-event">
           ${dateStr ? dateStr + ' &middot; ' : ''}${partyBadge}${reasonLabel} to <a href="${url}">${officeLabel}</a>
+        </div>`;
+        continue;
+      }
+
+      if (ev.type === 'departure') {
+        const t = ev.data;
+        const dateStr = t.end_date ? formatDateShort(t.end_date) : '';
+        const reasonLabel = capitalize(t.end_reason.replace(/_/g, ' '));
+        const officeLabel = shortDistrictLabel(t.state, t.chamber, t.district, t.office_type);
+        const url = districtUrl(t.state, t.chamber, t.district, t.office_type);
+        const partyBadge = t.party ? `<span class="party-badge ${partyBadgeClass(t.party)}" style="font-size:10px;padding:1px 5px">${t.party}</span> ` : '';
+        timelineHtml += `<div class="timeline-event departure-event">
+          ${dateStr ? dateStr + ' &middot; ' : ''}${partyBadge}${reasonLabel} from <a href="${url}">${officeLabel}</a>
         </div>`;
         continue;
       }
