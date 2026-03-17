@@ -501,11 +501,13 @@ def populate_nh(all_districts, db_context, year, dry_run=False):
     total_candidates = 0
     skipped_existing = 0
     skipped_no_match = 0
+    unmatched_districts = []
 
     for county, dist in all_districts:
         db_dist_num = dist.get('_db_district')
         if not db_dist_num:
             skipped_no_match += 1
+            unmatched_districts.append(f"{county}-{dist.get('sos_number', '?')}")
             continue
 
         # Get seats for this district (sorted by designator)
@@ -516,6 +518,7 @@ def populate_nh(all_districts, db_context, year, dry_run=False):
 
         if not district_seats:
             skipped_no_match += 1
+            unmatched_districts.append(f"{db_dist_num} (no seats)")
             continue
 
         # Sort candidates by votes (top N = winners)
@@ -592,6 +595,8 @@ def populate_nh(all_districts, db_context, year, dry_run=False):
     print(f'  Candidates to process: {total_candidates}')
     print(f'  Skipped (already exist): {skipped_existing}')
     print(f'  Skipped (no DB match): {skipped_no_match}')
+    if unmatched_districts:
+        print(f'  WARNING — unmatched districts: {", ".join(unmatched_districts)}')
 
     if dry_run:
         for e in elections_to_insert[:5]:
@@ -843,7 +848,7 @@ def main():
                 dist['_db_district'] = db_dist
                 matched += 1
             else:
-                debug(f'  UNMATCHED: SoS {county}-{dist["sos_district_num"]} '
+                print(f'  WARNING — UNMATCHED: SoS {county}-{dist["sos_district_num"]} '
                       f'({dist["num_seats"]} seats, FL={dist["is_floterial"]})')
                 unmatched += 1
             all_matched.append((county, dist))

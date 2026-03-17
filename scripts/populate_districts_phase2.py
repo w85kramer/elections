@@ -109,9 +109,9 @@ NH_HOUSE_DISTRICTS = [
     ('Cheshire-9', 1), ('Cheshire-10', 2), ('Cheshire-11', 1), ('Cheshire-12', 1),
     ('Cheshire-13', 1), ('Cheshire-14', 1), ('Cheshire-15', 2), ('Cheshire-16', 1),
     ('Cheshire-17', 1), ('Cheshire-18', 2),
-    # IV. Coos County (6 districts, 9 seats)
+    # IV. Coos County (7 districts, 10 seats)
     ('Coos-1', 2), ('Coos-2', 1), ('Coos-3', 1), ('Coos-4', 1),
-    ('Coos-5', 3), ('Coos-6', 1),
+    ('Coos-5', 3), ('Coos-6', 1), ('Coos-7', 1),
     # V. Grafton County (18 districts, 26 seats)
     ('Grafton-1', 3), ('Grafton-2', 1), ('Grafton-3', 1), ('Grafton-4', 1),
     ('Grafton-5', 2), ('Grafton-6', 1), ('Grafton-7', 1), ('Grafton-8', 3),
@@ -154,6 +154,7 @@ NH_HOUSE_DISTRICTS = [
     ('Rockingham-29', 2), ('Rockingham-30', 1), ('Rockingham-31', 1), ('Rockingham-32', 1),
     ('Rockingham-33', 1), ('Rockingham-34', 1), ('Rockingham-35', 1), ('Rockingham-36', 1),
     ('Rockingham-37', 1), ('Rockingham-38', 2),
+    ('Rockingham-39', 1), ('Rockingham-40', 1),
     # IX. Strafford County (21 districts, 38 seats)
     ('Strafford-1', 2), ('Strafford-2', 3), ('Strafford-3', 1), ('Strafford-4', 3),
     ('Strafford-5', 1), ('Strafford-6', 1), ('Strafford-7', 1), ('Strafford-8', 1),
