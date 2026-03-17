@@ -1475,12 +1475,6 @@
     const mapEl = document.getElementById('district-map');
     if (!mapEl) return;
 
-    // Floterial districts (NH) overlap base districts and have no Census boundary
-    if (district.is_floterial) {
-      mapEl.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--ms-text-light);font-size:14px;text-align:center;padding:0 1rem">Floterial district — overlaps multiple base districts.<br>No standalone boundary available.</div>';
-      return;
-    }
-
     // NE unicameral Legislature uses 'upper' geo file (Census SLDU)
     const chamberType = (chamber === 'Senate' || chamber === 'Legislature') ? 'upper' : 'lower';
     let geoData;
@@ -1489,6 +1483,20 @@
     } catch (e) {
       mapEl.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--ms-text-light);font-size:14px">District map not yet available</div>';
       return;
+    }
+
+    // Floterial districts (NH) overlap base districts and have no Census boundary.
+    // Load the floterial→base mapping and highlight component districts instead.
+    let floterialBases = null;
+    if (district.is_floterial) {
+      try {
+        const floterialMap = await loadJSON('data/nh_floterial_map.json');
+        floterialBases = floterialMap[distNum];
+      } catch (e) { /* mapping not available — fall through to normal render */ }
+      if (!floterialBases) {
+        mapEl.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--ms-text-light);font-size:14px;text-align:center;padding:0 1rem">Floterial district — overlaps multiple base districts.<br>No standalone boundary available.</div>';
+        return;
+      }
     }
 
     const map = L.map('district-map', { scrollWheelZoom: false });
@@ -1504,46 +1512,68 @@
     //   Named districts (VT, MA, NH): abbreviation codes
     const distLetter = district.district_name ? district.district_name.replace(/^[A-Z]+-/, '') : '';
 
-    function isDistrictMatch(feature) {
+    // Match a GeoJSON feature against a district number (e.g., "Carroll-5" or "9")
+    function matchesDistrictNum(feature, dNum) {
       const props = feature.properties || {};
       const geoDist = props.SLDUST || props.SLDLST || '';
       const geoName = props.NAMELSAD || '';
       const geoNameLower = geoName.toLowerCase();
-      const distLower = distNum.toLowerCase();
+      const dLower = dNum.toLowerCase();
+      const dLetter = dNum.replace(/^[A-Z]+-/, '');
 
       // AK Senate: match letter from district_name (SD-A → "00A")
-      if (stateAbbr === 'AK' && chamber === 'Senate' && distLetter.length === 1) {
-        return geoDist === '00' + distLetter || geoName.endsWith(' ' + distLetter);
+      if (stateAbbr === 'AK' && chamber === 'Senate' && dLetter.length === 1) {
+        return geoDist === '00' + dLetter || geoName.endsWith(' ' + dLetter);
       }
 
       // Named districts (NH, VT, etc.): convert "Belknap-4" to match "Belknap 04"
-      // by splitting on dash, zero-padding the numeric suffix, and checking NAMELSAD
-      const dashIdx = distNum.lastIndexOf('-');
+      const dashIdx = dNum.lastIndexOf('-');
       if (dashIdx > 0) {
-        const prefix = distNum.substring(0, dashIdx);
-        const suffix = distNum.substring(dashIdx + 1);
+        const prefix = dNum.substring(0, dashIdx);
+        const suffix = dNum.substring(dashIdx + 1);
         const paddedSuffix = suffix.padStart(2, '0');
         const namedPattern = (prefix + ' ' + paddedSuffix).toLowerCase();
         if (geoNameLower.includes(namedPattern)) return true;
-        // Also try unpadded
         if (geoNameLower.includes((prefix + ' ' + suffix).toLowerCase())) return true;
       }
 
-      return geoDist === distNum
-        || geoDist === distNum.padStart(3, '0')
-        || geoDist === distNum.padStart(2, '0')
-        || geoName.endsWith(' ' + distNum)
-        || geoName.endsWith(' ' + distNum.replace(/^0+/, ''))
-        || geoNameLower.startsWith(distLower + ' ')
-        || geoNameLower.startsWith(distLower + '-');
+      return geoDist === dNum
+        || geoDist === dNum.padStart(3, '0')
+        || geoDist === dNum.padStart(2, '0')
+        || geoName.endsWith(' ' + dNum)
+        || geoName.endsWith(' ' + dNum.replace(/^0+/, ''))
+        || geoNameLower.startsWith(dLower + ' ')
+        || geoNameLower.startsWith(dLower + '-');
+    }
+
+    function isDistrictMatch(feature) {
+      return matchesDistrictNum(feature, distNum);
+    }
+
+    // For floterial districts, check if feature matches any base district
+    function isFloterialBaseMatch(feature) {
+      if (!floterialBases) return false;
+      return floterialBases.some(function(base) { return matchesDistrictNum(feature, base); });
     }
 
     let targetFeature = null;
+    const targetFeatures = [];  // for floterials: all base district features
     const targetColor = marginColor(district.pres_2024_margin);
 
     const allLayer = L.geoJSON(geoData, {
       style: function(feature) {
-        if (isDistrictMatch(feature)) {
+        // Floterial: highlight all component base districts
+        if (floterialBases) {
+          if (isFloterialBaseMatch(feature)) {
+            targetFeatures.push(feature);
+            return {
+              color: targetColor,
+              weight: 3,
+              fillColor: targetColor,
+              fillOpacity: 0.3,
+            };
+          }
+        } else if (isDistrictMatch(feature)) {
           targetFeature = feature;
           return {
             color: targetColor,
@@ -1566,8 +1596,12 @@
       }
     }).addTo(map);
 
-    // Zoom to target district, or fit all if not found
-    if (targetFeature) {
+    // Zoom to target district(s)
+    if (floterialBases && targetFeatures.length > 0) {
+      // Zoom to combined bounds of all base districts
+      const combined = L.geoJSON({ type: 'FeatureCollection', features: targetFeatures });
+      map.fitBounds(combined.getBounds(), { padding: [40, 40] });
+    } else if (targetFeature) {
       const targetLayer = L.geoJSON(targetFeature);
       map.fitBounds(targetLayer.getBounds(), { padding: [40, 40] });
     } else {
