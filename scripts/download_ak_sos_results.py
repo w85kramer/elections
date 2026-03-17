@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """
-Download Alaska Secretary of State election results (2004-2018).
+Download Alaska Secretary of State election results (1994-2018).
 
 Fetches official certified results from the AK Division of Elections website,
 parses the simple HTML tables, and saves structured JSON to /tmp.
 
+Captures both state legislative races AND statewide races (Governor, Lt Governor).
+
 Available data:
-  - Generals:  2004, 2006, 2008, 2012, 2014, 2016, 2018
-  - Primaries: 2004, 2006, 2010, 2012, 2014, 2016, 2018
+  - Generals:  1994, 1996, 1998, 2000, 2002, 2004, 2006, 2008, 2010, 2012, 2014, 2016, 2018
+  - Primaries: 1996, 1998, 2000, 2002, 2004, 2006, 2008, 2010, 2012, 2014, 2016, 2018
 
 URL pattern: https://www.elections.alaska.gov/results/{CODE}/data/results.htm
   General codes: 04GENR, 06GENR, ...
@@ -17,6 +19,7 @@ Usage:
     python3 scripts/download_ak_sos_results.py                # Download all
     python3 scripts/download_ak_sos_results.py --year 2012    # Single year
     python3 scripts/download_ak_sos_results.py --dry-run      # Show URLs only
+    python3 scripts/download_ak_sos_results.py --statewide    # Statewide races only
 """
 
 import sys
@@ -141,7 +144,7 @@ def parse_races(html):
             continue
         title = th_match.group(1).strip()
 
-        # Filter for state legislative races only
+        # Try state legislative races first
         # Handles multiple naming conventions across years:
         #   2002+: SENATE DISTRICT A, HOUSE DISTRICT 1
         #   1998:  SENATE DIST. A, STATE REP. DIST. 1 (or STATE REP.  DIST. 1)
@@ -149,19 +152,50 @@ def parse_races(html):
             r'(?:SENATE DIST(?:RICT|\.)\s+(\w+)|(?:HOUSE DISTRICT|STATE REP\.\s+DIST\.)\s+(\w+))(?:\s*\(([^)]+)\))?$',
             title
         )
+
+        # Try statewide races if not a legislative race
+        # Generals: GOVERNOR/LT GOVERNOR, GOVERNOR/LT. GOVERNOR
+        # Primaries: GOVERNOR (R), LT GOVERNOR (ADL), LIEUTENANT GOVERNOR (R), etc.
+        statewide_match = None
         if not leg_match:
+            # Match all Governor/Lt Governor title variations across years:
+            #   Full: GOVERNOR, LIEUTENANT GOVERNOR, GOVERNOR/LT GOVERNOR, GOVERNOR/LT. GOVERNOR
+            #   Abbrev (1998): GOV, LT. GOV., GOV/LT. GOV
+            #   Primary suffix: (R), (ADL), (C), (D-C), (REP)
+            statewide_match = re.match(
+                r'(GOV(?:ERNOR)?/LT\.?\s*GOV(?:ERNOR)?\.?|LIEUTENANT\s+GOVERNOR|LT\.?\s*GOV(?:ERNOR)?\.?|GOV(?:ERNOR)?)'
+                r'(?:\s*\(([^)]+)\))?$',
+                title
+            )
+
+        if not leg_match and not statewide_match:
             continue
 
-        senate_dist = leg_match.group(1)   # set if Senate match
-        house_dist = leg_match.group(2)    # set if House/State Rep match
-        primary_code = leg_match.group(3)  # None for generals
+        if leg_match:
+            senate_dist = leg_match.group(1)   # set if Senate match
+            house_dist = leg_match.group(2)    # set if House/State Rep match
+            primary_code = leg_match.group(3)  # None for generals
 
-        if senate_dist:
-            chamber = 'Senate'
-            district_id = senate_dist
+            if senate_dist:
+                chamber = 'Senate'
+                district_id = senate_dist
+            else:
+                chamber = 'House'
+                district_id = house_dist
+            office_type = None
         else:
-            chamber = 'House'
-            district_id = house_dist
+            # Statewide race
+            office_title = statewide_match.group(1)
+            primary_code = statewide_match.group(2)  # None for generals
+            chamber = None
+            district_id = None
+
+            if '/' in office_title:
+                office_type = 'Governor/Lt Governor'
+            elif 'LT' in office_title or 'LIEUTENANT' in office_title:
+                office_type = 'Lt Governor'
+            else:
+                office_type = 'Governor'
 
         # Parse metadata rows
         num_precincts = None
@@ -215,7 +249,7 @@ def parse_races(html):
                 'is_write_in': is_write_in,
             })
 
-        races.append({
+        race_data = {
             'race_title': title,
             'chamber': chamber,
             'district': district_id,
@@ -224,7 +258,10 @@ def parse_races(html):
             'precincts_reporting': precincts_reporting,
             'total_votes': total_votes,
             'candidates': candidates,
-        })
+        }
+        if office_type:
+            race_data['office_type'] = office_type
+        races.append(race_data)
 
     return races
 
@@ -416,9 +453,9 @@ def determine_election_type(is_primary, primary_code):
     """Map SoS primary party code to DB election_type."""
     if not is_primary:
         return 'General'
-    if primary_code == 'R':
+    if primary_code in ('R', 'REP'):
         return 'Primary_R'
-    # ADL, D-C, C, DC → non-Republican primary
+    # ADL, D-C, C, DC, O, and individual party codes → non-Republican primary
     return 'Primary'
 
 
@@ -426,6 +463,7 @@ def main():
     parser = argparse.ArgumentParser(description='Download AK SoS election results')
     parser.add_argument('--year', type=int, help='Single year to download')
     parser.add_argument('--dry-run', action='store_true', help='Show URLs only')
+    parser.add_argument('--statewide', action='store_true', help='Statewide races only (Gov/Lt Gov)')
     args = parser.parse_args()
 
     elections = ELECTIONS
@@ -458,13 +496,25 @@ def main():
             races = parse_1996_text(html)
         else:
             races = parse_races(html)
-        print(f'{len(races)} state legislative races')
+
+        leg_races = [r for r in races if r['chamber'] is not None]
+        sw_races = [r for r in races if r['chamber'] is None]
+        parts = []
+        if leg_races:
+            parts.append(f'{len(leg_races)} legislative')
+        if sw_races:
+            parts.append(f'{len(sw_races)} statewide')
+        print(', '.join(parts) if parts else '0 races')
 
         for race in races:
+            # Filter if --statewide flag: only statewide races
+            if args.statewide and race['chamber'] is not None:
+                continue
+
             election_type = determine_election_type(is_primary, race['primary_party_code'])
             election_date = ELECTION_DATES.get((year, election_type))
 
-            all_results.append({
+            result = {
                 'year': year,
                 'election_type': election_type,
                 'election_date': election_date,
@@ -474,7 +524,10 @@ def main():
                 'precincts_reporting': race['precincts_reporting'],
                 'total_votes': race['total_votes'],
                 'candidates': race['candidates'],
-            })
+            }
+            if race.get('office_type'):
+                result['office_type'] = race['office_type']
+            all_results.append(result)
 
         # Brief delay between requests
         time.sleep(0.5)
