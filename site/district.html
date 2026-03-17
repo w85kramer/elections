@@ -1475,6 +1475,12 @@
     const mapEl = document.getElementById('district-map');
     if (!mapEl) return;
 
+    // Floterial districts (NH) overlap base districts and have no Census boundary
+    if (district.is_floterial) {
+      mapEl.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--ms-text-light);font-size:14px;text-align:center;padding:0 1rem">Floterial district — overlaps multiple base districts.<br>No standalone boundary available.</div>';
+      return;
+    }
+
     // NE unicameral Legislature uses 'upper' geo file (Census SLDU)
     const chamberType = (chamber === 'Senate' || chamber === 'Legislature') ? 'upper' : 'lower';
     let geoData;
