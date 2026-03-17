@@ -920,12 +920,12 @@
       if (!isSuccession) continue;
 
       // Find the EARLIEST General election won by this governor during their term
-      const lastName = t.name.split(' ').pop().toLowerCase();
+      const lastName = t.name.split(' ').pop().toLowerCase().replace(/\s+/g, '');
       const wonElections = data.elections
         .filter(e =>
           e.type === 'General' && e.year >= t.startDate.getFullYear()
           && (t.endDate ? e.year <= t.endDate.getFullYear() : true)
-          && e.candidates.some(c => c.result === 'Won' && c.name.toLowerCase().includes(lastName))
+          && e.candidates.some(c => c.result === 'Won' && c.name.toLowerCase().replace(/\s+/g, '').includes(lastName))
         )
         .sort((a, b) => a.year - b.year);
 
