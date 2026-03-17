@@ -244,17 +244,13 @@
 
   .joint-ticket-note {
     font-size: 11px;
+    font-style: italic;
     color: var(--ms-text-light);
     margin-left: 4px;
     display: inline;
   }
   .joint-ticket-note a { text-decoration: none; }
   .joint-ticket-note a:hover { text-decoration: underline; }
-  .jt-label {
-    font-weight: 600;
-    cursor: help;
-    border-bottom: 1px dotted var(--ms-text-light);
-  }
 
   .primary-muted { opacity: 0.7; }
   .primary-muted .entry-header { color: #999; }
@@ -777,7 +773,7 @@
         if (cand.joint_ticket) {
           const jt = cand.joint_ticket;
           const jtLink = `<a href="candidate.html?id=${jt.id}&st=${cy.state}" style="color:var(--ms-text-light)">${jt.name}</a>`;
-          jtStr = ` <span class="joint-ticket-note" title="Joint Ticket"><span class="jt-label">j/t</span> ${jtLink}</span>`;
+          jtStr = ` <span class="joint-ticket-note" title="Joint Ticket">(j/t ${jtLink})</span>`;
         }
         let nameHtml;
         if (cand.is_subject) {
