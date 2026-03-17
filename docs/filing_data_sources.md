@@ -341,6 +341,56 @@ Reference for collecting official candidate filing data from each state's Secret
   - 113 new candidates added
   - Created `scripts/populate_nm_leg_candidates.py`
 
+### Iowa (IA)
+- **Filing deadline**: Mar 13, 2026
+- **Primary**: Jun 2, 2026
+- **Official source**: IA SoS — https://sos.iowa.gov/news-resources/complete-list-state-and-federal-candidate-filings
+- **Data access method**: PDF download
+  - URL: `sos.iowa.gov/sites/default/files/2026-03/2026 Primary - Candidate List Database - All Elections_10.pdf`
+  - Table-formatted PDF but pdfplumber can't extract tables — use text extraction instead
+- **Format**: PDF with columns: For the Office Of, Party, Ballot Name(s), Address, Phone, Email, Filing Date
+- **Notes**:
+  - Multi-candidate same-party lines: subsequent candidates don't repeat party prefix — must carry forward
+  - Skip "--" placeholder entries (no candidate filed for that party)
+  - 259 state-level candidates (245 legislative + 14 statewide)
+  - 4 withdrawals (John Jacobs HD-37, John Thompson HD-80, Mike Bousselot SD-21, Blake Clyde SD-33)
+  - 218 new candidates added, 41 matched existing DB entries
+  - Statewide: Governor (4), AG (2), SoS (1), Auditor (3), Treasurer (2), Ag Secretary (2)
+  - Created `scripts/populate_ia_candidates.py`
+
+### Nevada (NV)
+- **Filing deadline**: Mar 13, 2026
+- **Primary**: Jun 9, 2026
+- **Official source**: NV SoS Aurora portal — https://www.nvsos.gov/SOSCandidateServices/AnonymousAccess/CEFDSearchUU/CertCandList.aspx
+- **Data access method**: CSV export from Aurora candidate search (browser only, Incapsula bot protection)
+- **Format**: CSV with columns: Name to Appear on Ballot, Candidate Name, Party or Nonpartisan Office, Office Sought, Filing Office, Residential Address, Filed Date, Filed Status
+- **Notes**:
+  - BOM on first column header — use `encoding='utf-8-sig'`
+  - Office Sought includes district: "State Assembly, District N", "State Senate, District N"
+  - NV uses "Assembly" chamber (not "House") in DB
+  - Party values: "Republican Party", "Democratic Party", "Libertarian Party of Nevada", "Independent American Party", "No Political Party"
+  - 183 state-level candidates (144 legislative + 39 statewide)
+  - D/R primary: 129 legislative + 30 statewide; third-party general: 15 legislative + 9 statewide
+  - 1 withdrawal (Christian Bishop AD-29 D)
+  - 158 new candidates added, 10 matched existing DB entries
+  - Created `scripts/populate_nv_candidates.py`
+
+### Maine (ME)
+- **Filing deadline**: Mar 16, 2026
+- **Primary**: Jun 9, 2026
+- **Official source**: ME SoS — https://www.maine.gov/sos/elections-voting/upcoming-elections
+- **Data access method**: Direct Excel download (no auth)
+  - URL: `maine.gov/sos/sites/maine.gov.sos/files/inline-files/2026 Primary Candidate List-posting 3.16.xlsx`
+  - Office abbreviation key: separate PDF download
+- **Format**: XLSX with columns: Office, Dist, County, Party, Date Filed, Last Name, First Name, Middle Name, Suffix, Residence Municipality
+- **Notes**:
+  - Office codes: GOV (Governor), SS (State Senator), SR (State Representative) — abbreviation key PDF says "GV" but actual data uses "GOV"
+  - Party: R or D (single letter)
+  - 374 state-level candidates (291 House + 70 Senate + 13 Governor)
+  - 7 withdrawals (Lucien Daigle switched HD-1→SD-1, Mark Babin HD-3, Corey Bouchard HD-88, Kiernan Majerus-Collins HD-94, John Salamone SD-32, Alfred Schutz SD-32, Lance Harvell SD-5)
+  - 280 new candidates added, 94 matched existing DB entries
+  - Created `scripts/populate_me_candidates.py`
+
 ## Pending States (in filing deadline order)
 
 | State | Filing Deadline | Primary | SoS Website | Notes |
@@ -358,3 +408,6 @@ Reference for collecting official candidate filing data from each state's Secret
 | OR | Mar 10, 2026 | May 19 | sos.oregon.gov | Verified ✓ (63 new, 15 withdrawn) |
 | PA | Mar 10, 2026 | May 19 | dos.pa.gov | Verified ✓ (421 new, 2 withdrawn) |
 | TN | Mar 10, 2026 | May 5 | sos.tn.gov | Verified ✓ (126 new, 3 withdrawn incl. Randy McNally) |
+| IA | Mar 13, 2026 | Jun 2 | sos.iowa.gov | Verified ✓ (218 new, 4 withdrawn) |
+| NV | Mar 13, 2026 | Jun 9 | nvsos.gov | Verified ✓ (158 new, 1 withdrawn) |
+| ME | Mar 16, 2026 | Jun 9 | maine.gov/sos | Verified ✓ (280 new, 7 withdrawn) |
