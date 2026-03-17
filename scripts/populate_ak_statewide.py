@@ -142,10 +142,11 @@ def match_candidate_by_name(name, existing_candidates, threshold=0.85):
     return None, None
 
 
-def match_candidate_by_last_name(last_name, existing_candidates):
-    """Match by last name only. Returns (id, full_name) or (None, None).
+def match_candidate_by_last_name(last_name, existing_candidates, party=None, ltgov_primary_winners=None):
+    """Match by last name. Returns (id, full_name) or (None, None).
 
-    Only matches if exactly one candidate has that last name.
+    If multiple matches, narrows by party+year context using ltgov_primary_winners.
+    Falls back to unique last name match.
     """
     last_lower = last_name.lower().strip()
     # Title-case if all caps
@@ -162,6 +163,14 @@ def match_candidate_by_last_name(last_name, existing_candidates):
 
     if len(matches) == 1:
         return matches[0]['id'], matches[0]['full_name']
+
+    # Multiple matches — try to narrow using Lt Gov primary winners for this party
+    if len(matches) > 1 and party and ltgov_primary_winners:
+        primary_winner_id = ltgov_primary_winners.get(party)
+        if primary_winner_id:
+            for m in matches:
+                if m['id'] == primary_winner_id:
+                    return m['id'], m['full_name']
 
     return None, None
 
@@ -385,6 +394,15 @@ def main():
 
     print(f'\n  Total candidacies planned: {len(candidacies_plan)}')
 
+    # Build Lt Gov primary winner lookup: {(year, party) → candidate_id}
+    # This helps disambiguate last-name matches for general election Lt Gov candidates
+    ltgov_primary_winners_by_year = {}  # year → {party → cand_id}
+    for idx, (seat_id, year, etype, name, party, votes, pct, result, is_last) in enumerate(candidacies_plan):
+        if seat_id == LTGOV_SEAT_ID and 'Primary' in etype and result == 'Won':
+            cand_id, _ = match_candidate_by_name(name, existing_candidates)
+            if cand_id:
+                ltgov_primary_winners_by_year.setdefault(year, {})[party] = cand_id
+
     # Check candidate matching
     candidates_to_create = []
     unmatched_last_names = []
@@ -392,11 +410,14 @@ def main():
 
     for idx, (seat_id, year, etype, name, party, votes, pct, result, is_last) in enumerate(candidacies_plan):
         if is_last:
-            cand_id, matched = match_candidate_by_last_name(name, existing_candidates)
+            primary_winners = ltgov_primary_winners_by_year.get(year, {})
+            cand_id, matched = match_candidate_by_last_name(
+                name, existing_candidates, party=party,
+                ltgov_primary_winners=primary_winners)
             if cand_id:
                 match_results[idx] = (cand_id, matched)
             else:
-                unmatched_last_names.append((idx, name, year))
+                unmatched_last_names.append((idx, name, year, party))
         else:
             cand_id, matched = match_candidate_by_name(name, existing_candidates)
             if cand_id:
@@ -415,8 +436,8 @@ def main():
 
     if unmatched_last_names:
         print('\n  Unmatched last names (will try again after creating primary candidates):')
-        for idx, name, year in unmatched_last_names:
-            print(f'    {year} General: {name}')
+        for idx, name, year, party in unmatched_last_names:
+            print(f'    {year} General: {name} ({party})')
 
     if args.dry_run:
         print('\n  Candidacy details:')
@@ -472,8 +493,11 @@ def main():
 
     # Re-attempt unmatched last names (now that primary candidates exist)
     still_unmatched = []
-    for idx, last_name, year in unmatched_last_names:
-        cand_id, matched = match_candidate_by_last_name(last_name, existing_candidates)
+    for idx, last_name, year, party in unmatched_last_names:
+        primary_winners = ltgov_primary_winners_by_year.get(year, {})
+        cand_id, matched = match_candidate_by_last_name(
+            last_name, existing_candidates, party=party,
+            ltgov_primary_winners=primary_winners)
         if cand_id:
             match_results[idx] = (cand_id, matched)
             print(f'  Resolved {last_name} → {matched}')
@@ -610,6 +634,54 @@ def main():
                 time.sleep(1)
     else:
         print(f'  No new candidacies (skipped {skipped} existing)')
+
+    # Step 6: Set running_mate_candidacy_id for Gov↔Lt Gov general pairs
+    print('\nSetting running_mate_candidacy_id for Gov↔Lt Gov generals...')
+    mate_links = 0
+    for race in combined_generals:
+        year = race['year']
+        if not race['total_votes'] or race['total_votes'] == 0:
+            continue
+
+        gov_key = (GOV_SEAT_ID, year, 'General')
+        ltgov_key = (LTGOV_SEAT_ID, year, 'General')
+
+        if gov_key not in existing_elections or ltgov_key not in existing_elections:
+            continue
+
+        gov_eid = existing_elections[gov_key]['id']
+        ltgov_eid = existing_elections[ltgov_key]['id']
+
+        # Match by party: for each Gov candidacy, find matching Lt Gov candidacy
+        result = run_sql(f"""
+            UPDATE candidacies gov_cy
+            SET running_mate_candidacy_id = ltgov_cy.id
+            FROM candidacies ltgov_cy
+            WHERE gov_cy.election_id = {gov_eid}
+              AND ltgov_cy.election_id = {ltgov_eid}
+              AND gov_cy.party = ltgov_cy.party
+              AND gov_cy.running_mate_candidacy_id IS NULL
+            RETURNING gov_cy.id
+        """, exit_on_error=False)
+        gov_linked = len(result or [])
+
+        result = run_sql(f"""
+            UPDATE candidacies ltgov_cy
+            SET running_mate_candidacy_id = gov_cy.id
+            FROM candidacies gov_cy
+            WHERE ltgov_cy.election_id = {ltgov_eid}
+              AND gov_cy.election_id = {gov_eid}
+              AND ltgov_cy.party = gov_cy.party
+              AND ltgov_cy.running_mate_candidacy_id IS NULL
+            RETURNING ltgov_cy.id
+        """, exit_on_error=False)
+        ltgov_linked = len(result or [])
+
+        if gov_linked or ltgov_linked:
+            print(f'  {year}: {gov_linked} Gov→LtGov, {ltgov_linked} LtGov→Gov')
+            mate_links += gov_linked + ltgov_linked
+
+    print(f'  Total: {mate_links} running mate links set')
 
     # --- Verification ---
     print('\n=== Verification ===')
