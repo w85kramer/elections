@@ -222,6 +222,15 @@ function mergeLiveElections(district, liveElections, stateAbbr) {
     var seat = district.seats[j];
     var liveForSeat = bySeat[seat.seat_id];
     if (!liveForSeat) continue;
+    // Preserve flip data from static export (computed from full seat_terms history).
+    // The live path can only compare against current_holder_caucus, which is already
+    // updated after a special election — so it misses flips for completed specials.
+    var staticFlips = {};
+    seat.elections.forEach(function(e) {
+      if (e.year === LIVE_ELECTION_YEAR && e.flipped_seat) {
+        staticFlips[e.type] = e.flipped_seat;
+      }
+    });
     // Compute flip badges — only elections that determine who holds office
     var flipTypes = ['General', 'General_Runoff', 'Special', 'Special_General',
                      'Special_Runoff', 'Recall'];
@@ -244,6 +253,10 @@ function mergeLiveElections(district, liveElections, stateAbbr) {
             el.flipped_seat = { from: prevCaucus, to: winnerCaucus };
           }
         }
+      }
+      // Fall back to static export's flip data if live detection missed it
+      if (!el.flipped_seat && staticFlips[el.type]) {
+        el.flipped_seat = staticFlips[el.type];
       }
     }
     // Remove static 2026 elections, replace with live
