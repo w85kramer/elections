@@ -483,6 +483,12 @@
   // AZ: new joint ticket office, first election 2026
   racesData['AZ'] = { category: 'new_race' };
 
+  var noRaceCount = 0, noPosCount = 0;
+  for (var s in racesData) {
+    if (racesData[s].category === 'no_race') noRaceCount++;
+    else if (racesData[s].category === 'no_position') noPosCount++;
+  }
+
   new MapRenderer('#races-map', {
     data: racesData,
     colors: {
@@ -498,8 +504,8 @@
       { label: 'Democratic Incumbent (' + demRaces + ')', color: '#6cb3d2' },
       { label: 'Republican Incumbent (' + repRaces + ')', color: '#e50963' },
       { label: 'New Office — AZ (1)', color: '#8b567f' },
-      { label: 'No Lt. Gov. Election in 2026', color: '#d9d9d9' },
-      { label: 'No Lt. Gov. Position', color: '#b5b0ab' }
+      { label: 'No Lt. Gov. Election in 2026 (' + noRaceCount + ')', color: '#d9d9d9' },
+      { label: 'No Lt. Gov. Position (' + noPosCount + ')', color: '#b5b0ab' }
     ],
     sourceText: 'Source: MultiState. Includes both separate races and joint-ticket elections.',
     tooltipFn: function(abbr, d) {
