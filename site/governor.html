@@ -566,9 +566,16 @@
       for (const c of race.candidates) {
         const typeLabel = c.election_type !== 'General'
           ? `<span class="text-muted text-sm">${c.election_type.replace('_', ' ')}</span>` : '';
+        let jtStr2026 = '';
+        if (c.jt_name) {
+          const jtLink2026 = c.jt_candidate_id
+            ? `<a href="candidate.html?id=${c.jt_candidate_id}&st=${stateAbbr}" style="color:var(--ms-text-light);text-decoration:none">${c.jt_name}</a>`
+            : c.jt_name;
+          jtStr2026 = ` <span style="font-size:11px;font-style:italic;color:var(--ms-text-light)">(j/t ${jtLink2026})</span>`;
+        }
         candsHtml += `<li>
           <span class="party-badge ${partyBadgeClass(c.party)}" style="font-size:11px;padding:1px 6px">${c.party || '?'}</span>
-          ${c.candidate_id ? `<a href="candidate.html?id=${c.candidate_id}&st=${stateAbbr}" style="${partyColorStyle(c.party)};text-decoration:none">${c.name}</a>` : `<span style="${partyColorStyle(c.party)}">${c.name}</span>`}
+          ${c.candidate_id ? `<a href="candidate.html?id=${c.candidate_id}&st=${stateAbbr}" style="${partyColorStyle(c.party)};text-decoration:none">${c.name}</a>` : `<span style="${partyColorStyle(c.party)}">${c.name}</span>`}${jtStr2026}
           ${typeLabel}
         </li>`;
       }
@@ -725,7 +732,14 @@
       const incStr = cand.is_incumbent ? ' <span class="incumbent-marker" title="incumbent">(i)</span>' : '';
       const wi = cand.is_write_in ? ' <span class="incumbent-marker" title="write-in candidate">(w/i)</span>' : '';
       const candLink = cand.candidate_id ? `<a href="candidate.html?id=${cand.candidate_id}&st=${stateAbbr}" style="${partyColorStyle(candParty)};text-decoration:none">${cand.name}</a>` : `<span style="${partyColorStyle(candParty)}">${cand.name}</span>`;
-      const nameHtml = `<span class="cand-name">${candLink}${incStr}${wi}</span>`;
+      let jtStr = '';
+      if (cand.jt_name) {
+        const jtLink = cand.jt_candidate_id
+          ? `<a href="candidate.html?id=${cand.jt_candidate_id}&st=${stateAbbr}" style="color:var(--ms-text-light);text-decoration:none">${cand.jt_name}</a>`
+          : cand.jt_name;
+        jtStr = ` <span style="font-size:11px;font-style:italic;color:var(--ms-text-light)">(j/t ${jtLink})</span>`;
+      }
+      const nameHtml = `<span class="cand-name">${candLink}${incStr}${wi}${jtStr}</span>`;
 
       const pctStr = cand.pct != null ? `${cand.pct.toFixed(1)}%` : '';
       const votesStr = cand.votes != null ? numberWithCommas(cand.votes) : '';

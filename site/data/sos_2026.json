@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-16T20:10:14.366870Z",
+  "generated_at": "2026-03-17T01:54:08.118458Z",
   "office_type": "Secretary of State",
   "office_key": "sos",
   "total_races": 26,
@@ -451,123 +451,195 @@
   "no_race_states": [
     {
       "state": "AK",
+      "state_name": "Alaska",
       "reason": "not_elected",
-      "method": "Not_Applicable"
+      "method": "Not_Applicable",
+      "incumbent": null,
+      "incumbent_party": null
     },
     {
       "state": "DE",
+      "state_name": "Delaware",
       "reason": "not_elected",
-      "method": "Appointed"
+      "method": "Appointed",
+      "incumbent": "Charuni Patibanda-Sanchez",
+      "incumbent_party": "D"
     },
     {
       "state": "FL",
+      "state_name": "Florida",
       "reason": "not_elected",
-      "method": "Appointed"
+      "method": "Appointed",
+      "incumbent": "Cord Byrd",
+      "incumbent_party": "R"
     },
     {
       "state": "HI",
+      "state_name": "Hawaii",
       "reason": "not_elected",
-      "method": "Not_Applicable"
+      "method": "Not_Applicable",
+      "incumbent": null,
+      "incumbent_party": null
     },
     {
       "state": "KY",
+      "state_name": "Kentucky",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "Michael Adams",
+      "incumbent_party": "R"
     },
     {
       "state": "LA",
+      "state_name": "Louisiana",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "Nancy Landry",
+      "incumbent_party": "R"
     },
     {
       "state": "MD",
+      "state_name": "Maryland",
       "reason": "not_elected",
-      "method": "Appointed"
+      "method": "Appointed",
+      "incumbent": "Susan Lee",
+      "incumbent_party": "D"
     },
     {
       "state": "ME",
+      "state_name": "Maine",
       "reason": "not_elected",
-      "method": "Appointed"
+      "method": "Appointed",
+      "incumbent": "Shenna Bellows",
+      "incumbent_party": "D"
     },
     {
       "state": "MO",
+      "state_name": "Missouri",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "Denny Hoskins",
+      "incumbent_party": "R"
     },
     {
       "state": "MS",
+      "state_name": "Mississippi",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "Michael Watson",
+      "incumbent_party": "R"
     },
     {
       "state": "MT",
+      "state_name": "Montana",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "Christi Jacobsen",
+      "incumbent_party": "R"
     },
     {
       "state": "NC",
+      "state_name": "North Carolina",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "Elaine Marshall",
+      "incumbent_party": "D"
     },
     {
       "state": "NH",
+      "state_name": "New Hampshire",
       "reason": "not_elected",
-      "method": "Appointed"
+      "method": "Appointed",
+      "incumbent": "David Scanlan",
+      "incumbent_party": "R"
     },
     {
       "state": "NJ",
+      "state_name": "New Jersey",
       "reason": "not_elected",
-      "method": "Appointed"
+      "method": "Appointed",
+      "incumbent": "Dale Caldwell",
+      "incumbent_party": "D"
     },
     {
       "state": "NY",
+      "state_name": "New York",
       "reason": "not_elected",
-      "method": "Appointed"
+      "method": "Appointed",
+      "incumbent": "Walter Mosley",
+      "incumbent_party": "D"
     },
     {
       "state": "OK",
+      "state_name": "Oklahoma",
       "reason": "not_elected",
-      "method": "Appointed"
+      "method": "Appointed",
+      "incumbent": "Benjamin Lepak",
+      "incumbent_party": "R"
     },
     {
       "state": "OR",
+      "state_name": "Oregon",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "Tobias Read",
+      "incumbent_party": "D"
     },
     {
       "state": "PA",
+      "state_name": "Pennsylvania",
       "reason": "not_elected",
-      "method": "Appointed"
+      "method": "Appointed",
+      "incumbent": "Al Schmidt",
+      "incumbent_party": "R"
     },
     {
       "state": "TN",
+      "state_name": "Tennessee",
       "reason": "not_elected",
-      "method": "Appointed"
+      "method": "Appointed",
+      "incumbent": "Tre Hargett",
+      "incumbent_party": "R"
     },
     {
       "state": "TX",
+      "state_name": "Texas",
       "reason": "not_elected",
-      "method": "Appointed"
+      "method": "Appointed",
+      "incumbent": "Jane Nelson",
+      "incumbent_party": "R"
     },
     {
       "state": "UT",
+      "state_name": "Utah",
       "reason": "not_elected",
-      "method": "Not_Applicable"
+      "method": "Not_Applicable",
+      "incumbent": null,
+      "incumbent_party": null
     },
     {
       "state": "VA",
+      "state_name": "Virginia",
       "reason": "not_elected",
-      "method": "Appointed"
+      "method": "Appointed",
+      "incumbent": "Candi Mundon King",
+      "incumbent_party": "D"
     },
     {
       "state": "WA",
+      "state_name": "Washington",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "Steve Hobbs",
+      "incumbent_party": "D"
     },
     {
       "state": "WV",
+      "state_name": "West Virginia",
       "reason": "no_race_2026",
-      "method": "Elected"
+      "method": "Elected",
+      "incumbent": "Kris Warner",
+      "incumbent_party": "R"
     }
   ]
 }

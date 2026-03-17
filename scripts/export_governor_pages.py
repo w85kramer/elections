@@ -169,7 +169,8 @@ def export_governor_pages(dry_run=False, single_state=None):
             e.filing_deadline,
             e.forecast_rating,
             e.precincts_reporting,
-            e.precincts_total
+            e.precincts_total,
+            e.linked_election_id
         FROM elections e
         JOIN seats se ON e.seat_id = se.id
         JOIN districts d ON se.district_id = d.id
@@ -183,6 +184,7 @@ def export_governor_pages(dry_run=False, single_state=None):
     q_candidacies = f"""
         SELECT
             st.abbreviation as state,
+            cy.id as candidacy_id,
             cy.election_id,
             c.id as candidate_id,
             c.full_name as name,
@@ -194,6 +196,7 @@ def export_governor_pages(dry_run=False, single_state=None):
             cy.is_write_in,
             cy.candidate_status,
             cy.is_major,
+            cy.running_mate_candidacy_id,
             e.election_type
         FROM candidacies cy
         JOIN elections e ON cy.election_id = e.id
@@ -244,23 +247,42 @@ def export_governor_pages(dry_run=False, single_state=None):
     """
 
     if dry_run:
-        print('  Would run 6 queries and write governor JSON files')
+        print('  Would run 7 queries and write governor JSON files')
         print(f'\n  Sample query (seats):\n{q_seats[:300]}...')
         return
 
-    print('  Running 6 bulk queries...')
+    print('  Running 7 bulk queries...')
     seats_data = run_sql(q_seats)
-    print(f'    1/6 governor seats: {len(seats_data)} rows')
+    print(f'    1/7 governor seats: {len(seats_data)} rows')
     terms_data = run_sql(q_terms)
-    print(f'    2/6 seat_terms: {len(terms_data)} rows')
+    print(f'    2/7 seat_terms: {len(terms_data)} rows')
     elections_data = run_sql(q_elections)
-    print(f'    3/6 elections: {len(elections_data)} rows')
+    print(f'    3/7 elections: {len(elections_data)} rows')
     candidacies_data = run_sql(q_candidacies)
-    print(f'    4/6 candidacies: {len(candidacies_data)} rows')
+    print(f'    4/7 candidacies: {len(candidacies_data)} rows')
     forecasts_data = run_sql(q_forecasts)
-    print(f'    5/6 forecasts: {len(forecasts_data)} rows')
+    print(f'    5/7 forecasts: {len(forecasts_data)} rows')
     primaries_data = run_sql(q_primaries)
-    print(f'    6/6 primaries: {len(primaries_data)} rows')
+    print(f'    6/7 primaries: {len(primaries_data)} rows')
+
+    # Query 7: Candidacies for linked elections (Lt Gov running mates)
+    linked_ids = [e['linked_election_id'] for e in elections_data if e.get('linked_election_id')]
+    linked_candidacies_data = []
+    if linked_ids:
+        ids_str = ','.join(str(i) for i in linked_ids)
+        q_linked = f"""
+            SELECT
+                cy.id as candidacy_id,
+                cy.election_id,
+                c.id as candidate_id,
+                c.full_name as name,
+                cy.party
+            FROM candidacies cy
+            JOIN candidates c ON cy.candidate_id = c.id
+            WHERE cy.election_id IN ({ids_str})
+        """
+        linked_candidacies_data = run_sql(q_linked)
+    print(f'    7/7 linked candidacies: {len(linked_candidacies_data)} rows')
 
     # --- Index data ---
 
@@ -283,6 +305,28 @@ def export_governor_pages(dry_run=False, single_state=None):
     candidacies_by_election = {}
     for r in candidacies_data:
         candidacies_by_election.setdefault(r['election_id'], []).append(r)
+
+    # Candidacy by id (for running_mate_candidacy_id lookups)
+    candidacy_by_id = {}
+    for r in candidacies_data:
+        candidacy_by_id[r['candidacy_id']] = {
+            'name': r['name'],
+            'candidate_id': r['candidate_id'],
+        }
+    for r in linked_candidacies_data:
+        candidacy_by_id[r['candidacy_id']] = {
+            'name': r['name'],
+            'candidate_id': r['candidate_id'],
+        }
+
+    # Candidates by (election_id, party) for party-based j/t fallback
+    # Include linked (Lt Gov) candidacies so Gov→Lt Gov matching works
+    candidates_by_election_party = {}
+    for r in linked_candidacies_data:
+        candidates_by_election_party.setdefault(r['election_id'], {})[r['party']] = {
+            'name': r['name'],
+            'candidate_id': r['candidate_id'],
+        }
 
     # Forecasts by state
     forecasts_by_state = {}
@@ -369,7 +413,7 @@ def export_governor_pages(dry_run=False, single_state=None):
             cands = candidacies_by_election.get(e['election_id'], [])
             candidate_list = []
             for c in cands:
-                candidate_list.append({
+                entry = {
                     'candidate_id': c['candidate_id'],
                     'name': c['name'],
                     'party': c['party'],
@@ -381,7 +425,20 @@ def export_governor_pages(dry_run=False, single_state=None):
                     'election_type': c['election_type'],
                     'candidate_status': c['candidate_status'],
                     'is_major': c.get('is_major') or False,
-                })
+                }
+                # Joint ticket running mate resolution
+                mate = None
+                rm_id = c.get('running_mate_candidacy_id')
+                if rm_id and rm_id in candidacy_by_id:
+                    mate = candidacy_by_id[rm_id]
+                else:
+                    linked_id = e.get('linked_election_id')
+                    if linked_id and linked_id in candidates_by_election_party:
+                        mate = candidates_by_election_party[linked_id].get(c['party'])
+                if mate:
+                    entry['jt_name'] = mate['name']
+                    entry['jt_candidate_id'] = mate['candidate_id']
+                candidate_list.append(entry)
 
             elec_obj = {
                 'year': e['election_year'],
@@ -478,7 +535,7 @@ def export_governor_pages(dry_run=False, single_state=None):
                     for c in candidacies_by_election.get(e['election_id'], []):
                         if not any(x['name'] == c['name'] and x['party'] == c['party']
                                    for x in cands_2026):
-                            cands_2026.append({
+                            entry_2026 = {
                                 'candidate_id': c['candidate_id'],
                                 'name': c['name'],
                                 'party': c['party'],
@@ -486,7 +543,19 @@ def export_governor_pages(dry_run=False, single_state=None):
                                 'result': c['result'],
                                 'is_major': c.get('is_major') or False,
                                 'election_type': c['election_type'],
-                            })
+                            }
+                            mate = None
+                            rm_id = c.get('running_mate_candidacy_id')
+                            if rm_id and rm_id in candidacy_by_id:
+                                mate = candidacy_by_id[rm_id]
+                            else:
+                                linked_id = e.get('linked_election_id')
+                                if linked_id and linked_id in candidates_by_election_party:
+                                    mate = candidates_by_election_party[linked_id].get(c['party'])
+                            if mate:
+                                entry_2026['jt_name'] = mate['name']
+                                entry_2026['jt_candidate_id'] = mate['candidate_id']
+                            cands_2026.append(entry_2026)
 
             race_2026 = {
                 'is_open_seat': state in OPEN_SEATS,
