@@ -393,6 +393,9 @@
     tooltipFn: function(abbr, info) {
       if (!info || !info.state_name) return abbr;
       return '<strong>' + info.state_name + '</strong><br>Lt. Gov: ' + (info.incumbent || 'N/A') + ' (' + info.incumbent_party + ')';
+    },
+    onClickState: function(abbr) {
+      window.location.href = 'statewide.html?st=' + abbr + '&office=ltgov';
     }
   });
 
