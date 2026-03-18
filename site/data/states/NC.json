@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "North Carolina",
     "abbr": "NC",
@@ -106,15 +106,15 @@
   ],
   "chambers": {
     "House": {
-      "total": 120,
+      "total": 124,
       "composition": {
-        "D": 49,
-        "R": 71,
+        "D": 50,
+        "R": 74,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 80,
-      "seats_up_2026": 120,
+      "supermajority": 83,
+      "seats_up_2026": 124,
       "members": [
         {
           "district": "1",
@@ -451,10 +451,20 @@
           "district_name": "HD-34",
           "seat_designator": null,
           "name": "Tim Longest",
-          "party": "D",
+          "party": "R",
           "pres_margin": "+30.9",
           "next_election": 2026,
           "candidate_id": 11585
+        },
+        {
+          "district": "34",
+          "district_name": "HD-34",
+          "seat_designator": null,
+          "name": "Tim Longest",
+          "party": "R",
+          "pres_margin": "+30.9",
+          "next_election": 2026,
+          "candidate_id": 11470
         },
         {
           "district": "35",
@@ -505,6 +515,16 @@
           "pres_margin": "+25.2",
           "next_election": 2026,
           "candidate_id": 11507
+        },
+        {
+          "district": "40",
+          "district_name": "HD-40",
+          "seat_designator": null,
+          "name": "Phil Rubin",
+          "party": "D",
+          "pres_margin": "+27.7",
+          "next_election": 2026,
+          "candidate_id": 11564
         },
         {
           "district": "40",
@@ -575,6 +595,16 @@
           "pres_margin": "-34.8",
           "next_election": 2026,
           "candidate_id": 11455
+        },
+        {
+          "district": "47",
+          "district_name": "HD-47",
+          "seat_designator": null,
+          "name": "John Lowery",
+          "party": "R",
+          "pres_margin": "-24.0",
+          "next_election": 2026,
+          "candidate_id": 11517
         },
         {
           "district": "47",
@@ -705,6 +735,16 @@
           "pres_margin": "-9.9",
           "next_election": 2026,
           "candidate_id": 11435
+        },
+        {
+          "district": "60",
+          "district_name": "HD-60",
+          "seat_designator": null,
+          "name": "Amanda Cook",
+          "party": "D",
+          "pres_margin": "+24.4",
+          "next_election": 2026,
+          "candidate_id": 11439
         },
         {
           "district": "60",
@@ -2238,12 +2278,6 @@
             "election_type": "General"
           },
           {
-            "name": "Jason Moore",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "General"
-          },
-          {
             "name": "Celeste Cairns",
             "party": "R",
             "is_incumbent": true,
@@ -2553,12 +2587,6 @@
         "chamber": "House",
         "district": "23",
         "candidates": [
-          {
-            "name": "Patricia Smith",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "General"
-          },
           {
             "name": "Patricia Smith",
             "party": "D",
@@ -3954,12 +3982,6 @@
             "election_type": "General"
           },
           {
-            "name": "Jocelyn Torres",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "General"
-          },
-          {
             "name": "Cody Huneycutt",
             "party": "R",
             "is_incumbent": true,
@@ -4648,12 +4670,6 @@
             "election_type": "General"
           },
           {
-            "name": "Robert Thompson",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "General"
-          },
-          {
             "name": "Mitchell Setzer",
             "party": "R",
             "is_incumbent": true,
@@ -4839,12 +4855,6 @@
         "chamber": "House",
         "district": "95",
         "candidates": [
-          {
-            "name": "Mike Robinson",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "General"
-          },
           {
             "name": "Mike Robinson",
             "party": "D",
@@ -6326,12 +6336,6 @@
             "election_type": "General"
           },
           {
-            "name": "Paul Taylor",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "General"
-          },
-          {
             "name": "Tom McInnis",
             "party": "R",
             "is_incumbent": true,
@@ -7513,7 +7517,7 @@
       "district": "34",
       "seat_label": "NC House 34",
       "pres_margin": "+30.9",
-      "holder_party": "D",
+      "holder_party": "R",
       "candidate": "Tim Longest",
       "is_open_seat": null
     },

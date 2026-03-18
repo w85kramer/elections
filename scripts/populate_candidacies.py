@@ -24,6 +24,7 @@ import httpx
 import sys as _sys, os as _os
 _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
 from db_config import TOKEN, PROJECT_REF, API_URL
+from candidate_lookup import CandidateLookup
 
 BATCH_SIZE = 400
 
@@ -870,9 +871,12 @@ def match_candidates(parsed_candidates, office_type, seat_map, multi_seat_map,
 # STEP 5-6: Insert Candidates and Candidacies
 # ══════════════════════════════════════════════════════════════════════
 
-def insert_candidacies(matched, dry_run=False, force=False):
+def insert_candidacies(matched, dry_run=False, force=False, state=None, lookup=None):
     """
     Insert new candidates (challengers) and candidacy records.
+
+    If a CandidateLookup is provided, new candidates are checked against
+    existing records before inserting (prevents duplicates).
 
     Returns (new_candidates_count, candidacies_count)
     """
@@ -919,38 +923,58 @@ def insert_candidacies(matched, dry_run=False, force=False):
     if dry_run:
         return len(new), len(matched)
 
-    # Insert new candidates
+    # Insert new candidates (with dedup lookup if available)
     new_candidate_ids = []
+    reused_existing = 0
     if new:
-        values = []
-        for m in new:
-            # Try to split name into first/last
-            parts = m['candidate_name'].split()
-            first = esc(parts[0]) if parts else ''
-            last = esc(parts[-1]) if len(parts) > 1 else esc(parts[0]) if parts else ''
-            full = esc(m['candidate_name'])
-            values.append(f"('{full}', '{first}', '{last}', NULL)")
+        if lookup and state:
+            # Use fuzzy matching to find existing candidates before inserting
+            for m in new:
+                existing_id = lookup.find_match(m['candidate_name'], state)
+                if existing_id:
+                    new_candidate_ids.append(existing_id)
+                    reused_existing += 1
+                else:
+                    parts = m['candidate_name'].split()
+                    first = parts[0] if parts else ''
+                    last = parts[-1] if len(parts) > 1 else parts[0] if parts else ''
+                    new_id = lookup.find_or_create(
+                        m['candidate_name'], state,
+                        first_name=first, last_name=last)
+                    new_candidate_ids.append(new_id)
+            if reused_existing:
+                print(f"    Reused {reused_existing} existing candidates (dedup match)")
+            print(f"    Created {len(new) - reused_existing} new candidates")
+        else:
+            # Fallback: batch INSERT without dedup check
+            values = []
+            for m in new:
+                parts = m['candidate_name'].split()
+                first = esc(parts[0]) if parts else ''
+                last = esc(parts[-1]) if len(parts) > 1 else esc(parts[0]) if parts else ''
+                full = esc(m['candidate_name'])
+                values.append(f"('{full}', '{first}', '{last}', NULL)")
 
-        total_inserted = 0
-        for batch_start in range(0, len(values), BATCH_SIZE):
-            batch = values[batch_start:batch_start + BATCH_SIZE]
-            sql = (
-                "INSERT INTO candidates (full_name, first_name, last_name, gender) VALUES\n"
-                + ",\n".join(batch)
-                + "\nRETURNING id;"
-            )
-            result = run_sql(sql, exit_on_error=False)
-            if result is None:
-                print(f"      Batch failed, retrying in 2s...")
-                time.sleep(2)
-                result = run_sql(sql)
-            new_candidate_ids.extend(r['id'] for r in result)
-            total_inserted += len(result)
+            total_inserted = 0
+            for batch_start in range(0, len(values), BATCH_SIZE):
+                batch = values[batch_start:batch_start + BATCH_SIZE]
+                sql = (
+                    "INSERT INTO candidates (full_name, first_name, last_name, gender) VALUES\n"
+                    + ",\n".join(batch)
+                    + "\nRETURNING id;"
+                )
+                result = run_sql(sql, exit_on_error=False)
+                if result is None:
+                    print(f"      Batch failed, retrying in 2s...")
+                    time.sleep(2)
+                    result = run_sql(sql)
+                new_candidate_ids.extend(r['id'] for r in result)
+                total_inserted += len(result)
 
-        print(f"    Inserted {total_inserted} new candidates")
-        if total_inserted != len(new):
-            print(f"    ERROR: Expected {len(new)}, got {total_inserted}")
-            sys.exit(1)
+            print(f"    Inserted {total_inserted} new candidates")
+            if total_inserted != len(new):
+                print(f"    ERROR: Expected {len(new)}, got {total_inserted}")
+                sys.exit(1)
 
     # Assign new candidate_ids
     for i, m in enumerate(new):
@@ -1025,6 +1049,10 @@ def process_state(state_abbrev, dry_run=False, force=False):
     # Build lookup maps
     print(f"\n  Loading DB maps...")
     seat_map, multi_seat_map, election_map, incumbent_map = build_lookup_maps(state_abbrev)
+
+    # Initialize candidate lookup for dedup prevention
+    lookup = CandidateLookup(run_sql)
+    lookup.load_state(state_abbrev)
     total_seats = len(seat_map) + sum(len(v) for v in multi_seat_map.values())
     print(f"  Seats with 2026 elections: {total_seats} "
           f"(single: {len(seat_map)}, multi-member: {sum(len(v) for v in multi_seat_map.values())})")
@@ -1110,7 +1138,7 @@ def process_state(state_abbrev, dry_run=False, force=False):
             # Insert primary candidacies
             if matched:
                 print(f"  Inserting primary candidacies...")
-                new_cands, cand_count = insert_candidacies(matched, dry_run=dry_run, force=force)
+                new_cands, cand_count = insert_candidacies(matched, dry_run=dry_run, force=force, state=state_abbrev, lookup=lookup)
                 state_new_candidates += new_cands
                 state_candidacies += cand_count
 
@@ -1243,7 +1271,7 @@ def process_state(state_abbrev, dry_run=False, force=False):
 
             if gen_matched:
                 print(f"  Inserting general election candidacies...")
-                new_cands, cand_count = insert_candidacies(gen_matched, dry_run=dry_run, force=force)
+                new_cands, cand_count = insert_candidacies(gen_matched, dry_run=dry_run, force=force, state=state_abbrev, lookup=lookup)
                 state_new_candidates += new_cands
                 state_candidacies += cand_count
 
@@ -1370,6 +1398,10 @@ def process_state_statewide(state_abbrev, dry_run=False, force=False):
             print(f"  WARNING: {state_abbrev} already has {existing[0]['cnt']} statewide candidacies!")
             print(f"  Skipping to prevent duplicates.")
             return False
+
+    # Initialize candidate lookup for dedup prevention
+    lookup = CandidateLookup(run_sql)
+    lookup.load_state(state_abbrev)
 
     # Build statewide lookup maps
     print(f"\n  Loading statewide DB maps...")
@@ -1522,7 +1554,7 @@ def process_state_statewide(state_abbrev, dry_run=False, force=False):
             state_total_unmatched += unmatched_count
 
             if matched:
-                new_cands, cand_count = insert_candidacies(matched, dry_run=dry_run, force=force)
+                new_cands, cand_count = insert_candidacies(matched, dry_run=dry_run, force=force, state=state_abbrev, lookup=lookup)
                 state_new_candidates += new_cands
                 state_candidacies += cand_count
 

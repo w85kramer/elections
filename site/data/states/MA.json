@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Massachusetts",
     "abbr": "MA",
@@ -32,14 +32,6 @@
           "rating": "Solid D"
         }
       ]
-    },
-    {
-      "office": "Lt. Governor",
-      "name": "Kim Driscoll",
-      "party": "D",
-      "method": "Elected",
-      "next_election": 2026,
-      "start_year": 2023
     },
     {
       "office": "Attorney General",
@@ -383,7 +375,7 @@
           "party": "D",
           "pres_margin": "+36.1",
           "next_election": 2026,
-          "candidate_id": 14527
+          "candidate_id": 15097
         },
         {
           "district": "30",
@@ -2109,7 +2101,100 @@
       "forecast": "Solid D",
       "candidates": []
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Andrea Campbell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "James McMahon",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Auditor",
+        "candidates": [
+          {
+            "name": "Diana DiZoglio",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Gloria Caballero-Roca",
+            "party": "G",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Daniel Riek",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Anthony Amore",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Dominic Giannone III",
+            "party": "W",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "William Galvin",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Juan Sanchez",
+            "party": "G",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Rayla Campbell",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Deborah Goldberg",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Cristina Crawford",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": []
   },
   "uncontested_primaries": [],

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Kansas",
     "abbr": "KS",
@@ -32,14 +32,6 @@
           "rating": "Lean R"
         }
       ]
-    },
-    {
-      "office": "Lt. Governor",
-      "name": "David Toland",
-      "party": "D",
-      "method": "Elected",
-      "next_election": 2026,
-      "start_year": 2023
     },
     {
       "office": "Attorney General",
@@ -85,15 +77,15 @@
   ],
   "chambers": {
     "House": {
-      "total": 125,
+      "total": 129,
       "composition": {
-        "D": 37,
-        "R": 87,
+        "D": 38,
+        "R": 90,
         "Other": 0,
         "Vacant": 1
       },
-      "supermajority": 84,
-      "seats_up_2026": 125,
+      "supermajority": 86,
+      "seats_up_2026": 129,
       "members": [
         {
           "district": "1",
@@ -413,6 +405,16 @@
           "pres_margin": "+40.5",
           "next_election": 2026,
           "candidate_id": 9390
+        },
+        {
+          "district": "33",
+          "district_name": "HD-33",
+          "seat_designator": null,
+          "name": "Carolyn Caiharr",
+          "party": "R",
+          "pres_margin": "-4.5",
+          "next_election": 2026,
+          "candidate_id": 9301
         },
         {
           "district": "33",
@@ -795,6 +797,16 @@
           "candidate_id": 9332
         },
         {
+          "district": "70",
+          "district_name": "HD-70",
+          "seat_designator": null,
+          "name": "Greg Wilson",
+          "party": "R",
+          "pres_margin": "-54.3",
+          "next_election": 2026,
+          "candidate_id": 9332
+        },
+        {
           "district": "71",
           "district_name": "HD-71",
           "seat_designator": null,
@@ -943,6 +955,26 @@
           "pres_margin": "-8.1",
           "next_election": 2026,
           "candidate_id": 9417
+        },
+        {
+          "district": "85",
+          "district_name": "HD-85",
+          "seat_designator": null,
+          "name": "Steve Brunk",
+          "party": "R",
+          "pres_margin": "-8.1",
+          "next_election": 2026,
+          "candidate_id": 9417
+        },
+        {
+          "district": "86",
+          "district_name": "HD-86",
+          "seat_designator": null,
+          "name": "Abi Boatman",
+          "party": "D",
+          "pres_margin": "+12.4",
+          "next_election": 2026,
+          "candidate_id": 9275
         },
         {
           "district": "86",
@@ -1346,14 +1378,14 @@
       ]
     },
     "Senate": {
-      "total": 40,
+      "total": 42,
       "composition": {
-        "D": 9,
-        "R": 31,
+        "D": 10,
+        "R": 32,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 27,
+      "supermajority": 28,
       "seats_up_2026": 0,
       "members": [
         {
@@ -1596,6 +1628,26 @@
           "candidate_id": 9408
         },
         {
+          "district": "24",
+          "district_name": "SD-24",
+          "seat_designator": null,
+          "name": "Scott Hill",
+          "party": "R",
+          "pres_margin": "-38.2",
+          "next_election": 2028,
+          "candidate_id": 9408
+        },
+        {
+          "district": "25",
+          "district_name": "SD-25",
+          "seat_designator": null,
+          "name": "Silas Miller",
+          "party": "D",
+          "pres_margin": "+12.8",
+          "next_election": 2028,
+          "candidate_id": 9414
+        },
+        {
           "district": "25",
           "district_name": "SD-25",
           "seat_designator": null,
@@ -1763,7 +1815,76 @@
       "forecast": "Lean R",
       "candidates": []
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Chris Mann",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kris Kobach",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Insurance Commissioner",
+        "candidates": [
+          {
+            "name": "Vicki Schmidt",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Jeanna Repass",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Scott Schwab",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Lynn Rogers",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Steve Roberts",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Steven Johnson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "KS House 1",

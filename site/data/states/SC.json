@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "South Carolina",
     "abbr": "SC",
@@ -24,11 +24,11 @@
       "forecast": "Solid R",
       "forecast_details": [
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Solid R"
         },
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Solid R"
         }
       ]
@@ -1829,7 +1829,104 @@
       "forecast": "Solid R",
       "candidates": []
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Agriculture Commissioner",
+        "candidates": [
+          {
+            "name": "David Edmond",
+            "party": "G",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Hugh Weathers",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Alan Wilson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Controller",
+        "candidates": [
+          {
+            "name": "Brian Gaines",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Richard Eckstrom",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Rosemounda Peggy Butler",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mark Hammond",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Superintendent of Public Instruction",
+        "candidates": [
+          {
+            "name": "Lisa Ellis",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Ellen Weaver",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Sarah Work",
+            "party": "A",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Curtis Loftis Jr.",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "SC House 41",

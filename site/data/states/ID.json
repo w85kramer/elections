@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Idaho",
     "abbr": "ID",
@@ -93,15 +93,15 @@
   ],
   "chambers": {
     "House": {
-      "total": 70,
+      "total": 73,
       "composition": {
-        "D": 9,
-        "R": 61,
+        "D": 10,
+        "R": 63,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 47,
-      "seats_up_2026": 70,
+      "supermajority": 49,
+      "seats_up_2026": 73,
       "members": [
         {
           "district": "1",
@@ -411,6 +411,16 @@
           "party": "D",
           "pres_margin": "+19.0",
           "next_election": 2026,
+          "candidate_id": 73254
+        },
+        {
+          "district": "16",
+          "district_name": "HD-16",
+          "seat_designator": "A",
+          "name": "So\u00f1ia Galaviz",
+          "party": "D",
+          "pres_margin": "+19.0",
+          "next_election": 2026,
           "candidate_id": 8787
         },
         {
@@ -582,6 +592,16 @@
           "pres_margin": "-60.7",
           "next_election": 2026,
           "candidate_id": 8791
+        },
+        {
+          "district": "25",
+          "district_name": "HD-25",
+          "seat_designator": "A",
+          "name": "Don Hall",
+          "party": "R",
+          "pres_margin": "-38.3",
+          "next_election": 2026,
+          "candidate_id": 8726
         },
         {
           "district": "25",
@@ -782,6 +802,16 @@
           "pres_margin": "-64.3",
           "next_election": 2026,
           "candidate_id": 8704
+        },
+        {
+          "district": "35",
+          "district_name": "HD-35",
+          "seat_designator": "A",
+          "name": "Mike Veile",
+          "party": "R",
+          "pres_margin": "-49.8",
+          "next_election": 2026,
+          "candidate_id": 8778
         },
         {
           "district": "35",
@@ -1250,10 +1280,16 @@
         "office": "Attorney General",
         "candidates": [
           {
+            "name": "Tom Arkoosh",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Raul Labrador",
             "party": "R",
             "is_incumbent": true,
-            "election_type": "Primary_R"
+            "election_type": "General"
           }
         ]
       },
@@ -1264,15 +1300,10 @@
             "name": "Brandon Woolf",
             "party": "R",
             "is_incumbent": true,
-            "election_type": "Primary_R"
-          }
-        ]
-      },
-      {
-        "office": "Lt. Governor",
-        "candidates": [
+            "election_type": "General"
+          },
           {
-            "name": "Scott Bedke",
+            "name": "Brandon Woolf",
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
@@ -1286,13 +1317,25 @@
             "name": "Phil McGrane",
             "party": "R",
             "is_incumbent": true,
-            "election_type": "Primary_R"
+            "election_type": "General"
           }
         ]
       },
       {
         "office": "Superintendent of Public Instruction",
         "candidates": [
+          {
+            "name": "Terry Gilbert",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Debbie Critchfield",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Debbie Critchfield",
             "party": "R",
@@ -1305,16 +1348,16 @@
         "office": "Treasurer",
         "candidates": [
           {
-            "name": "Kevin Jones",
+            "name": "Deborah Silver",
             "party": "D",
             "is_incumbent": false,
-            "election_type": "Primary_D"
+            "election_type": "General"
           },
           {
             "name": "Julie Ellsworth",
             "party": "R",
             "is_incumbent": true,
-            "election_type": "Primary_R"
+            "election_type": "General"
           }
         ]
       }
@@ -2431,7 +2474,7 @@
             "election_type": "Primary_R"
           },
           {
-            "name": "Jeff Emerick",
+            "name": "Jeffrey Emerick",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2789,7 +2832,7 @@
         "district": "1",
         "candidates": [
           {
-            "name": "Steven Johnson",
+            "name": "Steve Johnson",
             "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
@@ -3659,16 +3702,6 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "1",
-      "seat_label": "ID House 1 Seat B",
-      "pres_margin": "-46.7",
-      "holder_party": "R",
-      "candidate": null,
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House",
-      "district": "1",
       "seat_label": "ID House 1 Seat A",
       "pres_margin": "-46.7",
       "holder_party": "R",
@@ -3678,11 +3711,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "2",
-      "seat_label": "ID House 2 Seat A",
-      "pres_margin": "-62.6",
+      "district": "1",
+      "seat_label": "ID House 1 Seat B",
+      "pres_margin": "-46.7",
       "holder_party": "R",
-      "candidate": "Birgid Niedenzu",
+      "candidate": null,
       "is_open_seat": null
     },
     {
@@ -3693,6 +3726,16 @@
       "pres_margin": "-62.6",
       "holder_party": "R",
       "candidate": "Sabine Krier",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "2",
+      "seat_label": "ID House 2 Seat A",
+      "pres_margin": "-62.6",
+      "holder_party": "R",
+      "candidate": "Birgid Niedenzu",
       "is_open_seat": null
     },
     {
@@ -3709,20 +3752,20 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "4",
-      "seat_label": "ID House 4 Seat B",
+      "seat_label": "ID House 4 Seat A",
       "pres_margin": "-31.1",
       "holder_party": "R",
-      "candidate": "Aaron Hayes",
+      "candidate": "Maxwell McSwain",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "4",
-      "seat_label": "ID House 4 Seat A",
+      "seat_label": "ID House 4 Seat B",
       "pres_margin": "-31.1",
       "holder_party": "R",
-      "candidate": "Maxwell McSwain",
+      "candidate": "Aaron Hayes",
       "is_open_seat": null
     },
     {
@@ -3829,20 +3872,20 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "12",
-      "seat_label": "ID House 12 Seat A",
+      "seat_label": "ID House 12 Seat B",
       "pres_margin": "-40.1",
       "holder_party": "R",
-      "candidate": "Sterling Barnett",
+      "candidate": "Curtis James",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "12",
-      "seat_label": "ID House 12 Seat B",
+      "seat_label": "ID House 12 Seat A",
       "pres_margin": "-40.1",
       "holder_party": "R",
-      "candidate": "Curtis James",
+      "candidate": "Sterling Barnett",
       "is_open_seat": null
     },
     {
@@ -3909,16 +3952,6 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "17",
-      "seat_label": "ID House 17 Seat B",
-      "pres_margin": "+13.0",
-      "holder_party": "D",
-      "candidate": "Megan Egbert",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House",
-      "district": "17",
       "seat_label": "ID House 17 Seat A",
       "pres_margin": "+13.0",
       "holder_party": "D",
@@ -3928,11 +3961,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "18",
-      "seat_label": "ID House 18 Seat A",
-      "pres_margin": "+22.8",
+      "district": "17",
+      "seat_label": "ID House 17 Seat B",
+      "pres_margin": "+13.0",
       "holder_party": "D",
-      "candidate": "Ilana Rubel",
+      "candidate": "Megan Egbert",
       "is_open_seat": null
     },
     {
@@ -3943,6 +3976,16 @@
       "pres_margin": "+22.8",
       "holder_party": "D",
       "candidate": "Brooke Green",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "18",
+      "seat_label": "ID House 18 Seat A",
+      "pres_margin": "+22.8",
+      "holder_party": "D",
+      "candidate": "Ilana Rubel",
       "is_open_seat": null
     },
     {
@@ -3969,20 +4012,20 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "20",
-      "seat_label": "ID House 20 Seat B",
+      "seat_label": "ID House 20 Seat A",
       "pres_margin": "-32.5",
       "holder_party": "R",
-      "candidate": "Mary A. Mosley",
+      "candidate": "Jennifer Stephens",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "20",
-      "seat_label": "ID House 20 Seat A",
+      "seat_label": "ID House 20 Seat B",
       "pres_margin": "-32.5",
       "holder_party": "R",
-      "candidate": "Jennifer Stephens",
+      "candidate": "Mary A. Mosley",
       "is_open_seat": null
     },
     {
@@ -4109,20 +4152,20 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "29",
-      "seat_label": "ID House 29 Seat A",
+      "seat_label": "ID House 29 Seat B",
       "pres_margin": "-12.4",
       "holder_party": "R",
-      "candidate": "Mary Shea",
+      "candidate": "Nate Roberts",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "29",
-      "seat_label": "ID House 29 Seat B",
+      "seat_label": "ID House 29 Seat A",
       "pres_margin": "-12.4",
       "holder_party": "R",
-      "candidate": "Nate Roberts",
+      "candidate": "Mary Shea",
       "is_open_seat": null
     },
     {
@@ -4169,16 +4212,6 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "33",
-      "seat_label": "ID House 33 Seat B",
-      "pres_margin": "-28.7",
-      "holder_party": "R",
-      "candidate": "Todd DeVries",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House",
-      "district": "33",
       "seat_label": "ID House 33 Seat A",
       "pres_margin": "-28.7",
       "holder_party": "R",
@@ -4188,11 +4221,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "35",
-      "seat_label": "ID House 35 Seat B",
-      "pres_margin": "-49.8",
+      "district": "33",
+      "seat_label": "ID House 33 Seat B",
+      "pres_margin": "-28.7",
       "holder_party": "R",
-      "candidate": "Mary Kaufman",
+      "candidate": "Todd DeVries",
       "is_open_seat": null
     },
     {
@@ -4203,6 +4236,16 @@
       "pres_margin": "-49.8",
       "holder_party": "R",
       "candidate": "Walter Boyd",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "35",
+      "seat_label": "ID House 35 Seat B",
+      "pres_margin": "-49.8",
+      "holder_party": "R",
+      "candidate": "Mary Kaufman",
       "is_open_seat": null
     },
     {
@@ -4589,20 +4632,20 @@
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "10",
-      "seat_label": "ID House 10 Seat B",
+      "seat_label": "ID House 10 Seat A",
       "pres_margin": "-59.3",
       "holder_party": "R",
-      "candidate": "Bruce Skaug",
+      "candidate": "Mike Moyle",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "10",
-      "seat_label": "ID House 10 Seat A",
+      "seat_label": "ID House 10 Seat B",
       "pres_margin": "-59.3",
       "holder_party": "R",
-      "candidate": "Mike Moyle",
+      "candidate": "Bruce Skaug",
       "is_open_seat": null
     },
     {
@@ -4659,20 +4702,20 @@
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "15",
-      "seat_label": "ID House 15 Seat A",
+      "seat_label": "ID House 15 Seat B",
       "pres_margin": "-5.1",
-      "holder_party": "D",
-      "candidate": "Steve Keyser",
+      "holder_party": "R",
+      "candidate": "Dori Healey",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "15",
-      "seat_label": "ID House 15 Seat B",
+      "seat_label": "ID House 15 Seat A",
       "pres_margin": "-5.1",
-      "holder_party": "R",
-      "candidate": "Dori Healey",
+      "holder_party": "D",
+      "candidate": "Steve Keyser",
       "is_open_seat": null
     },
     {
@@ -4759,20 +4802,20 @@
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "21",
-      "seat_label": "ID House 21 Seat B",
+      "seat_label": "ID House 21 Seat A",
       "pres_margin": "-29.9",
       "holder_party": "R",
-      "candidate": "Jeff Ehlers",
+      "candidate": "James Petzke",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "21",
-      "seat_label": "ID House 21 Seat A",
+      "seat_label": "ID House 21 Seat B",
       "pres_margin": "-29.9",
       "holder_party": "R",
-      "candidate": "James Petzke",
+      "candidate": "Jeff Ehlers",
       "is_open_seat": null
     },
     {

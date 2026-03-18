@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "California",
     "abbr": "CA",
@@ -1331,7 +1331,110 @@
       "forecast": "Solid D",
       "candidates": []
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Rob Bonta",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Nathan Hochman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Controller",
+        "candidates": [
+          {
+            "name": "Malia Cohen",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Lanhee Chen",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Insurance Commissioner",
+        "candidates": [
+          {
+            "name": "Ricardo Lara",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Robert P. Howell",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Shirley Weber",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Robert Bernosky",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Superintendent of Public Instruction",
+        "candidates": [
+          {
+            "name": "Lance Christensen",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Tony Thurmond",
+            "party": "NP",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Fiona Ma",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Jack Guerrero",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "CA Assembly 7",

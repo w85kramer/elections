@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "New York",
     "abbr": "NY",
@@ -32,14 +32,6 @@
           "rating": "Likely D"
         }
       ]
-    },
-    {
-      "office": "Lt. Governor",
-      "name": "Antonio Delgado",
-      "party": "D",
-      "method": "Elected",
-      "next_election": 2026,
-      "start_year": 2022
     },
     {
       "office": "Attorney General",
@@ -2239,7 +2231,42 @@
       "forecast": "Very Likely D",
       "candidates": []
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Letitia James",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Michael Henry",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Controller",
+        "candidates": [
+          {
+            "name": "Thomas DiNapoli",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Paul Rodriguez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "NY Assembly 41",
@@ -2532,7 +2559,7 @@
         "district": "51",
         "candidates": [
           {
-            "name": "Christopher Tague",
+            "name": "Chris Tague",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2590,7 +2617,7 @@
         "district": "61",
         "candidates": [
           {
-            "name": "Jonathan Rivera",
+            "name": "Jon Rivera",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2773,7 +2800,7 @@
       "seat_label": "NY Senate 61",
       "pres_margin": "+22.1",
       "holder_party": "D",
-      "candidate": "Jonathan Rivera",
+      "candidate": "Jon Rivera",
       "is_open_seat": null
     },
     {
@@ -2863,7 +2890,7 @@
       "seat_label": "NY Senate 51",
       "pres_margin": "-14.6",
       "holder_party": "R",
-      "candidate": "Christopher Tague",
+      "candidate": "Chris Tague",
       "is_open_seat": null
     },
     {

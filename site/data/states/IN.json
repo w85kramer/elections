@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Indiana",
     "abbr": "IN",
@@ -23,14 +23,6 @@
       "start_year": 2025
     },
     {
-      "office": "Lt. Governor",
-      "name": "Micah Beckwith",
-      "party": "R",
-      "method": "Elected",
-      "next_election": 2028,
-      "start_year": 2025
-    },
-    {
       "office": "Attorney General",
       "name": "Todd Rokita",
       "party": "R",
@@ -43,7 +35,7 @@
       "name": "Diego Morales",
       "party": "R",
       "method": "Elected",
-      "next_election": 2028,
+      "next_election": 2026,
       "start_year": 2023
     },
     {
@@ -51,7 +43,7 @@
       "name": "Daniel Elliott",
       "party": "R",
       "method": "Elected",
-      "next_election": 2028,
+      "next_election": 2026,
       "start_year": 2023
     },
     {
@@ -59,21 +51,21 @@
       "name": "Elise Nieshalla",
       "party": "R",
       "method": "Elected",
-      "next_election": 2028,
+      "next_election": 2026,
       "start_year": 2023
     }
   ],
   "chambers": {
     "House": {
-      "total": 100,
+      "total": 102,
       "composition": {
-        "D": 30,
-        "R": 70,
+        "D": 31,
+        "R": 71,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 67,
-      "seats_up_2026": 100,
+      "supermajority": 68,
+      "seats_up_2026": 102,
       "members": [
         {
           "district": "1",
@@ -154,6 +146,16 @@
           "pres_margin": "+12.2",
           "next_election": 2026,
           "candidate_id": 9097
+        },
+        {
+          "district": "9",
+          "district_name": "HD-9",
+          "seat_designator": null,
+          "name": "Randy Novak",
+          "party": "D",
+          "pres_margin": "+1.7",
+          "next_election": 2026,
+          "candidate_id": 9086
         },
         {
           "district": "9",
@@ -353,7 +355,7 @@
           "party": "R",
           "pres_margin": "-39.7",
           "next_election": 2026,
-          "candidate_id": 66442
+          "candidate_id": 15727
         },
         {
           "district": "29",
@@ -484,6 +486,16 @@
           "pres_margin": "-39.3",
           "next_election": 2026,
           "candidate_id": 9065
+        },
+        {
+          "district": "42",
+          "district_name": "HD-42",
+          "seat_designator": null,
+          "name": "Tim Yocum",
+          "party": "R",
+          "pres_margin": "-49.7",
+          "next_election": 2026,
+          "candidate_id": 9111
         },
         {
           "district": "42",
@@ -1426,7 +1438,7 @@
           "party": "D",
           "pres_margin": "+59.0",
           "next_election": 2028,
-          "candidate_id": 66443
+          "candidate_id": 9058
         },
         {
           "district": "35",
@@ -1593,7 +1605,65 @@
   },
   "elections_2026": {
     "governor": null,
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Auditor",
+        "candidates": [
+          {
+            "name": "ZeNai Brooks",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "John Schick",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Elise Nieshalla",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Tera Klutz",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Blythe Potter",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Diego Morales",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Daniel Elliott",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "IN House 1",
@@ -2102,7 +2172,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Jeff Thompson",
+            "name": "Jeffrey Thompson",
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
@@ -3931,7 +4001,7 @@
         "district": "23",
         "candidates": [
           {
-            "name": "David Sanders",
+            "name": "David J. Sanders",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -4148,12 +4218,6 @@
           },
           {
             "name": "Alexandra Wilson",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Brenda K. Wilson",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -5190,7 +5254,7 @@
       "seat_label": "IN Senate 23",
       "pres_margin": "-26.2",
       "holder_party": "R",
-      "candidate": "David Sanders",
+      "candidate": "David J. Sanders",
       "is_open_seat": null
     },
     {

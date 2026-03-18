@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Connecticut",
     "abbr": "CT",
@@ -32,14 +32,6 @@
           "rating": "Solid D"
         }
       ]
-    },
-    {
-      "office": "Lt. Governor",
-      "name": "Susan Bysiewicz",
-      "party": "D",
-      "method": "Elected",
-      "next_election": 2026,
-      "start_year": 2019
     },
     {
       "office": "Attorney General",
@@ -1985,7 +1977,100 @@
       "forecast": "Solid D",
       "candidates": []
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "William Tong",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Ken Krayeske",
+            "party": "G",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "A.P. Pascarella",
+            "party": "I",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jessica Kordas",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Controller",
+        "candidates": [
+          {
+            "name": "Sean Scanlon",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Mary Fay",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Stephanie Thomas",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Cynthia Jennings",
+            "party": "I",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Dominic Rapini",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Erick Russell",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Jennifer Baldwin",
+            "party": "I",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Harry Arora",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "CT House 18",
@@ -2148,7 +2233,7 @@
         "district": "33",
         "candidates": [
           {
-            "name": "Charles Ferraro",
+            "name": "Charles J. Ferraro",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2255,7 +2340,7 @@
       "seat_label": "CT Senate 33",
       "pres_margin": "+9.4",
       "holder_party": "D",
-      "candidate": "Charles Ferraro",
+      "candidate": "Charles J. Ferraro",
       "is_open_seat": null
     }
   ],

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T15:17:51.733744Z",
   "state": {
     "name": "Oklahoma",
     "abbr": "OK",
@@ -289,7 +289,7 @@
           "party": "R",
           "pres_margin": "-61.5",
           "next_election": 2026,
-          "candidate_id": 10554
+          "candidate_id": 76761
         },
         {
           "district": "19",
@@ -1617,7 +1617,110 @@
       "forecast": "Solid R",
       "candidates": []
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Lynda Steele",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Gentner Drummond",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Auditor",
+        "candidates": [
+          {
+            "name": "John Yeutter",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Cindy Byrd",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Insurance Commissioner",
+        "candidates": [
+          {
+            "name": "Kimberly Fobbs",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Glen Mulready",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Labor Commissioner",
+        "candidates": [
+          {
+            "name": "Jack Henderson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Leslie Osborn",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Superintendent of Public Instruction",
+        "candidates": [
+          {
+            "name": "Lindel Fields",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Charles de Coune",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Greg Sadler",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Todd Russ",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "OK House 5",

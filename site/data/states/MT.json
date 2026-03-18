@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Montana",
     "abbr": "MT",
@@ -21,14 +21,6 @@
       "method": "Elected",
       "next_election": 2028,
       "start_year": 2021
-    },
-    {
-      "office": "Lt. Governor",
-      "name": "Kristen Juras",
-      "party": "R",
-      "method": "Elected",
-      "next_election": 2028,
-      "start_year": 2025
     },
     {
       "office": "Attorney General",
@@ -82,15 +74,15 @@
   ],
   "chambers": {
     "House": {
-      "total": 100,
+      "total": 103,
       "composition": {
-        "D": 42,
-        "R": 58,
+        "D": 43,
+        "R": 60,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 67,
-      "seats_up_2026": 100,
+      "supermajority": 69,
+      "seats_up_2026": 103,
       "members": [
         {
           "district": "1",
@@ -683,6 +675,16 @@
           "candidate_id": 10765
         },
         {
+          "district": "59",
+          "district_name": "HD-59",
+          "seat_designator": null,
+          "name": "Katie Fire Thunder",
+          "party": "D",
+          "pres_margin": "+24.3",
+          "next_election": 2026,
+          "candidate_id": 10765
+        },
+        {
           "district": "60",
           "district_name": "HD-60",
           "seat_designator": null,
@@ -843,6 +845,16 @@
           "candidate_id": 10783
         },
         {
+          "district": "75",
+          "district_name": "HD-75",
+          "seat_designator": null,
+          "name": "Mark Reinschmidt",
+          "party": "R",
+          "pres_margin": "-36.9",
+          "next_election": 2026,
+          "candidate_id": 10783
+        },
+        {
           "district": "76",
           "district_name": "HD-76",
           "seat_designator": null,
@@ -951,6 +963,16 @@
           "pres_margin": "-25.2",
           "next_election": 2026,
           "candidate_id": 10715
+        },
+        {
+          "district": "87",
+          "district_name": "HD-87",
+          "seat_designator": null,
+          "name": "Terry Nelson",
+          "party": "R",
+          "pres_margin": "-47.6",
+          "next_election": 2026,
+          "candidate_id": 10823
         },
         {
           "district": "87",
@@ -2403,7 +2425,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Kenneth Bogner",
+            "name": "Ken Bogner",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3146,7 +3168,7 @@
         "district": "71",
         "candidates": [
           {
-            "name": "Scott Demarois",
+            "name": "Scott DeMarois",
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
@@ -4237,12 +4259,6 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Wes Siler",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
             "name": "Neal Ganser",
             "party": "R",
             "is_incumbent": false,
@@ -4975,7 +4991,7 @@
       "seat_label": "MT House 71",
       "pres_margin": "0.0",
       "holder_party": "D",
-      "candidate": "Scott Demarois",
+      "candidate": "Scott DeMarois",
       "is_open_seat": null
     },
     {

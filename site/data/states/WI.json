@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Wisconsin",
     "abbr": "WI",
@@ -24,11 +24,11 @@
       "forecast": "Toss-up",
       "forecast_details": [
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Toss-up"
         },
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Toss-up"
         }
       ]
@@ -79,7 +79,7 @@
       "name": "Jill Underly",
       "party": "D",
       "method": "Elected",
-      "next_election": 2026,
+      "next_election": 2025,
       "start_year": 2021
     }
   ],
@@ -1436,7 +1436,76 @@
       "forecast": "Toss-up",
       "candidates": []
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Josh Kaul",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Eric Toney",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Sarah Godlewski",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Pete Karas",
+            "party": "G",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Superintendent of Public Instruction",
+        "candidates": [
+          {
+            "name": "Jill Underly",
+            "party": "NP",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Andrew Zuelke",
+            "party": "C",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Aaron Richardson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "John Leiber",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "WI Assembly 5",

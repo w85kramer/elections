@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Ohio",
     "abbr": "OH",
@@ -32,14 +32,6 @@
           "rating": "Likely R"
         }
       ]
-    },
-    {
-      "office": "Lt. Governor",
-      "name": "Jim Tressel",
-      "party": "R",
-      "method": "Elected",
-      "next_election": 2026,
-      "start_year": 2025
     },
     {
       "office": "Attorney General",
@@ -76,15 +68,15 @@
   ],
   "chambers": {
     "House": {
-      "total": 99,
+      "total": 101,
       "composition": {
-        "D": 34,
-        "R": 65,
+        "D": 35,
+        "R": 66,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 66,
-      "seats_up_2026": 99,
+      "supermajority": 68,
+      "seats_up_2026": 101,
       "members": [
         {
           "district": "1",
@@ -305,6 +297,16 @@
           "pres_margin": "+69.3",
           "next_election": 2026,
           "candidate_id": 11684
+        },
+        {
+          "district": "22",
+          "district_name": "HD-22",
+          "seat_designator": null,
+          "name": "Darnell Brewer",
+          "party": "D",
+          "pres_margin": "+69.3",
+          "next_election": 2026,
+          "candidate_id": 11660
         },
         {
           "district": "23",
@@ -604,7 +606,7 @@
           "party": "R",
           "pres_margin": "-4.1",
           "next_election": 2026,
-          "candidate_id": 11694
+          "candidate_id": 16164
         },
         {
           "district": "53",
@@ -1037,6 +1039,16 @@
           "candidate_id": 11779
         },
         {
+          "district": "95",
+          "district_name": "HD-95",
+          "seat_designator": null,
+          "name": "Ty Moore",
+          "party": "R",
+          "pres_margin": "-33.8",
+          "next_election": 2026,
+          "candidate_id": 11779
+        },
+        {
           "district": "96",
           "district_name": "HD-96",
           "seat_designator": null,
@@ -1079,15 +1091,15 @@
       ]
     },
     "Senate": {
-      "total": 33,
+      "total": 34,
       "composition": {
         "D": 9,
-        "R": 24,
+        "R": 25,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 22,
-      "seats_up_2026": 17,
+      "supermajority": 23,
+      "seats_up_2026": 18,
       "members": [
         {
           "district": "1",
@@ -1097,7 +1109,7 @@
           "party": "R",
           "pres_margin": "-49.0",
           "next_election": 2026,
-          "candidate_id": 11752
+          "candidate_id": 16302
         },
         {
           "district": "2",
@@ -1357,7 +1369,7 @@
           "party": "R",
           "pres_margin": "-5.8",
           "next_election": 2026,
-          "candidate_id": 11722
+          "candidate_id": 16315
         },
         {
           "district": "28",
@@ -1368,6 +1380,16 @@
           "pres_margin": "+10.1",
           "next_election": 2028,
           "candidate_id": 11674
+        },
+        {
+          "district": "29",
+          "district_name": "SD-29",
+          "seat_designator": null,
+          "name": "Jane Timken",
+          "party": "R",
+          "pres_margin": "-20.1",
+          "next_election": 2026,
+          "candidate_id": 11704
         },
         {
           "district": "29",
@@ -1468,28 +1490,34 @@
         "office": "Attorney General",
         "candidates": [
           {
-            "name": "Elliott Forhan",
+            "name": "Jeff Crossman",
             "party": "D",
             "is_incumbent": false,
-            "election_type": "Primary_D"
+            "election_type": "General"
           },
           {
-            "name": "John Kulewicz",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Keith Faber",
+            "name": "Dave Yost",
             "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
+            "is_incumbent": true,
+            "election_type": "General"
           }
         ]
       },
       {
         "office": "Auditor",
         "candidates": [
+          {
+            "name": "Taylor Sappington",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Keith Faber",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Annette Blackwell",
             "party": "D",
@@ -1505,66 +1533,25 @@
         ]
       },
       {
-        "office": "Lt. Governor",
-        "candidates": [
-          {
-            "name": "David Pepper",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Jalen Turner",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Kim Georgeton",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Robert McColley",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Stuart Moats",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          }
-        ]
-      },
-      {
         "office": "Secretary of State",
         "candidates": [
           {
-            "name": "Allison Russo",
+            "name": "Chelsea Clark",
             "party": "D",
             "is_incumbent": false,
-            "election_type": "Primary_D"
+            "election_type": "General"
           },
           {
-            "name": "Bryan Hambley",
-            "party": "D",
+            "name": "Terpsehore Maras",
+            "party": "I",
             "is_incumbent": false,
-            "election_type": "Primary_D"
+            "election_type": "General"
           },
           {
-            "name": "Marcell Strbich",
+            "name": "Frank LaRose",
             "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Robert Sprague",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
+            "is_incumbent": true,
+            "election_type": "General"
           }
         ]
       },
@@ -1572,34 +1559,16 @@
         "office": "Treasurer",
         "candidates": [
           {
-            "name": "Seth Walsh",
+            "name": "Scott Schertzer",
             "party": "D",
             "is_incumbent": false,
-            "election_type": "Primary_D"
+            "election_type": "General"
           },
           {
-            "name": "Jay Edwards",
+            "name": "Robert Sprague",
             "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Kristina Daley Roegner",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Mike Zuren",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Niraj Antani",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
+            "is_incumbent": true,
+            "election_type": "General"
           }
         ]
       }
@@ -4043,7 +4012,7 @@
         "district": "23",
         "candidates": [
           {
-            "name": "Bride Rose Sweeney",
+            "name": "Bride Sweeney",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -4993,7 +4962,7 @@
       "seat_label": "OH Senate 23",
       "pres_margin": "+41.2",
       "holder_party": "D",
-      "candidate": "Bride Rose Sweeney",
+      "candidate": "Bride Sweeney",
       "is_open_seat": null
     },
     {

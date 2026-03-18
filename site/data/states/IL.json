@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Illinois",
     "abbr": "IL",
@@ -32,14 +32,6 @@
           "rating": "Solid D"
         }
       ]
-    },
-    {
-      "office": "Lt. Governor",
-      "name": "Juliana Stratton",
-      "party": "D",
-      "method": "Elected",
-      "next_election": 2026,
-      "start_year": 2019
     },
     {
       "office": "Attorney General",
@@ -85,15 +77,15 @@
   ],
   "chambers": {
     "House": {
-      "total": 118,
+      "total": 120,
       "composition": {
-        "D": 78,
+        "D": 80,
         "R": 40,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 79,
-      "seats_up_2026": 118,
+      "supermajority": 80,
+      "seats_up_2026": 120,
       "members": [
         {
           "district": "1",
@@ -516,6 +508,16 @@
           "candidate_id": 8903
         },
         {
+          "district": "42",
+          "district_name": "HD-42",
+          "seat_designator": null,
+          "name": "Margaret DeLaRosa",
+          "party": "D",
+          "pres_margin": "+20.7",
+          "next_election": 2026,
+          "candidate_id": 8903
+        },
+        {
           "district": "43",
           "district_name": "HD-43",
           "seat_designator": null,
@@ -634,6 +636,16 @@
           "pres_margin": "+19.9",
           "next_election": 2026,
           "candidate_id": 8907
+        },
+        {
+          "district": "55",
+          "district_name": "HD-55",
+          "seat_designator": null,
+          "name": "Justin Cochran",
+          "party": "D",
+          "pres_margin": "+6.6",
+          "next_election": 2026,
+          "candidate_id": 8878
         },
         {
           "district": "55",
@@ -1278,15 +1290,15 @@
       ]
     },
     "Senate": {
-      "total": 59,
+      "total": 60,
       "composition": {
         "D": 40,
-        "R": 19,
+        "R": 20,
         "Other": 0,
         "Vacant": 0
       },
       "supermajority": 40,
-      "seats_up_2026": 39,
+      "seats_up_2026": 40,
       "members": [
         {
           "district": "1",
@@ -1537,6 +1549,16 @@
           "pres_margin": "+16.4",
           "next_election": 2028,
           "candidate_id": 16212
+        },
+        {
+          "district": "26",
+          "district_name": "SD-26",
+          "seat_designator": null,
+          "name": "Darby Hills",
+          "party": "R",
+          "pres_margin": "+8.7",
+          "next_election": 2026,
+          "candidate_id": 8835
         },
         {
           "district": "26",
@@ -1930,19 +1952,37 @@
             "name": "Kwame Raoul",
             "party": "D",
             "is_incumbent": true,
-            "election_type": "Primary_D"
+            "election_type": "General"
           },
           {
-            "name": "Bob Fioretti",
+            "name": "Dan Robin",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Thomas DeVore",
             "party": "R",
             "is_incumbent": false,
-            "election_type": "Primary_R"
+            "election_type": "General"
           }
         ]
       },
       {
         "office": "Controller",
         "candidates": [
+          {
+            "name": "Susana Mendoza",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Shannon Teresi",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
           {
             "name": "Holly Kim",
             "party": "D",
@@ -1976,60 +2016,25 @@
         ]
       },
       {
-        "office": "Lt. Governor",
-        "candidates": [
-          {
-            "name": "Christian Mitchell",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Aaron Del Mar",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Carrie Mendoza",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Christina Neitzke-Troike",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Robert Renteria",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          }
-        ]
-      },
-      {
         "office": "Secretary of State",
         "candidates": [
           {
             "name": "Alexi Giannoulias",
             "party": "D",
             "is_incumbent": true,
-            "election_type": "Primary_D"
+            "election_type": "General"
           },
           {
-            "name": "Diane Harris",
-            "party": "R",
+            "name": "Jon Stewart",
+            "party": "L",
             "is_incumbent": false,
-            "election_type": "Primary_R"
+            "election_type": "General"
           },
           {
-            "name": "Walter Adamczyk",
+            "name": "Dan Brady",
             "party": "R",
             "is_incumbent": false,
-            "election_type": "Primary_R"
+            "election_type": "General"
           }
         ]
       },
@@ -2040,7 +2045,19 @@
             "name": "Michael Frerichs",
             "party": "D",
             "is_incumbent": true,
-            "election_type": "Primary_D"
+            "election_type": "General"
+          },
+          {
+            "name": "Preston Nelson",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Tom Demmer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
           }
         ]
       }
@@ -2122,7 +2139,7 @@
         "district": "5",
         "candidates": [
           {
-            "name": "Kimberly Neely DuBuclet",
+            "name": "Kimberly Neely Dubuclet",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2452,7 +2469,7 @@
         "district": "23",
         "candidates": [
           {
-            "name": "Edgar Gonzalez JR.",
+            "name": "Edgar Gonzalez Jr.",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -4789,7 +4806,7 @@
       "seat_label": "IL House 5",
       "pres_margin": "+72.8",
       "holder_party": "D",
-      "candidate": "Kimberly Neely DuBuclet",
+      "candidate": "Kimberly Neely Dubuclet",
       "is_open_seat": null
     },
     {
@@ -4929,7 +4946,7 @@
       "seat_label": "IL House 23",
       "pres_margin": "+36.5",
       "holder_party": "D",
-      "candidate": "Edgar Gonzalez JR.",
+      "candidate": "Edgar Gonzalez Jr.",
       "is_open_seat": null
     },
     {

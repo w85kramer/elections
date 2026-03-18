@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Florida",
     "abbr": "FL",
@@ -32,14 +32,6 @@
           "rating": "Solid R"
         }
       ]
-    },
-    {
-      "office": "Lt. Governor",
-      "name": "Jay Collins",
-      "party": "R",
-      "method": "Elected",
-      "next_election": 2026,
-      "start_year": 2025
     },
     {
       "office": "Attorney General",
@@ -1712,7 +1704,71 @@
       "forecast": "Solid R",
       "candidates": []
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Agriculture Commissioner",
+        "candidates": [
+          {
+            "name": "Naomi Blemur",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Wilton Simpson",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Aramis Ayala",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Ashley Moody",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "James Uthmeier",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Adam Hattersley",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Blaise Ingoglia",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jimmy Patronis",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "FL House 1",

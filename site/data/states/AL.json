@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Alabama",
     "abbr": "AL",
@@ -1591,6 +1591,12 @@
         "office": "Agriculture Commissioner",
         "candidates": [
           {
+            "name": "Rick Pate",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
             "name": "Ron Sparks",
             "party": "D",
             "is_incumbent": false,
@@ -1623,31 +1629,25 @@
             "name": "Jeffrey McLaughlin",
             "party": "D",
             "is_incumbent": false,
-            "election_type": "Primary_D"
+            "election_type": "General"
           },
           {
-            "name": "Jay Mitchell",
+            "name": "Steve Marshall",
             "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Katherine Robertson",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Pamela Casey",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
+            "is_incumbent": true,
+            "election_type": "General"
           }
         ]
       },
       {
         "office": "Auditor",
         "candidates": [
+          {
+            "name": "Andrew Sorrell",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Violet Edwards",
             "party": "D",
@@ -1675,96 +1675,19 @@
         ]
       },
       {
-        "office": "Lt. Governor",
-        "candidates": [
-          {
-            "name": "Darryl D. Perryman",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Phillip Ensler",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Dean Odle",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "George Childress",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "John Wahl",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Nicole Jones Wadsworth",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Patrick Bishop",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Rick Pate",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Stewart Tankersly",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Wes Allen",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          }
-        ]
-      },
-      {
         "office": "Secretary of State",
         "candidates": [
           {
             "name": "Wayne Rogers",
             "party": "D",
             "is_incumbent": false,
-            "election_type": "Primary_D"
+            "election_type": "General"
           },
           {
-            "name": "Caroleene Dobson",
+            "name": "Wes Allen",
             "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Christian Horn",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Glenda Jackson",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
+            "is_incumbent": true,
+            "election_type": "General"
           }
         ]
       },
@@ -1772,22 +1695,10 @@
         "office": "Treasurer",
         "candidates": [
           {
-            "name": "Rosilyn Houston",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Steve Lolley",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
             "name": "Young Boozer III",
             "party": "R",
             "is_incumbent": true,
-            "election_type": "Primary_R"
+            "election_type": "General"
           }
         ]
       }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Minnesota",
     "abbr": "MN",
@@ -32,14 +32,6 @@
           "rating": "Likely D"
         }
       ]
-    },
-    {
-      "office": "Lt. Governor",
-      "name": "Peggy Flanagan",
-      "party": "D",
-      "method": "Elected",
-      "next_election": 2026,
-      "start_year": 2019
     },
     {
       "office": "Attorney General",
@@ -1014,7 +1006,7 @@
           "party": "D",
           "pres_margin": "+25.3",
           "next_election": 2026,
-          "candidate_id": 16880
+          "candidate_id": 16881
         },
         {
           "district": "94",
@@ -2113,7 +2105,65 @@
       "forecast": "Likely D",
       "candidates": []
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Keith Ellison",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Jim Schultz",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Auditor",
+        "candidates": [
+          {
+            "name": "Julie Blaha",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Jay Reeves",
+            "party": "F",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Steve Simon",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Steve Carlson",
+            "party": "I",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kim Crockett",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "MN House 2",
@@ -2845,7 +2895,7 @@
         "district": "20",
         "candidates": [
           {
-            "name": "Steven Jacob",
+            "name": "Steve Jacob",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3007,12 +3057,6 @@
         "candidates": [
           {
             "name": "Mark Van Oven",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Mark von Oven",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3330,6 +3374,16 @@
     {
       "election_type": "Primary_D",
       "chamber": "Senate",
+      "district": "48",
+      "seat_label": "MN Senate 48",
+      "pres_margin": "+0.2",
+      "holder_party": "R",
+      "candidate": "Mark Van Oven",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
       "district": "50",
       "seat_label": "MN Senate 50",
       "pres_margin": "+35.5",
@@ -3554,7 +3608,7 @@
       "seat_label": "MN Senate 20",
       "pres_margin": "-21.4",
       "holder_party": "R",
-      "candidate": "Steven Jacob",
+      "candidate": "Steve Jacob",
       "is_open_seat": null
     },
     {

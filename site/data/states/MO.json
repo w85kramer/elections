@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Missouri",
     "abbr": "MO",
@@ -59,7 +59,7 @@
       "name": "Scott Fitzpatrick",
       "party": "R",
       "method": "Elected",
-      "next_election": 2028,
+      "next_election": 2026,
       "start_year": 2023
     }
   ],
@@ -533,7 +533,7 @@
           "party": "D",
           "pres_margin": "+22.2",
           "next_election": 2026,
-          "candidate_id": 67155
+          "candidate_id": 67165
         },
         {
           "district": "47",
@@ -2058,7 +2058,31 @@
   },
   "elections_2026": {
     "governor": null,
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Auditor",
+        "candidates": [
+          {
+            "name": "Alan Green",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "John Hartwig",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Scott Fitzpatrick",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "MO House 1",
@@ -4430,7 +4454,7 @@
         "district": "28",
         "candidates": [
           {
-            "name": "Bradley Pollitt",
+            "name": "Brad Pollitt",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"

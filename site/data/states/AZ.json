@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Arizona",
     "abbr": "AZ",
@@ -698,15 +698,15 @@
       ]
     },
     "Senate": {
-      "total": 30,
+      "total": 31,
       "composition": {
-        "D": 13,
+        "D": 14,
         "R": 17,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 20,
-      "seats_up_2026": 30,
+      "supermajority": 21,
+      "seats_up_2026": 31,
       "members": [
         {
           "district": "1",
@@ -787,6 +787,16 @@
           "pres_margin": "+19.7",
           "next_election": 2026,
           "candidate_id": 7614
+        },
+        {
+          "district": "9",
+          "district_name": "SD-9",
+          "seat_designator": null,
+          "name": "Kiana Sears",
+          "party": "D",
+          "pres_margin": "+3.0",
+          "next_election": 2026,
+          "candidate_id": 7613
         },
         {
           "district": "9",
@@ -1016,7 +1026,82 @@
       "forecast": "Toss-up",
       "candidates": []
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Kris Mayes",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Samantha Severson",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Abraham Hamadeh",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Adrian Fontes",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Mark Finchem",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Superintendent of Public Instruction",
+        "candidates": [
+          {
+            "name": "Stephen Neal Jr.",
+            "party": "N",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Tom Horne",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Martin Quezada",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kimberly Yee",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "AZ House 1 Seat A",
@@ -1274,20 +1359,20 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "9",
-      "seat_label": "AZ House 9 Seat A",
+      "seat_label": "AZ House 9 Seat B",
       "pres_margin": "+3.0",
       "holder_party": "D",
-      "candidate": "Lorena Austin",
+      "candidate": "Seth Blattman",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "9",
-      "seat_label": "AZ House 9 Seat B",
+      "seat_label": "AZ House 9 Seat A",
       "pres_margin": "+3.0",
       "holder_party": "D",
-      "candidate": "Seth Blattman",
+      "candidate": "Lorena Austin",
       "is_open_seat": null
     },
     {

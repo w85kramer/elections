@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-16T18:08:50.032398Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Maine",
     "abbr": "ME",
@@ -1968,7 +1968,99 @@
   "elections_2026": {
     "governor": {
       "forecast": "Likely D",
-      "candidates": []
+      "candidates": [
+        {
+          "name": "Angus King III",
+          "party": "Democratic",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Hannah M. Pingree",
+          "party": "Democratic",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Nirav D. Shah",
+          "party": "Democratic",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Shenna Bellows",
+          "party": "Democratic",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Troy Dale Jackson",
+          "party": "Democratic",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Benjamin T. Midgley",
+          "party": "Republican",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "David J. Jones",
+          "party": "Republican",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Garrett Mason",
+          "party": "Republican",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "James D. Libby",
+          "party": "Republican",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Jonathan J. Bush",
+          "party": "Republican",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Owen Z. McCarthy",
+          "party": "Republican",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Robert B. Charles",
+          "party": "Republican",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Robert J. Wessels",
+          "party": "Republican",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        }
+      ]
     },
     "statewide": [],
     "legislative": [
@@ -1978,9 +2070,34 @@
         "district": "1",
         "candidates": [
           {
-            "name": "Lucien Daigle",
-            "party": "R",
-            "is_incumbent": true,
+            "name": "Dana Marie Appleby",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Austin Theriault",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 2",
+        "chamber": "House",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Roland Martin",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Roger Albert",
+            "party": "Republican",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -1991,9 +2108,27 @@
         "district": "3",
         "candidates": [
           {
+            "name": "David McCrea",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Mark Babin",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jack W. McCarthy",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Susan Bernard",
+            "party": "Republican",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -2017,8 +2152,33 @@
         "district": "5",
         "candidates": [
           {
+            "name": "Bruce Archer",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Douglas Carlisle",
             "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 6",
+        "chamber": "House",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Melanie Tompkins",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Donald Ardell",
+            "party": "Republican",
             "is_incumbent": false,
             "election_type": "Primary_R"
           }
@@ -2030,10 +2190,156 @@
         "district": "7",
         "candidates": [
           {
+            "name": "Matthew J. Rush",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Jantzen Craine",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 8",
+        "chamber": "House",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Tracy Quint",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 9",
+        "chamber": "House",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Nicole N. Richards",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Arthur K. Mingo",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 10",
+        "chamber": "House",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Genevieve M. Lemire",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Daniel J. Daley",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Will Tuell",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 11",
+        "chamber": "House",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Keith A. Newman",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tiffany Strout",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 12",
+        "chamber": "House",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Thomas Arthur Hart Jr.",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 13",
+        "chamber": "House",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Michael Hobart Cunningham II",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Russ White",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 14",
+        "chamber": "House",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Gary Friedmann",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jean M. Donovan",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 15",
+        "chamber": "House",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Holly Eaton",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
           }
         ]
       },
@@ -2047,6 +2353,18 @@
             "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
+          },
+          {
+            "name": "Nina Milliken",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Eric M. White",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2055,6 +2373,12 @@
         "chamber": "House",
         "district": "17",
         "candidates": [
+          {
+            "name": "Ronald B. Russell",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Steve Bishop",
             "party": "R",
@@ -2069,9 +2393,179 @@
         "district": "18",
         "candidates": [
           {
+            "name": "Jonathan C. Goble",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Mathew McIntyre",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 19",
+        "chamber": "House",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "David Ulrich",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Richard H. Campbell",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 20",
+        "chamber": "House",
+        "district": "20",
+        "candidates": [
+          {
+            "name": "Dani O'Halloran",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Patrick Jude",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 21",
+        "chamber": "House",
+        "district": "21",
+        "candidates": [
+          {
+            "name": "Ambureen Rana",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Andrew F. Laverdiere",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Frank Joseph Casella",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 22",
+        "chamber": "House",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "Laura Supica",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Colleen O'Neal",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 23",
+        "chamber": "House",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "Joschka A.B. Winterling",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Katie M. Brydon",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Victoria Kornfield",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brian A. Ames",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 24",
+        "chamber": "House",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Sean Faircloth",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 25",
+        "chamber": "House",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "Laurie Osher",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Anthony M. Weaver",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 26",
+        "chamber": "House",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "James F. Dill",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Edward Paradis",
+            "party": "Republican",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -2082,8 +2576,58 @@
         "district": "27",
         "candidates": [
           {
+            "name": "Devan C. Arnold",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "David Giles",
             "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 28",
+        "chamber": "House",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Gordon P. Street",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Irene Gifford",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 29",
+        "chamber": "House",
+        "district": "29",
+        "candidates": [
+          {
+            "name": "Nancy Marie McDowell",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "James M. Michaud",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Nancy J. Theriault",
+            "party": "Republican",
             "is_incumbent": false,
             "election_type": "Primary_R"
           }
@@ -2094,6 +2638,12 @@
         "chamber": "House",
         "district": "30",
         "candidates": [
+          {
+            "name": "John J. Contreni Jr.",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Jim White",
             "party": "R",
@@ -2107,6 +2657,12 @@
         "chamber": "House",
         "district": "31",
         "candidates": [
+          {
+            "name": "Eric J. Boothroyd",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Andrew Torbett",
             "party": "R",
@@ -2134,6 +2690,12 @@
         "district": "33",
         "candidates": [
           {
+            "name": "Michael A. Brayson",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Ken Fredette",
             "party": "R",
             "is_incumbent": true,
@@ -2146,6 +2708,12 @@
         "chamber": "House",
         "district": "34",
         "candidates": [
+          {
+            "name": "James P. McClymer",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Stacey Guerin",
             "party": "R",
@@ -2160,9 +2728,78 @@
         "district": "35",
         "candidates": [
           {
+            "name": "Debora S. Farnham",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Jim Thorne",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 36",
+        "chamber": "House",
+        "district": "36",
+        "candidates": [
+          {
+            "name": "Clifton Guy Foster III",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kim Haggan",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 37",
+        "chamber": "House",
+        "district": "37",
+        "candidates": [
+          {
+            "name": "Alan Lee Orcutt",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Reagan Paul",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 38",
+        "chamber": "House",
+        "district": "38",
+        "candidates": [
+          {
+            "name": "Jason S. Cherry",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kayla M.T. Miller",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ben Hymes",
+            "party": "Republican",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -2173,8 +2810,33 @@
         "district": "39",
         "candidates": [
           {
+            "name": "Madison Crissey Cook",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Michael Nicholson",
             "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 40",
+        "chamber": "House",
+        "district": "40",
+        "candidates": [
+          {
+            "name": "D. Michael Ray",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joseph McLaughlin",
+            "party": "Republican",
             "is_incumbent": false,
             "election_type": "Primary_R"
           }
@@ -2196,6 +2858,31 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Cory Christopher Raymond",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 42",
+        "chamber": "House",
+        "district": "42",
+        "candidates": [
+          {
+            "name": "Valli Geiger",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Melissa Joy Byer",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2209,6 +2896,107 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Rhiannon Corey Hampson",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Christopher Paul Austin",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Michael Sweeny Flanagan",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 44",
+        "chamber": "House",
+        "district": "44",
+        "candidates": [
+          {
+            "name": "Brady A. Clark",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Ray A. Thombs Jr.",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 45",
+        "chamber": "House",
+        "district": "45",
+        "candidates": [
+          {
+            "name": "Rebecca M. Stephens",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 46",
+        "chamber": "House",
+        "district": "46",
+        "candidates": [
+          {
+            "name": "Jennifer F. Mayher",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 47",
+        "chamber": "House",
+        "district": "47",
+        "candidates": [
+          {
+            "name": "Wayne Farrin",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Chester B. Grover III",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 48",
+        "chamber": "House",
+        "district": "48",
+        "candidates": [
+          {
+            "name": "Charlotte Nutt",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Erik D. Hobson",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2218,8 +3006,184 @@
         "district": "49",
         "candidates": [
           {
+            "name": "Trent E. Vellella",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Nicolas Hamlin",
             "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Suzanne Andresen",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 50",
+        "chamber": "House",
+        "district": "50",
+        "candidates": [
+          {
+            "name": "David Sinclair",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jedediah James Rice II",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 51",
+        "chamber": "House",
+        "district": "51",
+        "candidates": [
+          {
+            "name": "Rafael Macias",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Annalyse O. Sarvinas",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Louis Larios",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 52",
+        "chamber": "House",
+        "district": "52",
+        "candidates": [
+          {
+            "name": "Sally Cluchey",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Guilmette",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 53",
+        "chamber": "House",
+        "district": "53",
+        "candidates": [
+          {
+            "name": "Richard Marc Goldman",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael Lemelin",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 54",
+        "chamber": "House",
+        "district": "54",
+        "candidates": [
+          {
+            "name": "Karen Montell",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michelle M. Tucker",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 55",
+        "chamber": "House",
+        "district": "55",
+        "candidates": [
+          {
+            "name": "Maureen AuCoin",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Steven J. Butterfield",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Charles L. Hippler IV",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 56",
+        "chamber": "House",
+        "district": "56",
+        "candidates": [
+          {
+            "name": "Robin L. Upton-Sukeforth",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Randall Greenwood",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 57",
+        "chamber": "House",
+        "district": "57",
+        "candidates": [
+          {
+            "name": "Tavis Hasenfus",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David R. Potvin",
+            "party": "Republican",
             "is_incumbent": false,
             "election_type": "Primary_R"
           }
@@ -2235,6 +3199,68 @@
             "party": "OTH",
             "is_incumbent": true,
             "election_type": "General"
+          },
+          {
+            "name": "Dexter E. Bridges Jr.",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jeffrey S. Harris",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Lawrence E. Bessey",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 59",
+        "chamber": "House",
+        "district": "59",
+        "candidates": [
+          {
+            "name": "Katrina Couch Ray-Saulis",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Thomas E. Keefe",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Reny",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 60",
+        "chamber": "House",
+        "district": "60",
+        "candidates": [
+          {
+            "name": "William R. Bridgeo",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Wyatt Albert Beaulieu",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2243,6 +3269,12 @@
         "chamber": "House",
         "district": "61",
         "candidates": [
+          {
+            "name": "Robin G. Crawley",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Alicia Collins",
             "party": "R",
@@ -2257,6 +3289,12 @@
         "district": "62",
         "candidates": [
           {
+            "name": "Pamela Swift",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Katrina Smith",
             "party": "R",
             "is_incumbent": true,
@@ -2269,6 +3307,12 @@
         "chamber": "House",
         "district": "63",
         "candidates": [
+          {
+            "name": "Taylor Marie West",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Paul Flynn",
             "party": "R",
@@ -2283,8 +3327,46 @@
         "district": "64",
         "candidates": [
           {
+            "name": "Flavia DeBrito",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Shawn Packard",
             "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 65",
+        "chamber": "House",
+        "district": "65",
+        "candidates": [
+          {
+            "name": "Cassie Julia",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Scott Strom",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 66",
+        "chamber": "House",
+        "district": "66",
+        "candidates": [
+          {
+            "name": "Michael D. Perkins",
+            "party": "Republican",
             "is_incumbent": false,
             "election_type": "Primary_R"
           }
@@ -2310,13 +3392,133 @@
         ]
       },
       {
+        "seat_label": "ME House 68",
+        "chamber": "House",
+        "district": "68",
+        "candidates": [
+          {
+            "name": "Amanda Collamore",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 69",
+        "chamber": "House",
+        "district": "69",
+        "candidates": [
+          {
+            "name": "Jessica Blanchard",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dean Cray",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 70",
+        "chamber": "House",
+        "district": "70",
+        "candidates": [
+          {
+            "name": "Joseph R. Almand",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jennifer Poirier",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 71",
+        "chamber": "House",
+        "district": "71",
+        "candidates": [
+          {
+            "name": "Allison Perkins",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John E. Ducharme III",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "ME House 72",
         "chamber": "House",
         "district": "72",
         "candidates": [
           {
+            "name": "Cynthia Soma-Hernandez",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Douglas Thomas",
             "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 73",
+        "chamber": "House",
+        "district": "73",
+        "candidates": [
+          {
+            "name": "Daniel J. Simonds",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael Soboleski",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Ryan David Morgan",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 74",
+        "chamber": "House",
+        "district": "74",
+        "candidates": [
+          {
+            "name": "Marc Edwards",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Russell Black",
+            "party": "Republican",
             "is_incumbent": false,
             "election_type": "Primary_R"
           }
@@ -2328,8 +3530,77 @@
         "district": "75",
         "candidates": [
           {
+            "name": "H. Scott Landry",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Randall Gauvin",
             "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 76",
+        "chamber": "House",
+        "district": "76",
+        "candidates": [
+          {
+            "name": "Trevor Alex Doiron",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sheila Lyman",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 77",
+        "chamber": "House",
+        "district": "77",
+        "candidates": [
+          {
+            "name": "Arlie E. Hetrick Jr.",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nicole Cummings Bambrick",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tammy Schmersal-Burgess",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 78",
+        "chamber": "House",
+        "district": "78",
+        "candidates": [
+          {
+            "name": "Woodleigh H. Hughes",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rachel Henderson",
+            "party": "Republican",
             "is_incumbent": false,
             "election_type": "Primary_R"
           }
@@ -2341,9 +3612,53 @@
         "district": "79",
         "candidates": [
           {
+            "name": "Brianna Fern Lueck",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Mike Lance",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 80",
+        "chamber": "House",
+        "district": "80",
+        "candidates": [
+          {
+            "name": "Ernest M. Fitts IV",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Gino P. Valeriani",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 81",
+        "chamber": "House",
+        "district": "81",
+        "candidates": [
+          {
+            "name": "Christopher A. Easton",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Peter Wood",
+            "party": "Republican",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -2368,13 +3683,82 @@
         ]
       },
       {
+        "seat_label": "ME House 83",
+        "chamber": "House",
+        "district": "83",
+        "candidates": [
+          {
+            "name": "Timothy J. Becker",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Marygrace Cimino",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 84",
+        "chamber": "House",
+        "district": "84",
+        "candidates": [
+          {
+            "name": "Cassandra Dove",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mark Walker",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "ME House 85",
         "chamber": "House",
         "district": "85",
         "candidates": [
           {
+            "name": "Paul Harris Welch",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Adrienne Paul",
             "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Timothy P. Nickels",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 86",
+        "chamber": "House",
+        "district": "86",
+        "candidates": [
+          {
+            "name": "Abigail N. Geer",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rolf Olsen",
+            "party": "Republican",
             "is_incumbent": false,
             "election_type": "Primary_R"
           }
@@ -2405,6 +3789,12 @@
             "election_type": "Primary_D"
           },
           {
+            "name": "Dana N. Staples",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Quentin Chapman",
             "party": "R",
             "is_incumbent": true,
@@ -2422,6 +3812,82 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "James D. Berube",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 90",
+        "chamber": "House",
+        "district": "90",
+        "candidates": [
+          {
+            "name": "Pamela B. Hart",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "James Sorcek",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 91",
+        "chamber": "House",
+        "district": "91",
+        "candidates": [
+          {
+            "name": "Emily J. Dingman",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jeff Timberlake",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 92",
+        "chamber": "House",
+        "district": "92",
+        "candidates": [
+          {
+            "name": "Stephen J. Wood",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 93",
+        "chamber": "House",
+        "district": "93",
+        "candidates": [
+          {
+            "name": "Julia McCabe",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Chad E. Syphers",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2431,16 +3897,244 @@
         "district": "94",
         "candidates": [
           {
-            "name": "Kiernan Majerus-Collins",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
             "name": "Scott Harriman",
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Janet Beaudoin",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 95",
+        "chamber": "House",
+        "district": "95",
+        "candidates": [
+          {
+            "name": "Kiernan Majerus-Collins",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Matthew Samuel Kershaw",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bret M. Martel",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 96",
+        "chamber": "House",
+        "district": "96",
+        "candidates": [
+          {
+            "name": "Luke Jensen",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kerryl Clement",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 97",
+        "chamber": "House",
+        "district": "97",
+        "candidates": [
+          {
+            "name": "Thomas R. Watson",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Dale John Crafts",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 98",
+        "chamber": "House",
+        "district": "98",
+        "candidates": [
+          {
+            "name": "Kilton Webb",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Guy Lebida",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "William J. St. Michel",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 99",
+        "chamber": "House",
+        "district": "99",
+        "candidates": [
+          {
+            "name": "Cheryl Golek",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Braeden D. Webber",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 100",
+        "chamber": "House",
+        "district": "100",
+        "candidates": [
+          {
+            "name": "Dan Ankeles",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Brett Y. Barrett",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 101",
+        "chamber": "House",
+        "district": "101",
+        "candidates": [
+          {
+            "name": "Poppy Arford",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ravi Jackson",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 102",
+        "chamber": "House",
+        "district": "102",
+        "candidates": [
+          {
+            "name": "Maura H. Pillsbury",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Henry Lloyd Lawrence III",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 103",
+        "chamber": "House",
+        "district": "103",
+        "candidates": [
+          {
+            "name": "Karin Orenstein",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 104",
+        "chamber": "House",
+        "district": "104",
+        "candidates": [
+          {
+            "name": "R. Melissa Winslow",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 105",
+        "chamber": "House",
+        "district": "105",
+        "candidates": [
+          {
+            "name": "Anne Palmer Graham",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Susan E. Fuller",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 106",
+        "chamber": "House",
+        "district": "106",
+        "candidates": [
+          {
+            "name": "Bradley M. Youngs",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Barbara Bagshaw",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2450,10 +4144,394 @@
         "district": "107",
         "candidates": [
           {
+            "name": "Joseph A. Campbell",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Mark Cooper",
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 108",
+        "chamber": "House",
+        "district": "108",
+        "candidates": [
+          {
+            "name": "Parnell Terry",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kelly L. Dearborn",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 109",
+        "chamber": "House",
+        "district": "109",
+        "candidates": [
+          {
+            "name": "Seven R. Siegel",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Diana Kushnar",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 110",
+        "chamber": "House",
+        "district": "110",
+        "candidates": [
+          {
+            "name": "Christina Mitchell",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jason Lewis Copp",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 111",
+        "chamber": "House",
+        "district": "111",
+        "candidates": [
+          {
+            "name": "Amy Kuhn",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 112",
+        "chamber": "House",
+        "district": "112",
+        "candidates": [
+          {
+            "name": "Sean M. Mahoney",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lauren Chelsea Jones",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 113",
+        "chamber": "House",
+        "district": "113",
+        "candidates": [
+          {
+            "name": "Grayson Lookner",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lisa M. Nelthropp",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 114",
+        "chamber": "House",
+        "district": "114",
+        "candidates": [
+          {
+            "name": "April Fournier",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 115",
+        "chamber": "House",
+        "district": "115",
+        "candidates": [
+          {
+            "name": "Andrew J. Zarro",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 116",
+        "chamber": "House",
+        "district": "116",
+        "candidates": [
+          {
+            "name": "Sam Zager",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 117",
+        "chamber": "House",
+        "district": "117",
+        "candidates": [
+          {
+            "name": "Matt Moonen",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 118",
+        "chamber": "House",
+        "district": "118",
+        "candidates": [
+          {
+            "name": "Yusuf Yusuf",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 119",
+        "chamber": "House",
+        "district": "119",
+        "candidates": [
+          {
+            "name": "Michael P. Dixon",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jacob Wakem",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 120",
+        "chamber": "House",
+        "district": "120",
+        "candidates": [
+          {
+            "name": "Jason J. Shedlock",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Michael Dougherty",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 121",
+        "chamber": "House",
+        "district": "121",
+        "candidates": [
+          {
+            "name": "Robert Cameron",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Meagan J. Smith",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 122",
+        "chamber": "House",
+        "district": "122",
+        "candidates": [
+          {
+            "name": "Matt Beck",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 123",
+        "chamber": "House",
+        "district": "123",
+        "candidates": [
+          {
+            "name": "Michelle Boyer",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Annie Christy",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 124",
+        "chamber": "House",
+        "district": "124",
+        "candidates": [
+          {
+            "name": "Eric James Nathanson",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Scott W. Doherty",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 125",
+        "chamber": "House",
+        "district": "125",
+        "candidates": [
+          {
+            "name": "Kelly Murphy",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 126",
+        "chamber": "House",
+        "district": "126",
+        "candidates": [
+          {
+            "name": "Andrew Gattine",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ethan E. Mongue",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 127",
+        "chamber": "House",
+        "district": "127",
+        "candidates": [
+          {
+            "name": "Morgan Rielly",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 128",
+        "chamber": "House",
+        "district": "128",
+        "candidates": [
+          {
+            "name": "Suzanne M. Salisbury",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 129",
+        "chamber": "House",
+        "district": "129",
+        "candidates": [
+          {
+            "name": "Marshall Archer",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 130",
+        "chamber": "House",
+        "district": "130",
+        "candidates": [
+          {
+            "name": "Lynn Copeland",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 131",
+        "chamber": "House",
+        "district": "131",
+        "candidates": [
+          {
+            "name": "Robert James Kelly",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
           }
         ]
       },
@@ -2493,6 +4571,50 @@
             "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
+          },
+          {
+            "name": "Traci Gere",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 135",
+        "chamber": "House",
+        "district": "135",
+        "candidates": [
+          {
+            "name": "Lisa Joy Pratt",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rachel Phipps",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 136",
+        "chamber": "House",
+        "district": "136",
+        "candidates": [
+          {
+            "name": "Michelle Conners",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Eder",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2506,6 +4628,31 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Nathan Carlow",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 138",
+        "chamber": "House",
+        "district": "138",
+        "candidates": [
+          {
+            "name": "Oliver D. McAvoy",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jonathan Kinney",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2514,6 +4661,12 @@
         "chamber": "House",
         "district": "139",
         "candidates": [
+          {
+            "name": "Dean P. LePage",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Jamie Newton",
             "party": "R",
@@ -2527,6 +4680,12 @@
         "chamber": "House",
         "district": "140",
         "candidates": [
+          {
+            "name": "Kirstan Watson",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Wayne Parry",
             "party": "R",
@@ -2547,8 +4706,39 @@
             "election_type": "General"
           },
           {
+            "name": "Rebecca L. Flood Andrews",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Marc Boisse",
             "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Clinton Wesley Phinney Jr.",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 142",
+        "chamber": "House",
+        "district": "142",
+        "candidates": [
+          {
+            "name": "Ayn M. Hanselmann",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gordon Frohloff",
+            "party": "Republican",
             "is_incumbent": false,
             "election_type": "Primary_R"
           }
@@ -2560,8 +4750,116 @@
         "district": "143",
         "candidates": [
           {
+            "name": "John R. Henkelman",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Eric Small",
             "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 144",
+        "chamber": "House",
+        "district": "144",
+        "candidates": [
+          {
+            "name": "Jeff Adams",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 145",
+        "chamber": "House",
+        "district": "145",
+        "candidates": [
+          {
+            "name": "Kristin T. Davis",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Caleb J. Chase",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 146",
+        "chamber": "House",
+        "district": "146",
+        "candidates": [
+          {
+            "name": "Walter Runte Jr.",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bradley S. Moulton",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 147",
+        "chamber": "House",
+        "district": "147",
+        "candidates": [
+          {
+            "name": "Holly Sargent",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 148",
+        "chamber": "House",
+        "district": "148",
+        "candidates": [
+          {
+            "name": "Margaret A. Wheeler",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Thomas Lavigne",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME House 149",
+        "chamber": "House",
+        "district": "149",
+        "candidates": [
+          {
+            "name": "Mallory A. Cook",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Timothy R. Towne",
+            "party": "Republican",
             "is_incumbent": false,
             "election_type": "Primary_R"
           }
@@ -2587,6 +4885,25 @@
         ]
       },
       {
+        "seat_label": "ME House 151",
+        "chamber": "House",
+        "district": "151",
+        "candidates": [
+          {
+            "name": "Kristi Mathieson",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Suzanne Johnson",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "ME Senate 1",
         "chamber": "Senate",
         "district": "1",
@@ -2596,6 +4913,12 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Lucien Daigle",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2604,6 +4927,12 @@
         "chamber": "Senate",
         "district": "2",
         "candidates": [
+          {
+            "name": "Harold Steve Hull",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Trey Stewart",
             "party": "R",
@@ -2617,6 +4946,12 @@
         "chamber": "Senate",
         "district": "3",
         "candidates": [
+          {
+            "name": "Stanley Short",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Danny Costain",
             "party": "R",
@@ -2636,6 +4971,12 @@
         "chamber": "Senate",
         "district": "4",
         "candidates": [
+          {
+            "name": "Lisa G. Kalp",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Chad Perkins",
             "party": "R",
@@ -2697,6 +5038,12 @@
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
+          },
+          {
+            "name": "Billy Bob Faulkingham",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2710,6 +5057,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Cheryl A. Hewes",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2750,6 +5103,12 @@
         "chamber": "Senate",
         "district": "10",
         "candidates": [
+          {
+            "name": "Kevin O'Connell",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "David Haggan",
             "party": "R",
@@ -2825,6 +5184,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Steven A. McGee",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2833,6 +5198,12 @@
         "chamber": "Senate",
         "district": "15",
         "candidates": [
+          {
+            "name": "Amanda Ann Heath",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Kati McCormick",
             "party": "R",
@@ -2847,6 +5218,12 @@
         "district": "16",
         "candidates": [
           {
+            "name": "Patric Aaron Moore",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Scott Cyrway",
             "party": "R",
             "is_incumbent": true,
@@ -2860,7 +5237,13 @@
         "district": "17",
         "candidates": [
           {
-            "name": "Joshua Morris",
+            "name": "Jo-Jean Keller",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Josh Morris",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2961,7 +5344,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Kimberly Pomerleau",
+            "name": "Kim Pomerleau",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3052,6 +5435,63 @@
         ]
       },
       {
+        "seat_label": "ME Senate 28",
+        "chamber": "Senate",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Rachel Talbot Ross",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME Senate 29",
+        "chamber": "Senate",
+        "district": "29",
+        "candidates": [
+          {
+            "name": "Anne Carney",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Vincent A. Maietta",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "ME Senate 30",
+        "chamber": "Senate",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Eleanor Sato",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sophia Bailey Warren",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Harry J. White",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "seat_label": "ME Senate 31",
         "chamber": "Senate",
         "district": "31",
@@ -3067,6 +5507,12 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Garrett Plummer",
+            "party": "Republican",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -3107,6 +5553,12 @@
         "district": "33",
         "candidates": [
           {
+            "name": "Mark H. Vigliotta",
+            "party": "Democratic",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Matt Harrington",
             "party": "R",
             "is_incumbent": true,
@@ -3126,7 +5578,7 @@
             "election_type": "General"
           },
           {
-            "name": "Daniel Sayre",
+            "name": "Dan Sayre",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3170,11 +5622,521 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "43",
-      "seat_label": "ME House 43",
-      "pres_margin": "+12.8",
+      "district": "1",
+      "seat_label": "ME House 1",
+      "pres_margin": "-21.1",
+      "holder_party": "R",
+      "candidate": "Dana Marie Appleby",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "2",
+      "seat_label": "ME House 2",
+      "pres_margin": "-9.7",
+      "holder_party": "R",
+      "candidate": "Roland Martin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "3",
+      "seat_label": "ME House 3",
+      "pres_margin": "-24.6",
+      "holder_party": "R",
+      "candidate": "David McCrea",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "5",
+      "seat_label": "ME House 5",
+      "pres_margin": "-9.3",
+      "holder_party": "R",
+      "candidate": "Bruce Archer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "6",
+      "seat_label": "ME House 6",
+      "pres_margin": "-43.0",
+      "holder_party": "R",
+      "candidate": "Melanie Tompkins",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "7",
+      "seat_label": "ME House 7",
+      "pres_margin": "-35.6",
+      "holder_party": "R",
+      "candidate": "Matthew J. Rush",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "9",
+      "seat_label": "ME House 9",
+      "pres_margin": "-9.8",
+      "holder_party": "R",
+      "candidate": "Nicole N. Richards",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "10",
+      "seat_label": "ME House 10",
+      "pres_margin": "-26.2",
+      "holder_party": "R",
+      "candidate": "Genevieve M. Lemire",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "11",
+      "seat_label": "ME House 11",
+      "pres_margin": "-27.7",
+      "holder_party": "R",
+      "candidate": "Keith A. Newman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "13",
+      "seat_label": "ME House 13",
+      "pres_margin": "-2.5",
+      "holder_party": "R",
+      "candidate": "Michael Hobart Cunningham II",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "14",
+      "seat_label": "ME House 14",
+      "pres_margin": "+40.9",
       "holder_party": "D",
-      "candidate": "Peter Jenks",
+      "candidate": "Gary Friedmann",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "15",
+      "seat_label": "ME House 15",
+      "pres_margin": "+21.3",
+      "holder_party": "D",
+      "candidate": "Holly Eaton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "16",
+      "seat_label": "ME House 16",
+      "pres_margin": "+25.0",
+      "holder_party": "D",
+      "candidate": "Nina Milliken",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "17",
+      "seat_label": "ME House 17",
+      "pres_margin": "+0.1",
+      "holder_party": "R",
+      "candidate": "Ronald B. Russell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "18",
+      "seat_label": "ME House 18",
+      "pres_margin": "-28.3",
+      "holder_party": "R",
+      "candidate": "Jonathan C. Goble",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "19",
+      "seat_label": "ME House 19",
+      "pres_margin": "-16.5",
+      "holder_party": "R",
+      "candidate": "David Ulrich",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "20",
+      "seat_label": "ME House 20",
+      "pres_margin": "-1.6",
+      "holder_party": "D",
+      "candidate": "Dani O'Halloran",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "21",
+      "seat_label": "ME House 21",
+      "pres_margin": "+26.4",
+      "holder_party": "D",
+      "candidate": "Ambureen Rana",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "22",
+      "seat_label": "ME House 22",
+      "pres_margin": "+13.9",
+      "holder_party": "D",
+      "candidate": "Laura Supica",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "24",
+      "seat_label": "ME House 24",
+      "pres_margin": "+25.4",
+      "holder_party": "D",
+      "candidate": "Sean Faircloth",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "25",
+      "seat_label": "ME House 25",
+      "pres_margin": "+39.5",
+      "holder_party": "D",
+      "candidate": "Laurie Osher",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "26",
+      "seat_label": "ME House 26",
+      "pres_margin": "+10.2",
+      "holder_party": "D",
+      "candidate": "James F. Dill",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "27",
+      "seat_label": "ME House 27",
+      "pres_margin": "-32.0",
+      "holder_party": "R",
+      "candidate": "Devan C. Arnold",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "28",
+      "seat_label": "ME House 28",
+      "pres_margin": "-38.9",
+      "holder_party": "R",
+      "candidate": "Gordon P. Street",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "29",
+      "seat_label": "ME House 29",
+      "pres_margin": "-27.4",
+      "holder_party": null,
+      "candidate": "Nancy Marie McDowell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "30",
+      "seat_label": "ME House 30",
+      "pres_margin": "-31.5",
+      "holder_party": "R",
+      "candidate": "John J. Contreni Jr.",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "31",
+      "seat_label": "ME House 31",
+      "pres_margin": "-27.7",
+      "holder_party": "R",
+      "candidate": "Eric J. Boothroyd",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "33",
+      "seat_label": "ME House 33",
+      "pres_margin": "-38.0",
+      "holder_party": "R",
+      "candidate": "Michael A. Brayson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "34",
+      "seat_label": "ME House 34",
+      "pres_margin": "-30.3",
+      "holder_party": "R",
+      "candidate": "James P. McClymer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "35",
+      "seat_label": "ME House 35",
+      "pres_margin": "-28.0",
+      "holder_party": "R",
+      "candidate": "Debora S. Farnham",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "36",
+      "seat_label": "ME House 36",
+      "pres_margin": "-3.0",
+      "holder_party": "R",
+      "candidate": "Clifton Guy Foster III",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "37",
+      "seat_label": "ME House 37",
+      "pres_margin": "-5.4",
+      "holder_party": "R",
+      "candidate": "Alan Lee Orcutt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "39",
+      "seat_label": "ME House 39",
+      "pres_margin": "+31.0",
+      "holder_party": "D",
+      "candidate": "Madison Crissey Cook",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "40",
+      "seat_label": "ME House 40",
+      "pres_margin": "+10.6",
+      "holder_party": "D",
+      "candidate": "D. Michael Ray",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "42",
+      "seat_label": "ME House 42",
+      "pres_margin": "+28.2",
+      "holder_party": "D",
+      "candidate": "Valli Geiger",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "46",
+      "seat_label": "ME House 46",
+      "pres_margin": "+27.2",
+      "holder_party": "D",
+      "candidate": "Jennifer F. Mayher",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "47",
+      "seat_label": "ME House 47",
+      "pres_margin": "-1.7",
+      "holder_party": "D",
+      "candidate": "Wayne Farrin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "48",
+      "seat_label": "ME House 48",
+      "pres_margin": "+20.3",
+      "holder_party": "D",
+      "candidate": "Charlotte Nutt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "49",
+      "seat_label": "ME House 49",
+      "pres_margin": "+10.5",
+      "holder_party": "D",
+      "candidate": "Trent E. Vellella",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "50",
+      "seat_label": "ME House 50",
+      "pres_margin": "+36.7",
+      "holder_party": "D",
+      "candidate": "David Sinclair",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "51",
+      "seat_label": "ME House 51",
+      "pres_margin": "+29.5",
+      "holder_party": "D",
+      "candidate": "Rafael Macias",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "52",
+      "seat_label": "ME House 52",
+      "pres_margin": "-3.0",
+      "holder_party": "D",
+      "candidate": "Sally Cluchey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "53",
+      "seat_label": "ME House 53",
+      "pres_margin": "-18.0",
+      "holder_party": "R",
+      "candidate": "Richard Marc Goldman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "54",
+      "seat_label": "ME House 54",
+      "pres_margin": "+11.6",
+      "holder_party": "D",
+      "candidate": "Karen Montell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "56",
+      "seat_label": "ME House 56",
+      "pres_margin": "-22.9",
+      "holder_party": "R",
+      "candidate": "Robin L. Upton-Sukeforth",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "57",
+      "seat_label": "ME House 57",
+      "pres_margin": "+3.7",
+      "holder_party": "D",
+      "candidate": "Tavis Hasenfus",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "60",
+      "seat_label": "ME House 60",
+      "pres_margin": "+7.4",
+      "holder_party": "D",
+      "candidate": "William R. Bridgeo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "61",
+      "seat_label": "ME House 61",
+      "pres_margin": "-18.0",
+      "holder_party": "R",
+      "candidate": "Robin G. Crawley",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "62",
+      "seat_label": "ME House 62",
+      "pres_margin": "-22.8",
+      "holder_party": "R",
+      "candidate": "Pamela Swift",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "63",
+      "seat_label": "ME House 63",
+      "pres_margin": "-14.2",
+      "holder_party": "R",
+      "candidate": "Taylor Marie West",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "64",
+      "seat_label": "ME House 64",
+      "pres_margin": "+30.2",
+      "holder_party": "D",
+      "candidate": "Flavia DeBrito",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "65",
+      "seat_label": "ME House 65",
+      "pres_margin": "+17.2",
+      "holder_party": "D",
+      "candidate": "Cassie Julia",
       "is_open_seat": null
     },
     {
@@ -3190,6 +6152,126 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "69",
+      "seat_label": "ME House 69",
+      "pres_margin": "-39.4",
+      "holder_party": "R",
+      "candidate": "Jessica Blanchard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "70",
+      "seat_label": "ME House 70",
+      "pres_margin": "-13.5",
+      "holder_party": "R",
+      "candidate": "Joseph R. Almand",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "71",
+      "seat_label": "ME House 71",
+      "pres_margin": "-25.9",
+      "holder_party": "R",
+      "candidate": "Allison Perkins",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "72",
+      "seat_label": "ME House 72",
+      "pres_margin": "-35.9",
+      "holder_party": "R",
+      "candidate": "Cynthia Soma-Hernandez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "73",
+      "seat_label": "ME House 73",
+      "pres_margin": "-13.9",
+      "holder_party": "R",
+      "candidate": "Daniel J. Simonds",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "74",
+      "seat_label": "ME House 74",
+      "pres_margin": "-17.7",
+      "holder_party": "R",
+      "candidate": "Marc Edwards",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "75",
+      "seat_label": "ME House 75",
+      "pres_margin": "+6.5",
+      "holder_party": "D",
+      "candidate": "H. Scott Landry",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "76",
+      "seat_label": "ME House 76",
+      "pres_margin": "-15.9",
+      "holder_party": "R",
+      "candidate": "Trevor Alex Doiron",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "77",
+      "seat_label": "ME House 77",
+      "pres_margin": "-28.1",
+      "holder_party": "R",
+      "candidate": "Arlie E. Hetrick Jr.",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "78",
+      "seat_label": "ME House 78",
+      "pres_margin": "-5.5",
+      "holder_party": "R",
+      "candidate": "Woodleigh H. Hughes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "79",
+      "seat_label": "ME House 79",
+      "pres_margin": "-18.6",
+      "holder_party": "R",
+      "candidate": "Brianna Fern Lueck",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "81",
+      "seat_label": "ME House 81",
+      "pres_margin": "-1.4",
+      "holder_party": "R",
+      "candidate": "Christopher A. Easton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "82",
       "seat_label": "ME House 82",
       "pres_margin": "-3.7",
@@ -3200,11 +6282,51 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "83",
+      "seat_label": "ME House 83",
+      "pres_margin": "-0.7",
+      "holder_party": "R",
+      "candidate": "Timothy J. Becker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "84",
+      "seat_label": "ME House 84",
+      "pres_margin": "-19.2",
+      "holder_party": "R",
+      "candidate": "Cassandra Dove",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "85",
+      "seat_label": "ME House 85",
+      "pres_margin": "-7.0",
+      "holder_party": "R",
+      "candidate": "Paul Harris Welch",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "86",
+      "seat_label": "ME House 86",
+      "pres_margin": "-1.4",
+      "holder_party": "R",
+      "candidate": "Abigail N. Geer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "88",
       "seat_label": "ME House 88",
       "pres_margin": "-1.2",
       "holder_party": "R",
-      "candidate": "Corey Bouchard",
+      "candidate": "Dana N. Staples",
       "is_open_seat": null
     },
     {
@@ -3215,6 +6337,396 @@
       "pres_margin": "+7.3",
       "holder_party": "D",
       "candidate": "Adam Lee",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "90",
+      "seat_label": "ME House 90",
+      "pres_margin": "+4.2",
+      "holder_party": "R",
+      "candidate": "Pamela B. Hart",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "91",
+      "seat_label": "ME House 91",
+      "pres_margin": "-19.7",
+      "holder_party": "R",
+      "candidate": "Emily J. Dingman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "93",
+      "seat_label": "ME House 93",
+      "pres_margin": "+21.9",
+      "holder_party": "D",
+      "candidate": "Julia McCabe",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "94",
+      "seat_label": "ME House 94",
+      "pres_margin": "+4.9",
+      "holder_party": "D",
+      "candidate": "Scott Harriman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "96",
+      "seat_label": "ME House 96",
+      "pres_margin": "-1.6",
+      "holder_party": "D",
+      "candidate": "Luke Jensen",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "97",
+      "seat_label": "ME House 97",
+      "pres_margin": "-12.2",
+      "holder_party": "R",
+      "candidate": "Thomas R. Watson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "98",
+      "seat_label": "ME House 98",
+      "pres_margin": "+2.2",
+      "holder_party": "D",
+      "candidate": "Kilton Webb",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "99",
+      "seat_label": "ME House 99",
+      "pres_margin": "+31.3",
+      "holder_party": "D",
+      "candidate": "Cheryl Golek",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "100",
+      "seat_label": "ME House 100",
+      "pres_margin": "+45.3",
+      "holder_party": "D",
+      "candidate": "Dan Ankeles",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "101",
+      "seat_label": "ME House 101",
+      "pres_margin": "+45.4",
+      "holder_party": "D",
+      "candidate": "Poppy Arford",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "102",
+      "seat_label": "ME House 102",
+      "pres_margin": "+42.2",
+      "holder_party": "D",
+      "candidate": "Maura H. Pillsbury",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "103",
+      "seat_label": "ME House 103",
+      "pres_margin": "+54.6",
+      "holder_party": "D",
+      "candidate": "Karin Orenstein",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "105",
+      "seat_label": "ME House 105",
+      "pres_margin": "+15.2",
+      "holder_party": "D",
+      "candidate": "Anne Palmer Graham",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "106",
+      "seat_label": "ME House 106",
+      "pres_margin": "+1.8",
+      "holder_party": "R",
+      "candidate": "Bradley M. Youngs",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "107",
+      "seat_label": "ME House 107",
+      "pres_margin": "+6.1",
+      "holder_party": "R",
+      "candidate": "Joseph A. Campbell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "108",
+      "seat_label": "ME House 108",
+      "pres_margin": "+18.8",
+      "holder_party": "D",
+      "candidate": "Parnell Terry",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "109",
+      "seat_label": "ME House 109",
+      "pres_margin": "+21.4",
+      "holder_party": "D",
+      "candidate": "Seven R. Siegel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "110",
+      "seat_label": "ME House 110",
+      "pres_margin": "+43.5",
+      "holder_party": "D",
+      "candidate": "Christina Mitchell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "111",
+      "seat_label": "ME House 111",
+      "pres_margin": "+41.7",
+      "holder_party": "D",
+      "candidate": "Amy Kuhn",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "112",
+      "seat_label": "ME House 112",
+      "pres_margin": "+48.3",
+      "holder_party": "D",
+      "candidate": "Sean M. Mahoney",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "113",
+      "seat_label": "ME House 113",
+      "pres_margin": "+61.3",
+      "holder_party": "D",
+      "candidate": "Grayson Lookner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "114",
+      "seat_label": "ME House 114",
+      "pres_margin": "+61.5",
+      "holder_party": "D",
+      "candidate": "April Fournier",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "115",
+      "seat_label": "ME House 115",
+      "pres_margin": "+64.5",
+      "holder_party": "D",
+      "candidate": "Andrew J. Zarro",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "116",
+      "seat_label": "ME House 116",
+      "pres_margin": "+64.6",
+      "holder_party": "D",
+      "candidate": "Sam Zager",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "117",
+      "seat_label": "ME House 117",
+      "pres_margin": "+71.8",
+      "holder_party": "D",
+      "candidate": "Matt Moonen",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "118",
+      "seat_label": "ME House 118",
+      "pres_margin": "+68.5",
+      "holder_party": "D",
+      "candidate": "Yusuf Yusuf",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "119",
+      "seat_label": "ME House 119",
+      "pres_margin": "+71.3",
+      "holder_party": "D",
+      "candidate": "Michael P. Dixon",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "120",
+      "seat_label": "ME House 120",
+      "pres_margin": "+44.7",
+      "holder_party": "D",
+      "candidate": "Jason J. Shedlock",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "121",
+      "seat_label": "ME House 121",
+      "pres_margin": "+49.4",
+      "holder_party": "D",
+      "candidate": "Robert Cameron",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "122",
+      "seat_label": "ME House 122",
+      "pres_margin": "+58.7",
+      "holder_party": "D",
+      "candidate": "Matt Beck",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "123",
+      "seat_label": "ME House 123",
+      "pres_margin": "+57.9",
+      "holder_party": "D",
+      "candidate": "Michelle Boyer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "124",
+      "seat_label": "ME House 124",
+      "pres_margin": "+31.6",
+      "holder_party": "D",
+      "candidate": "Eric James Nathanson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "125",
+      "seat_label": "ME House 125",
+      "pres_margin": "+31.6",
+      "holder_party": "D",
+      "candidate": "Kelly Murphy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "126",
+      "seat_label": "ME House 126",
+      "pres_margin": "+29.8",
+      "holder_party": "D",
+      "candidate": "Andrew Gattine",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "127",
+      "seat_label": "ME House 127",
+      "pres_margin": "+32.4",
+      "holder_party": "D",
+      "candidate": "Morgan Rielly",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "128",
+      "seat_label": "ME House 128",
+      "pres_margin": "+32.4",
+      "holder_party": "D",
+      "candidate": "Suzanne M. Salisbury",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "129",
+      "seat_label": "ME House 129",
+      "pres_margin": "+26.3",
+      "holder_party": "D",
+      "candidate": "Marshall Archer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "130",
+      "seat_label": "ME House 130",
+      "pres_margin": "+26.3",
+      "holder_party": "D",
+      "candidate": "Lynn Copeland",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "131",
+      "seat_label": "ME House 131",
+      "pres_margin": "+19.1",
+      "holder_party": "D",
+      "candidate": "Robert James Kelly",
       "is_open_seat": null
     },
     {
@@ -3240,11 +6752,141 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
+      "district": "134",
+      "seat_label": "ME House 134",
+      "pres_margin": "+29.9",
+      "holder_party": "D",
+      "candidate": "Traci Gere",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "136",
+      "seat_label": "ME House 136",
+      "pres_margin": "-4.7",
+      "holder_party": "R",
+      "candidate": "Michelle Conners",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
       "district": "137",
       "seat_label": "ME House 137",
       "pres_margin": "-5.0",
       "holder_party": "R",
       "candidate": "Charles Tilburg",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "138",
+      "seat_label": "ME House 138",
+      "pres_margin": "-18.3",
+      "holder_party": "R",
+      "candidate": "Oliver D. McAvoy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "139",
+      "seat_label": "ME House 139",
+      "pres_margin": "-19.3",
+      "holder_party": "R",
+      "candidate": "Dean P. LePage",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "140",
+      "seat_label": "ME House 140",
+      "pres_margin": "-8.4",
+      "holder_party": "R",
+      "candidate": "Kirstan Watson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "141",
+      "seat_label": "ME House 141",
+      "pres_margin": "-6.8",
+      "holder_party": "R",
+      "candidate": "Rebecca L. Flood Andrews",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "142",
+      "seat_label": "ME House 142",
+      "pres_margin": "+3.9",
+      "holder_party": "D",
+      "candidate": "Ayn M. Hanselmann",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "143",
+      "seat_label": "ME House 143",
+      "pres_margin": "-12.5",
+      "holder_party": "R",
+      "candidate": "John R. Henkelman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "145",
+      "seat_label": "ME House 145",
+      "pres_margin": "+10.5",
+      "holder_party": "R",
+      "candidate": "Kristin T. Davis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "146",
+      "seat_label": "ME House 146",
+      "pres_margin": "+29.7",
+      "holder_party": "D",
+      "candidate": "Walter Runte Jr.",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "147",
+      "seat_label": "ME House 147",
+      "pres_margin": "+28.5",
+      "holder_party": "D",
+      "candidate": "Holly Sargent",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "148",
+      "seat_label": "ME House 148",
+      "pres_margin": "-8.4",
+      "holder_party": "R",
+      "candidate": "Margaret A. Wheeler",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "149",
+      "seat_label": "ME House 149",
+      "pres_margin": "+12.3",
+      "holder_party": "D",
+      "candidate": "Mallory A. Cook",
       "is_open_seat": null
     },
     {
@@ -3259,12 +6901,52 @@
     },
     {
       "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "151",
+      "seat_label": "ME House 151",
+      "pres_margin": "+42.5",
+      "holder_party": "D",
+      "candidate": "Kristi Mathieson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
       "chamber": "Senate",
       "district": "1",
       "seat_label": "ME Senate 1",
       "pres_margin": "-19.9",
       "holder_party": "R",
       "candidate": "Vaughn McLaughlin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "2",
+      "seat_label": "ME Senate 2",
+      "pres_margin": "-33.5",
+      "holder_party": "R",
+      "candidate": "Harold Steve Hull",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "3",
+      "seat_label": "ME Senate 3",
+      "pres_margin": "-28.0",
+      "holder_party": "R",
+      "candidate": "Stanley Short",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "4",
+      "seat_label": "ME Senate 4",
+      "pres_margin": "-34.1",
+      "holder_party": "R",
+      "candidate": "Lisa G. Kalp",
       "is_open_seat": null
     },
     {
@@ -3310,6 +6992,16 @@
     {
       "election_type": "Primary_D",
       "chamber": "Senate",
+      "district": "10",
+      "seat_label": "ME Senate 10",
+      "pres_margin": "-9.9",
+      "holder_party": "R",
+      "candidate": "Kevin O'Connell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
       "district": "11",
       "seat_label": "ME Senate 11",
       "pres_margin": "+3.4",
@@ -3345,6 +7037,36 @@
       "pres_margin": "+0.2",
       "holder_party": "D",
       "candidate": "Craig Hickman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "15",
+      "seat_label": "ME Senate 15",
+      "pres_margin": "-3.3",
+      "holder_party": "R",
+      "candidate": "Amanda Ann Heath",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "16",
+      "seat_label": "ME Senate 16",
+      "pres_margin": "+1.9",
+      "holder_party": "R",
+      "candidate": "Patric Aaron Moore",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "17",
+      "seat_label": "ME Senate 17",
+      "pres_margin": "-22.5",
+      "holder_party": "R",
+      "candidate": "Jo-Jean Keller",
       "is_open_seat": null
     },
     {
@@ -3440,6 +7162,26 @@
     {
       "election_type": "Primary_D",
       "chamber": "Senate",
+      "district": "28",
+      "seat_label": "ME Senate 28",
+      "pres_margin": "+68.6",
+      "holder_party": "D",
+      "candidate": "Rachel Talbot Ross",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "29",
+      "seat_label": "ME Senate 29",
+      "pres_margin": "+53.0",
+      "holder_party": "D",
+      "candidate": "Anne Carney",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
       "district": "31",
       "seat_label": "ME Senate 31",
       "pres_margin": "+17.4",
@@ -3460,11 +7202,21 @@
     {
       "election_type": "Primary_D",
       "chamber": "Senate",
+      "district": "33",
+      "seat_label": "ME Senate 33",
+      "pres_margin": "-9.9",
+      "holder_party": "R",
+      "candidate": "Mark H. Vigliotta",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
       "district": "34",
       "seat_label": "ME Senate 34",
       "pres_margin": "+14.8",
       "holder_party": "D",
-      "candidate": "Daniel Sayre",
+      "candidate": "Dan Sayre",
       "is_open_seat": null
     },
     {
@@ -3474,17 +7226,17 @@
       "seat_label": "ME House 1",
       "pres_margin": "-21.1",
       "holder_party": "R",
-      "candidate": "Lucien Daigle",
+      "candidate": "Austin Theriault",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "3",
-      "seat_label": "ME House 3",
-      "pres_margin": "-24.6",
+      "district": "2",
+      "seat_label": "ME House 2",
+      "pres_margin": "-9.7",
       "holder_party": "R",
-      "candidate": "Mark Babin",
+      "candidate": "Roger Albert",
       "is_open_seat": null
     },
     {
@@ -3510,11 +7262,91 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "6",
+      "seat_label": "ME House 6",
+      "pres_margin": "-43.0",
+      "holder_party": "R",
+      "candidate": "Donald Ardell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "7",
       "seat_label": "ME House 7",
       "pres_margin": "-35.6",
       "holder_party": "R",
       "candidate": "Jantzen Craine",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "8",
+      "seat_label": "ME House 8",
+      "pres_margin": "-52.6",
+      "holder_party": "R",
+      "candidate": "Tracy Quint",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "9",
+      "seat_label": "ME House 9",
+      "pres_margin": "-9.8",
+      "holder_party": "R",
+      "candidate": "Arthur K. Mingo",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "11",
+      "seat_label": "ME House 11",
+      "pres_margin": "-27.7",
+      "holder_party": "R",
+      "candidate": "Tiffany Strout",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "12",
+      "seat_label": "ME House 12",
+      "pres_margin": "-11.2",
+      "holder_party": "R",
+      "candidate": "Thomas Arthur Hart Jr.",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "13",
+      "seat_label": "ME House 13",
+      "pres_margin": "-2.5",
+      "holder_party": "R",
+      "candidate": "Russ White",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "14",
+      "seat_label": "ME House 14",
+      "pres_margin": "+40.9",
+      "holder_party": "D",
+      "candidate": "Jean M. Donovan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "16",
+      "seat_label": "ME House 16",
+      "pres_margin": "+25.0",
+      "holder_party": "D",
+      "candidate": "Eric M. White",
       "is_open_seat": null
     },
     {
@@ -3540,11 +7372,81 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "19",
+      "seat_label": "ME House 19",
+      "pres_margin": "-16.5",
+      "holder_party": "R",
+      "candidate": "Richard H. Campbell",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "20",
+      "seat_label": "ME House 20",
+      "pres_margin": "-1.6",
+      "holder_party": "D",
+      "candidate": "Patrick Jude",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "22",
+      "seat_label": "ME House 22",
+      "pres_margin": "+13.9",
+      "holder_party": "D",
+      "candidate": "Colleen O'Neal",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "23",
+      "seat_label": "ME House 23",
+      "pres_margin": "+18.0",
+      "holder_party": "D",
+      "candidate": "Brian A. Ames",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "25",
+      "seat_label": "ME House 25",
+      "pres_margin": "+39.5",
+      "holder_party": "D",
+      "candidate": "Anthony M. Weaver",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "26",
+      "seat_label": "ME House 26",
+      "pres_margin": "+10.2",
+      "holder_party": "D",
+      "candidate": "Edward Paradis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "27",
       "seat_label": "ME House 27",
       "pres_margin": "-32.0",
       "holder_party": "R",
       "candidate": "David Giles",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "28",
+      "seat_label": "ME House 28",
+      "pres_margin": "-38.9",
+      "holder_party": "R",
+      "candidate": "Irene Gifford",
       "is_open_seat": null
     },
     {
@@ -3610,6 +7512,36 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "36",
+      "seat_label": "ME House 36",
+      "pres_margin": "-3.0",
+      "holder_party": "R",
+      "candidate": "Kim Haggan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "37",
+      "seat_label": "ME House 37",
+      "pres_margin": "-5.4",
+      "holder_party": "R",
+      "candidate": "Reagan Paul",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "38",
+      "seat_label": "ME House 38",
+      "pres_margin": "-12.3",
+      "holder_party": "R",
+      "candidate": "Ben Hymes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "39",
       "seat_label": "ME House 39",
       "pres_margin": "+31.0",
@@ -3620,11 +7552,151 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "49",
-      "seat_label": "ME House 49",
-      "pres_margin": "+10.5",
+      "district": "40",
+      "seat_label": "ME House 40",
+      "pres_margin": "+10.6",
       "holder_party": "D",
-      "candidate": "Nicolas Hamlin",
+      "candidate": "Joseph McLaughlin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "41",
+      "seat_label": "ME House 41",
+      "pres_margin": "+50.1",
+      "holder_party": "D",
+      "candidate": "Cory Christopher Raymond",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "42",
+      "seat_label": "ME House 42",
+      "pres_margin": "+28.2",
+      "holder_party": "D",
+      "candidate": "Melissa Joy Byer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "45",
+      "seat_label": "ME House 45",
+      "pres_margin": "-7.0",
+      "holder_party": "R",
+      "candidate": "Rebecca M. Stephens",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "47",
+      "seat_label": "ME House 47",
+      "pres_margin": "-1.7",
+      "holder_party": "D",
+      "candidate": "Chester B. Grover III",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "48",
+      "seat_label": "ME House 48",
+      "pres_margin": "+20.3",
+      "holder_party": "D",
+      "candidate": "Erik D. Hobson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "50",
+      "seat_label": "ME House 50",
+      "pres_margin": "+36.7",
+      "holder_party": "D",
+      "candidate": "Jedediah James Rice II",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "52",
+      "seat_label": "ME House 52",
+      "pres_margin": "-3.0",
+      "holder_party": "D",
+      "candidate": "David Guilmette",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "53",
+      "seat_label": "ME House 53",
+      "pres_margin": "-18.0",
+      "holder_party": "R",
+      "candidate": "Michael Lemelin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "54",
+      "seat_label": "ME House 54",
+      "pres_margin": "+11.6",
+      "holder_party": "D",
+      "candidate": "Michelle M. Tucker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "55",
+      "seat_label": "ME House 55",
+      "pres_margin": "+7.0",
+      "holder_party": "D",
+      "candidate": "Charles L. Hippler IV",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "56",
+      "seat_label": "ME House 56",
+      "pres_margin": "-22.9",
+      "holder_party": "R",
+      "candidate": "Randall Greenwood",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "57",
+      "seat_label": "ME House 57",
+      "pres_margin": "+3.7",
+      "holder_party": "D",
+      "candidate": "David R. Potvin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "59",
+      "seat_label": "ME House 59",
+      "pres_margin": "+12.4",
+      "holder_party": "D",
+      "candidate": "John Reny",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "60",
+      "seat_label": "ME House 60",
+      "pres_margin": "+7.4",
+      "holder_party": "D",
+      "candidate": "Wyatt Albert Beaulieu",
       "is_open_seat": null
     },
     {
@@ -3670,11 +7742,71 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "65",
+      "seat_label": "ME House 65",
+      "pres_margin": "+17.2",
+      "holder_party": "D",
+      "candidate": "Scott Strom",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "66",
+      "seat_label": "ME House 66",
+      "pres_margin": "-11.1",
+      "holder_party": "R",
+      "candidate": "Michael D. Perkins",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "67",
       "seat_label": "ME House 67",
       "pres_margin": "-20.6",
       "holder_party": "R",
       "candidate": "Shawn Dixon",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "68",
+      "seat_label": "ME House 68",
+      "pres_margin": "-27.8",
+      "holder_party": "R",
+      "candidate": "Amanda Collamore",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "69",
+      "seat_label": "ME House 69",
+      "pres_margin": "-39.4",
+      "holder_party": "R",
+      "candidate": "Dean Cray",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "70",
+      "seat_label": "ME House 70",
+      "pres_margin": "-13.5",
+      "holder_party": "R",
+      "candidate": "Jennifer Poirier",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "71",
+      "seat_label": "ME House 71",
+      "pres_margin": "-25.9",
+      "holder_party": "R",
+      "candidate": "John E. Ducharme III",
       "is_open_seat": null
     },
     {
@@ -3690,11 +7822,41 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "74",
+      "seat_label": "ME House 74",
+      "pres_margin": "-17.7",
+      "holder_party": "R",
+      "candidate": "Russell Black",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "75",
       "seat_label": "ME House 75",
       "pres_margin": "+6.5",
       "holder_party": "D",
       "candidate": "Randall Gauvin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "76",
+      "seat_label": "ME House 76",
+      "pres_margin": "-15.9",
+      "holder_party": "R",
+      "candidate": "Sheila Lyman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "78",
+      "seat_label": "ME House 78",
+      "pres_margin": "-5.5",
+      "holder_party": "R",
+      "candidate": "Rachel Henderson",
       "is_open_seat": null
     },
     {
@@ -3710,6 +7872,16 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "81",
+      "seat_label": "ME House 81",
+      "pres_margin": "-1.4",
+      "holder_party": "R",
+      "candidate": "Peter Wood",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "82",
       "seat_label": "ME House 82",
       "pres_margin": "-3.7",
@@ -3720,11 +7892,31 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "85",
-      "seat_label": "ME House 85",
-      "pres_margin": "-7.0",
+      "district": "83",
+      "seat_label": "ME House 83",
+      "pres_margin": "-0.7",
       "holder_party": "R",
-      "candidate": "Adrienne Paul",
+      "candidate": "Marygrace Cimino",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "84",
+      "seat_label": "ME House 84",
+      "pres_margin": "-19.2",
+      "holder_party": "R",
+      "candidate": "Mark Walker",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "86",
+      "seat_label": "ME House 86",
+      "pres_margin": "-1.4",
+      "holder_party": "R",
+      "candidate": "Rolf Olsen",
       "is_open_seat": null
     },
     {
@@ -3750,11 +7942,311 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "89",
+      "seat_label": "ME House 89",
+      "pres_margin": "+7.3",
+      "holder_party": "D",
+      "candidate": "James D. Berube",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "90",
+      "seat_label": "ME House 90",
+      "pres_margin": "+4.2",
+      "holder_party": "R",
+      "candidate": "James Sorcek",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "91",
+      "seat_label": "ME House 91",
+      "pres_margin": "-19.7",
+      "holder_party": "R",
+      "candidate": "Jeff Timberlake",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "92",
+      "seat_label": "ME House 92",
+      "pres_margin": "-29.1",
+      "holder_party": "R",
+      "candidate": "Stephen J. Wood",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "93",
+      "seat_label": "ME House 93",
+      "pres_margin": "+21.9",
+      "holder_party": "D",
+      "candidate": "Chad E. Syphers",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "94",
+      "seat_label": "ME House 94",
+      "pres_margin": "+4.9",
+      "holder_party": "D",
+      "candidate": "Janet Beaudoin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "95",
+      "seat_label": "ME House 95",
+      "pres_margin": "+10.2",
+      "holder_party": "D",
+      "candidate": "Bret M. Martel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "96",
+      "seat_label": "ME House 96",
+      "pres_margin": "-1.6",
+      "holder_party": "D",
+      "candidate": "Kerryl Clement",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "97",
+      "seat_label": "ME House 97",
+      "pres_margin": "-12.2",
+      "holder_party": "R",
+      "candidate": "Dale John Crafts",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "99",
+      "seat_label": "ME House 99",
+      "pres_margin": "+31.3",
+      "holder_party": "D",
+      "candidate": "Braeden D. Webber",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "100",
+      "seat_label": "ME House 100",
+      "pres_margin": "+45.3",
+      "holder_party": "D",
+      "candidate": "Brett Y. Barrett",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "101",
+      "seat_label": "ME House 101",
+      "pres_margin": "+45.4",
+      "holder_party": "D",
+      "candidate": "Ravi Jackson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "102",
+      "seat_label": "ME House 102",
+      "pres_margin": "+42.2",
+      "holder_party": "D",
+      "candidate": "Henry Lloyd Lawrence III",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "104",
+      "seat_label": "ME House 104",
+      "pres_margin": "-3.3",
+      "holder_party": "R",
+      "candidate": "R. Melissa Winslow",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "105",
+      "seat_label": "ME House 105",
+      "pres_margin": "+15.2",
+      "holder_party": "D",
+      "candidate": "Susan E. Fuller",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "106",
+      "seat_label": "ME House 106",
+      "pres_margin": "+1.8",
+      "holder_party": "R",
+      "candidate": "Barbara Bagshaw",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "107",
       "seat_label": "ME House 107",
       "pres_margin": "+6.1",
       "holder_party": "R",
       "candidate": "Mark Cooper",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "108",
+      "seat_label": "ME House 108",
+      "pres_margin": "+18.8",
+      "holder_party": "D",
+      "candidate": "Kelly L. Dearborn",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "109",
+      "seat_label": "ME House 109",
+      "pres_margin": "+21.4",
+      "holder_party": "D",
+      "candidate": "Diana Kushnar",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "110",
+      "seat_label": "ME House 110",
+      "pres_margin": "+43.5",
+      "holder_party": "D",
+      "candidate": "Jason Lewis Copp",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "112",
+      "seat_label": "ME House 112",
+      "pres_margin": "+48.3",
+      "holder_party": "D",
+      "candidate": "Lauren Chelsea Jones",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "113",
+      "seat_label": "ME House 113",
+      "pres_margin": "+61.3",
+      "holder_party": "D",
+      "candidate": "Lisa M. Nelthropp",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "119",
+      "seat_label": "ME House 119",
+      "pres_margin": "+71.3",
+      "holder_party": "D",
+      "candidate": "Jacob Wakem",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "120",
+      "seat_label": "ME House 120",
+      "pres_margin": "+44.7",
+      "holder_party": "D",
+      "candidate": "Michael Dougherty",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "121",
+      "seat_label": "ME House 121",
+      "pres_margin": "+49.4",
+      "holder_party": "D",
+      "candidate": "Meagan J. Smith",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "123",
+      "seat_label": "ME House 123",
+      "pres_margin": "+57.9",
+      "holder_party": "D",
+      "candidate": "Annie Christy",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "124",
+      "seat_label": "ME House 124",
+      "pres_margin": "+31.6",
+      "holder_party": "D",
+      "candidate": "Scott W. Doherty",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "126",
+      "seat_label": "ME House 126",
+      "pres_margin": "+29.8",
+      "holder_party": "D",
+      "candidate": "Ethan E. Mongue",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "136",
+      "seat_label": "ME House 136",
+      "pres_margin": "-4.7",
+      "holder_party": "R",
+      "candidate": "John Eder",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "137",
+      "seat_label": "ME House 137",
+      "pres_margin": "-5.0",
+      "holder_party": "R",
+      "candidate": "Nathan Carlow",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "138",
+      "seat_label": "ME House 138",
+      "pres_margin": "-18.3",
+      "holder_party": "R",
+      "candidate": "Jonathan Kinney",
       "is_open_seat": null
     },
     {
@@ -3780,11 +8272,11 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "141",
-      "seat_label": "ME House 141",
-      "pres_margin": "-6.8",
-      "holder_party": "R",
-      "candidate": "Marc Boisse",
+      "district": "142",
+      "seat_label": "ME House 142",
+      "pres_margin": "+3.9",
+      "holder_party": "D",
+      "candidate": "Gordon Frohloff",
       "is_open_seat": null
     },
     {
@@ -3800,11 +8292,81 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
+      "district": "144",
+      "seat_label": "ME House 144",
+      "pres_margin": "-28.4",
+      "holder_party": "R",
+      "candidate": "Jeff Adams",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "145",
+      "seat_label": "ME House 145",
+      "pres_margin": "+10.5",
+      "holder_party": "R",
+      "candidate": "Caleb J. Chase",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "146",
+      "seat_label": "ME House 146",
+      "pres_margin": "+29.7",
+      "holder_party": "D",
+      "candidate": "Bradley S. Moulton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "148",
+      "seat_label": "ME House 148",
+      "pres_margin": "-8.4",
+      "holder_party": "R",
+      "candidate": "Thomas Lavigne",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "149",
+      "seat_label": "ME House 149",
+      "pres_margin": "+12.3",
+      "holder_party": "D",
+      "candidate": "Timothy R. Towne",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
       "district": "150",
       "seat_label": "ME House 150",
       "pres_margin": "+19.3",
       "holder_party": "D",
       "candidate": "Mark Zimmer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "151",
+      "seat_label": "ME House 151",
+      "pres_margin": "+42.5",
+      "holder_party": "D",
+      "candidate": "Suzanne Johnson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "1",
+      "seat_label": "ME Senate 1",
+      "pres_margin": "-19.9",
+      "holder_party": "R",
+      "candidate": "Lucien Daigle",
       "is_open_seat": null
     },
     {
@@ -3820,11 +8382,21 @@
     {
       "election_type": "Primary_R",
       "chamber": "Senate",
-      "district": "6",
-      "seat_label": "ME Senate 6",
-      "pres_margin": "-20.9",
+      "district": "5",
+      "seat_label": "ME Senate 5",
+      "pres_margin": "-18.4",
       "holder_party": "R",
-      "candidate": "Kenneth Davis",
+      "candidate": "Elizabeth Caruso",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "7",
+      "seat_label": "ME Senate 7",
+      "pres_margin": "+21.3",
+      "holder_party": "D",
+      "candidate": "Cheryl A. Hewes",
       "is_open_seat": null
     },
     {
@@ -3855,6 +8427,16 @@
       "pres_margin": "+3.4",
       "holder_party": "D",
       "candidate": "Ryan Otis",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "14",
+      "seat_label": "ME Senate 14",
+      "pres_margin": "+0.2",
+      "holder_party": "D",
+      "candidate": "Steven A. McGee",
       "is_open_seat": null
     },
     {
@@ -3914,7 +8496,7 @@
       "seat_label": "ME Senate 22",
       "pres_margin": "-16.7",
       "holder_party": "R",
-      "candidate": "Kimberly Pomerleau",
+      "candidate": "Kim Pomerleau",
       "is_open_seat": null
     },
     {
@@ -3925,6 +8507,46 @@
       "pres_margin": "+40.8",
       "holder_party": "D",
       "candidate": "Bernard Porter",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "29",
+      "seat_label": "ME Senate 29",
+      "pres_margin": "+53.0",
+      "holder_party": "D",
+      "candidate": "Vincent A. Maietta",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "30",
+      "seat_label": "ME Senate 30",
+      "pres_margin": "+25.7",
+      "holder_party": "D",
+      "candidate": "Harry J. White",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "31",
+      "seat_label": "ME Senate 31",
+      "pres_margin": "+17.4",
+      "holder_party": "D",
+      "candidate": "Garrett Plummer",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "32",
+      "seat_label": "ME Senate 32",
+      "pres_margin": "+9.8",
+      "holder_party": "D",
+      "candidate": null,
       "is_open_seat": null
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Delaware",
     "abbr": "DE",
@@ -35,7 +35,7 @@
       "name": "Kathy Jennings",
       "party": "D",
       "method": "Elected",
-      "next_election": 2028,
+      "next_election": 2026,
       "start_year": 2019
     },
     {
@@ -52,7 +52,7 @@
       "name": "Colleen Davis",
       "party": "D",
       "method": "Elected",
-      "next_election": 2028,
+      "next_election": 2026,
       "start_year": 2019
     },
     {
@@ -60,7 +60,7 @@
       "name": "Lydia York",
       "party": "D",
       "method": "Elected",
-      "next_election": 2028,
+      "next_election": 2026,
       "start_year": 2023
     },
     {
@@ -722,7 +722,53 @@
   },
   "elections_2026": {
     "governor": null,
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Kathy Jennings",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Julianne Murray",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Auditor",
+        "candidates": [
+          {
+            "name": "Lydia York",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Colleen Davis",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Greg Coverdale",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "DE House 20",

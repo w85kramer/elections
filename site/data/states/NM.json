@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-12T00:57:18.042187Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "New Mexico",
     "abbr": "NM",
@@ -24,11 +24,11 @@
       "forecast": "Likely D",
       "forecast_details": [
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Likely D"
         },
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Likely D"
         }
       ]
@@ -1216,7 +1216,7 @@
           "party": "R",
           "pres_margin": "-53.4",
           "next_election": 2028,
-          "candidate_id": 11137
+          "candidate_id": 18956
         },
         {
           "district": "42",
@@ -1285,7 +1285,7 @@
           "status": "Filed"
         },
         {
-          "name": "Steve D. Lanier",
+          "name": "Steve Lanier",
           "party": "R",
           "is_incumbent": false,
           "election_type": "Primary_R",
@@ -1301,13 +1301,13 @@
             "name": "Raul Torrez",
             "party": "D",
             "is_incumbent": true,
-            "election_type": "Primary_D"
+            "election_type": "General"
           },
           {
-            "name": "Samuel Isaiah Kane Sr.",
+            "name": "Jeremy Gay",
             "party": "R",
             "is_incumbent": false,
-            "election_type": "Primary_R"
+            "election_type": "General"
           }
         ]
       },
@@ -1315,45 +1315,22 @@
         "office": "Auditor",
         "candidates": [
           {
-            "name": "Joseph M. Maestas",
+            "name": "Joseph Maestas",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Travis Sanchez",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Joseph Maestas",
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
-          }
-        ]
-      },
-      {
-        "office": "Lt. Governor",
-        "candidates": [
-          {
-            "name": "Harold Pope Jr.",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Maggie Toulouse Oliver",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Aubrey Dunn",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "David M. Gallegos",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Manuel Lardizabal",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
           }
         ]
       },
@@ -1361,28 +1338,16 @@
         "office": "Secretary of State",
         "candidates": [
           {
-            "name": "Amanda L\u00f3pez Askin",
+            "name": "Maggie Toulouse Oliver",
             "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
+            "is_incumbent": true,
+            "election_type": "General"
           },
           {
-            "name": "Katharine E. Clark",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Sonya Lee Smith",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Ramona L. Goolsby",
+            "name": "Audrey Trujillo",
             "party": "R",
             "is_incumbent": false,
-            "election_type": "Primary_R"
+            "election_type": "General"
           }
         ]
       },
@@ -1390,10 +1355,10 @@
         "office": "Treasurer",
         "candidates": [
           {
-            "name": "Laura M. Montoya",
+            "name": "Laura Montoya",
             "party": "D",
             "is_incumbent": true,
-            "election_type": "Primary_D"
+            "election_type": "General"
           }
         ]
       }
@@ -1431,13 +1396,13 @@
         "district": "4",
         "candidates": [
           {
-            "name": "Christina J Aspaas",
+            "name": "Christina Aspaas",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
-            "name": "Joseph Franklin Hernandez",
+            "name": "Joseph Hernandez",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -1499,7 +1464,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Paul L Spencer",
+            "name": "Paul Spencer",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -1531,7 +1496,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Brian G Baca",
+            "name": "Brian Baca",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -1620,7 +1585,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Patricia A Roybal Caballero",
+            "name": "Pat Roybal Caballero",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -1652,7 +1617,7 @@
         "district": "15",
         "candidates": [
           {
-            "name": "Dayan \"Day\" Mercedes Hochman-Vigil",
+            "name": "Day Hochman-Vigil",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -1684,7 +1649,7 @@
         "district": "17",
         "candidates": [
           {
-            "name": "Cynthia D Borrego",
+            "name": "Cynthia Borrego",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -1703,7 +1668,7 @@
         "district": "18",
         "candidates": [
           {
-            "name": "Marianna A Anaya",
+            "name": "Marianna Anaya",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -1716,7 +1681,7 @@
         "district": "19",
         "candidates": [
           {
-            "name": "Janelle I Anyanonu",
+            "name": "Janelle Anyanonu",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -1729,7 +1694,7 @@
         "district": "20",
         "candidates": [
           {
-            "name": "Meredith A Dixon",
+            "name": "Meredith Dixon",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -1761,7 +1726,7 @@
         "district": "22",
         "candidates": [
           {
-            "name": "William (Bill) Scott",
+            "name": "William J. Scott",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -1786,7 +1751,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Alan T Martinez",
+            "name": "Alan Martinez",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -1818,7 +1783,7 @@
         "district": "25",
         "candidates": [
           {
-            "name": "Cristina S Parajon",
+            "name": "Cristina Parajon",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -1874,7 +1839,7 @@
             "election_type": "Primary_R"
           },
           {
-            "name": "Robert S Godshall",
+            "name": "Robert Godshall",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -1887,7 +1852,7 @@
         "district": "28",
         "candidates": [
           {
-            "name": "Pamelya Paulette Herndon",
+            "name": "Pamelya Herndon",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -1925,7 +1890,7 @@
         "district": "30",
         "candidates": [
           {
-            "name": "Elizabeth Diane Torres-Velasquez",
+            "name": "Elizabeth Torres-Velasquez",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -1981,7 +1946,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Jenifer Marie Jones",
+            "name": "Jenifer Jones",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -1994,7 +1959,7 @@
         "district": "33",
         "candidates": [
           {
-            "name": "Micaela Lara Cadena",
+            "name": "Micaela Cadena",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2025,7 +1990,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Raymundo Lara",
+            "name": "Ray Lara",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2051,7 +2016,7 @@
         "district": "36",
         "candidates": [
           {
-            "name": "Nathan P Small",
+            "name": "Nathan Small",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2114,7 +2079,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Luis M Terrazas",
+            "name": "Luis Terrazas",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2127,7 +2092,7 @@
         "district": "40",
         "candidates": [
           {
-            "name": "Joseph L Sanchez",
+            "name": "Joseph Sanchez",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2152,7 +2117,7 @@
         "district": "41",
         "candidates": [
           {
-            "name": "Debbie A. Rodella",
+            "name": "Debbie Rodella",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2184,7 +2149,7 @@
         "district": "43",
         "candidates": [
           {
-            "name": "Christine Chandler",
+            "name": "Chris Chandler",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2197,7 +2162,7 @@
         "district": "44",
         "candidates": [
           {
-            "name": "Kathleen M Cates",
+            "name": "Kathleen Cates",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2216,7 +2181,7 @@
         "district": "45",
         "candidates": [
           {
-            "name": "Linda Michelle Serrato",
+            "name": "Linda Serrato",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2229,7 +2194,7 @@
         "district": "46",
         "candidates": [
           {
-            "name": "Andrea D Romero",
+            "name": "Andrea Romero",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2242,7 +2207,7 @@
         "district": "47",
         "candidates": [
           {
-            "name": "Reena C Szczepanski",
+            "name": "Reena Szczepanski",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2274,7 +2239,7 @@
         "district": "49",
         "candidates": [
           {
-            "name": "Gail Missy Armstrong",
+            "name": "Gail Armstrong",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2293,7 +2258,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Kenneth Donald Brennan",
+            "name": "Kenneth Brennan",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2319,7 +2284,7 @@
         "district": "52",
         "candidates": [
           {
-            "name": "Doreen Yvonne Gallegos",
+            "name": "Doreen Gallegos",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2332,7 +2297,7 @@
         "district": "53",
         "candidates": [
           {
-            "name": "Sarah Angelina Silva",
+            "name": "Sarah Silva",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2351,7 +2316,7 @@
         "district": "54",
         "candidates": [
           {
-            "name": "Jonathan Allen Henry",
+            "name": "Jon Henry",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2364,7 +2329,7 @@
         "district": "55",
         "candidates": [
           {
-            "name": "Cathrynn N Brown",
+            "name": "Cathrynn Brown",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2377,7 +2342,7 @@
         "district": "56",
         "candidates": [
           {
-            "name": "Harlan H Vincent",
+            "name": "Harlan Vincent",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2396,7 +2361,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Catherine Jeanette Cullen",
+            "name": "Catherine Cullen",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2441,13 +2406,13 @@
         "district": "60",
         "candidates": [
           {
-            "name": "Luke Nicholas Jungmann",
+            "name": "Luke Jungmann",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
-            "name": "Joshua N. Hernandez",
+            "name": "Josh Hernandez",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2518,7 +2483,7 @@
         "district": "65",
         "candidates": [
           {
-            "name": "Derrick J Lente",
+            "name": "Derrick Lente",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2562,7 +2527,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Jackey O Chatfield",
+            "name": "Jack Chatfield",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2575,13 +2540,13 @@
         "district": "68",
         "candidates": [
           {
-            "name": "Charlotte L Little",
+            "name": "Charlotte Little",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
-            "name": "David E Adkins",
+            "name": "David Adkins",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2600,7 +2565,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Michelle Paulene Abeyta",
+            "name": "Michelle Abeyta",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2613,13 +2578,13 @@
         "district": "70",
         "candidates": [
           {
-            "name": "Ambrose M Castellano",
+            "name": "Ambrose Castellano",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
-            "name": "Anita Amalia Gonzales",
+            "name": "Anita Gonzales",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2686,7 +2651,7 @@
       "seat_label": "NM House 15",
       "pres_margin": "+28.0",
       "holder_party": "D",
-      "candidate": "Dayan \"Day\" Mercedes Hochman-Vigil",
+      "candidate": "Day Hochman-Vigil",
       "is_open_seat": null
     },
     {
@@ -2696,7 +2661,7 @@
       "seat_label": "NM House 17",
       "pres_margin": "+11.3",
       "holder_party": "D",
-      "candidate": "Cynthia D Borrego",
+      "candidate": "Cynthia Borrego",
       "is_open_seat": null
     },
     {
@@ -2706,7 +2671,7 @@
       "seat_label": "NM House 18",
       "pres_margin": "+66.2",
       "holder_party": "D",
-      "candidate": "Marianna A Anaya",
+      "candidate": "Marianna Anaya",
       "is_open_seat": null
     },
     {
@@ -2716,7 +2681,7 @@
       "seat_label": "NM House 19",
       "pres_margin": "+44.0",
       "holder_party": "D",
-      "candidate": "Janelle I Anyanonu",
+      "candidate": "Janelle Anyanonu",
       "is_open_seat": null
     },
     {
@@ -2726,7 +2691,7 @@
       "seat_label": "NM House 20",
       "pres_margin": "+16.4",
       "holder_party": "D",
-      "candidate": "Meredith A Dixon",
+      "candidate": "Meredith Dixon",
       "is_open_seat": null
     },
     {
@@ -2746,7 +2711,7 @@
       "seat_label": "NM House 22",
       "pres_margin": "-10.4",
       "holder_party": "R",
-      "candidate": "William (Bill) Scott",
+      "candidate": "William J. Scott",
       "is_open_seat": null
     },
     {
@@ -2766,7 +2731,7 @@
       "seat_label": "NM House 25",
       "pres_margin": "+39.1",
       "holder_party": "D",
-      "candidate": "Cristina S Parajon",
+      "candidate": "Cristina Parajon",
       "is_open_seat": null
     },
     {
@@ -2786,7 +2751,7 @@
       "seat_label": "NM House 28",
       "pres_margin": "+16.0",
       "holder_party": "D",
-      "candidate": "Pamelya Paulette Herndon",
+      "candidate": "Pamelya Herndon",
       "is_open_seat": null
     },
     {
@@ -2836,7 +2801,7 @@
       "seat_label": "NM House 36",
       "pres_margin": "+3.3",
       "holder_party": "D",
-      "candidate": "Nathan P Small",
+      "candidate": "Nathan Small",
       "is_open_seat": null
     },
     {
@@ -2866,7 +2831,7 @@
       "seat_label": "NM House 43",
       "pres_margin": "+28.9",
       "holder_party": "D",
-      "candidate": "Christine Chandler",
+      "candidate": "Chris Chandler",
       "is_open_seat": null
     },
     {
@@ -2876,7 +2841,7 @@
       "seat_label": "NM House 44",
       "pres_margin": "+8.7",
       "holder_party": "D",
-      "candidate": "Kathleen M Cates",
+      "candidate": "Kathleen Cates",
       "is_open_seat": null
     },
     {
@@ -2886,7 +2851,7 @@
       "seat_label": "NM House 45",
       "pres_margin": "+50.0",
       "holder_party": "D",
-      "candidate": "Linda Michelle Serrato",
+      "candidate": "Linda Serrato",
       "is_open_seat": null
     },
     {
@@ -2896,7 +2861,7 @@
       "seat_label": "NM House 46",
       "pres_margin": "+52.5",
       "holder_party": "D",
-      "candidate": "Andrea D Romero",
+      "candidate": "Andrea Romero",
       "is_open_seat": null
     },
     {
@@ -2906,7 +2871,7 @@
       "seat_label": "NM House 47",
       "pres_margin": "+64.2",
       "holder_party": "D",
-      "candidate": "Reena C Szczepanski",
+      "candidate": "Reena Szczepanski",
       "is_open_seat": null
     },
     {
@@ -2936,7 +2901,7 @@
       "seat_label": "NM House 52",
       "pres_margin": "+17.1",
       "holder_party": "D",
-      "candidate": "Doreen Yvonne Gallegos",
+      "candidate": "Doreen Gallegos",
       "is_open_seat": null
     },
     {
@@ -2946,7 +2911,7 @@
       "seat_label": "NM House 53",
       "pres_margin": "+1.6",
       "holder_party": "D",
-      "candidate": "Sarah Angelina Silva",
+      "candidate": "Sarah Silva",
       "is_open_seat": null
     },
     {
@@ -2966,7 +2931,7 @@
       "seat_label": "NM House 60",
       "pres_margin": "-6.4",
       "holder_party": "R",
-      "candidate": "Luke Nicholas Jungmann",
+      "candidate": "Luke Jungmann",
       "is_open_seat": null
     },
     {
@@ -2976,7 +2941,7 @@
       "seat_label": "NM House 65",
       "pres_margin": "+37.2",
       "holder_party": "D",
-      "candidate": "Derrick J Lente",
+      "candidate": "Derrick Lente",
       "is_open_seat": null
     },
     {
@@ -2996,7 +2961,7 @@
       "seat_label": "NM House 68",
       "pres_margin": "+4.7",
       "holder_party": "D",
-      "candidate": "Charlotte L Little",
+      "candidate": "Charlotte Little",
       "is_open_seat": null
     },
     {
@@ -3036,7 +3001,7 @@
       "seat_label": "NM House 6",
       "pres_margin": "+14.6",
       "holder_party": "D",
-      "candidate": "Paul L Spencer",
+      "candidate": "Paul Spencer",
       "is_open_seat": null
     },
     {
@@ -3056,7 +3021,7 @@
       "seat_label": "NM House 8",
       "pres_margin": "-19.4",
       "holder_party": "R",
-      "candidate": "Brian G Baca",
+      "candidate": "Brian Baca",
       "is_open_seat": null
     },
     {
@@ -3116,7 +3081,7 @@
       "seat_label": "NM House 23",
       "pres_margin": "-2.8",
       "holder_party": "R",
-      "candidate": "Alan T Martinez",
+      "candidate": "Alan Martinez",
       "is_open_seat": null
     },
     {
@@ -3186,7 +3151,7 @@
       "seat_label": "NM House 32",
       "pres_margin": "-19.3",
       "holder_party": "R",
-      "candidate": "Jenifer Marie Jones",
+      "candidate": "Jenifer Jones",
       "is_open_seat": null
     },
     {
@@ -3236,7 +3201,7 @@
       "seat_label": "NM House 39",
       "pres_margin": "+3.3",
       "holder_party": "R",
-      "candidate": "Luis M Terrazas",
+      "candidate": "Luis Terrazas",
       "is_open_seat": null
     },
     {
@@ -3276,7 +3241,7 @@
       "seat_label": "NM House 49",
       "pres_margin": "-23.3",
       "holder_party": "R",
-      "candidate": "Gail Missy Armstrong",
+      "candidate": "Gail Armstrong",
       "is_open_seat": null
     },
     {
@@ -3286,7 +3251,7 @@
       "seat_label": "NM House 50",
       "pres_margin": "+25.0",
       "holder_party": "D",
-      "candidate": "Kenneth Donald Brennan",
+      "candidate": "Kenneth Brennan",
       "is_open_seat": null
     },
     {
@@ -3316,7 +3281,7 @@
       "seat_label": "NM House 54",
       "pres_margin": "-56.0",
       "holder_party": "R",
-      "candidate": "Jonathan Allen Henry",
+      "candidate": "Jon Henry",
       "is_open_seat": null
     },
     {
@@ -3326,7 +3291,7 @@
       "seat_label": "NM House 55",
       "pres_margin": "-56.8",
       "holder_party": "R",
-      "candidate": "Cathrynn N Brown",
+      "candidate": "Cathrynn Brown",
       "is_open_seat": null
     },
     {
@@ -3336,7 +3301,7 @@
       "seat_label": "NM House 56",
       "pres_margin": "-37.8",
       "holder_party": "R",
-      "candidate": "Harlan H Vincent",
+      "candidate": "Harlan Vincent",
       "is_open_seat": null
     },
     {
@@ -3346,7 +3311,7 @@
       "seat_label": "NM House 57",
       "pres_margin": "-0.5",
       "holder_party": "R",
-      "candidate": "Catherine Jeanette Cullen",
+      "candidate": "Catherine Cullen",
       "is_open_seat": null
     },
     {
@@ -3406,7 +3371,7 @@
       "seat_label": "NM House 67",
       "pres_margin": "-40.9",
       "holder_party": "R",
-      "candidate": "Jackey O Chatfield",
+      "candidate": "Jack Chatfield",
       "is_open_seat": null
     },
     {
@@ -3416,7 +3381,7 @@
       "seat_label": "NM House 68",
       "pres_margin": "+4.7",
       "holder_party": "D",
-      "candidate": "David E Adkins",
+      "candidate": "David Adkins",
       "is_open_seat": null
     }
   ],

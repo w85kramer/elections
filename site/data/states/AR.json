@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Arkansas",
     "abbr": "AR",
@@ -1247,7 +1247,7 @@
           "party": "D",
           "pres_margin": "+61.5",
           "next_election": 2026,
-          "candidate_id": 7662
+          "candidate_id": 16214
         },
         {
           "district": "16",
@@ -1502,12 +1502,6 @@
             "party": "R",
             "is_incumbent": true,
             "election_type": "General"
-          },
-          {
-            "name": "Tim Griffin",
-            "party": "R",
-            "is_incumbent": true,
-            "election_type": "Primary_R"
           }
         ]
       },
@@ -1529,42 +1523,25 @@
         ]
       },
       {
-        "office": "Lt. Governor",
-        "candidates": [
-          {
-            "name": "Leslie Rutledge",
-            "party": "R",
-            "is_incumbent": true,
-            "election_type": "General"
-          },
-          {
-            "name": "Leslie Rutledge",
-            "party": "R",
-            "is_incumbent": true,
-            "election_type": "Primary_R"
-          }
-        ]
-      },
-      {
         "office": "Secretary of State",
         "candidates": [
           {
-            "name": "Bryan Norris",
-            "party": "R",
+            "name": "Kelly Grappe",
+            "party": "D",
             "is_incumbent": false,
-            "election_type": "Primary_R"
+            "election_type": "General"
           },
           {
-            "name": "Cathy Hardin Harrison",
-            "party": "R",
+            "name": "Michael Pakko",
+            "party": "L",
             "is_incumbent": false,
-            "election_type": "Primary_R"
+            "election_type": "General"
           },
           {
-            "name": "Kim Hammer",
+            "name": "Cole Jester",
             "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
+            "is_incumbent": true,
+            "election_type": "General"
           }
         ]
       },
@@ -1574,14 +1551,8 @@
           {
             "name": "John Thurston",
             "party": "R",
-            "is_incumbent": true,
+            "is_incumbent": false,
             "election_type": "General"
-          },
-          {
-            "name": "John Thurston",
-            "party": "R",
-            "is_incumbent": true,
-            "election_type": "Primary_R"
           }
         ]
       }
@@ -1592,12 +1563,6 @@
         "chamber": "House",
         "district": "1",
         "candidates": [
-          {
-            "name": "Mark Nichols",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "General"
-          },
           {
             "name": "Mark Nichols",
             "party": "R",
@@ -1854,12 +1819,6 @@
         "chamber": "House",
         "district": "11",
         "candidates": [
-          {
-            "name": "Rey Hernandez",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "General"
-          },
           {
             "name": "Rey Hernandez",
             "party": "D",
@@ -3409,12 +3368,6 @@
             "election_type": "General"
           },
           {
-            "name": "Cassandra Green",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "General"
-          },
-          {
             "name": "Stephen Bright",
             "party": "R",
             "is_incumbent": false,
@@ -4289,12 +4242,6 @@
           {
             "name": "Joshua Irby",
             "party": "D",
-            "is_incumbent": false,
-            "election_type": "General"
-          },
-          {
-            "name": "Rodney Wright",
-            "party": "R",
             "is_incumbent": false,
             "election_type": "General"
           },

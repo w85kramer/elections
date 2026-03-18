@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "North Dakota",
     "abbr": "ND",
@@ -23,19 +23,11 @@
       "start_year": 2024
     },
     {
-      "office": "Lt. Governor",
-      "name": "Michelle Strinden",
-      "party": "R",
-      "method": "Elected",
-      "next_election": 2028,
-      "start_year": 2024
-    },
-    {
       "office": "Attorney General",
       "name": "Drew Wrigley",
       "party": "R",
       "method": "Elected",
-      "next_election": 2028,
+      "next_election": 2026,
       "start_year": 2022
     },
     {
@@ -43,7 +35,7 @@
       "name": "Michael Howe",
       "party": "R",
       "method": "Elected",
-      "next_election": 2028,
+      "next_election": 2026,
       "start_year": 2023
     },
     {
@@ -51,7 +43,7 @@
       "name": "Thomas Beadle",
       "party": "R",
       "method": "Elected",
-      "next_election": 2028,
+      "next_election": 2026,
       "start_year": 2021
     },
     {
@@ -59,7 +51,7 @@
       "name": "Josh Gallion",
       "party": "R",
       "method": "Elected",
-      "next_election": 2028,
+      "next_election": 2026,
       "start_year": 2016
     },
     {
@@ -67,7 +59,7 @@
       "name": "Levi Bachmeier",
       "party": "R",
       "method": "Elected",
-      "next_election": 2028,
+      "next_election": 2026,
       "start_year": 2025
     },
     {
@@ -75,7 +67,7 @@
       "name": "Jon Godfread",
       "party": "R",
       "method": "Elected",
-      "next_election": 2028,
+      "next_election": 2026,
       "start_year": 2017
     },
     {
@@ -83,21 +75,21 @@
       "name": "Doug Goehring",
       "party": "R",
       "method": "Elected",
-      "next_election": 2028,
+      "next_election": 2026,
       "start_year": 2009
     }
   ],
   "chambers": {
     "House": {
-      "total": 94,
+      "total": 97,
       "composition": {
-        "D": 10,
-        "R": 84,
+        "D": 9,
+        "R": 88,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 63,
-      "seats_up_2026": 48,
+      "supermajority": 65,
+      "seats_up_2026": 50,
       "members": [
         {
           "district": "1",
@@ -583,10 +575,20 @@
           "district_name": "HD-25",
           "seat_designator": "A",
           "name": "Alisa Mitskog",
-          "party": "D",
+          "party": "R",
           "pres_margin": "-37.6",
           "next_election": 2026,
           "candidate_id": 14095
+        },
+        {
+          "district": "25",
+          "district_name": "HD-25",
+          "seat_designator": "A",
+          "name": "Alisa Mitskog",
+          "party": "R",
+          "pres_margin": "-37.6",
+          "next_election": 2026,
+          "candidate_id": 14096
         },
         {
           "district": "25",
@@ -617,6 +619,26 @@
           "pres_margin": "-78.5",
           "next_election": 2028,
           "candidate_id": 14167
+        },
+        {
+          "district": "26",
+          "district_name": "HD-26",
+          "seat_designator": "B",
+          "name": "Kelby Timmons",
+          "party": "R",
+          "pres_margin": "-78.5",
+          "next_election": 2028,
+          "candidate_id": 14168
+        },
+        {
+          "district": "27",
+          "district_name": "HD-27",
+          "seat_designator": "A",
+          "name": "T.J. Brown",
+          "party": "R",
+          "pres_margin": "-21.1",
+          "next_election": 2026,
+          "candidate_id": 29111
         },
         {
           "district": "27",
@@ -1520,7 +1542,115 @@
   },
   "elections_2026": {
     "governor": null,
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Agriculture Commissioner",
+        "candidates": [
+          {
+            "name": "Doug Goehring",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Timothy Lamb",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Drew Wrigley",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Auditor",
+        "candidates": [
+          {
+            "name": "Josh Gallion",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Insurance Commissioner",
+        "candidates": [
+          {
+            "name": "Jon Godfread",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Jeffrey Powell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Charles Tuttle",
+            "party": "I",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Michael Howe",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Superintendent of Public Instruction",
+        "candidates": [
+          {
+            "name": "Jason Heitkamp",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kirsten Baesler",
+            "party": "NP",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Levi Bachmeier",
+            "party": "NP",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Thomas Beadle",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "ND House 13 Seat B",
@@ -1694,16 +1824,6 @@
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "13",
-      "seat_label": "ND House 13 Seat B",
-      "pres_margin": "-11.4",
-      "holder_party": "R",
-      "candidate": "Austen Schauer",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_R",
-      "chamber": "House",
-      "district": "13",
       "seat_label": "ND House 13 Seat A",
       "pres_margin": "-11.4",
       "holder_party": "R",
@@ -1713,11 +1833,11 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "27",
-      "seat_label": "ND House 27 Seat B",
-      "pres_margin": "-21.1",
+      "district": "13",
+      "seat_label": "ND House 13 Seat B",
+      "pres_margin": "-11.4",
       "holder_party": "R",
-      "candidate": "Greg Stemen",
+      "candidate": "Austen Schauer",
       "is_open_seat": null
     },
     {
@@ -1728,6 +1848,16 @@
       "pres_margin": "-21.1",
       "holder_party": "R",
       "candidate": "Shawn Kessel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "27",
+      "seat_label": "ND House 27 Seat B",
+      "pres_margin": "-21.1",
+      "holder_party": "R",
+      "candidate": "Greg Stemen",
       "is_open_seat": null
     },
     {

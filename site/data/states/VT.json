@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Vermont",
     "abbr": "VT",
@@ -76,15 +76,15 @@
   ],
   "chambers": {
     "House": {
-      "total": 150,
+      "total": 151,
       "composition": {
         "D": 93,
-        "R": 56,
+        "R": 57,
         "Other": 0,
         "Vacant": 1
       },
-      "supermajority": 100,
-      "seats_up_2026": 150,
+      "supermajority": 101,
+      "seats_up_2026": 151,
       "members": [
         {
           "district": "Addison-1",
@@ -1093,6 +1093,16 @@
           "candidate_id": 13077
         },
         {
+          "district": "Rutland-3",
+          "district_name": "Rutland-3",
+          "seat_designator": null,
+          "name": "Zak Harvey",
+          "party": "R",
+          "pres_margin": "-3.3",
+          "next_election": 2026,
+          "candidate_id": 75621
+        },
+        {
           "district": "Rutland-4",
           "district_name": "Rutland-4",
           "seat_designator": null,
@@ -1754,7 +1764,7 @@
           "party": "R",
           "pres_margin": "+17.5",
           "next_election": 2026,
-          "candidate_id": 68689
+          "candidate_id": 17811
         },
         {
           "district": "Rutland",
@@ -1872,7 +1882,76 @@
       "forecast": "Very Likely R",
       "candidates": []
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Charity Clark",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Ture Nelson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Auditor",
+        "candidates": [
+          {
+            "name": "Doug Hoffer",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "H. Brooke Paige",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Sarah Copeland Hanzas",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "H. Brooke Paige",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Treasurer",
+        "candidates": [
+          {
+            "name": "Michael Pieciak",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Joshua Bechhoefer",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": []
   },
   "uncontested_primaries": [],

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Maryland",
     "abbr": "MD",
@@ -32,14 +32,6 @@
           "rating": "Solid D"
         }
       ]
-    },
-    {
-      "office": "Lt. Governor",
-      "name": "Aruna Miller",
-      "party": "D",
-      "method": "Elected",
-      "next_election": 2026,
-      "start_year": 2023
     },
     {
       "office": "Attorney General",
@@ -87,15 +79,15 @@
   ],
   "chambers": {
     "House of Delegates": {
-      "total": 141,
+      "total": 148,
       "composition": {
-        "D": 102,
-        "R": 39,
+        "D": 107,
+        "R": 41,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 94,
-      "seats_up_2026": 141,
+      "supermajority": 99,
+      "seats_up_2026": 148,
       "members": [
         {
           "district": "3",
@@ -236,6 +228,16 @@
           "pres_margin": "+25.9",
           "next_election": 2026,
           "candidate_id": 13723
+        },
+        {
+          "district": "8",
+          "district_name": "HD-8",
+          "seat_designator": "C",
+          "name": "Kim Ross",
+          "party": "D",
+          "pres_margin": "+25.9",
+          "next_election": 2026,
+          "candidate_id": 13724
         },
         {
           "district": "8",
@@ -758,6 +760,16 @@
           "candidate_id": 13688
         },
         {
+          "district": "31",
+          "district_name": "HD-31",
+          "seat_designator": "C",
+          "name": "LaToya Nkongolo",
+          "party": "R",
+          "pres_margin": "-10.8",
+          "next_election": 2026,
+          "candidate_id": 13688
+        },
+        {
           "district": "32",
           "district_name": "HD-32",
           "seat_designator": "A",
@@ -896,6 +908,16 @@
           "pres_margin": "+65.4",
           "next_election": 2026,
           "candidate_id": 13754
+        },
+        {
+          "district": "41",
+          "district_name": "HD-41",
+          "seat_designator": "C",
+          "name": "Sean Stinnett",
+          "party": "D",
+          "pres_margin": "+65.4",
+          "next_election": 2026,
+          "candidate_id": 13755
         },
         {
           "district": "41",
@@ -1068,6 +1090,16 @@
           "candidate_id": 9922
         },
         {
+          "district": "27A",
+          "district_name": "HD-27A",
+          "seat_designator": null,
+          "name": "Darrell Odom",
+          "party": "D",
+          "pres_margin": "+59.9",
+          "next_election": 2026,
+          "candidate_id": 9922
+        },
+        {
           "district": "27B",
           "district_name": "HD-27B",
           "seat_designator": null,
@@ -1148,6 +1180,16 @@
           "candidate_id": 9957
         },
         {
+          "district": "2B",
+          "district_name": "HD-2B",
+          "seat_designator": null,
+          "name": "Matthew Schindler",
+          "party": "D",
+          "pres_margin": "+9.0",
+          "next_election": 2026,
+          "candidate_id": 9957
+        },
+        {
           "district": "30A",
           "district_name": "HD-30A",
           "seat_designator": "A",
@@ -1165,7 +1207,17 @@
           "party": "D",
           "pres_margin": "+31.4",
           "next_election": 2026,
-          "candidate_id": 13700
+          "candidate_id": 13699
+        },
+        {
+          "district": "30A",
+          "district_name": "HD-30A",
+          "seat_designator": "B",
+          "name": "Dana Jones",
+          "party": "D",
+          "pres_margin": "+31.4",
+          "next_election": 2026,
+          "candidate_id": 11474
         },
         {
           "district": "30B",
@@ -1305,7 +1357,17 @@
           "party": "R",
           "pres_margin": "-15.9",
           "next_election": 2026,
-          "candidate_id": 66742
+          "candidate_id": 9947
+        },
+        {
+          "district": "38A",
+          "district_name": "HD-38A",
+          "seat_designator": null,
+          "name": "Kevin Anderson",
+          "party": "R",
+          "pres_margin": "-15.9",
+          "next_election": 2026,
+          "candidate_id": 9947
         },
         {
           "district": "38B",
@@ -1510,15 +1572,15 @@
       ]
     },
     "Senate": {
-      "total": 47,
+      "total": 51,
       "composition": {
-        "D": 34,
+        "D": 38,
         "R": 13,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 32,
-      "seats_up_2026": 47,
+      "supermajority": 34,
+      "seats_up_2026": 51,
       "members": [
         {
           "district": "1",
@@ -1589,6 +1651,16 @@
           "pres_margin": "-15.9",
           "next_election": 2026,
           "candidate_id": 9930
+        },
+        {
+          "district": "8",
+          "district_name": "SD-8",
+          "seat_designator": null,
+          "name": "Carl Jackson",
+          "party": "D",
+          "pres_margin": "+25.9",
+          "next_election": 2026,
+          "candidate_id": 9912
         },
         {
           "district": "8",
@@ -1791,6 +1863,16 @@
           "candidate_id": 9949
         },
         {
+          "district": "27",
+          "district_name": "SD-27",
+          "seat_designator": null,
+          "name": "Kevin Harris",
+          "party": "D",
+          "pres_margin": "+22.4",
+          "next_election": 2026,
+          "candidate_id": 75580
+        },
+        {
           "district": "28",
           "district_name": "SD-28",
           "seat_designator": null,
@@ -1809,6 +1891,16 @@
           "pres_margin": "-15.0",
           "next_election": 2026,
           "candidate_id": 9931
+        },
+        {
+          "district": "30",
+          "district_name": "SD-30",
+          "seat_designator": null,
+          "name": "Shaneka Henson",
+          "party": "D",
+          "pres_margin": "+17.5",
+          "next_election": 2026,
+          "candidate_id": 9968
         },
         {
           "district": "30",
@@ -1931,6 +2023,16 @@
           "candidate_id": 9921
         },
         {
+          "district": "41",
+          "district_name": "SD-41",
+          "seat_designator": null,
+          "name": "Dalya Attar",
+          "party": "D",
+          "pres_margin": "+65.4",
+          "next_election": 2026,
+          "candidate_id": 9921
+        },
+        {
           "district": "42",
           "district_name": "SD-42",
           "seat_designator": null,
@@ -1997,13 +2099,6 @@
     "governor": {
       "forecast": "Solid D",
       "candidates": [
-        {
-          "name": "Eric Felber",
-          "party": "D",
-          "is_incumbent": false,
-          "election_type": "Primary_D",
-          "status": "Filed"
-        },
         {
           "name": "Eric S. Felber",
           "party": "D",
@@ -2133,132 +2228,30 @@
             "name": "Anthony Brown",
             "party": "D",
             "is_incumbent": true,
-            "election_type": "Primary_D"
+            "election_type": "General"
+          },
+          {
+            "name": "Michael Anthony Peroutka",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
           }
         ]
       },
       {
-        "office": "Lt. Governor",
+        "office": "Controller",
         "candidates": [
           {
-            "name": "Aruna Miller",
+            "name": "Brooke Lierman",
             "party": "D",
             "is_incumbent": true,
-            "election_type": "Primary_D"
+            "election_type": "General"
           },
           {
-            "name": "David Ray",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Donald Palmore",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "LaTrece Hawkins Lytes",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Lee Hawkins",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Brenda Thiam",
+            "name": "Barry Glassman",
             "party": "R",
             "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Jeremy M. Shifflett",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Jeremy Shifflett",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Kevin L. Rhodes Sr.",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Kevin Rhodes Sr.",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Mark Duncan",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Martina Duncan",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Rachel Hannah \"Mohawk\" Swift",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Rachel Swift",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Rob Krop",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Ronald Abend",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Ronald W. Abend",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Shannon Wright",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Stephen Wright",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Tyrone Keys Jr.",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
+            "election_type": "General"
           }
         ]
       }
@@ -2853,12 +2846,6 @@
           },
           {
             "name": "Gabriel Sorrel",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Steven Johnson",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3483,7 +3470,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Crystal Jackson Parker",
+            "name": "Crystal Parker",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -4334,12 +4321,6 @@
         "chamber": "House of Delegates",
         "district": "38A",
         "candidates": [
-          {
-            "name": "Steven Johnson",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
           {
             "name": "C. L. Marshall, 3rd",
             "party": "R",
@@ -5303,12 +5284,6 @@
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
-          },
-          {
-            "name": "Nicholaus Kipke",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
           }
         ]
       },
@@ -5324,25 +5299,13 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Mark S. Chang",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Pamela Beidle",
+            "name": "Pam Beidle",
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
           },
           {
             "name": "Stephen A. Tillett",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Stephen Tillett",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5474,12 +5437,6 @@
           },
           {
             "name": "Edmund Barrett",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Katie Clendaniel",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5807,16 +5764,6 @@
       "pres_margin": "+22.5",
       "holder_party": "D",
       "candidate": "Sheree Sample-Hughes",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House of Delegates",
-      "district": "38A",
-      "seat_label": "MD HoD 38A",
-      "pres_margin": "-15.9",
-      "holder_party": "R",
-      "candidate": "Steven Johnson",
       "is_open_seat": null
     },
     {
@@ -6577,6 +6524,16 @@
       "pres_margin": "+17.5",
       "holder_party": "D",
       "candidate": "Jessica Haire",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "31",
+      "seat_label": "MD Senate 31",
+      "pres_margin": "-10.8",
+      "holder_party": "R",
+      "candidate": "Nic Kipke",
       "is_open_seat": null
     },
     {

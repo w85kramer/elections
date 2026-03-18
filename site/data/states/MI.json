@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Michigan",
     "abbr": "MI",
@@ -32,14 +32,6 @@
           "rating": "Toss-up"
         }
       ]
-    },
-    {
-      "office": "Lt. Governor",
-      "name": "Garlin Gilchrist",
-      "party": "D",
-      "method": "Elected",
-      "next_election": 2026,
-      "start_year": 2019
     },
     {
       "office": "Attorney General",
@@ -1589,7 +1581,114 @@
       "forecast": "Toss-up",
       "candidates": []
     },
-    "statewide": [],
+    "statewide": [
+      {
+        "office": "Attorney General",
+        "candidates": [
+          {
+            "name": "Dana Nessel",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Eli Savit",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Karen McDonald",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Doug Lloyd",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kevin Kijewski",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Matthew DePerno",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Secretary of State",
+        "candidates": [
+          {
+            "name": "Adam Hollier",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Aghogho Edevbie",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Barbara Byrum",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Garlin Gilchrist",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jocelyn Benson",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Suzanna Shkreli",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Amanda Love",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Anthony Forlini",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Monica Yatooma",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Timothy Smith",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          }
+        ]
+      }
+    ],
     "legislative": [
       {
         "seat_label": "MI House 3",
@@ -2042,7 +2141,7 @@
         "district": "24",
         "candidates": [
           {
-            "name": "Douglas Wozniak",
+            "name": "Doug Wozniak",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2061,7 +2160,7 @@
             "election_type": "Primary_R"
           },
           {
-            "name": "Matthew Bierlein",
+            "name": "Matt Bierlein",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2462,7 +2561,7 @@
       "seat_label": "MI Senate 24",
       "pres_margin": "-27.5",
       "holder_party": "R",
-      "candidate": "Douglas Wozniak",
+      "candidate": "Doug Wozniak",
       "is_open_seat": null
     },
     {

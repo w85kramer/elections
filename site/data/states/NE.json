@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T14:23:25.342716Z",
   "state": {
     "name": "Nebraska",
     "abbr": "NE",
@@ -32,14 +32,6 @@
           "rating": "Solid R"
         }
       ]
-    },
-    {
-      "office": "Lt. Governor",
-      "name": "Joe Kelly",
-      "party": "R",
-      "method": "Elected",
-      "next_election": 2026,
-      "start_year": 2023
     },
     {
       "office": "Attorney General",
@@ -646,22 +638,34 @@
         "office": "Attorney General",
         "candidates": [
           {
-            "name": "Jocelyn Brasher",
-            "party": "D",
+            "name": "Larry Bolinger",
+            "party": "L",
             "is_incumbent": false,
-            "election_type": "Primary_D"
+            "election_type": "General"
           },
           {
             "name": "Mike Hilgers",
             "party": "R",
             "is_incumbent": true,
-            "election_type": "Primary_R"
+            "election_type": "General"
           }
         ]
       },
       {
         "office": "Auditor",
         "candidates": [
+          {
+            "name": "Gene Siadek",
+            "party": "L",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mike Foley",
+            "party": "R",
+            "is_incumbent": true,
+            "election_type": "General"
+          },
           {
             "name": "Mike Foley",
             "party": "R",
@@ -674,28 +678,10 @@
         "office": "Secretary of State",
         "candidates": [
           {
-            "name": "Lee M. Cimfel",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
-            "name": "Sarah Slattery",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
             "name": "Bob Evnen",
             "party": "R",
             "is_incumbent": true,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "Scott Petersen",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
+            "election_type": "General"
           }
         ]
       },
@@ -703,16 +689,16 @@
         "office": "Treasurer",
         "candidates": [
           {
-            "name": "Daniel Ebers",
-            "party": "D",
-            "is_incumbent": false,
-            "election_type": "Primary_D"
-          },
-          {
             "name": "Joey Spellerberg",
             "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "John Murante",
+            "party": "R",
             "is_incumbent": true,
-            "election_type": "Primary_R"
+            "election_type": "General"
           }
         ]
       }
