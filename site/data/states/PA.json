@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T23:52:08.891132Z",
+  "generated_at": "2026-03-18T11:27:26.567588Z",
   "state": {
     "name": "Pennsylvania",
     "abbr": "PA",
@@ -24,29 +24,21 @@
       "forecast": "Likely D",
       "forecast_details": [
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Likely D"
         },
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Likely D"
         }
       ]
-    },
-    {
-      "office": "Lt. Governor",
-      "name": "Austin Davis",
-      "party": "D",
-      "method": "Elected",
-      "next_election": 2026,
-      "start_year": 2023
     },
     {
       "office": "Attorney General",
       "name": "Dave Sunday",
       "party": "R",
       "method": "Elected",
-      "next_election": 2026,
+      "next_election": 2028,
       "start_year": 2025
     },
     {
@@ -63,7 +55,7 @@
       "name": "Stacy Garrity",
       "party": "R",
       "method": "Elected",
-      "next_election": 2026,
+      "next_election": 2028,
       "start_year": 2021
     },
     {
@@ -71,7 +63,7 @@
       "name": "Timothy DeFoor",
       "party": "R",
       "method": "Elected",
-      "next_election": 2026,
+      "next_election": 2028,
       "start_year": 2021
     }
   ],
@@ -80,9 +72,9 @@
       "total": 203,
       "composition": {
         "D": 102,
-        "R": 98,
+        "R": 100,
         "Other": 0,
-        "Vacant": 3
+        "Vacant": 1
       },
       "supermajority": 136,
       "seats_up_2026": 203,
@@ -871,10 +863,11 @@
           "district": "79",
           "district_name": "HD-79",
           "seat_designator": null,
-          "name": null,
-          "party": null,
+          "name": "Andrea Verobish",
+          "party": "R",
           "pres_margin": "-32.5",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 16917
         },
         {
           "district": "80",
@@ -2010,10 +2003,11 @@
           "district": "193",
           "district_name": "HD-193",
           "seat_designator": null,
-          "name": null,
-          "party": null,
+          "name": "Catherine Wallen",
+          "party": "R",
           "pres_margin": "-37.6",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 16919
         },
         {
           "district": "194",
@@ -2643,7 +2637,7 @@
         "district": "1",
         "candidates": [
           {
-            "name": "Patrick J Harkins",
+            "name": "Pat Harkins",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2669,7 +2663,7 @@
         "district": "3",
         "candidates": [
           {
-            "name": "Ryan A Bizzarro",
+            "name": "Ryan Bizzarro",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2713,7 +2707,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Eric J. Weaknecht",
+            "name": "Eric Weaknecht",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2726,13 +2720,13 @@
         "district": "6",
         "candidates": [
           {
-            "name": "Michael C Walker",
+            "name": "Michael Walker",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
-            "name": "Bradley T Roae",
+            "name": "Brad Roae",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2745,7 +2739,7 @@
         "district": "7",
         "candidates": [
           {
-            "name": "Parke H Wentling",
+            "name": "Parke Wentling",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2764,7 +2758,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Aaron Joseph Bernstine",
+            "name": "Aaron Bernstine",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2789,7 +2783,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Marla Ann Brown",
+            "name": "Marla Brown",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2846,7 +2840,7 @@
             "election_type": "Primary_R"
           },
           {
-            "name": "Scott R Timko",
+            "name": "Scott Timko",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2865,7 +2859,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "John Adda Lawrence",
+            "name": "John Lawrence",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2897,7 +2891,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Joshua Daniel Kail",
+            "name": "Josh Kail",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2910,7 +2904,7 @@
         "district": "16",
         "candidates": [
           {
-            "name": "Robert F. Matzie",
+            "name": "Rob Matzie",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2929,7 +2923,7 @@
         "district": "17",
         "candidates": [
           {
-            "name": "Timothy R. Bonner",
+            "name": "Tim Bonner",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2961,7 +2955,7 @@
         "district": "19",
         "candidates": [
           {
-            "name": "Aerion Andrew Abney",
+            "name": "Aerion Abney",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -2987,7 +2981,7 @@
         "district": "21",
         "candidates": [
           {
-            "name": "Lindsay Alexandra Powell",
+            "name": "Lindsay Powell",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3013,7 +3007,7 @@
         "district": "23",
         "candidates": [
           {
-            "name": "Dan Bernard Frankel",
+            "name": "Dan Frankel",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3045,7 +3039,7 @@
         "district": "25",
         "candidates": [
           {
-            "name": "Brandon Joseph Markosek",
+            "name": "Brandon Markosek",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3064,7 +3058,7 @@
         "district": "26",
         "candidates": [
           {
-            "name": "Paul Franklin Friel",
+            "name": "Paul Friel",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3077,7 +3071,7 @@
         "district": "27",
         "candidates": [
           {
-            "name": "Daniel J Deasy",
+            "name": "Dan Deasy",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3096,13 +3090,13 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Robert A Bertha",
+            "name": "Robert Bertha",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
-            "name": "Jeremy K Shaffer",
+            "name": "Jeremy Shaffer",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3115,7 +3109,7 @@
         "district": "29",
         "candidates": [
           {
-            "name": "Timothy Patrick Brennan",
+            "name": "Tim Brennan",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3179,7 +3173,7 @@
         "district": "33",
         "candidates": [
           {
-            "name": "Mandy Julia Steele",
+            "name": "Mandy Steele",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3198,7 +3192,7 @@
         "district": "34",
         "candidates": [
           {
-            "name": "Abigail Marie Salisbury",
+            "name": "Abigail Salisbury",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3217,7 +3211,7 @@
         "district": "35",
         "candidates": [
           {
-            "name": "Daniel Goughnour",
+            "name": "Dan Goughnour",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3236,7 +3230,7 @@
         "district": "36",
         "candidates": [
           {
-            "name": "Jessica Lynn Benham",
+            "name": "Jessica Benham",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3299,7 +3293,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Andrew M Kuzma",
+            "name": "Andrew Kuzma",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3331,13 +3325,13 @@
         "district": "41",
         "candidates": [
           {
-            "name": "Bradford T Chambers",
+            "name": "Brad Chambers",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
-            "name": "Brett R. Miller",
+            "name": "Brett Miller",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3356,7 +3350,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Keith James Greiner",
+            "name": "Keith Greiner",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3369,13 +3363,13 @@
         "district": "44",
         "candidates": [
           {
-            "name": "Hadley B Haas",
+            "name": "Hadley Haas",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
-            "name": "Valerie S. Gaydos",
+            "name": "Valerie Gaydos",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3412,7 +3406,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "James M. Julius",
+            "name": "James Julius",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3437,7 +3431,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Jason A. Ortitay",
+            "name": "Jason Ortitay",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3450,7 +3444,7 @@
         "district": "47",
         "candidates": [
           {
-            "name": "Edward Lee Ritter",
+            "name": "Edward Ritter",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3532,7 +3526,7 @@
         "district": "51",
         "candidates": [
           {
-            "name": "Charity Grimm Krupa",
+            "name": "Charity Krupa",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3545,7 +3539,7 @@
         "district": "52",
         "candidates": [
           {
-            "name": "Ryan James Warner",
+            "name": "Ryan Warner",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3558,7 +3552,7 @@
         "district": "53",
         "candidates": [
           {
-            "name": "Steven R Malagari",
+            "name": "Steve Malagari",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3571,7 +3565,7 @@
         "district": "54",
         "candidates": [
           {
-            "name": "Gregory Scott",
+            "name": "Greg Scott",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3584,13 +3578,13 @@
         "district": "55",
         "candidates": [
           {
-            "name": "Davon Tyrone Magwood",
+            "name": "Davon Magwood",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
-            "name": "Jill Nixon Cooper",
+            "name": "Jill Cooper",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3603,7 +3597,7 @@
         "district": "56",
         "candidates": [
           {
-            "name": "Brian Casey Allen Rasel",
+            "name": "Brian Rasel",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3622,7 +3616,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Eric R Nelson",
+            "name": "Eric Nelson",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3641,7 +3635,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Eric M. Davanzo",
+            "name": "Eric Davanzo",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3717,7 +3711,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "James B. Struzzi Ii",
+            "name": "James Struzzi II",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3736,7 +3730,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Joshua Bashline",
+            "name": "Josh Bashline",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3774,7 +3768,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Kathy L. Rapp",
+            "name": "Kathy Rapp",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3793,7 +3787,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Brian A. Smith",
+            "name": "Brian Smith",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3831,7 +3825,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Clinton D Owlett",
+            "name": "Clint Owlett",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3844,7 +3838,7 @@
         "district": "69",
         "candidates": [
           {
-            "name": "Carl Walker Metzgar",
+            "name": "Carl Metzgar",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3857,7 +3851,7 @@
         "district": "70",
         "candidates": [
           {
-            "name": "Matthew D. Bradford",
+            "name": "Matt Bradford",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3902,7 +3896,7 @@
         "district": "73",
         "candidates": [
           {
-            "name": "Dallas Paul Kephart",
+            "name": "Dallas Kephart",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3915,7 +3909,7 @@
         "district": "74",
         "candidates": [
           {
-            "name": "Dan K Williams",
+            "name": "Dan Williams",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3959,7 +3953,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Stephanie Paige Borowicz",
+            "name": "Stephanie Borowicz",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -3991,7 +3985,7 @@
         "district": "78",
         "candidates": [
           {
-            "name": "Jesse W Topper",
+            "name": "Jesse Topper",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4010,7 +4004,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Scott D Barger",
+            "name": "Scott Barger",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4029,7 +4023,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Richard S Irvin",
+            "name": "Rich Irvin",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4067,7 +4061,7 @@
         "district": "83",
         "candidates": [
           {
-            "name": "Jamie Lee Flick",
+            "name": "Jamie Flick",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4093,7 +4087,7 @@
         "district": "85",
         "candidates": [
           {
-            "name": "David Hummer Rowe",
+            "name": "David Rowe",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4112,7 +4106,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Perry A Stambaugh",
+            "name": "Perry Stambaugh",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4150,7 +4144,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Sara M Agerton",
+            "name": "Sara Agerton",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -4181,7 +4175,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Robert W. Kauffman",
+            "name": "Rob Kauffman",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4194,7 +4188,7 @@
         "district": "90",
         "candidates": [
           {
-            "name": "Chad G. Reichard",
+            "name": "Chad Reichard",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4225,7 +4219,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Daniel P. Moul",
+            "name": "Dan Moul",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4256,7 +4250,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Marc S. Anderson",
+            "name": "Marc Anderson",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4307,7 +4301,7 @@
         "district": "95",
         "candidates": [
           {
-            "name": "Carol D Hill-Evans",
+            "name": "Carol Hill-Evans",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -4351,7 +4345,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Steven Curtis Mentzer",
+            "name": "Steve Mentzer",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4427,7 +4421,7 @@
         "district": "101",
         "candidates": [
           {
-            "name": "John A Schlegel",
+            "name": "John Schlegel",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4440,7 +4434,7 @@
         "district": "102",
         "candidates": [
           {
-            "name": "Russell H Diamond",
+            "name": "Russ Diamond",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4485,7 +4479,7 @@
         "district": "105",
         "candidates": [
           {
-            "name": "Justin Curtis Fleming",
+            "name": "Justin Fleming",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -4504,7 +4498,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Ryan M Hazel",
+            "name": "Ryan Hazel",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -4529,7 +4523,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Joanne C. Stehr",
+            "name": "Joanne Stehr",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4605,7 +4599,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Jonathan A Fritz",
+            "name": "Jonathan Fritz",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4618,7 +4612,7 @@
         "district": "112",
         "candidates": [
           {
-            "name": "Kyle James Mullins",
+            "name": "Kyle Mullins",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -4637,7 +4631,7 @@
         "district": "113",
         "candidates": [
           {
-            "name": "Kyle T Donahue",
+            "name": "Kyle Donahue",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -4662,7 +4656,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "David Andrew Burgerhoff",
+            "name": "David Burgerhoff",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4750,7 +4744,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "John F Lombardo",
+            "name": "John Lombardo",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4769,7 +4763,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Alec Joseph Ryncavage",
+            "name": "Alec Ryncavage",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4851,7 +4845,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Timothy F. Twardzik",
+            "name": "Tim Twardzik",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4864,7 +4858,7 @@
         "district": "124",
         "candidates": [
           {
-            "name": "Tina M Burns",
+            "name": "Tina Burns",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -4902,19 +4896,19 @@
         "district": "126",
         "candidates": [
           {
-            "name": "Jacklyn H Rusnock",
+            "name": "Jacklyn Rusnock",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
-            "name": "Joshua Michael Caltagirone",
+            "name": "Joshua Caltagirone",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
-            "name": "Miguel A. Vasquez",
+            "name": "Miguel Vasquez",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -4952,7 +4946,7 @@
             "election_type": "Primary_R"
           },
           {
-            "name": "Mark M Gillen",
+            "name": "Mark Gillen",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -5003,7 +4997,7 @@
         "district": "131",
         "candidates": [
           {
-            "name": "Meriam H Sabih",
+            "name": "Meriam Sabih",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5041,7 +5035,7 @@
         "district": "133",
         "candidates": [
           {
-            "name": "Jeanne Mcneill",
+            "name": "Jeanne McNeill",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5054,7 +5048,7 @@
         "district": "134",
         "candidates": [
           {
-            "name": "Peter Schweyer",
+            "name": "Pete Schweyer",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5136,7 +5130,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Ann L Flood",
+            "name": "Ann Flood",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -5155,7 +5149,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Jeffrey H Olsommer",
+            "name": "Jeff Olsommer",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -5187,7 +5181,7 @@
         "district": "141",
         "candidates": [
           {
-            "name": "Tina Marie Davis",
+            "name": "Tina Davis",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5231,7 +5225,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Shelby E. Labs",
+            "name": "Shelby Labs",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -5269,7 +5263,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Craig T Staats",
+            "name": "Craig Staats",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -5301,7 +5295,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Donna Marie Scheuren",
+            "name": "Donna Scheuren",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -5345,7 +5339,7 @@
         "district": "149",
         "candidates": [
           {
-            "name": "Timothy Patrick Briggs",
+            "name": "Tim Briggs",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5397,7 +5391,7 @@
         "district": "153",
         "candidates": [
           {
-            "name": "Benjamin V. Sanchez",
+            "name": "Ben Sanchez",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5416,7 +5410,7 @@
         "district": "154",
         "candidates": [
           {
-            "name": "Napoleon J Nelson",
+            "name": "Napoleon Nelson",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5429,7 +5423,7 @@
         "district": "155",
         "candidates": [
           {
-            "name": "Danielle Friel Otten",
+            "name": "Danielle Otten",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5442,13 +5436,13 @@
         "district": "156",
         "candidates": [
           {
-            "name": "Christopher Pielli",
+            "name": "Chris Pielli",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
-            "name": "Kris R Vollrath",
+            "name": "Kris R. Vollrath",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -5461,7 +5455,7 @@
         "district": "157",
         "candidates": [
           {
-            "name": "Melissa Lynn Shusterman",
+            "name": "Melissa Shusterman",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5480,7 +5474,7 @@
         "district": "158",
         "candidates": [
           {
-            "name": "Christina D Sappey",
+            "name": "Christina Sappey",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5512,7 +5506,7 @@
         "district": "160",
         "candidates": [
           {
-            "name": "Elizabeth Rhein Moro",
+            "name": "Elizabeth Moro",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5531,7 +5525,7 @@
         "district": "161",
         "candidates": [
           {
-            "name": "Leanne Theresa Krueger",
+            "name": "Leanne Krueger",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5576,7 +5570,7 @@
         "district": "164",
         "candidates": [
           {
-            "name": "Gina H Curry",
+            "name": "Gina Curry",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5589,7 +5583,7 @@
         "district": "165",
         "candidates": [
           {
-            "name": "Jennifer O'Mara",
+            "name": "Jenn O'Mara",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5608,7 +5602,7 @@
         "district": "166",
         "candidates": [
           {
-            "name": "Gregory Stephen Vitali",
+            "name": "Greg Vitali",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5633,7 +5627,7 @@
         "district": "167",
         "candidates": [
           {
-            "name": "Kristine C. Howard",
+            "name": "Kristine Howard",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5652,13 +5646,13 @@
         "district": "168",
         "candidates": [
           {
-            "name": "Lisa Anne Borowski",
+            "name": "Lisa Borowski",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
-            "name": "Kathryn M.L. Buckley",
+            "name": "Kathryn Buckley",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -5677,7 +5671,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Kate Anne Klunk",
+            "name": "Kate Klunk",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -5696,7 +5690,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Martina A. White",
+            "name": "Martina White",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -5715,7 +5709,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Kerry A Benninghoff",
+            "name": "Kerry Benninghoff",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -5728,7 +5722,7 @@
         "district": "172",
         "candidates": [
           {
-            "name": "Sean Michael Dougherty",
+            "name": "Sean Dougherty",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5747,7 +5741,7 @@
         "district": "173",
         "candidates": [
           {
-            "name": "Patrick Gallagher",
+            "name": "Pat Gallagher",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5779,7 +5773,7 @@
         "district": "175",
         "candidates": [
           {
-            "name": "Marylouise Isaacson",
+            "name": "Mary Isaacson",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5811,7 +5805,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Mark Joseph Lavelle",
+            "name": "Mark Lavelle",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5894,7 +5888,7 @@
         "district": "182",
         "candidates": [
           {
-            "name": "Benjamin R Waxman",
+            "name": "Ben Waxman",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5913,7 +5907,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Zachary Allen Mako",
+            "name": "Zach Mako",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -5945,7 +5939,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Regina G Young",
+            "name": "Regina Young",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5958,7 +5952,7 @@
         "district": "186",
         "candidates": [
           {
-            "name": "Jordan Alexander Harris",
+            "name": "Jordan Harris",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5983,7 +5977,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Gary W Day",
+            "name": "Gary Day",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -5996,13 +5990,13 @@
         "district": "188",
         "candidates": [
           {
-            "name": "Rick C Krajewski",
+            "name": "Rick Krajewski",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
-            "name": "Tony Dphax King",
+            "name": "Tony King",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6047,7 +6041,7 @@
         "district": "191",
         "candidates": [
           {
-            "name": "Joanna Elizabeth Mcclinton",
+            "name": "Joanna McClinton",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6085,7 +6079,7 @@
         "district": "194",
         "candidates": [
           {
-            "name": "Tarik Sharif Khan",
+            "name": "Tarik Khan",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6098,7 +6092,7 @@
         "district": "195",
         "candidates": [
           {
-            "name": "Keith S. Harris",
+            "name": "Keith Harris",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6142,7 +6136,7 @@
         "district": "197",
         "candidates": [
           {
-            "name": "Danilo R Burgos",
+            "name": "Danilo Burgos",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6155,7 +6149,7 @@
         "district": "198",
         "candidates": [
           {
-            "name": "Darisha K Parker",
+            "name": "Darisha Parker",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6180,7 +6174,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Barbara Gleim",
+            "name": "Barb Gleim",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -6218,7 +6212,7 @@
         "district": "201",
         "candidates": [
           {
-            "name": "Andre Donte Carroll",
+            "name": "Andre Carroll",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6237,7 +6231,7 @@
         "district": "202",
         "candidates": [
           {
-            "name": "Jared G Solomon",
+            "name": "Jared Solomon",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6256,7 +6250,7 @@
         "district": "203",
         "candidates": [
           {
-            "name": "Anthony A. Bellmon",
+            "name": "Anthony Bellmon",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6282,7 +6276,7 @@
         "district": "4",
         "candidates": [
           {
-            "name": "Arthur Haywood",
+            "name": "Art Haywood",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6345,7 +6339,7 @@
         "district": "10",
         "candidates": [
           {
-            "name": "Steven J Santarsiero",
+            "name": "Steve Santarsiero",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6389,7 +6383,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Omy Juriel Maldonado",
+            "name": "Omy Maldonado",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -6408,7 +6402,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Mark E Pinsley",
+            "name": "Mark Pinsley",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6420,7 +6414,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Jarrett Charles Coleman",
+            "name": "Jarrett Coleman",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -6433,7 +6427,7 @@
         "district": "18",
         "candidates": [
           {
-            "name": "Lisa M Boscola",
+            "name": "Lisa Boscola",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6514,7 +6508,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Tracy E. Pennycuick",
+            "name": "Tracy Pennycuick",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -6527,7 +6521,7 @@
         "district": "26",
         "candidates": [
           {
-            "name": "Timothy Patrick Kearney",
+            "name": "Tim Kearney",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6552,7 +6546,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Kristin Lee Phillips-Hill",
+            "name": "Kristin Phillips-Hill",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -6565,7 +6559,7 @@
         "district": "30",
         "candidates": [
           {
-            "name": "Sean C Steeg",
+            "name": "Sean Steeg",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6596,7 +6590,7 @@
             "election_type": "Primary_R"
           },
           {
-            "name": "Patrick J. Stefano",
+            "name": "Pat Stefano",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -6659,7 +6653,7 @@
         "district": "38",
         "candidates": [
           {
-            "name": "Lindsey M Williams",
+            "name": "Lindsey Williams",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6684,7 +6678,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Rosemary Maula Brown",
+            "name": "Rosemary Brown",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -6703,7 +6697,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Wayne D Fontana",
+            "name": "Wayne Fontana",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -6716,13 +6710,13 @@
         "district": "44",
         "candidates": [
           {
-            "name": "Katie J Muth",
+            "name": "Katie Muth",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
-            "name": "Melissa C. Dicranian",
+            "name": "Melissa Dicranian",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -6760,7 +6754,7 @@
         "district": "48",
         "candidates": [
           {
-            "name": "Christopher Gebhard",
+            "name": "Chris Gebhard",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -6796,7 +6790,7 @@
       "seat_label": "PA House 1",
       "pres_margin": "+24.1",
       "holder_party": "D",
-      "candidate": "Patrick J Harkins",
+      "candidate": "Pat Harkins",
       "is_open_seat": null
     },
     {
@@ -6816,7 +6810,7 @@
       "seat_label": "PA House 3",
       "pres_margin": "+2.0",
       "holder_party": "D",
-      "candidate": "Ryan A Bizzarro",
+      "candidate": "Ryan Bizzarro",
       "is_open_seat": null
     },
     {
@@ -6846,7 +6840,7 @@
       "seat_label": "PA House 6",
       "pres_margin": "-34.6",
       "holder_party": "R",
-      "candidate": "Michael C Walker",
+      "candidate": "Michael Walker",
       "is_open_seat": null
     },
     {
@@ -6906,7 +6900,7 @@
       "seat_label": "PA House 16",
       "pres_margin": "-7.5",
       "holder_party": "D",
-      "candidate": "Robert F. Matzie",
+      "candidate": "Rob Matzie",
       "is_open_seat": null
     },
     {
@@ -6926,7 +6920,7 @@
       "seat_label": "PA House 19",
       "pres_margin": "+62.1",
       "holder_party": "D",
-      "candidate": "Aerion Andrew Abney",
+      "candidate": "Aerion Abney",
       "is_open_seat": null
     },
     {
@@ -6946,7 +6940,7 @@
       "seat_label": "PA House 21",
       "pres_margin": "+23.2",
       "holder_party": "D",
-      "candidate": "Lindsay Alexandra Powell",
+      "candidate": "Lindsay Powell",
       "is_open_seat": null
     },
     {
@@ -6966,7 +6960,7 @@
       "seat_label": "PA House 23",
       "pres_margin": "+63.5",
       "holder_party": "D",
-      "candidate": "Dan Bernard Frankel",
+      "candidate": "Dan Frankel",
       "is_open_seat": null
     },
     {
@@ -6976,7 +6970,7 @@
       "seat_label": "PA House 25",
       "pres_margin": "+10.1",
       "holder_party": "D",
-      "candidate": "Brandon Joseph Markosek",
+      "candidate": "Brandon Markosek",
       "is_open_seat": null
     },
     {
@@ -6986,7 +6980,7 @@
       "seat_label": "PA House 26",
       "pres_margin": "+11.0",
       "holder_party": "D",
-      "candidate": "Paul Franklin Friel",
+      "candidate": "Paul Friel",
       "is_open_seat": null
     },
     {
@@ -6996,7 +6990,7 @@
       "seat_label": "PA House 27",
       "pres_margin": "+20.7",
       "holder_party": "D",
-      "candidate": "Daniel J Deasy",
+      "candidate": "Dan Deasy",
       "is_open_seat": null
     },
     {
@@ -7006,7 +7000,7 @@
       "seat_label": "PA House 29",
       "pres_margin": "+14.9",
       "holder_party": "D",
-      "candidate": "Timothy Patrick Brennan",
+      "candidate": "Tim Brennan",
       "is_open_seat": null
     },
     {
@@ -7046,7 +7040,7 @@
       "seat_label": "PA House 33",
       "pres_margin": "+4.3",
       "holder_party": "D",
-      "candidate": "Mandy Julia Steele",
+      "candidate": "Mandy Steele",
       "is_open_seat": null
     },
     {
@@ -7056,7 +7050,7 @@
       "seat_label": "PA House 35",
       "pres_margin": "+15.8",
       "holder_party": "D",
-      "candidate": "Daniel Goughnour",
+      "candidate": "Dan Goughnour",
       "is_open_seat": null
     },
     {
@@ -7066,7 +7060,7 @@
       "seat_label": "PA House 36",
       "pres_margin": "+28.4",
       "holder_party": "D",
-      "candidate": "Jessica Lynn Benham",
+      "candidate": "Jessica Benham",
       "is_open_seat": null
     },
     {
@@ -7106,7 +7100,7 @@
       "seat_label": "PA House 41",
       "pres_margin": "-4.9",
       "holder_party": "R",
-      "candidate": "Bradford T Chambers",
+      "candidate": "Brad Chambers",
       "is_open_seat": null
     },
     {
@@ -7126,7 +7120,7 @@
       "seat_label": "PA House 44",
       "pres_margin": "-3.8",
       "holder_party": "R",
-      "candidate": "Hadley B Haas",
+      "candidate": "Hadley Haas",
       "is_open_seat": null
     },
     {
@@ -7146,7 +7140,7 @@
       "seat_label": "PA House 47",
       "pres_margin": "-20.2",
       "holder_party": "R",
-      "candidate": "Edward Lee Ritter",
+      "candidate": "Edward Ritter",
       "is_open_seat": null
     },
     {
@@ -7186,7 +7180,7 @@
       "seat_label": "PA House 53",
       "pres_margin": "+10.8",
       "holder_party": "D",
-      "candidate": "Steven R Malagari",
+      "candidate": "Steve Malagari",
       "is_open_seat": null
     },
     {
@@ -7196,7 +7190,7 @@
       "seat_label": "PA House 54",
       "pres_margin": "+35.8",
       "holder_party": "D",
-      "candidate": "Gregory Scott",
+      "candidate": "Greg Scott",
       "is_open_seat": null
     },
     {
@@ -7206,7 +7200,7 @@
       "seat_label": "PA House 55",
       "pres_margin": "-22.5",
       "holder_party": "R",
-      "candidate": "Davon Tyrone Magwood",
+      "candidate": "Davon Magwood",
       "is_open_seat": null
     },
     {
@@ -7326,7 +7320,7 @@
       "seat_label": "PA House 70",
       "pres_margin": "+14.3",
       "holder_party": "D",
-      "candidate": "Matthew D. Bradford",
+      "candidate": "Matt Bradford",
       "is_open_seat": null
     },
     {
@@ -7346,7 +7340,7 @@
       "seat_label": "PA House 74",
       "pres_margin": "+8.9",
       "holder_party": "D",
-      "candidate": "Dan K Williams",
+      "candidate": "Dan Williams",
       "is_open_seat": null
     },
     {
@@ -7476,7 +7470,7 @@
       "seat_label": "PA House 95",
       "pres_margin": "+23.7",
       "holder_party": "D",
-      "candidate": "Carol D Hill-Evans",
+      "candidate": "Carol Hill-Evans",
       "is_open_seat": null
     },
     {
@@ -7536,7 +7530,7 @@
       "seat_label": "PA House 105",
       "pres_margin": "+22.9",
       "holder_party": "D",
-      "candidate": "Justin Curtis Fleming",
+      "candidate": "Justin Fleming",
       "is_open_seat": null
     },
     {
@@ -7596,7 +7590,7 @@
       "seat_label": "PA House 112",
       "pres_margin": "+1.1",
       "holder_party": "D",
-      "candidate": "Kyle James Mullins",
+      "candidate": "Kyle Mullins",
       "is_open_seat": null
     },
     {
@@ -7606,7 +7600,7 @@
       "seat_label": "PA House 113",
       "pres_margin": "+6.4",
       "holder_party": "D",
-      "candidate": "Kyle T Donahue",
+      "candidate": "Kyle Donahue",
       "is_open_seat": null
     },
     {
@@ -7666,7 +7660,7 @@
       "seat_label": "PA House 124",
       "pres_margin": "-38.5",
       "holder_party": "R",
-      "candidate": "Tina M Burns",
+      "candidate": "Tina Burns",
       "is_open_seat": null
     },
     {
@@ -7726,7 +7720,7 @@
       "seat_label": "PA House 131",
       "pres_margin": "-10.2",
       "holder_party": "R",
-      "candidate": "Meriam H Sabih",
+      "candidate": "Meriam Sabih",
       "is_open_seat": null
     },
     {
@@ -7746,7 +7740,7 @@
       "seat_label": "PA House 133",
       "pres_margin": "+7.5",
       "holder_party": "D",
-      "candidate": "Jeanne Mcneill",
+      "candidate": "Jeanne McNeill",
       "is_open_seat": null
     },
     {
@@ -7756,7 +7750,7 @@
       "seat_label": "PA House 134",
       "pres_margin": "+12.9",
       "holder_party": "D",
-      "candidate": "Peter Schweyer",
+      "candidate": "Pete Schweyer",
       "is_open_seat": null
     },
     {
@@ -7826,7 +7820,7 @@
       "seat_label": "PA House 141",
       "pres_margin": "+3.3",
       "holder_party": "D",
-      "candidate": "Tina Marie Davis",
+      "candidate": "Tina Davis",
       "is_open_seat": null
     },
     {
@@ -7896,7 +7890,7 @@
       "seat_label": "PA House 149",
       "pres_margin": "+37.8",
       "holder_party": "D",
-      "candidate": "Timothy Patrick Briggs",
+      "candidate": "Tim Briggs",
       "is_open_seat": null
     },
     {
@@ -7936,7 +7930,7 @@
       "seat_label": "PA House 153",
       "pres_margin": "+31.3",
       "holder_party": "D",
-      "candidate": "Benjamin V. Sanchez",
+      "candidate": "Ben Sanchez",
       "is_open_seat": null
     },
     {
@@ -7946,7 +7940,7 @@
       "seat_label": "PA House 154",
       "pres_margin": "+59.4",
       "holder_party": "D",
-      "candidate": "Napoleon J Nelson",
+      "candidate": "Napoleon Nelson",
       "is_open_seat": null
     },
     {
@@ -7956,7 +7950,7 @@
       "seat_label": "PA House 155",
       "pres_margin": "+15.7",
       "holder_party": "D",
-      "candidate": "Danielle Friel Otten",
+      "candidate": "Danielle Otten",
       "is_open_seat": null
     },
     {
@@ -7966,7 +7960,7 @@
       "seat_label": "PA House 156",
       "pres_margin": "+18.7",
       "holder_party": "D",
-      "candidate": "Christopher Pielli",
+      "candidate": "Chris Pielli",
       "is_open_seat": null
     },
     {
@@ -7976,7 +7970,7 @@
       "seat_label": "PA House 157",
       "pres_margin": "+24.7",
       "holder_party": "D",
-      "candidate": "Melissa Lynn Shusterman",
+      "candidate": "Melissa Shusterman",
       "is_open_seat": null
     },
     {
@@ -7986,7 +7980,7 @@
       "seat_label": "PA House 158",
       "pres_margin": "+17.5",
       "holder_party": "D",
-      "candidate": "Christina D Sappey",
+      "candidate": "Christina Sappey",
       "is_open_seat": null
     },
     {
@@ -7996,7 +7990,7 @@
       "seat_label": "PA House 160",
       "pres_margin": "+5.4",
       "holder_party": "R",
-      "candidate": "Elizabeth Rhein Moro",
+      "candidate": "Elizabeth Moro",
       "is_open_seat": null
     },
     {
@@ -8006,7 +8000,7 @@
       "seat_label": "PA House 161",
       "pres_margin": "+12.8",
       "holder_party": "D",
-      "candidate": "Leanne Theresa Krueger",
+      "candidate": "Leanne Krueger",
       "is_open_seat": null
     },
     {
@@ -8036,7 +8030,7 @@
       "seat_label": "PA House 164",
       "pres_margin": "+55.4",
       "holder_party": "D",
-      "candidate": "Gina H Curry",
+      "candidate": "Gina Curry",
       "is_open_seat": null
     },
     {
@@ -8046,7 +8040,7 @@
       "seat_label": "PA House 165",
       "pres_margin": "+17.2",
       "holder_party": "D",
-      "candidate": "Jennifer O'Mara",
+      "candidate": "Jenn O'Mara",
       "is_open_seat": null
     },
     {
@@ -8056,7 +8050,7 @@
       "seat_label": "PA House 167",
       "pres_margin": "+21.2",
       "holder_party": "D",
-      "candidate": "Kristine C. Howard",
+      "candidate": "Kristine Howard",
       "is_open_seat": null
     },
     {
@@ -8066,7 +8060,7 @@
       "seat_label": "PA House 168",
       "pres_margin": "+20.2",
       "holder_party": "D",
-      "candidate": "Lisa Anne Borowski",
+      "candidate": "Lisa Borowski",
       "is_open_seat": null
     },
     {
@@ -8106,7 +8100,7 @@
       "seat_label": "PA House 172",
       "pres_margin": "-0.8",
       "holder_party": "D",
-      "candidate": "Sean Michael Dougherty",
+      "candidate": "Sean Dougherty",
       "is_open_seat": null
     },
     {
@@ -8116,7 +8110,7 @@
       "seat_label": "PA House 173",
       "pres_margin": "+5.0",
       "holder_party": "D",
-      "candidate": "Patrick Gallagher",
+      "candidate": "Pat Gallagher",
       "is_open_seat": null
     },
     {
@@ -8136,7 +8130,7 @@
       "seat_label": "PA House 175",
       "pres_margin": "+67.1",
       "holder_party": "D",
-      "candidate": "Marylouise Isaacson",
+      "candidate": "Mary Isaacson",
       "is_open_seat": null
     },
     {
@@ -8176,7 +8170,7 @@
       "seat_label": "PA House 182",
       "pres_margin": "+74.4",
       "holder_party": "D",
-      "candidate": "Benjamin R Waxman",
+      "candidate": "Ben Waxman",
       "is_open_seat": null
     },
     {
@@ -8206,7 +8200,7 @@
       "seat_label": "PA House 186",
       "pres_margin": "+76.0",
       "holder_party": "D",
-      "candidate": "Jordan Alexander Harris",
+      "candidate": "Jordan Harris",
       "is_open_seat": null
     },
     {
@@ -8236,7 +8230,7 @@
       "seat_label": "PA House 191",
       "pres_margin": "+85.6",
       "holder_party": "D",
-      "candidate": "Joanna Elizabeth Mcclinton",
+      "candidate": "Joanna McClinton",
       "is_open_seat": null
     },
     {
@@ -8246,7 +8240,7 @@
       "seat_label": "PA House 194",
       "pres_margin": "+55.3",
       "holder_party": "D",
-      "candidate": "Tarik Sharif Khan",
+      "candidate": "Tarik Khan",
       "is_open_seat": null
     },
     {
@@ -8266,7 +8260,7 @@
       "seat_label": "PA House 197",
       "pres_margin": "+65.3",
       "holder_party": "D",
-      "candidate": "Danilo R Burgos",
+      "candidate": "Danilo Burgos",
       "is_open_seat": null
     },
     {
@@ -8276,7 +8270,7 @@
       "seat_label": "PA House 198",
       "pres_margin": "+84.7",
       "holder_party": "D",
-      "candidate": "Darisha K Parker",
+      "candidate": "Darisha Parker",
       "is_open_seat": null
     },
     {
@@ -8286,7 +8280,7 @@
       "seat_label": "PA House 203",
       "pres_margin": "+54.5",
       "holder_party": "D",
-      "candidate": "Anthony A. Bellmon",
+      "candidate": "Anthony Bellmon",
       "is_open_seat": null
     },
     {
@@ -8316,7 +8310,7 @@
       "seat_label": "PA Senate 10",
       "pres_margin": "+10.1",
       "holder_party": "D",
-      "candidate": "Steven J Santarsiero",
+      "candidate": "Steve Santarsiero",
       "is_open_seat": null
     },
     {
@@ -8366,7 +8360,7 @@
       "seat_label": "PA Senate 26",
       "pres_margin": "+19.4",
       "holder_party": "D",
-      "candidate": "Timothy Patrick Kearney",
+      "candidate": "Tim Kearney",
       "is_open_seat": null
     },
     {
@@ -8386,7 +8380,7 @@
       "seat_label": "PA Senate 30",
       "pres_margin": "-50.7",
       "holder_party": "R",
-      "candidate": "Sean C Steeg",
+      "candidate": "Sean Steeg",
       "is_open_seat": null
     },
     {
@@ -8416,7 +8410,7 @@
       "seat_label": "PA Senate 38",
       "pres_margin": "+10.2",
       "holder_party": "D",
-      "candidate": "Lindsey M Williams",
+      "candidate": "Lindsey Williams",
       "is_open_seat": null
     },
     {
@@ -8436,7 +8430,7 @@
       "seat_label": "PA Senate 44",
       "pres_margin": "+10.5",
       "holder_party": "D",
-      "candidate": "Katie J Muth",
+      "candidate": "Katie Muth",
       "is_open_seat": null
     },
     {
@@ -8476,7 +8470,7 @@
       "seat_label": "PA House 5",
       "pres_margin": "-27.2",
       "holder_party": "R",
-      "candidate": "Eric J. Weaknecht",
+      "candidate": "Eric Weaknecht",
       "is_open_seat": null
     },
     {
@@ -8486,7 +8480,7 @@
       "seat_label": "PA House 6",
       "pres_margin": "-34.6",
       "holder_party": "R",
-      "candidate": "Bradley T Roae",
+      "candidate": "Brad Roae",
       "is_open_seat": null
     },
     {
@@ -8496,7 +8490,7 @@
       "seat_label": "PA House 7",
       "pres_margin": "-17.6",
       "holder_party": "R",
-      "candidate": "Parke H Wentling",
+      "candidate": "Parke Wentling",
       "is_open_seat": null
     },
     {
@@ -8506,7 +8500,7 @@
       "seat_label": "PA House 8",
       "pres_margin": "-41.8",
       "holder_party": "R",
-      "candidate": "Aaron Joseph Bernstine",
+      "candidate": "Aaron Bernstine",
       "is_open_seat": null
     },
     {
@@ -8516,7 +8510,7 @@
       "seat_label": "PA House 9",
       "pres_margin": "-29.7",
       "holder_party": "R",
-      "candidate": "Marla Ann Brown",
+      "candidate": "Marla Brown",
       "is_open_seat": null
     },
     {
@@ -8536,7 +8530,7 @@
       "seat_label": "PA House 13",
       "pres_margin": "-4.7",
       "holder_party": "R",
-      "candidate": "John Adda Lawrence",
+      "candidate": "John Lawrence",
       "is_open_seat": null
     },
     {
@@ -8556,7 +8550,7 @@
       "seat_label": "PA House 15",
       "pres_margin": "-34.6",
       "holder_party": "R",
-      "candidate": "Joshua Daniel Kail",
+      "candidate": "Josh Kail",
       "is_open_seat": null
     },
     {
@@ -8576,7 +8570,7 @@
       "seat_label": "PA House 17",
       "pres_margin": "-47.0",
       "holder_party": "R",
-      "candidate": "Timothy R. Bonner",
+      "candidate": "Tim Bonner",
       "is_open_seat": null
     },
     {
@@ -8606,7 +8600,7 @@
       "seat_label": "PA House 28",
       "pres_margin": "-7.4",
       "holder_party": "R",
-      "candidate": "Jeremy K Shaffer",
+      "candidate": "Jeremy Shaffer",
       "is_open_seat": null
     },
     {
@@ -8676,7 +8670,7 @@
       "seat_label": "PA House 39",
       "pres_margin": "-19.0",
       "holder_party": "R",
-      "candidate": "Andrew M Kuzma",
+      "candidate": "Andrew Kuzma",
       "is_open_seat": null
     },
     {
@@ -8696,7 +8690,7 @@
       "seat_label": "PA House 41",
       "pres_margin": "-4.9",
       "holder_party": "R",
-      "candidate": "Brett R. Miller",
+      "candidate": "Brett Miller",
       "is_open_seat": null
     },
     {
@@ -8706,7 +8700,7 @@
       "seat_label": "PA House 43",
       "pres_margin": "-32.7",
       "holder_party": "R",
-      "candidate": "Keith James Greiner",
+      "candidate": "Keith Greiner",
       "is_open_seat": null
     },
     {
@@ -8716,7 +8710,7 @@
       "seat_label": "PA House 44",
       "pres_margin": "-3.8",
       "holder_party": "R",
-      "candidate": "Valerie S. Gaydos",
+      "candidate": "Valerie Gaydos",
       "is_open_seat": null
     },
     {
@@ -8726,7 +8720,7 @@
       "seat_label": "PA House 46",
       "pres_margin": "-14.6",
       "holder_party": "R",
-      "candidate": "Jason A. Ortitay",
+      "candidate": "Jason Ortitay",
       "is_open_seat": null
     },
     {
@@ -8766,7 +8760,7 @@
       "seat_label": "PA House 51",
       "pres_margin": "-33.2",
       "holder_party": "R",
-      "candidate": "Charity Grimm Krupa",
+      "candidate": "Charity Krupa",
       "is_open_seat": null
     },
     {
@@ -8776,7 +8770,7 @@
       "seat_label": "PA House 52",
       "pres_margin": "-42.4",
       "holder_party": "R",
-      "candidate": "Ryan James Warner",
+      "candidate": "Ryan Warner",
       "is_open_seat": null
     },
     {
@@ -8786,7 +8780,7 @@
       "seat_label": "PA House 55",
       "pres_margin": "-22.5",
       "holder_party": "R",
-      "candidate": "Jill Nixon Cooper",
+      "candidate": "Jill Cooper",
       "is_open_seat": null
     },
     {
@@ -8796,7 +8790,7 @@
       "seat_label": "PA House 56",
       "pres_margin": "-27.6",
       "holder_party": "R",
-      "candidate": "Brian Casey Allen Rasel",
+      "candidate": "Brian Rasel",
       "is_open_seat": null
     },
     {
@@ -8806,7 +8800,7 @@
       "seat_label": "PA House 57",
       "pres_margin": "-22.4",
       "holder_party": "R",
-      "candidate": "Eric R Nelson",
+      "candidate": "Eric Nelson",
       "is_open_seat": null
     },
     {
@@ -8816,7 +8810,7 @@
       "seat_label": "PA House 58",
       "pres_margin": "-34.0",
       "holder_party": "R",
-      "candidate": "Eric M. Davanzo",
+      "candidate": "Eric Davanzo",
       "is_open_seat": null
     },
     {
@@ -8846,7 +8840,7 @@
       "seat_label": "PA House 62",
       "pres_margin": "-32.8",
       "holder_party": "R",
-      "candidate": "James B. Struzzi Ii",
+      "candidate": "James Struzzi II",
       "is_open_seat": null
     },
     {
@@ -8856,7 +8850,7 @@
       "seat_label": "PA House 63",
       "pres_margin": "-56.8",
       "holder_party": "R",
-      "candidate": "Joshua Bashline",
+      "candidate": "Josh Bashline",
       "is_open_seat": null
     },
     {
@@ -8876,7 +8870,7 @@
       "seat_label": "PA House 65",
       "pres_margin": "-41.8",
       "holder_party": "R",
-      "candidate": "Kathy L. Rapp",
+      "candidate": "Kathy Rapp",
       "is_open_seat": null
     },
     {
@@ -8886,7 +8880,7 @@
       "seat_label": "PA House 66",
       "pres_margin": "-59.6",
       "holder_party": "R",
-      "candidate": "Brian A. Smith",
+      "candidate": "Brian Smith",
       "is_open_seat": null
     },
     {
@@ -8906,7 +8900,7 @@
       "seat_label": "PA House 68",
       "pres_margin": "-53.2",
       "holder_party": "R",
-      "candidate": "Clinton D Owlett",
+      "candidate": "Clint Owlett",
       "is_open_seat": null
     },
     {
@@ -8916,7 +8910,7 @@
       "seat_label": "PA House 69",
       "pres_margin": "-58.9",
       "holder_party": "R",
-      "candidate": "Carl Walker Metzgar",
+      "candidate": "Carl Metzgar",
       "is_open_seat": null
     },
     {
@@ -8946,7 +8940,7 @@
       "seat_label": "PA House 73",
       "pres_margin": "-52.6",
       "holder_party": "R",
-      "candidate": "Dallas Paul Kephart",
+      "candidate": "Dallas Kephart",
       "is_open_seat": null
     },
     {
@@ -8976,7 +8970,7 @@
       "seat_label": "PA House 76",
       "pres_margin": "-36.4",
       "holder_party": "R",
-      "candidate": "Stephanie Paige Borowicz",
+      "candidate": "Stephanie Borowicz",
       "is_open_seat": null
     },
     {
@@ -8996,7 +8990,7 @@
       "seat_label": "PA House 78",
       "pres_margin": "-69.4",
       "holder_party": "R",
-      "candidate": "Jesse W Topper",
+      "candidate": "Jesse Topper",
       "is_open_seat": null
     },
     {
@@ -9006,7 +9000,7 @@
       "seat_label": "PA House 80",
       "pres_margin": "-53.0",
       "holder_party": "R",
-      "candidate": "Scott D Barger",
+      "candidate": "Scott Barger",
       "is_open_seat": null
     },
     {
@@ -9016,7 +9010,7 @@
       "seat_label": "PA House 81",
       "pres_margin": "-54.3",
       "holder_party": "R",
-      "candidate": "Richard S Irvin",
+      "candidate": "Rich Irvin",
       "is_open_seat": null
     },
     {
@@ -9026,7 +9020,7 @@
       "seat_label": "PA House 83",
       "pres_margin": "-26.8",
       "holder_party": "R",
-      "candidate": "Jamie Lee Flick",
+      "candidate": "Jamie Flick",
       "is_open_seat": null
     },
     {
@@ -9046,7 +9040,7 @@
       "seat_label": "PA House 85",
       "pres_margin": "-41.5",
       "holder_party": "R",
-      "candidate": "David Hummer Rowe",
+      "candidate": "David Rowe",
       "is_open_seat": null
     },
     {
@@ -9056,7 +9050,7 @@
       "seat_label": "PA House 86",
       "pres_margin": "-51.6",
       "holder_party": "R",
-      "candidate": "Perry A Stambaugh",
+      "candidate": "Perry Stambaugh",
       "is_open_seat": null
     },
     {
@@ -9076,7 +9070,7 @@
       "seat_label": "PA House 89",
       "pres_margin": "-31.6",
       "holder_party": "R",
-      "candidate": "Robert W. Kauffman",
+      "candidate": "Rob Kauffman",
       "is_open_seat": null
     },
     {
@@ -9086,7 +9080,7 @@
       "seat_label": "PA House 90",
       "pres_margin": "-48.7",
       "holder_party": "R",
-      "candidate": "Chad G. Reichard",
+      "candidate": "Chad Reichard",
       "is_open_seat": null
     },
     {
@@ -9096,7 +9090,7 @@
       "seat_label": "PA House 92",
       "pres_margin": "-34.1",
       "holder_party": "R",
-      "candidate": "Marc S. Anderson",
+      "candidate": "Marc Anderson",
       "is_open_seat": null
     },
     {
@@ -9146,7 +9140,7 @@
       "seat_label": "PA House 97",
       "pres_margin": "-15.4",
       "holder_party": "R",
-      "candidate": "Steven Curtis Mentzer",
+      "candidate": "Steve Mentzer",
       "is_open_seat": null
     },
     {
@@ -9166,7 +9160,7 @@
       "seat_label": "PA House 101",
       "pres_margin": "-22.8",
       "holder_party": "R",
-      "candidate": "John A Schlegel",
+      "candidate": "John Schlegel",
       "is_open_seat": null
     },
     {
@@ -9176,7 +9170,7 @@
       "seat_label": "PA House 102",
       "pres_margin": "-41.4",
       "holder_party": "R",
-      "candidate": "Russell H Diamond",
+      "candidate": "Russ Diamond",
       "is_open_seat": null
     },
     {
@@ -9196,7 +9190,7 @@
       "seat_label": "PA House 107",
       "pres_margin": "-48.5",
       "holder_party": "R",
-      "candidate": "Joanne C. Stehr",
+      "candidate": "Joanne Stehr",
       "is_open_seat": null
     },
     {
@@ -9236,7 +9230,7 @@
       "seat_label": "PA House 111",
       "pres_margin": "-42.0",
       "holder_party": "R",
-      "candidate": "Jonathan A Fritz",
+      "candidate": "Jonathan Fritz",
       "is_open_seat": null
     },
     {
@@ -9286,7 +9280,7 @@
       "seat_label": "PA House 118",
       "pres_margin": "-7.4",
       "holder_party": "D",
-      "candidate": "John F Lombardo",
+      "candidate": "John Lombardo",
       "is_open_seat": null
     },
     {
@@ -9296,7 +9290,7 @@
       "seat_label": "PA House 119",
       "pres_margin": "-17.0",
       "holder_party": "R",
-      "candidate": "Alec Joseph Ryncavage",
+      "candidate": "Alec Ryncavage",
       "is_open_seat": null
     },
     {
@@ -9336,7 +9330,7 @@
       "seat_label": "PA House 123",
       "pres_margin": "-33.7",
       "holder_party": "R",
-      "candidate": "Timothy F. Twardzik",
+      "candidate": "Tim Twardzik",
       "is_open_seat": null
     },
     {
@@ -9366,7 +9360,7 @@
       "seat_label": "PA House 126",
       "pres_margin": "+4.5",
       "holder_party": "D",
-      "candidate": "Miguel A. Vasquez",
+      "candidate": "Miguel Vasquez",
       "is_open_seat": null
     },
     {
@@ -9436,7 +9430,7 @@
       "seat_label": "PA House 138",
       "pres_margin": "-22.1",
       "holder_party": "R",
-      "candidate": "Ann L Flood",
+      "candidate": "Ann Flood",
       "is_open_seat": null
     },
     {
@@ -9446,7 +9440,7 @@
       "seat_label": "PA House 139",
       "pres_margin": "-31.7",
       "holder_party": "R",
-      "candidate": "Jeffrey H Olsommer",
+      "candidate": "Jeff Olsommer",
       "is_open_seat": null
     },
     {
@@ -9486,7 +9480,7 @@
       "seat_label": "PA House 143",
       "pres_margin": "-5.5",
       "holder_party": "R",
-      "candidate": "Shelby E. Labs",
+      "candidate": "Shelby Labs",
       "is_open_seat": null
     },
     {
@@ -9506,7 +9500,7 @@
       "seat_label": "PA House 145",
       "pres_margin": "-15.5",
       "holder_party": "R",
-      "candidate": "Craig T Staats",
+      "candidate": "Craig Staats",
       "is_open_seat": null
     },
     {
@@ -9516,7 +9510,7 @@
       "seat_label": "PA House 147",
       "pres_margin": "-9.7",
       "holder_party": "R",
-      "candidate": "Donna Marie Scheuren",
+      "candidate": "Donna Scheuren",
       "is_open_seat": null
     },
     {
@@ -9536,7 +9530,7 @@
       "seat_label": "PA House 156",
       "pres_margin": "+18.7",
       "holder_party": "D",
-      "candidate": "Kris R Vollrath",
+      "candidate": "Kris R. Vollrath",
       "is_open_seat": null
     },
     {
@@ -9606,7 +9600,7 @@
       "seat_label": "PA House 168",
       "pres_margin": "+20.2",
       "holder_party": "D",
-      "candidate": "Kathryn M.L. Buckley",
+      "candidate": "Kathryn Buckley",
       "is_open_seat": null
     },
     {
@@ -9616,7 +9610,7 @@
       "seat_label": "PA House 169",
       "pres_margin": "-32.2",
       "holder_party": "R",
-      "candidate": "Kate Anne Klunk",
+      "candidate": "Kate Klunk",
       "is_open_seat": null
     },
     {
@@ -9626,7 +9620,7 @@
       "seat_label": "PA House 170",
       "pres_margin": "-14.5",
       "holder_party": "R",
-      "candidate": "Martina A. White",
+      "candidate": "Martina White",
       "is_open_seat": null
     },
     {
@@ -9636,7 +9630,7 @@
       "seat_label": "PA House 171",
       "pres_margin": "-37.7",
       "holder_party": "R",
-      "candidate": "Kerry A Benninghoff",
+      "candidate": "Kerry Benninghoff",
       "is_open_seat": null
     },
     {
@@ -9696,7 +9690,7 @@
       "seat_label": "PA House 183",
       "pres_margin": "-21.6",
       "holder_party": "R",
-      "candidate": "Zachary Allen Mako",
+      "candidate": "Zach Mako",
       "is_open_seat": null
     },
     {
@@ -9706,7 +9700,7 @@
       "seat_label": "PA House 187",
       "pres_margin": "-9.4",
       "holder_party": "R",
-      "candidate": "Gary W Day",
+      "candidate": "Gary Day",
       "is_open_seat": null
     },
     {
@@ -9746,7 +9740,7 @@
       "seat_label": "PA House 199",
       "pres_margin": "-15.4",
       "holder_party": "R",
-      "candidate": "Barbara Gleim",
+      "candidate": "Barb Gleim",
       "is_open_seat": null
     },
     {
@@ -9796,7 +9790,7 @@
       "seat_label": "PA Senate 14",
       "pres_margin": "-2.7",
       "holder_party": "D",
-      "candidate": "Omy Juriel Maldonado",
+      "candidate": "Omy Maldonado",
       "is_open_seat": null
     },
     {
@@ -9806,7 +9800,7 @@
       "seat_label": "PA Senate 16",
       "pres_margin": "-8.9",
       "holder_party": "R",
-      "candidate": "Jarrett Charles Coleman",
+      "candidate": "Jarrett Coleman",
       "is_open_seat": null
     },
     {
@@ -9836,7 +9830,7 @@
       "seat_label": "PA Senate 24",
       "pres_margin": "-2.2",
       "holder_party": "R",
-      "candidate": "Tracy E. Pennycuick",
+      "candidate": "Tracy Pennycuick",
       "is_open_seat": null
     },
     {
@@ -9856,7 +9850,7 @@
       "seat_label": "PA Senate 28",
       "pres_margin": "-28.8",
       "holder_party": "R",
-      "candidate": "Kristin Lee Phillips-Hill",
+      "candidate": "Kristin Phillips-Hill",
       "is_open_seat": null
     },
     {
@@ -9896,7 +9890,7 @@
       "seat_label": "PA Senate 40",
       "pres_margin": "-6.5",
       "holder_party": "R",
-      "candidate": "Rosemary Maula Brown",
+      "candidate": "Rosemary Brown",
       "is_open_seat": null
     },
     {
@@ -9906,7 +9900,7 @@
       "seat_label": "PA Senate 44",
       "pres_margin": "+10.5",
       "holder_party": "D",
-      "candidate": "Melissa C. Dicranian",
+      "candidate": "Melissa Dicranian",
       "is_open_seat": null
     },
     {
