@@ -60,7 +60,7 @@ function partyLabel(party) {
     L: 'Libertarian', G: 'Green', F: 'Forward Party', C: 'Coalition',
     W: 'Write-in', WF: 'Working Families Party',
     AIP: 'Alaskan Independence Party', AMI: 'American Independent Party',
-    CMP: 'Cool Moose Party', CP: 'Constitution Party',
+    CIT: 'Citizens Party', CMP: 'Cool Moose Party', CP: 'Constitution Party',
     MOD: 'Moderate Party', PF: 'Peace & Freedom Party',
     REF: 'Reform Party', IAP: 'Independent American Party',
     MTP: 'Mountain Party', AMP: 'American Party',
