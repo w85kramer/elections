@@ -589,14 +589,8 @@
   // Build caucus annotation text
   // rawCaucus is the DB caucus value before effective-party mapping (e.g. 'C' for AK coalition)
   function caucusAnnotation(party, caucus, rawCaucus) {
-    // NE is officially nonpartisan — always show caucus affiliation
-    if (stateAbbr === 'NE') {
-      if (caucus === 'R') return ' <span class="incumbent-marker">(caucuses with Republicans)</span>';
-      if (caucus === 'D') return ' <span class="incumbent-marker">(caucuses with Democrats)</span>';
-      if (caucus === 'I') return ' <span class="incumbent-marker">(Independent)</span>';
-      if (caucus === 'L') return ' <span class="incumbent-marker">(Libertarian)</span>';
-      return '';
-    }
+    // NE is officially nonpartisan — caucus shown via name color + tooltip
+    if (stateAbbr === 'NE') return '';
     // AK-style bipartisan coalition
     if (rawCaucus === 'C') return ' <span class="incumbent-marker" style="color:var(--ms-purple)">(majority coalition)</span>';
     if (!caucus || caucus === party) return '';
@@ -617,19 +611,21 @@
 
   // Caucus annotation for candidates (not just holders)
   function candidateCaucusNote(c) {
-    if (stateAbbr !== 'NE') return '';
-    if (!c.caucus) return '';
-    if (c.caucus === 'R') return ' <span class="incumbent-marker">(caucuses with Republicans)</span>';
-    if (c.caucus === 'D') return ' <span class="incumbent-marker">(caucuses with Democrats)</span>';
-    if (c.caucus === 'I') return ' <span class="incumbent-marker">(Independent)</span>';
-    if (c.caucus === 'L') return ' <span class="incumbent-marker">(Libertarian)</span>';
+    // NE caucus shown via name color + tooltip, not inline text
     return '';
   }
 
   // Wrap candidate name in link to candidate page if ID is available
-  function candLink(name, id, style) {
-    if (!id) return `<span${style ? ' style="' + style + '"' : ''}>${name}</span>`;
-    return `<a href="candidate.html?id=${id}&st=${stateAbbr}" style="${style || ''}text-decoration:none">${name}</a>`;
+  function caucusTooltip(caucus) {
+    if (stateAbbr !== 'NE' || !caucus) return '';
+    const labels = { R: 'Caucuses with Republicans', D: 'Caucuses with Democrats', I: 'Independent', L: 'Libertarian' };
+    return labels[caucus] || '';
+  }
+
+  function candLink(name, id, style, tooltip) {
+    const t = tooltip ? ` title="${tooltip}"` : '';
+    if (!id) return `<span${style ? ' style="' + style + '"' : ''}${t}>${name}</span>`;
+    return `<a href="candidate.html?id=${id}&st=${stateAbbr}" style="${style || ''}text-decoration:none"${t}>${name}</a>`;
   }
 
   function forecastClass(rating) {
@@ -688,10 +684,11 @@
       const colorParty = s.current_holder_caucus || s.current_holder_party;
       const sinceStr = s.since_year ? ` &middot; Since ${s.since_year}` : '';
       const annotation = caucusAnnotation(s.current_holder_party, s.current_holder_caucus, s.raw_caucus);
+      const holderTip = caucusTooltip(s.current_holder_caucus);
       const seatPrefix = isBlocVoting ? '' : `${label} &middot; `;
       heroHtml += `<div class="holder-row">
         <span class="party-badge ${partyBadgeClass(dispParty)}">${dispParty}</span>
-        <span class="holder-name" style="${displayColor(s.current_holder_party, s.current_holder_caucus)}">${s.current_holder || 'Vacant'}</span>${annotation}
+        <span class="holder-name" style="${displayColor(s.current_holder_party, s.current_holder_caucus)}"${holderTip ? ` title="${holderTip}"` : ''}>${s.current_holder || 'Vacant'}</span>${annotation}
         <span class="holder-since">${isBlocVoting ? (s.since_year ? `Since ${s.since_year}` : '') : label + sinceStr}</span>
       </div>`;
     }
@@ -702,9 +699,10 @@
     const colorParty = s.current_holder_caucus || s.current_holder_party;
     const sinceStr = s.since_year ? `Since ${s.since_year}` : '';
     const annotation = caucusAnnotation(s.current_holder_party, s.current_holder_caucus);
+    const holderTip = caucusTooltip(s.current_holder_caucus);
     heroHtml += `<div class="holder-row">
       <span class="party-badge ${partyBadgeClass(dispParty)}">${dispParty}</span>
-      <span class="holder-name" style="${displayColor(s.current_holder_party, s.current_holder_caucus)}">${s.current_holder || 'Vacant'}</span>${annotation}
+      <span class="holder-name" style="${displayColor(s.current_holder_party, s.current_holder_caucus)}"${holderTip ? ` title="${holderTip}"` : ''}>${s.current_holder || 'Vacant'}</span>${annotation}
       <span class="holder-since">${sinceStr}</span>
     </div>`;
   }
@@ -841,8 +839,7 @@
           const candParty = inferParty(c.party, c.election_type, stateAbbr);
           const ep = effectiveParty(c);
           const nameStyle = ep !== candParty ? ` style="${partyColorStyle(ep)}"` : '';
-          const caucusNote = candidateCaucusNote(c);
-          candsHtml += `<li><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:11px;padding:1px 6px">${candParty || '?'}</span> ${candLink(c.name, c.id, ep !== candParty ? partyColorStyle(ep) + ';' : '')}${caucusNote} ${inc} ${typeLabel}</li>`;
+          candsHtml += `<li><span class="party-badge ${partyBadgeClass(candParty)}" style="font-size:11px;padding:1px 6px">${candParty || '?'}</span> ${candLink(c.name, c.id, ep !== candParty ? partyColorStyle(ep) + ';' : '', caucusTooltip(c.caucus))} ${inc} ${typeLabel}</li>`;
         }
         candsHtml += '</ul>';
       } else {
@@ -1047,8 +1044,7 @@
 
       const incStr = cand.is_incumbent ? ' <span class="incumbent-marker" title="incumbent">(i)</span>' : '';
       const wi = cand.is_write_in ? ' <span class="incumbent-marker" title="write-in candidate">(w/i)</span>' : '';
-      const caucusNote = candidateCaucusNote(cand);
-      const nameHtml = `<span class="cand-name">${candLink(cand.name, cand.id, partyColorStyle(ep || candParty) + ';')}${caucusNote}${incStr}${wi}</span>`;
+      const nameHtml = `<span class="cand-name">${candLink(cand.name, cand.id, partyColorStyle(ep || candParty) + ';', caucusTooltip(cand.caucus))}${incStr}${wi}</span>`;
 
       const pctStr = cand.pct != null ? `${cand.pct.toFixed(1)}%` : '';
       const votesStr = cand.votes != null ? numberWithCommas(cand.votes) : '';

@@ -865,20 +865,23 @@
           // Member name + caucus annotation
           const ntd = tr.insertCell();
           let caucusNote = '';
+          let caucusTip = '';
           if (stateAbbr === 'NE' && r.name) {
-            if (r.party === 'R') caucusNote = ' <span class="text-muted text-sm">(caucuses with Republicans)</span>';
-            else if (r.party === 'D') caucusNote = ' <span class="text-muted text-sm">(caucuses with Democrats)</span>';
+            if (r.party === 'R') caucusTip = 'Caucuses with Republicans';
+            else if (r.party === 'D') caucusTip = 'Caucuses with Democrats';
           } else if (r.caucus === 'C' && r.name) {
             caucusNote = ' <span class="text-sm" style="color:var(--ms-purple);font-style:italic">(majority coalition)</span>';
           }
           if (r.name && r.candidate_id) {
-            const candLink = `<a href="candidate.html?id=${r.candidate_id}&st=${stateAbbr}" style="color:${partyColor || 'var(--ms-other)'};text-decoration:none">${r.name}</a>`;
+            const tipAttr = caucusTip ? ` title="${caucusTip}"` : '';
+            const candLink = `<a href="candidate.html?id=${r.candidate_id}&st=${stateAbbr}" style="color:${partyColor || 'var(--ms-other)'};text-decoration:none"${tipAttr}>${r.name}</a>`;
             ntd.innerHTML = candLink + caucusNote;
           } else if (caucusNote) {
             ntd.innerHTML = `<span style="color:${partyColor || 'var(--ms-other)'}">${r.name}</span>${caucusNote}`;
           } else {
             ntd.textContent = r.name || 'Vacant';
             if (partyColor) ntd.style.color = partyColor;
+            if (caucusTip) ntd.title = caucusTip;
           }
 
           // Party badge

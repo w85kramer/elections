@@ -456,10 +456,7 @@
   function caucusAnnotation() {
     if (!displayCaucus || displayCaucus === displayParty) return '';
     if (displayCaucus === 'C') return ' <span style="font-size:13px;color:var(--ms-purple);font-style:italic">(majority coalition)</span>';
-    if (st === 'NE' && displayParty === 'NP') {
-      if (displayCaucus === 'R') return ' <span style="font-size:13px;color:var(--ms-text-light);font-style:italic">(caucuses with Republicans)</span>';
-      if (displayCaucus === 'D') return ' <span style="font-size:13px;color:var(--ms-text-light);font-style:italic">(caucuses with Democrats)</span>';
-    }
+    // NE caucus shown via name color + tooltip, not inline text
     return '';
   }
 
@@ -472,10 +469,13 @@
   // ==========================
   // 1. HERO SECTION
   // ==========================
+  const caucusTip = (st === 'NE' && displayCaucus && displayCaucus !== displayParty)
+    ? { R: 'Caucuses with Republicans', D: 'Caucuses with Democrats', I: 'Independent', L: 'Libertarian' }[displayCaucus] || ''
+    : '';
   let heroHtml = `<div class="candidate-hero">
     <div class="candidate-name">
       <span class="party-badge ${partyBadgeClass(displayParty)}">${displayParty || '?'}</span>
-      ${c.full_name}
+      <span${caucusTip ? ` title="${caucusTip}" style="${partyColorStyle(displayCaucus)};cursor:help"` : ''}>${c.full_name}</span>
     </div>`;
 
   if (c.current_office) {
