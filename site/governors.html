@@ -326,31 +326,50 @@
   document.getElementById('stat-dem').textContent = demHeld;
   document.getElementById('stat-gop').textContent = gopHeld;
 
-  // Inline map
-  var mapData = {};
-  var mapColors = {
-    'dem_incumbent': '#6cb3d2', 'dem_open': '#b6e2f4',
-    'gop_incumbent': '#e50963', 'gop_open': '#e86987',
-    'no_election': '#e4e4e4'
+  // Rating colors and order (used by both map and bar chart)
+  const RATING_COLORS = {
+    'Solid D': '#1a4a63', 'Very Likely D': '#6cb3d2', 'Likely D': '#4a8fad',
+    'Lean D': '#6cb3d2', 'Tilt D': '#93c9df',
+    'Toss-up': '#f5c542',
+    'Tilt R': '#f0a0b3', 'Lean R': '#e86987', 'Likely R': '#e50963',
+    'Very Likely R': '#c4084f', 'Solid R': '#9e063f',
+    'No Election': '#e4e4e4'
   };
+  const RATING_ORDER = [
+    'Solid D', 'Very Likely D', 'Likely D', 'Lean D', 'Tilt D',
+    'Toss-up',
+    'Tilt R', 'Lean R', 'Likely R', 'Very Likely R', 'Solid R'
+  ];
+
+  // Inline map — forecast ratings
+  const ALL_STATES = ['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY'];
+  var raceByState = {};
   for (var i = 0; i < races.length; i++) {
-    var r = races[i];
-    var cat = r.incumbent_party === 'D' ? (r.is_open_seat ? 'dem_open' : 'dem_incumbent') :
-              r.incumbent_party === 'R' ? (r.is_open_seat ? 'gop_open' : 'gop_incumbent') : 'no_election';
-    mapData[r.state] = { category: cat, info: r };
+    raceByState[races[i].state] = races[i];
   }
+  var mapData = {};
+  var noElectionCount = 0;
+  for (var j = 0; j < ALL_STATES.length; j++) {
+    var st = ALL_STATES[j];
+    var r = raceByState[st];
+    if (r && r.forecast) {
+      mapData[st] = { category: r.forecast, info: r };
+    } else {
+      noElectionCount++;
+      mapData[st] = { category: 'No Election', info: { state_name: r ? r.state_name : st, noElection: true } };
+    }
+  }
+  var mapLegend = RATING_ORDER.filter(function(rating) {
+    return ALL_STATES.some(function(s) { return raceByState[s] && raceByState[s].forecast === rating; });
+  }).map(function(rating) { return { label: rating, color: RATING_COLORS[rating] }; });
+  mapLegend.push({ label: 'No Election', color: '#e4e4e4' });
   new MapRenderer('#page-map', {
     data: mapData,
-    colors: mapColors,
+    colors: RATING_COLORS,
     defaultColor: '#e4e4e4',
-    legend: [
-      { label: 'Dem Incumbent', color: '#6cb3d2' },
-      { label: 'Dem Open Seat', color: '#b6e2f4' },
-      { label: 'GOP Incumbent', color: '#e50963' },
-      { label: 'GOP Open Seat', color: '#e86987' },
-      { label: 'No Election', color: '#e4e4e4' }
-    ],
+    legend: mapLegend,
     tooltipFn: function(abbr, info) {
+      if (info.noElection) return '<strong>' + info.state_name + '</strong><br>No gubernatorial election in 2026';
       if (!info.state_name) return '';
       var html = '<strong>' + info.state_name + '</strong><br>';
       html += 'Incumbent: ' + (info.incumbent || 'N/A') + ' (' + info.incumbent_party + ')';
@@ -361,19 +380,6 @@
   });
 
   // Ratings bar
-  const RATING_COLORS = {
-    'Solid D': '#1a4a63', 'Very Likely D': '#6cb3d2', 'Likely D': '#4a8fad',
-    'Lean D': '#6cb3d2', 'Tilt D': '#93c9df',
-    'Toss-up': '#f5c542',
-    'Tilt R': '#f0a0b3', 'Lean R': '#e86987', 'Likely R': '#e50963',
-    'Very Likely R': '#c4084f', 'Solid R': '#9e063f'
-  };
-  const RATING_ORDER = [
-    'Solid D', 'Very Likely D', 'Likely D', 'Lean D', 'Tilt D',
-    'Toss-up',
-    'Tilt R', 'Lean R', 'Likely R', 'Very Likely R', 'Solid R'
-  ];
-
   const ratingCounts = {};
   for (const r of races) {
     ratingCounts[r.forecast] = (ratingCounts[r.forecast] || 0) + 1;
@@ -391,6 +397,16 @@
     seg.title = rating + ': ' + count;
     bar.appendChild(seg);
     legend.innerHTML += '<span><span class="swatch" style="background:' + RATING_COLORS[rating] + '"></span>' + rating + ' (' + count + ')</span>';
+  }
+  if (noElectionCount > 0) {
+    const seg = document.createElement('div');
+    seg.style.flex = noElectionCount;
+    seg.style.background = '#e4e4e4';
+    seg.style.color = '#666';
+    seg.textContent = noElectionCount;
+    seg.title = 'No Election: ' + noElectionCount;
+    bar.appendChild(seg);
+    legend.innerHTML += '<span><span class="swatch" style="background:#e4e4e4"></span>No Election (' + noElectionCount + ')</span>';
   }
 
   // Rating filter options

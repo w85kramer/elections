@@ -259,7 +259,10 @@
 
   <!-- Map -->
   <div class="section">
-    <div style="font-family:'Work Sans',sans-serif;font-weight:800;font-size:22px;color:var(--ms-navy);text-align:center;margin-bottom:12px;line-height:1.1">State Legislatures <span style="color:#9bb5c4;font-weight:400;margin:0 6px">|</span> Partisan Breakdown</div>
+    <div style="font-family:'Work Sans',sans-serif;font-weight:800;font-size:22px;color:var(--ms-navy);text-align:center;margin-bottom:12px;line-height:1.1">Chamber Forecast Ratings</div>
+    <div style="text-align:center;margin-bottom:12px">
+      <button class="tab-btn active" id="map-tab-senate" onclick="switchMapTab('Senate')" style="padding:6px 18px;border:1px solid var(--ms-navy);background:var(--ms-navy);color:#fff;border-radius:4px 0 0 4px;cursor:pointer;font-weight:600">Senate</button><button class="tab-btn" id="map-tab-house" onclick="switchMapTab('House')" style="padding:6px 18px;border:1px solid var(--ms-navy);background:#fff;color:var(--ms-navy);border-radius:0 4px 4px 0;cursor:pointer;font-weight:600">House</button>
+    </div>
     <div id="page-map"></div>
   </div>
 
@@ -317,65 +320,132 @@
   const closeMargins = chambers.filter(c => Math.abs(c.margin) <= 5 && c.control_status !== 'Nonpartisan').length;
   document.getElementById('stat-close').textContent = closeMargins;
 
-  // Inline map — determine overall legislature control per state
-  var stateControl = {};
-  for (var i = 0; i < chambers.length; i++) {
-    var ch = chambers[i];
-    if (!stateControl[ch.state]) stateControl[ch.state] = { d: 0, r: 0, other: 0, name: ch.state_name };
-    if (ch.control_status === 'D') stateControl[ch.state].d++;
-    else if (ch.control_status === 'R') stateControl[ch.state].r++;
-    else stateControl[ch.state].other++;
-  }
-  var mapData = {};
-  var mapColors = { 'D': '#6cb3d2', 'R': '#e50963', 'Split': '#8b567f' };
-  for (var st in stateControl) {
-    var sc = stateControl[st];
-    var cat = sc.d > sc.r ? 'D' : sc.r > sc.d ? 'R' : 'Split';
-    mapData[st] = { category: cat, info: sc };
-  }
-  new MapRenderer('#page-map', {
-    data: mapData,
-    colors: mapColors,
-    legend: [
-      { label: 'Democratic Control', color: '#6cb3d2' },
-      { label: 'Republican Control', color: '#e50963' },
-      { label: 'Split Legislature', color: '#8b567f' }
-    ],
-    tooltipFn: function(abbr, info) {
-      if (!info.name) return '';
-      var cat = info.d > info.r ? 'Democratic' : info.r > info.d ? 'Republican' : 'Split';
-      return '<strong>' + info.name + '</strong><br>Legislature: ' + cat + ' Control';
-    }
-  });
-
-  // Ratings bar
+  // Rating colors and order (used by both map and bar chart)
   const RATING_COLORS = {
     'Solid D': '#1a4a63', 'Likely D': '#4a8fad', 'Lean D': '#6cb3d2',
     'Toss-Up': '#f5c542',
-    'Lean R': '#e86987', 'Likely R': '#e50963', 'Solid R': '#9e063f'
+    'Lean R': '#e86987', 'Likely R': '#e50963', 'Solid R': '#9e063f',
+    'Likely Coalition': '#7b3f9e',
+    'Not Rated': '#c8c8c8', 'No Chamber': '#e4e4e4'
   };
-  const RATING_ORDER = ['Solid D', 'Likely D', 'Lean D', 'Toss-Up', 'Lean R', 'Likely R', 'Solid R'];
+  const RATING_ORDER = ['Solid D', 'Likely D', 'Lean D', 'Toss-Up', 'Lean R', 'Likely R', 'Solid R', 'Likely Coalition'];
 
-  const ratingCounts = {};
-  for (const c of chambers) {
-    if (c.forecast_rating) {
-      ratingCounts[c.forecast_rating] = (ratingCounts[c.forecast_rating] || 0) + 1;
+  // Build per-chamber-type map data
+  const ALL_STATES = ['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY'];
+  var stateNames = {};
+  var chamberByType = { Senate: {}, House: {} };
+  for (var i = 0; i < chambers.length; i++) {
+    var ch = chambers[i];
+    stateNames[ch.state] = ch.state_name;
+    var type = (ch.chamber === 'Senate' || ch.chamber === 'Legislature') ? 'Senate' : 'House';
+    chamberByType[type][ch.state] = ch;
+  }
+
+  function buildMapData(chamberType) {
+    var mapData = {};
+    var counts = { notRated: 0, noChamber: 0 };
+    for (var j = 0; j < ALL_STATES.length; j++) {
+      var st = ALL_STATES[j];
+      var ch = chamberByType[chamberType][st];
+      if (ch && ch.forecast_rating) {
+        mapData[st] = { category: ch.forecast_rating, info: { name: stateNames[st], rating: ch.forecast_rating, chamber: ch.chamber } };
+      } else if (ch) {
+        counts.notRated++;
+        mapData[st] = { category: 'Not Rated', info: { name: stateNames[st], rating: 'Not Rated', chamber: ch.chamber } };
+      } else {
+        counts.noChamber++;
+        mapData[st] = { category: 'No Chamber', info: { name: stateNames[st] || st, rating: 'No Chamber' } };
+      }
+    }
+    return { mapData: mapData, counts: counts };
+  }
+
+  function buildMapLegend(mapData) {
+    var legend = RATING_ORDER.filter(function(r) {
+      return ALL_STATES.some(function(s) { return mapData[s] && mapData[s].category === r; });
+    }).map(function(r) { return { label: r, color: RATING_COLORS[r] }; });
+    if (ALL_STATES.some(function(s) { return mapData[s] && mapData[s].category === 'Not Rated'; }))
+      legend.push({ label: 'Not Rated', color: '#c8c8c8' });
+    if (ALL_STATES.some(function(s) { return mapData[s] && mapData[s].category === 'No Chamber'; }))
+      legend.push({ label: 'No Chamber', color: '#e4e4e4' });
+    return legend;
+  }
+
+  function mapTooltip(abbr, info) {
+    if (!info.name) return '';
+    if (info.rating === 'No Chamber') return '<strong>' + info.name + '</strong><br>Unicameral legislature';
+    if (info.rating === 'Not Rated') return '<strong>' + info.name + '</strong><br>' + info.chamber + '<br>No forecast rating';
+    return '<strong>' + info.name + '</strong><br>' + info.chamber + '<br>Forecast: ' + info.rating;
+  }
+
+  // Initialize map with Senate view
+  var senateData = buildMapData('Senate');
+  var mapInstance = new MapRenderer('#page-map', {
+    data: senateData.mapData,
+    colors: RATING_COLORS,
+    defaultColor: '#e4e4e4',
+    legend: buildMapLegend(senateData.mapData),
+    tooltipFn: mapTooltip
+  });
+
+  function buildRatingsBar(chamberType) {
+    var ratingCounts = {};
+    var subset = chamberType === 'Senate' ? chambers.filter(function(c) { return c.chamber === 'Senate' || c.chamber === 'Legislature'; }) : chambers.filter(function(c) { return c.chamber !== 'Senate' && c.chamber !== 'Legislature'; });
+    for (var k = 0; k < subset.length; k++) {
+      if (subset[k].forecast_rating) {
+        ratingCounts[subset[k].forecast_rating] = (ratingCounts[subset[k].forecast_rating] || 0) + 1;
+      }
+    }
+    var notRatedCount = subset.filter(function(c) { return !c.forecast_rating; }).length;
+
+    var bar = document.getElementById('ratings-bar');
+    var legend = document.getElementById('ratings-legend');
+    bar.innerHTML = '';
+    legend.innerHTML = '';
+    for (var m = 0; m < RATING_ORDER.length; m++) {
+      var rating = RATING_ORDER[m];
+      var count = ratingCounts[rating] || 0;
+      if (count === 0) continue;
+      var seg = document.createElement('div');
+      seg.style.flex = count;
+      seg.style.background = RATING_COLORS[rating];
+      seg.textContent = count;
+      seg.title = rating + ': ' + count;
+      bar.appendChild(seg);
+      legend.innerHTML += '<span><span class="swatch" style="background:' + RATING_COLORS[rating] + '"></span>' + rating + ' (' + count + ')</span>';
+    }
+    if (notRatedCount > 0) {
+      var seg2 = document.createElement('div');
+      seg2.style.flex = notRatedCount;
+      seg2.style.background = '#c8c8c8';
+      seg2.style.color = '#666';
+      seg2.textContent = notRatedCount;
+      seg2.title = 'Not Rated: ' + notRatedCount;
+      bar.appendChild(seg2);
+      legend.innerHTML += '<span><span class="swatch" style="background:#c8c8c8"></span>Not Rated (' + notRatedCount + ')</span>';
     }
   }
 
-  const bar = document.getElementById('ratings-bar');
-  const legend = document.getElementById('ratings-legend');
-  for (const rating of RATING_ORDER) {
-    const count = ratingCounts[rating] || 0;
-    if (count === 0) continue;
-    const seg = document.createElement('div');
-    seg.style.flex = count;
-    seg.style.background = RATING_COLORS[rating];
-    seg.textContent = count;
-    seg.title = rating + ': ' + count;
-    bar.appendChild(seg);
-    legend.innerHTML += '<span><span class="swatch" style="background:' + RATING_COLORS[rating] + '"></span>' + rating + ' (' + count + ')</span>';
-  }
+  // Initial bar chart for Senate
+  buildRatingsBar('Senate');
+
+  // Tab switching
+  window.switchMapTab = function(chamberType) {
+    var result = buildMapData(chamberType);
+    mapInstance.recolor(result.mapData, RATING_COLORS);
+    mapInstance.updateLegend(buildMapLegend(result.mapData));
+    buildRatingsBar(chamberType);
+    // Toggle button styles
+    var senBtn = document.getElementById('map-tab-senate');
+    var houseBtn = document.getElementById('map-tab-house');
+    if (chamberType === 'Senate') {
+      senBtn.style.background = 'var(--ms-navy)'; senBtn.style.color = '#fff';
+      houseBtn.style.background = '#fff'; houseBtn.style.color = 'var(--ms-navy)';
+    } else {
+      houseBtn.style.background = 'var(--ms-navy)'; houseBtn.style.color = '#fff';
+      senBtn.style.background = '#fff'; senBtn.style.color = 'var(--ms-navy)';
+    }
+  };
 
   // Rating filter options
   const ratingSel = document.getElementById('filter-rating');
