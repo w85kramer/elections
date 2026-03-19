@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T14:23:25.342716Z",
+  "generated_at": "2026-03-19T15:15:18.333749Z",
   "state": {
     "name": "California",
     "abbr": "CA",
@@ -24,11 +24,11 @@
       "forecast": "Solid D",
       "forecast_details": [
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Solid D"
         },
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Solid D"
         }
       ]
@@ -1329,7 +1329,78 @@
   "elections_2026": {
     "governor": {
       "forecast": "Solid D",
-      "candidates": []
+      "candidates": [
+        {
+          "name": "Antonio Villaraigosa",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary",
+          "status": null
+        },
+        {
+          "name": "Betty Yee",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary",
+          "status": null
+        },
+        {
+          "name": "Eric Swalwell",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary",
+          "status": null
+        },
+        {
+          "name": "Katie Porter",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary",
+          "status": null
+        },
+        {
+          "name": "Matt Mahan",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary",
+          "status": null
+        },
+        {
+          "name": "Tom Steyer",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary",
+          "status": null
+        },
+        {
+          "name": "Tony Thurmond",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary",
+          "status": null
+        },
+        {
+          "name": "Xavier Becerra",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary",
+          "status": null
+        },
+        {
+          "name": "Chad Bianco",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary",
+          "status": null
+        },
+        {
+          "name": "Steve Hilton",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary",
+          "status": null
+        }
+      ]
     },
     "statewide": [
       {
