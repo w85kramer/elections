@@ -326,7 +326,7 @@
     'Toss-Up': '#f5c542',
     'Lean R': '#e86987', 'Likely R': '#e50963', 'Solid R': '#9e063f',
     'Likely Coalition': '#7b3f9e',
-    'Not Rated': '#c8c8c8', 'No Chamber': '#e4e4e4'
+    'No Election': '#c8c8c8', 'No Chamber': '#e4e4e4'
   };
   const RATING_ORDER = ['Solid D', 'Likely D', 'Lean D', 'Toss-Up', 'Lean R', 'Likely R', 'Solid R', 'Likely Coalition'];
   const RATING_TIPS = {
@@ -338,7 +338,7 @@
     'Likely R': 'Republicans favored — not expected to flip, but minority party could gain seats',
     'Solid R': 'Not competitive — Republicans are overwhelmingly favored to hold the chamber',
     'Likely Coalition': 'Bipartisan coalition favored to maintain control',
-    'Not Rated': 'Chamber has 2026 elections but no forecast rating yet',
+    'No Election': 'No regular election scheduled for this chamber in 2026',
     'No Chamber': 'State has a unicameral legislature (no separate senate/house)'
   };
 
@@ -363,7 +363,7 @@
         mapData[st] = { category: ch.forecast_rating, info: { name: stateNames[st], rating: ch.forecast_rating, chamber: ch.chamber } };
       } else if (ch) {
         counts.notRated++;
-        mapData[st] = { category: 'Not Rated', info: { name: stateNames[st], rating: 'Not Rated', chamber: ch.chamber } };
+        mapData[st] = { category: 'No Election', info: { name: stateNames[st], rating: 'No Election', chamber: ch.chamber } };
       } else {
         counts.noChamber++;
         mapData[st] = { category: 'No Chamber', info: { name: stateNames[st] || st, rating: 'No Chamber' } };
@@ -376,8 +376,8 @@
     var legend = RATING_ORDER.filter(function(r) {
       return ALL_STATES.some(function(s) { return mapData[s] && mapData[s].category === r; });
     }).map(function(r) { return { label: r, color: RATING_COLORS[r], tooltip: RATING_TIPS[r] }; });
-    if (ALL_STATES.some(function(s) { return mapData[s] && mapData[s].category === 'Not Rated'; }))
-      legend.push({ label: 'Not Rated', color: '#c8c8c8', tooltip: RATING_TIPS['Not Rated'] });
+    if (ALL_STATES.some(function(s) { return mapData[s] && mapData[s].category === 'No Election'; }))
+      legend.push({ label: 'No Election', color: '#c8c8c8', tooltip: RATING_TIPS['No Election'] });
     if (ALL_STATES.some(function(s) { return mapData[s] && mapData[s].category === 'No Chamber'; }))
       legend.push({ label: 'No Chamber', color: '#e4e4e4', tooltip: RATING_TIPS['No Chamber'] });
     return legend;
@@ -386,7 +386,7 @@
   function mapTooltip(abbr, info) {
     if (!info.name) return '';
     if (info.rating === 'No Chamber') return '<strong>' + info.name + '</strong><br>Unicameral legislature';
-    if (info.rating === 'Not Rated') return '<strong>' + info.name + '</strong><br>' + info.chamber + '<br>No forecast rating';
+    if (info.rating === 'No Election') return '<strong>' + info.name + '</strong><br>' + info.chamber + '<br>No regular election in 2026';
     return '<strong>' + info.name + '</strong><br>' + info.chamber + '<br>Forecast: ' + info.rating;
   }
 
@@ -438,9 +438,9 @@
       seg2.style.background = '#c8c8c8';
       seg2.style.color = '#666';
       seg2.textContent = notRated.length;
-      seg2.title = 'Not Rated: ' + notRatedStates.sort().join(', ');
+      seg2.title = 'No Election: ' + notRatedStates.sort().join(', ');
       bar.appendChild(seg2);
-      legend.innerHTML += '<span><span class="swatch" style="background:#c8c8c8"></span>Not Rated (' + notRated.length + ')</span>';
+      legend.innerHTML += '<span><span class="swatch" style="background:#c8c8c8"></span>No Election (' + notRated.length + ')</span>';
     }
   }
 
