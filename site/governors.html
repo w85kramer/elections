@@ -396,32 +396,37 @@
 
   // Ratings bar
   const ratingCounts = {};
+  const ratingStates = {};
   for (const r of races) {
     ratingCounts[r.forecast] = (ratingCounts[r.forecast] || 0) + 1;
+    if (!ratingStates[r.forecast]) ratingStates[r.forecast] = [];
+    ratingStates[r.forecast].push(r.state);
   }
+  const noElectionStates = ALL_STATES.filter(function(s) { return !raceByState[s] || !raceByState[s].forecast; }).sort();
 
   const bar = document.getElementById('ratings-bar');
   const legend = document.getElementById('ratings-legend');
   for (const rating of RATING_ORDER) {
     const count = ratingCounts[rating] || 0;
     if (count === 0) continue;
+    const states = (ratingStates[rating] || []).sort().join(', ');
     const seg = document.createElement('div');
     seg.style.flex = count;
     seg.style.background = RATING_COLORS[rating];
     seg.textContent = count;
-    seg.title = rating + ': ' + count;
+    seg.title = rating + ': ' + states;
     bar.appendChild(seg);
     legend.innerHTML += '<span><span class="swatch" style="background:' + RATING_COLORS[rating] + '"></span>' + rating + ' (' + count + ')</span>';
   }
-  if (noElectionCount > 0) {
+  if (noElectionStates.length > 0) {
     const seg = document.createElement('div');
-    seg.style.flex = noElectionCount;
+    seg.style.flex = noElectionStates.length;
     seg.style.background = '#e4e4e4';
     seg.style.color = '#666';
-    seg.textContent = noElectionCount;
-    seg.title = 'No Election: ' + noElectionCount;
+    seg.textContent = noElectionStates.length;
+    seg.title = 'No Election: ' + noElectionStates.join(', ');
     bar.appendChild(seg);
-    legend.innerHTML += '<span><span class="swatch" style="background:#e4e4e4"></span>No Election (' + noElectionCount + ')</span>';
+    legend.innerHTML += '<span><span class="swatch" style="background:#e4e4e4"></span>No Election (' + noElectionStates.length + ')</span>';
   }
 
   // Rating filter options

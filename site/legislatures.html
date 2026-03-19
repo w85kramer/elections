@@ -402,13 +402,18 @@
 
   function buildRatingsBar(chamberType) {
     var ratingCounts = {};
+    var ratingStates = {};
     var subset = chamberType === 'Senate' ? chambers.filter(function(c) { return c.chamber === 'Senate' || c.chamber === 'Legislature'; }) : chambers.filter(function(c) { return c.chamber !== 'Senate' && c.chamber !== 'Legislature'; });
     for (var k = 0; k < subset.length; k++) {
       if (subset[k].forecast_rating) {
-        ratingCounts[subset[k].forecast_rating] = (ratingCounts[subset[k].forecast_rating] || 0) + 1;
+        var fr = subset[k].forecast_rating;
+        ratingCounts[fr] = (ratingCounts[fr] || 0) + 1;
+        if (!ratingStates[fr]) ratingStates[fr] = [];
+        ratingStates[fr].push(subset[k].state);
       }
     }
-    var notRatedCount = subset.filter(function(c) { return !c.forecast_rating; }).length;
+    var notRated = subset.filter(function(c) { return !c.forecast_rating; });
+    var notRatedStates = notRated.map(function(c) { return c.state; });
 
     var bar = document.getElementById('ratings-bar');
     var legend = document.getElementById('ratings-legend');
@@ -418,23 +423,24 @@
       var rating = RATING_ORDER[m];
       var count = ratingCounts[rating] || 0;
       if (count === 0) continue;
+      var states = (ratingStates[rating] || []).sort().join(', ');
       var seg = document.createElement('div');
       seg.style.flex = count;
       seg.style.background = RATING_COLORS[rating];
       seg.textContent = count;
-      seg.title = rating + ': ' + count;
+      seg.title = rating + ': ' + states;
       bar.appendChild(seg);
       legend.innerHTML += '<span><span class="swatch" style="background:' + RATING_COLORS[rating] + '"></span>' + rating + ' (' + count + ')</span>';
     }
-    if (notRatedCount > 0) {
+    if (notRated.length > 0) {
       var seg2 = document.createElement('div');
-      seg2.style.flex = notRatedCount;
+      seg2.style.flex = notRated.length;
       seg2.style.background = '#c8c8c8';
       seg2.style.color = '#666';
-      seg2.textContent = notRatedCount;
-      seg2.title = 'Not Rated: ' + notRatedCount;
+      seg2.textContent = notRated.length;
+      seg2.title = 'Not Rated: ' + notRatedStates.sort().join(', ');
       bar.appendChild(seg2);
-      legend.innerHTML += '<span><span class="swatch" style="background:#c8c8c8"></span>Not Rated (' + notRatedCount + ')</span>';
+      legend.innerHTML += '<span><span class="swatch" style="background:#c8c8c8"></span>Not Rated (' + notRated.length + ')</span>';
     }
   }
 
