@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-19T00:04:50.473404Z",
+  "generated_at": "2026-03-19T00:13:16.548278Z",
   "state": {
     "name": "Illinois",
     "abbr": "IL",
@@ -2028,6 +2028,41 @@
         ]
       },
       {
+        "office": "Lt. Governor",
+        "candidates": [
+          {
+            "name": "Christian Mitchell",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Aaron Del Mar",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Carrie Mendoza",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Christina Neitzke-Troike",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Robert Renteria",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
         "office": "Secretary of State",
         "candidates": [
           {
@@ -2088,6 +2123,12 @@
             "party": "R",
             "is_incumbent": false,
             "election_type": "General"
+          },
+          {
+            "name": "Michael Frerichs",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
           }
         ]
       }
