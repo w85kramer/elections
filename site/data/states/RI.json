@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-19T15:10:04.784591Z",
+  "generated_at": "2026-03-19T22:14:00.239255Z",
   "state": {
     "name": "Rhode Island",
     "abbr": "RI",
@@ -21,7 +21,7 @@
       "method": "Elected",
       "next_election": 2026,
       "start_year": 2021,
-      "forecast": "Very Likely D",
+      "forecast": "Solid D",
       "forecast_details": [
         {
           "source": "Cook Political Report",
@@ -39,7 +39,7 @@
       "party": "D",
       "method": "Elected",
       "next_election": 2026,
-      "start_year": 2023
+      "start_year": 2021
     },
     {
       "office": "Attorney General",
@@ -1235,7 +1235,7 @@
   },
   "elections_2026": {
     "governor": {
-      "forecast": "Very Likely D",
+      "forecast": "Solid D",
       "candidates": []
     },
     "statewide": [
@@ -1253,6 +1253,47 @@
             "party": "R",
             "is_incumbent": false,
             "election_type": "General"
+          }
+        ]
+      },
+      {
+        "office": "Lt. Governor",
+        "candidates": [
+          {
+            "name": "Bill Bartholomew",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cynthia Armour Coyne",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sabina Matos",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sue AnderBois",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Xay Khamsyvoravong",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Loughlin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
