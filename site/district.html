@@ -817,7 +817,7 @@
 
       const isOpen = gen && gen.is_open_seat;
       const openTag = isOpen ? `<span class="tag" style="background:#fff3cd;color:#856404">Open Seat</span>` : '';
-      const filingStr = gen && gen.filing_deadline ? `Filing deadline: ${formatDate(gen.filing_deadline)}` : '';
+      const filingStr = gen && gen.filing_deadline ? `Candidate filing deadline: ${formatDate(gen.filing_deadline)}` : '';
       const dateStr = gen && gen.date ? formatDate(gen.date) : '';
       const jungleNote = data.uses_jungle_primary ? `<span class="tag">Jungle Primary</span>` : '';
 

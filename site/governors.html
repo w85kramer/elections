@@ -505,9 +505,9 @@
         // No candidates yet — show timeline context
         const today = new Date().toISOString().split('T')[0];
         if (r.filing_deadline && r.filing_deadline > today) {
-          candsHtml = '<div class="race-candidates race-no-cands">Filing open until ' + formatDateShort(r.filing_deadline) + '</div>';
+          candsHtml = '<div class="race-candidates race-no-cands">Candidate filing open until ' + formatDateShort(r.filing_deadline) + '</div>';
         } else if (r.filing_deadline && r.filing_deadline <= today) {
-          candsHtml = '<div class="race-candidates race-no-cands">Filing closed ' + formatDateShort(r.filing_deadline) + ' — candidate data coming soon</div>';
+          candsHtml = '<div class="race-candidates race-no-cands">Candidate filing closed ' + formatDateShort(r.filing_deadline) + ' — candidate data coming soon</div>';
         }
       }
 
@@ -527,7 +527,7 @@
         '<div class="race-incumbent">' + seatStatus + '</div>' +
         '<div class="race-details">' +
           forecastDetail +
-          '<span><span class="detail-label">Filing Deadline:</span> ' + (r.filing_deadline ? formatDateShort(r.filing_deadline) : '—') + '</span>' +
+          '<span><span class="detail-label">Candidate Filing Deadline:</span> ' + (r.filing_deadline ? formatDateShort(r.filing_deadline) : '—') + '</span>' +
           '<span><span class="detail-label">Primary:</span> ' + (r.primary_date ? formatDateShort(r.primary_date) : '—') + '</span>' +
           '<span><span class="detail-label">2024 Presidential:</span> ' + formatMargin(r.pres_margin_2024) + '</span>' +
         '</div>' +

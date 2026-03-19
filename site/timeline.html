@@ -16,16 +16,16 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2026 Election Timeline — MultiState Elections</title>
-<meta name="description" content="Month-by-month timeline of the 2026 election cycle. Filing deadlines, primaries, specials, and the general election.">
+<meta name="description" content="Month-by-month timeline of the 2026 election cycle. Candidate filing deadlines, primaries, specials, and the general election.">
 <meta property="og:title" content="2026 Election Timeline — MultiState Elections">
-<meta property="og:description" content="Month-by-month timeline of the 2026 election cycle. Filing deadlines, primaries, specials, and the general election.">
+<meta property="og:description" content="Month-by-month timeline of the 2026 election cycle. Candidate filing deadlines, primaries, specials, and the general election.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.multistate.us/elections/timeline.html">
 <meta property="og:site_name" content="MultiState Elections">
 <meta property="og:image" content="https://www.multistate.us/elections/assets/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="2026 Election Timeline — MultiState Elections">
-<meta name="twitter:description" content="Month-by-month timeline of the 2026 election cycle. Filing deadlines, primaries, specials, and the general election.">
+<meta name="twitter:description" content="Month-by-month timeline of the 2026 election cycle. Candidate filing deadlines, primaries, specials, and the general election.">
 <link rel="canonical" href="https://www.multistate.us/elections/timeline.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -203,7 +203,7 @@
 
   <div class="page-header">
     <h1>2026 Election Timeline</h1>
-    <p class="subtitle">Every filing deadline, primary, special election, and the general — month by month</p>
+    <p class="subtitle">Every candidate filing deadline, primary, special election, and the general — month by month</p>
   </div>
 
   <!-- Upcoming callout -->
@@ -211,7 +211,7 @@
 
   <!-- Legend -->
   <div class="tl-legend">
-    <span><span class="tl-legend-dot" style="background:var(--ms-dem-blue)"></span> Filing Deadline</span>
+    <span><span class="tl-legend-dot" style="background:var(--ms-dem-blue)"></span> Candidate Filing Deadline</span>
     <span><span class="tl-legend-dot" style="background:var(--ms-rep-red)"></span> Primary</span>
     <span><span class="tl-legend-dot" style="background:#b8860b"></span> Special Election</span>
     <span><span class="tl-legend-dot" style="background:var(--ms-navy)"></span> General Election</span>
@@ -220,7 +220,7 @@
   <!-- Filters -->
   <div class="tl-filters">
     <button class="tl-filter active" data-f="all">All Events</button>
-    <button class="tl-filter" data-f="filing">Filing Deadlines</button>
+    <button class="tl-filter" data-f="filing">Candidate Filing Deadlines</button>
     <button class="tl-filter" data-f="primary">Primaries</button>
     <button class="tl-filter" data-f="special">Specials</button>
     <button class="tl-filter" data-f="general">General</button>
@@ -295,7 +295,7 @@
   if (nextEvent) {
     var daysUntil = Math.ceil((new Date(nextEvent.date + 'T00:00:00') - new Date(today + 'T00:00:00')) / 86400000);
     var box = document.getElementById('upcoming-box');
-    var typeLabel = nextEvent.type === 'filing' ? 'filing deadline' :
+    var typeLabel = nextEvent.type === 'filing' ? 'candidate filing deadline' :
                     nextEvent.type === 'primary' ? 'primary election' :
                     nextEvent.type === 'special' ? 'special election' : 'general election';
     box.style.display = 'flex';
@@ -364,11 +364,11 @@
       var isGeneral = group.type === 'general';
       card.className = 'tl-event ' + group.type + (isPast ? ' past' : '') + (isGeneral ? ' tl-general-card' : '');
 
-      var typeLabel = group.type === 'filing' ? 'Filing' :
+      var typeLabel = group.type === 'filing' ? 'Candidate Filing' :
                       group.type === 'primary' ? 'Primary' :
                       group.type === 'special' ? 'Special' : 'General Election';
-      if (group.detail === 'Statewide') typeLabel = 'Filing (SW)';
-      if (group.detail === 'Legislative') typeLabel = 'Filing (Leg)';
+      if (group.detail === 'Statewide') typeLabel = 'Candidate Filing (SW)';
+      if (group.detail === 'Legislative') typeLabel = 'Candidate Filing (Leg)';
 
       var countText = isGeneral ? '' : group.items.length + ' state' + (group.items.length !== 1 ? 's' : '');
       var statusHtml = '';

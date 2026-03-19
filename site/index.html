@@ -292,7 +292,7 @@
 
   <!-- Upcoming Deadlines -->
   <div class="section">
-    <div class="section-title">Upcoming Deadlines & Elections</div>
+    <div class="section-title">Upcoming Filing Deadlines & Elections</div>
     <ul class="deadline-list" id="deadline-list">
       <!-- Populated by JS -->
     </ul>
@@ -349,10 +349,10 @@
     const filingSw = st.elections_2026.filing_deadline_statewide;
     const primary = st.elections_2026.primary_date;
     if (filingLeg && filingSw && filingLeg !== filingSw) {
-      deadlines.push({ date: filingSw, text: `${st.name} statewide filing deadline`, state: abbr, type: 'filing' });
-      deadlines.push({ date: filingLeg, text: `${st.name} legislative filing deadline`, state: abbr, type: 'filing' });
+      deadlines.push({ date: filingSw, text: `${st.name} statewide candidate filing deadline`, state: abbr, type: 'filing' });
+      deadlines.push({ date: filingLeg, text: `${st.name} legislative candidate filing deadline`, state: abbr, type: 'filing' });
     } else if (st.elections_2026.filing_deadline) {
-      deadlines.push({ date: st.elections_2026.filing_deadline, text: `${st.name} filing deadline`, state: abbr, type: 'filing' });
+      deadlines.push({ date: st.elections_2026.filing_deadline, text: `${st.name} candidate filing deadline`, state: abbr, type: 'filing' });
     }
     if (primary) deadlines.push({ date: primary, text: `${st.name} primary`, state: abbr, type: 'primary' });
   }

@@ -557,7 +557,7 @@
     const openTag = race.is_open_seat
       ? `<span class="tag" style="background:#fff3cd;color:#856404">Open Seat</span>` : '';
     const dateStr = race.election_date ? formatDate(race.election_date) : '';
-    const filingStr = race.filing_deadline ? `Filing deadline: ${formatDate(race.filing_deadline)}` : '';
+    const filingStr = race.filing_deadline ? `Candidate filing deadline: ${formatDate(race.filing_deadline)}` : '';
     const primaryStr = race.primary_date ? `Primary: ${formatDate(race.primary_date)}` : '';
 
     let candsHtml = '';

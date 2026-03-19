@@ -536,7 +536,7 @@
   metaParts.push(`<span>Governor <a href="governor.html?st=${stateAbbr}" style="color:${govColor};font-weight:600;text-decoration:underline">${govName}</a> <span class="party-badge ${partyBadgeClass(govParty)}">${govParty}</span></span>`);
   if (stateData.filing_deadline) {
     metaParts.push(`<span class="meta-sep">&middot;</span>`);
-    metaParts.push(`<span>Filing deadline: ${formatDateShort(stateData.filing_deadline)}</span>`);
+    metaParts.push(`<span>Candidate filing deadline: ${formatDateShort(stateData.filing_deadline)}</span>`);
   }
   if (stateData.primary_date) {
     metaParts.push(`<span class="meta-sep">&middot;</span>`);

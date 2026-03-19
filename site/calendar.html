@@ -16,16 +16,16 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Election Calendar — MultiState Elections</title>
-<meta name="description" content="Filing deadlines, primary dates, and election dates for all 50 states in the 2026 cycle.">
+<meta name="description" content="Candidate filing deadlines, primary dates, and election dates for all 50 states in the 2026 cycle.">
 <meta property="og:title" content="Election Calendar — MultiState Elections">
-<meta property="og:description" content="Filing deadlines, primary dates, and election dates for all 50 states in the 2026 cycle.">
+<meta property="og:description" content="Candidate filing deadlines, primary dates, and election dates for all 50 states in the 2026 cycle.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.multistate.us/elections/calendar.html">
 <meta property="og:site_name" content="MultiState Elections">
 <meta property="og:image" content="https://www.multistate.us/elections/assets/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Election Calendar — MultiState Elections">
-<meta name="twitter:description" content="Filing deadlines, primary dates, and election dates for all 50 states in the 2026 cycle.">
+<meta name="twitter:description" content="Candidate filing deadlines, primary dates, and election dates for all 50 states in the 2026 cycle.">
 <link rel="canonical" href="https://www.multistate.us/elections/calendar.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -239,13 +239,13 @@
 <div class="page-container" id="main-content" role="main">
   <div id="topic-subnav"></div>
   <h1 class="heading-xl" style="margin-bottom: 8px">Election Calendar</h1>
-  <p class="subtitle mb-16">2026 Filing Deadlines, Primary Elections &amp; Special Elections</p>
+  <p class="subtitle mb-16">2026 Candidate Filing Deadlines, Primary Elections &amp; Special Elections</p>
 
   <!-- Stats -->
   <div class="cal-stats">
     <div class="card stat-card"><div class="stat-number" id="stat-next-days">—</div><div class="stat-label" id="stat-next-label">Next Event</div></div>
-    <div class="card stat-card"><div class="stat-number" id="stat-past-filing">—</div><div class="stat-label">Filing Deadlines Passed</div></div>
-    <div class="card stat-card"><div class="stat-number" id="stat-remaining-filing">—</div><div class="stat-label">Filing Deadlines Left</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-past-filing">—</div><div class="stat-label">Candidate Filing Deadlines Passed</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-remaining-filing">—</div><div class="stat-label">Candidate Filing Deadlines Left</div></div>
     <div class="card stat-card"><div class="stat-number" id="stat-primaries">—</div><div class="stat-label">Primary Elections</div></div>
     <div class="card stat-card"><div class="stat-number" id="stat-specials">—</div><div class="stat-label">Special Elections</div></div>
   </div>
@@ -264,7 +264,7 @@
   <div class="timeline-strip">
     <div class="timeline-months" id="timeline"></div>
     <div class="timeline-legend">
-      <span><span class="legend-dot" style="background:var(--ms-dem-blue)"></span> Filing Deadline</span>
+      <span><span class="legend-dot" style="background:var(--ms-dem-blue)"></span> Candidate Filing Deadline</span>
       <span><span class="legend-dot" style="background:var(--ms-rep-red)"></span> Primary Election</span>
       <span><span class="legend-dot" style="background:var(--ms-gold)"></span> Special Election</span>
       <span><span class="legend-dot" style="background:#333"></span> Today</span>
@@ -274,7 +274,7 @@
   <!-- Filters -->
   <div class="calendar-filters">
     <button class="filter-btn active" data-filter="all">All Events</button>
-    <button class="filter-btn" data-filter="filing">Filing Deadlines</button>
+    <button class="filter-btn" data-filter="filing">Candidate Filing Deadlines</button>
     <button class="filter-btn" data-filter="primary">Primaries</button>
     <button class="filter-btn" data-filter="special">Special Elections</button>
   </div>
@@ -359,7 +359,7 @@
   const nextEvent = events.find(e => e.date >= today);
   if (nextEvent) {
     const daysUntil = Math.ceil((new Date(nextEvent.date + 'T00:00:00') - new Date(today + 'T00:00:00')) / 86400000);
-    const evtType = nextEvent.type === 'filing' ? 'filing deadline' : nextEvent.type === 'special' ? 'special election' : 'primary';
+    const evtType = nextEvent.type === 'filing' ? 'candidate filing deadline' : nextEvent.type === 'special' ? 'special election' : 'primary';
     if (daysUntil === 0) {
       document.getElementById('stat-next-days').textContent = 'Today';
     } else {
@@ -393,22 +393,22 @@
       // Show both
       const legPast = filingLeg < today;
       const swPast = filingSw < today;
-      html += `<span class="event-type filing" style="margin-top:8px;display:inline-block">Filing (Statewide)</span> `;
+      html += `<span class="event-type filing" style="margin-top:8px;display:inline-block">Candidate Filing (Statewide)</span> `;
       html += `${formatDate(filingSw)}`;
       if (swPast) html += ' <span style="color:var(--ms-text-light)">(passed)</span>';
       html += '<br>';
-      html += `<span class="event-type filing" style="margin-top:4px;display:inline-block">Filing (Legislative)</span> `;
+      html += `<span class="event-type filing" style="margin-top:4px;display:inline-block">Candidate Filing (Legislative)</span> `;
       html += `${formatDate(filingLeg)}`;
       if (legPast) html += ' <span style="color:var(--ms-text-light)">(passed)</span>';
       html += '<br>';
     } else if (filing) {
       const filingPast = filing < today;
-      html += `<span class="event-type filing" style="margin-top:8px;display:inline-block">Filing</span> `;
+      html += `<span class="event-type filing" style="margin-top:8px;display:inline-block">Candidate Filing</span> `;
       html += `${formatDate(filing)}`;
       if (filingPast) html += ' <span style="color:var(--ms-text-light)">(passed)</span>';
       html += '<br>';
     } else {
-      html += '<span style="color:var(--ms-text-light)">No 2026 filing deadline (odd-year state)</span><br>';
+      html += '<span style="color:var(--ms-text-light)">No 2026 candidate filing deadline (odd-year state)</span><br>';
     }
     if (e26.filing_notes) {
       html += `<span style="color:var(--ms-text-light);font-size:13px;font-style:italic">${e26.filing_notes}</span><br>`;
@@ -491,7 +491,7 @@
 
       const evt = group[i];
       const subtypeStr = evt.subtype && evt.subtype !== 'completed' ? ` (${evt.subtype})` : '';
-      const typeLabel = type === 'filing' ? 'Filing Deadline' : type === 'special' ? 'Special Election' : 'Primary Election';
+      const typeLabel = type === 'filing' ? 'Candidate Filing Deadline' : type === 'special' ? 'Special Election' : 'Primary Election';
       const typeColor = type === 'filing' ? 'color:var(--ms-dem-blue)' : type === 'special' ? 'color:var(--ms-gold)' : 'color:var(--ms-rep-red)';
       const detailStr = evt.detail ? `<div style="font-size:12px;color:#666">${evt.detail}</div>` : '';
       const notesStr = evt.notes ? `<div style="font-size:12px;color:#666;font-style:italic">${evt.notes}</div>` : '';
@@ -574,9 +574,9 @@
         const row = document.createElement('div');
         row.className = `event-row${isPast ? ' past' : ''}`;
 
-        let typeLabel = group.type === 'filing' ? 'Filing' : group.type === 'special' ? 'Special' : 'Primary';
-        if (group.subtype === 'statewide') typeLabel = 'Filing (SW)';
-        else if (group.subtype === 'legislative') typeLabel = 'Filing (Leg)';
+        let typeLabel = group.type === 'filing' ? 'Candidate Filing' : group.type === 'special' ? 'Special' : 'Primary';
+        if (group.subtype === 'statewide') typeLabel = 'Candidate Filing (SW)';
+        else if (group.subtype === 'legislative') typeLabel = 'Candidate Filing (Leg)';
         let statesHtml = '';
         for (const evt of group.states) {
           const suffix = evt.detail ? ` — ${evt.detail}` : (evt.subtype && evt.subtype !== 'completed' ? ` (${evt.subtype})` : '');
