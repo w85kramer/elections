@@ -86,6 +86,8 @@
         row.className = 'legend-row';
         row.innerHTML = '<div class="legend-swatch" style="background:' + item.color + '"></div>' +
           '<div class="legend-label">' + item.label + '</div>';
+        if (item.tooltip) row.title = item.tooltip;
+        row.style.cursor = item.tooltip ? 'help' : '';
         legendEl.appendChild(row);
       }
       wrapper.appendChild(legendEl);
@@ -318,6 +320,8 @@
       row.className = 'legend-row';
       row.innerHTML = '<div class="legend-swatch" style="background:' + legend[i].color + '"></div>' +
         '<div class="legend-label">' + legend[i].label + '</div>';
+      if (legend[i].tooltip) row.title = legend[i].tooltip;
+      row.style.cursor = legend[i].tooltip ? 'help' : '';
       legendEl.appendChild(row);
     }
   };

@@ -329,6 +329,18 @@
     'Not Rated': '#c8c8c8', 'No Chamber': '#e4e4e4'
   };
   const RATING_ORDER = ['Solid D', 'Likely D', 'Lean D', 'Toss-Up', 'Lean R', 'Likely R', 'Solid R', 'Likely Coalition'];
+  const RATING_TIPS = {
+    'Solid D': 'Not competitive — Democrats are overwhelmingly favored to hold the chamber',
+    'Likely D': 'Democrats favored — not expected to flip, but minority party could gain seats',
+    'Lean D': 'Tilts Democratic but competitive — chamber could go either way',
+    'Toss-Up': 'True toss-up — either party could win control',
+    'Lean R': 'Tilts Republican but competitive — chamber could go either way',
+    'Likely R': 'Republicans favored — not expected to flip, but minority party could gain seats',
+    'Solid R': 'Not competitive — Republicans are overwhelmingly favored to hold the chamber',
+    'Likely Coalition': 'Bipartisan coalition favored to maintain control',
+    'Not Rated': 'Chamber has 2026 elections but no forecast rating yet',
+    'No Chamber': 'State has a unicameral legislature (no separate senate/house)'
+  };
 
   // Build per-chamber-type map data
   const ALL_STATES = ['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY'];
@@ -363,11 +375,11 @@
   function buildMapLegend(mapData) {
     var legend = RATING_ORDER.filter(function(r) {
       return ALL_STATES.some(function(s) { return mapData[s] && mapData[s].category === r; });
-    }).map(function(r) { return { label: r, color: RATING_COLORS[r] }; });
+    }).map(function(r) { return { label: r, color: RATING_COLORS[r], tooltip: RATING_TIPS[r] }; });
     if (ALL_STATES.some(function(s) { return mapData[s] && mapData[s].category === 'Not Rated'; }))
-      legend.push({ label: 'Not Rated', color: '#c8c8c8' });
+      legend.push({ label: 'Not Rated', color: '#c8c8c8', tooltip: RATING_TIPS['Not Rated'] });
     if (ALL_STATES.some(function(s) { return mapData[s] && mapData[s].category === 'No Chamber'; }))
-      legend.push({ label: 'No Chamber', color: '#e4e4e4' });
+      legend.push({ label: 'No Chamber', color: '#e4e4e4', tooltip: RATING_TIPS['No Chamber'] });
     return legend;
   }
 
