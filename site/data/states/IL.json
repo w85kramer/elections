@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T14:23:25.342716Z",
+  "generated_at": "2026-03-19T00:04:50.473404Z",
   "state": {
     "name": "Illinois",
     "abbr": "IL",
@@ -24,11 +24,11 @@
       "forecast": "Solid D",
       "forecast_details": [
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Solid D"
         },
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Solid D"
         }
       ]
@@ -1965,6 +1965,18 @@
             "party": "R",
             "is_incumbent": false,
             "election_type": "General"
+          },
+          {
+            "name": "Kwame Raoul",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Robert Fioretti",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -2035,6 +2047,24 @@
             "party": "R",
             "is_incumbent": false,
             "election_type": "General"
+          },
+          {
+            "name": "Alexi Giannoulias",
+            "party": "D",
+            "is_incumbent": true,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Diane Harris",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Walter Adamczyk",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
