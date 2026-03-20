@@ -425,7 +425,7 @@
   if (data.special_elections) {
     for (const sp of data.special_elections) {
       if (sp.date && sp.result_status !== 'Certified' && sp.result_status !== 'Called') {
-        const typeLabel = sp.type.replace(/_/g, ' ');
+        const typeLabel = formatElectionType(sp.type);
         deadlines.push({ date: sp.date, text: `${sp.state_name} ${sp.seat_label} ${typeLabel}`, state: sp.state, type: 'special', chamber: sp.chamber, district: sp.district });
       }
     }

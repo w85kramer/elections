@@ -1031,7 +1031,7 @@
       candidatesHtml = '<ul class="candidate-list">';
       for (const c of govRace.candidates) {
         const inc = c.is_incumbent ? '<span class="incumbent-marker">(incumbent)</span>' : '';
-        candidatesHtml += `<li><span class="party-badge ${partyBadgeClass(c.party)}">${c.party}</span> ${c.name} ${inc} <span class="text-muted text-sm">${c.election_type}</span></li>`;
+        candidatesHtml += `<li><span class="party-badge ${partyBadgeClass(c.party)}">${c.party}</span> ${c.name} ${inc} ${c.election_type !== 'General' ? `<span class="text-muted text-sm">${formatElectionType(c.election_type)}</span>` : ''}</li>`;
       }
       candidatesHtml += '</ul>';
     } else {

@@ -112,6 +112,33 @@ function inferParty(candidateParty, electionType, stateAbbr) {
   return null;
 }
 
+/** Format election type codes into human-readable display names.
+ *  compact=true for narrow UI contexts (table columns, badges) */
+function formatElectionType(type, compact) {
+  if (!type) return '';
+  const NAMES = {
+    General:              ['General Election',              'General'],
+    General_Runoff:       ['General Runoff',                'General Runoff'],
+    Primary_D:            ['Democratic Primary',            'Dem Primary'],
+    Primary_R:            ['Republican Primary',            'GOP Primary'],
+    Primary_Nonpartisan:  ['Nonpartisan Primary',           'NP Primary'],
+    Primary:              ['Primary',                       'Primary'],
+    Primary_Runoff_D:     ['Democratic Primary Runoff',     'Dem Primary Runoff'],
+    Primary_Runoff_R:     ['Republican Primary Runoff',     'GOP Primary Runoff'],
+    Special:              ['Special Election',              'Special'],
+    Special_Primary:      ['Special Primary',               'Special Primary'],
+    Special_Primary_D:    ['Special Democratic Primary',    'Special Dem Primary'],
+    Special_Primary_R:    ['Special Republican Primary',    'Special GOP Primary'],
+    Special_Runoff:       ['Special Runoff',                'Special Runoff'],
+    Special_Runoff_D:     ['Special Democratic Runoff',     'Special Dem Runoff'],
+    Special_Runoff_R:     ['Special Republican Runoff',     'Special GOP Runoff'],
+    Recall:               ['Recall Election',               'Recall'],
+  };
+  const entry = NAMES[type];
+  if (entry) return compact ? entry[1] : entry[0];
+  return type.replace(/_/g, ' ');
+}
+
 async function loadJSON(url) {
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`Failed to load ${url}: ${resp.status}`);

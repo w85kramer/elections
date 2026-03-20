@@ -431,7 +431,7 @@
         html += '<td><a href="' + distLink2 + '">' + (item.district || '—') + '</a></td>';
         html += '<td>' + partyPill(item.inc_party) + ' ' + item.incumbent + '</td>';
         html += '<td>' + item.challenger + '</td>';
-        html += '<td>' + item.type.replace('Primary_', '').replace('Primary', 'Open') + '</td>';
+        html += '<td>' + formatElectionType(item.type, true) + '</td>';
       } else if (activeTab === 'switches') {
         html += '<td>' + (item.year || '—') + '</td>';
         html += '<td>' + item.state + '</td>';

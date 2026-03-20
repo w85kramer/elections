@@ -567,7 +567,7 @@
       candsHtml = '<ul class="candidate-list">';
       for (const c of race.candidates) {
         const typeLabel = c.election_type !== 'General'
-          ? `<span class="text-muted text-sm">${c.election_type.replace('_', ' ')}</span>` : '';
+          ? `<span class="text-muted text-sm">${formatElectionType(c.election_type)}</span>` : '';
         let jtStr2026 = '';
         if (c.jt_name) {
           const jtLink2026 = c.jt_candidate_id
@@ -620,7 +620,7 @@
     if (hasWinner) entryClass += ' entry-has-winner';
     else if (!isPast || !e.result_status) entryClass += ' entry-pending';
 
-    const typeLabel = e.type.replace(/_/g, ' ');
+    const typeLabel = formatElectionType(e.type);
     let dateStr = '';
     if (e.date) {
       const d = new Date(e.date + 'T00:00:00');

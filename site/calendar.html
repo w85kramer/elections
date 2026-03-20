@@ -471,7 +471,7 @@
   if (data.special_elections) {
     for (const sp of data.special_elections) {
       if (sp.date) {
-        const typeLabel = sp.type.replace(/_/g, ' ');
+        const typeLabel = formatElectionType(sp.type);
         events.push({
           date: sp.date,
           type: 'special',
@@ -784,7 +784,7 @@
     else if (type === 'primary') typeLabel = 'Primary';
     else if (type === 'special') typeLabel = 'Special';
     else if (type === 'general') typeLabel = 'General';
-    else if (type === 'ballot') typeLabel = 'Ballot';
+    else if (type === 'ballot') typeLabel = 'Measure';
     else typeLabel = type;
 
     // General election: special summary rendering

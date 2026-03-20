@@ -734,7 +734,7 @@
       else if (isUpcoming || cy.result === 'Pending') entryClass += ' entry-pending';
 
       const dateStr = cy.date ? formatDateShort(cy.date) : '';
-      const typeLabel = cy.type.replace(/_/g, ' ');
+      const typeLabel = formatElectionType(cy.type);
       const distUrl = districtUrl(cy.state, cy.chamber, cy.district, cy.office_type);
       const distLabel = shortDistrictLabel(cy.state, cy.chamber, cy.district, cy.office_type);
 

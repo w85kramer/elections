@@ -274,7 +274,7 @@
         var done = sp.result_status === 'Called' || sp.result_status === 'Certified';
         events.push({
           date: sp.date, type: 'special', state: sp.state, name: sp.state_name,
-          detail: sp.seat_label + ' ' + sp.type.replace(/_/g, ' '),
+          detail: sp.seat_label + ' ' + formatElectionType(sp.type),
           chamber: sp.chamber, district: sp.district, done: done,
         });
       }

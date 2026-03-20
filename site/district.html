@@ -835,7 +835,7 @@
         candsHtml = '<ul class="candidate-list">';
         for (const c of allCands) {
           const inc = c.is_incumbent ? '<span class="incumbent-marker">(incumbent)</span>' : '';
-          const typeLabel = c.election_type !== 'General' ? `<span class="text-muted text-sm">${c.election_type.replace('_', ' ')}</span>` : '';
+          const typeLabel = c.election_type !== 'General' ? `<span class="text-muted text-sm">${formatElectionType(c.election_type)}</span>` : '';
           const candParty = inferParty(c.party, c.election_type, stateAbbr);
           const ep = effectiveParty(c);
           const nameStyle = ep !== candParty ? ` style="${partyColorStyle(ep)}"` : '';
@@ -939,7 +939,7 @@
     else if (!isPast || !e.result_status) entryClass += ' entry-pending';
 
     // Header: date · type
-    const typeLabel = e.type.replace(/_/g, ' ');
+    const typeLabel = formatElectionType(e.type);
     let dateStr = '';
     if (e.date) {
       const d = new Date(e.date + 'T00:00:00');
