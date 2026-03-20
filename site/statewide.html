@@ -1054,7 +1054,9 @@
         const gx1 = xPos(gapStart);
         const gx2 = xPos(gapEnd);
         const gw = Math.max(gx2 - gx1, 2);
-        svg += `<rect x="${gx1}" y="${BAR_Y}" width="${gw}" height="${BAR_H}" fill="#ddd" rx="2"/>`;
+        const gStartStr = gapStart.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+        const gEndStr = gapEnd.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+        svg += `<rect x="${gx1}" y="${BAR_Y}" width="${gw}" height="${BAR_H}" fill="#ddd" rx="2" style="cursor:default"><title>Vacant (${gStartStr} – ${gEndStr})</title></rect>`;
         if (gw > 50) {
           svg += `<text x="${gx1 + gw / 2}" y="${BAR_Y + BAR_H / 2 + 1}" text-anchor="middle" dominant-baseline="central"
             fill="#999" font-family="Work Sans,sans-serif" font-style="italic" font-size="10" style="pointer-events:none">Vacant</text>`;
