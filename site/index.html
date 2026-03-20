@@ -507,7 +507,7 @@
     for (const t of typeOrder) {
       if (!byType[t]) continue;
       const items = byType[t];
-      const badgeLabels = { filing: 'Filing', primary: 'Primary', special: 'Special', general: 'General', ballot: 'Ballot' };
+      const badgeLabels = { filing: 'Filing', primary: 'Primary', special: 'Special', general: 'General', ballot: 'Measure' };
 
       if (t === 'general') {
         contentHtml += `<div class="upcoming-type-row"><span class="upcoming-badge general">${badgeLabels[t]}</span><span style="font-weight:600;color:#2d8a4e;font-size:13px">${items[0].text}</span></div>`;
