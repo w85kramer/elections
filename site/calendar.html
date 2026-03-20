@@ -322,11 +322,22 @@
   }
   .state-lookup-result.visible { display: block; }
 
+  /* Scrollable calendar body */
+  #calendar-body {
+    max-height: 65vh;
+    overflow-y: auto;
+    border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius);
+    padding: 0 16px 16px;
+    scroll-behavior: smooth;
+  }
+
   @media (max-width: 768px) {
     .cal-stats { grid-template-columns: repeat(2, 1fr); }
     .date-row { flex-wrap: wrap; }
     .date-row-content { width: 100%; }
     .type-section { flex-wrap: wrap; }
+    #calendar-body { max-height: 55vh; }
   }
 </style>
 </head>
@@ -381,7 +392,7 @@
     <button class="filter-btn" data-filter="ballot">Ballot Measures</button>
   </div>
 
-  <!-- Month-by-month -->
+  <!-- Month-by-month (scrollable container — auto-scrolls to today) -->
   <div id="calendar-body"></div>
 
   <div class="tooltip" id="tooltip"></div>
@@ -974,33 +985,36 @@
 
   renderCalendar();
 
-  // Auto-scroll to today divider
-  if (todayDividerEl) {
+  // Auto-scroll within calendar body container to today divider
+  const calBody = document.getElementById('calendar-body');
+  if (todayDividerEl && calBody) {
     setTimeout(() => {
-      todayDividerEl.scrollIntoView({ behavior: 'auto', block: 'start' });
-      // Offset for fixed header if present
-      window.scrollBy(0, -80);
+      const containerTop = calBody.getBoundingClientRect().top + calBody.scrollTop;
+      const dividerTop = todayDividerEl.offsetTop - calBody.offsetTop;
+      calBody.scrollTop = dividerTop - 8;
     }, 100);
   }
 
   // Jump to today button
   const jumpBtn = document.getElementById('jump-to-today');
   jumpBtn.addEventListener('click', () => {
-    if (todayDividerEl) {
-      todayDividerEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      window.scrollBy(0, -80);
+    if (todayDividerEl && calBody) {
+      const dividerTop = todayDividerEl.offsetTop - calBody.offsetTop;
+      calBody.scrollTo({ top: dividerTop - 8, behavior: 'smooth' });
     }
   });
 
-  // Show/hide jump button based on scroll position
+  // Show/hide jump button based on scroll position within the container
   let ticking = false;
-  window.addEventListener('scroll', () => {
+  calBody.addEventListener('scroll', () => {
     if (!ticking) {
       requestAnimationFrame(() => {
         if (todayDividerEl) {
-          const rect = todayDividerEl.getBoundingClientRect();
-          // Show button when the divider is not visible
-          const isVisible = rect.top >= -100 && rect.top <= window.innerHeight + 100;
+          const dividerOffset = todayDividerEl.offsetTop - calBody.offsetTop;
+          const scrollTop = calBody.scrollTop;
+          const visibleBottom = scrollTop + calBody.clientHeight;
+          // Divider is visible if it's within the scroll viewport of the container
+          const isVisible = dividerOffset >= scrollTop - 50 && dividerOffset <= visibleBottom + 50;
           jumpBtn.classList.toggle('visible', !isVisible);
         }
         ticking = false;
