@@ -53,7 +53,9 @@
   .filter-btn.active { background: var(--ms-navy); color: white; border-color: var(--ms-navy); }
   .filter-btn.active-filing { background: var(--ms-dem-blue); color: white; border-color: var(--ms-dem-blue); }
   .filter-btn.active-primary { background: var(--ms-rep-red); color: white; border-color: var(--ms-rep-red); }
+  .filter-btn.active-general { background: #2d8a4e; color: white; border-color: #2d8a4e; }
   .filter-btn.active-special { background: var(--ms-gold); color: var(--ms-navy); border-color: var(--ms-gold); }
+  .filter-btn.active-ballot { background: #7b5ea7; color: white; border-color: #7b5ea7; }
 
   /* Timeline strip */
   .timeline-strip {
@@ -94,6 +96,8 @@
   .timeline-dot.filing { background: var(--ms-dem-blue); }
   .timeline-dot.primary { background: var(--ms-rep-red); }
   .timeline-dot.special { background: var(--ms-gold); }
+  .timeline-dot.general { background: #2d8a4e; }
+  .timeline-dot.ballot { background: #7b5ea7; }
   .today-marker {
     position: absolute;
     top: 0;
@@ -104,7 +108,7 @@
   }
   .today-label {
     position: absolute;
-    top: -2px;
+    bottom: -2px;
     font-size: 10px;
     font-weight: 700;
     color: #333;
@@ -118,6 +122,7 @@
     margin-top: 8px;
     font-size: 12px;
     color: var(--ms-text-light);
+    flex-wrap: wrap;
   }
   .legend-dot {
     display: inline-block;
@@ -145,22 +150,37 @@
     font-size: 14px;
     color: var(--ms-text-light);
   }
-  .event-row {
+
+  /* Date rows — one row per date, multiple type sections within */
+  .date-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
     padding: 10px 12px;
     border-bottom: 1px solid #f0f0f0;
     font-size: 14px;
     transition: background 0.1s;
   }
-  .event-row:hover { background: #f8f9fa; }
-  .event-row.past { opacity: 0.45; }
+  .date-row:hover { background: #f8f9fa; }
+  .date-row.past { opacity: 0.45; }
   .event-date {
     font-weight: 700;
     color: var(--ms-navy);
     min-width: 80px;
     white-space: nowrap;
+    padding-top: 2px;
+  }
+  .date-row-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+  }
+  .type-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
   }
   .event-type {
     display: inline-block;
@@ -172,10 +192,13 @@
     letter-spacing: 0.5px;
     min-width: 70px;
     text-align: center;
+    flex-shrink: 0;
   }
   .event-type.filing { background: rgba(39,97,129,0.12); color: var(--ms-dem-blue); }
   .event-type.primary { background: rgba(229,9,99,0.12); color: var(--ms-rep-red); }
   .event-type.special { background: rgba(201,163,0,0.15); color: #8a7000; }
+  .event-type.general { background: rgba(45,138,78,0.12); color: #2d8a4e; }
+  .event-type.ballot { background: rgba(123,94,167,0.12); color: #7b5ea7; }
   .event-states {
     display: flex;
     flex-wrap: wrap;
@@ -195,11 +218,84 @@
   .event-state-tag.filing { background: rgba(39,97,129,0.08); color: var(--ms-dem-blue); }
   .event-state-tag.primary { background: rgba(229,9,99,0.08); color: var(--ms-rep-red); }
   .event-state-tag.special { background: rgba(201,163,0,0.1); color: #8a7000; }
+  .event-state-tag.general { background: rgba(45,138,78,0.08); color: #2d8a4e; }
+  .event-state-tag.ballot { background: rgba(123,94,167,0.08); color: #7b5ea7; }
+
+  /* Race count in state tags */
+  .race-count { font-weight: 400; font-size: 11px; opacity: 0.8; }
+
+  /* Collapse toggle */
+  .collapse-toggle {
+    font-size: 12px;
+    color: var(--ms-dem-blue);
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    background: none;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Work Sans', sans-serif;
+    flex-shrink: 0;
+  }
+  .collapse-toggle:hover { background: rgba(39,97,129,0.08); }
+  .collapse-detail { display: none; }
+  .collapse-detail.expanded { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  /* Today divider */
+  .today-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ms-navy);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .today-divider::before,
+  .today-divider::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: var(--ms-navy);
+    opacity: 0.3;
+  }
+
+  /* Jump to today button */
+  .jump-to-today {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    padding: 10px 18px;
+    background: var(--ms-navy);
+    color: white;
+    border: none;
+    border-radius: 24px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .jump-to-today.visible { opacity: 1; pointer-events: auto; }
+  .jump-to-today:hover { background: #06497a; }
+
+  /* General election summary row */
+  .general-summary {
+    font-weight: 600;
+    font-size: 13px;
+    color: #2d8a4e;
+  }
 
   /* Stats row */
   .cal-stats {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     margin-bottom: 32px;
   }
@@ -228,8 +324,9 @@
 
   @media (max-width: 768px) {
     .cal-stats { grid-template-columns: repeat(2, 1fr); }
-    .event-row { flex-wrap: wrap; }
-    .event-states { width: 100%; }
+    .date-row { flex-wrap: wrap; }
+    .date-row-content { width: 100%; }
+    .type-section { flex-wrap: wrap; }
   }
 </style>
 </head>
@@ -239,15 +336,16 @@
 <div class="page-container" id="main-content" role="main">
   <div id="topic-subnav"></div>
   <h1 class="heading-xl" style="margin-bottom: 8px">Elections Calendar</h1>
-  <p class="subtitle mb-16">2026 Candidate Filing Deadlines, Primary Elections &amp; Special Elections</p>
+  <p class="subtitle mb-16">2026 Candidate Filing Deadlines, Primary Elections, General Elections, Special Elections &amp; Ballot Measures</p>
 
   <!-- Stats -->
   <div class="cal-stats">
     <div class="card stat-card"><div class="stat-number" id="stat-next-days">—</div><div class="stat-label" id="stat-next-label">Next Event</div></div>
-    <div class="card stat-card"><div class="stat-number" id="stat-past-filing">—</div><div class="stat-label">Candidate Filing Deadlines Passed</div></div>
-    <div class="card stat-card"><div class="stat-number" id="stat-remaining-filing">—</div><div class="stat-label">Candidate Filing Deadlines Left</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-past-filing">—</div><div class="stat-label">Filing Deadlines Passed</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-remaining-filing">—</div><div class="stat-label">Filing Deadlines Left</div></div>
     <div class="card stat-card"><div class="stat-number" id="stat-primaries">—</div><div class="stat-label">Primary Elections</div></div>
     <div class="card stat-card"><div class="stat-number" id="stat-specials">—</div><div class="stat-label">Special Elections</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-ballot">—</div><div class="stat-label">Ballot Measures</div></div>
   </div>
 
   <!-- State Lookup -->
@@ -264,9 +362,11 @@
   <div class="timeline-strip">
     <div class="timeline-months" id="timeline"></div>
     <div class="timeline-legend">
-      <span><span class="legend-dot" style="background:var(--ms-dem-blue)"></span> Candidate Filing Deadline</span>
-      <span><span class="legend-dot" style="background:var(--ms-rep-red)"></span> Primary Election</span>
-      <span><span class="legend-dot" style="background:var(--ms-gold)"></span> Special Election</span>
+      <span><span class="legend-dot" style="background:var(--ms-dem-blue)"></span> Filing Deadline</span>
+      <span><span class="legend-dot" style="background:var(--ms-rep-red)"></span> Primary</span>
+      <span><span class="legend-dot" style="background:#2d8a4e"></span> General</span>
+      <span><span class="legend-dot" style="background:var(--ms-gold)"></span> Special</span>
+      <span><span class="legend-dot" style="background:#7b5ea7"></span> Ballot Measure</span>
       <span><span class="legend-dot" style="background:#333"></span> Today</span>
     </div>
   </div>
@@ -274,9 +374,11 @@
   <!-- Filters -->
   <div class="calendar-filters">
     <button class="filter-btn active" data-filter="all">All Events</button>
-    <button class="filter-btn" data-filter="filing">Candidate Filing Deadlines</button>
+    <button class="filter-btn" data-filter="filing">Filing Deadlines</button>
     <button class="filter-btn" data-filter="primary">Primaries</button>
+    <button class="filter-btn" data-filter="general">General Elections</button>
     <button class="filter-btn" data-filter="special">Special Elections</button>
+    <button class="filter-btn" data-filter="ballot">Ballot Measures</button>
   </div>
 
   <!-- Month-by-month -->
@@ -287,12 +389,17 @@
   <!-- Footer -->
 </div>
 
+<button class="jump-to-today" id="jump-to-today">Jump to today</button>
+
 <div id="global-footer"></div>
 <script src="js/nav.js"></script>
 <script src="js/common.js"></script>
 <script>
 (async function() {
-  const data = await loadJSON('data/states_summary.json');
+  const [data, ballotData] = await Promise.all([
+    loadJSON('data/states_summary.json'),
+    loadJSON('data/ballot_measures.json'),
+  ]);
   const states = data.states;
 
   var _gd = document.getElementById('gen-date') || document.getElementById('gen-date-footer'); if (_gd) _gd.textContent = formatDate(data.generated_at.split('T')[0]);
@@ -312,14 +419,13 @@
     const primary = e26.primary_date;
 
     if (filingLeg && filingSw && filingLeg !== filingSw) {
-      // Split deadlines — show both separately
       events.push({ date: filingLeg, type: 'filing', subtype: 'legislative', state: abbr, name: st.name });
       events.push({ date: filingSw, type: 'filing', subtype: 'statewide', state: abbr, name: st.name });
     } else {
       const filing = e26.filing_deadline;
       if (filing) events.push({ date: filing, type: 'filing', subtype: null, state: abbr, name: st.name, notes: e26.filing_notes || null });
     }
-    if (primary) events.push({ date: primary, type: 'primary', subtype: null, state: abbr, name: st.name });
+    if (primary) events.push({ date: primary, type: 'primary', subtype: null, state: abbr, name: st.name, raceCount: e26.total_general || 0 });
   }
 
   // Add special elections
@@ -341,12 +447,53 @@
     }
   }
 
+  // Add general elections
+  // Nov 4, 2025: NJ + VA (odd-year states) — hardcoded since 2025 data not in elections_2026
+  events.push({
+    date: '2025-11-04',
+    type: 'general',
+    subtype: 'summary',
+    state: null,
+    name: 'General Election',
+    detail: 'NJ & VA general elections',
+    generalStates: ['NJ', 'VA'],
+  });
+
+  // Nov 3, 2026: All states with 2026 races
+  const statesWithRaces = stateList.filter(a => states[a].elections_2026?.total_general > 0);
+  const totalRaces2026 = statesWithRaces.reduce((sum, a) => sum + (states[a].elections_2026?.total_general || 0), 0);
+  events.push({
+    date: '2026-11-03',
+    type: 'general',
+    subtype: 'summary',
+    state: null,
+    name: 'General Election',
+    detail: `${statesWithRaces.length} states — ${totalRaces2026.toLocaleString()} races`,
+    generalStates: statesWithRaces,
+    generalRaceCount: totalRaces2026,
+  });
+
+  // Add ballot measures (2025-2026 only for the calendar)
+  const ballotMeasures = (ballotData.measures || []).filter(m => m.date && m.date >= '2025-01-01' && m.date <= '2026-12-31');
+  for (const m of ballotMeasures) {
+    events.push({
+      date: m.date,
+      type: 'ballot',
+      subtype: null,
+      state: m.state,
+      name: m.state_name,
+      detail: m.title || m.number,
+      ballotStatus: m.status,
+    });
+  }
+
   events.sort((a, b) => a.date.localeCompare(b.date) || a.type.localeCompare(b.type));
 
   // Stats
   const filingEvents = events.filter(e => e.type === 'filing');
   const primaryEvents = events.filter(e => e.type === 'primary');
   const specialEvents = events.filter(e => e.type === 'special');
+  const ballotEvents = events.filter(e => e.type === 'ballot');
   const pastFiling = filingEvents.filter(e => e.date < today).length;
   const remainingFiling = filingEvents.length - pastFiling;
 
@@ -354,12 +501,14 @@
   document.getElementById('stat-remaining-filing').textContent = remainingFiling;
   document.getElementById('stat-primaries').textContent = primaryEvents.length;
   document.getElementById('stat-specials').textContent = specialEvents.length;
+  document.getElementById('stat-ballot').textContent = ballotEvents.length;
 
   // Next event
   const nextEvent = events.find(e => e.date >= today);
   if (nextEvent) {
     const daysUntil = Math.ceil((new Date(nextEvent.date + 'T00:00:00') - new Date(today + 'T00:00:00')) / 86400000);
-    const evtType = nextEvent.type === 'filing' ? 'candidate filing deadline' : nextEvent.type === 'special' ? 'special election' : 'primary';
+    const evtTypeLabels = { filing: 'filing deadline', special: 'special election', primary: 'primary', general: 'general election', ballot: 'ballot measure' };
+    const evtType = evtTypeLabels[nextEvent.type] || nextEvent.type;
     if (daysUntil === 0) {
       document.getElementById('stat-next-days').textContent = 'Today';
     } else {
@@ -390,7 +539,6 @@
 
     let html = `<strong>${st.name}</strong><br>`;
     if (filingLeg && filingSw && filingLeg !== filingSw) {
-      // Show both
       const legPast = filingLeg < today;
       const swPast = filingSw < today;
       html += `<span class="event-type filing" style="margin-top:8px;display:inline-block">Candidate Filing (Statewide)</span> `;
@@ -435,6 +583,17 @@
       }
     }
 
+    // Ballot measures for this state
+    const stateBallot = events.filter(e => e.type === 'ballot' && e.state === abbr);
+    if (stateBallot.length > 0) {
+      html += `<br><strong style="font-size:13px;margin-top:6px;display:inline-block">Ballot Measures (${stateBallot.length}):</strong><br>`;
+      for (const bm of stateBallot) {
+        html += `<span class="event-type ballot" style="margin-top:4px;display:inline-block">Ballot</span> `;
+        html += `${formatDate(bm.date)} — ${bm.detail}`;
+        html += '<br>';
+      }
+    }
+
     // Link to state page
     html += `<br><a href="state.html?st=${abbr}" style="font-size:13px;margin-top:8px;display:inline-block">View ${st.name} details &rarr;</a>`;
 
@@ -443,13 +602,12 @@
   });
 
   // Timeline strip
-  // Range: Nov 2025 → Sep 2026 = 11 months
+  // Range: Nov 2025 → Nov 2026 = 13 months (extended for general + ballot)
   const TIMELINE_START = new Date('2025-11-01');
-  const TIMELINE_END = new Date('2026-10-01');
-  const MONTH_NAMES = ['Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'];
-  const MONTH_KEYS = ['2025-11', '2025-12', '2026-01', '2026-02', '2026-03', '2026-04', '2026-05', '2026-06', '2026-07', '2026-08', '2026-09'];
+  const TIMELINE_END = new Date('2026-12-01');
+  const MONTH_NAMES = ['Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'];
+  const MONTH_KEYS = ['2025-11', '2025-12', '2026-01', '2026-02', '2026-03', '2026-04', '2026-05', '2026-06', '2026-07', '2026-08', '2026-09', '2026-10', '2026-11'];
 
-  const totalDays = (TIMELINE_END - TIMELINE_START) / 86400000;
   const timeline = document.getElementById('timeline');
 
   // Month columns
@@ -460,10 +618,6 @@
     timeline.appendChild(col);
   }
 
-  // Place dots
-  const DOT_ROWS_FILING = {};
-  const DOT_ROWS_PRIMARY = {};
-
   function dateToPercent(dateStr) {
     const d = new Date(dateStr + 'T00:00:00');
     return ((d - TIMELINE_START) / (TIMELINE_END - TIMELINE_START)) * 100;
@@ -472,6 +626,20 @@
   // Stack dots to avoid overlap: group by date+type, spread vertically
   const dotGroups = {};
   for (const evt of events) {
+    // For general events, use a single dot per date (not per-state)
+    if (evt.type === 'general') {
+      const key = `${evt.date}_general`;
+      if (!dotGroups[key]) dotGroups[key] = [];
+      if (dotGroups[key].length === 0) dotGroups[key].push(evt);
+      continue;
+    }
+    // For ballot measures, group by date only (single dot)
+    if (evt.type === 'ballot') {
+      const key = `${evt.date}_ballot`;
+      if (!dotGroups[key]) dotGroups[key] = [];
+      if (dotGroups[key].length === 0) dotGroups[key].push(evt);
+      continue;
+    }
     const key = `${evt.date}_${evt.type}`;
     if (!dotGroups[key]) dotGroups[key] = [];
     dotGroups[key].push(evt);
@@ -479,8 +647,9 @@
 
   for (const [key, group] of Object.entries(dotGroups)) {
     const pct = dateToPercent(group[0].date);
+    if (pct < 0 || pct > 100) continue;
     const type = group[0].type;
-    const baseTop = type === 'filing' ? 28 : type === 'special' ? 38 : 50;
+    const baseTop = type === 'filing' ? 28 : type === 'general' ? 32 : type === 'special' ? 38 : type === 'ballot' ? 44 : 50;
 
     for (let i = 0; i < group.length; i++) {
       const dot = document.createElement('div');
@@ -489,16 +658,23 @@
       dot.style.top = `${baseTop + (i % 3) * 10}px`;
       if (group[i].date < today) dot.style.opacity = '0.35';
 
+      // Make general and ballot dots larger for prominence
+      if (type === 'general') {
+        dot.style.width = '12px';
+        dot.style.height = '12px';
+      }
+
       const evt = group[i];
-      const subtypeStr = evt.subtype && evt.subtype !== 'completed' ? ` (${evt.subtype})` : '';
-      const typeLabel = type === 'filing' ? 'Candidate Filing Deadline' : type === 'special' ? 'Special Election' : 'Primary Election';
-      const typeColor = type === 'filing' ? 'color:var(--ms-dem-blue)' : type === 'special' ? 'color:var(--ms-gold)' : 'color:var(--ms-rep-red)';
+      const typeLabels = { filing: 'Candidate Filing Deadline', special: 'Special Election', primary: 'Primary Election', general: 'General Election', ballot: 'Ballot Measure' };
+      const typeColors = { filing: 'color:var(--ms-dem-blue)', special: 'color:var(--ms-gold)', primary: 'color:var(--ms-rep-red)', general: 'color:#2d8a4e', ballot: 'color:#7b5ea7' };
+      const subtypeStr = evt.subtype && evt.subtype !== 'completed' && evt.subtype !== 'summary' ? ` (${evt.subtype})` : '';
       const detailStr = evt.detail ? `<div style="font-size:12px;color:#666">${evt.detail}</div>` : '';
       const notesStr = evt.notes ? `<div style="font-size:12px;color:#666;font-style:italic">${evt.notes}</div>` : '';
+      const nameStr = evt.state ? `${evt.name} (${evt.state})` : evt.name;
 
       dot.addEventListener('mouseenter', () => {
-        tt.show(`<div class="tt-title">${evt.name} (${evt.state})</div>
-          <div style="${typeColor};font-weight:600">${typeLabel}${subtypeStr}</div>
+        tt.show(`<div class="tt-title">${nameStr}</div>
+          <div style="${typeColors[type]};font-weight:600">${typeLabels[type]}${subtypeStr}</div>
           ${detailStr}${notesStr}
           <div>${formatDate(evt.date)}</div>`);
       });
@@ -527,9 +703,199 @@
   // Calendar body: month-by-month
   let activeFilter = 'all';
 
+  const FULL_MONTHS = {
+    '2025-01': 'January 2025', '2025-02': 'February 2025', '2025-03': 'March 2025',
+    '2025-04': 'April 2025', '2025-05': 'May 2025', '2025-06': 'June 2025',
+    '2025-07': 'July 2025', '2025-08': 'August 2025', '2025-09': 'September 2025',
+    '2025-10': 'October 2025', '2025-11': 'November 2025', '2025-12': 'December 2025',
+    '2026-01': 'January 2026', '2026-02': 'February 2026',
+    '2026-03': 'March 2026', '2026-04': 'April 2026',
+    '2026-05': 'May 2026', '2026-06': 'June 2026',
+    '2026-07': 'July 2026', '2026-08': 'August 2026',
+    '2026-09': 'September 2026', '2026-10': 'October 2026',
+    '2026-11': 'November 2026', '2026-12': 'December 2026',
+  };
+
+  // Collapse threshold: group events of same type on same date with 5+ items
+  const COLLAPSE_THRESHOLD = 5;
+
+  function renderTypeSectionHtml(type, typeEvents) {
+    let typeLabel;
+    if (type === 'filing') typeLabel = 'Filing';
+    else if (type === 'primary') typeLabel = 'Primary';
+    else if (type === 'special') typeLabel = 'Special';
+    else if (type === 'general') typeLabel = 'General';
+    else if (type === 'ballot') typeLabel = 'Ballot';
+    else typeLabel = type;
+
+    // General election: special summary rendering
+    if (type === 'general') {
+      const evt = typeEvents[0];
+      return `<div class="type-section">
+        <span class="event-type general">${typeLabel}</span>
+        <span class="general-summary">${evt.detail}</span>
+      </div>`;
+    }
+
+    // Ballot measures
+    if (type === 'ballot') {
+      // Group by state
+      const byState = {};
+      for (const evt of typeEvents) {
+        if (!byState[evt.state]) byState[evt.state] = [];
+        byState[evt.state].push(evt);
+      }
+      const stateAbbrs = Object.keys(byState).sort();
+      const totalCount = typeEvents.length;
+      const needsCollapse = totalCount >= COLLAPSE_THRESHOLD;
+
+      let summaryHtml = '';
+      if (needsCollapse) {
+        // Collapsed: "X ballot measures in Y states"
+        summaryHtml += `<span style="font-size:13px;color:#7b5ea7;font-weight:600">${totalCount} ballot measures in ${stateAbbrs.length} state${stateAbbrs.length !== 1 ? 's' : ''}</span>`;
+      }
+
+      let tagsHtml = '';
+      for (const abbr of stateAbbrs) {
+        const count = byState[abbr].length;
+        const countStr = count > 1 ? ` (${count})` : '';
+        tagsHtml += `<a href="state.html?st=${abbr}" class="event-state-tag ballot" title="${states[abbr]?.name || abbr}: ${count} ballot measure${count !== 1 ? 's' : ''}">${abbr}${countStr}</a>`;
+      }
+
+      if (needsCollapse) {
+        const id = `collapse-${type}-${typeEvents[0].date}`;
+        return `<div class="type-section">
+          <span class="event-type ballot">${typeLabel}</span>
+          ${summaryHtml}
+          <button class="collapse-toggle" onclick="var d=document.getElementById('${id}');var exp=d.classList.toggle('expanded');this.textContent=exp?'Hide':'Show ${totalCount} measures'">Show ${totalCount} measures</button>
+        </div>
+        <div class="collapse-detail" id="${id}" style="margin-left:86px">${tagsHtml}</div>`;
+      }
+
+      return `<div class="type-section">
+        <span class="event-type ballot">${typeLabel}</span>
+        <div class="event-states">${tagsHtml}</div>
+      </div>`;
+    }
+
+    // Filing: might have subtypes (statewide vs legislative)
+    // Group filing events by subtype
+    if (type === 'filing') {
+      const subtypeGroups = {};
+      for (const evt of typeEvents) {
+        const st = evt.subtype || 'all';
+        if (!subtypeGroups[st]) subtypeGroups[st] = [];
+        subtypeGroups[st].push(evt);
+      }
+
+      let html = '';
+      for (const [subtype, subEvents] of Object.entries(subtypeGroups)) {
+        let label = 'Filing';
+        if (subtype === 'statewide') label = 'Filing (SW)';
+        else if (subtype === 'legislative') label = 'Filing (Leg)';
+
+        let tagsHtml = '';
+        for (const evt of subEvents) {
+          const notesSuffix = evt.notes ? `\n${evt.notes}` : '';
+          tagsHtml += `<a href="state.html?st=${evt.state}" class="event-state-tag filing" title="${evt.name}${notesSuffix}">${evt.state}</a>`;
+        }
+
+        const needsCollapse = subEvents.length >= COLLAPSE_THRESHOLD;
+        if (needsCollapse) {
+          const statesByAbbr = subEvents.map(e => e.state).sort();
+          const summaryText = `${statesByAbbr.length} states`;
+          const id = `collapse-filing-${subtype}-${subEvents[0].date}`;
+          html += `<div class="type-section">
+            <span class="event-type filing">${label}</span>
+            <span style="font-size:13px;color:var(--ms-dem-blue);font-weight:600">${summaryText}</span>
+            <button class="collapse-toggle" onclick="var d=document.getElementById('${id}');var exp=d.classList.toggle('expanded');this.textContent=exp?'Hide':'Show ${statesByAbbr.length} states'">Show ${statesByAbbr.length} states</button>
+          </div>
+          <div class="collapse-detail" id="${id}" style="margin-left:86px">${tagsHtml}</div>`;
+        } else {
+          html += `<div class="type-section">
+            <span class="event-type filing">${label}</span>
+            <div class="event-states">${tagsHtml}</div>
+          </div>`;
+        }
+      }
+      return html;
+    }
+
+    // Primary: show race counts
+    if (type === 'primary') {
+      let tagsHtml = '';
+      for (const evt of typeEvents) {
+        const countStr = evt.raceCount ? ` <span class="race-count">(${evt.raceCount} races)</span>` : '';
+        tagsHtml += `<a href="state.html?st=${evt.state}" class="event-state-tag primary" title="${evt.name}">${evt.state}${countStr}</a>`;
+      }
+
+      const needsCollapse = typeEvents.length >= COLLAPSE_THRESHOLD;
+      if (needsCollapse) {
+        const id = `collapse-primary-${typeEvents[0].date}`;
+        const summaryParts = typeEvents.map(e => {
+          const c = e.raceCount ? ` (${e.raceCount})` : '';
+          return `${e.state}${c}`;
+        });
+        const summaryText = `${typeEvents.length} states`;
+        return `<div class="type-section">
+          <span class="event-type primary">${typeLabel}</span>
+          <span style="font-size:13px;color:var(--ms-rep-red);font-weight:600">${summaryText}</span>
+          <button class="collapse-toggle" onclick="var d=document.getElementById('${id}');var exp=d.classList.toggle('expanded');this.textContent=exp?'Hide':'Show ${typeEvents.length} states'">Show ${typeEvents.length} states</button>
+        </div>
+        <div class="collapse-detail" id="${id}" style="margin-left:86px">${tagsHtml}</div>`;
+      }
+
+      return `<div class="type-section">
+        <span class="event-type primary">${typeLabel}</span>
+        <div class="event-states">${tagsHtml}</div>
+      </div>`;
+    }
+
+    // Special elections: show detail
+    if (type === 'special') {
+      let tagsHtml = '';
+      for (const evt of typeEvents) {
+        const evtHref = (evt.chamber && evt.district != null)
+          ? `district.html?st=${evt.state}&chamber=${encodeURIComponent(evt.chamber)}&d=${encodeURIComponent(evt.district)}`
+          : `state.html?st=${evt.state}`;
+        tagsHtml += `<a href="${evtHref}" class="event-state-tag special" title="${evt.name}: ${evt.detail || ''}">${evt.state}${evt.detail ? ': ' + evt.detail : ''}</a>`;
+      }
+
+      const needsCollapse = typeEvents.length >= COLLAPSE_THRESHOLD;
+      if (needsCollapse) {
+        const id = `collapse-special-${typeEvents[0].date}`;
+        // Collapsed: group by state with counts
+        const byState = {};
+        for (const evt of typeEvents) {
+          if (!byState[evt.state]) byState[evt.state] = 0;
+          byState[evt.state]++;
+        }
+        const summaryParts = Object.entries(byState).sort().map(([st, c]) => c > 1 ? `${st} (${c} races)` : st);
+        const summaryText = summaryParts.join(', ');
+
+        return `<div class="type-section">
+          <span class="event-type special">${typeLabel}</span>
+          <span style="font-size:13px;color:#8a7000;font-weight:600">${summaryText}</span>
+          <button class="collapse-toggle" onclick="var d=document.getElementById('${id}');var exp=d.classList.toggle('expanded');this.textContent=exp?'Hide':'Show ${typeEvents.length} races'">Show ${typeEvents.length} races</button>
+        </div>
+        <div class="collapse-detail" id="${id}" style="margin-left:86px">${tagsHtml}</div>`;
+      }
+
+      return `<div class="type-section">
+        <span class="event-type special">${typeLabel}</span>
+        <div class="event-states">${tagsHtml}</div>
+      </div>`;
+    }
+
+    return '';
+  }
+
+  let todayDividerEl = null;
+
   function renderCalendar() {
     const body = document.getElementById('calendar-body');
     body.innerHTML = '';
+    todayDividerEl = null;
 
     // Group events by month
     const months = {};
@@ -540,17 +906,9 @@
       months[monthKey].push(evt);
     }
 
-    // Group events within each month by date+type
-    const FULL_MONTHS = {
-      '2025-11': 'November 2025', '2025-12': 'December 2025',
-      '2026-01': 'January 2026', '2026-02': 'February 2026',
-      '2026-03': 'March 2026', '2026-04': 'April 2026',
-      '2026-05': 'May 2026', '2026-06': 'June 2026',
-      '2026-07': 'July 2026', '2026-08': 'August 2026',
-      '2026-09': 'September 2026',
-    };
-
     const sortedMonths = Object.keys(months).sort();
+    let foundFirstUpcoming = false;
+
     for (const monthKey of sortedMonths) {
       const monthEvents = months[monthKey];
       const sec = document.createElement('div');
@@ -559,38 +917,49 @@
       const evtCount = monthEvents.length;
       sec.innerHTML = `<div class="month-header">${FULL_MONTHS[monthKey] || monthKey} <span class="event-count">(${evtCount} event${evtCount !== 1 ? 's' : ''})</span></div>`;
 
-      // Group by date+type+subtype for display
-      const dateTypeGroups = {};
+      // Group by date only
+      const dateGroups = {};
       for (const evt of monthEvents) {
-        const key = `${evt.date}_${evt.type}_${evt.subtype || ''}`;
-        if (!dateTypeGroups[key]) dateTypeGroups[key] = { date: evt.date, type: evt.type, subtype: evt.subtype, states: [] };
-        dateTypeGroups[key].states.push(evt);
+        if (!dateGroups[evt.date]) dateGroups[evt.date] = [];
+        dateGroups[evt.date].push(evt);
       }
 
-      const groupKeys = Object.keys(dateTypeGroups).sort();
-      for (const gk of groupKeys) {
-        const group = dateTypeGroups[gk];
-        const isPast = group.date < today;
-        const row = document.createElement('div');
-        row.className = `event-row${isPast ? ' past' : ''}`;
+      const sortedDates = Object.keys(dateGroups).sort();
+      for (const date of sortedDates) {
+        const dateEvents = dateGroups[date];
+        const isPast = date < today;
 
-        let typeLabel = group.type === 'filing' ? 'Candidate Filing' : group.type === 'special' ? 'Special' : 'Primary';
-        if (group.subtype === 'statewide') typeLabel = 'Candidate Filing (SW)';
-        else if (group.subtype === 'legislative') typeLabel = 'Candidate Filing (Leg)';
-        let statesHtml = '';
-        for (const evt of group.states) {
-          const suffix = evt.detail ? ` — ${evt.detail}` : (evt.subtype && evt.subtype !== 'completed' ? ` (${evt.subtype})` : '');
-          const notesSuffix = evt.notes ? `\n${evt.notes}` : '';
-          const evtHref = (group.type === 'special' && evt.chamber && evt.district != null)
-            ? `district.html?st=${evt.state}&chamber=${encodeURIComponent(evt.chamber)}&d=${encodeURIComponent(evt.district)}`
-            : `state.html?st=${evt.state}`;
-          statesHtml += `<a href="${evtHref}" class="event-state-tag ${group.type}" title="${evt.name}${suffix}${notesSuffix}">${evt.state}${evt.detail ? ': ' + evt.detail : ''}</a>`;
+        // Insert today divider before first upcoming event
+        if (!isPast && !foundFirstUpcoming) {
+          foundFirstUpcoming = true;
+          const divider = document.createElement('div');
+          divider.className = 'today-divider';
+          divider.id = 'today-divider';
+          divider.textContent = 'Upcoming';
+          sec.appendChild(divider);
+          todayDividerEl = divider;
+        }
+
+        const row = document.createElement('div');
+        row.className = `date-row${isPast ? ' past' : ''}`;
+
+        // Group events on this date by type (ordered: general, primary, filing, special, ballot)
+        const typeOrder = ['general', 'primary', 'filing', 'special', 'ballot'];
+        const byType = {};
+        for (const evt of dateEvents) {
+          if (!byType[evt.type]) byType[evt.type] = [];
+          byType[evt.type].push(evt);
+        }
+
+        let sectionsHtml = '';
+        for (const t of typeOrder) {
+          if (!byType[t]) continue;
+          sectionsHtml += renderTypeSectionHtml(t, byType[t]);
         }
 
         row.innerHTML = `
-          <span class="event-date">${formatDateShort(group.date)}</span>
-          <span class="event-type ${group.type}">${typeLabel}</span>
-          <div class="event-states">${statesHtml}</div>
+          <span class="event-date">${formatDateShort(date)}</span>
+          <div class="date-row-content">${sectionsHtml}</div>
         `;
         sec.appendChild(row);
       }
@@ -605,17 +974,54 @@
 
   renderCalendar();
 
+  // Auto-scroll to today divider
+  if (todayDividerEl) {
+    setTimeout(() => {
+      todayDividerEl.scrollIntoView({ behavior: 'auto', block: 'start' });
+      // Offset for fixed header if present
+      window.scrollBy(0, -80);
+    }, 100);
+  }
+
+  // Jump to today button
+  const jumpBtn = document.getElementById('jump-to-today');
+  jumpBtn.addEventListener('click', () => {
+    if (todayDividerEl) {
+      todayDividerEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.scrollBy(0, -80);
+    }
+  });
+
+  // Show/hide jump button based on scroll position
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        if (todayDividerEl) {
+          const rect = todayDividerEl.getBoundingClientRect();
+          // Show button when the divider is not visible
+          const isVisible = rect.top >= -100 && rect.top <= window.innerHeight + 100;
+          jumpBtn.classList.toggle('visible', !isVisible);
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
   // Filter buttons
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', function() {
       document.querySelectorAll('.filter-btn').forEach(b => {
-        b.classList.remove('active', 'active-filing', 'active-primary', 'active-special');
+        b.classList.remove('active', 'active-filing', 'active-primary', 'active-general', 'active-special', 'active-ballot');
       });
       const f = this.dataset.filter;
       activeFilter = f;
       if (f === 'filing') this.classList.add('active-filing');
       else if (f === 'primary') this.classList.add('active-primary');
+      else if (f === 'general') this.classList.add('active-general');
       else if (f === 'special') this.classList.add('active-special');
+      else if (f === 'ballot') this.classList.add('active-ballot');
       else this.classList.add('active');
       renderCalendar();
     });
