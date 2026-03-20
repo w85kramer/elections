@@ -109,6 +109,37 @@ Some states fill vacancies by appointment only (no special election). Still trac
 - **New Hampshire**: BP uses county-based names ("Belknap-1"); our DB uses numeric
 - **Vermont**: Similar to NH with county-based names
 
+## Missing Results Check
+
+Run this query every Monday to find elections that have already occurred but have no results recorded. Limited to the past year to avoid flagging old historical elections.
+
+```sql
+-- Past elections (last year) with candidates filed but no results recorded
+SELECT e.id as election_id, e.election_type, e.election_date,
+       st.abbreviation, d.district_name, d.chamber, s.seat_label,
+       COUNT(c.id) as candidacy_count
+FROM elections e
+JOIN seats s ON s.id = e.seat_id
+JOIN districts d ON d.id = s.district_id
+JOIN states st ON st.id = d.state_id
+JOIN candidacies c ON c.election_id = e.id
+WHERE e.election_date < CURRENT_DATE
+  AND e.election_date >= CURRENT_DATE - INTERVAL '1 year'
+  AND e.result_status IS NULL
+  AND c.result IS NULL
+GROUP BY e.id, e.election_type, e.election_date,
+         st.abbreviation, d.district_name, d.chamber, s.seat_label
+HAVING COUNT(c.id) > 0 AND COUNT(c.result) = 0
+ORDER BY e.election_date DESC;
+```
+
+Any results returned need investigation:
+- **Recent (< 1 week old)**: Results may not be available yet — note and check next week
+- **1-4 weeks old**: Should have results — research on SoS website or Ballotpedia
+- **1+ month old**: Definitely missing — prioritize filling in
+
+After adding results, always re-export the affected state(s) and update `seat_terms` / `seats.current_holder` for winners.
+
 ## Cross-Reference Query
 
 Run this SQL to compare our DB against an expected count:
