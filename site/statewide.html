@@ -1044,6 +1044,23 @@
     svg += `<line x1="${nowX}" y1="${BAR_Y - 6}" x2="${nowX}" y2="${BAR_Y + BAR_H + 6}" stroke="#043858" stroke-width="1.5" stroke-dasharray="4,3"/>`;
     svg += `<text x="${nowX}" y="${BAR_Y + BAR_H + 20}" text-anchor="middle" font-size="10" fill="#043858" font-family="Work Sans,sans-serif" font-weight="600">Today</text>`;
 
+    // --- Draw vacancy gaps between terms ---
+    for (let gi = 0; gi < parsed.length - 1; gi++) {
+      const gapStart = parsed[gi].endDate;
+      const gapEnd = parsed[gi + 1].startDate;
+      const gapDays = (gapEnd - gapStart) / (1000 * 60 * 60 * 24);
+      if (gapDays > 30) {
+        const gx1 = xPos(gapStart);
+        const gx2 = xPos(gapEnd);
+        const gw = Math.max(gx2 - gx1, 2);
+        svg += `<rect x="${gx1}" y="${BAR_Y}" width="${gw}" height="${BAR_H}" fill="#ddd" rx="2"/>`;
+        if (gw > 50) {
+          svg += `<text x="${gx1 + gw / 2}" y="${BAR_Y + BAR_H / 2 + 1}" text-anchor="middle" dominant-baseline="central"
+            fill="#999" font-family="Work Sans,sans-serif" font-style="italic" font-size="10" style="pointer-events:none">Vacant</text>`;
+        }
+      }
+    }
+
     // --- Pass 2: Draw officeholder bar segments ---
     parsed.forEach((t, i) => {
       const x1 = xPos(t.startDate);
