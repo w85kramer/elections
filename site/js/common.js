@@ -72,6 +72,8 @@ function partyLabel(party) {
     COM: 'Communist Party', NOTA: 'None of These Candidates',
     OTH: 'Other', VET: 'Veterans Party', EAR: 'Earth Party',
     IG: 'Independent Green', NAP: 'New Alliance Party',
+    LU: 'Liberty Union Party', GMPJ: 'Green Mountain Peace & Justice Party',
+    P: 'Progressive Party',
   };
   return PARTY_NAMES[party] || party || 'Vacant';
 }

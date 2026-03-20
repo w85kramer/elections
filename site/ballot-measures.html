@@ -912,6 +912,14 @@
     });
   });
 
+  // Pre-select state from URL param (e.g., ?st=LA)
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlState = urlParams.get('st');
+  if (urlState) {
+    const stateFilter = document.getElementById('filter-state');
+    stateFilter.value = urlState.toUpperCase();
+  }
+
   // Initial render
   render();
   updateBallotMap(2026);

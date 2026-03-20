@@ -818,7 +818,7 @@
       for (const abbr of stateAbbrs) {
         const count = byState[abbr].length;
         const countStr = count > 1 ? ` (${count})` : '';
-        tagsHtml += `<a href="state.html?st=${abbr}" class="event-state-tag ballot" title="${states[abbr]?.name || abbr}: ${count} ballot measure${count !== 1 ? 's' : ''}">${abbr}${countStr}</a>`;
+        tagsHtml += `<a href="ballot-measures.html?st=${abbr}" class="event-state-tag ballot" title="${states[abbr]?.name || abbr}: ${count} ballot measure${count !== 1 ? 's' : ''}">${abbr}${countStr}</a>`;
       }
 
       if (needsCollapse) {
