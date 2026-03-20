@@ -992,7 +992,7 @@
       for (const entry of entries) {
         if (entry.isIntersecting) {
           const dividerTop = todayDividerEl.offsetTop - calBody.offsetTop;
-          calBody.scrollTop = dividerTop - 8;
+          calBody.scrollTop = dividerTop - (calBody.clientHeight / 2);
           observer.disconnect();
         }
       }
@@ -1005,7 +1005,7 @@
   jumpBtn.addEventListener('click', () => {
     if (todayDividerEl && calBody) {
       const dividerTop = todayDividerEl.offsetTop - calBody.offsetTop;
-      calBody.scrollTo({ top: dividerTop - 8, behavior: 'smooth' });
+      calBody.scrollTo({ top: dividerTop - (calBody.clientHeight / 2), behavior: 'smooth' });
     }
   });
 
