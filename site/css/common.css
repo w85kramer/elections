@@ -689,6 +689,38 @@ details .details-content {
   margin-top: 8px;
 }
 
+/* Case Study Cards (101 pages) */
+.case-study {
+  background: white;
+  border: 1px solid var(--ms-border);
+  border-top: 3px solid var(--ms-navy);
+  border-radius: 0 0 var(--ms-radius) var(--ms-radius);
+  padding: 24px 28px 20px;
+  margin: 32px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.case-study-label {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--ms-gold);
+  margin-bottom: 6px;
+}
+.case-study-title {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--ms-navy);
+  margin-bottom: 12px;
+}
+.case-study h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+.case-study p:last-child { margin-bottom: 0; }
+
 /* Office Overview Callout */
 .office-overview {
   background: #f0f5f8;
