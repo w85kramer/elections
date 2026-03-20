@@ -935,12 +935,12 @@
         const isSuccession = t.start_reason && t.start_reason !== 'elected';
         if (!isSuccession) continue;
 
-        const lastName = t.name.split(' ').pop().toLowerCase();
+        const lastName = t.name.split(' ').pop().toLowerCase().replace(/\s+/g, '');
         const wonElections = (data.elections || [])
           .filter(e =>
             e.type === 'General' && e.year >= t.startDate.getFullYear()
             && (t.endDate ? e.year <= t.endDate.getFullYear() : true)
-            && e.candidates.some(c => c.result === 'Won' && c.name.toLowerCase().includes(lastName))
+            && e.candidates.some(c => c.result === 'Won' && c.name.toLowerCase().replace(/\s+/g, '').includes(lastName))
           )
           .sort((a, b) => a.year - b.year);
 
@@ -959,9 +959,7 @@
     const totalDays = (latest - earliest) / (1000 * 60 * 60 * 24);
 
     const W = Math.max(700, parsed.length * 80 + 120);
-    const H = 120;
-    const PAD_L = 20, PAD_R = 20, PAD_T = 30, PAD_B = 28;
-    const BAR_Y = PAD_T;
+    const PAD_L = 20, PAD_R = 20, PAD_B = 28;
     const BAR_H = 36;
     const chartW = W - PAD_L - PAD_R;
 
@@ -977,6 +975,50 @@
       if (!party) return '#ccc';
       return '#8b567f';
     }
+
+    // --- Pass 1: Collect election markers to determine stagger tiers ---
+    const allMarkers = [];
+    if (!appointedOnly) {
+      parsed.forEach((t) => {
+        const lastName = t.name.split(' ').pop().toLowerCase();
+        const color = svgPartyColor(t.party);
+        const termElections = (data.elections || [])
+          .filter(e =>
+            e.type === 'General' && e.year >= t.startDate.getFullYear() - 1
+            && e.year <= (t.endDate ? t.endDate.getFullYear() : 2030)
+            && e.candidates.some(c => c.result === 'Won' && c.name.toLowerCase().includes(lastName))
+          )
+          .sort((a, b) => a.year - b.year);
+        t._termElections = termElections;
+
+        for (const elec of termElections) {
+          const winner = elec.candidates.find(c => c.result === 'Won' && c.name.toLowerCase().includes(lastName));
+          const runnerUp = elec.candidates.filter(c => c.result === 'Lost').sort((a, b) => (b.pct || 0) - (a.pct || 0))[0];
+          const margin = (winner && runnerUp && winner.pct && runnerUp.pct) ? winner.pct - runnerUp.pct : (t.election_year === elec.year ? t.margin : null);
+          const dx = xPos(new Date(elec.year, 10, 1));
+          allMarkers.push({ dx, year: elec.year, margin, color });
+        }
+      });
+    }
+
+    // Collision detection — assign tiers for staggered labels
+    const MIN_SPACING = 32;
+    allMarkers.sort((a, b) => a.dx - b.dx);
+    for (let mi = 0; mi < allMarkers.length; mi++) {
+      const m = allMarkers[mi];
+      m.tier = 0;
+      for (let mj = mi - 1; mj >= Math.max(0, mi - 4); mj--) {
+        if (allMarkers[mj].tier === m.tier && m.dx - allMarkers[mj].dx < MIN_SPACING) {
+          m.tier = allMarkers[mj].tier + 1;
+        }
+      }
+    }
+    const maxTier = allMarkers.length ? Math.max(...allMarkers.map(m => m.tier)) : 0;
+
+    // --- Set final dimensions based on stagger depth ---
+    const PAD_T = appointedOnly ? 30 : 58 + maxTier * 18;
+    const BAR_Y = PAD_T;
+    const H = BAR_Y + BAR_H + PAD_B + 4;
 
     let svg = `<svg width="100%" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="max-width:${W}px">`;
 
@@ -996,7 +1038,7 @@
     svg += `<line x1="${nowX}" y1="${BAR_Y - 6}" x2="${nowX}" y2="${BAR_Y + BAR_H + 6}" stroke="#043858" stroke-width="1.5" stroke-dasharray="4,3"/>`;
     svg += `<text x="${nowX}" y="${BAR_Y + BAR_H + 20}" text-anchor="middle" font-size="10" fill="#043858" font-family="Work Sans,sans-serif" font-weight="600">Today</text>`;
 
-    // Draw officeholder segments
+    // --- Pass 2: Draw officeholder bar segments ---
     parsed.forEach((t, i) => {
       const x1 = xPos(t.startDate);
       const x2 = xPos(t.endDate);
@@ -1028,30 +1070,25 @@
           fill="white" font-family="Work Sans,sans-serif" font-weight="700" font-size="10"
           style="pointer-events:none">${initials}</text>`;
       }
-
-      // Election diamond markers (skip for appointed-only mode)
-      if (!appointedOnly) {
-        const lastNameLower = lastName.toLowerCase();
-        const termElections = (data.elections || [])
-          .filter(e =>
-            e.type === 'General' && e.year >= t.startDate.getFullYear() - 1
-            && e.year <= (t.endDate ? t.endDate.getFullYear() : 2030)
-            && e.candidates.some(c => c.result === 'Won' && c.name.toLowerCase().includes(lastNameLower))
-          )
-          .sort((a, b) => a.year - b.year);
-        t._termElections = termElections;
-
-        for (const elec of termElections) {
-          const winner = elec.candidates.find(c => c.result === 'Won' && c.name.toLowerCase().includes(lastNameLower));
-          const runnerUp = elec.candidates.filter(c => c.result === 'Lost').sort((a, b) => (b.pct || 0) - (a.pct || 0))[0];
-          const margin = (winner && runnerUp && winner.pct && runnerUp.pct) ? winner.pct - runnerUp.pct : (t.election_year === elec.year ? t.margin : null);
-          const elecDate = new Date(elec.year, 10, 1);
-          const dx = xPos(elecDate);
-          const diamondSize = margin != null ? Math.min(6, 3 + Math.abs(margin) / 20 * 3) : 4;
-          svg += `<polygon points="${dx},${BAR_Y - diamondSize - 2} ${dx + diamondSize},${BAR_Y - 2} ${dx},${BAR_Y + diamondSize - 2} ${dx - diamondSize},${BAR_Y - 2}" fill="${color}" opacity="0.8"/>`;
-        }
-      }
     });
+
+    // --- Render drop-line markers (tiers already computed in Pass 1) ---
+    for (const m of allMarkers) {
+      const hasMargin = m.margin != null;
+      const tierOffset = m.tier * 18;
+      const lineTop = BAR_Y - 28 - tierOffset;
+      // Drop line
+      svg += `<line x1="${m.dx}" y1="${lineTop + 14}" x2="${m.dx}" y2="${BAR_Y}" stroke="${m.color}" stroke-width="${hasMargin ? 1.5 : 1}" opacity="${hasMargin ? 0.4 : 0.2}"/>`;
+      // Small circle at top of line
+      svg += `<circle cx="${m.dx}" cy="${lineTop + 14}" r="${hasMargin ? 2.5 : 1.5}" fill="${m.color}" opacity="${hasMargin ? 0.7 : 0.4}"/>`;
+      // Year label
+      svg += `<text x="${m.dx}" y="${lineTop + 8}" text-anchor="middle" font-size="9" font-weight="600" fill="${hasMargin ? '#444' : '#999'}" font-family="Work Sans,sans-serif">${m.year}</text>`;
+      // Margin label
+      if (hasMargin) {
+        const sign = m.margin > 0 ? '+' : '';
+        svg += `<text x="${m.dx}" y="${lineTop}" text-anchor="middle" font-size="8" font-weight="700" fill="${m.color}" font-family="Work Sans,sans-serif">${sign}${m.margin.toFixed(1)}%</text>`;
+      }
+    }
 
     svg += '</svg>';
     container.innerHTML = svg;
@@ -1067,17 +1104,17 @@
         const startStr = t.start ? formatDate(t.start) : '?';
         const endStr = t.end ? formatDate(t.end) : 'Present';
         const reasonStr = t.start_reason ? reasonLabel(t.start_reason) : '';
-        const endReasonStr = t.end_reason ? `Left office: ${reasonLabel(t.end_reason)}` : '';
+        const endReasonStr = t.end_reason && t.end_reason !== 'term_expired' ? `Left office: ${reasonLabel(t.end_reason)}` : '';
+        const notesStr = t.notes || '';
 
         let ttHtml = `<div class="tt-name" style="${partyColorStyle(t.party)}">${t.name}
           <span class="tt-party">${partyLabel(t.party)}</span></div>
           <div class="tt-dates">${startStr} &mdash; ${endStr}</div>`;
         if (reasonStr) ttHtml += `<div class="tt-reason">${reasonStr}</div>`;
-        if (t.notes) ttHtml += `<div class="tt-reason">${t.notes}</div>`;
 
         if (!appointedOnly) {
           if (t._electedYear) ttHtml += `<div class="tt-reason">Won election in ${t._electedYear}</div>`;
-          if (endReasonStr) ttHtml += `<div class="tt-reason">${endReasonStr}</div>`;
+          if (endReasonStr) ttHtml += `<div class="tt-reason">${endReasonStr}${notesStr ? ' — ' + notesStr : ''}</div>`;
 
           const elecs = t._termElections || [];
           if (elecs.length > 0) {
