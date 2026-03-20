@@ -70,7 +70,7 @@
     display: flex;
     min-width: 700px;
     position: relative;
-    height: 80px;
+    height: 120px;
   }
   .timeline-month {
     flex: 1;
@@ -98,6 +98,24 @@
   .timeline-dot.special { background: var(--ms-gold); }
   .timeline-dot.general { background: #2d8a4e; }
   .timeline-dot.ballot { background: #7b5ea7; }
+  .timeline-year-label {
+    position: absolute;
+    bottom: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--ms-text-light);
+    opacity: 0.6;
+    letter-spacing: 0.5px;
+  }
+  .timeline-year-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--ms-text-light);
+    opacity: 0.3;
+    z-index: 1;
+  }
   .today-marker {
     position: absolute;
     top: 0;
@@ -292,12 +310,22 @@
     color: #2d8a4e;
   }
 
-  /* Stats row */
+  /* Stats row — single compact row */
   .cal-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-bottom: 32px;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .cal-stats .stat-card {
+    flex: 1;
+    padding: 12px 16px;
+    min-width: 0;
+  }
+  .cal-stats .stat-number {
+    font-size: 24px;
+  }
+  .cal-stats .stat-label {
+    font-size: 11px;
   }
 
   /* State lookup */
@@ -333,7 +361,8 @@
   }
 
   @media (max-width: 768px) {
-    .cal-stats { grid-template-columns: repeat(2, 1fr); }
+    .cal-stats { flex-wrap: wrap; }
+    .cal-stats .stat-card { flex: 1 1 calc(50% - 12px); }
     .date-row { flex-wrap: wrap; }
     .date-row-content { width: 100%; }
     .type-section { flex-wrap: wrap; }
@@ -352,9 +381,8 @@
   <!-- Stats -->
   <div class="cal-stats">
     <div class="card stat-card"><div class="stat-number" id="stat-next-days">—</div><div class="stat-label" id="stat-next-label">Next Event</div></div>
-    <div class="card stat-card"><div class="stat-number" id="stat-past-filing">—</div><div class="stat-label">Filing Deadlines Passed</div></div>
-    <div class="card stat-card"><div class="stat-number" id="stat-remaining-filing">—</div><div class="stat-label">Filing Deadlines Left</div></div>
-    <div class="card stat-card"><div class="stat-number" id="stat-primaries">—</div><div class="stat-label">Primary Elections</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-filing">—</div><div class="stat-label">Filing Deadlines</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-primaries">—</div><div class="stat-label">Primaries</div></div>
     <div class="card stat-card"><div class="stat-number" id="stat-specials">—</div><div class="stat-label">Special Elections</div></div>
     <div class="card stat-card"><div class="stat-number" id="stat-ballot">—</div><div class="stat-label">Ballot Measures</div></div>
   </div>
@@ -508,8 +536,7 @@
   const pastFiling = filingEvents.filter(e => e.date < today).length;
   const remainingFiling = filingEvents.length - pastFiling;
 
-  document.getElementById('stat-past-filing').textContent = pastFiling;
-  document.getElementById('stat-remaining-filing').textContent = remainingFiling;
+  document.getElementById('stat-filing').textContent = `${remainingFiling} of ${filingEvents.length}`;
   document.getElementById('stat-primaries').textContent = primaryEvents.length;
   document.getElementById('stat-specials').textContent = specialEvents.length;
   document.getElementById('stat-ballot').textContent = ballotEvents.length;
@@ -634,6 +661,28 @@
     return ((d - TIMELINE_START) / (TIMELINE_END - TIMELINE_START)) * 100;
   }
 
+  // Year overlay — label + divider line at Jan 1, 2026
+  const janPct = dateToPercent('2026-01-01');
+  const yearLine = document.createElement('div');
+  yearLine.className = 'timeline-year-line';
+  yearLine.style.left = `${janPct}%`;
+  timeline.appendChild(yearLine);
+
+  // Year labels centered in each year's span
+  const label2025 = document.createElement('div');
+  label2025.className = 'timeline-year-label';
+  label2025.style.left = `${janPct / 2}%`;
+  label2025.style.transform = 'translateX(-50%)';
+  label2025.textContent = '2025';
+  timeline.appendChild(label2025);
+
+  const label2026 = document.createElement('div');
+  label2026.className = 'timeline-year-label';
+  label2026.style.left = `${janPct + (100 - janPct) / 2}%`;
+  label2026.style.transform = 'translateX(-50%)';
+  label2026.textContent = '2026';
+  timeline.appendChild(label2026);
+
   // Stack dots to avoid overlap: group by date+type, spread vertically
   const dotGroups = {};
   for (const evt of events) {
@@ -660,7 +709,7 @@
     const pct = dateToPercent(group[0].date);
     if (pct < 0 || pct > 100) continue;
     const type = group[0].type;
-    const baseTop = type === 'filing' ? 28 : type === 'general' ? 32 : type === 'special' ? 38 : type === 'ballot' ? 44 : 50;
+    const baseTop = type === 'filing' ? 28 : type === 'general' ? 36 : type === 'special' ? 48 : type === 'ballot' ? 58 : 68;
 
     for (let i = 0; i < group.length; i++) {
       const dot = document.createElement('div');
