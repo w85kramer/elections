@@ -146,16 +146,67 @@
   .race-rating-lean-d { background: #d4edfc; color: #1a6ba0; }
   .race-rating-lean-r { background: #fcd4e0; color: #a01a4a; }
 
-  /* Deadlines */
-  .deadline-list { list-style: none; padding: 0; }
-  .deadline-list li {
-    padding: 10px 0; border-bottom: 1px solid #eee;
-    display: flex; gap: 12px; font-size: 14px;
+  /* Upcoming events */
+  .upcoming-events { list-style: none; padding: 0; }
+  .upcoming-date-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
   }
-  .deadline-list .dl-date { font-weight: 700; color: var(--ms-navy); min-width: 100px; }
-  .deadline-list .dl-text { color: var(--ms-text-light); }
-  .deadline-list .dl-primary .dl-text { color: var(--ms-rep-red); font-weight: 600; }
-  .deadline-list .dl-special .dl-text { color: var(--ms-gold); font-weight: 600; }
+  .upcoming-date {
+    font-weight: 700;
+    color: var(--ms-navy);
+    min-width: 80px;
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+  .upcoming-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+  }
+  .upcoming-type-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .upcoming-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-width: 55px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .upcoming-badge.filing { background: rgba(39,97,129,0.12); color: var(--ms-dem-blue); }
+  .upcoming-badge.primary { background: rgba(229,9,99,0.12); color: var(--ms-rep-red); }
+  .upcoming-badge.special { background: rgba(201,163,0,0.15); color: #8a7000; }
+  .upcoming-badge.general { background: rgba(45,138,78,0.12); color: #2d8a4e; }
+  .upcoming-badge.ballot { background: rgba(123,94,167,0.12); color: #7b5ea7; }
+  .upcoming-tag {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 12px;
+    text-decoration: none;
+    transition: transform 0.1s;
+  }
+  .upcoming-tag:hover { transform: scale(1.05); }
+  .upcoming-tag.filing { background: rgba(39,97,129,0.06); color: var(--ms-dem-blue); }
+  .upcoming-tag.primary { background: rgba(229,9,99,0.06); color: var(--ms-rep-red); }
+  .upcoming-tag.special { background: rgba(201,163,0,0.08); color: #8a7000; }
+  .upcoming-tag.general { background: rgba(45,138,78,0.06); color: #2d8a4e; }
+  .upcoming-tag.ballot { background: rgba(123,94,167,0.06); color: #7b5ea7; }
 
   /* Map tabs */
   .map-links { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -285,17 +336,20 @@
       <a href="candidates.html">Candidates<span>Search 53,000+ candidates</span></a>
       <a href="swing-calculator.html">Swing Calculator<span>Legislature forecast tool</span></a>
       <a href="timeline.html">Election Timeline<span>2026 cycle month by month</span></a>
-      <a href="calendar.html">Elections Calendar<span>Deadlines & primaries</span></a>
+      <a href="calendar.html">Elections Calendar<span>All deadlines, primaries & elections</span></a>
       <a href="control-timeline.html">Control Over Time<span>Animated partisan control map</span></a>
     </div>
   </div>
 
-  <!-- Upcoming Deadlines -->
+  <!-- Upcoming Events -->
   <div class="section">
-    <div class="section-title">Upcoming Filing Deadlines & Elections</div>
-    <ul class="deadline-list" id="deadline-list">
+    <div class="section-title">Upcoming Elections & Deadlines</div>
+    <div class="upcoming-events" id="upcoming-events">
       <!-- Populated by JS -->
-    </ul>
+    </div>
+    <div style="margin-top:12px;text-align:right">
+      <a href="calendar.html" style="font-size:13px;font-weight:600;color:var(--ms-dem-blue)">View full Elections Calendar &rarr;</a>
+    </div>
   </div>
 
   <!-- States -->
@@ -314,7 +368,10 @@
 <script src="js/map-component.js"></script>
 <script>
 (async function() {
-  const data = await loadJSON('data/states_summary.json');
+  const [data, ballotData] = await Promise.all([
+    loadJSON('data/states_summary.json'),
+    loadJSON('data/ballot_measures.json'),
+  ]);
   const states = data.states;
 
   var genEl = document.getElementById('gen-date') || document.getElementById('gen-date-footer');
@@ -403,24 +460,112 @@
     racesGrid.innerHTML = '<div style="color:var(--ms-text-light);font-size:14px">No competitive governor races rated yet.</div>';
   }
 
-  // Deadlines
-  deadlines.sort((a, b) => a.date.localeCompare(b.date));
+  // Add ballot measures (2025-2026)
   const today = new Date().toISOString().split('T')[0];
-  const upcomingDeadlines = deadlines.filter(d => d.date >= today).slice(0, 15);
-  const dl = document.getElementById('deadline-list');
-  for (const d of upcomingDeadlines) {
-    const li = document.createElement('li');
-    if (d.type === 'primary') li.className = 'dl-primary';
-    else if (d.type === 'special') li.className = 'dl-special';
-    const dlLink = (d.type === 'special' && d.chamber && d.district != null)
-      ? `district.html?st=${d.state}&chamber=${encodeURIComponent(d.chamber)}&d=${encodeURIComponent(d.district)}`
-      : (d.state ? `state.html?st=${d.state}` : null);
-    const dlTextHtml = dlLink ? `<a href="${dlLink}" style="color:inherit;text-decoration:none">${d.text}</a>` : d.text;
-    li.innerHTML = `<span class="dl-date">${formatDateShort(d.date)}</span><span class="dl-text">${dlTextHtml}</span>`;
-    dl.appendChild(li);
+  if (ballotData && ballotData.measures) {
+    for (const m of ballotData.measures) {
+      if (m.date && m.date >= '2025-01-01' && m.date <= '2026-12-31') {
+        deadlines.push({ date: m.date, text: m.title || m.number, state: m.state, name: m.state_name, type: 'ballot' });
+      }
+    }
   }
-  if (upcomingDeadlines.length === 0) {
-    dl.innerHTML = '<li class="text-muted">No upcoming deadlines</li>';
+
+  // Add general elections
+  deadlines.push({ date: '2025-11-04', type: 'general', text: 'NJ & VA general elections', state: null });
+  const statesWithRaces = Object.keys(states).filter(a => states[a].elections_2026?.total_general > 0);
+  const totalRaces = statesWithRaces.reduce((sum, a) => sum + (states[a].elections_2026?.total_general || 0), 0);
+  deadlines.push({ date: '2026-11-03', type: 'general', text: `${statesWithRaces.length} states — ${totalRaces.toLocaleString()} races`, state: null });
+
+  // Upcoming events — grouped by date
+  deadlines.sort((a, b) => a.date.localeCompare(b.date));
+  const upcoming = deadlines.filter(d => d.date >= today);
+
+  // Group by date, cap at ~15 date-rows
+  const dateGroups = {};
+  for (const d of upcoming) {
+    if (!dateGroups[d.date]) dateGroups[d.date] = [];
+    dateGroups[d.date].push(d);
+  }
+  const sortedDates = Object.keys(dateGroups).sort();
+  const container = document.getElementById('upcoming-events');
+  let dateCount = 0;
+
+  for (const date of sortedDates) {
+    if (dateCount >= 12) break;
+    dateCount++;
+    const evts = dateGroups[date];
+
+    // Group events by type within this date
+    const typeOrder = ['general', 'primary', 'filing', 'special', 'ballot'];
+    const byType = {};
+    for (const e of evts) {
+      if (!byType[e.type]) byType[e.type] = [];
+      byType[e.type].push(e);
+    }
+
+    let contentHtml = '';
+    for (const t of typeOrder) {
+      if (!byType[t]) continue;
+      const items = byType[t];
+      const badgeLabels = { filing: 'Filing', primary: 'Primary', special: 'Special', general: 'General', ballot: 'Ballot' };
+
+      if (t === 'general') {
+        contentHtml += `<div class="upcoming-type-row"><span class="upcoming-badge general">${badgeLabels[t]}</span><span style="font-weight:600;color:#2d8a4e;font-size:13px">${items[0].text}</span></div>`;
+        continue;
+      }
+
+      let tagsHtml = '';
+      if (t === 'ballot') {
+        // Group ballot measures by state
+        const byState = {};
+        for (const e of items) { if (!byState[e.state]) byState[e.state] = []; byState[e.state].push(e); }
+        const stateAbbrs = Object.keys(byState).sort();
+        if (items.length > 5) {
+          contentHtml += `<div class="upcoming-type-row"><span class="upcoming-badge ballot">${badgeLabels[t]}</span><span style="font-size:13px;color:#7b5ea7;font-weight:600">${items.length} measures in ${stateAbbrs.length} state${stateAbbrs.length !== 1 ? 's' : ''}</span></div>`;
+        } else {
+          for (const abbr of stateAbbrs) {
+            const count = byState[abbr].length;
+            const countStr = count > 1 ? ` (${count})` : '';
+            tagsHtml += `<a href="ballot-measures.html?st=${abbr}" class="upcoming-tag ballot">${abbr}${countStr}</a>`;
+          }
+          contentHtml += `<div class="upcoming-type-row"><span class="upcoming-badge ballot">${badgeLabels[t]}</span>${tagsHtml}</div>`;
+        }
+        continue;
+      }
+
+      if (t === 'special' && items.length > 4) {
+        // Collapse specials
+        const byState = {};
+        for (const e of items) { if (!byState[e.state]) byState[e.state] = 0; byState[e.state]++; }
+        const summary = Object.entries(byState).sort().map(([s, c]) => c > 1 ? `${s} (${c})` : s).join(', ');
+        contentHtml += `<div class="upcoming-type-row"><span class="upcoming-badge special">${badgeLabels[t]}</span><span style="font-size:13px;color:#8a7000;font-weight:600">${summary}</span></div>`;
+        continue;
+      }
+
+      for (const e of items) {
+        let href;
+        if (t === 'special' && e.chamber && e.district != null) {
+          href = `district.html?st=${e.state}&chamber=${encodeURIComponent(e.chamber)}&d=${encodeURIComponent(e.district)}`;
+        } else if (e.state) {
+          href = `state.html?st=${e.state}`;
+        }
+        const label = t === 'special' ? e.text : (states[e.state]?.name || e.state);
+        const raceCount = t === 'primary' && states[e.state]?.elections_2026?.total_general ? ` (${states[e.state].elections_2026.total_general})` : '';
+        tagsHtml += href
+          ? `<a href="${href}" class="upcoming-tag ${t}">${label}${raceCount}</a>`
+          : `<span class="upcoming-tag ${t}">${label}</span>`;
+      }
+      contentHtml += `<div class="upcoming-type-row"><span class="upcoming-badge ${t}">${badgeLabels[t]}</span>${tagsHtml}</div>`;
+    }
+
+    const row = document.createElement('div');
+    row.className = 'upcoming-date-row';
+    row.innerHTML = `<span class="upcoming-date">${formatDateShort(date)}</span><div class="upcoming-content">${contentHtml}</div>`;
+    container.appendChild(row);
+  }
+
+  if (dateCount === 0) {
+    container.innerHTML = '<div class="text-muted">No upcoming events</div>';
   }
 
   // State grid
