@@ -689,6 +689,39 @@ details .details-content {
   margin-top: 8px;
 }
 
+/* Office Overview Callout */
+.office-overview {
+  background: #f0f5f8;
+  border-left: 4px solid var(--ms-navy);
+  padding: 20px 24px;
+  border-radius: 0 var(--ms-radius) var(--ms-radius) 0;
+  margin: 0 0 32px;
+}
+.office-overview-title {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ms-navy);
+  margin-bottom: 10px;
+}
+.office-overview ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.office-overview li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ms-text);
+  margin-bottom: 6px;
+}
+.office-overview li:last-child { margin-bottom: 0; }
+.office-overview-updated {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--ms-text-light);
+  margin-top: 10px;
+}
+
 /* Inline tags */
 .tag {
   display: inline-block;
