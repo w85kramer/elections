@@ -801,9 +801,8 @@
       ? new Date(t.end + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
       : '';
     const badge = `<span class="party-badge ${partyBadgeClass(t.party)}" style="font-size:10px;padding:1px 5px">${t.party}</span>`;
-    const detail = t.notes ? ` — ${t.notes}` : '';
     return `<div class="timeline-event term-event departure-event">
-      ${dateStr ? dateStr + ' &middot; ' : ''}${reasonLabel(t.end_reason)}: ${badge} <span style="${partyColorStyle(t.party)}">${t.name}</span>${detail}
+      ${dateStr ? dateStr + ' &middot; ' : ''}${reasonLabel(t.end_reason)}: ${badge} <span style="${partyColorStyle(t.party)}">${t.name}</span>
     </div>`;
   }
 
