@@ -1508,32 +1508,77 @@
     //   Named districts (VT, MA, NH): abbreviation codes
     const distLetter = district.district_name ? district.district_name.replace(/^[A-Z]+-/, '') : '';
 
+    // Normalize a district name for fuzzy comparison: lowercase, strip punctuation,
+    // convert abbreviated ordinals to spelled-out, sort words
+    function normalizeDistrictName(name) {
+      if (!name) return '';
+      var s = name.toLowerCase()
+        .replace(/ district$/i, '')
+        .replace(/[,&]/g, ' ')
+        .replace(/-/g, ' ')
+        .replace(/\band\b/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+      // Convert abbreviated ordinals to spelled-out for comparison
+      var ordinals = {
+        '1st': 'first', '2nd': 'second', '3rd': 'third', '4th': 'fourth',
+        '5th': 'fifth', '6th': 'sixth', '7th': 'seventh', '8th': 'eighth',
+        '9th': 'ninth', '10th': 'tenth', '11th': 'eleventh', '12th': 'twelfth',
+        '13th': 'thirteenth', '14th': 'fourteenth', '15th': 'fifteenth',
+        '16th': 'sixteenth', '17th': 'seventeenth', '18th': 'eighteenth',
+        '19th': 'nineteenth', '20th': 'twentieth',
+        '21st': 'twenty first', '22nd': 'twenty second', '23rd': 'twenty third',
+        '24th': 'twenty fourth', '25th': 'twenty fifth', '26th': 'twenty sixth',
+        '27th': 'twenty seventh', '28th': 'twenty eighth', '29th': 'twenty ninth',
+        '30th': 'thirtieth', '31st': 'thirty first', '32nd': 'thirty second',
+        '33rd': 'thirty third', '34th': 'thirty fourth', '35th': 'thirty fifth',
+        '36th': 'thirty sixth', '37th': 'thirty seventh'
+      };
+      for (var abbr in ordinals) {
+        if (s.startsWith(abbr + ' ')) {
+          s = ordinals[abbr] + s.substring(abbr.length);
+          break;
+        }
+      }
+      // Also normalize spelled-out hyphenated ordinals (e.g., "twenty-first" → "twenty first")
+      s = s.replace(/-/g, ' ');
+      // Sort words for order-independent comparison
+      return s.split(/\s+/).sort().join(' ');
+    }
+
+    var distNameNormalized = normalizeDistrictName(district.district_name);
+
     // Match a GeoJSON feature against a district number (e.g., "Carroll-5" or "9")
     function matchesDistrictNum(feature, dNum) {
-      const props = feature.properties || {};
-      const geoDist = props.SLDUST || props.SLDLST || '';
-      const geoName = props.NAMELSAD || '';
-      const geoNameLower = geoName.toLowerCase();
-      const dLower = dNum.toLowerCase();
-      const dLetter = dNum.replace(/^[A-Z]+-/, '');
+      var props = feature.properties || {};
+      var geoDist = props.SLDUST || props.SLDLST || '';
+      var geoName = props.NAMELSAD || '';
+      var geoNameLower = geoName.toLowerCase();
+      var dLower = dNum.toLowerCase();
+      var dLetter = dNum.replace(/^[A-Z]+-/, '');
 
       // AK Senate: match letter from district_name (SD-A → "00A")
       if (stateAbbr === 'AK' && chamber === 'Senate' && dLetter.length === 1) {
         return geoDist === '00' + dLetter || geoName.endsWith(' ' + dLetter);
       }
 
+      // Strip letter prefix from Census codes (MA Senate uses "D01", "D02", etc.)
+      var geoDistStripped = geoDist.replace(/^[A-Z]+/, '');
+
       // Named districts (NH, VT, etc.): convert "Belknap-4" to match "Belknap 04"
-      const dashIdx = dNum.lastIndexOf('-');
+      var dashIdx = dNum.lastIndexOf('-');
       if (dashIdx > 0) {
-        const prefix = dNum.substring(0, dashIdx);
-        const suffix = dNum.substring(dashIdx + 1);
-        const paddedSuffix = suffix.padStart(2, '0');
-        const namedPattern = (prefix + ' ' + paddedSuffix).toLowerCase();
+        var prefix = dNum.substring(0, dashIdx);
+        var suffix = dNum.substring(dashIdx + 1);
+        var paddedSuffix = suffix.padStart(2, '0');
+        var namedPattern = (prefix + ' ' + paddedSuffix).toLowerCase();
         if (geoNameLower.includes(namedPattern)) return true;
         if (geoNameLower.includes((prefix + ' ' + suffix).toLowerCase())) return true;
       }
 
       return geoDist === dNum
+        || geoDistStripped === dNum
+        || geoDistStripped === dNum.padStart(2, '0')
         || geoDist === dNum.padStart(3, '0')
         || geoDist === dNum.padStart(2, '0')
         || geoName.endsWith(' ' + dNum)
@@ -1543,7 +1588,15 @@
     }
 
     function isDistrictMatch(feature) {
-      return matchesDistrictNum(feature, distNum);
+      // First try numeric matching
+      if (matchesDistrictNum(feature, distNum)) return true;
+      // Then try name-based matching (handles MA, other named-district states)
+      if (distNameNormalized) {
+        var geoName = (feature.properties || {}).NAMELSAD || '';
+        var geoNorm = normalizeDistrictName(geoName);
+        if (geoNorm && geoNorm === distNameNormalized) return true;
+      }
+      return false;
     }
 
     // For floterial districts, check if feature matches any base district
