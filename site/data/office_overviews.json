@@ -1,11 +1,185 @@
 {
+  "AK": {
+    "governor": {
+      "title": "About the Alaska Governor",
+      "points": [
+        "Alaska uses a top-four open primary followed by ranked-choice voting in the general election, adopted by voters in 2020. All candidates appear on a single primary ballot regardless of party, and the top four advance to the general.",
+        "The Governor and Lt. Governor run on a joint ticket in the general election. The Governor is limited to two consecutive four-year terms but may run again after sitting out a term."
+      ],
+      "updated": "2026-03-20"
+    },
+    "ltgov": {
+      "title": "About the Alaska Lt. Governor",
+      "points": [
+        "The Lt. Governor runs on a joint ticket with the Governor in the general election. Alaska's top-four primary and ranked-choice general election system applies to the gubernatorial ticket.",
+        "The Lt. Governor serves as the state's chief elections officer, a role filled by the Secretary of State in most other states. Alaska is one of only two states (with Hawaii) that combine these functions."
+      ],
+      "updated": "2026-03-20"
+    },
+    "legislature": {
+      "title": "About the Alaska Legislature",
+      "points": [
+        "The Alaska Legislature has frequently been organized by bipartisan coalitions rather than strict party-line majorities, particularly in the State House. Members who join a coalition caucus may hold committee chairs regardless of party affiliation.",
+        "The legislature operates under a 90-day session limit, approved by voters in 2006. Special sessions may be called by the Governor or by a two-thirds vote of the legislature."
+      ],
+      "updated": "2026-03-20"
+    }
+  },
+  "CA": {
+    "governor": {
+      "title": "About the California Governor",
+      "points": [
+        "California uses a top-two open primary for all state offices. All candidates appear on a single primary ballot regardless of party, and the top two vote-getters advance to the general election — even if they are from the same party.",
+        "The Governor is limited to two four-year terms (lifetime limit). California is one of the few states where the Governor has a 12-day window to sign or veto bills during session, extended to 30 days after the legislature adjourns."
+      ],
+      "updated": "2026-03-20"
+    },
+    "legislature": {
+      "title": "About the California Legislature",
+      "points": [
+        "California uses a top-two open primary for legislative races. The top two candidates advance to the general election regardless of party, which can result in same-party general election matchups.",
+        "State Senators serve four-year staggered terms (odd and even districts alternate). Assembly members serve two-year terms. Both are subject to a combined lifetime limit of 12 years of legislative service (since Proposition 28 in 2012)."
+      ],
+      "updated": "2026-03-20"
+    }
+  },
+  "LA": {
+    "governor": {
+      "title": "About the Louisiana Governor",
+      "points": [
+        "Louisiana uses a jungle primary (also called a nonpartisan blanket primary) for state offices. All candidates appear on a single ballot in October, and if no candidate receives a majority (50%+1), the top two advance to a December runoff regardless of party.",
+        "Louisiana holds its state elections in odd years — the next gubernatorial election is in 2027. The Governor is limited to two consecutive four-year terms."
+      ],
+      "updated": "2026-03-20"
+    },
+    "legislature": {
+      "title": "About the Louisiana Legislature",
+      "points": [
+        "Louisiana holds legislative elections in odd years on the same cycle as the Governor, with the next elections in 2027. The jungle primary system applies: all candidates appear on one ballot, with a runoff if no one wins a majority.",
+        "The legislature alternates between fiscal and general sessions in even and odd years. Fiscal sessions (even years) are limited to 45 legislative days over 60 calendar days; general sessions (odd years) are limited to 60 legislative days over 85 calendar days."
+      ],
+      "updated": "2026-03-20"
+    }
+  },
+  "ME": {
+    "governor": {
+      "title": "About the Maine Governor",
+      "points": [
+        "Maine uses ranked-choice voting for gubernatorial general elections, adopted by voters in 2016 and first applied to the Governor's race in 2018. If no candidate wins a majority of first-choice votes, the lowest-performing candidate is eliminated and their votes are redistributed until a winner emerges.",
+        "The Governor is limited to two consecutive four-year terms but may run again after sitting out a term. Maine's Governor does not have line-item veto authority."
+      ],
+      "updated": "2026-03-20"
+    },
+    "legislature": {
+      "title": "About the Maine Legislature",
+      "points": [
+        "Maine uses ranked-choice voting for state legislative primary elections (both parties) and general elections for state Senate and House races.",
+        "The legislature meets in two-year sessions: a longer first session in odd years and a shorter second session in even years. The second session is generally limited to bills carried over, emergency legislation, and the Governor's proposals."
+      ],
+      "updated": "2026-03-20"
+    }
+  },
+  "NE": {
+    "governor": {
+      "title": "About the Nebraska Governor",
+      "points": [
+        "The Governor is limited to two consecutive four-year terms. Nebraska's Governor has line-item veto authority on appropriations bills, and the legislature can override vetoes with a three-fifths vote (30 of 49 members).",
+        "Nebraska is the only state with a unicameral legislature, which means there is no separate chamber to serve as a check on legislation before it reaches the Governor's desk."
+      ],
+      "updated": "2026-03-20"
+    },
+    "legislature": {
+      "title": "About the Nebraska Legislature",
+      "points": [
+        "Nebraska has the only unicameral (single-chamber) state legislature in the United States. Its 49 members are officially nonpartisan — no party labels appear on the ballot and there are no formal party caucuses in the chamber.",
+        "In practice, members' party affiliations are widely known and a partisan dynamic exists, particularly in leadership elections and floor votes. The legislature is effectively controlled by Republicans, though the nonpartisan structure means coalition-building across party lines is more common than in other states.",
+        "All bills must receive a public hearing before a committee, and any bill reported to the floor must go through three rounds of debate on separate days before a final vote."
+      ],
+      "updated": "2026-03-20"
+    }
+  },
+  "NH": {
+    "governor": {
+      "title": "About the New Hampshire Governor",
+      "points": [
+        "New Hampshire is one of only two states (with Vermont) where the Governor serves a two-year term, meaning the office is on the ballot every even-numbered year.",
+        "New Hampshire is one of the few states with no gubernatorial term limits — the Governor may serve an unlimited number of consecutive terms."
+      ],
+      "updated": "2026-03-20"
+    },
+    "legislature": {
+      "title": "About the New Hampshire General Court",
+      "points": [
+        "The New Hampshire House of Representatives has 400 members, making it the largest state legislative chamber in the United States and the third-largest English-speaking legislative body in the world (after the U.S. House and British Parliament).",
+        "House members are elected from 203 multi-member districts (ranging from 1 to 11 seats each), organized by county. Voters cast ballots for up to as many candidates as there are seats in their district (bloc voting), and the top vote-getters win. Some districts include floterial seats that overlay other districts.",
+        "All members of both chambers serve two-year terms and are paid $100 per year, making it an almost entirely citizen legislature."
+      ],
+      "updated": "2026-03-20"
+    }
+  },
   "NY": {
+    "governor": {
+      "title": "About the New York Governor",
+      "points": [
+        "New York has no gubernatorial term limits — the Governor may serve an unlimited number of consecutive terms. The Governor has line-item veto authority on appropriations bills.",
+        "Starting in 2026, the Governor and Lt. Governor will run on a joint ticket in both the primary and general elections. Previously, primary voters selected them separately, which sometimes produced a Governor and Lt. Governor from different factions of the same party."
+      ],
+      "updated": "2026-03-20"
+    },
     "ltgov": {
       "title": "About the New York Lt. Governor",
       "points": [
         "Starting in 2026, the Lt. Governor will run on a joint ticket with the Governor in the primary, meaning primary voters will choose a Governor–Lt. Governor ticket rather than selecting them separately. The general election has used a joint ticket since 1954.",
         "The office has been frequently disrupted by gubernatorial succession and resignation. Three of the last five Lt. Governors ascended to the governorship (David Paterson in 2008, Kathy Hochul in 2021) or resigned under pressure (Brian Benjamin in 2022).",
         "New York is one of 26 states where the Lt. Governor serves as President of the State Senate, though the role is largely ceremonial."
+      ],
+      "updated": "2026-03-20"
+    }
+  },
+  "RI": {
+    "governor": {
+      "title": "About the Rhode Island Governor",
+      "points": [
+        "Rhode Island switched from two-year to four-year gubernatorial terms starting in 1994. The Governor is limited to two consecutive four-year terms.",
+        "The Governor does not have line-item veto authority — one of only a handful of states without this power. Vetoes can be overridden by a three-fifths vote of each chamber."
+      ],
+      "updated": "2026-03-20"
+    }
+  },
+  "VA": {
+    "governor": {
+      "title": "About the Virginia Governor",
+      "points": [
+        "Virginia is the only state where the Governor is prohibited from serving consecutive terms. A Governor may run again after sitting out at least one full term.",
+        "Virginia holds its gubernatorial elections in odd years (the year after presidential elections), making it one of only two states (with New Jersey) on this cycle. The next gubernatorial election is in 2025."
+      ],
+      "updated": "2026-03-20"
+    },
+    "legislature": {
+      "title": "About the Virginia General Assembly",
+      "points": [
+        "Virginia holds legislative elections in odd years. State Senate seats are up every four years and House of Delegates seats every two years, but they are not on the same cycle — Senate elections were last held in 2023, House elections in 2025.",
+        "Virginia is a Dillon Rule state, meaning local governments have only the powers explicitly granted to them by the state legislature. This makes state-level legislation particularly significant for local policy."
+      ],
+      "updated": "2026-03-20"
+    }
+  },
+  "WA": {
+    "governor": {
+      "title": "About the Washington Governor",
+      "points": [
+        "Washington uses a top-two open primary for all state offices. All candidates appear on a single primary ballot regardless of party, and the top two vote-getters advance to the general election.",
+        "Washington has no gubernatorial term limits — the Governor may serve an unlimited number of consecutive terms."
+      ],
+      "updated": "2026-03-20"
+    }
+  },
+  "NJ": {
+    "governor": {
+      "title": "About the New Jersey Governor",
+      "points": [
+        "New Jersey holds its gubernatorial elections in odd years (the year after presidential elections), alongside Virginia. The Governor is limited to two consecutive four-year terms.",
+        "New Jersey is one of only two states (with Maine) where the Governor is the sole statewide elected executive — there is no separately elected Lt. Governor, Attorney General, or Secretary of State."
       ],
       "updated": "2026-03-20"
     }
