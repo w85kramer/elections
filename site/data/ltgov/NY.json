@@ -1,1 +1,801 @@
-{"generated_at":"2026-03-17T01:54:09.755489Z","state":"NY","state_name":"New York","office_type":"Lt. Governor","office_key":"ltgov","term_years":4,"term_limit":null,"method":"Joint_Ticket","pres_2024_margin":"D+12.6","next_regular_election":2026,"current_holder":{"name":"Antonio Delgado","party":"D","since":"2022-05-25","start_reason":"appointed"},"timeline":[{"name":"Antonio Delgado","party":"D","start":"2022-05-25","end":null,"start_reason":"appointed","end_reason":null,"election_year":null,"margin":null,"notes":"Appointed by Gov. Hochul to succeed Brian Benjamin (resigned after federal indictment)"},{"name":"Brian Benjamin","party":null,"start":"2021-09-09","end":"2022-04-12","start_reason":"appointed","end_reason":"resigned","election_year":null,"margin":null,"notes":"Appointed by Gov. Hochul; office vacant since Hochul succeeded as Governor"},{"name":"Kathy Hochul","party":null,"start":"2015-01-01","end":"2021-08-24","start_reason":"elected","end_reason":"appointed_elsewhere","election_year":null,"margin":null,"notes":"Succeeded as Governor after Cuomo resigned"},{"name":"Robert Duffy","party":null,"start":"2011-01-01","end":"2014-12-31","start_reason":"elected","end_reason":"term_expired","election_year":null,"margin":null},{"name":"Richard Ravitch","party":null,"start":"2009-07-08","end":"2010-12-31","start_reason":"appointed","end_reason":"term_expired","election_year":null,"margin":null,"notes":"Appointed by Gov. Paterson; office vacant since Paterson succeeded as Governor"},{"name":"David Paterson","party":null,"start":"2007-01-01","end":"2008-03-17","start_reason":"elected","end_reason":"appointed_elsewhere","election_year":null,"margin":null,"notes":"Succeeded as Governor after Spitzer resigned"},{"name":"Mary Donohue","party":null,"start":"1999-01-01","end":"2006-12-31","start_reason":"elected","end_reason":"term_expired","election_year":null,"margin":null},{"name":"Betsy McCaughey Ross","party":null,"start":"1995-01-01","end":"1998-12-31","start_reason":"elected","end_reason":"term_expired","election_year":null,"margin":null},{"name":"Stan Lundine","party":null,"start":"1987-01-01","end":"1994-12-31","start_reason":"elected","end_reason":"term_expired","election_year":null,"margin":null},{"name":"Alfred DelBello","party":null,"start":"1983-01-01","end":"1985-02-01","start_reason":"elected","end_reason":"resigned","election_year":null,"margin":null,"notes":"Resigned to enter private sector"},{"name":"Mario Cuomo","party":null,"start":"1979-01-01","end":"1982-12-31","start_reason":"elected","end_reason":"term_expired","election_year":null,"margin":null},{"name":"Mary Anne Krupsak","party":null,"start":"1975-01-01","end":"1978-12-31","start_reason":"elected","end_reason":"term_expired","election_year":null,"margin":null},{"name":"Malcolm Wilson","party":null,"start":"1959-01-01","end":"1973-12-18","start_reason":"elected","end_reason":"appointed_elsewhere","election_year":null,"margin":null,"notes":"Succeeded as Governor after Rockefeller resigned"}],"elections":[],"race_2026":{"is_open_seat":false,"forecast":null,"forecast_cook":null,"forecast_sabato":null,"election_date":null,"filing_deadline":null,"primary_date":null,"candidates":[]}}
+{
+  "generated_at": "2026-03-20T18:00:00.000000Z",
+  "state": "NY",
+  "state_name": "New York",
+  "office_type": "Lt. Governor",
+  "office_key": "ltgov",
+  "term_years": 4,
+  "term_limit": null,
+  "method": "Joint_Ticket",
+  "pres_2024_margin": "D+12.6",
+  "next_regular_election": 2026,
+  "current_holder": {
+    "name": "Antonio Delgado",
+    "party": "D",
+    "since": "2022-05-25",
+    "start_reason": "appointed"
+  },
+  "timeline": [
+    {
+      "name": "Antonio Delgado",
+      "party": "D",
+      "start": "2022-05-25",
+      "end": null,
+      "start_reason": "appointed",
+      "end_reason": null,
+      "election_year": null,
+      "margin": null,
+      "notes": "Appointed by Gov. Hochul to succeed Brian Benjamin (resigned after federal indictment)"
+    },
+    {
+      "name": "Brian Benjamin",
+      "party": "D",
+      "start": "2021-09-09",
+      "end": "2022-04-12",
+      "start_reason": "appointed",
+      "end_reason": "resigned",
+      "election_year": null,
+      "margin": null,
+      "notes": "Appointed by Gov. Hochul; office vacant since Hochul succeeded as Governor"
+    },
+    {
+      "name": "Kathy Hochul",
+      "party": "D",
+      "start": "2015-01-01",
+      "end": "2021-08-24",
+      "start_reason": "elected",
+      "end_reason": "appointed_elsewhere",
+      "election_year": 2014,
+      "margin": null,
+      "notes": "Succeeded as Governor after Cuomo resigned"
+    },
+    {
+      "name": "Robert Duffy",
+      "party": "D",
+      "start": "2011-01-01",
+      "end": "2014-12-31",
+      "start_reason": "elected",
+      "end_reason": "term_expired",
+      "election_year": 2010,
+      "margin": null
+    },
+    {
+      "name": "Richard Ravitch",
+      "party": "D",
+      "start": "2009-07-08",
+      "end": "2010-12-31",
+      "start_reason": "appointed",
+      "end_reason": "term_expired",
+      "election_year": null,
+      "margin": null,
+      "notes": "Appointed by Gov. Paterson; office vacant since Paterson succeeded as Governor"
+    },
+    {
+      "name": "David Paterson",
+      "party": "D",
+      "start": "2007-01-01",
+      "end": "2008-03-17",
+      "start_reason": "elected",
+      "end_reason": "appointed_elsewhere",
+      "election_year": 2006,
+      "margin": null,
+      "notes": "Succeeded as Governor after Spitzer resigned"
+    },
+    {
+      "name": "Mary Donohue",
+      "party": "R",
+      "start": "1999-01-01",
+      "end": "2006-12-31",
+      "start_reason": "elected",
+      "end_reason": "term_expired",
+      "election_year": 1998,
+      "margin": null
+    },
+    {
+      "name": "Betsy McCaughey",
+      "party": "R",
+      "start": "1995-01-01",
+      "end": "1998-12-31",
+      "start_reason": "elected",
+      "end_reason": "term_expired",
+      "election_year": 1994,
+      "margin": null
+    },
+    {
+      "name": "Stan Lundine",
+      "party": "D",
+      "start": "1987-01-01",
+      "end": "1994-12-31",
+      "start_reason": "elected",
+      "end_reason": "term_expired",
+      "election_year": 1986,
+      "margin": null
+    },
+    {
+      "name": "Alfred DelBello",
+      "party": "D",
+      "start": "1983-01-01",
+      "end": "1985-02-01",
+      "start_reason": "elected",
+      "end_reason": "resigned",
+      "election_year": 1982,
+      "margin": null,
+      "notes": "Resigned to enter private sector"
+    },
+    {
+      "name": "Mario Cuomo",
+      "party": "D",
+      "start": "1979-01-01",
+      "end": "1982-12-31",
+      "start_reason": "elected",
+      "end_reason": "term_expired",
+      "election_year": 1978,
+      "margin": null
+    },
+    {
+      "name": "Mary Anne Krupsak",
+      "party": "D",
+      "start": "1975-01-01",
+      "end": "1978-12-31",
+      "start_reason": "elected",
+      "end_reason": "term_expired",
+      "election_year": 1974,
+      "margin": null
+    },
+    {
+      "name": "Malcolm Wilson",
+      "party": "R",
+      "start": "1959-01-01",
+      "end": "1973-12-18",
+      "start_reason": "elected",
+      "end_reason": "appointed_elsewhere",
+      "election_year": 1958,
+      "margin": null,
+      "notes": "Succeeded as Governor after Rockefeller resigned"
+    }
+  ],
+  "elections": [
+    {
+      "year": 2026,
+      "type": "General",
+      "date": "2026-11-03",
+      "total_votes": null,
+      "result_status": null,
+      "is_open_seat": null,
+      "filing_deadline": "2026-04-06",
+      "forecast_rating": "Solid D",
+      "candidates": [],
+      "notes": "Joint ticket with Governor. Starting in 2026, joint ticket also applies to the primary."
+    },
+    {
+      "year": 2026,
+      "type": "Primary_D",
+      "date": "2026-06-23",
+      "total_votes": null,
+      "result_status": null,
+      "is_open_seat": null,
+      "filing_deadline": "2026-04-06",
+      "forecast_rating": null,
+      "candidates": []
+    },
+    {
+      "year": 2026,
+      "type": "Primary_R",
+      "date": "2026-06-23",
+      "total_votes": null,
+      "result_status": null,
+      "is_open_seat": null,
+      "filing_deadline": "2026-04-06",
+      "forecast_rating": null,
+      "candidates": []
+    },
+    {
+      "year": 2022,
+      "type": "General",
+      "date": "2022-11-08",
+      "total_votes": 5912286,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "Antonio Delgado",
+          "party": "D",
+          "votes": 3140415,
+          "pct": 53.12,
+          "result": "Won",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Kathy Hochul"
+        },
+        {
+          "name": "Alison Esposito",
+          "party": "R",
+          "votes": 2762581,
+          "pct": 46.73,
+          "result": "Lost",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Lee Zeldin"
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "type": "General",
+      "date": "2018-11-06",
+      "total_votes": 6104447,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "Kathy Hochul",
+          "party": "D",
+          "votes": 3635340,
+          "pct": 59.55,
+          "result": "Won",
+          "is_incumbent": true,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Andrew Cuomo"
+        },
+        {
+          "name": "Julie Killian",
+          "party": "R",
+          "votes": null,
+          "pct": null,
+          "result": "Lost",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Marc Molinaro"
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "type": "General",
+      "date": "2014-11-04",
+      "total_votes": null,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "Kathy Hochul",
+          "party": "D",
+          "votes": 1919225,
+          "pct": 54.2,
+          "result": "Won",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Andrew Cuomo"
+        },
+        {
+          "name": "Chris Moss",
+          "party": "R",
+          "votes": 1443713,
+          "pct": 40.6,
+          "result": "Lost",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Rob Astorino"
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "type": "General",
+      "date": "2010-11-02",
+      "total_votes": 9111852,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "Robert Duffy",
+          "party": "D",
+          "votes": null,
+          "pct": null,
+          "result": "Won",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Andrew Cuomo"
+        },
+        {
+          "name": "Gregory Edwards",
+          "party": "R",
+          "votes": null,
+          "pct": null,
+          "result": "Lost",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Carl Paladino"
+        }
+      ]
+    },
+    {
+      "year": 2006,
+      "type": "General",
+      "date": "2006-11-07",
+      "total_votes": 8914886,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "David Paterson",
+          "party": "D",
+          "votes": null,
+          "pct": null,
+          "result": "Won",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Eliot Spitzer"
+        },
+        {
+          "name": "C. Scott Vanderhoef",
+          "party": "R",
+          "votes": null,
+          "pct": null,
+          "result": "Lost",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "John Faso"
+        }
+      ],
+      "flipped_seat": {"from": "R", "to": "D"}
+    },
+    {
+      "year": 2002,
+      "type": "General",
+      "date": "2002-11-05",
+      "total_votes": 4579078,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "Mary Donohue",
+          "party": "R",
+          "votes": null,
+          "pct": null,
+          "result": "Won",
+          "is_incumbent": true,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "George Pataki"
+        },
+        {
+          "name": "Dennis Mehiel",
+          "party": "D",
+          "votes": null,
+          "pct": null,
+          "result": "Lost",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "H. Carl McCall"
+        }
+      ]
+    },
+    {
+      "year": 1998,
+      "type": "General",
+      "date": "1998-11-03",
+      "total_votes": 4985932,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "Mary Donohue",
+          "party": "R",
+          "votes": null,
+          "pct": null,
+          "result": "Won",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "George Pataki"
+        },
+        {
+          "name": "Sandra Frankel",
+          "party": "D",
+          "votes": null,
+          "pct": null,
+          "result": "Lost",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Peter Vallone"
+        }
+      ]
+    },
+    {
+      "year": 1994,
+      "type": "General",
+      "date": "1994-11-08",
+      "total_votes": null,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "Betsy McCaughey",
+          "party": "R",
+          "votes": 2538702,
+          "pct": 48.8,
+          "result": "Won",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "George Pataki"
+        },
+        {
+          "name": "Stan Lundine",
+          "party": "D",
+          "votes": 2410301,
+          "pct": 46.4,
+          "result": "Lost",
+          "is_incumbent": true,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Mario Cuomo"
+        }
+      ],
+      "flipped_seat": {"from": "D", "to": "R"}
+    },
+    {
+      "year": 1990,
+      "type": "General",
+      "date": "1990-11-06",
+      "total_votes": 4056896,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "Stan Lundine",
+          "party": "D",
+          "votes": null,
+          "pct": null,
+          "result": "Won",
+          "is_incumbent": true,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Mario Cuomo"
+        },
+        {
+          "name": "Geff Yancey",
+          "party": "R",
+          "votes": null,
+          "pct": null,
+          "result": "Lost",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Pierre A. Rinfret"
+        }
+      ]
+    },
+    {
+      "year": 1986,
+      "type": "General",
+      "date": "1986-11-04",
+      "total_votes": 4293975,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "Stan Lundine",
+          "party": "D",
+          "votes": null,
+          "pct": null,
+          "result": "Won",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Mario Cuomo"
+        },
+        {
+          "name": "Michael Kavanagh",
+          "party": "R",
+          "votes": null,
+          "pct": null,
+          "result": "Lost",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Andrew O'Rourke"
+        }
+      ]
+    },
+    {
+      "year": 1982,
+      "type": "General",
+      "date": "1982-11-02",
+      "total_votes": 5254705,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "Alfred DelBello",
+          "party": "D",
+          "votes": 2675213,
+          "pct": 50.91,
+          "result": "Won",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Mario Cuomo"
+        },
+        {
+          "name": "James L. Emery",
+          "party": "R",
+          "votes": 2248741,
+          "pct": 42.8,
+          "result": "Lost",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Lewis Lehrman"
+        }
+      ]
+    },
+    {
+      "year": 1978,
+      "type": "General",
+      "date": "1978-11-07",
+      "total_votes": 4768319,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "Mario Cuomo",
+          "party": "D",
+          "votes": null,
+          "pct": null,
+          "result": "Won",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Hugh Carey"
+        },
+        {
+          "name": "Bruce F. Caputo",
+          "party": "R",
+          "votes": null,
+          "pct": null,
+          "result": "Lost",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Perry Duryea"
+        }
+      ]
+    },
+    {
+      "year": 1974,
+      "type": "General",
+      "date": "1974-11-05",
+      "total_votes": null,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "Mary Anne Krupsak",
+          "party": "D",
+          "votes": 3028503,
+          "pct": 54.6,
+          "result": "Won",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Hugh Carey"
+        },
+        {
+          "name": "Ralph G. Caso",
+          "party": "R",
+          "votes": 2219667,
+          "pct": 40.0,
+          "result": "Lost",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Malcolm Wilson"
+        }
+      ],
+      "flipped_seat": {"from": "R", "to": "D"}
+    },
+    {
+      "year": 1970,
+      "type": "General",
+      "date": "1970-11-03",
+      "total_votes": null,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "Malcolm Wilson",
+          "party": "R",
+          "votes": 3128261,
+          "pct": 52.5,
+          "result": "Won",
+          "is_incumbent": true,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Nelson Rockefeller"
+        },
+        {
+          "name": "Basil Paterson",
+          "party": "D",
+          "votes": 2421426,
+          "pct": 40.6,
+          "result": "Lost",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Arthur Goldberg"
+        }
+      ]
+    },
+    {
+      "year": 1966,
+      "type": "General",
+      "date": "1966-11-08",
+      "total_votes": null,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "Malcolm Wilson",
+          "party": "R",
+          "votes": 2690626,
+          "pct": 44.6,
+          "result": "Won",
+          "is_incumbent": true,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Nelson Rockefeller"
+        },
+        {
+          "name": "Howard J. Samuels",
+          "party": "D",
+          "votes": 2178482,
+          "pct": 36.1,
+          "result": "Lost",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Frank O'Connor"
+        }
+      ]
+    },
+    {
+      "year": 1962,
+      "type": "General",
+      "date": "1962-11-06",
+      "total_votes": 5805612,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "Malcolm Wilson",
+          "party": "R",
+          "votes": 3081587,
+          "pct": 53.08,
+          "result": "Won",
+          "is_incumbent": true,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Nelson Rockefeller"
+        },
+        {
+          "name": "John J. Burns",
+          "party": "D",
+          "votes": null,
+          "pct": null,
+          "result": "Lost",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Robert Morgenthau"
+        }
+      ]
+    },
+    {
+      "year": 1958,
+      "type": "General",
+      "date": "1958-11-04",
+      "total_votes": 5712482,
+      "result_status": "Certified",
+      "is_open_seat": null,
+      "filing_deadline": null,
+      "forecast_rating": null,
+      "notes": "Joint ticket with Governor",
+      "candidates": [
+        {
+          "name": "Malcolm Wilson",
+          "party": "R",
+          "votes": 3126929,
+          "pct": 54.74,
+          "result": "Won",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "Nelson Rockefeller"
+        },
+        {
+          "name": "George B. DeLuca",
+          "party": "D",
+          "votes": 2553895,
+          "pct": 44.74,
+          "result": "Lost",
+          "is_incumbent": false,
+          "is_write_in": false,
+          "election_type": "General",
+          "ticket_governor": "W. Averell Harriman"
+        }
+      ]
+    }
+  ],
+  "race_2026": {
+    "is_open_seat": false,
+    "forecast": "Solid D",
+    "forecast_cook": "Solid D",
+    "forecast_sabato": "Solid D",
+    "election_date": "2026-11-03",
+    "filing_deadline": "2026-04-06",
+    "primary_date": "2026-06-23",
+    "candidates": []
+  }
+}

@@ -424,7 +424,7 @@
     <span>${stateName}</span>`;
 
   // Check if this is an appointed office
-  const isAppointed = data.method && data.method !== 'Elected';
+  const isAppointed = data.method && data.method !== 'Elected' && data.method !== 'Joint_Ticket';
 
   // Helpers
   function partyColorStyle(p) {
@@ -490,7 +490,8 @@
   // Quick stats
   const termLen = data.term_years || data.gov_term_years || '?';
   const nextElec = data.next_regular_election || '?';
-  const method = data.method || 'Elected';
+  const methodRaw = data.method || 'Elected';
+  const method = methodRaw === 'Joint_Ticket' ? 'Joint Ticket with Governor' : methodRaw;
 
   heroHtml += `<div class="quick-stats">
     <div class="qs-item"><span class="qs-label">Term:</span> ${termLen} years</div>
@@ -748,11 +749,13 @@
       const wi = cand.is_write_in ? ' <span class="incumbent-marker" title="write-in candidate">(w/i)</span>' : '';
       const candLink = cand.candidate_id ? `<a href="candidate.html?id=${cand.candidate_id}&st=${stateAbbr}" style="${partyColorStyle(candParty)};text-decoration:none">${cand.name}</a>` : `<span style="${partyColorStyle(candParty)}">${cand.name}</span>`;
       let jtStr = '';
-      if (cand.jt_name) {
+      const jtName = cand.jt_name || cand.ticket_governor;
+      if (jtName) {
         const jtLink = cand.jt_candidate_id
-          ? `<a href="candidate.html?id=${cand.jt_candidate_id}&st=${stateAbbr}" style="color:var(--ms-text-light);text-decoration:none">${cand.jt_name}</a>`
-          : cand.jt_name;
-        jtStr = ` <span style="font-size:11px;font-style:italic;color:var(--ms-text-light)">(j/t ${jtLink})</span>`;
+          ? `<a href="candidate.html?id=${cand.jt_candidate_id}&st=${stateAbbr}" style="color:var(--ms-text-light);text-decoration:none">${jtName}</a>`
+          : jtName;
+        const jtLabel = cand.ticket_governor ? 'w/ Gov.' : 'j/t';
+        jtStr = ` <span style="font-size:11px;font-style:italic;color:var(--ms-text-light)">(${jtLabel} ${jtLink})</span>`;
       }
       const nameHtml = `<span class="cand-name">${candLink}${incStr}${wi}${jtStr}</span>`;
 
