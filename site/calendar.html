@@ -683,48 +683,47 @@
   label2026.textContent = '2026';
   timeline.appendChild(label2026);
 
-  // Stack dots to avoid overlap: group by date+type, spread vertically
-  const dotGroups = {};
+  // Stack dots by date — all types share a common baseline, stacked vertically
+  // First, build per-date groups (collapsing general/ballot to one dot each)
+  const dateDots = {}; // date -> array of {evt, type}
   for (const evt of events) {
-    // For general events, use a single dot per date (not per-state)
     if (evt.type === 'general') {
-      const key = `${evt.date}_general`;
-      if (!dotGroups[key]) dotGroups[key] = [];
-      if (dotGroups[key].length === 0) dotGroups[key].push(evt);
+      const key = evt.date;
+      if (!dateDots[key]) dateDots[key] = [];
+      if (!dateDots[key].some(d => d.type === 'general')) dateDots[key].push(evt);
       continue;
     }
-    // For ballot measures, group by date only (single dot)
     if (evt.type === 'ballot') {
-      const key = `${evt.date}_ballot`;
-      if (!dotGroups[key]) dotGroups[key] = [];
-      if (dotGroups[key].length === 0) dotGroups[key].push(evt);
+      const key = evt.date;
+      if (!dateDots[key]) dateDots[key] = [];
+      if (!dateDots[key].some(d => d.type === 'ballot')) dateDots[key].push(evt);
       continue;
     }
-    const key = `${evt.date}_${evt.type}`;
-    if (!dotGroups[key]) dotGroups[key] = [];
-    dotGroups[key].push(evt);
+    if (!dateDots[evt.date]) dateDots[evt.date] = [];
+    dateDots[evt.date].push(evt);
   }
 
-  for (const [key, group] of Object.entries(dotGroups)) {
-    const pct = dateToPercent(group[0].date);
-    if (pct < 0 || pct > 100) continue;
-    const type = group[0].type;
-    const baseTop = type === 'filing' ? 28 : type === 'general' ? 36 : type === 'special' ? 48 : type === 'ballot' ? 58 : 68;
+  const DOT_BASE_TOP = 24;
+  const DOT_SPACING = 11;
 
-    for (let i = 0; i < group.length; i++) {
+  for (const [date, dots] of Object.entries(dateDots)) {
+    const pct = dateToPercent(date);
+    if (pct < 0 || pct > 100) continue;
+
+    for (let i = 0; i < dots.length; i++) {
+      const evt = dots[i];
+      const type = evt.type;
       const dot = document.createElement('div');
       dot.className = `timeline-dot ${type}`;
       dot.style.left = `${pct}%`;
-      dot.style.top = `${baseTop + (i % 3) * 10}px`;
-      if (group[i].date < today) dot.style.opacity = '0.35';
+      dot.style.top = `${DOT_BASE_TOP + i * DOT_SPACING}px`;
+      if (evt.date < today) dot.style.opacity = '0.35';
 
       // Make general and ballot dots larger for prominence
       if (type === 'general') {
         dot.style.width = '12px';
         dot.style.height = '12px';
       }
-
-      const evt = group[i];
       const typeLabels = { filing: 'Candidate Filing Deadline', special: 'Special Election', primary: 'Primary Election', general: 'General Election', ballot: 'Ballot Measure' };
       const typeColors = { filing: 'color:var(--ms-dem-blue)', special: 'color:var(--ms-gold)', primary: 'color:var(--ms-rep-red)', general: 'color:#2d8a4e', ballot: 'color:#7b5ea7' };
       const subtypeStr = evt.subtype && evt.subtype !== 'completed' && evt.subtype !== 'summary' ? ` (${evt.subtype})` : '';
