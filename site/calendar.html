@@ -1016,6 +1016,7 @@
           sectionsHtml += renderTypeSectionHtml(t, byType[t]);
         }
 
+        row.dataset.date = date;
         row.innerHTML = `
           <span class="event-date">${formatDateShort(date)}</span>
           <div class="date-row-content">${sectionsHtml}</div>
@@ -1076,9 +1077,37 @@
     }
   });
 
-  // Filter buttons
+  // Find the date the user is currently viewing (first visible date row in the container)
+  function getVisibleDate() {
+    const rows = calBody.querySelectorAll('.date-row[data-date]');
+    const scrollTop = calBody.scrollTop;
+    for (const row of rows) {
+      const rowTop = row.offsetTop - calBody.offsetTop;
+      if (rowTop >= scrollTop - 20) return row.dataset.date;
+    }
+    // Fallback: return the last date if scrolled past everything
+    return rows.length ? rows[rows.length - 1].dataset.date : null;
+  }
+
+  // Scroll to the row with the closest date >= target, or the last row before it
+  function scrollToDate(targetDate) {
+    if (!targetDate) return;
+    const rows = calBody.querySelectorAll('.date-row[data-date]');
+    let best = null;
+    for (const row of rows) {
+      const d = row.dataset.date;
+      if (d >= targetDate) { best = row; break; }
+      best = row; // keep the last row before target as fallback
+    }
+    if (best) {
+      calBody.scrollTop = best.offsetTop - calBody.offsetTop - 8;
+    }
+  }
+
+  // Filter buttons — preserve chronological scroll position across filter changes
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', function() {
+      const viewDate = getVisibleDate();
       document.querySelectorAll('.filter-btn').forEach(b => {
         b.classList.remove('active', 'active-filing', 'active-primary', 'active-general', 'active-special', 'active-ballot');
       });
@@ -1091,6 +1120,7 @@
       else if (f === 'ballot') this.classList.add('active-ballot');
       else this.classList.add('active');
       renderCalendar();
+      scrollToDate(viewDate);
     });
   });
 

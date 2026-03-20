@@ -170,7 +170,8 @@ def export_governor_pages(dry_run=False, single_state=None):
             e.forecast_rating,
             e.precincts_reporting,
             e.precincts_total,
-            e.linked_election_id
+            e.linked_election_id,
+            e.notes
         FROM elections e
         JOIN seats se ON e.seat_id = se.id
         JOIN districts d ON se.district_id = d.id
@@ -454,6 +455,8 @@ def export_governor_pages(dry_run=False, single_state=None):
             if e.get('precincts_reporting') is not None:
                 elec_obj['precincts_reporting'] = e['precincts_reporting']
                 elec_obj['precincts_total'] = e['precincts_total']
+            if e.get('notes'):
+                elec_obj['notes'] = e['notes']
 
             # --- Badge computations ---
 

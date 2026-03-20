@@ -764,6 +764,12 @@
       html += `<button class="expand-btn" onclick="toggleExpand('${expandId}', this)">+${hiddenCount} more</button>`;
     }
 
+    if (e.notes) {
+      html += `<div style="font-size:12px;color:var(--ms-text-light);font-style:italic;margin-top:4px;padding:4px 8px;background:var(--ms-bg-light);border-radius:4px;border-left:3px solid var(--ms-brand-navy)">
+        ${e.notes}
+      </div>`;
+    }
+
     html += `</div></div>`;
     return html;
   }
