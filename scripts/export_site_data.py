@@ -202,7 +202,10 @@ def export_states_summary(dry_run=False):
         JOIN districts d ON s.district_id = d.id
         JOIN states st ON d.state_id = st.id
         WHERE s.office_level = 'Statewide'
-          AND s.selection_method = 'Elected'
+          AND (s.selection_method IN ('Elected', 'Joint_Ticket')
+               OR (s.selection_method IN ('Appointed','Ex_Officio')
+                   AND s.office_type IN ('Lt. Governor','Attorney General','Secretary of State',
+                                         'Treasurer','Auditor','Controller')))
         ORDER BY st.abbreviation,
             CASE s.office_type
                 WHEN 'Governor' THEN 1
@@ -538,7 +541,7 @@ def export_state_detail(state_abbr, dry_run=False):
         LEFT JOIN seat_terms stm ON s.id = stm.seat_id AND stm.end_date IS NULL
         WHERE st.abbreviation = '{state_abbr}'
           AND s.office_level = 'Statewide'
-          AND (s.selection_method = 'Elected'
+          AND (s.selection_method IN ('Elected', 'Joint_Ticket')
                OR (s.selection_method IN ('Appointed','Ex_Officio')
                    AND s.office_type IN ('Lt. Governor','Attorney General','Secretary of State',
                                          'Treasurer','Auditor','Controller')))
@@ -915,7 +918,7 @@ def export_all_state_details(dry_run=False):
         JOIN states st ON d.state_id = st.id
         LEFT JOIN seat_terms stm ON s.id = stm.seat_id AND stm.end_date IS NULL
         WHERE s.office_level = 'Statewide'
-          AND (s.selection_method = 'Elected'
+          AND (s.selection_method IN ('Elected', 'Joint_Ticket')
                OR (s.selection_method IN ('Appointed','Ex_Officio')
                    AND s.office_type IN ('Lt. Governor','Attorney General','Secretary of State',
                                          'Treasurer','Auditor','Controller')))

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-21T14:06:13.835472Z",
+  "generated_at": "2026-03-21T15:12:13.467600Z",
   "state": {
     "name": "Illinois",
     "abbr": "IL",
@@ -24,14 +24,22 @@
       "forecast": "Solid D",
       "forecast_details": [
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Solid D"
         },
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Solid D"
         }
       ]
+    },
+    {
+      "office": "Lt. Governor",
+      "name": "Juliana Stratton",
+      "party": "D",
+      "method": "Joint_Ticket",
+      "next_election": 2026,
+      "start_year": 2019
     },
     {
       "office": "Attorney General",

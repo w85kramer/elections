@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-21T14:07:48.915129Z",
+  "generated_at": "2026-03-21T15:12:13.467600Z",
   "state": {
     "name": "South Dakota",
     "abbr": "SD",
@@ -24,14 +24,22 @@
       "forecast": "Solid R",
       "forecast_details": [
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Solid R"
         },
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Solid R"
         }
       ]
+    },
+    {
+      "office": "Lt. Governor",
+      "name": "Tony Venhuizen",
+      "party": "R",
+      "method": "Joint_Ticket",
+      "next_election": 2026,
+      "start_year": 2025
     },
     {
       "office": "Attorney General",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T14:23:25.342716Z",
+  "generated_at": "2026-03-21T15:12:13.467600Z",
   "state": {
     "name": "Minnesota",
     "abbr": "MN",
@@ -21,7 +21,7 @@
       "method": "Elected",
       "next_election": 2026,
       "start_year": 2019,
-      "forecast": "Likely D",
+      "forecast": "Solid D",
       "forecast_details": [
         {
           "source": "Cook Political Report",
@@ -29,9 +29,17 @@
         },
         {
           "source": "Sabato's Crystal Ball",
-          "rating": "Likely D"
+          "rating": "Solid D"
         }
       ]
+    },
+    {
+      "office": "Lt. Governor",
+      "name": "Peggy Flanagan",
+      "party": "D",
+      "method": "Joint_Ticket",
+      "next_election": 2026,
+      "start_year": 2019
     },
     {
       "office": "Attorney General",
@@ -2102,7 +2110,7 @@
   },
   "elections_2026": {
     "governor": {
-      "forecast": "Likely D",
+      "forecast": "Solid D",
       "candidates": []
     },
     "statewide": [

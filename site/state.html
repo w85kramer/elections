@@ -984,7 +984,7 @@
     const detailUrl = officeLinks[off.office];
     const nameHtml = off.name
       ? (detailUrl ? `<a href="${detailUrl}" style="color:inherit;text-decoration:none;border-bottom:1px dotted #ccc">${off.name}</a>` : off.name)
-      : (off.method === 'Elected' ? '<em>Vacant</em>' : '—');
+      : (['Elected','Joint_Ticket'].includes(off.method) ? '<em>Vacant</em>' : '—');
     const officeHtml = detailUrl
       ? `<a href="${detailUrl}" style="color:inherit;text-decoration:none"><strong>${off.office}</strong></a>`
       : `<strong>${off.office}</strong>`;

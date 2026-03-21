@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-21T14:06:23.425919Z",
+  "generated_at": "2026-03-21T15:12:13.467600Z",
   "state": {
     "name": "Idaho",
     "abbr": "ID",
@@ -3672,16 +3672,6 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "1",
-      "seat_label": "ID House 1 Seat B",
-      "pres_margin": "-46.7",
-      "holder_party": "R",
-      "candidate": null,
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House",
-      "district": "1",
       "seat_label": "ID House 1 Seat A",
       "pres_margin": "-46.7",
       "holder_party": "R",
@@ -3691,11 +3681,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "2",
-      "seat_label": "ID House 2 Seat A",
-      "pres_margin": "-62.6",
+      "district": "1",
+      "seat_label": "ID House 1 Seat B",
+      "pres_margin": "-46.7",
       "holder_party": "R",
-      "candidate": "Birgid Niedenzu",
+      "candidate": null,
       "is_open_seat": null
     },
     {
@@ -3706,6 +3696,16 @@
       "pres_margin": "-62.6",
       "holder_party": "R",
       "candidate": "Sabine Krier",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "2",
+      "seat_label": "ID House 2 Seat A",
+      "pres_margin": "-62.6",
+      "holder_party": "R",
+      "candidate": "Birgid Niedenzu",
       "is_open_seat": null
     },
     {
@@ -3802,16 +3802,6 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "10",
-      "seat_label": "ID House 10 Seat A",
-      "pres_margin": "-59.3",
-      "holder_party": "R",
-      "candidate": "Michael Hofferber",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House",
-      "district": "10",
       "seat_label": "ID House 10 Seat B",
       "pres_margin": "-59.3",
       "holder_party": "R",
@@ -3821,11 +3811,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "11",
-      "seat_label": "ID House 11 Seat A",
-      "pres_margin": "-33.2",
+      "district": "10",
+      "seat_label": "ID House 10 Seat A",
+      "pres_margin": "-59.3",
       "holder_party": "R",
-      "candidate": null,
+      "candidate": "Michael Hofferber",
       "is_open_seat": null
     },
     {
@@ -3836,6 +3826,16 @@
       "pres_margin": "-33.2",
       "holder_party": "R",
       "candidate": "Joshua Preminger",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "11",
+      "seat_label": "ID House 11 Seat A",
+      "pres_margin": "-33.2",
+      "holder_party": "R",
+      "candidate": null,
       "is_open_seat": null
     },
     {
@@ -3862,20 +3862,20 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "13",
-      "seat_label": "ID House 13 Seat A",
+      "seat_label": "ID House 13 Seat B",
       "pres_margin": "-39.9",
       "holder_party": "R",
-      "candidate": "Clifford Hohman",
+      "candidate": "Cody Gorman",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "13",
-      "seat_label": "ID House 13 Seat B",
+      "seat_label": "ID House 13 Seat A",
       "pres_margin": "-39.9",
       "holder_party": "R",
-      "candidate": "Cody Gorman",
+      "candidate": "Clifford Hohman",
       "is_open_seat": null
     },
     {
@@ -3902,20 +3902,20 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "15",
-      "seat_label": "ID House 15 Seat B",
+      "seat_label": "ID House 15 Seat A",
       "pres_margin": "-5.1",
-      "holder_party": "R",
-      "candidate": "Jae Etchart",
+      "holder_party": "D",
+      "candidate": "Steve Berch",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "15",
-      "seat_label": "ID House 15 Seat A",
+      "seat_label": "ID House 15 Seat B",
       "pres_margin": "-5.1",
-      "holder_party": "D",
-      "candidate": "Steve Berch",
+      "holder_party": "R",
+      "candidate": "Jae Etchart",
       "is_open_seat": null
     },
     {
@@ -3942,16 +3942,6 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "18",
-      "seat_label": "ID House 18 Seat A",
-      "pres_margin": "+22.8",
-      "holder_party": "D",
-      "candidate": "Ilana Rubel",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House",
-      "district": "18",
       "seat_label": "ID House 18 Seat B",
       "pres_margin": "+22.8",
       "holder_party": "D",
@@ -3961,11 +3951,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "19",
-      "seat_label": "ID House 19 Seat B",
-      "pres_margin": "+30.1",
+      "district": "18",
+      "seat_label": "ID House 18 Seat A",
+      "pres_margin": "+22.8",
       "holder_party": "D",
-      "candidate": "Chris Mathias",
+      "candidate": "Ilana Rubel",
       "is_open_seat": null
     },
     {
@@ -3981,11 +3971,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "20",
-      "seat_label": "ID House 20 Seat B",
-      "pres_margin": "-32.5",
-      "holder_party": "R",
-      "candidate": "Mary A. Mosley",
+      "district": "19",
+      "seat_label": "ID House 19 Seat B",
+      "pres_margin": "+30.1",
+      "holder_party": "D",
+      "candidate": "Chris Mathias",
       "is_open_seat": null
     },
     {
@@ -3996,6 +3986,16 @@
       "pres_margin": "-32.5",
       "holder_party": "R",
       "candidate": "Jennifer Stephens",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "20",
+      "seat_label": "ID House 20 Seat B",
+      "pres_margin": "-32.5",
+      "holder_party": "R",
+      "candidate": "Mary A. Mosley",
       "is_open_seat": null
     },
     {
@@ -4022,20 +4022,20 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "22",
-      "seat_label": "ID House 22 Seat A",
+      "seat_label": "ID House 22 Seat B",
       "pres_margin": "-28.1",
       "holder_party": "R",
-      "candidate": "Loren Petty",
+      "candidate": "Amanda Easley",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "22",
-      "seat_label": "ID House 22 Seat B",
+      "seat_label": "ID House 22 Seat A",
       "pres_margin": "-28.1",
       "holder_party": "R",
-      "candidate": "Amanda Easley",
+      "candidate": "Loren Petty",
       "is_open_seat": null
     },
     {
@@ -4082,16 +4082,6 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "26",
-      "seat_label": "ID House 26 Seat B",
-      "pres_margin": "-5.2",
-      "holder_party": "R",
-      "candidate": "Kevin Marsh",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House",
-      "district": "26",
       "seat_label": "ID House 26 Seat A",
       "pres_margin": "-5.2",
       "holder_party": "R",
@@ -4101,11 +4091,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "28",
-      "seat_label": "ID House 28 Seat B",
-      "pres_margin": "-50.7",
+      "district": "26",
+      "seat_label": "ID House 26 Seat B",
+      "pres_margin": "-5.2",
       "holder_party": "R",
-      "candidate": "Jayson Meline",
+      "candidate": "Kevin Marsh",
       "is_open_seat": null
     },
     {
@@ -4121,11 +4111,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "29",
-      "seat_label": "ID House 29 Seat A",
-      "pres_margin": "-12.4",
+      "district": "28",
+      "seat_label": "ID House 28 Seat B",
+      "pres_margin": "-50.7",
       "holder_party": "R",
-      "candidate": "Mary Shea",
+      "candidate": "Jayson Meline",
       "is_open_seat": null
     },
     {
@@ -4136,6 +4126,16 @@
       "pres_margin": "-12.4",
       "holder_party": "R",
       "candidate": "Nate Roberts",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "29",
+      "seat_label": "ID House 29 Seat A",
+      "pres_margin": "-12.4",
+      "holder_party": "R",
+      "candidate": "Mary Shea",
       "is_open_seat": null
     },
     {
@@ -4182,20 +4182,20 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "33",
-      "seat_label": "ID House 33 Seat B",
+      "seat_label": "ID House 33 Seat A",
       "pres_margin": "-28.7",
       "holder_party": "R",
-      "candidate": "Todd DeVries",
+      "candidate": "Chance Marshall",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "33",
-      "seat_label": "ID House 33 Seat A",
+      "seat_label": "ID House 33 Seat B",
       "pres_margin": "-28.7",
       "holder_party": "R",
-      "candidate": "Chance Marshall",
+      "candidate": "Todd DeVries",
       "is_open_seat": null
     },
     {
@@ -4602,16 +4602,6 @@
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "10",
-      "seat_label": "ID House 10 Seat B",
-      "pres_margin": "-59.3",
-      "holder_party": "R",
-      "candidate": "Bruce Skaug",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_R",
-      "chamber": "House",
-      "district": "10",
       "seat_label": "ID House 10 Seat A",
       "pres_margin": "-59.3",
       "holder_party": "R",
@@ -4621,11 +4611,11 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "12",
-      "seat_label": "ID House 12 Seat B",
-      "pres_margin": "-40.1",
+      "district": "10",
+      "seat_label": "ID House 10 Seat B",
+      "pres_margin": "-59.3",
       "holder_party": "R",
-      "candidate": "Jaron Crane",
+      "candidate": "Bruce Skaug",
       "is_open_seat": null
     },
     {
@@ -4636,6 +4626,16 @@
       "pres_margin": "-40.1",
       "holder_party": "R",
       "candidate": "Jeff Cornilles",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "12",
+      "seat_label": "ID House 12 Seat B",
+      "pres_margin": "-40.1",
+      "holder_party": "R",
+      "candidate": "Jaron Crane",
       "is_open_seat": null
     },
     {
@@ -4652,20 +4652,20 @@
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "14",
-      "seat_label": "ID House 14 Seat A",
+      "seat_label": "ID House 14 Seat B",
       "pres_margin": "-49.0",
       "holder_party": "R",
-      "candidate": "Ted Hill",
+      "candidate": "Josh Tanner",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "14",
-      "seat_label": "ID House 14 Seat B",
+      "seat_label": "ID House 14 Seat A",
       "pres_margin": "-49.0",
       "holder_party": "R",
-      "candidate": "Josh Tanner",
+      "candidate": "Ted Hill",
       "is_open_seat": null
     },
     {
@@ -4712,16 +4712,6 @@
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "17",
-      "seat_label": "ID House 17 Seat B",
-      "pres_margin": "+13.0",
-      "holder_party": "D",
-      "candidate": "Justin Alexander Peter Hughes",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_R",
-      "chamber": "House",
-      "district": "17",
       "seat_label": "ID House 17 Seat A",
       "pres_margin": "+13.0",
       "holder_party": "D",
@@ -4731,11 +4721,11 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "19",
-      "seat_label": "ID House 19 Seat B",
-      "pres_margin": "+30.1",
+      "district": "17",
+      "seat_label": "ID House 17 Seat B",
+      "pres_margin": "+13.0",
       "holder_party": "D",
-      "candidate": "Stanley Roach",
+      "candidate": "Justin Alexander Peter Hughes",
       "is_open_seat": null
     },
     {
@@ -4751,11 +4741,11 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "20",
-      "seat_label": "ID House 20 Seat A",
-      "pres_margin": "-32.5",
-      "holder_party": "R",
-      "candidate": "Joe Palmer",
+      "district": "19",
+      "seat_label": "ID House 19 Seat B",
+      "pres_margin": "+30.1",
+      "holder_party": "D",
+      "candidate": "Stanley Roach",
       "is_open_seat": null
     },
     {
@@ -4766,6 +4756,16 @@
       "pres_margin": "-32.5",
       "holder_party": "R",
       "candidate": "James Holtzclaw",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "20",
+      "seat_label": "ID House 20 Seat A",
+      "pres_margin": "-32.5",
+      "holder_party": "R",
+      "candidate": "Joe Palmer",
       "is_open_seat": null
     },
     {
@@ -4822,20 +4822,20 @@
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "27",
-      "seat_label": "ID House 27 Seat B",
+      "seat_label": "ID House 27 Seat A",
       "pres_margin": "-67.6",
       "holder_party": "R",
-      "candidate": "Clay Handy",
+      "candidate": "Doug Pickett",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "27",
-      "seat_label": "ID House 27 Seat A",
+      "seat_label": "ID House 27 Seat B",
       "pres_margin": "-67.6",
       "holder_party": "R",
-      "candidate": "Doug Pickett",
+      "candidate": "Clay Handy",
       "is_open_seat": null
     },
     {
