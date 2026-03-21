@@ -744,7 +744,14 @@
   for (const s of district.seats) {
     for (const e of s.elections) {
       if (e.type === 'General' && e.candidates && e.candidates.length > 0) {
-        const winner = e.candidates.find(c => c.result === 'Won');
+        let winner = e.candidates.find(c => c.result === 'Won');
+        // If no outright winner (e.g. LA jungle primary → runoff), use the runoff winner
+        if (!winner) {
+          const runoff = s.elections.find(r => r.type === 'General_Runoff' && r.year === e.year);
+          if (runoff && runoff.candidates) {
+            winner = runoff.candidates.find(c => c.result === 'Won');
+          }
+        }
         if (winner) {
           const ep = effectiveParty(winner);
           const sign = ep === 'D' ? 1 : ep === 'R' ? -1 : 0;
@@ -939,7 +946,11 @@
     else if (!isPast || !e.result_status) entryClass += ' entry-pending';
 
     // Header: date · type
-    const typeLabel = formatElectionType(e.type);
+    let typeLabel = formatElectionType(e.type);
+    // LA jungle primary: label General elections as "(Jungle Primary)" for pre-2027
+    if (stateAbbr === 'LA' && data.uses_jungle_primary && e.type === 'General' && e.year < 2027) {
+      typeLabel += ' <span class="text-muted" style="font-weight:400">(Jungle Primary)</span>';
+    }
     let dateStr = '';
     if (e.date) {
       const d = new Date(e.date + 'T00:00:00');
@@ -1309,7 +1320,19 @@
   // ==========================
   // RENDER
   // ==========================
-  content.innerHTML = heroHtml + trendHtml + elec2026Html + historyHtml + mapHtml + similarHtml + navHtml;
+  // Jungle primary overview note for LA legislative districts
+  let jungleOverviewHtml = '';
+  if (stateAbbr === 'LA' && data.uses_jungle_primary && !isEliminated) {
+    jungleOverviewHtml = `<div class="office-overview" style="margin-bottom:20px">
+      <div class="office-overview-title">Louisiana's Jungle Primary System</div>
+      <ul>
+        <li>Through 2023, Louisiana used a <strong>jungle primary</strong> (nonpartisan blanket primary) for legislative elections. All candidates ran on a single ballot regardless of party — if someone won a majority (50%+1), they won outright. Otherwise, the top two advanced to a runoff.</li>
+        <li>Starting in 2027, Louisiana is switching to <strong>closed partisan primaries</strong>, ending the jungle primary system that has been in place since 1975.</li>
+      </ul>
+    </div>`;
+  }
+
+  content.innerHTML = heroHtml + trendHtml + jungleOverviewHtml + elec2026Html + historyHtml + mapHtml + similarHtml + navHtml;
 
   // ==========================
   // BUILD TREND CHART (SVG)
