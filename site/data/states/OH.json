@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T14:23:25.342716Z",
+  "generated_at": "2026-03-21T14:06:43.882805Z",
   "state": {
     "name": "Ohio",
     "abbr": "OH",
@@ -21,7 +21,7 @@
       "method": "Elected",
       "next_election": 2026,
       "start_year": 2019,
-      "forecast": "Likely R",
+      "forecast": "Lean R",
       "forecast_details": [
         {
           "source": "Cook Political Report",
@@ -29,7 +29,7 @@
         },
         {
           "source": "Sabato's Crystal Ball",
-          "rating": "Likely R"
+          "rating": "Lean R"
         }
       ]
     },
@@ -68,15 +68,15 @@
   ],
   "chambers": {
     "House": {
-      "total": 101,
+      "total": 99,
       "composition": {
-        "D": 35,
-        "R": 66,
+        "D": 34,
+        "R": 65,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 68,
-      "seats_up_2026": 101,
+      "supermajority": 66,
+      "seats_up_2026": 99,
       "members": [
         {
           "district": "1",
@@ -287,16 +287,6 @@
           "pres_margin": "+53.6",
           "next_election": 2026,
           "candidate_id": 11691
-        },
-        {
-          "district": "22",
-          "district_name": "HD-22",
-          "seat_designator": null,
-          "name": "Darnell Brewer",
-          "party": "D",
-          "pres_margin": "+69.3",
-          "next_election": 2026,
-          "candidate_id": 11684
         },
         {
           "district": "22",
@@ -1039,16 +1029,6 @@
           "candidate_id": 11779
         },
         {
-          "district": "95",
-          "district_name": "HD-95",
-          "seat_designator": null,
-          "name": "Ty Moore",
-          "party": "R",
-          "pres_margin": "-33.8",
-          "next_election": 2026,
-          "candidate_id": 11779
-        },
-        {
           "district": "96",
           "district_name": "HD-96",
           "seat_designator": null,
@@ -1091,15 +1071,15 @@
       ]
     },
     "Senate": {
-      "total": 34,
+      "total": 33,
       "composition": {
         "D": 9,
-        "R": 25,
+        "R": 24,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 23,
-      "seats_up_2026": 18,
+      "supermajority": 22,
+      "seats_up_2026": 17,
       "members": [
         {
           "district": "1",
@@ -1392,16 +1372,6 @@
           "candidate_id": 11704
         },
         {
-          "district": "29",
-          "district_name": "SD-29",
-          "seat_designator": null,
-          "name": "Jane Timken",
-          "party": "R",
-          "pres_margin": "-20.1",
-          "next_election": 2026,
-          "candidate_id": 11704
-        },
-        {
           "district": "30",
           "district_name": "SD-30",
           "seat_designator": null,
@@ -1446,7 +1416,7 @@
   },
   "elections_2026": {
     "governor": {
-      "forecast": "Likely R",
+      "forecast": "Lean R",
       "candidates": [
         {
           "name": "Amy Acton",

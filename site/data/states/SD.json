@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T14:23:25.342716Z",
+  "generated_at": "2026-03-21T14:07:48.915129Z",
   "state": {
     "name": "South Dakota",
     "abbr": "SD",
@@ -24,11 +24,11 @@
       "forecast": "Solid R",
       "forecast_details": [
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Solid R"
         },
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Solid R"
         }
       ]
@@ -68,15 +68,15 @@
   ],
   "chambers": {
     "House": {
-      "total": 74,
+      "total": 70,
       "composition": {
         "D": 4,
-        "R": 70,
+        "R": 66,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 50,
-      "seats_up_2026": 74,
+      "supermajority": 47,
+      "seats_up_2026": 70,
       "members": [
         {
           "district": "1",
@@ -87,16 +87,6 @@
           "pres_margin": "-23.7",
           "next_election": 2026,
           "candidate_id": 14233
-        },
-        {
-          "district": "1",
-          "district_name": "HD-1",
-          "seat_designator": "B",
-          "name": "Logan Manhart",
-          "party": "R",
-          "pres_margin": "-23.7",
-          "next_election": 2026,
-          "candidate_id": 14234
         },
         {
           "district": "1",
@@ -192,16 +182,6 @@
           "party": "R",
           "pres_margin": "-32.6",
           "next_election": 2026
-        },
-        {
-          "district": "6",
-          "district_name": "HD-6",
-          "seat_designator": "B",
-          "name": "Tim Czmowski",
-          "party": "R",
-          "pres_margin": "-32.6",
-          "next_election": 2026,
-          "candidate_id": 14188
         },
         {
           "district": "6",
@@ -349,16 +329,6 @@
           "candidate_id": 14216
         },
         {
-          "district": "13",
-          "district_name": "HD-13",
-          "seat_designator": "B",
-          "name": "Jack Kolbeck",
-          "party": "R",
-          "pres_margin": "-10.3",
-          "next_election": 2026,
-          "candidate_id": 14216
-        },
-        {
           "district": "14",
           "district_name": "HD-14",
           "seat_designator": "A",
@@ -407,16 +377,6 @@
           "pres_margin": "-45.3",
           "next_election": 2026,
           "candidate_id": 14221
-        },
-        {
-          "district": "16",
-          "district_name": "HD-16",
-          "seat_designator": "B",
-          "name": "John Shubeck",
-          "party": "R",
-          "pres_margin": "-45.3",
-          "next_election": 2026,
-          "candidate_id": 14222
         },
         {
           "district": "16",
@@ -805,15 +765,15 @@
       ]
     },
     "Senate": {
-      "total": 36,
+      "total": 35,
       "composition": {
         "D": 3,
-        "R": 33,
+        "R": 32,
         "Other": 0,
         "Vacant": 0
       },
       "supermajority": 24,
-      "seats_up_2026": 36,
+      "seats_up_2026": 35,
       "members": [
         {
           "district": "1",
@@ -1024,16 +984,6 @@
           "pres_margin": "-56.5",
           "next_election": 2026,
           "candidate_id": 12576
-        },
-        {
-          "district": "22",
-          "district_name": "SD-22",
-          "seat_designator": null,
-          "name": "Brandon Wipf",
-          "party": "R",
-          "pres_margin": "-39.9",
-          "next_election": 2026,
-          "candidate_id": 12554
         },
         {
           "district": "22",
@@ -1274,7 +1224,7 @@
         ]
       },
       {
-        "seat_label": "SD House 3 Seat A",
+        "seat_label": "SD House 3 Seat B",
         "chamber": "House",
         "district": "3",
         "candidates": [

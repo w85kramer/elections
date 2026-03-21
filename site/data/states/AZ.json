@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T14:23:25.342716Z",
+  "generated_at": "2026-03-21T14:06:16.007258Z",
   "state": {
     "name": "Arizona",
     "abbr": "AZ",
@@ -21,7 +21,7 @@
       "method": "Elected",
       "next_election": 2026,
       "start_year": 2023,
-      "forecast": "Toss-up",
+      "forecast": "Lean D",
       "forecast_details": [
         {
           "source": "Cook Political Report",
@@ -29,7 +29,7 @@
         },
         {
           "source": "Sabato's Crystal Ball",
-          "rating": "Toss-up"
+          "rating": "Lean D"
         }
       ]
     },
@@ -698,15 +698,15 @@
       ]
     },
     "Senate": {
-      "total": 31,
+      "total": 30,
       "composition": {
-        "D": 14,
+        "D": 13,
         "R": 17,
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 21,
-      "seats_up_2026": 31,
+      "supermajority": 20,
+      "seats_up_2026": 30,
       "members": [
         {
           "district": "1",
@@ -787,16 +787,6 @@
           "pres_margin": "+19.7",
           "next_election": 2026,
           "candidate_id": 7614
-        },
-        {
-          "district": "9",
-          "district_name": "SD-9",
-          "seat_designator": null,
-          "name": "Kiana Sears",
-          "party": "D",
-          "pres_margin": "+3.0",
-          "next_election": 2026,
-          "candidate_id": 7613
         },
         {
           "district": "9",
@@ -1023,7 +1013,7 @@
   },
   "elections_2026": {
     "governor": {
-      "forecast": "Toss-up",
+      "forecast": "Lean D",
       "candidates": []
     },
     "statewide": [
