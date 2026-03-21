@@ -806,7 +806,7 @@ def identify_election_type(text_before, state, chamber):
         election_type = 'Primary_Nonpartisan'
     # LA: jungle primary IS the decisive election (>50% wins outright) → General
     # Note: LA switches to closed primaries starting 2027
-    if state == 'LA' and election_type in ('Primary', 'Primary_Nonpartisan'):
+    if state == 'LA' and year < 2027 and election_type in ('Primary', 'Primary_Nonpartisan'):
         election_type = 'General'
 
     # Extract date if present
