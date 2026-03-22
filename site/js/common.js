@@ -73,7 +73,9 @@ function partyLabel(party) {
     OTH: 'Other', VET: 'Veterans Party', EAR: 'Earth Party',
     IG: 'Independent Green', NAP: 'New Alliance Party',
     LU: 'Liberty Union Party', GMPJ: 'Green Mountain Peace & Justice Party',
-    P: 'Progressive Party',
+    P: 'Progressive Party', DFL: 'Democratic-Farmer-Labor',
+    ILS: 'Illinois Solidarity Party', CON: 'Conservative Party',
+    IDP: 'Independence Party', LF: 'Labor-Farm Party', TAX: 'Taxpayers Party',
   };
   return PARTY_NAMES[party] || party || 'Vacant';
 }
