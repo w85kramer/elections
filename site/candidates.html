@@ -162,6 +162,13 @@
   .pagination button:hover:not(:disabled) { background: #f0f0f0; }
   .pagination button:disabled { opacity: 0.4; cursor: default; }
   .pagination .page-info { color: var(--ms-text-light); font-size: 13px; }
+  .pagination .page-jump { display: inline-flex; align-items: center; gap: 4px; }
+  .pagination .page-jump input {
+    width: 60px; padding: 4px 6px; border: 1px solid var(--ms-border);
+    border-radius: var(--ms-radius); font-size: 13px; text-align: center;
+    font-family: 'Work Sans', sans-serif;
+  }
+  .pagination .page-jump button { padding: 4px 10px; font-size: 12px; }
 
   @media (max-width: 768px) {
     .cand-table .district-col { display: none; }
@@ -355,9 +362,15 @@
     // Pagination
     if (totalPages > 1) {
       html += `<div class="pagination">
+        <button id="first-btn" ${currentPage === 0 ? 'disabled' : ''}>&#8676; First</button>
         <button id="prev-btn" ${currentPage === 0 ? 'disabled' : ''}>&#8592; Prev</button>
         <span class="page-info">Page ${currentPage + 1} of ${numberWithCommas(totalPages)}</span>
+        <span class="page-jump">
+          <input id="page-jump-input" type="number" min="1" max="${totalPages}" placeholder="${currentPage + 1}">
+          <button id="page-jump-btn">Go</button>
+        </span>
         <button id="next-btn" ${currentPage >= totalPages - 1 ? 'disabled' : ''}>Next &#8594;</button>
+        <button id="last-btn" ${currentPage >= totalPages - 1 ? 'disabled' : ''}>Last &#8677;</button>
       </div>`;
     }
 
@@ -378,8 +391,20 @@
     // Bind pagination
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
+    const firstBtn = document.getElementById('first-btn');
+    const lastBtn = document.getElementById('last-btn');
+    const jumpInput = document.getElementById('page-jump-input');
+    const jumpBtn = document.getElementById('page-jump-btn');
     if (prevBtn) prevBtn.addEventListener('click', () => { currentPage--; render(); window.scrollTo(0, 0); });
     if (nextBtn) nextBtn.addEventListener('click', () => { currentPage++; render(); window.scrollTo(0, 0); });
+    if (firstBtn) firstBtn.addEventListener('click', () => { currentPage = 0; render(); window.scrollTo(0, 0); });
+    if (lastBtn) lastBtn.addEventListener('click', () => { currentPage = totalPages - 1; render(); window.scrollTo(0, 0); });
+    const doJump = () => {
+      const val = parseInt(jumpInput?.value);
+      if (val >= 1 && val <= totalPages) { currentPage = val - 1; render(); window.scrollTo(0, 0); }
+    };
+    if (jumpBtn) jumpBtn.addEventListener('click', doJump);
+    if (jumpInput) jumpInput.addEventListener('keydown', e => { if (e.key === 'Enter') doJump(); });
   }
 
   // --- URL param initialization ---
