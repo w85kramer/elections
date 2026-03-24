@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:56.760968Z",
+  "generated_at": "2026-03-24T14:38:29.065238Z",
   "state": {
     "name": "Florida",
     "abbr": "FL",
@@ -88,9 +88,9 @@
     "House": {
       "total": 120,
       "composition": {
-        "D": 33,
+        "D": 34,
         "R": 85,
-        "Other": 1,
+        "Other": 0,
         "Vacant": 1
       },
       "supermajority": 80,
@@ -1058,7 +1058,7 @@
           "district_name": "HD-97",
           "seat_designator": null,
           "name": "Lisa Dunkley",
-          "party": null,
+          "party": "D",
           "pres_margin": "+52.1",
           "next_election": 2026,
           "candidate_id": 8328
@@ -4391,7 +4391,7 @@
       "district": "97",
       "seat_label": "FL House 97",
       "pres_margin": "+52.1",
-      "holder_party": null,
+      "holder_party": "D",
       "candidate": "Lisa Dunkley",
       "is_open_seat": null
     },

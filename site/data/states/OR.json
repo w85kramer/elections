@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:56.760968Z",
+  "generated_at": "2026-03-24T14:37:56.702766Z",
   "state": {
     "name": "Oregon",
     "abbr": "OR",
@@ -692,9 +692,9 @@
     "Senate": {
       "total": 30,
       "composition": {
-        "D": 16,
+        "D": 18,
         "R": 12,
-        "Other": 2,
+        "Other": 0,
         "Vacant": 0
       },
       "supermajority": 20,
@@ -885,7 +885,7 @@
           "district_name": "SD-19",
           "seat_designator": null,
           "name": "Rob Wagner",
-          "party": null,
+          "party": "D",
           "pres_margin": "+44.1",
           "next_election": 2026,
           "candidate_id": 12002
@@ -935,7 +935,7 @@
           "district_name": "SD-24",
           "seat_designator": null,
           "name": "Kayse Jama",
-          "party": null,
+          "party": "D",
           "pres_margin": "+23.7",
           "next_election": 2026,
           "candidate_id": 11976
@@ -3264,7 +3264,7 @@
       "district": "19",
       "seat_label": "OR Senate 19",
       "pres_margin": "+44.1",
-      "holder_party": null,
+      "holder_party": "D",
       "candidate": "Rob Wagner",
       "is_open_seat": null
     },
@@ -3284,7 +3284,7 @@
       "district": "24",
       "seat_label": "OR Senate 24",
       "pres_margin": "+23.7",
-      "holder_party": null,
+      "holder_party": "D",
       "candidate": "Kayse Jama",
       "is_open_seat": null
     },
@@ -3794,7 +3794,7 @@
       "district": "19",
       "seat_label": "OR Senate 19",
       "pres_margin": "+44.1",
-      "holder_party": null,
+      "holder_party": "D",
       "candidate": "Mary Dirksen",
       "is_open_seat": null
     },
