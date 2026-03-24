@@ -972,9 +972,9 @@
     const latest = parsed[parsed.length - 1].endDate;
     const totalDays = (latest - earliest) / (1000 * 60 * 60 * 24);
 
+    const PAD_L = 20, PAD_R = 20, PAD_B = 28;
     const totalYears = totalDays / 365.25;
     const W = Math.max(700, Math.round(totalYears * 16) + PAD_L + PAD_R);
-    const PAD_L = 20, PAD_R = 20, PAD_B = 28;
     const BAR_H = 36;
     const chartW = W - PAD_L - PAD_R;
 
