@@ -25,21 +25,31 @@ from db_config import TOKEN, PROJECT_REF
 
 def run_sql(query, max_retries=5):
     for attempt in range(max_retries):
-        resp = httpx.post(
-            f'https://api.supabase.com/v1/projects/{PROJECT_REF}/database/query',
-            headers={'Authorization': f'Bearer {TOKEN}', 'Content-Type': 'application/json'},
-            json={'query': query},
-            timeout=120,
-        )
-        if resp.status_code == 201:
-            return resp.json()
-        if resp.status_code == 429:
+        try:
+            resp = httpx.post(
+                f'https://api.supabase.com/v1/projects/{PROJECT_REF}/database/query',
+                headers={'Authorization': f'Bearer {TOKEN}', 'Content-Type': 'application/json'},
+                json={'query': query},
+                timeout=120,
+            )
+            if resp.status_code == 201:
+                return resp.json()
+            if resp.status_code == 429:
+                wait = 5 * (attempt + 1)
+                print(f'  Rate limited, waiting {wait}s...')
+                time.sleep(wait)
+                continue
+            print(f'SQL ERROR ({resp.status_code}): {resp.text[:500]}')
+            if attempt < max_retries - 1:
+                time.sleep(5 * (attempt + 1))
+                continue
+            return None
+        except (httpx.ConnectError, httpx.ReadError, httpx.WriteError,
+                httpx.ReadTimeout, httpx.WriteTimeout) as e:
             wait = 5 * (attempt + 1)
-            print(f'  Rate limited, waiting {wait}s...')
+            print(f'  Connection error: {e}, retrying in {wait}s...')
             time.sleep(wait)
             continue
-        print(f'SQL ERROR ({resp.status_code}): {resp.text[:500]}')
-        return None
     return None
 
 
@@ -152,14 +162,20 @@ def main():
         print('\nDRY RUN — no changes made')
         return
 
-    # Step 3: Delete all Seats B+ candidacies in one query
+    # Step 3: Delete all Seats B+ candidacies in batches
     if delete_election_ids:
         print(f'\nStep 3: Deleting candidacies on {len(delete_election_ids)} Seats B+ elections...')
-        id_list = ','.join(str(eid) for eid in sorted(delete_election_ids))
-        result = run_sql(f"DELETE FROM candidacies WHERE election_id IN ({id_list})")
-        if result is None:
-            print('ERROR: Delete failed — aborting')
-            return
+        sorted_ids = sorted(delete_election_ids)
+        del_batch_size = 100
+        for i in range(0, len(sorted_ids), del_batch_size):
+            batch = sorted_ids[i:i+del_batch_size]
+            id_list = ','.join(str(eid) for eid in batch)
+            result = run_sql(f"DELETE FROM candidacies WHERE election_id IN ({id_list})")
+            if result is None:
+                print(f'ERROR: Delete failed at batch {i} — aborting')
+                return
+            if i + del_batch_size < len(sorted_ids):
+                time.sleep(1)
         print(f'  Deleted')
 
     # Step 4: Insert copies in batches

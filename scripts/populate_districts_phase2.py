@@ -93,32 +93,31 @@ MD_DELEGATE_DISTRICTS = [
 ]
 
 # ══════════════════════════════════════════════════════════════════════
-# NEW HAMPSHIRE House — 200 districts, 400 seats
-# Source: HB 50 Amendment 2021-2274h (adopted redistricting plan)
+# NEW HAMPSHIRE House — 203 districts (164 regular + 39 floterial), 400 seats
+# Source: 2024 NH SoS general election Excel files (verified against HB 50)
+# Regular districts are non-overlapping; floterial districts overlay them.
 # ══════════════════════════════════════════════════════════════════════
 NH_HOUSE_DISTRICTS = [
-    # I. Belknap County (8 districts, 18 seats)
+    # I. Belknap County (7 regular, 16 seats + 1 FL, 2 seats = 18 total)
     ('Belknap-1', 1), ('Belknap-2', 2), ('Belknap-3', 1), ('Belknap-4', 1),
-    ('Belknap-5', 4), ('Belknap-6', 4), ('Belknap-7', 3), ('Belknap-8', 2),
-    # II. Carroll County (8 districts, 15 seats)
+    ('Belknap-5', 4), ('Belknap-6', 4), ('Belknap-7', 3),
+    # II. Carroll County (6 regular, 12 seats + 2 FL, 3 seats = 15 total)
     ('Carroll-1', 3), ('Carroll-2', 2), ('Carroll-3', 2), ('Carroll-4', 2),
-    ('Carroll-5', 1), ('Carroll-6', 2), ('Carroll-7', 1), ('Carroll-8', 2),
-    # III. Cheshire County (18 districts, 22 seats)
+    ('Carroll-5', 1), ('Carroll-6', 2),
+    # III. Cheshire County (13 regular, 15 seats + 5 FL, 7 seats = 22 total)
     ('Cheshire-1', 1), ('Cheshire-2', 1), ('Cheshire-3', 1), ('Cheshire-4', 1),
     ('Cheshire-5', 1), ('Cheshire-6', 2), ('Cheshire-7', 1), ('Cheshire-8', 1),
     ('Cheshire-9', 1), ('Cheshire-10', 2), ('Cheshire-11', 1), ('Cheshire-12', 1),
-    ('Cheshire-13', 1), ('Cheshire-14', 1), ('Cheshire-15', 2), ('Cheshire-16', 1),
-    ('Cheshire-17', 1), ('Cheshire-18', 2),
-    # IV. Coos County (7 districts, 10 seats)
+    ('Cheshire-13', 1),
+    # IV. Coos County (6 regular, 8 seats + 1 FL, 1 seat = 9 total)
     ('Coos-1', 2), ('Coos-2', 1), ('Coos-3', 1), ('Coos-4', 1),
-    ('Coos-5', 3), ('Coos-6', 1), ('Coos-7', 1),
-    # V. Grafton County (18 districts, 26 seats)
+    ('Coos-5', 2), ('Coos-6', 1),
+    # V. Grafton County (15 regular, 23 seats + 3 FL, 3 seats = 26 total)
     ('Grafton-1', 3), ('Grafton-2', 1), ('Grafton-3', 1), ('Grafton-4', 1),
     ('Grafton-5', 2), ('Grafton-6', 1), ('Grafton-7', 1), ('Grafton-8', 3),
     ('Grafton-9', 1), ('Grafton-10', 1), ('Grafton-11', 1), ('Grafton-12', 4),
-    ('Grafton-13', 1), ('Grafton-14', 1), ('Grafton-15', 1), ('Grafton-16', 1),
-    ('Grafton-17', 1), ('Grafton-18', 1),
-    # VI. Hillsborough County (45 districts, 123 seats)
+    ('Grafton-13', 1), ('Grafton-14', 1), ('Grafton-15', 1),
+    # VI. Hillsborough County (38 regular, 108 seats + 7 FL, 15 seats = 123 total)
     ('Hillsborough-1', 4), ('Hillsborough-2', 7), ('Hillsborough-3', 3),
     ('Hillsborough-4', 3), ('Hillsborough-5', 3), ('Hillsborough-6', 3),
     ('Hillsborough-7', 3), ('Hillsborough-8', 3), ('Hillsborough-9', 3),
@@ -127,44 +126,36 @@ NH_HOUSE_DISTRICTS = [
     ('Hillsborough-16', 2), ('Hillsborough-17', 2), ('Hillsborough-18', 2),
     ('Hillsborough-19', 2), ('Hillsborough-20', 2), ('Hillsborough-21', 2),
     ('Hillsborough-22', 2), ('Hillsborough-23', 2), ('Hillsborough-24', 2),
-    ('Hillsborough-25', 2), ('Hillsborough-26', 2), ('Hillsborough-27', 4),
-    ('Hillsborough-28', 1), ('Hillsborough-29', 5), ('Hillsborough-30', 3),
-    ('Hillsborough-31', 1), ('Hillsborough-32', 2), ('Hillsborough-33', 2),
-    ('Hillsborough-34', 3), ('Hillsborough-35', 2), ('Hillsborough-36', 4),
-    ('Hillsborough-37', 4), ('Hillsborough-38', 2), ('Hillsborough-39', 2),
-    ('Hillsborough-40', 2), ('Hillsborough-41', 2), ('Hillsborough-42', 1),
-    ('Hillsborough-43', 2), ('Hillsborough-44', 1), ('Hillsborough-45', 2),
-    # VII. Merrimack County (30 districts, 45 seats)
+    ('Hillsborough-25', 2), ('Hillsborough-26', 2), ('Hillsborough-27', 1),
+    ('Hillsborough-28', 2), ('Hillsborough-29', 4), ('Hillsborough-30', 3),
+    ('Hillsborough-31', 1), ('Hillsborough-32', 3), ('Hillsborough-33', 2),
+    ('Hillsborough-34', 3), ('Hillsborough-35', 2), ('Hillsborough-36', 2),
+    ('Hillsborough-42', 3), ('Hillsborough-43', 4),
+    # VII. Merrimack County (24 regular, 38 seats + 6 FL, 7 seats = 45 total)
     ('Merrimack-1', 1), ('Merrimack-2', 1), ('Merrimack-3', 2), ('Merrimack-4', 2),
     ('Merrimack-5', 2), ('Merrimack-6', 1), ('Merrimack-7', 2), ('Merrimack-8', 3),
     ('Merrimack-9', 4), ('Merrimack-10', 4), ('Merrimack-11', 1), ('Merrimack-12', 2),
     ('Merrimack-13', 2), ('Merrimack-14', 1), ('Merrimack-15', 1), ('Merrimack-16', 1),
     ('Merrimack-17', 1), ('Merrimack-18', 1), ('Merrimack-19', 1), ('Merrimack-20', 1),
     ('Merrimack-21', 1), ('Merrimack-22', 1), ('Merrimack-23', 1), ('Merrimack-24', 1),
-    ('Merrimack-25', 1), ('Merrimack-26', 1), ('Merrimack-27', 2), ('Merrimack-28', 1),
-    ('Merrimack-29', 1), ('Merrimack-30', 1),
-    # VIII. Rockingham County (38 districts, 91 seats)
-    ('Rockingham-1', 2), ('Rockingham-2', 3), ('Rockingham-3', 4), ('Rockingham-4', 1),
-    ('Rockingham-5', 1), ('Rockingham-6', 1), ('Rockingham-7', 4), ('Rockingham-8', 2),
-    ('Rockingham-9', 1), ('Rockingham-10', 1), ('Rockingham-11', 2), ('Rockingham-12', 2),
-    ('Rockingham-13', 3), ('Rockingham-14', 3), ('Rockingham-15', 2), ('Rockingham-16', 1),
-    ('Rockingham-17', 5), ('Rockingham-18', 2), ('Rockingham-19', 10), ('Rockingham-20', 9),
-    ('Rockingham-21', 4), ('Rockingham-22', 7), ('Rockingham-23', 1), ('Rockingham-24', 1),
-    ('Rockingham-25', 1), ('Rockingham-26', 1), ('Rockingham-27', 2), ('Rockingham-28', 3),
-    ('Rockingham-29', 2), ('Rockingham-30', 1), ('Rockingham-31', 1), ('Rockingham-32', 1),
-    ('Rockingham-33', 1), ('Rockingham-34', 1), ('Rockingham-35', 1), ('Rockingham-36', 1),
-    ('Rockingham-37', 1), ('Rockingham-38', 2),
-    ('Rockingham-39', 1), ('Rockingham-40', 1),
-    # IX. Strafford County (21 districts, 38 seats)
+    # VIII. Rockingham County (30 regular, 80 seats + 10 FL, 11 seats = 91 total)
+    ('Rockingham-1', 3), ('Rockingham-2', 3), ('Rockingham-3', 1), ('Rockingham-4', 3),
+    ('Rockingham-5', 2), ('Rockingham-6', 1), ('Rockingham-7', 1), ('Rockingham-8', 1),
+    ('Rockingham-9', 2), ('Rockingham-10', 3), ('Rockingham-11', 4), ('Rockingham-12', 2),
+    ('Rockingham-13', 10), ('Rockingham-14', 2), ('Rockingham-15', 2), ('Rockingham-16', 7),
+    ('Rockingham-17', 4), ('Rockingham-18', 2), ('Rockingham-19', 1), ('Rockingham-20', 3),
+    ('Rockingham-21', 1), ('Rockingham-22', 1), ('Rockingham-23', 1), ('Rockingham-24', 2),
+    ('Rockingham-25', 9), ('Rockingham-26', 1), ('Rockingham-27', 1), ('Rockingham-28', 1),
+    ('Rockingham-29', 4), ('Rockingham-30', 2),
+    # IX. Strafford County (17 regular, 30 seats + 4 FL, 8 seats = 38 total)
     ('Strafford-1', 2), ('Strafford-2', 3), ('Strafford-3', 1), ('Strafford-4', 3),
     ('Strafford-5', 1), ('Strafford-6', 1), ('Strafford-7', 1), ('Strafford-8', 1),
     ('Strafford-9', 1), ('Strafford-10', 4), ('Strafford-11', 3), ('Strafford-12', 4),
     ('Strafford-13', 1), ('Strafford-14', 1), ('Strafford-15', 1), ('Strafford-16', 1),
-    ('Strafford-17', 1), ('Strafford-18', 1), ('Strafford-19', 3), ('Strafford-20', 1),
-    ('Strafford-21', 3),
-    # X. Sullivan County (8 districts, 13 seats)
+    ('Strafford-17', 1),
+    # X. Sullivan County (6 regular, 10 seats + 2 FL, 3 seats = 13 total)
     ('Sullivan-1', 1), ('Sullivan-2', 1), ('Sullivan-3', 3), ('Sullivan-4', 1),
-    ('Sullivan-5', 1), ('Sullivan-6', 3), ('Sullivan-7', 1), ('Sullivan-8', 2),
+    ('Sullivan-5', 1), ('Sullivan-6', 3),
 ]
 
 # ══════════════════════════════════════════════════════════════════════

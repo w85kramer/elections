@@ -16,10 +16,14 @@ Usage:
     python3 scripts/populate_seat_terms_nh_house.py --dry-run
 """
 import sys
+import os
 import re
 import httpx
 import html as htmlmod
 from collections import defaultdict
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+from db_config import TOKEN, PROJECT_REF, API_URL
 
 def run_sql(query, exit_on_error=True):
     resp = httpx.post(
@@ -239,9 +243,6 @@ def main():
     if len(seat_ids) != len(set(seat_ids)):
         print("  ERROR: Duplicate seat assignments!")
         from collections import Counter
-import sys as _sys, os as _os
-_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
-from db_config import TOKEN, PROJECT_REF, API_URL
         dupes = {k: v for k, v in Counter(seat_ids).items() if v > 1}
         print(f"  Duplicates: {dupes}")
         sys.exit(1)
