@@ -118,6 +118,7 @@ def export_governor_pages(dry_run=False, single_state=None):
         SELECT
             st.abbreviation as state,
             st.state_name,
+            st.uses_jungle_primary,
             st.gov_term_years,
             st.gov_term_limit,
             d.pres_2024_margin,
@@ -587,6 +588,7 @@ def export_governor_pages(dry_run=False, single_state=None):
             'state_name': seat['state_name'],
             'gov_term_years': seat['gov_term_years'],
             'gov_term_limit': seat['gov_term_limit'],
+            'uses_jungle_primary': seat.get('uses_jungle_primary', False),
             'pres_2024_margin': pres_margin_str,
             'next_regular_election': seat['next_regular_election_year'],
             'current_governor': current_gov,

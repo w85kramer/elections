@@ -112,6 +112,7 @@ def export_statewide_pages(office_key, dry_run=False, single_state=None):
         SELECT
             st.abbreviation as state,
             st.state_name,
+            st.uses_jungle_primary,
             d.pres_2024_margin,
             se.id as seat_id,
             se.current_holder,
@@ -566,6 +567,7 @@ def export_statewide_pages(office_key, dry_run=False, single_state=None):
             'term_years': seat.get('term_length_years'),
             'term_limit': seat.get('seat_notes'),  # term limit info often in notes
             'method': method,
+            'uses_jungle_primary': seat.get('uses_jungle_primary', False),
             'pres_2024_margin': pres_margin_str,
             'next_regular_election': seat['next_regular_election_year'],
             'current_holder': current_holder,

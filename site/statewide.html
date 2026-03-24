@@ -423,6 +423,17 @@
     <a href="${officeInfo.dashPage}">${officeInfo.breadcrumbLabel}</a> &rsaquo;
     <span>${stateName}</span>`;
 
+  // For joint ticket Lt Gov pages, merge governor election data
+  const isJointTicket = data.method === 'Joint_Ticket' && officeKey === 'ltgov';
+  if (isJointTicket && (!data.elections || data.elections.length === 0)) {
+    try {
+      const govData = await loadJSON(`data/governors/${stateAbbr}.json`);
+      if (govData && govData.elections) {
+        data.elections = govData.elections.map(e => ({ ...e, joint_ticket: true }));
+      }
+    } catch (e) { /* governor data not available */ }
+  }
+
   // Check if this is an appointed office
   const isAppointed = data.method && data.method !== 'Elected' && data.method !== 'Joint_Ticket';
 
@@ -575,6 +586,8 @@
 
     const openTag = race.is_open_seat
       ? `<span class="tag" style="background:#fff3cd;color:#856404">Open Seat</span>` : '';
+    const jungleNote = (stateAbbr === 'LA' && data.uses_jungle_primary)
+      ? `<span class="tag">Jungle Primary</span>` : '';
     const dateStr = race.election_date ? formatDate(race.election_date) : '';
     const filingStr = race.filing_deadline ? `Candidate filing deadline: ${formatDate(race.filing_deadline)}` : '';
     const primaryStr = race.primary_date ? `Primary: ${formatDate(race.primary_date)}` : '';
@@ -607,7 +620,7 @@
       <div class="card election-2026-card mb-16">
         <div class="card-header">
           <h3 class="heading-sm" style="margin:0">2026 ${officeInfo.label} ${forecastHtml}</h3>
-          <div>${openTag}</div>
+          <div>${openTag} ${jungleNote}</div>
         </div>
         <div class="text-sm text-muted mt-8">${[dateStr, filingStr, primaryStr].filter(Boolean).join(' &middot; ')}</div>
         ${candsHtml}
@@ -637,7 +650,11 @@
     if (hasWinner) entryClass += ' entry-has-winner';
     else if (!isPast || !e.result_status) entryClass += ' entry-pending';
 
-    const typeLabel = formatElectionType(e.type);
+    let typeLabel = formatElectionType(e.type);
+    // LA jungle primary: label General elections as "(Jungle Primary)" for pre-2027
+    if (stateAbbr === 'LA' && data.uses_jungle_primary && e.type === 'General' && e.year < 2027) {
+      typeLabel += ' <span class="text-muted" style="font-weight:400">(Jungle Primary)</span>';
+    }
     let dateStr = '';
     if (e.date) {
       const d = new Date(e.date + 'T00:00:00');
@@ -701,6 +718,7 @@
         <span>${dateStr}</span>
         <span class="separator">&middot;</span>
         <span class="entry-type">${typeLabel}</span>
+        ${e.joint_ticket ? ' <span class="tag" style="background:#e8f4fd;color:#1a6fa0;font-size:10px;padding:1px 6px;border-radius:3px">Joint Ticket</span>' : ''}
         ${forecastTag}${reportingTag}${recountTag}${flipTag}${incDefeatTag}${uncontestedTag}${filedNote}
       </div>
       <div class="entry-candidates">`;
@@ -874,8 +892,16 @@
     return html;
   }
 
+  const jointTicketNote = isJointTicket
+    ? `<div class="card" style="background:#e8f4fd;border-left:4px solid #1a6fa0;padding:12px;margin-bottom:12px;font-size:13px">
+        <strong>Joint Ticket</strong> — The Lt. Governor runs on a joint ticket with the Governor. Election results below reflect the gubernatorial ticket.
+        <a href="governor.html?st=${stateAbbr}" style="margin-left:8px">View Governor page &rarr;</a>
+      </div>`
+    : '';
+
   const historyHtml = `<div class="section">
     <div class="section-title">Office History</div>
+    ${jointTicketNote}
     ${buildHistoryTimeline()}
   </div>`;
 
@@ -900,13 +926,26 @@
   // ==========================
   const overviewHtml = await OfficeOverview.render(stateAbbr, officeKey,
     `About the ${STATE_NAMES[stateAbbr]} ${officeInfo.label}`);
-  content.innerHTML = heroHtml + overviewHtml + timelineHtml + race2026Html + historyHtml + navHtml;
+
+  // Jungle primary overview note for LA statewide offices
+  let jungleOverviewHtml = '';
+  if (stateAbbr === 'LA' && data.uses_jungle_primary) {
+    jungleOverviewHtml = `<div class="office-overview" style="margin-bottom:20px">
+      <div class="office-overview-title">Louisiana's Jungle Primary System</div>
+      <ul>
+        <li>Through 2023, Louisiana used a <strong>jungle primary</strong> (nonpartisan blanket primary) for statewide elections. All candidates ran on a single ballot regardless of party — if someone won a majority (50%+1), they won outright. Otherwise, the top two advanced to a runoff.</li>
+        <li>Starting in 2027, Louisiana is switching to <strong>closed partisan primaries</strong> for statewide offices, ending the jungle primary system that has been in place since 1975.</li>
+      </ul>
+    </div>`;
+  }
+
+  content.innerHTML = heroHtml + overviewHtml + jungleOverviewHtml + timelineHtml + race2026Html + historyHtml + navHtml;
 
   // ==========================
   // BUILD TIMELINE CHART (SVG)
   // ==========================
   if (chronoTimeline.length > 0) {
-    buildTimelineChart(chronoTimeline, false);
+    buildTimelineChart(chronoTimeline, isJointTicket);
   }
 
   // ==========================
