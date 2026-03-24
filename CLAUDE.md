@@ -27,6 +27,7 @@ The project focuses on state-level races (not local/municipal). The 2026 cycle i
 - Schema defined in `schema.sql`; original template in `state_elections_database_template.xlsx`
 - 9 tables: `states` → `districts` → `seats` → `elections` → `candidacies` (+ `candidates`), `seat_terms` (officeholder history), `ballot_measures`, `forecasts`
 - `seat_terms` tracks every officeholder's tenure per seat (start/end dates, reason for start/end). `seats.current_holder` is kept as a convenience cache; `seat_terms WHERE end_date IS NULL` is the source of truth
+- **CRITICAL: seat_terms must always accompany current_holder changes.** Never set `current_holder` on a seat without also creating/updating a `seat_term` record. When a new holder takes office, create a seat_term with `end_date IS NULL`. When a holder leaves, close their seat_term (`end_date`, `end_reason`). Run `python3 scripts/audit_seat_terms.py` to verify integrity.
 - 1 view: `dashboard_view` (auto-joins candidacies + ballot measures)
 - All PKs are auto-incrementing integers; categorical fields use CHECK constraints
 - RLS enabled on all tables with permissive policies

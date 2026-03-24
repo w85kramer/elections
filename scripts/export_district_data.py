@@ -506,7 +506,8 @@ def export_all_districts(dry_run=False, single_state=None):
         SELECT
             st.abbreviation as state,
             sr.chamber,
-            sr.effective_year
+            sr.effective_year,
+            sr.effective_date
         FROM state_redistricting sr
         JOIN states st ON sr.state_id = st.id
         WHERE 1=1
@@ -549,12 +550,15 @@ def export_all_districts(dry_run=False, single_state=None):
 
     # --- Index data ---
 
-    # Redistricting cycles indexed by state → {chamber: [years]}
+    # Redistricting cycles indexed by state → {chamber: [{year, date?}]}
     redistricting_by_state = {}
     for r in redistricting_data:
         state = r['state']
         redistricting_by_state.setdefault(state, {})
-        redistricting_by_state[state].setdefault(r['chamber'], []).append(r['effective_year'])
+        entry = {'year': r['effective_year']}
+        if r.get('effective_date'):
+            entry['date'] = str(r['effective_date'])
+        redistricting_by_state[state].setdefault(r['chamber'], []).append(entry)
 
     # State info lookup
     states_info = {r['abbreviation']: r for r in states_data}

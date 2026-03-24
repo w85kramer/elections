@@ -1127,11 +1127,14 @@
       events.push({ type: 'term_event', year: te.year, date: te.date || '', data: te });
     }
     // Inject redistricting events from state-level redistricting data
-    const redistrictYears = (data.redistricting_cycles || {})[chamber] || [];
+    // Format: array of {year, date?} objects (or plain integers for backwards compat)
+    const redistrictEntries = (data.redistricting_cycles || {})[chamber] || [];
     const ry = district.redistricting_year;
 
     const elecYears = elections.map(e => e.year);
-    for (const rYear of redistrictYears) {
+    for (const entry of redistrictEntries) {
+      const rYear = typeof entry === 'object' ? entry.year : entry;
+      const explicitDate = typeof entry === 'object' ? entry.date : null;
       // effective_year = first election using NEW maps; line goes before that year
       const hasBefore = elecYears.some(y => y < rYear);
       const hasOnOrAfter = elecYears.some(y => y >= rYear);
@@ -1140,13 +1143,18 @@
         const marginStr = isPrimary && district.pres_2024_margin ? marginLabel(district.pres_2024_margin) : null;
         const seatChange = isPrimary && district.old_era_seats && district.old_era_seats !== district.num_seats
           ? `${district.old_era_seats} seats \u2192 ${district.num_seats} seats` : null;
-        let redistrictDate = `${rYear}-01-01`;
-        const ryElecs = elections.filter(e => e.year === rYear && e.date);
-        const specialDates = ryElecs.filter(e => e.type.includes('Special')).map(e => e.date).sort();
-        if (specialDates.length > 0) {
-          const d = new Date(specialDates[specialDates.length - 1] + 'T00:00:00');
-          d.setDate(d.getDate() + 1);
-          redistrictDate = d.toISOString().split('T')[0];
+        let redistrictDate;
+        if (explicitDate) {
+          redistrictDate = explicitDate;
+        } else {
+          redistrictDate = `${rYear}-01-01`;
+          const ryElecs = elections.filter(e => e.year === rYear && e.date);
+          const specialDates = ryElecs.filter(e => e.type.includes('Special')).map(e => e.date).sort();
+          if (specialDates.length > 0) {
+            const d = new Date(specialDates[specialDates.length - 1] + 'T00:00:00');
+            d.setDate(d.getDate() + 1);
+            redistrictDate = d.toISOString().split('T')[0];
+          }
         }
         events.push({
           type: 'redistricting',
@@ -1158,14 +1166,14 @@
         events.push({
           type: 'redistricting',
           year: rYear,
-          date: `${rYear}-01-01`,
+          date: explicitDate || `${rYear}-01-01`,
           data: { year: rYear, eliminated: true }
         });
       } else if (rYear === ry && district.is_new_district && hasAfter && !hasBefore) {
         events.push({
           type: 'redistricting',
           year: rYear,
-          date: `${rYear}-01-01`,
+          date: explicitDate || `${rYear}-01-01`,
           data: { year: rYear, created: true }
         });
       }

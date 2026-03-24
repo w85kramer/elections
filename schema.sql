@@ -391,6 +391,7 @@ CREATE TABLE state_redistricting (
     state_id        INTEGER NOT NULL REFERENCES states(id) ON DELETE CASCADE,
     chamber         TEXT NOT NULL,
     effective_year  INTEGER NOT NULL,
+    effective_date  DATE,
     census_year     INTEGER,
     is_mid_decade   BOOLEAN DEFAULT FALSE,
     notes           TEXT,
