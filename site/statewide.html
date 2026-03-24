@@ -1004,7 +1004,8 @@
     const latest = parsed[parsed.length - 1].endDate;
     const totalDays = (latest - earliest) / (1000 * 60 * 60 * 24);
 
-    const W = Math.max(700, parsed.length * 80 + 120);
+    const totalYears = totalDays / 365.25;
+    const W = Math.max(700, Math.round(totalYears * 16) + PAD_L + PAD_R);
     const PAD_L = 20, PAD_R = 20, PAD_B = 28;
     const BAR_H = 36;
     const chartW = W - PAD_L - PAD_R;
@@ -1066,7 +1067,7 @@
     const BAR_Y = PAD_T;
     const H = BAR_Y + BAR_H + PAD_B + 4;
 
-    let svg = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
+    let svg = `<svg width="100%" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="max-width:${W}px">`;
 
     // Year axis
     const startYear = earliest.getFullYear();
