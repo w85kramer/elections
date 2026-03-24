@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-21T15:12:13.467600Z",
+  "generated_at": "2026-03-24T14:07:56.760968Z",
   "state": {
     "name": "Florida",
     "abbr": "FL",
@@ -88,9 +88,9 @@
     "House": {
       "total": 120,
       "composition": {
-        "D": 32,
+        "D": 33,
         "R": 85,
-        "Other": 2,
+        "Other": 1,
         "Vacant": 1
       },
       "supermajority": 80,
@@ -531,7 +531,7 @@
           "district_name": "HD-44",
           "seat_designator": null,
           "name": "Rita Harris",
-          "party": null,
+          "party": "D",
           "pres_margin": "+10.9",
           "next_election": 2026,
           "candidate_id": 8297
@@ -1297,8 +1297,8 @@
     "Senate": {
       "total": 40,
       "composition": {
-        "D": 14,
-        "R": 25,
+        "D": 12,
+        "R": 27,
         "Other": 0,
         "Vacant": 1
       },
@@ -1360,7 +1360,7 @@
           "district_name": "SD-6",
           "seat_designator": null,
           "name": "Jennifer Bradley",
-          "party": "D",
+          "party": "R",
           "pres_margin": "-27.5",
           "next_election": 2026,
           "candidate_id": 8294
@@ -1699,7 +1699,7 @@
           "district_name": "SD-40",
           "seat_designator": null,
           "name": "Ana Maria Rodriguez",
-          "party": "D",
+          "party": "R",
           "pres_margin": "-27.2",
           "next_election": 2026,
           "candidate_id": 8234
@@ -4191,7 +4191,7 @@
       "district": "44",
       "seat_label": "FL House 44",
       "pres_margin": "+10.9",
-      "holder_party": null,
+      "holder_party": "D",
       "candidate": "Rita Harris",
       "is_open_seat": null
     },
@@ -5141,7 +5141,7 @@
       "district": "6",
       "seat_label": "FL Senate 6",
       "pres_margin": "-27.5",
-      "holder_party": "D",
+      "holder_party": "R",
       "candidate": "Jennifer Bradley",
       "is_open_seat": null
     },
