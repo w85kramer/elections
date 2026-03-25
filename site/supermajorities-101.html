@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics (multistate.us) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V5WR874G5K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V5WR874G5K', {
+    cookie_domain: 'multistate.us',
+    cookie_flags: 'SameSite=None;Secure'
+  });
+</script>
+<meta charset="UTF-8">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supermajorities — MultiState Elections</title>
+<meta name="description" content="State legislative supermajority thresholds: veto overrides, tax increases, constitutional amendments, and which parties hold supermajorities in all 50 states.">
+<meta property="og:title" content="Supermajorities — MultiState Elections">
+<meta property="og:description" content="State legislative supermajority thresholds: veto overrides, tax increases, constitutional amendments, and which parties hold supermajorities in all 50 states.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.multistate.us/elections/supermajorities-101.html">
+<meta property="og:site_name" content="MultiState Elections">
+<meta property="og:image" content="https://www.multistate.us/elections/assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Supermajorities — MultiState Elections">
+<meta name="twitter:description" content="State legislative supermajority thresholds: veto overrides, tax increases, constitutional amendments, and which parties hold supermajorities in all 50 states.">
+<link rel="canonical" href="https://www.multistate.us/elections/supermajorities-101.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<style>
+  .article-body {}
+  .article-body p {
+    font-family: 'Merriweather', serif; font-weight: 300; font-size: 15px;
+    line-height: 1.8; color: var(--ms-text); margin-bottom: 20px;
+  }
+  .article-body h2 {
+    font-family: 'Work Sans', sans-serif; font-weight: 800; font-size: 26px;
+    color: var(--ms-navy); margin-top: 48px; margin-bottom: 16px; line-height: 1.2;
+  }
+  .article-body h3 {
+    font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 19px;
+    color: var(--ms-navy); margin-top: 32px; margin-bottom: 12px; line-height: 1.3;
+  }
+  .article-body ul, .article-body ol {
+    font-family: 'Merriweather', serif; font-weight: 300; font-size: 15px;
+    line-height: 1.8; color: var(--ms-text); margin-bottom: 20px; padding-left: 24px;
+  }
+  .article-body li { margin-bottom: 8px; }
+  .article-body a { color: var(--ms-dem-blue); text-decoration: none; font-weight: 400; }
+  .article-body a:hover { text-decoration: underline; }
+  .lead {
+    font-size: 17px !important; font-weight: 400 !important; color: var(--ms-text) !important;
+    line-height: 1.7 !important; margin-bottom: 32px !important;
+  }
+  .inline-map-section { width: 100%; }
+  .inline-map-title {
+    font-family: 'Work Sans', sans-serif; font-weight: 800; font-size: 22px;
+    color: var(--ms-navy); text-align: center; margin-bottom: 12px; line-height: 1.1;
+  }
+  .inline-map-wrapper { display: flex; flex-direction: column; }
+  .inline-map-legend { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-bottom: 12px; justify-content: center; }
+  .inline-map-main { margin-top: -20px; width: 100%; }
+  .inline-map-main svg { width: 100%; height: auto; display: block; }
+  .inline-legend-row { display: flex; align-items: center; gap: 8px; }
+  .inline-legend-swatch { width: 16px; height: 16px; border-radius: 2px; flex-shrink: 0; }
+  .inline-legend-label {
+    font-family: 'Work Sans', sans-serif; font-weight: 600; font-size: 13px;
+    color: var(--ms-navy); line-height: 1.3; white-space: nowrap;
+  }
+  .state-group { cursor: pointer; }
+  .state-group:hover .state-fill path { filter: brightness(0.85); }
+  .state-group:hover .state-stroke path { stroke: #043858; stroke-width: 2; }
+  .state-label {
+    font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 24px;
+    fill: white; text-anchor: middle; dominant-baseline: central; pointer-events: none;
+  }
+  .inline-tooltip {
+    position: fixed; background: #043858; color: white; padding: 12px 16px;
+    border-radius: 6px; font-family: 'Work Sans', sans-serif; font-size: 13px;
+    line-height: 1.5; pointer-events: none; opacity: 0; transition: opacity 0.15s;
+    z-index: 1000; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  .inline-tooltip.visible { opacity: 1; }
+  .inline-tt-state { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+  .inline-tt-type { font-weight: 400; opacity: 0.9; }
+  .sm-stats {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 16px; margin-bottom: 36px;
+  }
+  .callout {
+    background: #f0f5f8; border-left: 4px solid var(--ms-navy);
+    padding: 20px 24px; border-radius: 0 var(--ms-radius) var(--ms-radius) 0; margin: 28px 0;
+  }
+  .callout p { margin-bottom: 8px; font-size: 14px !important; }
+  .callout p:last-child { margin-bottom: 0; }
+  .article-body table {
+    width: 100%; border-collapse: collapse; margin: 20px 0;
+    font-family: 'Work Sans', sans-serif; font-size: 13px;
+  }
+  .article-body th {
+    background: var(--ms-navy); color: white; padding: 10px 12px;
+    text-align: left; font-weight: 700; font-size: 12px; cursor: pointer; user-select: none;
+    white-space: nowrap;
+  }
+  .article-body th:hover { background: #065a8c; }
+  .article-body th .sort-arrow { opacity: 0.5; margin-left: 4px; font-size: 10px; }
+  .article-body th.sorted .sort-arrow { opacity: 1; }
+  .article-body td { padding: 8px 12px; border-bottom: 1px solid #eee; }
+  .article-body tr:hover td { background: #f8f9fa; }
+  .sm-badge {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; color: white;
+  }
+  .sm-badge.r { background: var(--ms-rep-red); }
+  .sm-badge.d { background: var(--ms-dem-blue); }
+  .sm-badge.none { background: #999; color: white; }
+  .threshold-tag {
+    display: inline-block; padding: 1px 6px; border-radius: 3px;
+    font-size: 11px; font-weight: 600; background: #f0f5f8; color: var(--ms-navy);
+  }
+  .filter-row {
+    display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: 6px 14px; border: 1.5px solid var(--ms-border); border-radius: 16px;
+    font-family: 'Work Sans', sans-serif; font-weight: 600; font-size: 12px;
+    cursor: pointer; background: white; color: var(--ms-text-light); transition: all 0.15s;
+  }
+  .filter-btn:hover { border-color: var(--ms-navy); color: var(--ms-navy); }
+  .filter-btn.active { background: var(--ms-navy); border-color: var(--ms-navy); color: white; }
+  .whats-next {
+    display: flex; gap: 16px; margin-top: 32px;
+  }
+  .whats-next a {
+    flex: 1; display: block; padding: 20px 24px;
+    border: 2px solid var(--ms-border); border-radius: var(--ms-radius);
+    text-decoration: none; transition: all 0.15s;
+  }
+  .whats-next a:hover { border-color: var(--ms-navy); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .whats-next .next-label {
+    font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 16px;
+    color: var(--ms-navy); margin-bottom: 4px;
+  }
+  .whats-next .next-desc {
+    font-family: 'Work Sans', sans-serif; font-weight: 400; font-size: 13px;
+    color: var(--ms-text-light);
+  }
+  @media (max-width: 768px) {
+    .article-body h2 { font-size: 22px; margin-top: 36px; }
+    .lead { font-size: 15px !important; }
+    .sm-stats { grid-template-columns: repeat(2, 1fr); }
+    .whats-next { flex-direction: column; }
+    .article-body table { font-size: 12px; }
+    .article-body th, .article-body td { padding: 6px 8px; }
+  }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div id="global-nav"></div>
+<div class="page-container" id="main-content" role="main">
+  <div id="topic-subnav"></div>
+  <h1 class="heading-xl" style="margin-bottom: 8px">Supermajorities</h1>
+  <p class="subtitle mb-16">Veto Overrides, Tax Thresholds, and the Real Balance of Power in State Legislatures</p>
+
+  <!-- Stats -->
+  <div class="sm-stats" id="sm-stats">
+    <div class="card stat-card"><div class="stat-number" id="stat-r-sm" style="color:var(--ms-rep-red)">—</div><div class="stat-label">R Supermajority States</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-d-sm" style="color:var(--ms-dem-blue)">—</div><div class="stat-label">D Supermajority States</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-nonstandard">—</div><div class="stat-label">Non-2/3 Thresholds</div></div>
+    <div class="card stat-card"><div class="stat-number" id="stat-veto-proof">—</div><div class="stat-label">Effective Veto-Proof</div></div>
+  </div>
+
+  <div class="article-body">
+
+    <!-- Inline Map -->
+    <div id="page-map" style="margin:28px 0"></div>
+
+    <!-- Lead -->
+    <p class="lead">In state politics, the most important threshold isn&rsquo;t majority control &mdash; it&rsquo;s the <strong>supermajority</strong> needed to override a governor&rsquo;s veto. When a party holds enough seats to override vetoes in both chambers, the governor&rsquo;s leverage effectively disappears. Understanding these thresholds &mdash; and which parties currently meet them &mdash; is essential to understanding who actually governs in each state.</p>
+
+    <h2>What Is a Supermajority?</h2>
+
+    <p>A supermajority is any voting threshold that exceeds a simple majority (50% + 1). In the context of state legislatures, supermajorities come into play for several critical actions:</p>
+
+    <ul>
+      <li><strong>Veto overrides</strong> &mdash; the votes needed to enact legislation over the governor&rsquo;s objection</li>
+      <li><strong>Tax and revenue increases</strong> &mdash; some states require supermajorities to raise taxes</li>
+      <li><strong>Constitutional amendments</strong> &mdash; placing amendments on the ballot for voter approval</li>
+      <li><strong>Budget and appropriations</strong> &mdash; passing the state budget in certain states or circumstances</li>
+      <li><strong>Filibuster and cloture</strong> &mdash; Nebraska&rsquo;s unicameral legislature requires a supermajority to end debate</li>
+      <li><strong>Emergency clauses</strong> &mdash; adding an emergency effective date to legislation</li>
+    </ul>
+
+    <p>The veto override is by far the most consequential. When a party holds a veto-proof supermajority in both chambers, it can govern almost unilaterally &mdash; even if the governor belongs to the opposing party.</p>
+
+    <h2>Veto Override Thresholds</h2>
+
+    <p>Most states require a <strong>two-thirds vote</strong> in each chamber to override a governor&rsquo;s veto, but this is far from universal. The landscape breaks down into three tiers:</p>
+
+    <h3>Two-Thirds (2/3) &mdash; The Standard</h3>
+    <p>The majority of states use a two-thirds threshold, which is the hardest supermajority to achieve. In a 100-seat chamber, this means 67 votes. Some states measure this as two-thirds of <em>elected</em> members (the full chamber), while others measure two-thirds of members <em>present and voting</em> &mdash; an important distinction that can affect the effective threshold when members are absent.</p>
+
+    <h3>Three-Fifths (3/5) &mdash; The Middle Ground</h3>
+    <p>Several states use a three-fifths (60%) threshold, which is meaningfully lower than two-thirds. In a 100-seat chamber, this drops from 67 to 60 seats needed. States using the 3/5 threshold include:</p>
+    <div id="three-fifths-states"></div>
+
+    <h3>Simple Majority &mdash; The Lowest Bar</h3>
+    <p>A handful of states require only a <strong>simple majority</strong> to override a governor&rsquo;s veto &mdash; the same threshold needed to pass the bill in the first place. In these states, the governor&rsquo;s veto is largely symbolic: if the legislature had the votes to pass the bill, it almost certainly has the votes to override. States with majority overrides include:</p>
+    <div id="majority-states"></div>
+
+    <h3>Special Cases</h3>
+    <ul>
+      <li><strong>Alaska</strong> requires a two-thirds vote of both chambers sitting in <strong>joint session</strong> &mdash; a unique process where the 60 House members and 20 Senate members vote together, requiring 54 of 60 total votes.</li>
+      <li><strong>North Carolina</strong> did not grant its governor veto power until 1996, making it the last state to do so. Overrides require a three-fifths vote.</li>
+    </ul>
+
+    <h2>Beyond the Veto: Other Supermajority Requirements</h2>
+
+    <h3>Tax and Revenue Supermajorities</h3>
+    <p>Some states have enshrined supermajority requirements for raising taxes or increasing revenue, making it structurally harder for legislatures to increase the tax burden regardless of which party is in power. These provisions are often the result of ballot initiatives or constitutional amendments driven by anti-tax movements.</p>
+    <div id="tax-states"></div>
+
+    <h3>Constitutional Amendment Thresholds</h3>
+    <p>Every state has a process for amending its constitution, and most require legislative supermajorities as part of that process. The most common patterns are:</p>
+    <ul>
+      <li><strong>Two-thirds in one session</strong> &mdash; a single supermajority vote places the amendment on the ballot</li>
+      <li><strong>Three-fifths in one session</strong> &mdash; a lower bar, used in some states</li>
+      <li><strong>Simple majority in two successive sessions</strong> &mdash; a lower per-session threshold but requires passage in two different legislatures, adding a time delay</li>
+      <li><strong>Two-thirds in two successive sessions</strong> &mdash; the highest bar, requiring supermajorities twice</li>
+    </ul>
+
+    <h3>Nebraska&rsquo;s Filibuster</h3>
+    <p>Nebraska&rsquo;s unicameral, officially nonpartisan legislature has its own supermajority dynamic: <strong>33 of 49 senators</strong> (a two-thirds supermajority) are required to invoke cloture and end a filibuster. This means a minority of just 17 senators can block legislation indefinitely, giving the minority caucus outsized influence even in a chamber where one party nominally controls a majority of seats.</p>
+
+    <h2>Effective Veto-Proof States</h2>
+
+    <p>The most politically significant scenario is when a party holds a veto-proof supermajority in <em>both</em> chambers while the governor belongs to the opposing party. In these states, the governor&rsquo;s party affiliation is almost irrelevant to legislative outcomes &mdash; the majority party can pass its agenda over any veto.</p>
+
+    <div id="veto-proof-states"></div>
+
+    <p>When you factor in supermajorities, the picture of truly divided government in America is even bleaker than it appears. Although roughly 10&ndash;12 states have nominally divided government, the number where both parties genuinely share governing power may be as low as six.</p>
+
+    <h2>50-State Reference</h2>
+
+    <p>The table below shows veto override thresholds and current supermajority status for every state legislative chamber. Click column headers to sort.</p>
+
+    <div class="filter-row" id="table-filters">
+      <button class="filter-btn active" data-filter="all">All States</button>
+      <button class="filter-btn" data-filter="r-sm">R Supermajority</button>
+      <button class="filter-btn" data-filter="d-sm">D Supermajority</button>
+      <button class="filter-btn" data-filter="no-sm">No Supermajority</button>
+      <button class="filter-btn" data-filter="non-standard">Non-2/3 Threshold</button>
+    </div>
+
+    <div id="reference-table"></div>
+
+    <!-- Continue Exploring -->
+    <div class="whats-next">
+      <a href="legislatures-101.html">
+        <div class="next-label">Legislatures Overview &rarr;</div>
+        <div class="next-desc">Composition, term lengths, and partisan breakdown of all 99 chambers.</div>
+      </a>
+      <a href="legislatures-analytics.html">
+        <div class="next-label">Trends & Analytics &rarr;</div>
+        <div class="next-desc">Historical chamber control data, flips, and closest margins.</div>
+      </a>
+      <a href="trifectas-101.html">
+        <div class="next-label">Trifectas &rarr;</div>
+        <div class="next-desc">When one party controls the governorship and both chambers.</div>
+      </a>
+    </div>
+
+  </div>
+</div>
+<div id="global-footer"></div>
+
+<script src="js/nav.js"></script>
+<script src="js/common.js"></script>
+<script src="js/map-component.js"></script>
+<script>
+(async function() {
+  const [legData, summaryData] = await Promise.all([
+    loadJSON('data/legislatures_data.json'),
+    loadJSON('data/states_summary.json'),
+  ]);
+
+  const chambers = legData.chambers;
+  const states = summaryData.states;
+  const STATE_NAMES = {};
+  for (const abbr in states) STATE_NAMES[abbr] = states[abbr].name;
+
+  // ── Compute per-state supermajority status ──
+  const stateStatus = {}; // abbr -> { upper: {}, lower: {}, gov_party, ... }
+  for (const ch of chambers) {
+    const st = ch.state;
+    if (!stateStatus[st]) stateStatus[st] = { chambers: [], gov_party: null };
+    stateStatus[st].chambers.push(ch);
+  }
+
+  // Get governor party from summary
+  for (const abbr in states) {
+    if (stateStatus[abbr]) {
+      const gov = states[abbr].governor;
+      stateStatus[abbr].gov_party = gov ? gov.party : null;
+    }
+  }
+
+  // ── Stats ──
+  let rSmStates = 0, dSmStates = 0, nonStandard = new Set(), vetoProof = 0;
+
+  for (const abbr in stateStatus) {
+    const s = stateStatus[abbr];
+    const chs = s.chambers;
+    const allR = chs.every(c => c.has_supermajority && c.control_status === 'R');
+    const allD = chs.every(c => c.has_supermajority && c.control_status === 'D');
+
+    // Check actual veto thresholds for label
+    for (const c of chs) {
+      const veto = c.supermajority?.veto_override || '';
+      if (veto.includes('3/5') || veto.includes('60%') || veto.toLowerCase().includes('majority elected') || veto.includes('50%')) {
+        nonStandard.add(abbr);
+      }
+    }
+
+    if (allR) {
+      rSmStates++;
+      if (s.gov_party === 'D') vetoProof++;
+    }
+    if (allD) {
+      dSmStates++;
+      if (s.gov_party === 'R') vetoProof++;
+    }
+  }
+
+  document.getElementById('stat-r-sm').textContent = rSmStates;
+  document.getElementById('stat-d-sm').textContent = dSmStates;
+  document.getElementById('stat-nonstandard').textContent = nonStandard.size;
+  document.getElementById('stat-veto-proof').textContent = vetoProof;
+
+  // ── Inline Map ──
+  const mapData = {};
+  for (const abbr in stateStatus) {
+    const s = stateStatus[abbr];
+    const chs = s.chambers;
+    const allR = chs.every(c => c.has_supermajority && c.control_status === 'R');
+    const allD = chs.every(c => c.has_supermajority && c.control_status === 'D');
+    const someR = !allR && chs.some(c => c.has_supermajority && c.control_status === 'R');
+    const someD = !allD && chs.some(c => c.has_supermajority && c.control_status === 'D');
+
+    let cat = 'none';
+    if (allR) cat = 'r_both';
+    else if (allD) cat = 'd_both';
+    else if (someR) cat = 'r_one';
+    else if (someD) cat = 'd_one';
+
+    // Build tooltip info
+    const lines = chs.map(c => {
+      const label = c.chamber === 'Legislature' ? 'Legislature' : c.chamber;
+      const smText = c.has_supermajority ? `${c.control_status} Supermajority` : 'No supermajority';
+      const veto = c.supermajority?.veto_override || '2/3';
+      return `${label}: ${smText} (${veto.split(' ')[0]})`;
+    });
+
+    mapData[abbr] = {
+      category: cat,
+      info: {
+        name: STATE_NAMES[abbr],
+        lines: lines,
+        gov: s.gov_party ? `Governor: ${s.gov_party === 'D' ? 'Democrat' : 'Republican'}` : '',
+      }
+    };
+  }
+
+  new MapRenderer('#page-map', {
+    data: mapData,
+    colors: {
+      'r_both': '#e50963',
+      'd_both': '#6cb3d2',
+      'r_one': '#f5a0be',
+      'd_one': '#b5dae8',
+      'none': '#d5dde3',
+    },
+    legend: [
+      { label: 'R Supermajority (both)', color: '#e50963' },
+      { label: 'D Supermajority (both)', color: '#6cb3d2' },
+      { label: 'R Supermajority (one chamber)', color: '#f5a0be' },
+      { label: 'D Supermajority (one chamber)', color: '#b5dae8' },
+      { label: 'No Supermajority', color: '#d5dde3' },
+    ],
+    tooltipFn: function(abbr, info) {
+      return `<div class="inline-tt-state">${info.name}</div>` +
+        info.lines.map(l => `<div class="inline-tt-type">${l}</div>`).join('') +
+        (info.gov ? `<div class="inline-tt-type" style="margin-top:4px">${info.gov}</div>` : '');
+    },
+    onClickState: function(abbr) {
+      window.location.href = `state.html?st=${abbr}`;
+    }
+  });
+
+  // ── Inline state lists ──
+  function stateList(containerId, filterFn) {
+    const el = document.getElementById(containerId);
+    if (!el) return;
+    const matched = [];
+    for (const ch of chambers) {
+      if (filterFn(ch) && !matched.some(m => m.state === ch.state)) {
+        matched.push(ch);
+      }
+    }
+    if (matched.length === 0) { el.innerHTML = '<p class="text-muted">None</p>'; return; }
+    const tags = matched.map(m =>
+      `<a href="state.html?st=${m.state}" style="display:inline-block;padding:3px 10px;margin:3px;border-radius:12px;background:#f0f5f8;color:var(--ms-navy);font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;text-decoration:none">${m.state_name}</a>`
+    ).join('');
+    el.innerHTML = `<div style="margin:12px 0 20px">${tags}</div>`;
+  }
+
+  stateList('three-fifths-states', ch => {
+    const v = (ch.supermajority?.veto_override || '').toLowerCase();
+    return v.includes('3/5') || v.includes('60%');
+  });
+
+  stateList('majority-states', ch => {
+    const v = (ch.supermajority?.veto_override || '').toLowerCase();
+    return v.includes('majority elected') || (v.includes('50%') && !v.includes('66'));
+  });
+
+  // Tax supermajority states
+  stateList('tax-states', ch => !!ch.supermajority?.taxes);
+
+  // ── Effective veto-proof states ──
+  const vpEl = document.getElementById('veto-proof-states');
+  if (vpEl) {
+    const vpStates = [];
+    for (const abbr in stateStatus) {
+      const s = stateStatus[abbr];
+      const chs = s.chambers;
+      const allR = chs.every(c => c.has_supermajority && c.control_status === 'R');
+      const allD = chs.every(c => c.has_supermajority && c.control_status === 'D');
+      if (allR && s.gov_party === 'D') vpStates.push({ abbr, name: STATE_NAMES[abbr], smParty: 'R', govParty: 'D' });
+      if (allD && s.gov_party === 'R') vpStates.push({ abbr, name: STATE_NAMES[abbr], smParty: 'D', govParty: 'R' });
+    }
+    if (vpStates.length === 0) {
+      vpEl.innerHTML = '<div class="callout"><p>No states currently have a supermajority facing an opposing-party governor.</p></div>';
+    } else {
+      const rows = vpStates.map(s => {
+        const smColor = s.smParty === 'R' ? 'var(--ms-rep-red)' : 'var(--ms-dem-blue)';
+        const govColor = s.govParty === 'R' ? 'var(--ms-rep-red)' : 'var(--ms-dem-blue)';
+        return `<tr>
+          <td><a href="state.html?st=${s.abbr}" style="color:var(--ms-navy);font-weight:600;text-decoration:none">${s.name}</a></td>
+          <td><span class="sm-badge ${s.smParty.toLowerCase()}">${s.smParty} Supermajority</span></td>
+          <td><span style="color:${govColor};font-weight:600">${s.govParty === 'D' ? 'Democratic' : 'Republican'} Governor</span></td>
+        </tr>`;
+      }).join('');
+      vpEl.innerHTML = `<table><thead><tr><th>State</th><th>Legislature</th><th>Governor</th></tr></thead><tbody>${rows}</tbody></table>`;
+    }
+  }
+
+  // ── 50-State Reference Table ──
+  // Build rows: one per state (combining chambers)
+  const tableRows = [];
+  for (const abbr in stateStatus) {
+    const s = stateStatus[abbr];
+    const chs = s.chambers.sort((a, b) => a.chamber === 'Senate' ? -1 : 1);
+    const upper = chs.find(c => c.chamber === 'Senate');
+    const lower = chs.find(c => c.chamber !== 'Senate');
+
+    function vetoLabel(ch) {
+      if (!ch) return '—';
+      const v = ch.supermajority?.veto_override;
+      if (!v) return '2/3';
+      if (v.includes('3/5') || v.includes('60%')) return '3/5';
+      if (v.toLowerCase().includes('majority elected') || v.includes('50%')) return 'Majority';
+      return '2/3';
+    }
+    function smBadge(ch) {
+      if (!ch) return '';
+      if (!ch.has_supermajority) return '<span class="sm-badge none">—</span>';
+      return `<span class="sm-badge ${ch.control_status.toLowerCase()}">${ch.control_status}</span>`;
+    }
+    function taxLabel(ch) {
+      if (!ch || !ch.supermajority?.taxes) return '—';
+      const t = ch.supermajority.taxes;
+      if (t.includes('2/3')) return '2/3';
+      if (t.includes('3/5')) return '3/5';
+      return t.split(' ')[0];
+    }
+
+    const upperVeto = vetoLabel(upper);
+    const lowerVeto = vetoLabel(lower || upper); // NE unicameral
+    const isNonStandard = upperVeto !== '2/3' || lowerVeto !== '2/3';
+    const allR = chs.every(c => c.has_supermajority && c.control_status === 'R');
+    const allD = chs.every(c => c.has_supermajority && c.control_status === 'D');
+    const smStatus = allR ? 'r-sm' : allD ? 'd-sm' : 'no-sm';
+
+    tableRows.push({
+      abbr,
+      name: STATE_NAMES[abbr],
+      upperLabel: upper ? upper.chamber : '—',
+      upperVeto,
+      upperSm: smBadge(upper),
+      upperThreshold: upper ? (ch => ch.veto_threshold || '—')(upper) : '—',
+      lowerLabel: lower ? lower.chamber : (upper?.chamber === 'Legislature' ? '' : '—'),
+      lowerVeto: lower ? lowerVeto : '',
+      lowerSm: lower ? smBadge(lower) : '',
+      lowerThreshold: lower ? (ch => ch.veto_threshold || '—')(lower) : '',
+      taxUpper: taxLabel(upper),
+      taxLower: taxLabel(lower),
+      constAmend: upper?.supermajority?.const_amend ? 'Yes' : '—',
+      smStatus,
+      isNonStandard,
+      sortName: STATE_NAMES[abbr],
+    });
+  }
+
+  // Render table
+  function renderTable(filter) {
+    let rows = tableRows;
+    if (filter === 'r-sm') rows = rows.filter(r => r.smStatus === 'r-sm');
+    else if (filter === 'd-sm') rows = rows.filter(r => r.smStatus === 'd-sm');
+    else if (filter === 'no-sm') rows = rows.filter(r => r.smStatus === 'no-sm');
+    else if (filter === 'non-standard') rows = rows.filter(r => r.isNonStandard);
+
+    const container = document.getElementById('reference-table');
+    let html = `<table id="sm-table"><thead><tr>
+      <th data-col="name">State <span class="sort-arrow">▼</span></th>
+      <th data-col="upperVeto">Senate Override <span class="sort-arrow">▼</span></th>
+      <th data-col="upperSm">Senate Status</th>
+      <th data-col="lowerVeto">${rows[0]?.lowerLabel || 'House'} Override <span class="sort-arrow">▼</span></th>
+      <th data-col="lowerSm">${rows[0]?.lowerLabel || 'House'} Status</th>
+      <th data-col="taxUpper">Tax SM</th>
+    </tr></thead><tbody>`;
+
+    for (const r of rows) {
+      html += `<tr>
+        <td><a href="state.html?st=${r.abbr}" style="color:var(--ms-navy);font-weight:600;text-decoration:none">${r.name}</a></td>
+        <td><span class="threshold-tag">${r.upperVeto}</span></td>
+        <td>${r.upperSm}</td>
+        <td>${r.lowerVeto ? `<span class="threshold-tag">${r.lowerVeto}</span>` : ''}</td>
+        <td>${r.lowerSm}</td>
+        <td>${r.taxUpper !== '—' ? `<span class="threshold-tag">${r.taxUpper}</span>` : '—'}</td>
+      </tr>`;
+    }
+    html += '</tbody></table>';
+    container.innerHTML = html;
+
+    // Sort headers
+    const headers = container.querySelectorAll('th[data-col]');
+    headers.forEach(th => {
+      th.addEventListener('click', () => {
+        const col = th.dataset.col;
+        const tbody = container.querySelector('tbody');
+        const trs = Array.from(tbody.querySelectorAll('tr'));
+        const dir = th.classList.contains('sorted-asc') ? -1 : 1;
+        headers.forEach(h => h.classList.remove('sorted', 'sorted-asc', 'sorted-desc'));
+        th.classList.add('sorted', dir === 1 ? 'sorted-asc' : 'sorted-desc');
+
+        trs.sort((a, b) => {
+          const aVal = a.children[Array.from(headers).indexOf(th)]?.textContent?.trim() || '';
+          const bVal = b.children[Array.from(headers).indexOf(th)]?.textContent?.trim() || '';
+          return aVal.localeCompare(bVal) * dir;
+        });
+        trs.forEach(tr => tbody.appendChild(tr));
+      });
+    });
+  }
+
+  renderTable('all');
+
+  // Filter buttons
+  document.querySelectorAll('#table-filters .filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#table-filters .filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderTable(btn.dataset.filter);
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

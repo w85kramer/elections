@@ -10,6 +10,7 @@
   var TOPIC_MAP = {
     'trifectas': 'trifectas',
     'legislatures': 'legislatures',
+    'supermajorities': 'legislatures',
     'governors': 'governors',
     'ag': 'ag',
     'ltgov': 'ltgov',
@@ -35,6 +36,7 @@
     legislatures: [
       { label: 'Overview', href: 'legislatures-101.html' },
       { label: '2026 Elections', href: 'legislatures.html' },
+      { label: 'Supermajorities', href: 'supermajorities-101.html' },
       { label: 'Trends & Analytics', href: 'legislatures-analytics.html' },
     ],
     governors: [
