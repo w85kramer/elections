@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T00:26:58.658120Z",
+  "generated_at": "2026-03-25T01:43:23.775524Z",
   "state": {
     "name": "Florida",
     "abbr": "FL",
@@ -1300,10 +1300,10 @@
     "Senate": {
       "total": 40,
       "composition": {
-        "D": 12,
+        "D": 13,
         "R": 27,
         "Other": 0,
-        "Vacant": 1
+        "Vacant": 0
       },
       "supermajority": 27,
       "seats_up_2026": 20,
@@ -1442,10 +1442,11 @@
           "district": "14",
           "district_name": "SD-14",
           "seat_designator": null,
-          "name": null,
-          "party": null,
+          "name": "Brian Nathan",
+          "party": "D",
           "pres_margin": "-7.4",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 16825
         },
         {
           "district": "15",
