@@ -20,7 +20,8 @@
       "title": "About the Alaska Legislature",
       "points": [
         "The Alaska Legislature has frequently been organized by bipartisan coalitions rather than strict party-line majorities, particularly in the State House. Members who join a coalition caucus may hold committee chairs regardless of party affiliation.",
-        "The legislature operates under a 90-day session limit, approved by voters in 2006. Special sessions may be called by the Governor or by a two-thirds vote of the legislature."
+        "The legislature operates under a 90-day session limit, approved by voters in 2006. Special sessions may be called by the Governor or by a two-thirds vote of the legislature.",
+        "Veto overrides require a two-thirds vote of both chambers sitting in <strong>joint session</strong> \u2014 a unique process where all 60 legislators vote together."
       ],
       "updated": "2026-03-20"
     }
@@ -28,20 +29,32 @@
   "AL": {
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor — each runs their own campaign in both the primary and general election. This means the Governor and Lt. Governor can be from different parties, though this is rare in Alabama.",
+        "The Lt. Governor is elected separately from the Governor \u2014 each runs their own campaign in both the primary and general election. This means the Governor and Lt. Governor can be from different parties, though this is rare in Alabama.",
         "The Lt. Governor serves as President of the State Senate and can cast tie-breaking votes.",
-        "Kay Ivey served as Lt. Governor (2011–2017) before succeeding Gov. Robert Bentley when he resigned. Jim Folsom Jr. served three non-consecutive terms spanning 20 years (1987–1993, 2007–2011), continuing his father Big Jim Folsom's political legacy."
+        "Kay Ivey served as Lt. Governor (2011\u20132017) before succeeding Gov. Robert Bentley when he resigned. Jim Folsom Jr. served three non-consecutive terms spanning 20 years (1987\u20131993, 2007\u20132011), continuing his father Big Jim Folsom's political legacy."
       ],
       "updated": "2026-03-21"
+    },
+    "legislature": {
+      "points": [
+        "The legislature can override the governor's veto with a <strong>simple majority</strong> \u2014 the same threshold needed to pass a bill. This makes the veto largely symbolic.",
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "AR": {
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor — each runs their own campaign in both the primary and general election. Arkansas requires a majority to win the primary; if no candidate crosses 50%, a runoff is held.",
+        "The Lt. Governor is elected separately from the Governor \u2014 each runs their own campaign in both the primary and general election. Arkansas requires a majority to win the primary; if no candidate crosses 50%, a runoff is held.",
         "The Lt. Governor serves as President of the State Senate."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "The legislature can override the governor's veto with a <strong>simple majority</strong> \u2014 the same threshold needed to pass a bill. This makes the veto largely symbolic.",
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "AZ": {
@@ -50,22 +63,27 @@
         "Arizona does not have a Lt. Governor. The Secretary of State is first in the line of gubernatorial succession. This page tracks that succession dynamic."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "A <strong>two-thirds supermajority</strong> is required to pass tax increases."
+      ]
     }
   },
   "CA": {
     "governor": {
       "title": "About the California Governor",
       "points": [
-        "California uses a top-two open primary for all state offices. All candidates appear on a single primary ballot regardless of party, and the top two vote-getters advance to the general election — even if they are from the same party.",
+        "California uses a top-two open primary for all state offices. All candidates appear on a single primary ballot regardless of party, and the top two vote-getters advance to the general election \u2014 even if they are from the same party.",
         "The Governor is limited to two four-year terms (lifetime limit). California is one of the few states where the Governor has a 12-day window to sign or veto bills during session, extended to 30 days after the legislature adjourns."
       ],
       "updated": "2026-03-20"
     },
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor under California's top-two primary system. All candidates appear on a single primary ballot regardless of party, and the top two advance to the general — which can produce two candidates from the same party.",
+        "The Lt. Governor is elected separately from the Governor under California's top-two primary system. All candidates appear on a single primary ballot regardless of party, and the top two advance to the general \u2014 which can produce two candidates from the same party.",
         "The Lt. Governor serves as President of the State Senate and acting Governor when the Governor is out of state. The Lt. Governor also sits on the University of California Board of Regents and the California State University Board of Trustees.",
-        "Since 2012, California uses a top-two primary system for Lt. Governor — all candidates appear on one ballot regardless of party, and the top two advance to the general election. This has produced same-party general elections. Gavin Newsom served as Lt. Governor (2011–2019) before becoming Governor."
+        "Since 2012, California uses a top-two primary system for Lt. Governor \u2014 all candidates appear on one ballot regardless of party, and the top two advance to the general election. This has produced same-party general elections. Gavin Newsom served as Lt. Governor (2011\u20132019) before becoming Governor."
       ],
       "updated": "2026-03-21"
     },
@@ -73,7 +91,9 @@
       "title": "About the California Legislature",
       "points": [
         "California uses a top-two open primary for legislative races. The top two candidates advance to the general election regardless of party, which can result in same-party general election matchups.",
-        "State Senators serve four-year staggered terms (odd and even districts alternate). Assembly members serve two-year terms. Both are subject to a combined lifetime limit of 12 years of legislative service (since Proposition 28 in 2012)."
+        "State Senators serve four-year staggered terms (odd and even districts alternate). Assembly members serve two-year terms. Both are subject to a combined lifetime limit of 12 years of legislative service (since Proposition 28 in 2012).",
+        "A <strong>two-thirds supermajority</strong> is required to pass tax increases.",
+        "Democrats hold a veto-proof supermajority in the <strong>Senate</strong> but not the other chamber."
       ],
       "updated": "2026-03-20"
     }
@@ -82,7 +102,7 @@
     "ltgov": {
       "points": [
         "The Lt. Governor runs on a joint ticket with the Governor in both the primary and general elections. The gubernatorial candidate selects their Lt. Governor running mate.",
-        "Colorado switched to a joint Gov/Lt Gov ticket in 1970. Before that, the Lt. Governor was elected separately — the 1962 and 1966 races were independent contests."
+        "Colorado switched to a joint Gov/Lt Gov ticket in 1970. Before that, the Lt. Governor was elected separately \u2014 the 1962 and 1966 races were independent contests."
       ],
       "updated": "2026-03-22"
     }
@@ -94,15 +114,27 @@
         "Connecticut adopted the joint ticket in 1966. The 1962 election was the last separate Lt. Governor race. Ella Grasso won the governorship in 1974, becoming the first woman elected governor in her own right in US history."
       ],
       "updated": "2026-03-22"
+    },
+    "legislature": {
+      "points": [
+        "Democrats hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "DE": {
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor — each runs their own campaign in both the primary and general election.",
+        "The Lt. Governor is elected separately from the Governor \u2014 each runs their own campaign in both the primary and general election.",
         "The Lt. Governor serves as President of the State Senate and casts tie-breaking votes."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "A <strong>three-fifths (60%) vote</strong> in each chamber is required to override the governor's veto \u2014 lower than the two-thirds threshold used in most states.",
+        "A <strong>three-fifths supermajority</strong> is required to pass tax or revenue increases.",
+        "Democrats hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "FL": {
@@ -112,14 +144,20 @@
         "Florida's Lt. Governor has no constitutional duties beyond succession but is typically assigned policy portfolios by the Governor."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "A <strong>two-thirds supermajority</strong> is required to pass tax increases.",
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "GA": {
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor — each runs their own campaign in both the primary and general election. Georgia requires a majority to win; if no candidate crosses 50%, a runoff is held.",
+        "The Lt. Governor is elected separately from the Governor \u2014 each runs their own campaign in both the primary and general election. Georgia requires a majority to win; if no candidate crosses 50%, a runoff is held.",
         "The Lt. Governor serves as President of the State Senate and has significant power over committee assignments and the flow of legislation.",
-        "Zell Miller served a record four consecutive terms as Lt. Governor (1975–1991) — 16 years — before being elected Governor. Casey Cagle (2007–2019) was the first Republican to hold the office since Reconstruction."
+        "Zell Miller served a record four consecutive terms as Lt. Governor (1975\u20131991) \u2014 16 years \u2014 before being elected Governor. Casey Cagle (2007\u20132019) was the first Republican to hold the office since Reconstruction."
       ],
       "updated": "2026-03-21"
     }
@@ -131,6 +169,11 @@
         "The Lt. Governor serves as the state's chief elections officer, a role filled by the Secretary of State in most other states. Hawaii is one of only two states (with Alaska) that combine these functions."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "Democrats hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "IA": {
@@ -140,15 +183,25 @@
         "The Lt. Governor serves as President of the State Senate and can cast tie-breaking votes."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "Republicans hold a veto-proof supermajority in the <strong>House</strong> but not the other chamber."
+      ]
     }
   },
   "ID": {
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor — each runs their own campaign in both the primary and general election. This has occasionally produced public conflict, as when Lt. Gov. Janice McGeachin issued executive orders banning vaccine mandates while Gov. Brad Little was out of state in 2021.",
+        "The Lt. Governor is elected separately from the Governor \u2014 each runs their own campaign in both the primary and general election. This has occasionally produced public conflict, as when Lt. Gov. Janice McGeachin issued executive orders banning vaccine mandates while Gov. Brad Little was out of state in 2021.",
         "The Lt. Governor serves as President of the State Senate."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "IL": {
@@ -158,6 +211,12 @@
         "Illinois paired the Gov and Lt Gov on the general election ballot starting in 1972 (under the 1970 Constitution), but primaries remained separate until 2014. This caused problems in 1986 when LaRouche followers won the Democratic Lt Gov primary, forcing Adlai Stevenson III to abandon the party ticket. A similar crisis in 2010 (Scott Lee Cohen) led to fully joint primaries starting in 2014."
       ],
       "updated": "2026-03-22"
+    },
+    "legislature": {
+      "points": [
+        "A <strong>three-fifths (60%) vote</strong> in each chamber is required to override the governor's veto \u2014 lower than the two-thirds threshold used in most states.",
+        "Democrats hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "IN": {
@@ -167,15 +226,26 @@
         "This system drew national attention in 2024 when Republican delegates chose Micah Beckwith over Gov. Mike Braun's preferred running mate, leading to a bill (HB 1022, 2026 session) that would allow the Governor to select their own running mate instead."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "The legislature can override the governor's veto with a <strong>simple majority</strong> \u2014 the same threshold needed to pass a bill. This makes the veto largely symbolic.",
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "KS": {
     "ltgov": {
       "points": [
         "The Lt. Governor runs on a joint ticket with the Governor in both the primary and general elections. The gubernatorial candidate selects their Lt. Governor running mate.",
-        "Kansas switched to joint tickets in 1974. Before that, the Lt. Governor was elected independently — the office had separate races in 1962, 1966, and 1970."
+        "Kansas switched to joint tickets in 1974. Before that, the Lt. Governor was elected independently \u2014 the office had separate races in 1962, 1966, and 1970."
       ],
       "updated": "2026-03-22"
+    },
+    "legislature": {
+      "points": [
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers, effectively neutralizing the Democratic governor's veto power."
+      ]
     }
   },
   "KY": {
@@ -186,6 +256,13 @@
         "Kentucky switched to a joint Gov/Lt Gov ticket via constitutional amendment in 1992, first used in 1995. Before that, the Lt. Governor was elected separately, which sometimes produced split-party results. Wendell Ford (1967 Lt Gov) later became Governor and US Senator. Thelma Stovall (1975) was the first woman to serve as Lt. Governor."
       ],
       "updated": "2026-03-22"
+    },
+    "legislature": {
+      "points": [
+        "The legislature can override the governor's veto with a <strong>simple majority</strong> \u2014 the same threshold needed to pass a bill. This makes the veto largely symbolic.",
+        "A <strong>three-fifths supermajority</strong> is required to pass tax or revenue increases.",
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers, effectively neutralizing the Democratic governor's veto power."
+      ]
     }
   },
   "LA": {
@@ -193,7 +270,7 @@
       "title": "About the Louisiana Governor",
       "points": [
         "Louisiana uses a jungle primary (also called a nonpartisan blanket primary) for state offices. All candidates appear on a single ballot in October, and if no candidate receives a majority (50%+1), the top two advance to a December runoff regardless of party. This system is being replaced: starting in 2027, Louisiana will switch to closed partisan primaries.",
-        "Louisiana holds its state elections in odd years — the next gubernatorial election is in 2027. The Governor is limited to two consecutive four-year terms."
+        "Louisiana holds its state elections in odd years \u2014 the next gubernatorial election is in 2027. The Governor is limited to two consecutive four-year terms."
       ],
       "updated": "2026-03-21"
     },
@@ -201,8 +278,8 @@
       "points": [
         "The Lt. Governor is elected separately from the Governor under Louisiana's jungle primary system. All candidates appear on a single October ballot; if no one wins a majority, the top two advance to a December runoff regardless of party. Starting in 2027, Louisiana switches to closed partisan primaries.",
         "Louisiana holds its statewide elections in odd years, with the next Lt. Governor election in 2027. The Lt. Governor oversees the Department of Culture, Recreation and Tourism.",
-        "Before 1975, Louisiana used traditional partisan primaries — the Democratic primary was the real contest, with the general election often uncontested. The jungle primary system replaced this starting in 1975, and inauguration dates shifted from May (under the 1921 Constitution) to March (1980) and then January (1992).",
-        "C.C. 'Taddy' Aycock served three consecutive terms (1960–1972) — the only three-term Lt. Governor in modern Louisiana history. Mitch Landrieu resigned mid-second-term in 2010 to become Mayor of New Orleans, triggering a special election won by Jay Dardenne."
+        "Before 1975, Louisiana used traditional partisan primaries \u2014 the Democratic primary was the real contest, with the general election often uncontested. The jungle primary system replaced this starting in 1975, and inauguration dates shifted from May (under the 1921 Constitution) to March (1980) and then January (1992).",
+        "C.C. 'Taddy' Aycock served three consecutive terms (1960\u20131972) \u2014 the only three-term Lt. Governor in modern Louisiana history. Mitch Landrieu resigned mid-second-term in 2010 to become Mayor of New Orleans, triggering a special election won by Jay Dardenne."
       ],
       "updated": "2026-03-21"
     },
@@ -210,7 +287,9 @@
       "title": "About the Louisiana Legislature",
       "points": [
         "Louisiana holds legislative elections in odd years on the same cycle as the Governor, with the next elections in 2027. Through 2023, the jungle primary system applied: all candidates appeared on one ballot, with a runoff if no one won a majority. Starting in 2027, Louisiana switches to closed partisan primaries.",
-        "The legislature alternates between fiscal and general sessions in even and odd years. Fiscal sessions (even years) are limited to 45 legislative days over 60 calendar days; general sessions (odd years) are limited to 60 legislative days over 85 calendar days."
+        "The legislature alternates between fiscal and general sessions in even and odd years. Fiscal sessions (even years) are limited to 45 legislative days over 60 calendar days; general sessions (odd years) are limited to 60 legislative days over 85 calendar days.",
+        "A <strong>two-thirds supermajority</strong> is required to pass tax increases.",
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers."
       ],
       "updated": "2026-03-21"
     }
@@ -222,6 +301,11 @@
         "Massachusetts adopted the joint ticket in 1966 (via Question 1). Before that, the Lt. Governor was elected separately. John Kerry served as Lt. Governor (1983-1985) before his career in the US Senate and as Secretary of State."
       ],
       "updated": "2026-03-22"
+    },
+    "legislature": {
+      "points": [
+        "Democrats hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "MD": {
@@ -231,6 +315,12 @@
         "Maryland's Lt. Governor is typically assigned a substantive policy portfolio by the Governor and chairs various commissions and task forces."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "A <strong>three-fifths (60%) vote</strong> in each chamber is required to override the governor's veto \u2014 lower than the two-thirds threshold used in most states.",
+        "Democrats hold a veto-proof supermajority in the <strong>Senate</strong> but not the other chamber."
+      ]
     }
   },
   "ME": {
@@ -279,19 +369,30 @@
   "MO": {
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor — each runs their own campaign in both the primary and general election. Missouri has had a Governor and Lt. Governor from different parties multiple times in recent decades.",
+        "The Lt. Governor is elected separately from the Governor \u2014 each runs their own campaign in both the primary and general election. Missouri has had a Governor and Lt. Governor from different parties multiple times in recent decades.",
         "The Lt. Governor serves as President of the State Senate."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "A <strong>two-thirds supermajority</strong> is required to pass tax increases.",
+        "Republicans hold a veto-proof supermajority in the <strong>Senate</strong> but not the other chamber."
+      ]
     }
   },
   "MS": {
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor — each runs their own campaign in both the primary and general election. Mississippi requires a majority to win; if no candidate crosses 50%, a runoff is held.",
+        "The Lt. Governor is elected separately from the Governor \u2014 each runs their own campaign in both the primary and general election. Mississippi requires a majority to win; if no candidate crosses 50%, a runoff is held.",
         "Mississippi's Lt. Governor is considered one of the most powerful in the nation, serving as President of the State Senate with broad authority over committee assignments, bill referrals, and the legislative calendar."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "A <strong>three-fifths supermajority</strong> is required to pass tax or revenue increases."
+      ]
     }
   },
   "MT": {
@@ -301,16 +402,25 @@
         "Montana switched to joint tickets under the 1972 Constitution, first used in 1976. Governor Brian Schweitzer made headlines by choosing Republican John Bohlinger as his cross-party Lt Gov running mate in 2004 and 2008."
       ],
       "updated": "2026-03-22"
+    },
+    "legislature": {
+      "points": []
     }
   },
   "NC": {
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor — each runs their own campaign in both the primary and general election. North Carolina has had a Governor and Lt. Governor from different parties as recently as 2021–2025 (Democratic Gov. Roy Cooper and Republican Lt. Gov. Mark Robinson).",
+        "The Lt. Governor is elected separately from the Governor \u2014 each runs their own campaign in both the primary and general election. North Carolina has had a Governor and Lt. Governor from different parties as recently as 2021\u20132025 (Democratic Gov. Roy Cooper and Republican Lt. Gov. Mark Robinson).",
         "The Lt. Governor serves as President of the State Senate but has limited procedural power compared to some other states.",
-        "North Carolina's Lt. Governor has limited formal powers but serves on the State Board of Education and Council of State. Mark Robinson (2021–2025) was the first Black Lt. Governor in state history."
+        "North Carolina's Lt. Governor has limited formal powers but serves on the State Board of Education and Council of State. Mark Robinson (2021\u20132025) was the first Black Lt. Governor in state history."
       ],
       "updated": "2026-03-21"
+    },
+    "legislature": {
+      "points": [
+        "A <strong>three-fifths (60%) vote</strong> in each chamber is required to override the governor's veto \u2014 lower than the two-thirds threshold used in most states.",
+        "Republicans hold a veto-proof supermajority in the <strong>Senate</strong> but not the other chamber."
+      ]
     }
   },
   "ND": {
@@ -320,6 +430,11 @@
         "North Dakota switched to joint tickets in 1976 after having separate Lt Gov races with 2-year terms until 1964, then 4-year terms. Ruth Meiers (1985-1987) was the first woman Lt. Governor but died in office."
       ],
       "updated": "2026-03-22"
+    },
+    "legislature": {
+      "points": [
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "NE": {
@@ -334,16 +449,19 @@
     "ltgov": {
       "points": [
         "The Lt. Governor runs on a joint ticket with the Governor in both the primary and general elections. The gubernatorial candidate selects their Lt. Governor running mate.",
-        "Nebraska switched to joint tickets in 1974. The office has seen unusual turbulence — 6 of the last 18 Lt. Governors have been appointees, due to multiple resignations and successions. Dave Heineman served as Lt. Governor (2001-2005) before becoming Governor."
+        "Nebraska switched to joint tickets in 1974. The office has seen unusual turbulence \u2014 6 of the last 18 Lt. Governors have been appointees, due to multiple resignations and successions. Dave Heineman served as Lt. Governor (2001-2005) before becoming Governor."
       ],
       "updated": "2026-03-22"
     },
     "legislature": {
       "title": "About the Nebraska Legislature",
       "points": [
-        "Nebraska has the only unicameral (single-chamber) state legislature in the United States. Its 49 members are officially nonpartisan — no party labels appear on the ballot and there are no formal party caucuses in the chamber.",
+        "Nebraska has the only unicameral (single-chamber) state legislature in the United States. Its 49 members are officially nonpartisan \u2014 no party labels appear on the ballot and there are no formal party caucuses in the chamber.",
         "In practice, members' party affiliations are widely known and a partisan dynamic exists, particularly in leadership elections and floor votes. The legislature is effectively controlled by Republicans, though the nonpartisan structure means coalition-building across party lines is more common than in other states.",
-        "All bills must receive a public hearing before a committee, and any bill reported to the floor must go through three rounds of debate on separate days before a final vote."
+        "All bills must receive a public hearing before a committee, and any bill reported to the floor must go through three rounds of debate on separate days before a final vote.",
+        "A <strong>three-fifths (60%) vote</strong> in each chamber is required to override the governor's veto \u2014 lower than the two-thirds threshold used in most states.",
+        "As a unicameral legislature, Nebraska requires <strong>33 of 49 senators</strong> to invoke cloture and end a filibuster, giving the minority caucus significant blocking power.",
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers."
       ],
       "updated": "2026-03-20"
     }
@@ -351,10 +469,15 @@
   "NV": {
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor — each runs their own campaign in both the primary and general election.",
+        "The Lt. Governor is elected separately from the Governor \u2014 each runs their own campaign in both the primary and general election.",
         "The Lt. Governor serves as President of the State Senate but only presides when the legislature is in session. Nevada's legislature meets biennially (odd years only) for 120 calendar days."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "A <strong>two-thirds supermajority</strong> is required to pass tax increases."
+      ]
     }
   },
   "NH": {
@@ -362,7 +485,7 @@
       "title": "About the New Hampshire Governor",
       "points": [
         "New Hampshire is one of only two states (with Vermont) where the Governor serves a two-year term, meaning the office is on the ballot every even-numbered year.",
-        "New Hampshire is one of the few states with no gubernatorial term limits — the Governor may serve an unlimited number of consecutive terms."
+        "New Hampshire is one of the few states with no gubernatorial term limits \u2014 the Governor may serve an unlimited number of consecutive terms."
       ],
       "updated": "2026-03-20"
     },
@@ -377,7 +500,8 @@
       "points": [
         "The New Hampshire House of Representatives has 400 members, making it the largest state legislative chamber in the United States and the third-largest English-speaking legislative body in the world (after the U.S. House and British Parliament).",
         "House members are elected from 203 multi-member districts (ranging from 1 to 11 seats each), organized by county. Voters cast ballots for up to as many candidates as there are seats in their district (bloc voting), and the top vote-getters win. Some districts include floterial seats that overlay other districts.",
-        "All members of both chambers serve two-year terms and are paid $100 per year, making it an almost entirely citizen legislature."
+        "All members of both chambers serve two-year terms and are paid $100 per year, making it an almost entirely citizen legislature.",
+        "Republicans hold a veto-proof supermajority in the <strong>Senate</strong> but not the other chamber."
       ],
       "updated": "2026-03-20"
     }
@@ -387,14 +511,14 @@
       "title": "About the New Jersey Governor",
       "points": [
         "New Jersey holds its gubernatorial elections in odd years (the year after presidential elections), alongside Virginia. The Governor is limited to two consecutive four-year terms.",
-        "New Jersey is one of only two states (with Maine) where the Governor is the sole statewide elected executive — there is no separately elected Lt. Governor, Attorney General, or Secretary of State."
+        "New Jersey is one of only two states (with Maine) where the Governor is the sole statewide elected executive \u2014 there is no separately elected Lt. Governor, Attorney General, or Secretary of State."
       ],
       "updated": "2026-03-20"
     },
     "ltgov": {
       "points": [
         "New Jersey did not have a Lt. Governor until 2009, when the office was created by constitutional amendment after a series of gubernatorial succession crises. The Lt. Governor runs on a joint ticket with the Governor.",
-        "The Lt. Governor runs on a joint ticket with the Governor. Kim Guadagno was the first person to hold the office (2010–2018). Sheila Oliver, the second Lt. Governor, died in office in August 2023; Tahesha Way was appointed to fill the vacancy."
+        "The Lt. Governor runs on a joint ticket with the Governor. Kim Guadagno was the first person to hold the office (2010\u20132018). Sheila Oliver, the second Lt. Governor, died in office in August 2023; Tahesha Way was appointed to fill the vacancy."
       ],
       "updated": "2026-03-21"
     }
@@ -402,17 +526,20 @@
   "NM": {
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor — each runs their own campaign in both the primary and general election.",
+        "The Lt. Governor is elected separately from the Governor \u2014 each runs their own campaign in both the primary and general election.",
         "The Lt. Governor serves as President of the State Senate. New Mexico's Lt. Governor also serves as acting Governor when the Governor is out of state."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": []
     }
   },
   "NY": {
     "governor": {
       "title": "About the New York Governor",
       "points": [
-        "New York has no gubernatorial term limits — the Governor may serve an unlimited number of consecutive terms. The Governor has line-item veto authority on appropriations bills.",
+        "New York has no gubernatorial term limits \u2014 the Governor may serve an unlimited number of consecutive terms. The Governor has line-item veto authority on appropriations bills.",
         "Starting in 2026, the Governor and Lt. Governor will run on a joint ticket in both the primary and general elections. Previously, primary voters selected them separately, which sometimes produced a Governor and Lt. Governor from different factions of the same party."
       ],
       "updated": "2026-03-20"
@@ -420,7 +547,7 @@
     "ltgov": {
       "title": "About the New York Lt. Governor",
       "points": [
-        "Starting in 2026, the Lt. Governor will run on a joint ticket with the Governor in the primary, meaning primary voters will choose a Governor–Lt. Governor ticket rather than selecting them separately. The general election has used a joint ticket since 1954.",
+        "Starting in 2026, the Lt. Governor will run on a joint ticket with the Governor in the primary, meaning primary voters will choose a Governor\u2013Lt. Governor ticket rather than selecting them separately. The general election has used a joint ticket since 1954.",
         "The office has been frequently disrupted by gubernatorial succession and resignation. Three of the last five Lt. Governors ascended to the governorship (David Paterson in 2008, Kathy Hochul in 2021) or resigned under pressure (Brian Benjamin in 2022).",
         "New York is one of 26 states where the Lt. Governor serves as President of the State Senate, though the role is largely ceremonial."
       ],
@@ -435,16 +562,27 @@
         "Ohio switched to joint tickets in 1978 (constitutional amendment). Before that, the Lt. Governor was elected separately. George Voinovich was the first Lt Gov elected on a joint ticket (1978). Mike DeWine served as Lt. Governor (1991-1995) before his career as US Senator and current Governor."
       ],
       "updated": "2026-03-22"
+    },
+    "legislature": {
+      "points": [
+        "A <strong>three-fifths (60%) vote</strong> in each chamber is required to override the governor's veto \u2014 lower than the two-thirds threshold used in most states.",
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "OK": {
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor — each runs their own campaign in both the primary and general election. A 2018 ballot measure (SQ 798) to create a joint ticket was rejected by voters. Oklahoma requires a majority to win the primary; if no candidate crosses 50%, a runoff is held.",
+        "The Lt. Governor is elected separately from the Governor \u2014 each runs their own campaign in both the primary and general election. A 2018 ballot measure (SQ 798) to create a joint ticket was rejected by voters. Oklahoma requires a majority to win the primary; if no candidate crosses 50%, a runoff is held.",
         "The Lt. Governor serves as President of the State Senate. Term limits (SQ 747, passed 2010) cap the Lt. Governor at two four-year terms (8 years lifetime), applied prospectively from 2012.",
-        "George Nigh holds the record with 16 total years as Lt. Governor across two stints (1959–63, 1967–79) before becoming Governor. Mary Fallin was the first woman and first Republican to hold the office, serving three terms (1995–2007) before leaving for Congress."
+        "George Nigh holds the record with 16 total years as Lt. Governor across two stints (1959\u201363, 1967\u201379) before becoming Governor. Mary Fallin was the first woman and first Republican to hold the office, serving three terms (1995\u20132007) before leaving for Congress."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "OR": {
@@ -453,6 +591,11 @@
         "Oregon does not have a Lt. Governor. The Secretary of State is first in the line of gubernatorial succession. This occurred most recently in 1947 when Gov. Earl Snell died in a plane crash."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "A <strong>three-fifths supermajority</strong> is required to pass tax or revenue increases."
+      ]
     }
   },
   "PA": {
@@ -469,27 +612,38 @@
       "title": "About the Rhode Island Governor",
       "points": [
         "Rhode Island switched from two-year to four-year gubernatorial terms starting in 1994. The Governor is limited to two consecutive four-year terms.",
-        "The Governor does not have line-item veto authority — one of only a handful of states without this power. Vetoes can be overridden by a three-fifths vote of each chamber."
+        "The Governor does not have line-item veto authority \u2014 one of only a handful of states without this power. Vetoes can be overridden by a three-fifths vote of each chamber."
       ],
       "updated": "2026-03-20"
     },
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor — each runs their own campaign in both the primary and general election.",
-        "Rhode Island switched from two-year to four-year terms for Lt. Governor (and all statewide offices) starting with the 1994 election. Before that, the Lt. Governor was on the ballot every two years — which is why the election history below shows races every two years from 1962 through 1992, then every four years from 1994 onward.",
+        "The Lt. Governor is elected separately from the Governor \u2014 each runs their own campaign in both the primary and general election.",
+        "Rhode Island switched from two-year to four-year terms for Lt. Governor (and all statewide offices) starting with the 1994 election. Before that, the Lt. Governor was on the ballot every two years \u2014 which is why the election history below shows races every two years from 1962 through 1992, then every four years from 1994 onward.",
         "Rhode Island's Lt. Governor has no constitutional duties beyond succession. The office does not preside over the State Senate."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "A <strong>three-fifths (60%) vote</strong> in each chamber is required to override the governor's veto \u2014 lower than the two-thirds threshold used in most states.",
+        "Democrats hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "SC": {
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor — each runs their own campaign in both the primary and general election. South Carolina requires a majority to win the primary; if no candidate crosses 50%, a runoff is held.",
+        "The Lt. Governor is elected separately from the Governor \u2014 each runs their own campaign in both the primary and general election. South Carolina requires a majority to win the primary; if no candidate crosses 50%, a runoff is held.",
         "The Lt. Governor serves as President of the State Senate.",
-        "Starting in 2018, the Lt. Governor runs on a joint ticket with the Governor — previously they were elected separately. Henry McMaster served as Lt. Governor (2003–2017) before succeeding Gov. Nikki Haley when she became UN Ambassador."
+        "Starting in 2018, the Lt. Governor runs on a joint ticket with the Governor \u2014 previously they were elected separately. Henry McMaster served as Lt. Governor (2003\u20132017) before succeeding Gov. Nikki Haley when she became UN Ambassador."
       ],
       "updated": "2026-03-21"
+    },
+    "legislature": {
+      "points": [
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "SD": {
@@ -498,6 +652,12 @@
         "South Dakota's Lt. Governor candidate is chosen by party delegates at a state convention, then runs on a joint ticket with the Governor in the general election. This convention-selection process is shared by only three other states: Indiana, Iowa, and Michigan."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "A <strong>two-thirds supermajority</strong> is required to pass tax increases.",
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "TN": {
@@ -507,16 +667,25 @@
         "The Lt. Governor/Senate Speaker is first in the line of gubernatorial succession."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "The legislature can override the governor's veto with a <strong>simple majority</strong> \u2014 the same threshold needed to pass a bill. This makes the veto largely symbolic.",
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "TX": {
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor — each runs their own campaign in both the primary and general election. Texas requires a majority to win the primary; if no candidate crosses 50%, a runoff is held.",
-        "Texas's Lt. Governor is widely considered the most powerful Lt. Governor in the nation. The Lt. Governor presides over the State Senate with broad authority over committee assignments, bill referrals, and the legislative agenda — often wielding more day-to-day influence over state policy than the Governor.",
-        "Bill Hobby served an extraordinary 18 years as Lt. Governor (1973–1991), the longest tenure in state history. Rick Perry (1999–2000) left the office to become Governor when George W. Bush resigned to become President."
+        "The Lt. Governor is elected separately from the Governor \u2014 each runs their own campaign in both the primary and general election. Texas requires a majority to win the primary; if no candidate crosses 50%, a runoff is held.",
+        "Texas's Lt. Governor is widely considered the most powerful Lt. Governor in the nation. The Lt. Governor presides over the State Senate with broad authority over committee assignments, bill referrals, and the legislative agenda \u2014 often wielding more day-to-day influence over state policy than the Governor.",
+        "Bill Hobby served an extraordinary 18 years as Lt. Governor (1973\u20131991), the longest tenure in state history. Rick Perry (1999\u20132000) left the office to become Governor when George W. Bush resigned to become President."
       ],
       "updated": "2026-03-21"
+    },
+    "legislature": {
+      "points": []
     }
   },
   "UT": {
@@ -526,6 +695,11 @@
         "The Lt. Governor serves as the state's chief elections officer and oversees voter registration and election administration."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   },
   "VA": {
@@ -539,7 +713,7 @@
     },
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor — each runs their own campaign in both the primary and general election. Virginia holds its statewide elections in odd years (the year after presidential elections).",
+        "The Lt. Governor is elected separately from the Governor \u2014 each runs their own campaign in both the primary and general election. Virginia holds its statewide elections in odd years (the year after presidential elections).",
         "The Lt. Governor serves as President of the State Senate and can cast tie-breaking votes, which has been consequential in Virginia's often closely divided Senate."
       ],
       "updated": "2026-03-20"
@@ -547,7 +721,7 @@
     "legislature": {
       "title": "About the Virginia General Assembly",
       "points": [
-        "Virginia holds legislative elections in odd years. State Senate seats are up every four years and House of Delegates seats every two years, but they are not on the same cycle — Senate elections were last held in 2023, House elections in 2025.",
+        "Virginia holds legislative elections in odd years. State Senate seats are up every four years and House of Delegates seats every two years, but they are not on the same cycle \u2014 Senate elections were last held in 2023, House elections in 2025.",
         "Virginia is a Dillon Rule state, meaning local governments have only the powers explicitly granted to them by the state legislature. This makes state-level legislation particularly significant for local policy."
       ],
       "updated": "2026-03-20"
@@ -556,11 +730,17 @@
   "VT": {
     "ltgov": {
       "points": [
-        "The Lt. Governor is elected separately from the Governor — each runs their own campaign in both the primary and general election. Vermont is one of only two states (with New Hampshire) where statewide officers serve two-year terms, meaning the Lt. Governor is on the ballot every even-numbered year.",
-        "Vermont has had a Governor and Lt. Governor from different parties more frequently than almost any other state, including as recently as 2023–present (Republican Gov. Phil Scott and Democrat Lt. Gov. David Zuckerman).",
-        "Under Vermont's pre-1994 constitution, if no candidate for Lt. Governor (or Governor) received a majority of the popular vote, the state legislature chose the winner from the top candidates. This rule was invoked several times in closely contested races — most notably in 1976, when the legislature selected T. Garry Buckley (R) over John Alden (D) despite Alden receiving more votes. A 1994 constitutional amendment replaced the majority requirement with a plurality rule."
+        "The Lt. Governor is elected separately from the Governor \u2014 each runs their own campaign in both the primary and general election. Vermont is one of only two states (with New Hampshire) where statewide officers serve two-year terms, meaning the Lt. Governor is on the ballot every even-numbered year.",
+        "Vermont has had a Governor and Lt. Governor from different parties more frequently than almost any other state, including as recently as 2023\u2013present (Republican Gov. Phil Scott and Democrat Lt. Gov. David Zuckerman).",
+        "Under Vermont's pre-1994 constitution, if no candidate for Lt. Governor (or Governor) received a majority of the popular vote, the state legislature chose the winner from the top candidates. This rule was invoked several times in closely contested races \u2014 most notably in 1976, when the legislature selected T. Garry Buckley (R) over John Alden (D) despite Alden receiving more votes. A 1994 constitutional amendment replaced the majority requirement with a plurality rule."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "Vermont and New Hampshire are the only states with <strong>two-year terms</strong> for all legislators, meaning every seat is up every election cycle.",
+        "Democrats lost their veto-proof supermajority in the House in the 2024 elections when Republicans flipped 24 seats \u2014 restoring Governor Scott's (R) veto power after years of being regularly overridden."
+      ]
     }
   },
   "WA": {
@@ -568,7 +748,7 @@
       "title": "About the Washington Governor",
       "points": [
         "Washington uses a top-two open primary for all state offices. All candidates appear on a single primary ballot regardless of party, and the top two vote-getters advance to the general election.",
-        "Washington has no gubernatorial term limits — the Governor may serve an unlimited number of consecutive terms."
+        "Washington has no gubernatorial term limits \u2014 the Governor may serve an unlimited number of consecutive terms."
       ],
       "updated": "2026-03-20"
     },
@@ -578,6 +758,9 @@
         "The Lt. Governor serves as President of the State Senate."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": []
     }
   },
   "WI": {
@@ -587,6 +770,11 @@
         "Wisconsin held a rare Lt. Governor recall election in 2012 alongside the gubernatorial recall of Scott Walker. Rebecca Kleefisch survived her recall, winning 53% to 47%. The Lt. Governor runs on a joint ticket with the Governor in the general election but separately in the primary."
       ],
       "updated": "2026-03-21"
+    },
+    "legislature": {
+      "points": [
+        "A <strong>two-thirds supermajority</strong> is required to pass tax increases."
+      ]
     }
   },
   "WV": {
@@ -596,6 +784,12 @@
         "The Lt. Governor/Senate President is first in the line of gubernatorial succession."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "The legislature can override the governor's veto with a <strong>simple majority</strong> \u2014 the same threshold needed to pass a bill. This makes the veto largely symbolic.",
+        "Republicans hold a veto-proof supermajority in the <strong>Senate</strong> but not the other chamber."
+      ]
     }
   },
   "WY": {
@@ -604,6 +798,11 @@
         "Wyoming does not have a Lt. Governor. The Secretary of State is first in the line of gubernatorial succession."
       ],
       "updated": "2026-03-20"
+    },
+    "legislature": {
+      "points": [
+        "Republicans hold a <strong>veto-proof supermajority</strong> in both chambers."
+      ]
     }
   }
 }
