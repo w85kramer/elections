@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:56.760968Z",
+  "generated_at": "2026-03-25T02:26:49.373532Z",
   "state": {
     "name": "Arizona",
     "abbr": "AZ",
@@ -1014,7 +1014,85 @@
   "elections_2026": {
     "governor": {
       "forecast": "Lean D",
-      "candidates": []
+      "candidates": [
+        {
+          "name": "Katie Hobbs",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
+          "name": "Teri Hourihan",
+          "party": "I",
+          "is_incumbent": false,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
+          "name": "Andy Biggs",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
+          "name": "David Schweikert",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
+          "name": "Ken Miceli",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
+          "name": "Scott Neely",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "General",
+          "status": "Filed"
+        },
+        {
+          "name": "Katie Hobbs",
+          "party": "D",
+          "is_incumbent": false,
+          "election_type": "Primary_D",
+          "status": "Filed"
+        },
+        {
+          "name": "Andy Biggs",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "David Schweikert",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Ken Miceli",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        },
+        {
+          "name": "Scott Neely",
+          "party": "R",
+          "is_incumbent": false,
+          "election_type": "Primary_R",
+          "status": "Filed"
+        }
+      ]
     },
     "statewide": [
       {
@@ -1037,6 +1115,18 @@
             "party": "R",
             "is_incumbent": false,
             "election_type": "General"
+          },
+          {
+            "name": "Rodney Glassman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Warren Petersen",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
           }
         ]
       },
@@ -1047,6 +1137,18 @@
             "name": "Adrian Fontes",
             "party": "D",
             "is_incumbent": true,
+            "election_type": "General"
+          },
+          {
+            "name": "Duwayne Collier",
+            "party": "G",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Alexander Kolodin",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "General"
           },
           {
@@ -1061,8 +1163,26 @@
         "office": "Superintendent of Public Instruction",
         "candidates": [
           {
+            "name": "Brett Newby",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Teresa Ruiz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Stephen Neal Jr.",
             "party": "N",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kimberly Yee",
+            "party": "R",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -1071,6 +1191,30 @@
             "party": "R",
             "is_incumbent": true,
             "election_type": "General"
+          },
+          {
+            "name": "Brett Newby",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Teresa Ruiz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kimberly Yee",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Tom Horne",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1080,6 +1224,18 @@
           {
             "name": "Martin Quezada",
             "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Nick Mansour",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Elijah Norton",
+            "party": "R",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -1099,9 +1255,70 @@
         "district": "1",
         "candidates": [
           {
+            "name": "Sandy Zalecki",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Quang Nguyen",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Selina Bliss",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Sandy Zalecki",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Quang Nguyen",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
             "name": "Selina Bliss",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 2 Seat A",
+        "chamber": "House",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Stephanie Simacek",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Danielle Skranak",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Stephanie Simacek",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Danielle Skranak",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -1112,7 +1329,73 @@
         "district": "3",
         "candidates": [
           {
+            "name": "Julie Gable",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Rick Spargo",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Cody Reim",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "George Khalaf",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jay Schlum",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Thomas Walsh II",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Julie Gable",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rick Spargo",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cody Reim",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "George Khalaf",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Jay Schlum",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Thomas Walsh II",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -1124,6 +1407,48 @@
         "chamber": "House",
         "district": "4",
         "candidates": [
+          {
+            "name": "Karen Gresham",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Tammy Caputi",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Matt Gress",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Pamela Carter",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Karen Gresham",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tammy Caputi",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Matt Gress",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
           {
             "name": "Pamela Carter",
             "party": "R",
@@ -1138,7 +1463,184 @@
         "district": "5",
         "candidates": [
           {
+            "name": "Aaron M\u00e1rquez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Sarah Liguori",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Aaron M\u00e1rquez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Lela Alston",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Sarah Liguori",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 6 Seat A",
+        "chamber": "House",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Angela Maloney",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Ian Teller",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mae Peshlakai",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Angela Maloney",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ian Teller",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mae Peshlakai",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 7 Seat A",
+        "chamber": "House",
+        "district": "7",
+        "candidates": [
+          {
+            "name": "Sam Martin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Andrew Costanzo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Barby Ingle",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "David Cook Sr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Walt Blackman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Sam Martin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Andrew Costanzo",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Barby Ingle",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "David Cook Sr.",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Walt Blackman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 8 Seat A",
+        "chamber": "House",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Brian Garcia",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Claudia Kline",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Janeen Connolly",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Brian Garcia",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Claudia Kline",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Janeen Connolly",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -1151,6 +1653,30 @@
         "district": "9",
         "candidates": [
           {
+            "name": "Jacob Martinez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Lorena Austin",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Bradley Bettencourt",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jacob Martinez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Lorena Austin",
             "party": "D",
             "is_incumbent": true,
@@ -1161,6 +1687,331 @@
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Bradley Bettencourt",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 10 Seat A",
+        "chamber": "House",
+        "district": "10",
+        "candidates": [
+          {
+            "name": "Brian Calaway",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "David Scott",
+            "party": "I",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Ciara Anderson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Brian Calaway",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Ciara Anderson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 11 Seat A",
+        "chamber": "House",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Oscar de los Santos",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Cesar Aleman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Joseph Dailey",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Oscar de los Santos",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cesar Aleman",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Joseph Dailey",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 12 Seat A",
+        "chamber": "House",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Armando Montero",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Stacey Travers",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Armando Montero",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Stacey Travers",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 13 Seat A",
+        "chamber": "House",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Jacob Weinberg",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Rockee Armstrong",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Debra Schinke",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Janet Weninger",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kevin Hartke",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jacob Weinberg",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rockee Armstrong",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Debra Schinke",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Janet Weninger",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kevin Hartke",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 14 Seat A",
+        "chamber": "House",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Mary Rose",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jed Lyons",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Laurin Hendrix",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mary Rose",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jed Lyons",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Laurin Hendrix",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 15 Seat A",
+        "chamber": "House",
+        "district": "15",
+        "candidates": [
+          {
+            "name": "Michael Way",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Neal Carter",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Michael Way",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Neal Carter",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 16 Seat A",
+        "chamber": "House",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Julia Gusse",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Chris Lopez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Chris Lopez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Teresa Martinez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Teresa Martinez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Julia Gusse",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Chris Lopez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Chris Lopez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Teresa Martinez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Teresa Martinez",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1170,10 +2021,89 @@
         "district": "17",
         "candidates": [
           {
+            "name": "Hollace Lyon",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kevin Volk",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Blase Henry",
             "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
+          },
+          {
+            "name": "John Winchester",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Hollace Lyon",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Kevin Volk",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Winchester",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 18 Seat A",
+        "chamber": "House",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Chris Mathis",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Nancy Gutierrez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Bob Dohse",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Chris Mathis",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nancy Gutierrez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bob Dohse",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1183,8 +2113,32 @@
         "district": "19",
         "candidates": [
           {
+            "name": "Aiden Swallow",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jackie Anderson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Cheryl Caswell",
             "party": "OTH",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "David Gowan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Lupe Diaz",
+            "party": "R",
             "is_incumbent": false,
             "election_type": "General"
           },
@@ -1193,31 +2147,452 @@
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Jackie Anderson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Cheryl Caswell",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "David Gowan",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Lupe Diaz",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
       {
-        "seat_label": "AZ House 21 Seat B",
+        "seat_label": "AZ House 21 Seat A",
         "chamber": "House",
         "district": "21",
         "candidates": [
+          {
+            "name": "Maritza Higuera",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Miranda Lopez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Christopher Kibbey",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Maritza Higuera",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Miranda Lopez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
           {
             "name": "Stephanie Stahl Hamilton",
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Christopher Kibbey",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
       {
-        "seat_label": "AZ House 29 Seat B",
+        "seat_label": "AZ House 22 Seat A",
+        "chamber": "House",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "Betsy Munoz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Elda Luna-N\u00e1jera",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Veronica Bejarano-Malone",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Betsy Munoz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Elda Luna-N\u00e1jera",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Veronica Bejarano-Malone",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 23 Seat A",
+        "chamber": "House",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "Emilia Cortez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Juan Guerrero",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mariana Sandoval",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mariana Sandoval",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jimmy Holmes",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Emilia Cortez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Juan Guerrero",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mariana Sandoval",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mariana Sandoval",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jimmy Holmes",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 24 Seat A",
+        "chamber": "House",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Alberto Flores",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Lisbeth Arescurenaga",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Lydia Hernandez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Rosa Cantu",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Delores McLaughlin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Alberto Flores",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lisbeth Arescurenaga",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lydia Hernandez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Rosa Cantu",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Delores McLaughlin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 25 Seat A",
+        "chamber": "House",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "Tiffany Byrne",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Nick Kupper",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Tiffany Byrne",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Nick Kupper",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 26 Seat A",
+        "chamber": "House",
+        "district": "26",
+        "candidates": [
+          {
+            "name": "Cesar Aguilar",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jonathan McKenna",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Cesar Aguilar",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Jonathan McKenna",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 27 Seat A",
+        "chamber": "House",
+        "district": "27",
+        "candidates": [
+          {
+            "name": "Deborah Howard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Lisa Fink",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Deborah Howard",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lisa Fink",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 28 Seat A",
+        "chamber": "House",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Marc Graham",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Beverly Pingerelli",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "David Livingston",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Marc Graham",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Beverly Pingerelli",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "David Livingston",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ House 29 Seat A",
         "chamber": "House",
         "district": "29",
         "candidates": [
           {
+            "name": "Christine Scianna",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "James Taylor",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "James Taylor",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Steve Montenegro",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Christine Scianna",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "James Taylor",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "James Taylor",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "James Taylor",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Steve Montenegro",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -1228,7 +2603,49 @@
         "district": "30",
         "candidates": [
           {
+            "name": "Brian McMahan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "David Rose",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Grace Hecht",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mike Gannuscio",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Brian McMahan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Rose",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Grace Hecht",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Mike Gannuscio",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -1244,12 +2661,141 @@
             "name": "Christine Dargon",
             "party": "D",
             "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mark Finchem",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Christine Dargon",
+            "party": "D",
+            "is_incumbent": false,
             "election_type": "Primary_D"
           },
           {
             "name": "Mark Finchem",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 2",
+        "chamber": "Senate",
+        "district": "2",
+        "candidates": [
+          {
+            "name": "Amelia Gallitano",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Daniel Toporek",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Shawnna Bolick",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Timothy Ferrara",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Amelia Gallitano",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Daniel Toporek",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Shawnna Bolick",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Timothy Ferrara",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 3",
+        "chamber": "Senate",
+        "district": "3",
+        "candidates": [
+          {
+            "name": "Jeffrey Fortney",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "John Kavanagh",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jeffrey Fortney",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "John Kavanagh",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 4",
+        "chamber": "Senate",
+        "district": "4",
+        "candidates": [
+          {
+            "name": "Aaron Lieberman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Carine Werner",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Aaron Lieberman",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Carine Werner",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -1263,7 +2809,50 @@
             "name": "Christine Marsh",
             "party": "D",
             "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jason Laforest",
+            "party": "I",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Christine Marsh",
+            "party": "D",
+            "is_incumbent": false,
             "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 6",
+        "chamber": "Senate",
+        "district": "6",
+        "candidates": [
+          {
+            "name": "Jamescita Peshlakai",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Lloyd Johnson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Jamescita Peshlakai",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lloyd Johnson",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1273,9 +2862,89 @@
         "district": "7",
         "candidates": [
           {
+            "name": "Mike Montiel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Wendy Rogers",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mike Montiel",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Wendy Rogers",
             "party": "R",
             "is_incumbent": true,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 8",
+        "chamber": "Senate",
+        "district": "8",
+        "candidates": [
+          {
+            "name": "Deborah Nardozzi",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Lauren Kuby",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Deborah Nardozzi",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Lauren Kuby",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 9",
+        "chamber": "Senate",
+        "district": "9",
+        "candidates": [
+          {
+            "name": "Kiana Sears",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Bridget Fitzgibbons",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kiana Sears",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Bridget Fitzgibbons",
+            "party": "R",
+            "is_incumbent": false,
             "election_type": "Primary_R"
           }
         ]
@@ -1286,10 +2955,177 @@
         "district": "10",
         "candidates": [
           {
+            "name": "Blair Moses",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
             "name": "Nick Fierro",
             "party": "OTH",
             "is_incumbent": false,
             "election_type": "General"
+          },
+          {
+            "name": "David Farnsworth",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Blair Moses",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "David Farnsworth",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 11",
+        "chamber": "Senate",
+        "district": "11",
+        "candidates": [
+          {
+            "name": "Catherine Miranda",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Joshua Ayala",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Catherine Miranda",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Joshua Ayala",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 12",
+        "chamber": "Senate",
+        "district": "12",
+        "candidates": [
+          {
+            "name": "Patty Contreras",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Patty Contreras",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 13",
+        "chamber": "Senate",
+        "district": "13",
+        "candidates": [
+          {
+            "name": "Kristie O'Brien",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Julie Willoughby",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kristie O'Brien",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Julie Willoughby",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 14",
+        "chamber": "Senate",
+        "district": "14",
+        "candidates": [
+          {
+            "name": "Stephanie Walsh",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Mylie Biggs",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Stephanie Walsh",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Mylie Biggs",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 16",
+        "chamber": "Senate",
+        "district": "16",
+        "candidates": [
+          {
+            "name": "Elaine Aldrete",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "T.J. Shope",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Elaine Aldrete",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "T.J. Shope",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1299,10 +3135,96 @@
         "district": "17",
         "candidates": [
           {
+            "name": "Edgar Soto",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Christopher King",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Edgar Soto",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
             "name": "Hunter Holt",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Christopher King",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 18",
+        "chamber": "Senate",
+        "district": "18",
+        "candidates": [
+          {
+            "name": "Priya Sundareshan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Douglas Everett",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Priya Sundareshan",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Douglas Everett",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 19",
+        "chamber": "Senate",
+        "district": "19",
+        "candidates": [
+          {
+            "name": "Ryan Slawson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Gail Griffin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Ryan Slawson",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Gail Griffin",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1314,8 +3236,126 @@
           {
             "name": "Rosanna Gabald\u00f3n",
             "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Esteban Flores",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Rosanna Gabald\u00f3n",
+            "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Esteban Flores",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 22",
+        "chamber": "Senate",
+        "district": "22",
+        "candidates": [
+          {
+            "name": "Eva Diaz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Eva Diaz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 23",
+        "chamber": "Senate",
+        "district": "23",
+        "candidates": [
+          {
+            "name": "Brian Fernandez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Brian Fernandez",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 24",
+        "chamber": "Senate",
+        "district": "24",
+        "candidates": [
+          {
+            "name": "Analise Ortiz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Frank Steele",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Analise Ortiz",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Frank Steele",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 25",
+        "chamber": "Senate",
+        "district": "25",
+        "candidates": [
+          {
+            "name": "Laura Huber",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Tim Dunn",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Laura Huber",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Tim Dunn",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       },
@@ -1328,7 +3368,118 @@
             "name": "Kyle Clayton",
             "party": "D",
             "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Anthony Kern",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kevin Payne",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Kyle Clayton",
+            "party": "D",
+            "is_incumbent": false,
             "election_type": "Primary_D"
+          },
+          {
+            "name": "Anthony Kern",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "Kevin Payne",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 28",
+        "chamber": "Senate",
+        "district": "28",
+        "candidates": [
+          {
+            "name": "Michael Braun",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Frank Carroll",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Michael Braun",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Frank Carroll",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 29",
+        "chamber": "Senate",
+        "district": "29",
+        "candidates": [
+          {
+            "name": "Eric Stafford",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Janae Shamp",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Eric Stafford",
+            "party": "D",
+            "is_incumbent": false,
+            "election_type": "Primary_D"
+          },
+          {
+            "name": "Janae Shamp",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          }
+        ]
+      },
+      {
+        "seat_label": "AZ Senate 30",
+        "chamber": "Senate",
+        "district": "30",
+        "candidates": [
+          {
+            "name": "Leo Biasiucci",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "General"
+          },
+          {
+            "name": "Leo Biasiucci",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
           }
         ]
       }
@@ -1338,11 +3489,31 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "5",
-      "seat_label": "AZ House 5 Seat A",
-      "pres_margin": "+36.4",
+      "district": "1",
+      "seat_label": "AZ House 1 Seat A",
+      "pres_margin": "-33.2",
+      "holder_party": "R",
+      "candidate": "Sandy Zalecki",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "2",
+      "seat_label": "AZ House 2 Seat A",
+      "pres_margin": "-5.5",
       "holder_party": "D",
-      "candidate": "Lela Alston",
+      "candidate": "Stephanie Simacek",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "7",
+      "seat_label": "AZ House 7 Seat A",
+      "pres_margin": "-29.2",
+      "holder_party": "R",
+      "candidate": "Sam Martin",
       "is_open_seat": null
     },
     {
@@ -1358,21 +3529,41 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "9",
-      "seat_label": "AZ House 9 Seat A",
-      "pres_margin": "+3.0",
-      "holder_party": "D",
-      "candidate": "Lorena Austin",
+      "district": "10",
+      "seat_label": "AZ House 10 Seat A",
+      "pres_margin": "-20.9",
+      "holder_party": "R",
+      "candidate": "Brian Calaway",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "19",
-      "seat_label": "AZ House 19 Seat A",
-      "pres_margin": "-23.0",
+      "district": "11",
+      "seat_label": "AZ House 11 Seat A",
+      "pres_margin": "+39.8",
+      "holder_party": "D",
+      "candidate": "Oscar de los Santos",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "14",
+      "seat_label": "AZ House 14 Seat A",
+      "pres_margin": "-18.3",
       "holder_party": "R",
-      "candidate": "Aiden Swallow",
+      "candidate": "Mary Rose",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "16",
+      "seat_label": "AZ House 16 Seat A",
+      "pres_margin": "-9.4",
+      "holder_party": "R",
+      "candidate": "Julia Gusse",
       "is_open_seat": null
     },
     {
@@ -1383,6 +3574,66 @@
       "pres_margin": "+18.5",
       "holder_party": "D",
       "candidate": "Stephanie Stahl Hamilton",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "25",
+      "seat_label": "AZ House 25 Seat A",
+      "pres_margin": "-29.4",
+      "holder_party": "R",
+      "candidate": "Tiffany Byrne",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "26",
+      "seat_label": "AZ House 26 Seat A",
+      "pres_margin": "+28.8",
+      "holder_party": "D",
+      "candidate": "Cesar Aguilar",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "27",
+      "seat_label": "AZ House 27 Seat A",
+      "pres_margin": "-11.3",
+      "holder_party": "R",
+      "candidate": "Deborah Howard",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "28",
+      "seat_label": "AZ House 28 Seat A",
+      "pres_margin": "-23.2",
+      "holder_party": "R",
+      "candidate": "Marc Graham",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "29",
+      "seat_label": "AZ House 29 Seat A",
+      "pres_margin": "-18.4",
+      "holder_party": "R",
+      "candidate": "Christine Scianna",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "30",
+      "seat_label": "AZ House 30 Seat A",
+      "pres_margin": "-55.4",
+      "holder_party": "R",
+      "candidate": "Brian McMahan",
       "is_open_seat": null
     },
     {
@@ -1398,6 +3649,26 @@
     {
       "election_type": "Primary_D",
       "chamber": "Senate",
+      "district": "3",
+      "seat_label": "AZ Senate 3",
+      "pres_margin": "-24.5",
+      "holder_party": "R",
+      "candidate": "Jeffrey Fortney",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "4",
+      "seat_label": "AZ Senate 4",
+      "pres_margin": "-3.5",
+      "holder_party": "R",
+      "candidate": "Aaron Lieberman",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
       "district": "5",
       "seat_label": "AZ Senate 5",
       "pres_margin": "+36.4",
@@ -1408,11 +3679,111 @@
     {
       "election_type": "Primary_D",
       "chamber": "Senate",
-      "district": "17",
-      "seat_label": "AZ Senate 17",
-      "pres_margin": "-3.9",
+      "district": "6",
+      "seat_label": "AZ Senate 6",
+      "pres_margin": "+25.4",
+      "holder_party": "D",
+      "candidate": "Jamescita Peshlakai",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "7",
+      "seat_label": "AZ Senate 7",
+      "pres_margin": "-29.2",
       "holder_party": "R",
-      "candidate": "Hunter Holt",
+      "candidate": "Mike Montiel",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "9",
+      "seat_label": "AZ Senate 9",
+      "pres_margin": "+3.0",
+      "holder_party": "D",
+      "candidate": "Kiana Sears",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "10",
+      "seat_label": "AZ Senate 10",
+      "pres_margin": "-20.9",
+      "holder_party": "R",
+      "candidate": "Blair Moses",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "11",
+      "seat_label": "AZ Senate 11",
+      "pres_margin": "+39.8",
+      "holder_party": "D",
+      "candidate": "Catherine Miranda",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "12",
+      "seat_label": "AZ Senate 12",
+      "pres_margin": "+15.8",
+      "holder_party": "D",
+      "candidate": "Patty Contreras",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "13",
+      "seat_label": "AZ Senate 13",
+      "pres_margin": "-1.2",
+      "holder_party": "R",
+      "candidate": "Kristie O'Brien",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "14",
+      "seat_label": "AZ Senate 14",
+      "pres_margin": "-18.3",
+      "holder_party": "R",
+      "candidate": "Stephanie Walsh",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "16",
+      "seat_label": "AZ Senate 16",
+      "pres_margin": "-9.4",
+      "holder_party": "R",
+      "candidate": "Elaine Aldrete",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "18",
+      "seat_label": "AZ Senate 18",
+      "pres_margin": "+23.9",
+      "holder_party": "D",
+      "candidate": "Priya Sundareshan",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "19",
+      "seat_label": "AZ Senate 19",
+      "pres_margin": "-23.0",
+      "holder_party": "R",
+      "candidate": "Ryan Slawson",
       "is_open_seat": null
     },
     {
@@ -1428,6 +3799,46 @@
     {
       "election_type": "Primary_D",
       "chamber": "Senate",
+      "district": "22",
+      "seat_label": "AZ Senate 22",
+      "pres_margin": "+21.2",
+      "holder_party": "D",
+      "candidate": "Eva Diaz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "23",
+      "seat_label": "AZ Senate 23",
+      "pres_margin": "+1.8",
+      "holder_party": "D",
+      "candidate": "Brian Fernandez",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "24",
+      "seat_label": "AZ Senate 24",
+      "pres_margin": "+20.5",
+      "holder_party": "D",
+      "candidate": "Analise Ortiz",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "25",
+      "seat_label": "AZ Senate 25",
+      "pres_margin": "-29.4",
+      "holder_party": "R",
+      "candidate": "Laura Huber",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
       "district": "27",
       "seat_label": "AZ Senate 27",
       "pres_margin": "-11.3",
@@ -1436,33 +3847,133 @@
       "is_open_seat": null
     },
     {
-      "election_type": "Primary_R",
-      "chamber": "House",
-      "district": "1",
-      "seat_label": "AZ House 1 Seat A",
-      "pres_margin": "-33.2",
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "28",
+      "seat_label": "AZ Senate 28",
+      "pres_margin": "-23.2",
       "holder_party": "R",
-      "candidate": "Selina Bliss",
+      "candidate": "Michael Braun",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "Senate",
+      "district": "29",
+      "seat_label": "AZ Senate 29",
+      "pres_margin": "-18.4",
+      "holder_party": "R",
+      "candidate": "Eric Stafford",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "3",
-      "seat_label": "AZ House 3 Seat A",
-      "pres_margin": "-24.5",
-      "holder_party": "R",
-      "candidate": "George Khalaf",
+      "district": "2",
+      "seat_label": "AZ House 2 Seat A",
+      "pres_margin": "-5.5",
+      "holder_party": "D",
+      "candidate": "Danielle Skranak",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "4",
-      "seat_label": "AZ House 4 Seat A",
-      "pres_margin": "-3.5",
+      "district": "9",
+      "seat_label": "AZ House 9 Seat A",
+      "pres_margin": "+3.0",
+      "holder_party": "D",
+      "candidate": "Bradley Bettencourt",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "10",
+      "seat_label": "AZ House 10 Seat A",
+      "pres_margin": "-20.9",
       "holder_party": "R",
-      "candidate": "Pamela Carter",
+      "candidate": "Ciara Anderson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "17",
+      "seat_label": "AZ House 17 Seat A",
+      "pres_margin": "-3.9",
+      "holder_party": "R",
+      "candidate": "John Winchester",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "18",
+      "seat_label": "AZ House 18 Seat A",
+      "pres_margin": "+23.9",
+      "holder_party": "D",
+      "candidate": "Bob Dohse",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "21",
+      "seat_label": "AZ House 21 Seat A",
+      "pres_margin": "+18.5",
+      "holder_party": "D",
+      "candidate": "Christopher Kibbey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "23",
+      "seat_label": "AZ House 23 Seat A",
+      "pres_margin": "+1.8",
+      "holder_party": "R",
+      "candidate": "Jimmy Holmes",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "24",
+      "seat_label": "AZ House 24 Seat A",
+      "pres_margin": "+20.5",
+      "holder_party": "D",
+      "candidate": "Delores McLaughlin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "25",
+      "seat_label": "AZ House 25 Seat A",
+      "pres_margin": "-29.4",
+      "holder_party": "R",
+      "candidate": "Nick Kupper",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "26",
+      "seat_label": "AZ House 26 Seat A",
+      "pres_margin": "+28.8",
+      "holder_party": "D",
+      "candidate": "Jonathan McKenna",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "27",
+      "seat_label": "AZ House 27 Seat A",
+      "pres_margin": "-11.3",
+      "holder_party": "R",
+      "candidate": "Lisa Fink",
       "is_open_seat": null
     },
     {
@@ -1473,16 +3984,6 @@
       "pres_margin": "-18.4",
       "holder_party": "R",
       "candidate": "James Taylor",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_R",
-      "chamber": "House",
-      "district": "30",
-      "seat_label": "AZ House 30 Seat A",
-      "pres_margin": "-55.4",
-      "holder_party": "R",
-      "candidate": "David Rose",
       "is_open_seat": null
     },
     {
@@ -1498,11 +3999,191 @@
     {
       "election_type": "Primary_R",
       "chamber": "Senate",
+      "district": "3",
+      "seat_label": "AZ Senate 3",
+      "pres_margin": "-24.5",
+      "holder_party": "R",
+      "candidate": "John Kavanagh",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "4",
+      "seat_label": "AZ Senate 4",
+      "pres_margin": "-3.5",
+      "holder_party": "R",
+      "candidate": "Carine Werner",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "6",
+      "seat_label": "AZ Senate 6",
+      "pres_margin": "+25.4",
+      "holder_party": "D",
+      "candidate": "Lloyd Johnson",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
       "district": "7",
       "seat_label": "AZ Senate 7",
       "pres_margin": "-29.2",
       "holder_party": "R",
       "candidate": "Wendy Rogers",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "9",
+      "seat_label": "AZ Senate 9",
+      "pres_margin": "+3.0",
+      "holder_party": "D",
+      "candidate": "Bridget Fitzgibbons",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "10",
+      "seat_label": "AZ Senate 10",
+      "pres_margin": "-20.9",
+      "holder_party": "R",
+      "candidate": "David Farnsworth",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "11",
+      "seat_label": "AZ Senate 11",
+      "pres_margin": "+39.8",
+      "holder_party": "D",
+      "candidate": "Joshua Ayala",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "13",
+      "seat_label": "AZ Senate 13",
+      "pres_margin": "-1.2",
+      "holder_party": "R",
+      "candidate": "Julie Willoughby",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "14",
+      "seat_label": "AZ Senate 14",
+      "pres_margin": "-18.3",
+      "holder_party": "R",
+      "candidate": "Mylie Biggs",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "16",
+      "seat_label": "AZ Senate 16",
+      "pres_margin": "-9.4",
+      "holder_party": "R",
+      "candidate": "T.J. Shope",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "17",
+      "seat_label": "AZ Senate 17",
+      "pres_margin": "-3.9",
+      "holder_party": "R",
+      "candidate": "Christopher King",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "18",
+      "seat_label": "AZ Senate 18",
+      "pres_margin": "+23.9",
+      "holder_party": "D",
+      "candidate": "Douglas Everett",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "19",
+      "seat_label": "AZ Senate 19",
+      "pres_margin": "-23.0",
+      "holder_party": "R",
+      "candidate": "Gail Griffin",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "21",
+      "seat_label": "AZ Senate 21",
+      "pres_margin": "+18.5",
+      "holder_party": "D",
+      "candidate": "Esteban Flores",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "24",
+      "seat_label": "AZ Senate 24",
+      "pres_margin": "+20.5",
+      "holder_party": "D",
+      "candidate": "Frank Steele",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "25",
+      "seat_label": "AZ Senate 25",
+      "pres_margin": "-29.4",
+      "holder_party": "R",
+      "candidate": "Tim Dunn",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "28",
+      "seat_label": "AZ Senate 28",
+      "pres_margin": "-23.2",
+      "holder_party": "R",
+      "candidate": "Frank Carroll",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "29",
+      "seat_label": "AZ Senate 29",
+      "pres_margin": "-18.4",
+      "holder_party": "R",
+      "candidate": "Janae Shamp",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "Senate",
+      "district": "30",
+      "seat_label": "AZ Senate 30",
+      "pres_margin": "-55.4",
+      "holder_party": "R",
+      "candidate": "Leo Biasiucci",
       "is_open_seat": null
     }
   ],
