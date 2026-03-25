@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:56.760968Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Nevada",
     "abbr": "NV",
@@ -482,7 +482,8 @@
           "name": "Ken Gray",
           "party": "R",
           "pres_margin": "-36.0",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 17810
         },
         {
           "district": "40",
@@ -514,7 +515,18 @@
           "next_election": 2026,
           "candidate_id": 10948
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "2/3 (66.67%)",
+        "const_amend": "LRCA: majority (50%) vote in two successive sessions",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 21,
@@ -737,7 +749,18 @@
           "next_election": 2026,
           "candidate_id": 10914
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "2/3 (66.67%)",
+        "const_amend": "LRCA: majority (50%) vote in two successive sessions",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {
@@ -829,7 +852,7 @@
           "status": "Filed"
         },
         {
-          "name": "Sunshine  Arterburn",
+          "name": "Sunshine Arterburn",
           "party": "D",
           "is_incumbent": false,
           "election_type": "Primary_D",

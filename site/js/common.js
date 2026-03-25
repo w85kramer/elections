@@ -257,11 +257,15 @@ function buildChamberBar(container, data, label) {
   svg += `<line x1="${majX}" y1="${BAR_Y - 4}" x2="${majX}" y2="${BAR_Y + BAR_H + 4}" stroke="#043858" stroke-width="2"/>`;
   svg += `<text x="${majX}" y="${BAR_Y - 8}" text-anchor="middle" font-family="Work Sans,sans-serif" font-weight="600" font-size="11" fill="#043858">Majority (${majority})</text>`;
 
-  // Supermajority line (dashed)
+  // Supermajority line (solid if held, dashed if not)
   if (superM < total) {
     const smX = superM * scale;
-    svg += `<line x1="${smX}" y1="${BAR_Y - 4}" x2="${smX}" y2="${BAR_Y + BAR_H + 4}" stroke="#043858" stroke-width="1.5" stroke-dasharray="4,3"/>`;
-    svg += `<text x="${smX}" y="${BAR_Y + BAR_H + 16}" text-anchor="middle" font-family="Work Sans,sans-serif" font-weight="400" font-size="10" fill="#666">\u2154 (${superM})</text>`;
+    const smLabel = data.supermajority_label || '\u2154';
+    const smHeld = data.has_supermajority;
+    const smDash = smHeld ? '' : ' stroke-dasharray="4,3"';
+    const smWeight = smHeld ? '2' : '1.5';
+    svg += `<line x1="${smX}" y1="${BAR_Y - 4}" x2="${smX}" y2="${BAR_Y + BAR_H + 4}" stroke="#043858" stroke-width="${smWeight}"${smDash}/>`;
+    svg += `<text x="${smX}" y="${BAR_Y + BAR_H + 16}" text-anchor="middle" font-family="Work Sans,sans-serif" font-weight="${smHeld ? '600' : '400'}" font-size="10" fill="${smHeld ? '#043858' : '#666'}">${smLabel} (${superM})</text>`;
   }
 
   // Seats up notation
@@ -346,11 +350,15 @@ function buildCoalitionBar(container, data, label) {
   svg += `<line x1="${majX}" y1="${BAR_Y - 4}" x2="${majX}" y2="${BAR_Y + BAR_H + 4}" stroke="#043858" stroke-width="2"/>`;
   svg += `<text x="${majX}" y="${BAR_Y + BAR_H + 18}" text-anchor="middle" font-family="Work Sans,sans-serif" font-weight="600" font-size="11" fill="#043858">Majority (${majority})</text>`;
 
-  // Supermajority line (dashed)
+  // Supermajority line (solid if held, dashed if not)
   if (superM < total) {
     const smX = superM * scale;
-    svg += `<line x1="${smX}" y1="${BAR_Y - 4}" x2="${smX}" y2="${BAR_Y + BAR_H + 4}" stroke="#043858" stroke-width="1.5" stroke-dasharray="4,3"/>`;
-    svg += `<text x="${smX}" y="${BAR_Y + BAR_H + 30}" text-anchor="middle" font-family="Work Sans,sans-serif" font-weight="400" font-size="10" fill="#666">\u2154 (${superM})</text>`;
+    const smLabel = data.supermajority_label || '\u2154';
+    const smHeld = data.has_supermajority;
+    const smDash = smHeld ? '' : ' stroke-dasharray="4,3"';
+    const smWeight = smHeld ? '2' : '1.5';
+    svg += `<line x1="${smX}" y1="${BAR_Y - 4}" x2="${smX}" y2="${BAR_Y + BAR_H + 4}" stroke="#043858" stroke-width="${smWeight}"${smDash}/>`;
+    svg += `<text x="${smX}" y="${BAR_Y + BAR_H + 30}" text-anchor="middle" font-family="Work Sans,sans-serif" font-weight="${smHeld ? '600' : '400'}" font-size="10" fill="${smHeld ? '#043858' : '#666'}">${smLabel} (${superM})</text>`;
   }
 
   // Seats up notation

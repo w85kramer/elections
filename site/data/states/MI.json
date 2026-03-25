@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:56.760968Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Michigan",
     "abbr": "MI",
@@ -1188,7 +1188,18 @@
           "next_election": 2026,
           "candidate_id": 10013
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "3/4 (75%)*",
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": "2/3 (66.67%) to appropriate public money or property for local/private purposes",
+        "notes": "*Applies to state property taxes only."
+      }
     },
     "Senate": {
       "total": 38,
@@ -1581,7 +1592,18 @@
           "next_election": 2026,
           "candidate_id": 10006
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "3/4 (75%)*",
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": "2/3 (66.67%) to appropriate public money or property for local/private purposes",
+        "notes": "*Applies to state property taxes only."
+      }
     }
   },
   "elections_2026": {

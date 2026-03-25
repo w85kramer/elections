@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:56.760968Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Rhode Island",
     "abbr": "RI",
@@ -84,7 +84,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 50,
+      "supermajority": 45,
       "seats_up_2026": 75,
       "members": [
         {
@@ -837,7 +837,18 @@
           "next_election": 2026,
           "candidate_id": 12330
         }
-      ]
+      ],
+      "supermajority_label": "3/5",
+      "has_supermajority": true,
+      "supermajority_party": "D",
+      "supermajority_detail": {
+        "veto_override": "3/5 Elected (60%)",
+        "taxes": null,
+        "const_amend": "LRCA: majority (50%) vote in one session",
+        "budget_passage": "2/3 (66.67%)",
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 38,
@@ -847,7 +858,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 26,
+      "supermajority": 23,
       "seats_up_2026": 38,
       "members": [
         {
@@ -1230,7 +1241,18 @@
           "next_election": 2026,
           "candidate_id": 12379
         }
-      ]
+      ],
+      "supermajority_label": "3/5",
+      "has_supermajority": true,
+      "supermajority_party": "D",
+      "supermajority_detail": {
+        "veto_override": "3/5 Elected (60%)",
+        "taxes": null,
+        "const_amend": "LRCA: majority (50%) vote in one session",
+        "budget_passage": "2/3 (66.67%)",
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {

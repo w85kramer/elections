@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:36:24.653390Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Kentucky",
     "abbr": "KY",
@@ -80,7 +80,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 67,
+      "supermajority": 51,
       "seats_up_2026": 100,
       "members": [
         {
@@ -1083,7 +1083,18 @@
           "next_election": 2026,
           "candidate_id": 9554
         }
-      ]
+      ],
+      "supermajority_label": "Majority",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "Majority Elected (50%)",
+        "taxes": "3/5 (60%)*",
+        "const_amend": "LCRA: 3/5 (60%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": "*A three-fifths supermajority is required for raising revenue or appropriating funds in odd-numbered years only. In even-numbered legislative session years, a simple majority is required for revenue and appropriations bills."
+      }
     },
     "Senate": {
       "total": 38,
@@ -1093,7 +1104,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 26,
+      "supermajority": 20,
       "seats_up_2026": 19,
       "members": [
         {
@@ -1476,7 +1487,18 @@
           "next_election": 2026,
           "candidate_id": 9523
         }
-      ]
+      ],
+      "supermajority_label": "Majority",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "Majority Elected (50%)",
+        "taxes": "3/5 (60%)*",
+        "const_amend": "LCRA: 3/5 (60%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": "*A three-fifths supermajority is required for raising revenue or appropriating funds in odd-numbered years only. In even-numbered legislative session years, a simple majority is required for revenue and appropriations bills."
+      }
     }
   },
   "elections_2026": {

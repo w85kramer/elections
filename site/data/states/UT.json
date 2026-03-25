@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:56.760968Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Utah",
     "abbr": "UT",
@@ -817,7 +817,18 @@
           "next_election": 2026,
           "candidate_id": 13004
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": null,
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 29,
@@ -1120,7 +1131,18 @@
           "next_election": 2028,
           "candidate_id": 12926
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": null,
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {

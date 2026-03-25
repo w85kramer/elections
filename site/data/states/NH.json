@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T20:15:44.779056Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "New Hampshire",
     "abbr": "NH",
@@ -4084,7 +4084,18 @@
           "next_election": 2026,
           "candidate_id": 86288
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": null,
+        "const_amend": "LCRA: 3/5 (60%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 24,
@@ -4337,7 +4348,18 @@
           "next_election": 2026,
           "candidate_id": 10974
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": null,
+        "const_amend": "LCRA: 3/5 (60%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {

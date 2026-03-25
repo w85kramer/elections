@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:56.760968Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Colorado",
     "abbr": "CO",
@@ -746,7 +746,18 @@
           "next_election": 2026,
           "candidate_id": 7939
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "-*",
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": "*Legislature can raise taxes with a 2/3 supermajority in emergencies only. All surplus revenues from the tax increase have to be refunded to taxpayers within 180 days of the end of the emergency if not spent on the emergency. Tax increases automatically sunset unless approved by the voters at the next election."
+      }
     },
     "Senate": {
       "total": 35,
@@ -1109,7 +1120,18 @@
           "next_election": 2026,
           "candidate_id": 7963
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "-*",
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": "*Legislature can raise taxes with a 2/3 supermajority in emergencies only. All surplus revenues from the tax increase have to be refunded to taxpayers within 180 days of the end of the emergency if not spent on the emergency. Tax increases automatically sunset unless approved by the voters at the next election."
+      }
     }
   },
   "elections_2026": {

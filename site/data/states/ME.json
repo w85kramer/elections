@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:56.760968Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Maine",
     "abbr": "ME",
@@ -1547,7 +1547,8 @@
           "name": "Walter Runte Jr.",
           "party": "D",
           "pres_margin": "+29.7",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 17809
         },
         {
           "district": "147",
@@ -1599,7 +1600,18 @@
           "next_election": 2026,
           "candidate_id": 9801
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": null,
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": "2/3 (66.67%) for emergency enactment",
+        "notes": null
+      }
     },
     "Senate": {
       "total": 35,
@@ -1962,7 +1974,18 @@
           "next_election": 2026,
           "candidate_id": 9817
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": null,
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": "2/3 (66.67%) for emergency enactment",
+        "notes": null
+      }
     }
   },
   "elections_2026": {
@@ -2929,7 +2952,7 @@
             "election_type": "Primary_R"
           },
           {
-            "name": "Ray A. Thombs Jr.",
+            "name": "Ray Thombs Jr.",
             "party": "Republican",
             "is_incumbent": false,
             "election_type": "Primary_R"

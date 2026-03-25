@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:38:25.736855Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "West Virginia",
     "abbr": "WV",
@@ -24,7 +24,7 @@
     },
     {
       "office": "Lt. Governor",
-      "name": "Randy E. Smith",
+      "name": "Randy Smith",
       "party": "R",
       "method": "Ex_Officio",
       "next_election": null,
@@ -81,7 +81,7 @@
         "Other": 0,
         "Vacant": 1
       },
-      "supermajority": 67,
+      "supermajority": 51,
       "seats_up_2026": 100,
       "members": [
         {
@@ -1083,7 +1083,18 @@
           "next_election": 2026,
           "candidate_id": 13274
         }
-      ]
+      ],
+      "supermajority_label": "Majority",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "Majority Elected (50%)*",
+        "taxes": null,
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": "*A 2/3 (66.67%) vote is required to overturn vetoes of appropriation bills."
+      }
     },
     "Senate": {
       "total": 34,
@@ -1093,7 +1104,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 23,
+      "supermajority": 18,
       "seats_up_2026": 17,
       "members": [
         {
@@ -1133,7 +1144,8 @@
           "name": "Chris Rose",
           "party": "R",
           "pres_margin": "-41.6",
-          "next_election": 2028
+          "next_election": 2028,
+          "candidate_id": 14469
         },
         {
           "district": "3",
@@ -1292,7 +1304,8 @@
           "name": "Jack Woodrum",
           "party": "R",
           "pres_margin": "-50.0",
-          "next_election": 2028
+          "next_election": 2028,
+          "candidate_id": 14477
         },
         {
           "district": "11",
@@ -1434,7 +1447,18 @@
           "next_election": 2028,
           "candidate_id": 16146
         }
-      ]
+      ],
+      "supermajority_label": "Majority",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "Majority Elected (50%)*",
+        "taxes": null,
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": "*A 2/3 (66.67%) vote is required to overturn vetoes of appropriation bills."
+      }
     }
   },
   "elections_2026": {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T02:26:49.373532Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Arizona",
     "abbr": "AZ",
@@ -695,7 +695,18 @@
           "next_election": 2026,
           "candidate_id": 13623
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "2/3 (66.67%)",
+        "const_amend": "LRCA: majority vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": "A 3/4 vote is required to overturn vetoes of emergency bills."
+      }
     },
     "Senate": {
       "total": 30,
@@ -1008,7 +1019,18 @@
           "next_election": 2026,
           "candidate_id": 7607
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "2/3 (66.67%)",
+        "const_amend": "LRCA: majority vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": "A 3/4 vote is required to overturn vetoes of emergency bills."
+      }
     }
   },
   "elections_2026": {
@@ -2574,19 +2596,19 @@
           {
             "name": "James Taylor",
             "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "James Taylor",
+            "party": "R",
+            "is_incumbent": false,
+            "election_type": "Primary_R"
+          },
+          {
+            "name": "James Taylor",
+            "party": "R",
             "is_incumbent": true,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "James Taylor",
-            "party": "R",
-            "is_incumbent": false,
-            "election_type": "Primary_R"
-          },
-          {
-            "name": "James Taylor",
-            "party": "R",
-            "is_incumbent": false,
             "election_type": "Primary_R"
           },
           {

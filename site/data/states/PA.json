@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:37:59.272480Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Pennsylvania",
     "abbr": "PA",
@@ -24,11 +24,11 @@
       "forecast": "Likely D",
       "forecast_details": [
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Likely D"
         },
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Likely D"
         }
       ]
@@ -2116,7 +2116,18 @@
           "next_election": 2026,
           "candidate_id": 12031
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": null,
+        "const_amend": "LRCA: majority (50%) vote in two successive sessions*",
+        "budget_passage": null,
+        "other": "2/3 (66.67%) for nonpreferred appropriations*",
+        "notes": "*Nonpreferred appropriations are specific expenditures for charitable or educational institutions not under absolutely control of the Commonwealth. * A majority vote is required (in two successive sessions of) is required to refer a constitutional amendment to the voters. However, when a \"major emergency threatens or is about to threaten the Commonwealth,\" the legislature can put a proposed amendment on the ballot in just one legislative session, if they gain a 2/3rds vote on the proposed amendment."
+      }
     },
     "Senate": {
       "total": 50,
@@ -2629,7 +2640,18 @@
           "next_election": 2026,
           "candidate_id": 12196
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": null,
+        "const_amend": "LRCA: majority (50%) vote in two successive sessions*",
+        "budget_passage": null,
+        "other": "2/3 (66.67%) for nonpreferred appropriations*",
+        "notes": "*Nonpreferred appropriations are specific expenditures for charitable or educational institutions not under absolutely control of the Commonwealth. * A majority vote is required (in two successive sessions of) is required to refer a constitutional amendment to the voters. However, when a \"major emergency threatens or is about to threaten the Commonwealth,\" the legislature can put a proposed amendment on the ballot in just one legislative session, if they gain a 2/3rds vote on the proposed amendment."
+      }
     }
   },
   "elections_2026": {

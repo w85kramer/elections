@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:37:54.254170Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Oklahoma",
     "abbr": "OK",
@@ -818,7 +818,8 @@
           "name": "Amanda Clinton",
           "party": "D",
           "pres_margin": "+19.4",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 11788
         },
         {
           "district": "72",
@@ -847,7 +848,8 @@
           "name": "Kevin Norwood",
           "party": "R",
           "pres_margin": "-41.4",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 11869
         },
         {
           "district": "75",
@@ -1117,7 +1119,18 @@
           "next_election": 2026,
           "candidate_id": 11905
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "3/4 (75%)",
+        "const_amend": "LRCA: majority (50%) vote in one session*",
+        "budget_passage": null,
+        "other": null,
+        "notes": "A 3/4 vote is required to overturn vetoes of emergency bills. *In general, it only takes a majority vote of the Oklahoma State Legislature to place a proposed amendment on the ballot. However, if the state legislature wants the proposed amendment to go on a special election ballot, it has to approve the amendment by a two-thirds vote."
+      }
     },
     "Senate": {
       "total": 48,
@@ -1207,7 +1220,8 @@
           "name": "Bryan Logan",
           "party": "R",
           "pres_margin": "-50.9",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 11801
         },
         {
           "district": "9",
@@ -1609,7 +1623,18 @@
           "next_election": 2026,
           "candidate_id": 11897
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "3/4 (75%)",
+        "const_amend": "LRCA: majority (50%) vote in one session*",
+        "budget_passage": null,
+        "other": null,
+        "notes": "A 3/4 vote is required to overturn vetoes of emergency bills. *In general, it only takes a majority vote of the Oklahoma State Legislature to place a proposed amendment on the ballot. However, if the state legislature wants the proposed amendment to go on a special election ballot, it has to approve the amendment by a two-thirds vote."
+      }
     }
   },
   "elections_2026": {

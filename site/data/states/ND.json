@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:36:40.698982Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "North Dakota",
     "abbr": "ND",
@@ -576,7 +576,8 @@
           "name": "Dwight Kiefert",
           "party": "R",
           "pres_margin": "-32.7",
-          "next_election": 2028
+          "next_election": 2028,
+          "candidate_id": 14122
         },
         {
           "district": "25",
@@ -725,7 +726,8 @@
           "name": "Pat Heinert",
           "party": "R",
           "pres_margin": "-34.3",
-          "next_election": 2028
+          "next_election": 2028,
+          "candidate_id": 14175
         },
         {
           "district": "32",
@@ -854,7 +856,8 @@
           "name": "Christina Wolff",
           "party": "R",
           "pres_margin": "-53.4",
-          "next_election": 2028
+          "next_election": 2028,
+          "candidate_id": 14116
         },
         {
           "district": "39",
@@ -883,7 +886,8 @@
           "name": "Macy Bolinske",
           "party": "R",
           "pres_margin": "-38.0",
-          "next_election": 2028
+          "next_election": 2028,
+          "candidate_id": 14177
         },
         {
           "district": "40",
@@ -922,7 +926,8 @@
           "name": "Dustin McNally",
           "party": "R",
           "pres_margin": "-18.7",
-          "next_election": 2028
+          "next_election": 2028,
+          "candidate_id": 14139
         },
         {
           "district": "42",
@@ -961,7 +966,8 @@
           "name": "Austin Foss",
           "party": "D",
           "pres_margin": "+11.9",
-          "next_election": 2028
+          "next_election": 2028,
+          "candidate_id": 14103
         },
         {
           "district": "44",
@@ -970,7 +976,8 @@
           "name": "Karla Rose Hanson",
           "party": "D",
           "pres_margin": "+11.9",
-          "next_election": 2028
+          "next_election": 2028,
+          "candidate_id": 14104
         },
         {
           "district": "45",
@@ -1032,7 +1039,18 @@
           "next_election": 2026,
           "candidate_id": 14174
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": null,
+        "const_amend": "LRCA: majority (50%) vote in one session",
+        "budget_passage": null,
+        "other": "2/3 (66.67%) for emergency clauses that require immediate spending",
+        "notes": null
+      }
     },
     "Senate": {
       "total": 47,
@@ -1515,7 +1533,18 @@
           "next_election": 2026,
           "candidate_id": 11636
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": null,
+        "const_amend": "LRCA: majority (50%) vote in one session",
+        "budget_passage": null,
+        "other": "2/3 (66.67%) for emergency clauses that require immediate spending",
+        "notes": null
+      }
     }
   },
   "elections_2026": {

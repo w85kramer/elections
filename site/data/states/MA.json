@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:36:31.106740Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Massachusetts",
     "abbr": "MA",
@@ -1051,7 +1051,8 @@
           "name": "Paul Donato",
           "party": "D",
           "pres_margin": "+37.9",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 35026
         },
         {
           "district": "97",
@@ -1100,7 +1101,8 @@
           "name": "Lisa Field",
           "party": "D",
           "pres_margin": "+5.6",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14604
         },
         {
           "district": "102",
@@ -1378,7 +1380,8 @@
           "name": "Hannah Bowen",
           "party": "D",
           "pres_margin": "+34.5",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14552
         },
         {
           "district": "130",
@@ -1690,7 +1693,18 @@
           "next_election": 2026,
           "candidate_id": 14677
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "D",
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": null,
+        "const_amend": "LRCA: majority (50%) vote in two successive sessions",
+        "budget_passage": null,
+        "other": "2/3 (66.67%) for capital budget",
+        "notes": null
+      }
     },
     "Senate": {
       "total": 40,
@@ -2102,7 +2116,18 @@
           "next_election": 2026,
           "candidate_id": 14574
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "D",
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": null,
+        "const_amend": "LRCA: majority (50%) vote in two successive sessions",
+        "budget_passage": null,
+        "other": "2/3 (66.67%) for capital budget",
+        "notes": null
+      }
     }
   },
   "elections_2026": {

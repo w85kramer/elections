@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:38:31.527894Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Hawaii",
     "abbr": "HI",
@@ -591,7 +591,18 @@
           "next_election": 2026,
           "candidate_id": 8667
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "D",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": null,
+        "const_amend": "LRCA: Either: 2/3 (66.67%) vote in one session OR simple majority vote in two successive sessions",
+        "budget_passage": null,
+        "other": "2/3 (66.67%) to exceed expenditure cap",
+        "notes": null
+      }
     },
     "Senate": {
       "total": 25,
@@ -701,7 +712,8 @@
           "name": "Les Ihara",
           "party": "D",
           "pres_margin": "+42.4",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 26973
         },
         {
           "district": "11",
@@ -853,7 +865,18 @@
           "next_election": 2026,
           "candidate_id": 8625
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "D",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": null,
+        "const_amend": "LRCA: Either: 2/3 (66.67%) vote in one session OR simple majority vote in two successive sessions",
+        "budget_passage": null,
+        "other": "2/3 (66.67%) to exceed expenditure cap",
+        "notes": null
+      }
     }
   },
   "elections_2026": {

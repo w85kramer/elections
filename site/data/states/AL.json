@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:56.760968Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Alabama",
     "abbr": "AL",
@@ -100,7 +100,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 70,
+      "supermajority": 53,
       "seats_up_2026": 105,
       "members": [
         {
@@ -220,7 +220,8 @@
           "name": "Cindy Myrex",
           "party": "R",
           "pres_margin": "-78.4",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 7426
         },
         {
           "district": "13",
@@ -1152,7 +1153,18 @@
           "next_election": 2026,
           "candidate_id": 7420
         }
-      ]
+      ],
+      "supermajority_label": "Majority",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "Majority Elected (50%)",
+        "taxes": null,
+        "const_amend": "LCRA: 3/5 (60%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 35,
@@ -1162,7 +1174,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 24,
+      "supermajority": 18,
       "seats_up_2026": 35,
       "members": [
         {
@@ -1212,7 +1224,8 @@
           "name": "Matt Woods",
           "party": "R",
           "pres_margin": "-73.6",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 7484
         },
         {
           "district": "6",
@@ -1514,7 +1527,18 @@
           "next_election": 2026,
           "candidate_id": 7435
         }
-      ]
+      ],
+      "supermajority_label": "Majority",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "Majority Elected (50%)",
+        "taxes": null,
+        "const_amend": "LCRA: 3/5 (60%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {

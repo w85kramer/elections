@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:38:01.833302Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "South Carolina",
     "abbr": "SC",
@@ -24,11 +24,11 @@
       "forecast": "Solid R",
       "forecast_details": [
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Solid R"
         },
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Solid R"
         }
       ]
@@ -318,7 +318,8 @@
           "name": "Dianne Mitchell",
           "party": "R",
           "pres_margin": "-28.9",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 12417
         },
         {
           "district": "22",
@@ -987,7 +988,8 @@
           "name": "John Lastinger",
           "party": "R",
           "pres_margin": "-35.3",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 12455
         },
         {
           "district": "89",
@@ -1349,7 +1351,18 @@
           "next_election": 2026,
           "candidate_id": 12518
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": null,
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)*",
+        "budget_passage": null,
+        "other": null,
+        "notes": "* The South Carolina Constitution says that a legislatively referred amendment can go on the ballot if approved by a 2/3rds vote of each house of the South Carolina State Legislature. However, if the state's voters approve the amendment, it must then go back to the legislature for a second affirmative vote."
+      }
     },
     "Senate": {
       "total": 46,
@@ -1699,7 +1712,8 @@
           "name": "Stephen Goldfinch",
           "party": "R",
           "pres_margin": "-37.8",
-          "next_election": 2028
+          "next_election": 2028,
+          "candidate_id": 51559
         },
         {
           "district": "35",
@@ -1821,7 +1835,18 @@
           "next_election": 2028,
           "candidate_id": 12536
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": null,
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)*",
+        "budget_passage": null,
+        "other": null,
+        "notes": "* The South Carolina Constitution says that a legislatively referred amendment can go on the ballot if approved by a 2/3rds vote of each house of the South Carolina State Legislature. However, if the state's voters approve the amendment, it must then go back to the legislature for a second affirmative vote."
+      }
     }
   },
   "elections_2026": {

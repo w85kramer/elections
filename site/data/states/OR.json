@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:37:56.702766Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Oregon",
     "abbr": "OR",
@@ -687,7 +687,18 @@
           "next_election": 2026,
           "candidate_id": 11991
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": "3/5 (60%)",
+        "const_amend": "LRCA: majority (50%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 30,
@@ -1000,7 +1011,18 @@
           "next_election": 2028,
           "candidate_id": 11993
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": "3/5 (60%)",
+        "const_amend": "LRCA: majority (50%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {

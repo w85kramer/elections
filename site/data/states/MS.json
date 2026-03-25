@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:36:35.818034Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Mississippi",
     "abbr": "MS",
@@ -1311,7 +1311,18 @@
           "next_election": 2027,
           "candidate_id": 10340
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": "3/5 (60%)",
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 52,
@@ -1844,7 +1855,18 @@
           "next_election": 2027,
           "candidate_id": 10343
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": "3/5 (60%)",
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {

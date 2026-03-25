@@ -127,10 +127,35 @@ APPOINTED_BY = {
     ('VA', 'Controller'): 'Governor',
 }
 
-# Supermajority thresholds: default ceil(total * 2/3), overrides below
-SUPERMAJORITY_OVERRIDES = {
-    # state_chamber: threshold  (if different from ceil(2/3 * total))
-}
+def parse_veto_threshold(veto_str, total_seats):
+    """Parse veto override string to compute the number of seats needed."""
+    if not veto_str or not total_seats:
+        return math.ceil(total_seats * 2 / 3) if total_seats else None
+    v = veto_str.lower()
+    if 'majority elected' in v or '50%' in v:
+        return total_seats // 2 + 1
+    if '3/5' in v or '60%' in v:
+        return math.ceil(total_seats * 3 / 5)
+    if '2/3' in v or '66' in v:
+        return math.ceil(total_seats * 2 / 3)
+    return math.ceil(total_seats * 2 / 3)
+
+def get_supermajority_label(veto_str):
+    """Extract short label from veto override string."""
+    if not veto_str:
+        return '2/3'
+    v = veto_str.lower()
+    if 'majority elected' in v or '50%' in v:
+        return 'Majority'
+    if '3/5' in v or '60%' in v:
+        return '3/5'
+    return '2/3'
+
+def normalize_chamber_name(ch_name):
+    """Map display chamber names to DB chamber names (House/Senate/Legislature)."""
+    if ch_name in ('Assembly', 'House of Delegates'):
+        return 'House'
+    return ch_name
 
 def get_lower_chamber(state_abbr):
     return LOWER_CHAMBER_NAMES.get(state_abbr, 'House')
@@ -668,8 +693,17 @@ def export_state_detail(state_abbr, dry_run=False):
             district_number
     """
 
+    # Query 8: Supermajority thresholds
+    q_supermajority = f"""
+        SELECT sm.chamber, sm.veto_override, sm.budget_passage, sm.taxes,
+               sm.const_amend, sm.other_circumstances, sm.notes as sm_notes
+        FROM supermajority_thresholds sm
+        JOIN states s ON sm.state_id = s.id
+        WHERE s.abbreviation = '{state_abbr}'
+    """
+
     if dry_run:
-        print(f'  Would run 7 queries and write states/{state_abbr}.json')
+        print(f'  Would run 8 queries and write states/{state_abbr}.json')
         return
 
     state_info = run_sql(q_state)
@@ -684,6 +718,12 @@ def export_state_detail(state_abbr, dry_run=False):
     measures_data = run_sql(q_measures)
     forecast_data = run_sql(q_forecast)
     uncontested_data = run_sql(q_uncontested) or []
+    supermajority_data = run_sql(q_supermajority) or []
+
+    # Build supermajority lookup: chamber -> data
+    super_map = {}
+    for row in supermajority_data:
+        super_map[row['chamber']] = row
 
     # Build officers list
     statewide_officers = []
@@ -751,11 +791,40 @@ def export_state_detail(state_abbr, dry_run=False):
             member['caucus'] = r['caucus']
         chambers[ch]['members'].append(member)
 
-    # Set supermajority thresholds
+    # Set supermajority thresholds from DB
     for ch_name, ch_data in chambers.items():
         total = ch_data['total']
-        key = f"{state_abbr}_{ch_name}"
-        ch_data['supermajority'] = SUPERMAJORITY_OVERRIDES.get(key, math.ceil(total * 2 / 3))
+        db_ch = normalize_chamber_name(ch_name)
+        sm = super_map.get(db_ch, {})
+        veto_str = sm.get('veto_override') if sm else None
+        threshold = parse_veto_threshold(veto_str, total)
+        ch_data['supermajority'] = threshold
+        ch_data['supermajority_label'] = get_supermajority_label(veto_str)
+
+        # Determine if a party holds the supermajority
+        comp = ch_data['composition']
+        has_sm = False
+        sm_party = None
+        if threshold:
+            if comp['R'] >= threshold:
+                has_sm = True
+                sm_party = 'R'
+            elif comp['D'] >= threshold:
+                has_sm = True
+                sm_party = 'D'
+        ch_data['has_supermajority'] = has_sm
+        ch_data['supermajority_party'] = sm_party
+
+        # Add detail object with all threshold types
+        if sm:
+            ch_data['supermajority_detail'] = {
+                'veto_override': sm.get('veto_override'),
+                'taxes': sm.get('taxes'),
+                'const_amend': sm.get('const_amend'),
+                'budget_passage': sm.get('budget_passage'),
+                'other': sm.get('other_circumstances'),
+                'notes': sm.get('sm_notes'),
+            }
 
     # Build 2026 elections section from candidacies
     elections_2026 = {
@@ -1064,27 +1133,39 @@ def export_all_state_details(dry_run=False):
             district_number
     """
 
+    # --- Bulk Query 9: Supermajority thresholds ---
+    q_supermajority = """
+        SELECT s.abbreviation as state, sm.chamber, sm.veto_override,
+               sm.budget_passage, sm.taxes, sm.const_amend,
+               sm.other_circumstances, sm.notes as sm_notes
+        FROM supermajority_thresholds sm
+        JOIN states s ON sm.state_id = s.id
+        ORDER BY s.abbreviation, sm.chamber
+    """
+
     if dry_run:
-        print('  Would run 8 bulk queries and write 50 state JSON files')
+        print('  Would run 9 bulk queries and write 50 state JSON files')
         return
 
-    print('  Running 8 bulk queries...')
+    print('  Running 9 bulk queries...')
     all_states = run_sql(q_states)
-    print('    1/8 states')
+    print('    1/9 states')
     all_officers = run_sql(q_officers)
-    print('    2/8 officers')
+    print('    2/9 officers')
     all_members = run_sql(q_members)
-    print('    3/8 members')
+    print('    3/9 members')
     all_candidacies = run_sql(q_candidacies)
-    print('    4/8 candidacies')
+    print('    4/9 candidacies')
     all_measures = run_sql(q_measures)
-    print('    5/8 measures')
+    print('    5/9 measures')
     all_forecasts = run_sql(q_forecasts)
-    print('    6/8 forecasts')
+    print('    6/9 forecasts')
     all_dates = run_sql(q_dates)
-    print('    7/8 dates')
+    print('    7/9 dates')
     all_uncontested = run_sql(q_uncontested)
-    print('    8/8 uncontested')
+    print('    8/9 uncontested')
+    all_supermajority = run_sql(q_supermajority) or []
+    print('    9/9 supermajority')
 
     # --- Index everything by state abbreviation ---
     states_info = {r['abbreviation']: r for r in all_states}
@@ -1110,6 +1191,10 @@ def export_all_state_details(dry_run=False):
         forecasts_by_state.setdefault(r['abbreviation'], []).append(r)
 
     dates_by_state = {r['abbreviation']: r for r in all_dates}
+
+    super_by_state = {}
+    for r in all_supermajority:
+        super_by_state.setdefault(r['state'], {})[r['chamber']] = r
 
     uncontested_by_state = {}
     for r in (all_uncontested or []):
@@ -1189,10 +1274,38 @@ def export_all_state_details(dry_run=False):
                 member['caucus'] = r['caucus']
             chambers[ch]['members'].append(member)
 
+        state_super = super_by_state.get(abbr, {})
         for ch_name, ch_data in chambers.items():
             total = ch_data['total']
-            key = f"{abbr}_{ch_name}"
-            ch_data['supermajority'] = SUPERMAJORITY_OVERRIDES.get(key, math.ceil(total * 2 / 3))
+            db_ch = normalize_chamber_name(ch_name)
+            sm = state_super.get(db_ch, {})
+            veto_str = sm.get('veto_override') if sm else None
+            threshold = parse_veto_threshold(veto_str, total)
+            ch_data['supermajority'] = threshold
+            ch_data['supermajority_label'] = get_supermajority_label(veto_str)
+
+            comp = ch_data['composition']
+            has_sm = False
+            sm_party = None
+            if threshold:
+                if comp['R'] >= threshold:
+                    has_sm = True
+                    sm_party = 'R'
+                elif comp['D'] >= threshold:
+                    has_sm = True
+                    sm_party = 'D'
+            ch_data['has_supermajority'] = has_sm
+            ch_data['supermajority_party'] = sm_party
+
+            if sm:
+                ch_data['supermajority_detail'] = {
+                    'veto_override': sm.get('veto_override'),
+                    'taxes': sm.get('taxes'),
+                    'const_amend': sm.get('const_amend'),
+                    'budget_passage': sm.get('budget_passage'),
+                    'other': sm.get('other_circumstances'),
+                    'notes': sm.get('sm_notes'),
+                }
 
         # Candidacies
         gov_candidates = []

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:36:14.924675Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Georgia",
     "abbr": "GA",
@@ -1176,7 +1176,8 @@
           "name": "Akbar Ali",
           "party": "D",
           "pres_margin": "+19.7",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 8385
         },
         {
           "district": "107",
@@ -1917,7 +1918,18 @@
           "next_election": 2026,
           "candidate_id": 8600
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": null,
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 56,
@@ -2489,7 +2501,18 @@
           "next_election": 2026,
           "candidate_id": 8488
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": null,
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {
@@ -3150,7 +3173,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Martin A. Momtahan",
+            "name": "Martin Momtahan",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -5116,7 +5139,7 @@
         "district": "111",
         "candidates": [
           {
-            "name": "Scott T. Jackson",
+            "name": "Scott Jackson",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5410,7 +5433,7 @@
         "district": "123",
         "candidates": [
           {
-            "name": "Hope S. Beard",
+            "name": "Hope Beard",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -5567,7 +5590,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Sha'Qunta \"Q\" Calles",
+            "name": "Sha'Qunta Calles",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -7084,7 +7107,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Jason T. Dickerson",
+            "name": "Jason Dickerson",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -7322,7 +7345,7 @@
             "election_type": "Primary_R"
           },
           {
-            "name": "Jason R. Anavitarte",
+            "name": "Jason Anavitarte",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -7410,7 +7433,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Jaha V. Howard",
+            "name": "Jaha Howard",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -8724,7 +8747,7 @@
       "seat_label": "GA House 111",
       "pres_margin": "-19.3",
       "holder_party": "R",
-      "candidate": "Scott T. Jackson",
+      "candidate": "Scott Jackson",
       "is_open_seat": null
     },
     {
@@ -8814,7 +8837,7 @@
       "seat_label": "GA House 123",
       "pres_margin": "-40.5",
       "holder_party": "R",
-      "candidate": "Hope S. Beard",
+      "candidate": "Hope Beard",
       "is_open_seat": null
     },
     {
@@ -9454,7 +9477,7 @@
       "seat_label": "GA House 17",
       "pres_margin": "-25.3",
       "holder_party": "R",
-      "candidate": "Martin A. Momtahan",
+      "candidate": "Martin Momtahan",
       "is_open_seat": null
     },
     {
@@ -10674,7 +10697,7 @@
       "seat_label": "GA Senate 21",
       "pres_margin": "-34.0",
       "holder_party": "R",
-      "candidate": "Jason T. Dickerson",
+      "candidate": "Jason Dickerson",
       "is_open_seat": null
     },
     {

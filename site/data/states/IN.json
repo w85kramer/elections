@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:36:22.413247Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Indiana",
     "abbr": "IN",
@@ -72,7 +72,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 67,
+      "supermajority": 51,
       "seats_up_2026": 100,
       "members": [
         {
@@ -1075,7 +1075,18 @@
           "next_election": 2026,
           "candidate_id": 66441
         }
-      ]
+      ],
+      "supermajority_label": "Majority",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "Majority Elected (50%)",
+        "taxes": null,
+        "const_amend": "LRCA: majority (50%) vote in two successive sessions",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 50,
@@ -1085,7 +1096,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 34,
+      "supermajority": 26,
       "seats_up_2026": 25,
       "members": [
         {
@@ -1588,7 +1599,18 @@
           "next_election": 2028,
           "candidate_id": 9119
         }
-      ]
+      ],
+      "supermajority_label": "Majority",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "Majority Elected (50%)",
+        "taxes": null,
+        "const_amend": "LRCA: majority (50%) vote in two successive sessions",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {
@@ -2261,7 +2283,7 @@
         "district": "33",
         "candidates": [
           {
-            "name": "John E. Bartlett",
+            "name": "John Bartlett",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -4692,7 +4714,7 @@
       "seat_label": "IN House 33",
       "pres_margin": "-49.4",
       "holder_party": "R",
-      "candidate": "John E. Bartlett",
+      "candidate": "John Bartlett",
       "is_open_seat": null
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:56.760968Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Missouri",
     "abbr": "MO",
@@ -533,7 +533,7 @@
           "party": "D",
           "pres_margin": "+22.2",
           "next_election": 2026,
-          "candidate_id": 67165
+          "candidate_id": 60926
         },
         {
           "district": "47",
@@ -1700,7 +1700,18 @@
           "next_election": 2026,
           "candidate_id": 10535
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "2/3 (66.67%)",
+        "const_amend": "LRCA: majority (50%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 34,
@@ -2053,7 +2064,18 @@
           "next_election": 2026,
           "candidate_id": 10677
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "2/3 (66.67%)",
+        "const_amend": "LRCA: majority (50%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {

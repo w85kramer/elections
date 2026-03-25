@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:38:03.968960Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "South Dakota",
     "abbr": "SD",
@@ -24,11 +24,11 @@
       "forecast": "Solid R",
       "forecast_details": [
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Solid R"
         },
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Solid R"
         }
       ]
@@ -143,7 +143,8 @@
           "name": "Brandei Schaefbauer",
           "party": "R",
           "pres_margin": "-27.8",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14190
         },
         {
           "district": "4",
@@ -152,7 +153,8 @@
           "name": "Dylan Jordan",
           "party": "R",
           "pres_margin": "-52.6",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14207
         },
         {
           "district": "4",
@@ -161,7 +163,8 @@
           "name": "Kent Roe",
           "party": "R",
           "pres_margin": "-52.6",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14208
         },
         {
           "district": "5",
@@ -180,7 +183,8 @@
           "name": "Matt Roby",
           "party": "R",
           "pres_margin": "-38.0",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14224
         },
         {
           "district": "6",
@@ -189,7 +193,8 @@
           "name": "Aaron Aylward",
           "party": "R",
           "pres_margin": "-32.6",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14187
         },
         {
           "district": "6",
@@ -218,7 +223,8 @@
           "name": "Mellissa Heermann",
           "party": "R",
           "pres_margin": "-11.7",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14238
         },
         {
           "district": "8",
@@ -227,7 +233,8 @@
           "name": "Tim Reisch",
           "party": "R",
           "pres_margin": "-35.5",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14249
         },
         {
           "district": "8",
@@ -236,7 +243,8 @@
           "name": "Tim Walburg",
           "party": "R",
           "pres_margin": "-35.5",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14250
         },
         {
           "district": "9",
@@ -255,7 +263,8 @@
           "name": "Bethany Soye",
           "party": "R",
           "pres_margin": "-23.9",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14194
         },
         {
           "district": "10",
@@ -314,7 +323,8 @@
           "name": "Greg Jamison",
           "party": "R",
           "pres_margin": "-5.2",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14192
         },
         {
           "district": "13",
@@ -513,7 +523,8 @@
           "name": "Kevin Van Diepen",
           "party": "R",
           "pres_margin": "-39.9",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14230
         },
         {
           "district": "23",
@@ -532,7 +543,8 @@
           "name": "Scott Moore",
           "party": "R",
           "pres_margin": "-58.6",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14244
         },
         {
           "district": "24",
@@ -551,7 +563,8 @@
           "name": "Mike Weisgram",
           "party": "R",
           "pres_margin": "-40.7",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14240
         },
         {
           "district": "25",
@@ -570,7 +583,8 @@
           "name": "Les Heinemann",
           "party": "R",
           "pres_margin": "-39.5",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14214
         },
         {
           "district": "26",
@@ -609,7 +623,8 @@
           "name": "Peri Pourier",
           "party": "R",
           "pres_margin": "-0.2",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14232
         },
         {
           "district": "28",
@@ -668,7 +683,8 @@
           "name": "Trish Ladner",
           "party": "R",
           "pres_margin": "-46.1",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 14248
         },
         {
           "district": "31",
@@ -770,7 +786,18 @@
           "next_election": 2026,
           "candidate_id": 14252
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "2/3 (66.67%)",
+        "const_amend": "LRCA: majority (50%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 35,
@@ -1133,7 +1160,18 @@
           "next_election": 2026,
           "candidate_id": 12562
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "2/3 (66.67%)",
+        "const_amend": "LRCA: majority (50%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {
@@ -1232,7 +1270,7 @@
         ]
       },
       {
-        "seat_label": "SD House 3 Seat B",
+        "seat_label": "SD House 3 Seat A",
         "chamber": "House",
         "district": "3",
         "candidates": [
@@ -1637,20 +1675,20 @@
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "4",
-      "seat_label": "SD House 4 Seat A",
+      "seat_label": "SD House 4 Seat B",
       "pres_margin": "-52.6",
       "holder_party": "R",
-      "candidate": "Fred Deutsch",
+      "candidate": "Gary Hudiburgh",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "4",
-      "seat_label": "SD House 4 Seat B",
+      "seat_label": "SD House 4 Seat A",
       "pres_margin": "-52.6",
       "holder_party": "R",
-      "candidate": "Gary Hudiburgh",
+      "candidate": "Fred Deutsch",
       "is_open_seat": null
     },
     {

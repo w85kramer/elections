@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:38:08.821236Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Texas",
     "abbr": "TX",
@@ -993,7 +993,8 @@
           "name": "Ramon Romero",
           "party": "D",
           "pres_margin": "+26.9",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 54142
         },
         {
           "district": "91",
@@ -1595,7 +1596,18 @@
           "next_election": 2026,
           "candidate_id": 12895
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": null,
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 31,
@@ -1785,7 +1797,7 @@
           "party": "R",
           "pres_margin": "-27.3",
           "next_election": 2026,
-          "candidate_id": 12831
+          "candidate_id": 69374
         },
         {
           "district": "19",
@@ -1917,7 +1929,18 @@
           "next_election": 2026,
           "candidate_id": 12827
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": null,
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {
@@ -5319,13 +5342,13 @@
         "district": "90",
         "candidates": [
           {
-            "name": "Ramon Romero, Jr.",
+            "name": "Ramon Romero",
             "party": "D",
             "is_incumbent": true,
             "election_type": "General"
           },
           {
-            "name": "Ramon Romero, Jr.",
+            "name": "Ramon Romero",
             "party": "D",
             "is_incumbent": true,
             "election_type": "Primary_D"
@@ -7692,7 +7715,7 @@
             "election_type": "General"
           },
           {
-            "name": "Lois Kolkhorst",
+            "name": "Lois W. Kolkhorst",
             "party": "R",
             "is_incumbent": true,
             "election_type": "General"
@@ -7704,7 +7727,7 @@
             "election_type": "Primary_D"
           },
           {
-            "name": "Lois Kolkhorst",
+            "name": "Lois W. Kolkhorst",
             "party": "R",
             "is_incumbent": true,
             "election_type": "Primary_R"
@@ -8590,7 +8613,7 @@
       "seat_label": "TX House 90",
       "pres_margin": "+26.9",
       "holder_party": "D",
-      "candidate": "Ramon Romero, Jr.",
+      "candidate": "Ramon Romero",
       "is_open_seat": null
     },
     {
@@ -10050,7 +10073,7 @@
       "seat_label": "TX Senate 18",
       "pres_margin": "-27.3",
       "holder_party": "R",
-      "candidate": "Lois Kolkhorst",
+      "candidate": "Lois W. Kolkhorst",
       "is_open_seat": null
     },
     {

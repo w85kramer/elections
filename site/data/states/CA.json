@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:56.760968Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "California",
     "abbr": "CA",
@@ -738,7 +738,8 @@
           "name": "Natasha Johnson",
           "party": "R",
           "pres_margin": "-12.8",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 7848
         },
         {
           "district": "64",
@@ -910,7 +911,18 @@
           "next_election": 2026,
           "candidate_id": 7790
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "D",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "2/3 (66.67%)",
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": "The Legislature has 60 days to override a veto."
+      }
     },
     "Senate": {
       "total": 40,
@@ -1323,7 +1335,18 @@
           "next_election": 2026,
           "candidate_id": 7774
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "D",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "2/3 (66.67%)",
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": "The Legislature has 60 days to override a veto."
+      }
     }
   },
   "elections_2026": {

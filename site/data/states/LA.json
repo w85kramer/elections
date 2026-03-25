@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T20:33:34.362980Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Louisiana",
     "abbr": "LA",
@@ -1141,7 +1141,18 @@
           "next_election": 2027,
           "candidate_id": 9629
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "2/3 (66.67%)",
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 39,
@@ -1544,7 +1555,18 @@
           "next_election": 2027,
           "candidate_id": 9694
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "2/3 (66.67%)",
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {

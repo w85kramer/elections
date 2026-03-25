@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:38:06.371793Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Tennessee",
     "abbr": "TN",
@@ -97,7 +97,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 66,
+      "supermajority": 50,
       "seats_up_2026": 99,
       "members": [
         {
@@ -1090,7 +1090,18 @@
           "next_election": 2026,
           "candidate_id": 12716
         }
-      ]
+      ],
+      "supermajority_label": "Majority",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "Majority Elected (50%)",
+        "taxes": null,
+        "const_amend": "LRCA: majority (50%) vote in the first successive session and a 2/3 (66.67%) vote is required in a second succesive session.",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 33,
@@ -1100,7 +1111,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 22,
+      "supermajority": 17,
       "seats_up_2026": 17,
       "members": [
         {
@@ -1433,7 +1444,18 @@
           "next_election": 2026,
           "candidate_id": 12668
         }
-      ]
+      ],
+      "supermajority_label": "Majority",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "Majority Elected (50%)",
+        "taxes": null,
+        "const_amend": "LRCA: majority (50%) vote in the first successive session and a 2/3 (66.67%) vote is required in a second succesive session.",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {

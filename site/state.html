@@ -592,6 +592,8 @@
         vacant: vacant,
         seats_up_2026: cd.seats_up_2026,
         supermajority: cd.supermajority,
+        supermajority_label: cd.supermajority_label,
+        has_supermajority: cd.has_supermajority,
       }, ch);
     } else {
       buildChamberBar(barEl, {
@@ -602,7 +604,19 @@
         vacant: cd.composition.Vacant || 0,
         seats_up_2026: cd.seats_up_2026,
         supermajority: cd.supermajority,
+        supermajority_label: cd.supermajority_label,
+        has_supermajority: cd.has_supermajority,
       }, ch);
+    }
+
+    // Supermajority badge
+    if (cd.has_supermajority && cd.supermajority_party) {
+      const smP = cd.supermajority_party;
+      const smColor = smP === 'R' ? 'var(--ms-rep-red)' : 'var(--ms-dem-blue)';
+      const smBadge = document.createElement('div');
+      smBadge.style.cssText = `display:inline-block;margin-top:6px;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;color:white;background:${smColor}`;
+      smBadge.textContent = `${smP === 'R' ? 'Republican' : 'Democratic'} Supermajority`;
+      col.appendChild(smBadge);
     }
   }
 

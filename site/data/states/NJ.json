@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:39:36.859999Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "New Jersey",
     "abbr": "NJ",
@@ -888,7 +888,18 @@
           "next_election": 2027,
           "candidate_id": 14018
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "D",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": null,
+        "const_amend": "LRCA: Either: 3/5 (60%) vote in one session OR simple majority vote in two successive sessions",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 40,
@@ -1078,7 +1089,8 @@
           "name": "Patrick Diegnan",
           "party": "D",
           "pres_margin": "+10.2",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 43759
         },
         {
           "district": "19",
@@ -1247,7 +1259,8 @@
           "name": "Benjie Wimberly",
           "party": "D",
           "pres_margin": "+12.0",
-          "next_election": 2027
+          "next_election": 2027,
+          "candidate_id": 11074
         },
         {
           "district": "36",
@@ -1299,7 +1312,18 @@
           "next_election": 2027,
           "candidate_id": 11092
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": null,
+        "const_amend": "LRCA: Either: 3/5 (60%) vote in one session OR simple majority vote in two successive sessions",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {

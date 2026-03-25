@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:37:51.953803Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Ohio",
     "abbr": "OH",
@@ -83,7 +83,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 66,
+      "supermajority": 60,
       "seats_up_2026": 99,
       "members": [
         {
@@ -1076,7 +1076,18 @@
           "next_election": 2026,
           "candidate_id": 11757
         }
-      ]
+      ],
+      "supermajority_label": "3/5",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "3/5 Elected (60%)*",
+        "taxes": null,
+        "const_amend": "LCRA: 3/5 (60%) vote in one session",
+        "budget_passage": null,
+        "other": "2/3 (66.67%) needed to exceed 3.5% of population plus inflation growth.",
+        "notes": "*A 2/3 vote is required to overturn vetoes of emergency bills."
+      }
     },
     "Senate": {
       "total": 33,
@@ -1086,7 +1097,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 22,
+      "supermajority": 20,
       "seats_up_2026": 17,
       "members": [
         {
@@ -1419,7 +1430,18 @@
           "next_election": 2026,
           "candidate_id": 11654
         }
-      ]
+      ],
+      "supermajority_label": "3/5",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "3/5 Elected (60%)*",
+        "taxes": null,
+        "const_amend": "LCRA: 3/5 (60%) vote in one session",
+        "budget_passage": null,
+        "other": "2/3 (66.67%) needed to exceed 3.5% of population plus inflation growth.",
+        "notes": "*A 2/3 vote is required to overturn vetoes of emergency bills."
+      }
     }
   },
   "elections_2026": {

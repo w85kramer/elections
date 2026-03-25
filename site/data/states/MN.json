@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:56.760968Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Minnesota",
     "abbr": "MN",
@@ -764,7 +764,8 @@
           "name": "Xp Lee",
           "party": "D",
           "pres_margin": "+27.4",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 10319
         },
         {
           "district": "69",
@@ -1426,7 +1427,18 @@
           "next_election": 2026,
           "candidate_id": 10195
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "-*",
+        "const_amend": "LRCA: majority (50%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": "*A 2011 proposal to requires a 3/5 majority for tax increases did not pass."
+      }
     },
     "Senate": {
       "total": 67,
@@ -1496,7 +1508,8 @@
           "name": "Keri Heintzeman",
           "party": "R",
           "pres_margin": "-26.9",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 10228
         },
         {
           "district": "7",
@@ -1725,7 +1738,8 @@
           "name": "Mike Holmstrom",
           "party": "R",
           "pres_margin": "-31.8",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 10260
         },
         {
           "district": "30",
@@ -1904,7 +1918,8 @@
           "name": "Amanda Hemmingsen-Jaeger",
           "party": "D",
           "pres_margin": "+21.8",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 10128
         },
         {
           "district": "48",
@@ -2033,7 +2048,8 @@
           "name": "Doron Clark",
           "party": "D",
           "pres_margin": "+68.3",
-          "next_election": 2026
+          "next_election": 2026,
+          "candidate_id": 10167
         },
         {
           "district": "61",
@@ -2105,7 +2121,18 @@
           "next_election": 2026,
           "candidate_id": 10180
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": "-*",
+        "const_amend": "LRCA: majority (50%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": "*A 2011 proposal to requires a 3/5 majority for tax increases did not pass."
+      }
     }
   },
   "elections_2026": {

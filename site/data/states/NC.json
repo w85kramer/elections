@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:36:38.354684Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "North Carolina",
     "abbr": "NC",
@@ -113,7 +113,7 @@
         "Other": 0,
         "Vacant": 1
       },
-      "supermajority": 80,
+      "supermajority": 72,
       "seats_up_2026": 120,
       "members": [
         {
@@ -1315,7 +1315,18 @@
           "next_election": 2026,
           "candidate_id": 11530
         }
-      ]
+      ],
+      "supermajority_label": "3/5",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "3/5 Present (60%)",
+        "taxes": null,
+        "const_amend": "LCRA: 3/5 (60%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 50,
@@ -1325,7 +1336,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 34,
+      "supermajority": 30,
       "seats_up_2026": 50,
       "members": [
         {
@@ -1828,7 +1839,18 @@
           "next_election": 2026,
           "candidate_id": 11533
         }
-      ]
+      ],
+      "supermajority_label": "3/5",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "3/5 Present (60%)",
+        "taxes": null,
+        "const_amend": "LCRA: 3/5 (60%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {

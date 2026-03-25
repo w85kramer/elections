@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:56.760968Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Montana",
     "abbr": "MT",
@@ -1092,7 +1092,18 @@
           "next_election": 2026,
           "candidate_id": 10815
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": null,
+        "const_amend": "LCRA: 2/3 (66.67%) vote *of the entire legislature* (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 50,
@@ -1605,7 +1616,18 @@
           "next_election": 2026,
           "candidate_id": 10810
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": null,
+        "const_amend": "LCRA: 2/3 (66.67%) vote *of the entire legislature* (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {
@@ -1995,7 +2017,7 @@
         "district": "18",
         "candidates": [
           {
-            "name": "Bruce \"Butch\" Gillespie",
+            "name": "Bruce Gillespie",
             "party": "R",
             "is_incumbent": false,
             "election_type": "Primary_R"
@@ -2485,7 +2507,7 @@
         "district": "40",
         "candidates": [
           {
-            "name": "Gabriel  Bradshaw",
+            "name": "Gabriel Bradshaw",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -3981,7 +4003,7 @@
         "district": "12",
         "candidates": [
           {
-            "name": "James G  Whitaker",
+            "name": "James G Whitaker",
             "party": "D",
             "is_incumbent": false,
             "election_type": "Primary_D"
@@ -4709,7 +4731,7 @@
       "seat_label": "MT House 40",
       "pres_margin": "-47.9",
       "holder_party": "R",
-      "candidate": "Gabriel  Bradshaw",
+      "candidate": "Gabriel Bradshaw",
       "is_open_seat": null
     },
     {
@@ -5469,7 +5491,7 @@
       "seat_label": "MT House 18",
       "pres_margin": "-51.6",
       "holder_party": "R",
-      "candidate": "Bruce \"Butch\" Gillespie",
+      "candidate": "Bruce Gillespie",
       "is_open_seat": null
     },
     {

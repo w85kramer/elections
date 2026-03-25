@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:36:49.028948Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "New York",
     "abbr": "NY",
@@ -60,7 +60,7 @@
     },
     {
       "office": "Auditor",
-      "name": "Thomas P. DiNapoli",
+      "name": "Thomas DiNapoli",
       "party": "D",
       "method": "Appointed",
       "next_election": null,
@@ -1588,7 +1588,18 @@
           "next_election": 2026,
           "candidate_id": 11236
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "D",
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": null,
+        "const_amend": "LRCA: majority (50%) vote in two successive sessions",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 63,
@@ -2231,7 +2242,18 @@
           "next_election": 2026,
           "candidate_id": 11242
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Elected (66.67%)",
+        "taxes": null,
+        "const_amend": "LRCA: majority (50%) vote in two successive sessions",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {

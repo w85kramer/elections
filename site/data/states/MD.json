@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:36:33.256163Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Maryland",
     "abbr": "MD",
@@ -94,7 +94,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 94,
+      "supermajority": 85,
       "seats_up_2026": 141,
       "members": [
         {
@@ -1507,7 +1507,18 @@
           "next_election": 2026,
           "candidate_id": 9919
         }
-      ]
+      ],
+      "supermajority_label": "3/5",
+      "has_supermajority": true,
+      "supermajority_party": "D",
+      "supermajority_detail": {
+        "veto_override": "3/5 Elected (60%)",
+        "taxes": null,
+        "const_amend": "LCRA: 3/5 (60%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 47,
@@ -1517,7 +1528,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 32,
+      "supermajority": 29,
       "seats_up_2026": 47,
       "members": [
         {
@@ -1990,7 +2001,18 @@
           "next_election": 2026,
           "candidate_id": 9951
         }
-      ]
+      ],
+      "supermajority_label": "3/5",
+      "has_supermajority": true,
+      "supermajority_party": "D",
+      "supermajority_detail": {
+        "veto_override": "3/5 Elected (60%)",
+        "taxes": null,
+        "const_amend": "LCRA: 3/5 (60%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {

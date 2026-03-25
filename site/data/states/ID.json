@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:36:17.352060Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Idaho",
     "abbr": "ID",
@@ -803,7 +803,18 @@
           "next_election": 2026,
           "candidate_id": 8761
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": null,
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 35,
@@ -1166,7 +1177,18 @@
           "next_election": 2026,
           "candidate_id": 8772
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": null,
+        "const_amend": "LCRA: 2/3 (66.67%) vote in each chamber (one session)",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {
@@ -3692,20 +3714,20 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "2",
-      "seat_label": "ID House 2 Seat A",
+      "seat_label": "ID House 2 Seat B",
       "pres_margin": "-62.6",
       "holder_party": "R",
-      "candidate": "Birgid Niedenzu",
+      "candidate": "Sabine Krier",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "2",
-      "seat_label": "ID House 2 Seat B",
+      "seat_label": "ID House 2 Seat A",
       "pres_margin": "-62.6",
       "holder_party": "R",
-      "candidate": "Sabine Krier",
+      "candidate": "Birgid Niedenzu",
       "is_open_seat": null
     },
     {
@@ -3722,16 +3744,6 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "4",
-      "seat_label": "ID House 4 Seat B",
-      "pres_margin": "-31.1",
-      "holder_party": "R",
-      "candidate": "Aaron Hayes",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_D",
-      "chamber": "House",
-      "district": "4",
       "seat_label": "ID House 4 Seat A",
       "pres_margin": "-31.1",
       "holder_party": "R",
@@ -3741,11 +3753,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "5",
-      "seat_label": "ID House 5 Seat A",
-      "pres_margin": "-56.4",
+      "district": "4",
+      "seat_label": "ID House 4 Seat B",
+      "pres_margin": "-31.1",
       "holder_party": "R",
-      "candidate": "Mirna Pleines",
+      "candidate": "Aaron Hayes",
       "is_open_seat": null
     },
     {
@@ -3761,11 +3773,11 @@
     {
       "election_type": "Primary_D",
       "chamber": "House",
-      "district": "7",
-      "seat_label": "ID House 7 Seat B",
-      "pres_margin": "-50.3",
+      "district": "5",
+      "seat_label": "ID House 5 Seat A",
+      "pres_margin": "-56.4",
       "holder_party": "R",
-      "candidate": "Pete Gertonson",
+      "candidate": "Mirna Pleines",
       "is_open_seat": null
     },
     {
@@ -3776,6 +3788,16 @@
       "pres_margin": "-50.3",
       "holder_party": "R",
       "candidate": "Larry Nostrant",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_D",
+      "chamber": "House",
+      "district": "7",
+      "seat_label": "ID House 7 Seat B",
+      "pres_margin": "-50.3",
+      "holder_party": "R",
+      "candidate": "Pete Gertonson",
       "is_open_seat": null
     },
     {
@@ -3802,20 +3824,20 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "10",
-      "seat_label": "ID House 10 Seat B",
+      "seat_label": "ID House 10 Seat A",
       "pres_margin": "-59.3",
       "holder_party": "R",
-      "candidate": "Beth Ann McFalls",
+      "candidate": "Michael Hofferber",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "10",
-      "seat_label": "ID House 10 Seat A",
+      "seat_label": "ID House 10 Seat B",
       "pres_margin": "-59.3",
       "holder_party": "R",
-      "candidate": "Michael Hofferber",
+      "candidate": "Beth Ann McFalls",
       "is_open_seat": null
     },
     {
@@ -3882,20 +3904,20 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "14",
-      "seat_label": "ID House 14 Seat B",
+      "seat_label": "ID House 14 Seat A",
       "pres_margin": "-49.0",
       "holder_party": "R",
-      "candidate": "Valerie Ruxton",
+      "candidate": "Jo Daly",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "14",
-      "seat_label": "ID House 14 Seat A",
+      "seat_label": "ID House 14 Seat B",
       "pres_margin": "-49.0",
       "holder_party": "R",
-      "candidate": "Jo Daly",
+      "candidate": "Valerie Ruxton",
       "is_open_seat": null
     },
     {
@@ -3942,20 +3964,20 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "18",
-      "seat_label": "ID House 18 Seat B",
+      "seat_label": "ID House 18 Seat A",
       "pres_margin": "+22.8",
       "holder_party": "D",
-      "candidate": "Brooke Green",
+      "candidate": "Ilana Rubel",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "18",
-      "seat_label": "ID House 18 Seat A",
+      "seat_label": "ID House 18 Seat B",
       "pres_margin": "+22.8",
       "holder_party": "D",
-      "candidate": "Ilana Rubel",
+      "candidate": "Brooke Green",
       "is_open_seat": null
     },
     {
@@ -4042,20 +4064,20 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "23",
-      "seat_label": "ID House 23 Seat A",
+      "seat_label": "ID House 23 Seat B",
       "pres_margin": "-57.9",
       "holder_party": "R",
-      "candidate": "Emily Fisher",
+      "candidate": "Joe Fuller",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "23",
-      "seat_label": "ID House 23 Seat B",
+      "seat_label": "ID House 23 Seat A",
       "pres_margin": "-57.9",
       "holder_party": "R",
-      "candidate": "Joe Fuller",
+      "candidate": "Emily Fisher",
       "is_open_seat": null
     },
     {
@@ -4122,20 +4144,20 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "29",
-      "seat_label": "ID House 29 Seat A",
+      "seat_label": "ID House 29 Seat B",
       "pres_margin": "-12.4",
       "holder_party": "R",
-      "candidate": "Mary Shea",
+      "candidate": "Nate Roberts",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "29",
-      "seat_label": "ID House 29 Seat B",
+      "seat_label": "ID House 29 Seat A",
       "pres_margin": "-12.4",
       "holder_party": "R",
-      "candidate": "Nate Roberts",
+      "candidate": "Mary Shea",
       "is_open_seat": null
     },
     {
@@ -4182,20 +4204,20 @@
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "33",
-      "seat_label": "ID House 33 Seat A",
+      "seat_label": "ID House 33 Seat B",
       "pres_margin": "-28.7",
       "holder_party": "R",
-      "candidate": "Chance Marshall",
+      "candidate": "Todd DeVries",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_D",
       "chamber": "House",
       "district": "33",
-      "seat_label": "ID House 33 Seat B",
+      "seat_label": "ID House 33 Seat A",
       "pres_margin": "-28.7",
       "holder_party": "R",
-      "candidate": "Todd DeVries",
+      "candidate": "Chance Marshall",
       "is_open_seat": null
     },
     {
@@ -4622,20 +4644,20 @@
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "12",
-      "seat_label": "ID House 12 Seat A",
+      "seat_label": "ID House 12 Seat B",
       "pres_margin": "-40.1",
       "holder_party": "R",
-      "candidate": "Jeff Cornilles",
+      "candidate": "Jaron Crane",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "12",
-      "seat_label": "ID House 12 Seat B",
+      "seat_label": "ID House 12 Seat A",
       "pres_margin": "-40.1",
       "holder_party": "R",
-      "candidate": "Jaron Crane",
+      "candidate": "Jeff Cornilles",
       "is_open_seat": null
     },
     {
@@ -4652,16 +4674,6 @@
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "14",
-      "seat_label": "ID House 14 Seat A",
-      "pres_margin": "-49.0",
-      "holder_party": "R",
-      "candidate": "Ted Hill",
-      "is_open_seat": null
-    },
-    {
-      "election_type": "Primary_R",
-      "chamber": "House",
-      "district": "14",
       "seat_label": "ID House 14 Seat B",
       "pres_margin": "-49.0",
       "holder_party": "R",
@@ -4671,11 +4683,11 @@
     {
       "election_type": "Primary_R",
       "chamber": "House",
-      "district": "15",
-      "seat_label": "ID House 15 Seat A",
-      "pres_margin": "-5.1",
-      "holder_party": "D",
-      "candidate": "Steve Keyser",
+      "district": "14",
+      "seat_label": "ID House 14 Seat A",
+      "pres_margin": "-49.0",
+      "holder_party": "R",
+      "candidate": "Ted Hill",
       "is_open_seat": null
     },
     {
@@ -4686,6 +4698,16 @@
       "pres_margin": "-5.1",
       "holder_party": "R",
       "candidate": "Dori Healey",
+      "is_open_seat": null
+    },
+    {
+      "election_type": "Primary_R",
+      "chamber": "House",
+      "district": "15",
+      "seat_label": "ID House 15 Seat A",
+      "pres_margin": "-5.1",
+      "holder_party": "D",
+      "candidate": "Steve Keyser",
       "is_open_seat": null
     },
     {
@@ -4732,20 +4754,20 @@
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "19",
-      "seat_label": "ID House 19 Seat B",
+      "seat_label": "ID House 19 Seat A",
       "pres_margin": "+30.1",
       "holder_party": "D",
-      "candidate": "Stanley Roach",
+      "candidate": "Bryan Hopkins",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "19",
-      "seat_label": "ID House 19 Seat A",
+      "seat_label": "ID House 19 Seat B",
       "pres_margin": "+30.1",
       "holder_party": "D",
-      "candidate": "Bryan Hopkins",
+      "candidate": "Stanley Roach",
       "is_open_seat": null
     },
     {
@@ -4772,20 +4794,20 @@
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "21",
-      "seat_label": "ID House 21 Seat B",
+      "seat_label": "ID House 21 Seat A",
       "pres_margin": "-29.9",
       "holder_party": "R",
-      "candidate": "Jeff Ehlers",
+      "candidate": "James Petzke",
       "is_open_seat": null
     },
     {
       "election_type": "Primary_R",
       "chamber": "House",
       "district": "21",
-      "seat_label": "ID House 21 Seat A",
+      "seat_label": "ID House 21 Seat B",
       "pres_margin": "-29.9",
       "holder_party": "R",
-      "candidate": "James Petzke",
+      "candidate": "Jeff Ehlers",
       "is_open_seat": null
     },
     {

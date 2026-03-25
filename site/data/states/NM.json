@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:36:46.569268Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "New Mexico",
     "abbr": "NM",
@@ -24,11 +24,11 @@
       "forecast": "Likely D",
       "forecast_details": [
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Likely D"
         },
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Likely D"
         }
       ]
@@ -795,7 +795,18 @@
           "next_election": 2026,
           "candidate_id": 11117
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": null,
+        "const_amend": "LRCA: majority (50%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     },
     "Senate": {
       "total": 42,
@@ -1228,7 +1239,18 @@
           "next_election": 2028,
           "candidate_id": 11175
         }
-      ]
+      ],
+      "supermajority_label": "2/3",
+      "has_supermajority": false,
+      "supermajority_party": null,
+      "supermajority_detail": {
+        "veto_override": "2/3 Present (66.67%)",
+        "taxes": null,
+        "const_amend": "LRCA: majority (50%) vote in one session",
+        "budget_passage": null,
+        "other": null,
+        "notes": null
+      }
     }
   },
   "elections_2026": {

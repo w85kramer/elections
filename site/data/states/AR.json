@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:36:09.640683Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Arkansas",
     "abbr": "AR",
@@ -24,11 +24,11 @@
       "forecast": "Solid R",
       "forecast_details": [
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Solid R"
         },
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Solid R"
         }
       ]
@@ -83,7 +83,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 67,
+      "supermajority": 51,
       "seats_up_2026": 100,
       "members": [
         {
@@ -1086,7 +1086,18 @@
           "next_election": 2026,
           "candidate_id": 7645
         }
-      ]
+      ],
+      "supermajority_label": "Majority",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "Majority Elected (50%)",
+        "taxes": "3/4 (75%)*",
+        "const_amend": "LRCA: majority vote in one session",
+        "budget_passage": "3/4 (75%)",
+        "other": null,
+        "notes": "*All taxes except sales and alcohol."
+      }
     },
     "Senate": {
       "total": 35,
@@ -1096,7 +1107,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 24,
+      "supermajority": 18,
       "seats_up_2026": 17,
       "members": [
         {
@@ -1449,7 +1460,18 @@
           "next_election": 2026,
           "candidate_id": 7756
         }
-      ]
+      ],
+      "supermajority_label": "Majority",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "Majority Elected (50%)",
+        "taxes": "3/4 (75%)*",
+        "const_amend": "LRCA: majority vote in one session",
+        "budget_passage": "3/4 (75%)",
+        "other": null,
+        "notes": "*All taxes except sales and alcohol."
+      }
     }
   },
   "elections_2026": {

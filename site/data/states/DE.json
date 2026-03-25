@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:56.760968Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Delaware",
     "abbr": "DE",
@@ -81,7 +81,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 28,
+      "supermajority": 25,
       "seats_up_2026": 41,
       "members": [
         {
@@ -494,7 +494,18 @@
           "next_election": 2026,
           "candidate_id": 8213
         }
-      ]
+      ],
+      "supermajority_label": "3/5",
+      "has_supermajority": true,
+      "supermajority_party": "D",
+      "supermajority_detail": {
+        "veto_override": "3/5 Elected (60%)",
+        "taxes": "3/5 (60%)",
+        "const_amend": "2/3 (66.67%)*",
+        "budget_passage": null,
+        "other": null,
+        "notes": "*The Delaware Constitution can be amended by a two-thirds vote by two consecutive legislatures but there is no ratifying vote of the people."
+      }
     },
     "Senate": {
       "total": 21,
@@ -504,7 +515,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 14,
+      "supermajority": 13,
       "seats_up_2026": 11,
       "members": [
         {
@@ -717,7 +728,18 @@
           "next_election": 2028,
           "candidate_id": 8171
         }
-      ]
+      ],
+      "supermajority_label": "3/5",
+      "has_supermajority": true,
+      "supermajority_party": "D",
+      "supermajority_detail": {
+        "veto_override": "3/5 Elected (60%)",
+        "taxes": "3/5 (60%)",
+        "const_amend": "2/3 (66.67%)*",
+        "budget_passage": null,
+        "other": null,
+        "notes": "*The Delaware Constitution can be amended by a two-thirds vote by two consecutive legislatures but there is no ratifying vote of the people."
+      }
     }
   },
   "elections_2026": {

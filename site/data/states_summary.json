@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:52.048825Z",
+  "generated_at": "2026-03-25T13:02:42.772705Z",
   "states": {
     "AK": {
       "name": "Alaska",
@@ -378,22 +378,22 @@
           "data_available": true,
           "primaries_d": {
             "House": {
-              "total": 5,
-              "uncontested": 5
+              "total": 30,
+              "uncontested": 15
             },
             "Senate": {
-              "total": 5,
-              "uncontested": 5
+              "total": 26,
+              "uncontested": 23
             }
           },
           "primaries_r": {
             "House": {
-              "total": 5,
-              "uncontested": 5
+              "total": 25,
+              "uncontested": 12
             },
             "Senate": {
-              "total": 2,
-              "uncontested": 2
+              "total": 22,
+              "uncontested": 20
             }
           },
           "general": null
@@ -827,18 +827,18 @@
       "chambers": {
         "House": {
           "total": 120,
-          "d": 33,
+          "d": 35,
           "r": 85,
           "other": 0,
-          "vacant": 2,
+          "vacant": 1,
           "seats_up_2026": 120
         },
         "Senate": {
           "total": 40,
-          "d": 12,
+          "d": 13,
           "r": 27,
           "other": 0,
-          "vacant": 1,
+          "vacant": 0,
           "seats_up_2026": 20
         }
       },
@@ -2454,7 +2454,7 @@
       "chambers": {
         "House": {
           "total": 122,
-          "d": 43,
+          "d": 44,
           "r": 78,
           "other": 0,
           "vacant": 0,
@@ -3060,8 +3060,8 @@
       "chambers": {
         "Assembly": {
           "total": 80,
-          "d": 59,
-          "r": 21,
+          "d": 57,
+          "r": 23,
           "other": 0,
           "vacant": 0,
           "seats_up_2026": 0
@@ -3395,7 +3395,7 @@
         },
         {
           "office": "Auditor",
-          "name": "Thomas P. DiNapoli",
+          "name": "Thomas DiNapoli",
           "party": "D",
           "next_election": null
         },
@@ -3678,7 +3678,7 @@
         },
         "Senate": {
           "total": 30,
-          "d": 16,
+          "d": 18,
           "r": 12,
           "other": 0,
           "vacant": 0,
@@ -4556,8 +4556,8 @@
       "chambers": {
         "House": {
           "total": 150,
-          "d": 92,
-          "r": 57,
+          "d": 91,
+          "r": 58,
           "other": 0,
           "vacant": 1,
           "seats_up_2026": 150
@@ -4863,7 +4863,7 @@
         },
         {
           "office": "Lt. Governor",
-          "name": "Randy E. Smith",
+          "name": "Randy Smith",
           "party": "R",
           "next_election": null
         },
@@ -6173,7 +6173,7 @@
       "seat_label": "FL House 51",
       "chamber": "House",
       "district": "51",
-      "result_status": null
+      "result_status": "Called"
     },
     {
       "state": "FL",
@@ -6193,7 +6193,7 @@
       "seat_label": "FL House 87",
       "chamber": "House",
       "district": "87",
-      "result_status": null
+      "result_status": "Called"
     },
     {
       "state": "FL",
@@ -6203,7 +6203,7 @@
       "seat_label": "FL Senate 14",
       "chamber": "Senate",
       "district": "14",
-      "result_status": null
+      "result_status": "Called"
     },
     {
       "state": "MA",

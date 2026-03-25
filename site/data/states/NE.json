@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T14:07:56.760968Z",
+  "generated_at": "2026-03-25T13:02:56.578665Z",
   "state": {
     "name": "Nebraska",
     "abbr": "NE",
@@ -83,7 +83,7 @@
         "Other": 0,
         "Vacant": 0
       },
-      "supermajority": 33,
+      "supermajority": 30,
       "seats_up_2026": 24,
       "members": [
         {
@@ -576,7 +576,18 @@
           "next_election": 2028,
           "candidate_id": 10843
         }
-      ]
+      ],
+      "supermajority_label": "3/5",
+      "has_supermajority": true,
+      "supermajority_party": "R",
+      "supermajority_detail": {
+        "veto_override": "3/5 Elected (60%)",
+        "taxes": null,
+        "const_amend": "LCRA: 3/5 (60%) vote in one session",
+        "budget_passage": "2/3 (66.67%)*",
+        "other": null,
+        "notes": "*The requirement applies to \u201cemergency\u201d bill, of which the budget is considered one."
+      }
     }
   },
   "elections_2026": {
