@@ -202,6 +202,8 @@
     transition: transform 0.1s;
   }
   .upcoming-tag:hover { transform: scale(1.05); }
+  .upcoming-date-row.past-event { opacity: 0.55; }
+  .upcoming-date-row.today-event { background: rgba(4,56,88,0.04); border-radius: 6px; margin: -4px -8px; padding: 8px 8px 8px 8px; }
   .upcoming-tag.filing { background: rgba(39,97,129,0.06); color: var(--ms-dem-blue); }
   .upcoming-tag.primary { background: rgba(229,9,99,0.06); color: var(--ms-rep-red); }
   .upcoming-tag.special { background: rgba(201,163,0,0.08); color: #8a7000; }
@@ -476,9 +478,10 @@
   const totalRaces = statesWithRaces.reduce((sum, a) => sum + (states[a].elections_2026?.total_general || 0), 0);
   deadlines.push({ date: '2026-11-03', type: 'general', text: `${statesWithRaces.length} states — ${totalRaces.toLocaleString()} races`, state: null });
 
-  // Upcoming events — grouped by date
+  // Upcoming events — grouped by date (include past 7 days + future)
   deadlines.sort((a, b) => a.date.localeCompare(b.date));
-  const upcoming = deadlines.filter(d => d.date >= today);
+  const oneWeekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+  const upcoming = deadlines.filter(d => d.date >= oneWeekAgo);
 
   // Group by date, cap at ~15 date-rows
   const dateGroups = {};
@@ -491,7 +494,7 @@
   let dateCount = 0;
 
   for (const date of sortedDates) {
-    if (dateCount >= 12) break;
+    if (dateCount >= 15) break;
     dateCount++;
     const evts = dateGroups[date];
 
@@ -559,8 +562,11 @@
     }
 
     const row = document.createElement('div');
-    row.className = 'upcoming-date-row';
-    row.innerHTML = `<span class="upcoming-date">${formatDateShort(date)}</span><div class="upcoming-content">${contentHtml}</div>`;
+    const isPast = date < today;
+    const isToday = date === today;
+    row.className = 'upcoming-date-row' + (isPast ? ' past-event' : '') + (isToday ? ' today-event' : '');
+    const dateLabel = isToday ? `${formatDateShort(date)} <span style="font-size:11px;font-weight:600;color:#fff;background:var(--ms-navy);padding:1px 6px;border-radius:3px;margin-left:4px">TODAY</span>` : formatDateShort(date);
+    row.innerHTML = `<span class="upcoming-date">${dateLabel}</span><div class="upcoming-content">${contentHtml}</div>`;
     container.appendChild(row);
   }
 
