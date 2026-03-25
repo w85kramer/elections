@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T13:02:56.578665Z",
+  "generated_at": "2026-03-25T16:20:11.853417Z",
   "state": {
     "name": "Arkansas",
     "abbr": "AR",
@@ -24,11 +24,11 @@
       "forecast": "Solid R",
       "forecast_details": [
         {
-          "source": "Sabato's Crystal Ball",
+          "source": "Cook Political Report",
           "rating": "Solid R"
         },
         {
-          "source": "Cook Political Report",
+          "source": "Sabato's Crystal Ball",
           "rating": "Solid R"
         }
       ]
@@ -79,9 +79,9 @@
       "total": 100,
       "composition": {
         "D": 20,
-        "R": 80,
+        "R": 79,
         "Other": 0,
-        "Vacant": 0
+        "Vacant": 1
       },
       "supermajority": 51,
       "seats_up_2026": 100,
@@ -520,11 +520,10 @@
           "district": "44",
           "district_name": "HD-44",
           "seat_designator": null,
-          "name": "Stan Berry",
-          "party": "R",
+          "name": null,
+          "party": null,
           "pres_margin": "-64.5",
-          "next_election": 2026,
-          "candidate_id": 7741
+          "next_election": 2026
         },
         {
           "district": "45",
@@ -5268,7 +5267,7 @@
       "district": "44",
       "seat_label": "AR House 44",
       "pres_margin": "-64.5",
-      "holder_party": "R",
+      "holder_party": null,
       "candidate": "Stan Berry",
       "is_open_seat": null
     },
